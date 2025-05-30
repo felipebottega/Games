@@ -5,39 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Games</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f4f4f4;
-      padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-    }
-    ul {
-      list-style-type: none;
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
       padding: 0;
-      max-width: 600px;
-      margin: auto;
     }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 4rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 0 10px #00ffe1, 0 0 20px #0088ff;
+      animation: flicker 2.5s infinite alternate;
+      color: #00f7ff;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.9; text-shadow: 0 0 5px #0ff, 0 0 15px #08f; }
+      100% { opacity: 1; text-shadow: 0 0 15px #0ff, 0 0 25px #08f; }
+    }
+
+    ul {
+      list-style: none;
+      max-width: 800px;
+      width: 100%;
+      display: grid;
+      gap: 1.5rem;
+    }
+
     li {
-      background: #fff;
-      margin: 10px 0;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      padding: 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      backdrop-filter: blur(6px);
     }
+
+    li:hover {
+      transform: translateY(-10px) scale(1.03);
+      background: linear-gradient(145deg, #2a5298, #3c72b1);
+      box-shadow: 0 15px 35px rgba(0, 255, 255, 0.4), 0 0 25px rgba(0, 255, 255, 0.2);
+    }
+
     a {
+      color: #ffffff;
+      font-size: 1.5rem;
       text-decoration: none;
-      color: #007acc;
-      font-size: 1.2em;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      transition: color 0.3s ease, letter-spacing 0.3s ease;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #00f;
+    }
+
+    li:hover a {
+      color: #00f7ff;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.3rem;
+        text-align: center;
+      }
+
+      a {
+        font-size: 1.2rem;
+      }
+
+      li {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>My Games</h1>
+  <h1>🎮 My Games</h1>
   <ul>
     <li><a href="first_game_godot/">First Game in Godot</a></li>
-    <!-- Adicione mais jogos conforme necessário -->
+    <!-- Adicione mais jogos reais conforme necessário -->
   </ul>
 </body>
 </html>
