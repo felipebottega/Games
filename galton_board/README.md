@@ -8,7 +8,7 @@ Para que a visualização no site ocorra normalmente é necessário ir em *Proje
   <img src="https://github.com/user-attachments/assets/e2ef8e5c-e25c-4d3d-b18a-a3ec841d8034" width="550"/>
 </p>
 
-Neste projeto eu aprendi a usar a classe `Node` como conteiner. Fora o uso como node raíz, eu usei essa classe para definir os conteiners `Walls`, `Small_Balls` e `Pins{i}`. Cada um destes é um conjunto de nodesde um mesmo tipo, como pode ser visto na figura. As bolas são as bolinhas que caem, os pins são os obstáculos onde as bolas batem durante o percurso, e as paredes são quaisquer paredes na cena. Vale notar que os pins são apenas paredes redimensionadas para serem minúsculas (portanto cada pin é um quadrado).
+Neste projeto eu aprendi a usar a classe `Node` como conteiner. Fora o uso como node raíz, eu usei essa classe para definir os conteiners `Walls`, `Small_Balls` e `Pins{i}`. Cada um destes é um conjunto de nodes de um mesmo tipo. As bolas são as bolinhas que caem, os pins são os obstáculos onde as bolas batem durante o percurso, e as paredes são quaisquer paredes na cena. Vale notar que os pins são apenas paredes redimensionadas para serem minúsculas (portanto cada pin é um quadrado).
 
 Um coisa importante também que aprendi foi o uso de *ctrl+C* *ctrl+D* para duplicar uma seleção de nodes. A partir disto pude repetir as fileiras dos pins apenas duplicando a primeira já existente.
 
