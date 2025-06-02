@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pyp4i3g65l4v"
-path="res://.godot/imported/moving.png-28a764d00ffb898a02140f91a4874be4.ctex"
+uid="uid://dqmpu7ltxr0kn"
+path="res://.godot/imported/scripting_first_script.icon.png-9219285ee60a0c82cea675c72e45c07f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://html/moving.png"
-dest_files=["res://.godot/imported/moving.png-28a764d00ffb898a02140f91a4874be4.ctex"]
+source_file="res://medusa/scripting_first_script.icon.png"
+dest_files=["res://.godot/imported/scripting_first_script.icon.png-9219285ee60a0c82cea675c72e45c07f.ctex"]
 
 [params]
 
