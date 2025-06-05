@@ -30,7 +30,7 @@ No node `Medusa` marcamos a opção `Freeze`. Isso significa que este objeto nã
 
 ## Posicionamento inicial dos sprites
 
-No *Movements 1* eu usei a opção *Make Local* para forçar a cena principal a reconhecer as posições novas dos objetos. Sem isso ele usava sempre a posição da cena original do objeto em questão. O meu erro lá foi atribuir um valor à variável `orig_pos` logo no início do script. Essa atribuição é feita antes da cena principal "rodar", então o programa pega a posição do objeto original. A solução disso é simples, basta fazer essa atribuição após a cena iniciar, dentro da função `_ready`. 
+No *Movements 1* eu usei a opção *Make Local* para forçar a cena principal a reconhecer as posições novas dos sprites. Sem isso ele usava sempre a posição da cena original do sprite em questão. O meu erro lá foi atribuir um valor à variável `orig_pos` logo no início do script. Essa atribuição é feita antes da cena principal "rodar", então o programa pega a posição do sprite original. A solução disso é simples, basta fazer essa atribuição após a cena iniciar, dentro da função `_ready`. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/5c64faad-ddd2-4e76-b974-a8c31881d619">
