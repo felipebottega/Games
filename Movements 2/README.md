@@ -22,5 +22,12 @@ Para o node `Trevor`, configuramos o seu peso, que ficou em 70 kg. A gravidade i
 
 O node `Floor` só teve um tratamento diferenciado, em vez de ser um `RigidBody2D` ele é um `StaticBody2D`. Como o nome já diz, é um objeto que por definição deve ficar estático. 
 
+No node `Medusa` marcamos a opção `Freeze`. Isso significa que este objeto não sente gravidade ou qualquer tipo de força externa. A ideia é que a medusa faça o seu percurso ondulatório, tenha colisões, mas não altere a trajetória por nada. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/66ed09bf-035b-4bda-84e0-83e0aaaea4bd">
+</p>
+
+
 
 
