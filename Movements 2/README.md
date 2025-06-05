@@ -2,7 +2,7 @@
 
 Este projeto em Godot deve ser visto como uma continuação do *Movements 1*. O *Movements 3* será uma continuação deste, e assim por diante. 
 
-Uma estrutura básica de cena que está servindo para mim é a mostrada na figura abaixo. Começa com um node raíz do tipo `RigidBody2D` (que chamei de "Medusa" no exemplo) que contém as propriedades físicas para um sprite. A partir deste node teremos dois nodes filhos no mesmo nível de hierarquia. Um é define o sprite e outro a colisão. 
+Uma estrutura básica de cena que está servindo para mim é a mostrada na figura abaixo. Começa com um node raíz (neste exemplo é do tipo `RigidBody2D` e o chamei de "Medusa") que contém as propriedades definidoras do sprite. A partir deste node teremos dois nodes filhos no mesmo nível de hierarquia. Um define o sprite e outro a colisão. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f84c431f-ed30-4d49-a3fc-9240b6fe6d87" width="200"/>
