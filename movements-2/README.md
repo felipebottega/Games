@@ -8,4 +8,4 @@ Uma estrutura básica de cena que está servindo para mim é a mostrada na figur
   <img src="https://github.com/user-attachments/assets/708c830a-f263-4982-b097-c29842e2a0d0" width="700"/>>
 </p>
 
-
+Como esse projeto é em 2D pixelado, recomendo repetir os passos repetidos no projeto anterior em relação ao viewport e rendering.
