@@ -1,6 +1,6 @@
 # Movements 2
 
-Este projeto em Godot deve ser visto como uma continuação do *Movements 1*. Aliás, o *Movements 3* será uma continuação deste, e assim por diante. 
+Este projeto em Godot deve ser visto como uma continuação do *Movements 1*. O *Movements 3* será uma continuação deste, e assim por diante. 
 
 Uma estrutura básica de cena que está servindo para mim é a mostrada na figura abaixo. Começa com um node raíz do tipo `RigidBody2D` (que chamei de "Medusa" no exemplo) que contém as propriedades físicas para um sprite. A partir deste node teremos dois nodes filhos no mesmo nível de hierarquia. Um é define o sprite e outro a colisão. 
 
