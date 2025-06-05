@@ -25,9 +25,17 @@ O node `Floor` só teve um tratamento diferenciado, em vez de ser um `RigidBody2
 No node `Medusa` marcamos a opção `Freeze`. Isso significa que este objeto não sente gravidade ou qualquer tipo de força externa. A ideia é que a medusa faça o seu percurso ondulatório, tenha colisões, mas não altere a trajetória por nada. 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/66ed09bf-035b-4bda-84e0-83e0aaaea4bd">
+    <img src="https://github.com/user-attachments/assets/66ed09bf-035b-4bda-84e0-83e0aaaea4bd" width="300">
 </p>
 
+## Posicionamento dos objetos
 
+No *Movements 1* eu usei a opção *Make Local* para forçar a cena principal a reconhecer as posições novas dos objetos. Sem isso ele usava sempre a posição da cena original do objeto em questão. O meu erro lá foi atribuir um valor à variável `orig_pos` logo no início do script. Essa atribuição é feita antes da cena principal "rodar", então o programa pega a posição do objeto original. A solução disso é simples, basta fazer essa atribuição após a cena iniciar, dentro da função `_ready`. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/5c64faad-ddd2-4e76-b974-a8c31881d619">
+</p>
+
+## Inputs
 
 
