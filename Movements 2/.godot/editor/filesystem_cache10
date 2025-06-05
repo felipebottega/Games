@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1749156970
+background.png::CompressedTexture2D/CompressedTexture2D::6946843903416078227::1748988652::1749074800::1::::<><><>0<>0<>309aae91bf998c14438386d4eea62a4d<>res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex::
+floor.png::CompressedTexture2D/CompressedTexture2D::3822768358398679839::1748988575::1749074800::1::::<><><>0<>0<>e19b9140789b7ca07cedd3325dee0c43<>res://.godot/imported/floor.png-d43f03cb7a8f42941311ed90ed2021b9.ctex::
+floor.tscn::PackedScene::250726981238187894::1749085412::0::1::::<><><>0<>0<><>::uid://bup1o3ojncb56::::res://floor.png
+icon.svg::CompressedTexture2D/CompressedTexture2D::3270057998517724112::1749074145::1749074151::1::::<><><>0<>0<>b47bf25b941e6df085dbfbf2a9393d1a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::7740396692153729326::1749085412::0::1::::<><><>0<>0<><>::uid://db1nksrpannc4::::res://node.gd<>uid://dtpo3483wfpu::::res://floor.tscn<>uid://dsmit4av31ovr::::res://trevor.tscn
+medusa.png::CompressedTexture2D/CompressedTexture2D::3326766144623633049::1748895308::1749074800::1::::<><><>0<>0<>3c6e50ca414deef28166a34cbebb8b87<>res://.godot/imported/medusa.png-21e4cdd3fc2c818661aaf3a7ad9d0353.ctex::
+node.gd::GDScript::7283932867531937821::1749085412::0::1::::<>Node<><>0<>0<><>::
+trevor.png::CompressedTexture2D/CompressedTexture2D::597397017052156208::1748988379::1749074800::1::::<><><>0<>0<>0e001fe2d5f29a2377a92b9b87b00e79<>res://.godot/imported/trevor.png-6029e0c1ec4e7effd0f96d9d4d983762.ctex::
+trevor.tscn::PackedScene::8447954959808682435::1749085412::0::1::::<><><>0<>0<><>::uid://irnbocwjw1ce::::res://trevor.png

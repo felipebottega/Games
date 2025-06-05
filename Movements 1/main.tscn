@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj1ipc2203a2f"]
+
+[ext_resource type="PackedScene" uid="uid://bl7c8wfjkrijb" path="res://medusa.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bwdex5b77l0m6" path="res://start.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ocbw1h6lvfci" path="res://cross.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://rkjg0pm2edeh" path="res://assets/cross.png" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://kv1iivlgtaod" path="res://cross.gd" id="5_7mycd"]
+
+[node name="Main" type="Node"]
+
+[node name="Star" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="Cross1" parent="." instance=ExtResource("3_h2yge")]
+
+[node name="Cross2" type="Sprite2D" parent="."]
+position = Vector2(175, 489)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_lquwl")
+script = ExtResource("5_7mycd")
+
+[node name="Cross3" type="Sprite2D" parent="."]
+position = Vector2(100, 400)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_lquwl")
+script = ExtResource("5_7mycd")
+
+[node name="Medusa" parent="." instance=ExtResource("1_ig7tw")]
+
+[node name="Cross4" type="Sprite2D" parent="."]
+position = Vector2(175, 348)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_lquwl")
+script = ExtResource("5_7mycd")
