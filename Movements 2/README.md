@@ -22,11 +22,13 @@ Para o node `Trevor`, configuramos o seu peso, que ficou em 70 kg. A gravidade i
 
 O node `Floor` só teve um tratamento diferenciado, em vez de ser um `RigidBody2D` ele é um `StaticBody2D`. Como o nome já diz, é um objeto que por definição deve ficar estático. 
 
-No node `Medusa` marcamos a opção `Freeze`. Isso significa que este objeto não sente gravidade ou qualquer tipo de força externa. A ideia é que a medusa faça o seu percurso ondulatório, tenha colisões, mas não altere a trajetória por nada. 
+No node `Medusa` marcamos a opção *Freeze*. Isso significa que este objeto não sente gravidade ou qualquer tipo de força externa. A ideia é que a medusa faça o seu percurso ondulatório, tenha colisões, mas não altere a trajetória por nada. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/66ed09bf-035b-4bda-84e0-83e0aaaea4bd" width="300">
 </p>
+
+>PS: Se os dois objetos são `RigidBody2D` com caixa de colisão (`CollisionShape2D`), então eles só colidem fisicamente se a movimentação for controlada pela física (ou seja, por forças, torques, impulsos). Se você move o objeto manualmente, como definindo um percurso (que é o caso da Medusa), você está sobrescrevendo a física, e a colisão não ocorre. Quando você marca o `RigidBody2D` como *Freeze*, ele congela e se comporta como um corpo estático. Isso faz com que os outros corpos físicos reconheçam a colisão corretamente, porque agora ele é tratado como uma barreira fixa no espaço, tipo um `StaticBody2D`.
 
 ## Posicionamento inicial dos sprites
 
@@ -49,5 +51,3 @@ Agora vá em *Add New Action* e crie um nome para o novo comando. Neste exemplo 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/3d294a4c-5770-462f-9866-cf4ec851b203" width="650">
 </p>
-
-
