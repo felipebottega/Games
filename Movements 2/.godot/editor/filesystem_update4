@@ -1,4 +1,6 @@
+res://medusa.tscn
+res://medusa.gd
 res://trevor.tscn
 res://floor.tscn
 res://main.tscn
-res://node.gd
+res://trevor.gd
