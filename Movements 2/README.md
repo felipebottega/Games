@@ -8,6 +8,8 @@ Uma estrutura básica de cena que está servindo para mim é a mostrada na figur
   <img src="https://github.com/user-attachments/assets/f84c431f-ed30-4d49-a3fc-9240b6fe6d87" width="200"/>
 </p>
 
+>PS: A palavra "sprite" na engine Godot se refere a imagem usada para o objeto, enquanto que em muitos outros contexto sprite é o objeto em si. Aqui eu estarei usando para ambos os casos sem muita preocupação. O contexto deve deixar claro o significado da palavra.
+
 Como esse projeto é em 2D pixelado, recomendo repetir os passos do projeto anterior em relação ao viewport e rendering. Feito isso, criamos a cena principal, que é do tipo `Node` e apenas funciona como um conteiner para os principais objetos da cena. 
 
 <p align="center">
@@ -52,7 +54,7 @@ Agora vá em *Add New Action* e crie um nome para o novo comando. Neste exemplo 
     <img src="https://github.com/user-attachments/assets/3d294a4c-5770-462f-9866-cf4ec851b203" width="650">
 </p>
 
-Abaixo segue o script inteiro do `Trevor`, ele é pequeno mesmo. Note que `linear_velocity` é um atributo nativo do `RigidBody2D`. Usamos ele para responder aos inputs, como pode ser visto claramente. A medida é em pixels/segundo. Note a lógica usada para permitir o pulo. Além do jogador ter que pressionar o espaço, é necessário que a velocidade vertical do boneco seja quase zero. Não coloquei igual a zero para permitir ele pular mais rapidamente ao tocar no chão. Porém isso introduziu um bug de pulo infinito já velocidade vertical é igual a zero quando o boneco deu um pulo e está transicionando de subida para queda. Isso não é tão grave para este exemplo, mas já mostr o tipo de desafios que podem vir pela frente.
+Abaixo segue o script inteiro do `Trevor`, ele é pequeno mesmo. Note que `linear_velocity` é um atributo nativo do `RigidBody2D`. Usamos ele para responder aos inputs, como pode ser visto claramente. A medida é em pixels/segundo. Note a lógica usada para permitir o pulo. Além do jogador ter que pressionar o espaço, é necessário que a velocidade vertical do boneco seja quase zero. Não coloquei igual a zero para permitir ele pular mais rapidamente ao tocar no chão. Porém isso introduziu um bug de pulo infinito já que a velocidade vertical é igual a zero quando o boneco deu um pulo e está transicionando da subida para a queda. Isso não é tão grave para este exemplo, mas já mostra o tipo de desafios que podem vir pela frente.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/cb0e7491-3998-46f3-96a6-2cc130b92558" width="600">
