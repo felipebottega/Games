@@ -38,4 +38,16 @@ No *Movements 1* eu usei a opção *Make Local* para forçar a cena principal a 
 
 ## Inputs
 
+Vá na parte de inputs da Godot e marque para mostrar as ações built-in. É possível utilizar qualquer uma destas sem precisar configurar nada. No nosso caso, vamos configurar nossos comandos para mostrar como se faz.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/46dce056-0e67-466a-9313-85a3ccba38e8" width="650">
+</p>
+
+Agora vá em *Add New Action* e crie um nome para o novo comando. Neste exemplo vamos chamá-lo de "walk_right". Depois disso clique em "+Add". Você vai reparar que o seu comando foi para o final da lista. Na linha onde está o seu comando, tem um "+" que é o botão de *Add Event*. Ao clicar neste botão, o computador vai esperar que você pressione uma tecla que estará associada ao comando "walk_right". Pressione a tecla e dê ok. Faremos isso para ele andar para a direita, esquerda e pular com espaço.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/3d294a4c-5770-462f-9866-cf4ec851b203" width="650">
+</p>
+
 
