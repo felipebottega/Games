@@ -70,3 +70,9 @@ Neste jogo, este botão se conecta com o node responsável pelos impulsos de ar 
 </p>
 
 > PS: Note que o script da cena original de impulso foi instanciada em `Impulse 1`, `Impulse 2` e `Impulse 3`, sendo que a chamada de `_on_left_button_pressed` não tem relação alguma com `Impulse 2` e `Impulse 3`. Ainda assim, ao pressionar o botão esquerdo essa função desliga a física como um todo. Por que só o `Impulse 1` foi afetado? Acontece que cada uma dessas instâncias compartilha o mesmo script, mas possui seu próprio estado interno e responde a eventos de forma independente. O botão `Left Button` está conectado especificamente à instância `Impulse 1`. O `set_physics_process` está sendo chamado dentro da instância `Impulse 1`. Cada instância executa seu próprio script separadamente, como se fossem cópias independentes em memória, embora compartilhem o mesmo "molde" (a cena base + script). Apesar da função `_on_left_button_pressed` estar presente em `Impulse 2` e `Impulse 3`, o sinal de pressionar o botão esquerdo chega apenas em `Impulse 1`.
+
+Por fim, o botão de restart possui lógica semelhante, mas com um propósito diferente. Na imagem abaixo conseguimos ver na aba de node à direita que ele também se vale do sinal `pressed` paara ativar a função `_on_restart_pressed` que está no script do node raíz da cena principal, o `Game`, que é do tipo `Node2D`. A chamada `get_tree().reload_current_scene()` serve exatamente para reiniciar a cena que chamou o script.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/fe0c2228-ff61-4f6e-baff-4f85b670c14a" width="1000">
+</p>
