@@ -18,7 +18,7 @@ Para este jogo, eu queria formatos que não fossem quadrados ou elipses. Até te
     <img src="https://github.com/user-attachments/assets/173a51f1-f9a7-4344-af7f-718864ac4f55" width="200">
 </p>
 
-Você deve fazer um shape igual com o `Polygon2D`, sobrepor ambos no espaço 2D. Estes dois nodes devem ser filhos de um outro, como um `StaticBody2D` neste caso. O propósito do `Polygon2D` é introduzir a textura dentro de um formato que você criou na Godot. Caso contrário, teria que criar um PNG com o formato exato do shape da colisão, o que seria muito mais trabalhoso.
+Você deve fazer um shape igual com o `Polygon2D` e sobrepor ambos no espaço 2D. Estes dois nodes devem ser filhos de um outro, como um `StaticBody2D` neste caso. O propósito do `Polygon2D` é introduzir a textura dentro de um formato que você criou na Godot. Caso contrário, teria que criar um PNG com o formato exato do shape da colisão, o que seria muito mais trabalhoso.
 
 ## Impulsos
 
