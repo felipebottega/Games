@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://di2ccs4mi0vva"]
+[gd_scene load_steps=8 format=3 uid="uid://di2ccs4mi0vva"]
 
+[ext_resource type="Script" uid="uid://bfu2n5m2rldpy" path="res://game.gd" id="1_d21ai"]
 [ext_resource type="Texture2D" uid="uid://dxse5ns6uo7x1" path="res://background.png" id="1_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://dnd6fiju3ji5k" path="res://ball.tscn" id="2_0e48y"]
 [ext_resource type="PackedScene" uid="uid://cwxdajahuievv" path="res://wall.tscn" id="2_epypp"]
@@ -9,6 +10,7 @@
 
 [node name="Game" type="Node2D"]
 position = Vector2(250, 375)
+script = ExtResource("1_d21ai")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-120, 19)
@@ -210,10 +212,18 @@ text = "Left"
 
 [node name="Right Button" type="Button" parent="."]
 offset_left = 176.0
-offset_top = 444.0
+offset_top = 446.0
 offset_right = 228.0
-offset_bottom = 475.0
+offset_bottom = 477.0
 text = "Right"
+
+[node name="Restart" type="Button" parent="."]
+offset_left = -27.0
+offset_top = 446.0
+offset_right = 38.0
+offset_bottom = 477.0
+text = "Restart"
 
 [connection signal="pressed" from="Left Button" to="Impulses/Impulse 1" method="_on_left_button_pressed"]
 [connection signal="pressed" from="Right Button" to="Impulses/Impulse 2" method="_on_right_button_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
