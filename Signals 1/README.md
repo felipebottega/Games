@@ -22,7 +22,7 @@ Você deve fazer um shape igual com o `Polygon2D` e sobrepor ambos no espaço 2D
 
 ## Impulsos
 
-Este jogo é basicamente uma simulação de <a href="https://www.anos80.com.br/brinquedos/aquaplay.html">Aquaplay</a>, um jogo que joguei bastante na minha infância. Diversas bolinhas estão dentro da água e você aperta botões para expelir ar e impulsioná-las para cima, com o objetivo de colocá-las em certos pontos target. Um approach para ober este efeito é criar uma cena com o node `Area2D` como raíz e um `CollisionShape2D` para demarcar uma região. Se algum outro objeto com física entrar nesta região, automaticamente é aplicada uma força para cima nele, simulando o jato de ar do jogo.
+Este jogo é basicamente uma simulação de <a href="https://www.anos80.com.br/brinquedos/aquaplay.html">Aquaplay</a>, um jogo que joguei bastante na minha infância. Diversas bolinhas estão dentro da água e você aperta botões para expelir ar e impulsioná-las para cima, com o objetivo de colocá-las em certos pontos target. Um approach para obter este efeito é criar uma cena com o node `Area2D` como raíz e um `CollisionShape2D` para demarcar uma região. Se algum outro objeto com física entrar nesta região, automaticamente é aplicada uma força para cima nele, simulando o jato de ar do jogo.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/f28238b3-4a76-4919-ab18-71b8e1c0a224" width="300">
@@ -50,7 +50,7 @@ Agora sim vamos falar de sinais! Há dois botões principais, um para "soltar ar
     <img src="https://github.com/user-attachments/assets/d1786bb6-463f-47e3-a21b-d1fdb28167fc" width="250">
 </p>
 
-Uma janea contendo diversos nodes vai se abrir. Estes são os nodes da mesma cena onde está o botão que você escolheu para enviar o sinal. Ao escolher o node, o pressionar do botão vai ativar a execução de uma função no script deste node. Abaixo, node que tem o nome `_on_left_button_pressed`. Esta é a sugestão de nome de função dada pela Godot. Esta sugestão sempre é da forma `_on_{node_name}_{signal_name}`, mas você pode alterar. 
+Uma janela contendo diversos nodes vai se abrir. Estes são os nodes da mesma cena onde está o botão que você escolheu para enviar o sinal. Ao escolher o node, o pressionar do botão vai ativar a execução de uma função no script deste node. Abaixo, na figura, note que temos o nome `_on_left_button_pressed`. Esta é a sugestão de nome de função dada pela Godot. Esta sugestão sempre é da forma `_on_{node_name}_{signal_name}`, mas você pode alterar. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/04c99364-f6bd-49a1-826f-8ddb1fee9d45" width="350">
@@ -62,7 +62,7 @@ Feito isso, você será redirecionado para o script automaticamente, e a funçã
     <img src="https://github.com/user-attachments/assets/3cc0494b-3c3d-495d-9544-21a4d4e48727" width="300">
 </p>
 
-Neste jogo, este botão se conecta com o node responsável pelos impulsos de ar nas bolinhas. Parte do script associado a este node está mostrado abaixo, com a função nova que é ativada quando o sinal do botão é enviado. O comando `set_physics_process(not is_physics_processing())` liga ou desliga todos os processos físicos deste node. Logo abaixo temos uma condicional que altera a cor do botão dependendo se a física está ligada ou desligada. O node `Left Button`, por exemplo, se conecta com o `Impulse 1`, que é um quadrado de colisão invisível no lado esquerdo da tela, responsável pelos impulsos de ar naquela parte da tela. Como o script está vinculado à `Impulse 1`, a linha de código `$"../../Left Button"` faz o caminho relativo para acessar o objeto `Left Button` e assim acessar seus métodos e atributos. É assim que o pressionar do botão consegue alterar o estado de mais de um node.
+Neste jogo, o botão se conecta com o node responsável pelos impulsos de ar nas bolinhas. Parte do script associado a este node está mostrado abaixo, com a função nova que é ativada quando o sinal do botão é enviado. O comando `set_physics_process(not is_physics_processing())` liga ou desliga todos os processos físicos deste node. Logo abaixo temos uma condicional que altera a cor do botão dependendo se a física está ligada ou desligada. O node `Left Button`, por exemplo, se conecta com o `Impulse 1`, que é um quadrado de colisão invisível no lado esquerdo da tela, responsável pelos impulsos de ar naquela parte da tela. Como o script está vinculado à `Impulse 1`, a linha de código `$"../../Left Button"` faz o caminho relativo para acessar o objeto `Left Button` e assim acessar seus métodos e atributos. É assim que o pressionar do botão consegue alterar o estado de mais de um node.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/e474fc29-9217-43ca-84e4-8c28c2c3b8dc" width="600">
@@ -71,7 +71,7 @@ Neste jogo, este botão se conecta com o node responsável pelos impulsos de ar 
 
 > PS: Note que o script da cena original de impulso foi instanciada em `Impulse 1`, `Impulse 2` e `Impulse 3`, sendo que a chamada de `_on_left_button_pressed` não tem relação alguma com `Impulse 2` e `Impulse 3`. Ainda assim, ao pressionar o botão esquerdo essa função desliga a física como um todo. Por que só o `Impulse 1` foi afetado? Acontece que cada uma dessas instâncias compartilha o mesmo script, mas possui seu próprio estado interno e responde a eventos de forma independente. O botão `Left Button` está conectado especificamente à instância `Impulse 1`. O `set_physics_process` está sendo chamado dentro da instância `Impulse 1`. Cada instância executa seu próprio script separadamente, como se fossem cópias independentes em memória, embora compartilhem o mesmo "molde" (a cena base + script). Apesar da função `_on_left_button_pressed` estar presente em `Impulse 2` e `Impulse 3`, o sinal de pressionar o botão esquerdo chega apenas em `Impulse 1`.
 
-Por fim, o botão de restart possui lógica semelhante, mas com um propósito diferente. Na imagem abaixo conseguimos ver na aba de node à direita que ele também se vale do sinal `pressed` paara ativar a função `_on_restart_pressed` que está no script do node raíz da cena principal, o `Game`, que é do tipo `Node2D`. A chamada `get_tree().reload_current_scene()` serve exatamente para reiniciar a cena que chamou o script.
+Por fim, o botão de restart possui lógica semelhante, mas com um propósito diferente. Na imagem abaixo conseguimos ver na aba de node à direita que ele também se vale do sinal `pressed` para ativar a função `_on_restart_pressed` que está no script do node raíz da cena principal, o `Game`, que é do tipo `Node2D`. A chamada `get_tree().reload_current_scene()` serve exatamente para reiniciar a cena que chamou o script.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/fe0c2228-ff61-4f6e-baff-4f85b670c14a" width="1000">
