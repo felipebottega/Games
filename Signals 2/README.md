@@ -23,12 +23,28 @@ O node `Timer` possui poucas propriedades para mexer, portanto é um node simple
 Na aba *Node* do `Timer`, notasmo que ele possui apenas um sinal próprio, o `timeout`. Este sinal é emitido quando o countdown termina. Uma coisa que vale a pena mencionar é que os outros sinais mostrados na janela são dos nodes pais de `Timer`. Ele herda estes sinais, então pode usá-los também. 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/57020a7d-c76f-48f2-90b9-9f415953cc61" width="300">
+    <img src="https://github.com/user-attachments/assets/57020a7d-c76f-48f2-90b9-9f415953cc61" width="250">
 </p>
 
 Gosto possui uma ótima documentação, inclusive ela está inclusa no próprio editor. Recomendo bastante!
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/26309aae-2e3f-4354-93b9-94762de2c050" width="200">
+    <img src="https://github.com/user-attachments/assets/26309aae-2e3f-4354-93b9-94762de2c050" width="400">
 </p>
 
+Na função `_ready` do script do impulso, a linha `$Timer.timeout.connect(_on_timer_timeout)` é a responsável por criar a conexão entre o sinal `timeout` e a função `_on_timer_timeout` que você mesmo deverá criar no script. Note como isso é semelhante ao que você faz no editor com clique de mouse, você vai no `Timer`, busca o sinal `timeout` na aba Node, clica em `connect` para criar a conexão, e na janela da conexão você define que a função vai se chamar `_on_timer_timeout`. São todos esses passos resumidos numa única linha de código. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/9434a2ca-af65-4ff6-8fb2-8f09cbee6282" width="300">
+    <img src="https://github.com/user-attachments/assets/789ea920-655e-41c0-af73-8870a19e4e87" width="380">
+</p>
+
+## Vantangens e desvantagens
+
+Como acabamos de ver, criar conexões via código é mais direto. Além disso, tem situações em que o sinal só pode ser criado por código, por exemplo, sinais criados dinamicamente in-game. A desvantagem é a falta de apelo visual. Ao clicar no node eu consigo ver na hora se tem algum sinal indicando conexão, e o próprio script indica quando uma função é ativada por sinal.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/571e24cb-248c-41f4-8a4e-8e6c94597f62" width="300">
+</p>
+
+O ícone verde à esquerda da função indica que a função é ativada por um sinal. Inclusive é possível clicar e ver mais informações, como mostrado acima. Note que a função `_on_timer_timeout` não possui tal ícone. então no caso de sinais criados via script, você precisa lembrar deles (acredito que deve ter alguma ferramenta que ajuda nisso, mas não vi ainda).
