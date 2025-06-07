@@ -5,3 +5,4 @@ res://wall.tscn
 res://impulse_area.tscn
 res://target.tscn
 res://game.gd
+res://area_2d.gd
