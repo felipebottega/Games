@@ -44,4 +44,29 @@ A variável `force` é um vetor que foi definido globalmente no código, como mo
 
 ## Signals
 
-Agora sim vamos falar de sinais! 
+Agora sim vamos falar de sinais! Há dois botões principais, um para "soltar ar" pelo canal direito e outro pelo esquerdo. Uma vez que você criou e configurou a aparência do node `Button`, vá na aba *Node* à direita do painel. Este painel contém todos os sinais que o botão pode emitir, cada um exige que se tire um tempo para entender como funciona. Aqui neste exemplo usaremos o sinal `pressed`. Ele emite um sinal quando o botão é pressionado. Dê o segundo clique nele e selecine a opção de conectar.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/d1786bb6-463f-47e3-a21b-d1fdb28167fc" width="250">
+</p>
+
+Uma janea contendo diversos nodes vai se abrir. Estes são os nodes da mesma cena onde está o botão que você escolheu para enviar o sinal. Ao escolher o node, o pressionar do botão vai ativar a execução de uma função no script deste node. Abaixo, node que tem o nome `_on_left_button_pressed`. Esta é a sugestão de nome de função dada pela Godot. Esta sugestão sempre é da forma `_on_{node_name}_{signal_name}`, mas você pode alterar. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/04c99364-f6bd-49a1-826f-8ddb1fee9d45" width="350">
+</p>
+
+Feito isso, você será redirecionado para o script automaticamente, e a função nova estará lá, mas sem conteúdo nenhum. Cabe a você implementar o que vai acontecer com este trigger que acabou de criar.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/3cc0494b-3c3d-495d-9544-21a4d4e48727" width="300">
+</p>
+
+Neste jogo, este botão se conecta com o node responsável pelos impulsos de ar nas bolinhas. Parte do script associado a este node está mostrado abaixo, com a função nova que é ativada quando o sinal do botão é enviado. O comando `set_physics_process(not is_physics_processing())` liga ou desliga todos os processos físicos deste node. Logo abaixo temos uma condicional que altera a cor do botão dependendo se a física está ligada ou desligada. O node `Left Button`, por exemplo, se conecta com o `Impulse 1`, que é um quadrado de colisão invisível no lado esquerdo da tela, responsável pelos impulsos de ar naquela parte da tela. Como o script está vinculado à `Impulse 1`, a linha de código `$"../../Left Button"` faz o caminho relativo para acessar o objeto `Left Button` e assim acessar seus métodos e atributos. É assim que o pressionar do botão consegue alterar o estado de mais de um node.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/e474fc29-9217-43ca-84e4-8c28c2c3b8dc" width="600">
+    <img src="https://github.com/user-attachments/assets/3574021d-ddf0-48b4-abc5-b3be89c1181a" width="400">
+</p>
+
+> PS: Note que o script da cena original de impulso foi instanciada em `Impulse 1`, `Impulse 2` e `Impulse 3`, sendo que a chamada de `_on_left_button_pressed` não tem relação alguma com `Impulse 2` e `Impulse 3`. Ainda assim, ao pressionar o botão esquerdo essa função desliga a física como um todo. Por que só o `Impulse 1` foi afetado? Acontee que cada uma dessas instâncias compartilha o mesmo script, mas possui seu próprio estado interno e responde a eventos de forma independente. O botão `Left Button` está conectado especificamente à instância `Impulse 1`. O `set_physics_process` está sendo chamado dentro da instância `Impulse 1`. Cada instância executa seu próprio script separadamente, como se fossem cópias independentes em memória, embora compartilhem o mesmo "molde" (a cena base + script).
