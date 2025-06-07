@@ -1,10 +1,6 @@
 res://node_2d.tscn
-res://sprite_2d.tscn
-res://medusa.tscn
-res://sprite_2d.gd
+res://background.gd
 res://ball.tscn
 res://wall.tscn
-res://area_2d.gd
 res://impulse_area.tscn
-res://curved_wall.tscn
 res://target.tscn

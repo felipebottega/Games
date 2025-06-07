@@ -1,17 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://di2ccs4mi0vva"]
+[gd_scene load_steps=7 format=3 uid="uid://di2ccs4mi0vva"]
 
 [ext_resource type="Texture2D" uid="uid://dxse5ns6uo7x1" path="res://background.png" id="1_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://dnd6fiju3ji5k" path="res://ball.tscn" id="2_0e48y"]
 [ext_resource type="PackedScene" uid="uid://cwxdajahuievv" path="res://wall.tscn" id="2_epypp"]
+[ext_resource type="Script" uid="uid://cjo1g2sl7bfxw" path="res://background.gd" id="2_kdubu"]
 [ext_resource type="PackedScene" uid="uid://bk4iu352es8p4" path="res://impulse_area.tscn" id="3_epypp"]
 [ext_resource type="PackedScene" uid="uid://douni6ceatnst" path="res://target.tscn" id="5_q6r6c"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(250, 375)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-120, 19)
 texture = ExtResource("1_q6r6c")
+script = ExtResource("2_kdubu")
 
 [node name="Walls" type="Node2D" parent="."]
 
