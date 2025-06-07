@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2uhetuvonj1f"]
+
+[ext_resource type="Script" uid="uid://cge2gwph7nhbm" path="res://medusa.gd" id="1_cmnba"]
+[ext_resource type="Texture2D" uid="uid://b4iap5s7i53qy" path="res://medusa.png" id="1_jby42"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cmnba"]
+
+[node name="Medusa" type="RigidBody2D"]
+position = Vector2(1146, 213)
+freeze = true
+script = ExtResource("1_cmnba")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jby42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cmnba")
