@@ -22,7 +22,7 @@ Você deve fazer um shape igual com o `Polygon2D` e sobrepor ambos no espaço 2D
 
 ## Impulsos
 
-Este jogo é basicamente uma simulação de <a href="https://www.anos80.com.br/brinquedos/aquaplay.html">Aquaplay</a>, um jogo que joguei bastante na minha infância. Diversas bolinhas estão dentro da água e você aperta botões para expelir ar e impulsioná-las para cima, com o objetivo de colocá-las em certos pontos target. Eu descobri nesse projeto que você criar uma cena com o node `Area2D` como raíz e um `CollisionShape2D` para demarcar uma região. Se algum outro objeto com física entrar nesta região, automaticamente é aplicada uma força para cima nele, simulando o jato de ar do jogo.
+Este jogo é basicamente uma simulação de <a href="https://www.anos80.com.br/brinquedos/aquaplay.html">Aquaplay</a>, um jogo que joguei bastante na minha infância. Diversas bolinhas estão dentro da água e você aperta botões para expelir ar e impulsioná-las para cima, com o objetivo de colocá-las em certos pontos target. Um approach para ober este efeito é criar uma cena com o node `Area2D` como raíz e um `CollisionShape2D` para demarcar uma região. Se algum outro objeto com física entrar nesta região, automaticamente é aplicada uma força para cima nele, simulando o jato de ar do jogo.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/f28238b3-4a76-4919-ab18-71b8e1c0a224" width="300">
