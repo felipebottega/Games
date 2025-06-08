@@ -1,0 +1,27 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1749346916
+area_2d.gd::GDScript/GDScript::4235501350143723220::1749312101::0::1::::<>Area2D<><>0<>0<><>::
+background.gd::GDScript/GDScript::5435033051740219552::1749306861::0::1::::<>Sprite2D<><>0<>0<><>::
+background.png::CompressedTexture2D/CompressedTexture2D::8811061408161180984::1749261546::1749261559::1::::<><><>0<>0<>90fcdba32ad65927d64bc365fd60ac84<>res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex::
+ball.tscn::PackedScene::8079801742417719150::1749346257::0::1::::<><><>0<>0<><>::uid://b0d5xevpeu6w1::::res://ballBlue_10.png
+ballBlue_10.png::CompressedTexture2D/CompressedTexture2D::4149197734170889218::1749262149::1749262150::1::::<><><>0<>0<>2eee96b7f1072052b3e68186a494b873<>res://.godot/imported/ballBlue_10.png-b6ed6a1954e48e0833c2b7ae4ca5f951.ctex::
+export_presets.cfg::TextFile/TextFile::-1::1749346916::0::1::::<><><>0<>0<><>::
+game.gd::GDScript::2780316626577984490::1749345184::0::1::::<>Node2D<><>0<>0<><>::
+ganhou.png::CompressedTexture2D::428289113974224641::1749344952::1749344973::1::::<><><>0<>0<>f92688b63af8470cb9810cfbf3d6a5d8<>res://.godot/imported/ganhou.png-29c9f2505b62a8b60e262fb2fb562ff3.ctex::
+icon.svg::CompressedTexture2D/CompressedTexture2D::1793237833286744773::1749243463::1749243470::1::::<><><>0<>0<>495a91246a03fd8d6a32128bcfd6fe54<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+impulse_area.tscn::PackedScene::3148699044992172495::1749346257::0::1::::<><><>0<>0<><>::uid://b1lydahmad8wm::::res://area_2d.gd
+John Cage in a landscape.mp3::AudioStreamMP3::6220418075468204410::1540255923::1749345917::1::::<><><>0<>0<>bac32a83ed420f8e0ebd12bc976dc418<>res://.godot/imported/John Cage in a landscape.mp3-0f54e8494b530f50784aa54443a796b9.mp3str::
+metal.png::CompressedTexture2D/CompressedTexture2D::7733198478527622625::1749261979::1749261980::1::::<><><>0<>0<>c362373c657dba9c3cd6227796eb94d3<>res://.godot/imported/metal.png-3410b2eb21cfaf23b8e137a575a2ee86.ctex::
+node_2d.tscn::PackedScene::7776636995893072934::1749346256::0::1::::<><><>0<>0<><>::uid://bfu2n5m2rldpy::::res://game.gd<>uid://dxse5ns6uo7x1::::res://background.png<>uid://dnd6fiju3ji5k::::res://ball.tscn<>uid://cwxdajahuievv::::res://wall.tscn<>uid://cjo1g2sl7bfxw::::res://background.gd<>uid://bk4iu352es8p4::::res://impulse_area.tscn<>uid://douni6ceatnst::::res://target.tscn<>uid://fy6orsa1ihyu::::res://win_area.tscn<>uid://gdp4hfm2ip50::::res://ganhou.png
+README.md::TextFile/TextFile::-1::1749327358::0::1::::<><><>0<>0<><>::
+win_area.gd::GDScript::961696465285013602::1749345430::0::1::::<>Area2D<><>0<>0<><>::
+win_area.tscn::PackedScene::402397432916525504::1749346257::0::1::::<><><>0<>0<><>::uid://nx4aak6alnss::::res://win_area.gd
+sprite_2d.gd::GDScript/GDScript::7989967004725969807::1749245064::0::1::::<>Sprite2D<><>0<>0<><>::
+sprite_2d.tscn::PackedScene/PackedScene::7865532149176207728::1749253913::0::1::::<><><>0<>0<><>::uid://0swmocvsk6q0::::res://icon.svg<>uid://dl3nubewvjjl4::::res://sprite_2d.gd
+target.tscn::PackedScene::8183998655846122691::1749346257::0::1::::<><><>0<>0<><>::uid://d1fbd5we1yhl4::::res://wood.png
+wall.tscn::PackedScene::6364659239799834575::1749346257::0::1::::<><><>0<>0<><>::uid://digawcmq61wf6::::res://metal.png
+wood.png::CompressedTexture2D/CompressedTexture2D::8994561558716564879::1749262024::1749262026::1::::<><><>0<>0<>2061af863eeb5034aa18b8ff4c3552d0<>res://.godot/imported/wood.png-320746db63b5a5eb1bb7f02275994b36.ctex::
+::res://html/::1749346915
+Signals 3.apple-touch-icon.png::CompressedTexture2D::3465606260110419666::1749346915::1749346917::1::::<><><>0<>0<>da15c08658b5a2107adadc26c384ed49<>res://.godot/imported/Signals 3.apple-touch-icon.png-146c30485eef58bcc0b582804f3d12b8.ctex::
+Signals 3.icon.png::CompressedTexture2D::1607201909893737349::1749346915::1749346917::1::::<><><>0<>0<>572cd664d288e5728f64fa1df2fbcab4<>res://.godot/imported/Signals 3.icon.png-eaa46ce8284d45b3882a74fa8d3ed338.ctex::
+Signals 3.png::CompressedTexture2D::3228507461348265152::1749346915::1749346917::1::::<><><>0<>0<>c956688525a0a5beb4f45c811e6261d5<>res://.godot/imported/Signals 3.png-7b0438d1af6a223d54879389765a2b77.ctex::

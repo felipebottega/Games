@@ -1,0 +1,8 @@
+res://node_2d.tscn
+res://ball.tscn
+res://wall.tscn
+res://impulse_area.tscn
+res://target.tscn
+res://win_area.tscn
+res://win_area.gd
+res://game.gd

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuvhm2xhxdp2a"
+path="res://.godot/imported/John Cage in a landscape.mp3-0f54e8494b530f50784aa54443a796b9.mp3str"
+
+[deps]
+
+source_file="res://John Cage in a landscape.mp3"
+dest_files=["res://.godot/imported/John Cage in a landscape.mp3-0f54e8494b530f50784aa54443a796b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
