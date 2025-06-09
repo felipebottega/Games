@@ -6,6 +6,14 @@
   <title>Integral Games</title>
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3ae.svg">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
       background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
@@ -18,58 +26,111 @@
     }
 
     h1 {
-      font-size: 3rem;
-      color: #00f7ff;
-      text-shadow: 0 0 10px #00ffe1, 0 0 20px #0088ff;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
       margin-bottom: 2rem;
+      text-shadow: 0 0 10px #00ffe1, 0 0 20px #0088ff;
+      animation: flicker 2s infinite alternate;
+      color: #00f7ff;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.85; text-shadow: 0 0 5px #0ff, 0 0 10px #08f; }
+      100% { opacity: 1; text-shadow: 0 0 15px #0ff, 0 0 25px #08f; }
+    }
+
+    .tree {
+      max-width: 800px;
+      width: 100%;
     }
 
     ul {
       list-style: none;
       padding-left: 1rem;
+      transition: all 0.3s ease-in-out;
     }
 
     li {
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
       margin: 0.5rem 0;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
       cursor: pointer;
     }
 
-    a {
-      color: #00f7ff;
-      text-decoration: none;
+    li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.25), 0 0 15px rgba(0, 255, 255, 0.15);
     }
 
-    .folder {
-      font-weight: bold;
-      margin-top: 1rem;
+    .folder::before, .file::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .folder::before {
+      background-image: url('https://img.icons8.com/fluency/48/folder-invoices.png');
+    }
+
+    .file::before {
+      background-image: url('https://img.icons8.com/fluency/48/document.png');
     }
 
     .nested {
       display: none;
-      margin-left: 1rem;
+      padding-left: 1rem;
+      margin-top: 0.5rem;
     }
 
     .active {
       display: block;
     }
 
-    .toggle::before {
-      content: "📂 ";
+    a {
+      color: #ffffff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #00f;
+      transition: color 0.3s ease;
     }
 
-    .file::before {
-      content: "📄 ";
+    a:hover {
+      color: #00f7ff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.3rem;
+        text-align: center;
+      }
+
+      li {
+        padding: 0.8rem 1rem;
+      }
+
+      a {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <h1>🎮 Integral Games</h1>
-  <div id="file-tree"></div>
+  <div class="tree" id="file-tree"></div>
 
   <br><br>
   <a href="https://github.com/felipebottega/Games/tree/gh-pages" style="font-size: 16px;">Github: https://github.com/felipebottega/Games/tree/gh-pages</a>
-  <br>
-  Última atualização: 2025-06-09 18:37
+  <br>Última atualização: 2025-06-09 18:42
 
   <script>
     const files = [
@@ -84,33 +145,25 @@
 
     function buildTree(files) {
       const root = {};
-
       files.forEach(({ path, title }) => {
-        const parts = path.split("/").filter(p => p);
+        const parts = path.split("/").filter(Boolean);
         let current = root;
         parts.forEach((part, i) => {
-          if (!current[part]) {
-            current[part] = {};
-          }
-          if (i === parts.length - 1) {
-            current[part]._file = { path, title };
-          }
+          if (!current[part]) current[part] = {};
+          if (i === parts.length - 1) current[part]._file = { path, title };
           current = current[part];
         });
       });
-
       return root;
     }
 
     function renderTree(node, parent) {
       const ul = document.createElement("ul");
       for (const key in node) {
+        if (key === "_file") continue;
         const li = document.createElement("li");
 
-        if (key === "_file") continue;
-
         if (node[key]._file) {
-          // É um arquivo
           li.className = "file";
           const a = document.createElement("a");
           a.href = node[key]._file.path;
@@ -118,16 +171,15 @@
           a.target = "_blank";
           li.appendChild(a);
         } else {
-          // É uma pasta
-          li.className = "toggle folder";
+          li.className = "folder";
           li.textContent = key;
-          const childUL = renderTree(node[key], li);
-          childUL.classList.add("nested");
+          const nested = renderTree(node[key], li);
+          nested.classList.add("nested");
+          li.appendChild(nested);
           li.addEventListener("click", function (e) {
             e.stopPropagation();
-            childUL.classList.toggle("active");
+            nested.classList.toggle("active");
           });
-          li.appendChild(childUL);
         }
 
         ul.appendChild(li);
@@ -136,9 +188,9 @@
       return ul;
     }
 
-    const treeData = buildTree(files);
+    const tree = buildTree(files);
     const container = document.getElementById("file-tree");
-    renderTree(treeData, container);
+    renderTree(tree, container);
   </script>
 </body>
 </html>
