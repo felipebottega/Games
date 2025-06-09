@@ -133,7 +133,7 @@
   <br><br>
   <a href="https://github.com/felipebottega/Games/tree/gh-pages" style="font-size: 16px; color: #00ffe1;">Github: felipebottega/Games</a>
   <br>
-  Última atualização: 2025-06-09 18:46
+  Última atualização: 2025-06-09 18:52
 
   <script>
     const files = [
@@ -150,10 +150,12 @@
       const root = {};
       files.forEach(({ path, title }) => {
         const parts = path.split("/").filter(Boolean);
+        const isRedundant = parts[parts.length - 2]?.toLowerCase() === title.toLowerCase();
+        const finalParts = isRedundant ? parts.slice(0, -1) : parts;
         let current = root;
-        parts.forEach((part, i) => {
+        finalParts.forEach((part, i) => {
           if (!current[part]) current[part] = {};
-          if (i === parts.length - 1) current[part]._file = { path, title };
+          if (i === finalParts.length - 1) current[part]._file = { path, title };
           current = current[part];
         });
       });
@@ -164,11 +166,9 @@
       const ul = document.createElement("ul");
       for (const key in node) {
         if (key === "_file") continue;
-
         const li = document.createElement("li");
 
         if (node[key]._file) {
-          li.className = "file";
           const a = document.createElement("a");
           a.href = node[key]._file.path;
           a.textContent = node[key]._file.title;
@@ -177,7 +177,6 @@
         } else {
           li.className = "folder";
           li.textContent = key;
-
           const nested = renderTree(node[key], li);
           nested.classList.add("nested");
           li.appendChild(nested);
