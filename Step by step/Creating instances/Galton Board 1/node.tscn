@@ -1,0 +1,4409 @@
+[gd_scene load_steps=3 format=3 uid="uid://we6ytq3dij01"]
+
+[ext_resource type="PackedScene" uid="uid://bf3pmdn1vl4ll" path="res://wall.tscn" id="2_112p8"]
+[ext_resource type="PackedScene" uid="uid://nv3loraev2el" path="res://small_ball.tscn" id="3_112p8"]
+
+[node name="Node" type="Node"]
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2(2, 413)
+scale = Vector2(0.6, 0.6)
+
+[node name="wall" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(500, 675)
+scale = Vector2(5.66666, 1.8)
+
+[node name="wall2" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(0, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall3" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(25, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall4" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(50, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall5" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(75, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall6" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(100, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall7" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(125, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall8" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(150, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall9" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(175, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall10" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(200, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall11" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(225, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall12" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(250, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall13" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(275, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall14" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(275, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall15" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(300, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall16" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(325, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall17" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(350, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall18" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(375, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall19" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(400, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall20" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(425, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall21" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(450, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall22" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(475, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall23" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(500, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall24" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(525, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall25" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(550, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall26" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(575, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall27" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(600, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall28" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(625, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall29" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(650, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall30" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(675, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall31" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(700, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall32" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(725, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall33" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(750, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall34" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(775, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall35" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(800, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall36" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(825, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall37" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(850, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall38" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(875, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall39" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(900, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall40" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(925, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall41" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(950, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall42" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(975, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall43" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(1000, 425)
+rotation = 1.5708
+scale = Vector2(1.33333, 0.1)
+
+[node name="wall44" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(1209, 0)
+rotation = 1.5708
+scale = Vector2(10, 7.2)
+
+[node name="wall45" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(-206, 0)
+rotation = 1.5708
+scale = Vector2(10, 7.2)
+
+[node name="wall46" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(170, -881.333)
+rotation = 0.837758
+scale = Vector2(2.67864, 1)
+
+[node name="wall47" parent="Walls" instance=ExtResource("2_112p8")]
+position = Vector2(835, -883.333)
+rotation = 2.33001
+scale = Vector2(2.76752, 1)
+
+[node name="Small_Balls" type="Node" parent="."]
+
+[node name="small_ball" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -195)
+
+[node name="small_ball2" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(371, -60)
+
+[node name="small_ball3" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -278)
+
+[node name="small_ball4" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(272, -420)
+
+[node name="small_ball5" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(171, -319)
+
+[node name="small_ball6" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(602, -540)
+
+[node name="small_ball7" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(303, -135)
+
+[node name="small_ball9" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(91, -306)
+
+[node name="small_ball10" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(410, -255)
+
+[node name="small_ball8" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -195)
+
+[node name="small_ball11" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -328)
+
+[node name="small_ball16" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(113, -526)
+
+[node name="small_ball18" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -645)
+
+[node name="small_ball19" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(238, -364)
+
+[node name="small_ball20" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -229)
+
+[node name="small_ball21" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(405, -401)
+
+[node name="small_ball23" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -310)
+
+[node name="small_ball25" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(469, -305)
+
+[node name="small_ball26" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -570)
+
+[node name="small_ball27" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(560, -538)
+
+[node name="small_ball28" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(238, -364)
+
+[node name="small_ball32" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(323, -483)
+
+[node name="small_ball33" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -722)
+
+[node name="small_ball35" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(457, -584)
+
+[node name="small_ball36" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -606)
+
+[node name="small_ball37" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -695)
+
+[node name="small_ball38" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(375, -530)
+
+[node name="small_ball40" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(462, -711)
+
+[node name="small_ball42" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(117, -503)
+
+[node name="small_ball43" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -482)
+
+[node name="small_ball45" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(464, -620)
+
+[node name="small_ball46" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -695)
+
+[node name="small_ball48" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -573)
+
+[node name="small_ball55" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(131, -701)
+
+[node name="small_ball56" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(426, -296)
+
+[node name="small_ball58" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(336, -503)
+
+[node name="small_ball61" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(131, -399)
+
+[node name="small_ball63" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -581)
+
+[node name="small_ball64" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(131, -701)
+
+[node name="small_ball65" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -506)
+
+[node name="small_ball70" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(458, -628)
+
+[node name="small_ball72" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(493, -747)
+
+[node name="small_ball73" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(180, -381)
+
+[node name="small_ball75" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(55, -287)
+
+[node name="small_ball76" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(27, -429)
+
+[node name="small_ball77" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(244, -383)
+
+[node name="small_ball78" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(485, -303)
+
+[node name="small_ball79" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -191)
+
+[node name="small_ball80" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -465)
+
+[node name="small_ball81" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -310)
+
+[node name="small_ball82" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(193, -283)
+
+[node name="small_ball85" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(158, -449)
+
+[node name="small_ball87" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(348, -476)
+
+[node name="small_ball88" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -685)
+
+[node name="small_ball91" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(241, -271)
+
+[node name="small_ball92" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(220, -238)
+
+[node name="small_ball93" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(216, -524)
+
+[node name="small_ball95" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(43, -337)
+
+[node name="small_ball96" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(120, -296)
+
+[node name="small_ball97" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(213, -360)
+
+[node name="small_ball98" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(159, -729)
+
+[node name="small_ball99" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(443, -301)
+
+[node name="small_ball100" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(320, -196)
+
+[node name="small_ball104" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(100, -368)
+
+[node name="small_ball105" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(159, -506)
+
+[node name="small_ball106" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(491, -732)
+
+[node name="small_ball107" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(106, -715)
+
+[node name="small_ball108" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(306, -474)
+
+[node name="small_ball109" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -579)
+
+[node name="small_ball110" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(86, -311)
+
+[node name="small_ball112" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(295, -521)
+
+[node name="small_ball113" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -717)
+
+[node name="small_ball114" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(480, -772)
+
+[node name="small_ball115" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -660)
+
+[node name="small_ball116" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(127, -660)
+
+[node name="small_ball118" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -579)
+
+[node name="small_ball119" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -342)
+
+[node name="small_ball122" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(479, -521)
+
+[node name="small_ball124" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -464)
+
+[node name="small_ball125" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(277, -524)
+
+[node name="small_ball126" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -765)
+
+[node name="small_ball128" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(113, -575)
+
+[node name="small_ball131" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -324)
+
+[node name="small_ball132" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -481)
+
+[node name="small_ball133" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(106, -697)
+
+[node name="small_ball134" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(134, -671)
+
+[node name="small_ball140" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(272, -485)
+
+[node name="small_ball143" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -602)
+
+[node name="small_ball145" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(521, -299)
+
+[node name="small_ball146" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(748, -164)
+
+[node name="small_ball147" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(677, -382)
+
+[node name="small_ball148" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(716, -592)
+
+[node name="small_ball149" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(548, -423)
+
+[node name="small_ball150" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(106, -600)
+
+[node name="small_ball151" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(741, -286)
+
+[node name="small_ball153" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(776, -405)
+
+[node name="small_ball154" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(521, -299)
+
+[node name="small_ball157" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(332, -536)
+
+[node name="small_ball163" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(682, -536)
+
+[node name="small_ball164" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(842, -333)
+
+[node name="small_ball168" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -552)
+
+[node name="small_ball169" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(96, -384)
+
+[node name="small_ball172" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(682, -536)
+
+[node name="small_ball174" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(462, -402)
+
+[node name="small_ball175" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(491, -539)
+
+[node name="small_ball176" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -529)
+
+[node name="small_ball185" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(130, -454)
+
+[node name="small_ball188" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -638)
+
+[node name="small_ball192" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -346)
+
+[node name="small_ball194" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -429)
+
+[node name="small_ball195" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -639)
+
+[node name="small_ball198" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(276, -502)
+
+[node name="small_ball199" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(462, -361)
+
+[node name="small_ball202" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -716)
+
+[node name="small_ball208" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(462, -361)
+
+[node name="small_ball210" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(71, -620)
+
+[node name="small_ball215" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(113, -335)
+
+[node name="small_ball216" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(97, -637)
+
+[node name="small_ball217" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(276, -308)
+
+[node name="small_ball218" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(503, -173)
+
+[node name="small_ball219" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(443, -345)
+
+[node name="small_ball220" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(588, -401)
+
+[node name="small_ball221" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(303, -432)
+
+[node name="small_ball223" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(507, -249)
+
+[node name="small_ball224" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -514)
+
+[node name="small_ball225" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(531, -414)
+
+[node name="small_ball226" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(276, -308)
+
+[node name="small_ball227" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(308, -530)
+
+[node name="small_ball229" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -593)
+
+[node name="small_ball230" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -767)
+
+[node name="small_ball232" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -387)
+
+[node name="small_ball234" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(477, -760)
+
+[node name="small_ball235" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(554, -345)
+
+[node name="small_ball236" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(597, -342)
+
+[node name="small_ball237" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -410)
+
+[node name="small_ball238" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -287)
+
+[node name="small_ball239" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(293, -512)
+
+[node name="small_ball241" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(657, -532)
+
+[node name="small_ball242" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -475)
+
+[node name="small_ball244" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(554, -345)
+
+[node name="small_ball245" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -417)
+
+[node name="small_ball248" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -313)
+
+[node name="small_ball249" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -449)
+
+[node name="small_ball250" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -539)
+
+[node name="small_ball251" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(473, -660)
+
+[node name="small_ball252" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -501)
+
+[node name="small_ball257" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(493, -723)
+
+[node name="small_ball259" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(457, -362)
+
+[node name="small_ball260" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(286, -530)
+
+[node name="small_ball261" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -730)
+
+[node name="small_ball263" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(382, -533)
+
+[node name="small_ball264" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -649)
+
+[node name="small_ball266" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(131, -727)
+
+[node name="small_ball267" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -653)
+
+[node name="small_ball268" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(496, -572)
+
+[node name="small_ball270" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(249, -196)
+
+[node name="small_ball272" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -348)
+
+[node name="small_ball274" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(357, -527)
+
+[node name="small_ball275" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(367, -515)
+
+[node name="small_ball277" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -514)
+
+[node name="small_ball278" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(501, -616)
+
+[node name="small_ball281" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(499, -558)
+
+[node name="small_ball285" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(133, -289)
+
+[node name="small_ball286" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(486, -489)
+
+[node name="small_ball290" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(283, -396)
+
+[node name="small_ball292" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(140, -691)
+
+[node name="small_ball293" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -753)
+
+[node name="small_ball294" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(484, -708)
+
+[node name="small_ball295" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(471, -340)
+
+[node name="small_ball296" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -765)
+
+[node name="small_ball297" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -535)
+
+[node name="small_ball302" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -689)
+
+[node name="small_ball303" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(510, -683)
+
+[node name="small_ball304" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(334, -513)
+
+[node name="small_ball307" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(106, -635)
+
+[node name="small_ball309" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -725)
+
+[node name="small_ball312" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(451, -468)
+
+[node name="small_ball314" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -311)
+
+[node name="small_ball315" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -496)
+
+[node name="small_ball316" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(106, -635)
+
+[node name="small_ball317" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(319, -523)
+
+[node name="small_ball319" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(114, -730)
+
+[node name="small_ball322" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -543)
+
+[node name="small_ball324" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(468, -681)
+
+[node name="small_ball325" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -377)
+
+[node name="small_ball326" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(473, -687)
+
+[node name="small_ball327" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -300)
+
+[node name="small_ball330" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -368)
+
+[node name="small_ball333" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -286)
+
+[node name="small_ball334" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -377)
+
+[node name="small_ball338" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(463, -397)
+
+[node name="small_ball344" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(347, -479)
+
+[node name="small_ball348" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(476, -756)
+
+[node name="small_ball349" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -518)
+
+[node name="small_ball351" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(496, -637)
+
+[node name="small_ball357" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -518)
+
+[node name="small_ball359" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -364)
+
+[node name="small_ball361" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(282, -412)
+
+[node name="small_ball362" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(38, -405)
+
+[node name="small_ball363" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -699)
+
+[node name="small_ball365" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(474, -637)
+
+[node name="small_ball366" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(455, -706)
+
+[node name="small_ball369" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(455, -744)
+
+[node name="small_ball370" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(282, -412)
+
+[node name="small_ball371" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(406, -295)
+
+[node name="small_ball372" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -439)
+
+[node name="small_ball374" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(477, -612)
+
+[node name="small_ball376" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(111, -398)
+
+[node name="small_ball377" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -639)
+
+[node name="small_ball378" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -680)
+
+[node name="small_ball379" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(478, -760)
+
+[node name="small_ball380" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(88, -509)
+
+[node name="small_ball383" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(263, -523)
+
+[node name="small_ball384" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(329, -498)
+
+[node name="small_ball386" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(116, -442)
+
+[node name="small_ball388" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(478, -760)
+
+[node name="small_ball392" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(113, -649)
+
+[node name="small_ball395" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(100, -338)
+
+[node name="small_ball398" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(306, -497)
+
+[node name="small_ball400" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -537)
+
+[node name="small_ball401" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(482, -411)
+
+[node name="small_ball402" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -666)
+
+[node name="small_ball403" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -354)
+
+[node name="small_ball404" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(60, -620)
+
+[node name="small_ball407" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -623)
+
+[node name="small_ball412" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(283, -515)
+
+[node name="small_ball414" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(158, -369)
+
+[node name="small_ball415" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(114, -481)
+
+[node name="small_ball419" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -605)
+
+[node name="small_ball422" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -294)
+
+[node name="small_ball424" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(114, -481)
+
+[node name="small_ball425" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -291)
+
+[node name="small_ball429" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -330)
+
+[node name="small_ball433" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(457, -300)
+
+[node name="small_ball434" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(727, -568)
+
+[node name="small_ball437" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -629)
+
+[node name="small_ball440" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -572)
+
+[node name="small_ball442" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(457, -300)
+
+[node name="small_ball444" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(322, -526)
+
+[node name="small_ball445" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -444)
+
+[node name="small_ball446" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(293, -204)
+
+[node name="small_ball448" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -722)
+
+[node name="small_ball451" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -452)
+
+[node name="small_ball455" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(464, -419)
+
+[node name="small_ball460" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -452)
+
+[node name="small_ball462" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(481, -529)
+
+[node name="small_ball463" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(126, -390)
+
+[node name="small_ball464" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -751)
+
+[node name="small_ball466" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(310, -486)
+
+[node name="small_ball467" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(248, -534)
+
+[node name="small_ball468" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -577)
+
+[node name="small_ball471" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(350, -482)
+
+[node name="small_ball472" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(450, -378)
+
+[node name="small_ball473" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(159, -319)
+
+[node name="small_ball479" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(481, -568)
+
+[node name="small_ball484" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(474, -690)
+
+[node name="small_ball488" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -692)
+
+[node name="small_ball489" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(274, -538)
+
+[node name="small_ball490" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(481, -627)
+
+[node name="small_ball491" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -550)
+
+[node name="small_ball492" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(270, -535)
+mass = 0.5
+
+[node name="small_ball494" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(479, -734)
+
+[node name="small_ball497" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(489, -713)
+
+[node name="small_ball502" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -326)
+
+[node name="small_ball504" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -756)
+
+[node name="small_ball505" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -579)
+
+[node name="small_ball506" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(599, -377)
+
+[node name="small_ball507" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -644)
+
+[node name="small_ball511" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(432, -296)
+
+[node name="small_ball513" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(473, -606)
+
+[node name="small_ball514" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -579)
+
+[node name="small_ball516" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -583)
+
+[node name="small_ball519" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(486, -744)
+
+[node name="small_ball520" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(471, -506)
+
+[node name="small_ball522" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(506, -625)
+
+[node name="small_ball523" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -755)
+
+[node name="small_ball524" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(307, -528)
+
+[node name="small_ball526" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -728)
+
+[node name="small_ball529" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -429)
+
+[node name="small_ball530" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(476, -550)
+
+[node name="small_ball531" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(159, -391)
+
+[node name="small_ball532" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -755)
+
+[node name="small_ball533" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(468, -301)
+
+[node name="small_ball537" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(268, -488)
+
+[node name="small_ball538" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -423)
+
+[node name="small_ball540" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -723)
+
+[node name="small_ball541" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(114, -330)
+
+[node name="small_ball543" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -539)
+
+[node name="small_ball544" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -681)
+
+[node name="small_ball545" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(134, -617)
+
+[node name="small_ball546" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(491, -543)
+
+[node name="small_ball547" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(506, -299)
+
+[node name="small_ball549" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(142, -310)
+
+[node name="small_ball550" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(114, -330)
+
+[node name="small_ball560" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(502, -448)
+
+[node name="small_ball561" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(299, -297)
+
+[node name="small_ball564" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(64, -713)
+
+[node name="small_ball567" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -698)
+
+[node name="small_ball572" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(422, -300)
+
+[node name="small_ball575" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -465)
+
+[node name="small_ball576" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -460)
+
+[node name="small_ball577" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(294, -514)
+
+[node name="small_ball578" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(692, -536)
+
+[node name="small_ball580" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -476)
+
+[node name="small_ball581" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -392)
+
+[node name="small_ball582" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -746)
+mass = 0.5
+
+[node name="small_ball586" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(294, -514)
+
+[node name="small_ball587" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -386)
+
+[node name="small_ball590" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -602)
+
+[node name="small_ball591" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(152, -547)
+
+[node name="small_ball592" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -684)
+
+[node name="small_ball595" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(137, -401)
+
+[node name="small_ball597" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -628)
+
+[node name="small_ball599" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -544)
+
+[node name="small_ball604" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(137, -401)
+
+[node name="small_ball606" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(358, -506)
+
+[node name="small_ball607" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(91, -358)
+
+[node name="small_ball608" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(428, -295)
+
+[node name="small_ball610" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(275, -454)
+
+[node name="small_ball612" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(110, -545)
+
+[node name="small_ball613" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(368, -517)
+
+[node name="small_ball616" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(289, -168)
+
+[node name="small_ball619" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -483)
+
+[node name="small_ball620" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(299, -312)
+
+[node name="small_ball622" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(368, -517)
+
+[node name="small_ball623" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -254)
+
+[node name="small_ball627" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -434)
+
+[node name="small_ball630" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(271, -533)
+
+[node name="small_ball631" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(479, -351)
+
+[node name="small_ball634" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(97, -644)
+
+[node name="small_ball635" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(512, -666)
+
+[node name="small_ball637" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(303, -410)
+
+[node name="small_ball640" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(479, -351)
+
+[node name="small_ball642" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(106, -414)
+
+[node name="small_ball647" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -621)
+
+[node name="small_ball648" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -413)
+
+[node name="small_ball649" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(109, -547)
+
+[node name="small_ball650" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(564, -345)
+
+[node name="small_ball651" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -593)
+
+[node name="small_ball653" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -671)
+
+[node name="small_ball654" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(454, -380)
+
+[node name="small_ball657" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -364)
+
+[node name="small_ball658" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(109, -547)
+
+[node name="small_ball663" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(451, -712)
+
+[node name="small_ball664" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(155, -292)
+
+[node name="small_ball666" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(471, -593)
+
+[node name="small_ball667" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(94, -723)
+
+[node name="small_ball669" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -554)
+
+[node name="small_ball670" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -696)
+
+[node name="small_ball673" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(130, -638)
+
+[node name="small_ball674" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -499)
+
+[node name="small_ball675" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -516)
+
+[node name="small_ball676" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(94, -723)
+
+[node name="small_ball677" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(305, -515)
+
+[node name="small_ball678" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -739)
+
+[node name="small_ball681" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(87, -749)
+
+[node name="small_ball682" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -213)
+
+[node name="small_ball683" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -721)
+
+[node name="small_ball684" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(283, -532)
+
+[node name="small_ball690" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -388)
+
+[node name="small_ball691" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(343, -513)
+
+[node name="small_ball693" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(499, -549)
+
+[node name="small_ball696" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -698)
+
+[node name="small_ball698" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -751)
+
+[node name="small_ball701" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(447, -295)
+
+[node name="small_ball703" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(454, -649)
+
+[node name="small_ball705" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(494, -695)
+
+[node name="small_ball709" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(454, -347)
+
+[node name="small_ball711" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -309)
+
+[node name="small_ball712" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(454, -649)
+
+[node name="small_ball719" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(137, -718)
+
+[node name="small_ball724" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(130, -305)
+
+[node name="small_ball725" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -697)
+mass = 0.5
+
+[node name="small_ball727" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -501)
+
+[node name="small_ball729" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(498, -664)
+
+[node name="small_ball731" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -391)
+
+[node name="small_ball737" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -676)
+
+[node name="small_ball740" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(453, -296)
+
+[node name="small_ball743" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -373)
+
+[node name="small_ball744" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(76, -737)
+
+[node name="small_ball745" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(453, -462)
+
+[node name="small_ball747" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -581)
+
+[node name="small_ball755" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -578)
+mass = 0.5
+
+[node name="small_ball758" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(454, -366)
+
+[node name="small_ball764" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(133, -632)
+
+[node name="small_ball770" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(462, -385)
+
+[node name="small_ball793" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -320)
+
+[node name="small_ball796" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(152, -327)
+
+[node name="small_ball797" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -331)
+
+[node name="small_ball798" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -366)
+
+[node name="small_ball801" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -688)
+mass = 0.5
+
+[node name="small_ball802" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -320)
+
+[node name="small_ball803" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -413)
+
+[node name="small_ball806" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(292, -224)
+
+[node name="small_ball811" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(112, -658)
+
+[node name="small_ball818" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(318, -442)
+
+[node name="small_ball820" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(112, -658)
+
+[node name="small_ball822" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -635)
+
+[node name="small_ball824" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(100, -700)
+
+[node name="small_ball827" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(99, -326)
+
+[node name="small_ball831" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(277, -450)
+
+[node name="small_ball832" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(484, -539)
+
+[node name="small_ball833" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(158, -339)
+
+[node name="small_ball835" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -726)
+
+[node name="small_ball836" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(482, -646)
+
+[node name="small_ball839" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(492, -625)
+
+[node name="small_ball844" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(282, -503)
+
+[node name="small_ball846" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -357)
+
+[node name="small_ball847" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(362, -492)
+
+[node name="small_ball850" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -733)
+
+[node name="small_ball851" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(477, -607)
+
+[node name="small_ball854" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(415, -301)
+
+[node name="small_ball856" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(362, -492)
+
+[node name="small_ball857" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(438, -298)
+
+[node name="small_ball862" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -401)
+
+[node name="small_ball868" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -341)
+
+[node name="small_ball869" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(491, -492)
+
+[node name="small_ball871" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(152, -398)
+
+[node name="small_ball872" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(504, -676)
+
+[node name="small_ball875" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(502, -618)
+
+[node name="small_ball879" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -349)
+
+[node name="small_ball880" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -730)
+
+[node name="small_ball883" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(326, -531)
+
+[node name="small_ball884" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -746)
+
+[node name="small_ball887" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(481, -409)
+
+[node name="small_ball891" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(313, -463)
+
+[node name="small_ball892" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(326, -531)
+
+[node name="small_ball893" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(80, -664)
+
+[node name="small_ball900" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(94, -347)
+
+[node name="small_ball904" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(133, -661)
+
+[node name="small_ball906" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -324)
+
+[node name="small_ball907" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -705)
+
+[node name="small_ball909" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(477, -667)
+
+[node name="small_ball911" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -747)
+
+[node name="small_ball914" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(450, -426)
+
+[node name="small_ball916" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -467)
+
+[node name="small_ball920" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(480, -728)
+
+[node name="small_ball921" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(109, -304)
+
+[node name="small_ball923" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(126, -729)
+
+[node name="small_ball926" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -511)
+
+[node name="small_ball927" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(122, -303)
+
+[node name="small_ball938" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -755)
+
+[node name="small_ball940" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(463, -639)
+
+[node name="small_ball942" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(512, -593)
+
+[node name="small_ball945" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(474, -483)
+
+[node name="small_ball947" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(471, -725)
+
+[node name="small_ball949" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -350)
+
+[node name="small_ball955" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -564)
+
+[node name="small_ball956" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -672)
+
+[node name="small_ball957" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(469, -629)
+
+[node name="small_ball959" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -707)
+
+[node name="small_ball960" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(90, -639)
+
+[node name="small_ball961" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(301, -527)
+
+[node name="small_ball963" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(464, -400)
+
+[node name="small_ball964" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -564)
+
+[node name="small_ball976" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(107, -730)
+
+[node name="small_ball986" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(83, -713)
+
+[node name="small_ball990" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -398)
+
+[node name="small_ball998" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(115, -323)
+
+[node name="small_ball1010" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(429, -300)
+
+[node name="small_ball1015" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(134, -403)
+
+[node name="small_ball1022" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -300)
+
+[node name="small_ball1038" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -689)
+mass = 0.5
+
+[node name="small_ball1044" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(450, -368)
+
+[node name="small_ball1045" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(78, -666)
+
+[node name="small_ball1046" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -667)
+
+[node name="small_ball1049" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(337, -521)
+
+[node name="small_ball1051" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(259, -484)
+mass = 0.5
+
+[node name="small_ball1052" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(478, -459)
+
+[node name="small_ball1054" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(78, -666)
+
+[node name="small_ball1063" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -314)
+
+[node name="small_ball1072" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -314)
+
+[node name="small_ball1081" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(498, -420)
+
+[node name="small_ball1082" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(451, -322)
+
+[node name="small_ball1087" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -425)
+
+[node name="small_ball1088" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(480, -737)
+
+[node name="small_ball1090" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(498, -420)
+
+[node name="small_ball1091" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -559)
+
+[node name="small_ball1092" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -292)
+
+[node name="small_ball1094" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -717)
+
+[node name="small_ball1097" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -518)
+
+[node name="small_ball1098" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -291)
+
+[node name="small_ball1099" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -337)
+
+[node name="small_ball1102" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -667)
+
+[node name="small_ball1103" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -698)
+
+[node name="small_ball1106" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(262, -481)
+
+[node name="small_ball1108" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -337)
+
+[node name="small_ball1109" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(285, -478)
+
+[node name="small_ball1110" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(127, -437)
+
+[node name="small_ball1114" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(479, -360)
+
+[node name="small_ball1120" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -390)
+
+[node name="small_ball1123" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -637)
+
+[node name="small_ball1125" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(320, -512)
+
+[node name="small_ball1135" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(85, -334)
+
+[node name="small_ball1136" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -709)
+
+[node name="small_ball1137" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(155, -393)
+
+[node name="small_ball1139" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(112, -458)
+
+[node name="small_ball1141" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -291)
+
+[node name="small_ball1143" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(469, -429)
+
+[node name="small_ball1144" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(85, -334)
+
+[node name="small_ball1153" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -457)
+
+[node name="small_ball1154" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(274, -540)
+
+[node name="small_ball1156" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(101, -353)
+
+[node name="small_ball1158" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(338, -444)
+
+[node name="small_ball1160" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(501, -317)
+
+[node name="small_ball1161" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -457)
+
+[node name="small_ball1162" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -590)
+
+[node name="small_ball1163" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(325, -491)
+
+[node name="small_ball1167" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(493, -735)
+
+[node name="small_ball1169" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(308, -477)
+
+[node name="small_ball1171" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(450, -445)
+
+[node name="small_ball1173" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(468, -768)
+
+[node name="small_ball1174" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -553)
+
+[node name="small_ball1176" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(549, -413)
+
+[node name="small_ball1178" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(332, -487)
+
+[node name="small_ball1181" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -402)
+
+[node name="small_ball1183" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(137, -480)
+
+[node name="small_ball1184" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(104, -394)
+
+[node name="small_ball1185" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(502, -325)
+
+[node name="small_ball1189" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(477, -546)
+
+[node name="small_ball1191" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -387)
+
+[node name="small_ball1193" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(509, -341)
+
+[node name="small_ball1194" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(115, -744)
+
+[node name="small_ball1198" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(468, -473)
+
+[node name="small_ball1200" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(114, -740)
+
+[node name="small_ball1203" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -595)
+
+[node name="small_ball1206" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -533)
+
+[node name="small_ball1208" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -377)
+
+[node name="small_ball1209" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -500)
+
+[node name="small_ball1210" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(453, -455)
+
+[node name="small_ball1215" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -533)
+
+[node name="small_ball1216" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -749)
+
+[node name="small_ball1224" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(596, -383)
+
+[node name="small_ball1225" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(155, -434)
+
+[node name="small_ball1226" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -604)
+
+[node name="small_ball1227" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(473, -478)
+
+[node name="small_ball1228" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -565)
+
+[node name="small_ball1229" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(93, -453)
+
+[node name="small_ball1230" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -755)
+
+[node name="small_ball1231" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(84, -344)
+
+[node name="small_ball1232" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(596, -383)
+
+[node name="small_ball1234" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(102, -376)
+
+[node name="small_ball1235" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -711)
+
+[node name="small_ball1237" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(450, -492)
+
+[node name="small_ball1239" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(101, -427)
+
+[node name="small_ball1241" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -548)
+
+[node name="small_ball1242" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(194, -500)
+
+[node name="small_ball1243" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -558)
+
+[node name="small_ball1244" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(457, -742)
+
+[node name="small_ball1245" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -731)
+
+[node name="small_ball1247" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -394)
+
+[node name="small_ball1249" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -544)
+
+[node name="small_ball1250" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -548)
+
+[node name="small_ball1257" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(115, -753)
+
+[node name="small_ball1258" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(120, -471)
+
+[node name="small_ball1259" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(152, -631)
+
+[node name="small_ball1261" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(130, -332)
+
+[node name="small_ball1262" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(109, -518)
+
+[node name="small_ball1263" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(371, -516)
+
+[node name="small_ball1264" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(478, -448)
+
+[node name="small_ball1266" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -383)
+
+[node name="small_ball1268" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(152, -631)
+
+[node name="small_ball1269" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(117, -604)
+
+[node name="small_ball1271" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -642)
+
+[node name="small_ball1273" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -628)
+
+[node name="small_ball1274" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(110, -726)
+
+[node name="small_ball1275" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(91, -521)
+
+[node name="small_ball1281" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(102, -586)
+
+[node name="small_ball1282" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -743)
+
+[node name="small_ball1285" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -427)
+
+[node name="small_ball1290" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(86, -482)
+
+[node name="small_ball1291" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(135, -754)
+
+[node name="small_ball1295" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(506, -515)
+
+[node name="small_ball1296" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(553, -583)
+
+[node name="small_ball1300" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(715, -548)
+
+[node name="small_ball1301" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -473)
+
+[node name="small_ball1303" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(506, -515)
+
+[node name="small_ball1309" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -723)
+
+[node name="small_ball1310" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(500, -683)
+
+[node name="small_ball1314" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -540)
+mass = 0.5
+
+[node name="small_ball1320" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -677)
+mass = 0.5
+
+[node name="small_ball1325" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(356, -499)
+
+[node name="small_ball1328" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(479, -480)
+
+[node name="small_ball1330" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -628)
+
+[node name="small_ball1335" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(471, -430)
+mass = 0.5
+
+[node name="small_ball1336" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(133, -679)
+
+[node name="small_ball1339" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -628)
+
+[node name="small_ball1343" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(292, -532)
+
+[node name="small_ball1347" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(102, -536)
+
+[node name="small_ball1350" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -673)
+
+[node name="small_ball1351" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -378)
+
+[node name="small_ball1352" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(463, -747)
+
+[node name="small_ball1356" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -409)
+mass = 0.5
+
+[node name="small_ball1358" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -483)
+
+[node name="small_ball1360" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(125, -718)
+
+[node name="small_ball1363" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -605)
+
+[node name="small_ball1364" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(87, -597)
+
+[node name="small_ball1365" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(330, -475)
+
+[node name="small_ball1366" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(90, -305)
+
+[node name="small_ball1367" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -389)
+
+[node name="small_ball1369" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -556)
+
+[node name="small_ball1370" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(117, -429)
+
+[node name="small_ball1372" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(587, -357)
+
+[node name="small_ball1374" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(524, -415)
+
+[node name="small_ball1375" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(90, -305)
+
+[node name="small_ball1376" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(122, -527)
+
+[node name="small_ball1377" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(476, -365)
+
+[node name="small_ball1379" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(463, -443)
+
+[node name="small_ball1381" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(115, -649)
+
+[node name="small_ball1384" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -290)
+
+[node name="small_ball1385" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(571, -604)
+
+[node name="small_ball1386" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -407)
+
+[node name="small_ball1391" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(127, -737)
+
+[node name="small_ball1393" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -290)
+
+[node name="small_ball1394" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(125, -679)
+
+[node name="small_ball1395" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(338, -528)
+
+[node name="small_ball1397" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -556)
+
+[node name="small_ball1398" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -483)
+
+[node name="small_ball1401" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(339, -490)
+
+[node name="small_ball1402" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(329, -477)
+
+[node name="small_ball1403" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -483)
+
+[node name="small_ball1404" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(504, -321)
+
+[node name="small_ball1405" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(476, -463)
+
+[node name="small_ball1408" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -605)
+
+[node name="small_ball1410" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(377, -529)
+
+[node name="small_ball1411" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(329, -477)
+
+[node name="small_ball1412" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(484, -549)
+
+[node name="small_ball1420" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -388)
+
+[node name="small_ball1421" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -591)
+
+[node name="small_ball1422" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(500, -429)
+
+[node name="small_ball1423" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -543)
+
+[node name="small_ball1424" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(469, -531)
+
+[node name="small_ball1426" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -757)
+
+[node name="small_ball1428" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(158, -719)
+
+[node name="small_ball1429" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -388)
+
+[node name="small_ball1430" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -629)
+
+[node name="small_ball1433" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -705)
+
+[node name="small_ball1434" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(481, -594)
+
+[node name="small_ball1435" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -751)
+
+[node name="small_ball1439" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(97, -393)
+
+[node name="small_ball1441" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -523)
+
+[node name="small_ball1444" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -583)
+
+[node name="small_ball1448" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(155, -388)
+
+[node name="small_ball1453" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -510)
+
+[node name="small_ball1457" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(479, -744)
+
+[node name="small_ball1458" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -292)
+
+[node name="small_ball1459" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(125, -434)
+
+[node name="small_ball1460" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(140, -370)
+
+[node name="small_ball1463" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -554)
+
+[node name="small_ball1466" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(133, -520)
+
+[node name="small_ball1470" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -619)
+
+[node name="small_ball1472" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -722)
+
+[node name="small_ball1474" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -620)
+
+[node name="small_ball1475" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(471, -363)
+
+[node name="small_ball1480" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(464, -485)
+
+[node name="small_ball1483" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -620)
+
+[node name="small_ball1485" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(104, -730)
+
+[node name="small_ball1487" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(450, -677)
+
+[node name="small_ball1489" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -665)
+
+[node name="small_ball1493" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -495)
+
+[node name="small_ball1499" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -709)
+
+[node name="small_ball1502" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -669)
+
+[node name="small_ball1505" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(288, -414)
+
+[node name="small_ball1510" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -694)
+
+[node name="small_ball1511" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -552)
+
+[node name="small_ball1512" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(265, -531)
+
+[node name="small_ball1514" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -689)
+
+[node name="small_ball1515" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(453, -382)
+
+[node name="small_ball1519" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -694)
+
+[node name="small_ball1521" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(122, -701)
+
+[node name="small_ball1522" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(104, -576)
+
+[node name="small_ball1526" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(278, -520)
+
+[node name="small_ball1528" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -673)
+
+[node name="small_ball1529" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(468, -718)
+
+[node name="small_ball1533" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -495)
+
+[node name="small_ball1536" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -361)
+
+[node name="small_ball1537" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -673)
+
+[node name="small_ball1541" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(273, -481)
+
+[node name="small_ball1542" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(110, -688)
+
+[node name="small_ball1544" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -624)
+
+[node name="small_ball1547" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(120, -494)
+
+[node name="small_ball1548" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -494)
+
+[node name="small_ball1552" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(113, -616)
+
+[node name="small_ball1557" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -632)
+
+[node name="small_ball1559" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(450, -381)
+
+[node name="small_ball1561" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(97, -512)
+
+[node name="small_ball1563" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -649)
+
+[node name="small_ball1564" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(88, -743)
+
+[node name="small_ball1567" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(478, -492)
+
+[node name="small_ball1569" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(138, -644)
+
+[node name="small_ball1571" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(476, -599)
+
+[node name="small_ball1573" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(88, -743)
+
+[node name="small_ball1582" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -543)
+
+[node name="small_ball1584" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -427)
+
+[node name="small_ball1585" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -594)
+
+[node name="small_ball1586" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(458, -686)
+
+[node name="small_ball1587" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(158, -345)
+mass = 0.5
+
+[node name="small_ball1589" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(510, -410)
+
+[node name="small_ball1590" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -732)
+
+[node name="small_ball1591" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -543)
+
+[node name="small_ball1592" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(453, -699)
+
+[node name="small_ball1597" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -375)
+
+[node name="small_ball1600" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -695)
+
+[node name="small_ball1605" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -731)
+
+[node name="small_ball1607" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(482, -370)
+
+[node name="small_ball1609" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -695)
+
+[node name="small_ball1610" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -398)
+
+[node name="small_ball1612" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(100, -652)
+
+[node name="small_ball1614" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(102, -737)
+mass = 0.5
+
+[node name="small_ball1615" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -520)
+
+[node name="small_ball1618" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(505, -565)
+
+[node name="small_ball1622" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(295, -422)
+
+[node name="small_ball1626" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -426)
+
+[node name="small_ball1627" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(505, -565)
+
+[node name="small_ball1635" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(120, -562)
+
+[node name="small_ball1636" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -645)
+
+[node name="small_ball1638" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(100, -572)
+
+[node name="small_ball1642" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -495)
+
+[node name="small_ball1645" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(488, -645)
+
+[node name="small_ball1647" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(115, -708)
+
+[node name="small_ball1651" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -631)
+
+[node name="small_ball1655" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(486, -532)
+
+[node name="small_ball1657" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(451, -397)
+
+[node name="small_ball1658" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(331, -535)
+
+[node name="small_ball1659" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(463, -674)
+
+[node name="small_ball1660" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -539)
+
+[node name="small_ball1662" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -658)
+
+[node name="small_ball1664" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -483)
+
+[node name="small_ball1669" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -749)
+
+[node name="small_ball1670" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(158, -697)
+
+[node name="small_ball1672" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -322)
+
+[node name="small_ball1673" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -525)
+
+[node name="small_ball1675" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(508, -766)
+
+[node name="small_ball1676" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -446)
+
+[node name="small_ball1677" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -373)
+
+[node name="small_ball1678" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -691)
+
+[node name="small_ball1681" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -322)
+
+[node name="small_ball1682" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -544)
+
+[node name="small_ball1685" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -639)
+
+[node name="small_ball1687" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -666)
+
+[node name="small_ball1689" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -561)
+
+[node name="small_ball1691" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(487, -439)
+
+[node name="small_ball1696" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(480, -561)
+
+[node name="small_ball1700" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(141, -644)
+
+[node name="small_ball1705" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(159, -735)
+
+[node name="small_ball1709" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -519)
+
+[node name="small_ball1714" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(463, -641)
+
+[node name="small_ball1728" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(454, -552)
+
+[node name="small_ball1729" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -719)
+
+[node name="small_ball1730" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(135, -635)
+
+[node name="small_ball1734" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(108, -700)
+
+[node name="small_ball1737" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(487, -571)
+
+[node name="small_ball1741" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(332, -497)
+
+[node name="small_ball1743" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(477, -413)
+
+[node name="small_ball1749" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -668)
+
+[node name="small_ball1750" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -382)
+
+[node name="small_ball1755" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -559)
+
+[node name="small_ball1758" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(461, -296)
+
+[node name="small_ball1759" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(101, -488)
+
+[node name="small_ball1762" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -533)
+
+[node name="small_ball1763" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(158, -604)
+
+[node name="small_ball1764" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(492, -370)
+
+[node name="small_ball1765" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(487, -669)
+
+[node name="small_ball1771" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -533)
+
+[node name="small_ball1772" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -598)
+
+[node name="small_ball1776" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -695)
+
+[node name="small_ball1779" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(85, -530)
+
+[node name="small_ball1780" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(453, -613)
+
+[node name="small_ball1783" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(257, -476)
+
+[node name="small_ball1784" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(480, -737)
+
+[node name="small_ball1786" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -444)
+
+[node name="small_ball1788" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -582)
+
+[node name="small_ball1789" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(453, -613)
+
+[node name="small_ball1790" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -297)
+
+[node name="small_ball1795" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -580)
+
+[node name="small_ball1797" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -718)
+
+[node name="small_ball1798" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(489, -756)
+
+[node name="small_ball1799" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -290)
+
+[node name="small_ball1801" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -346)
+
+[node name="small_ball1802" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(296, -503)
+
+[node name="small_ball1805" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -466)
+
+[node name="small_ball1806" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -626)
+
+[node name="small_ball1807" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(489, -756)
+
+[node name="small_ball1808" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -432)
+
+[node name="small_ball1812" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -531)
+
+[node name="small_ball1813" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -554)
+
+[node name="small_ball1814" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -634)
+
+[node name="small_ball1817" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(478, -764)
+
+[node name="small_ball1819" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(510, -534)
+
+[node name="small_ball1820" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -414)
+
+[node name="small_ball1821" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(106, -304)
+
+[node name="small_ball1822" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -519)
+
+[node name="small_ball1830" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(87, -316)
+
+[node name="small_ball1835" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -407)
+
+[node name="small_ball1839" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(482, -573)
+
+[node name="small_ball1840" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -510)
+
+[node name="small_ball1849" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(124, -703)
+
+[node name="small_ball1853" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -468)
+
+[node name="small_ball1857" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(275, -537)
+
+[node name="small_ball1858" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(140, -590)
+
+[node name="small_ball1859" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(129, -747)
+
+[node name="small_ball1860" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(463, -728)
+
+[node name="small_ball1871" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -622)
+
+[node name="small_ball1872" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -425)
+
+[node name="small_ball1875" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(484, -666)
+
+[node name="small_ball1876" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(142, -744)
+
+[node name="small_ball1886" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(338, -514)
+
+[node name="small_ball1889" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(301, -380)
+
+[node name="small_ball1894" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(429, -300)
+
+[node name="small_ball1901" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(346, -493)
+
+[node name="small_ball1919" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -665)
+
+[node name="small_ball1921" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(116, -752)
+mass = 0.5
+
+[node name="small_ball1926" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(105, -706)
+
+[node name="small_ball1939" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -530)
+
+[node name="small_ball1942" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(142, -563)
+
+[node name="small_ball1944" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -447)
+
+[node name="small_ball1946" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -574)
+
+[node name="small_ball1951" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(142, -563)
+
+[node name="small_ball1954" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(103, -564)
+
+[node name="small_ball1955" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -568)
+
+[node name="small_ball1957" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -432)
+
+[node name="small_ball1966" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -324)
+mass = 0.5
+
+[node name="small_ball1967" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -476)
+
+[node name="small_ball1973" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(260, -532)
+
+[node name="small_ball1974" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(286, -427)
+
+[node name="small_ball1976" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(159, -612)
+
+[node name="small_ball1977" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(329, -484)
+
+[node name="small_ball1978" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(468, -400)
+
+[node name="small_ball1979" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(131, -703)
+
+[node name="small_ball1980" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(103, -484)
+
+[node name="small_ball1984" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(455, -407)
+
+[node name="small_ball1987" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(468, -400)
+
+[node name="small_ball1989" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(118, -620)
+
+[node name="small_ball1991" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(449, -369)
+
+[node name="small_ball1993" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(96, -500)
+
+[node name="small_ball1995" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(144, -637)
+
+[node name="small_ball1996" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(476, -545)
+
+[node name="small_ball1999" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -300)
+
+[node name="small_ball2003" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -587)
+
+[node name="small_ball2005" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(476, -545)
+
+[node name="small_ball2014" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -448)
+
+[node name="small_ball2015" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -695)
+
+[node name="small_ball2016" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(503, -489)
+
+[node name="small_ball2017" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(462, -603)
+
+[node name="small_ball2018" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -754)
+
+[node name="small_ball2023" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -448)
+
+[node name="small_ball2024" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -689)
+
+[node name="small_ball2028" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -629)
+
+[node name="small_ball2029" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(125, -568)
+
+[node name="small_ball2032" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(140, -528)
+
+[node name="small_ball2034" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -449)
+
+[node name="small_ball2036" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(455, -671)
+
+[node name="small_ball2038" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(104, -378)
+
+[node name="small_ball2039" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(130, -612)
+
+[node name="small_ball2040" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -497)
+
+[node name="small_ball2041" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(140, -528)
+
+[node name="small_ball2047" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(119, -514)
+
+[node name="small_ball2049" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -633)
+
+[node name="small_ball2051" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -488)
+
+[node name="small_ball2054" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -752)
+
+[node name="small_ball2055" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -585)
+
+[node name="small_ball2074" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(101, -309)
+
+[node name="small_ball2076" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -608)
+
+[node name="small_ball2087" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -322)
+
+[node name="small_ball2088" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(472, -596)
+
+[node name="small_ball2091" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(480, -664)
+
+[node name="small_ball2092" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -444)
+
+[node name="small_ball2094" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -726)
+
+[node name="small_ball2102" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(279, -444)
+
+[node name="small_ball2103" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(134, -756)
+
+[node name="small_ball2111" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(104, -681)
+
+[node name="small_ball2112" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -643)
+
+[node name="small_ball2122" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -481)
+
+[node name="small_ball2127" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -289)
+
+[node name="small_ball2130" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(137, -743)
+
+[node name="small_ball2131" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -481)
+
+[node name="small_ball2159" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(115, -543)
+
+[node name="small_ball2160" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(98, -670)
+mass = 0.5
+
+[node name="small_ball2169" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(467, -534)
+
+[node name="small_ball2171" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -580)
+
+[node name="small_ball2183" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(90, -367)
+
+[node name="small_ball2198" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(151, -518)
+
+[node name="small_ball2201" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -739)
+
+[node name="small_ball2218" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -420)
+
+[node name="small_ball2230" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -491)
+
+[node name="small_ball2233" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(485, -535)
+
+[node name="small_ball2234" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(470, -458)
+
+[node name="small_ball2239" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -491)
+
+[node name="small_ball2241" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(93, -554)
+
+[node name="small_ball2245" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(111, -297)
+
+[node name="small_ball2247" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(480, -596)
+
+[node name="small_ball2248" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(474, -636)
+
+[node name="small_ball2251" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(278, -499)
+
+[node name="small_ball2257" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(474, -636)
+
+[node name="small_ball2258" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -500)
+
+[node name="small_ball2259" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(475, -742)
+
+[node name="small_ball2263" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(466, -640)
+
+[node name="small_ball2268" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -510)
+
+[node name="small_ball2269" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(93, -652)
+
+[node name="small_ball2270" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -505)
+
+[node name="small_ball2274" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(134, -509)
+
+[node name="small_ball2285" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(442, -295)
+
+[node name="small_ball2286" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(142, -673)
+
+[node name="small_ball2288" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(86, -720)
+
+[node name="small_ball499" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(334, -461)
+
+[node name="small_ball643" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -521)
+
+[node name="small_ball915" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(90, -614)
+
+[node name="small_ball1079" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(155, -649)
+
+[node name="small_ball1130" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(137, -685)
+
+[node name="small_ball1134" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(155, -649)
+
+[node name="small_ball1506" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(459, -337)
+
+[node name="small_ball1540" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -623)
+
+[node name="small_ball1562" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -469)
+
+[node name="small_ball1575" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(317, -452)
+
+[node name="small_ball1577" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(130, -745)
+
+[node name="small_ball1634" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(460, -708)
+
+[node name="small_ball1650" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -527)
+
+[node name="small_ball1702" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(124, -638)
+
+[node name="small_ball1721" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(154, -576)
+
+[node name="small_ball1724" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -527)
+
+[node name="small_ball1725" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(132, -724)
+
+[node name="small_ball1866" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(133, -416)
+
+[node name="small_ball1868" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(136, -741)
+
+[node name="small_ball1922" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(465, -507)
+
+[node name="small_ball2008" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -680)
+
+[node name="small_ball2075" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -684)
+
+[node name="small_ball2082" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -705)
+
+[node name="small_ball2098" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(146, -684)
+
+[node name="small_ball2152" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(143, -489)
+
+[node name="small_ball2193" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(157, -723)
+
+[node name="small_ball2282" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -558)
+
+[node name="small_ball2291" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(139, -742)
+
+[node name="small_ball2294" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -680)
+
+[node name="small_ball2303" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(147, -673)
+
+[node name="small_ball2307" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(149, -721)
+
+[node name="small_ball2360" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(126, -476)
+
+[node name="small_ball2363" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(452, -658)
+
+[node name="small_ball2369" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(126, -476)
+
+[node name="small_ball2378" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -740)
+
+[node name="small_ball2387" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(153, -740)
+
+[node name="small_ball2437" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(126, -757)
+
+[node name="small_ball2450" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(135, -614)
+
+[node name="small_ball2455" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(128, -736)
+
+[node name="small_ball2501" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -615)
+
+[node name="small_ball2571" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -546)
+
+[node name="small_ball2580" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(456, -546)
+
+[node name="small_ball2646" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(455, -678)
+
+[node name="small_ball2713" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -652)
+
+[node name="small_ball2717" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(160, -619)
+
+[node name="small_ball2721" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(150, -650)
+
+[node name="small_ball2722" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -652)
+
+[node name="small_ball3153" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -334)
+
+[node name="small_ball3155" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(92, -703)
+
+[node name="small_ball3156" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(148, -458)
+
+[node name="small_ball3161" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(121, -334)
+
+[node name="small_ball3225" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -243)
+
+[node name="small_ball3226" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(145, -580)
+
+[node name="small_ball3230" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(124, -731)
+
+[node name="small_ball3231" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(131, -449)
+
+[node name="small_ball3243" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(458, -525)
+
+[node name="small_ball3247" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(455, -361)
+
+[node name="small_ball3295" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -638)
+
+[node name="small_ball3369" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(123, -715)
+
+[node name="small_ball3437" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(103, -679)
+
+[node name="small_ball22" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(316, -789)
+
+[node name="small_ball34" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -866)
+
+[node name="small_ball39" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(313, -750)
+
+[node name="small_ball57" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(299, -845)
+
+[node name="small_ball66" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(299, -845)
+
+[node name="small_ball89" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(322, -829)
+
+[node name="small_ball101" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(327, -873)
+
+[node name="small_ball111" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(274, -859)
+
+[node name="small_ball117" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -861)
+
+[node name="small_ball120" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(295, -804)
+
+[node name="small_ball135" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(274, -841)
+
+[node name="small_ball136" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(302, -815)
+
+[node name="small_ball152" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(274, -744)
+
+[node name="small_ball189" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(311, -782)
+
+[node name="small_ball196" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(307, -783)
+
+[node name="small_ball203" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(304, -860)
+
+[node name="small_ball211" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(239, -764)
+
+[node name="small_ball222" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(265, -781)
+
+[node name="small_ball262" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(306, -874)
+
+[node name="small_ball265" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(312, -793)
+
+[node name="small_ball269" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(299, -871)
+
+[node name="small_ball298" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(308, -835)
+
+[node name="small_ball305" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -833)
+
+[node name="small_ball308" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(274, -779)
+
+[node name="small_ball310" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -869)
+
+[node name="small_ball318" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(274, -779)
+
+[node name="small_ball320" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(282, -874)
+
+[node name="small_ball364" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(273, -843)
+
+[node name="small_ball381" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(307, -824)
+
+[node name="small_ball393" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(281, -793)
+
+[node name="small_ball405" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(289, -810)
+
+[node name="small_ball406" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(228, -764)
+
+[node name="small_ball408" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -767)
+
+[node name="small_ball420" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(309, -749)
+
+[node name="small_ball438" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -773)
+
+[node name="small_ball493" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(315, -836)
+
+[node name="small_ball508" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -900)
+
+[node name="small_ball525" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -899)
+
+[node name="small_ball527" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -872)
+
+[node name="small_ball534" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -899)
+
+[node name="small_ball542" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -867)
+
+[node name="small_ball548" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(287, -825)
+
+[node name="small_ball551" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(302, -761)
+
+[node name="small_ball565" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(232, -857)
+
+[node name="small_ball583" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -890)
+mass = 0.5
+
+[node name="small_ball598" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(304, -772)
+
+[node name="small_ball636" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(265, -788)
+
+[node name="small_ball652" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(319, -765)
+
+[node name="small_ball655" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(304, -815)
+
+[node name="small_ball668" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(262, -867)
+
+[node name="small_ball671" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(286, -840)
+
+[node name="small_ball679" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(298, -782)
+
+[node name="small_ball680" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(262, -867)
+
+[node name="small_ball685" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(255, -893)
+
+[node name="small_ball686" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(316, -865)
+
+[node name="small_ball697" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -842)
+
+[node name="small_ball699" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(312, -895)
+
+[node name="small_ball720" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(305, -862)
+
+[node name="small_ball726" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(304, -841)
+mass = 0.5
+
+[node name="small_ball738" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(273, -820)
+
+[node name="small_ball746" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(244, -881)
+
+[node name="small_ball765" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(301, -776)
+
+[node name="small_ball804" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(287, -832)
+mass = 0.5
+
+[node name="small_ball812" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(280, -802)
+
+[node name="small_ball821" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(280, -802)
+
+[node name="small_ball823" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(311, -779)
+
+[node name="small_ball825" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(268, -844)
+
+[node name="small_ball837" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(311, -870)
+
+[node name="small_ball852" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(311, -877)
+
+[node name="small_ball881" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(317, -874)
+
+[node name="small_ball885" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(287, -890)
+
+[node name="small_ball894" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(248, -808)
+
+[node name="small_ball905" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(301, -805)
+
+[node name="small_ball912" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(309, -891)
+
+[node name="small_ball924" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(294, -873)
+
+[node name="small_ball939" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(307, -899)
+
+[node name="small_ball958" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -816)
+
+[node name="small_ball962" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(258, -783)
+
+[node name="small_ball977" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(275, -874)
+
+[node name="small_ball987" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(251, -857)
+
+[node name="small_ball1039" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(315, -833)
+mass = 0.5
+
+[node name="small_ball1047" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(246, -810)
+
+[node name="small_ball1048" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(312, -811)
+
+[node name="small_ball1055" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(246, -810)
+
+[node name="small_ball1095" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(304, -861)
+
+[node name="small_ball1104" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(286, -811)
+
+[node name="small_ball1138" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(322, -853)
+
+[node name="small_ball1195" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(283, -888)
+
+[node name="small_ball1201" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(282, -884)
+
+[node name="small_ball1217" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(319, -893)
+
+[node name="small_ball1233" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(307, -748)
+
+[node name="small_ball1236" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(286, -899)
+
+[node name="small_ball1238" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -855)
+
+[node name="small_ball1260" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(283, -897)
+
+[node name="small_ball1265" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(320, -775)
+
+[node name="small_ball1270" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(320, -775)
+
+[node name="small_ball1272" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(285, -748)
+
+[node name="small_ball1276" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -786)
+
+[node name="small_ball1277" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(325, -772)
+
+[node name="small_ball1278" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(278, -870)
+
+[node name="small_ball1292" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(303, -898)
+
+[node name="small_ball1311" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(273, -867)
+
+[node name="small_ball1337" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(301, -823)
+
+[node name="small_ball1353" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(313, -817)
+
+[node name="small_ball1361" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(293, -862)
+
+[node name="small_ball1382" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(283, -793)
+
+[node name="small_ball1392" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(295, -881)
+
+[node name="small_ball1396" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(293, -823)
+
+[node name="small_ball1409" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(311, -749)
+
+[node name="small_ball1427" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(314, -901)
+
+[node name="small_ball1431" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(326, -863)
+
+[node name="small_ball1436" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(316, -849)
+
+[node name="small_ball1471" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(304, -763)
+
+[node name="small_ball1473" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(313, -866)
+
+[node name="small_ball1476" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(306, -764)
+
+[node name="small_ball1484" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(306, -764)
+
+[node name="small_ball1486" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(272, -874)
+
+[node name="small_ball1490" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(311, -809)
+
+[node name="small_ball1500" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(316, -853)
+
+[node name="small_ball1503" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(296, -813)
+
+[node name="small_ball1513" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(289, -838)
+
+[node name="small_ball1516" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(322, -833)
+
+[node name="small_ball1520" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(289, -838)
+
+[node name="small_ball1523" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(290, -845)
+
+[node name="small_ball1530" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -817)
+
+[node name="small_ball1538" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -817)
+
+[node name="small_ball1543" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(278, -832)
+
+[node name="small_ball1545" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(328, -768)
+
+[node name="small_ball1553" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(281, -760)
+
+[node name="small_ball1558" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(287, -776)
+
+[node name="small_ball1565" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(313, -793)
+
+[node name="small_ball1566" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(256, -887)
+
+[node name="small_ball1570" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(306, -788)
+
+[node name="small_ball1574" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(256, -887)
+
+[node name="small_ball1593" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(311, -876)
+
+[node name="small_ball1601" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(314, -839)
+
+[node name="small_ball1606" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(328, -875)
+
+[node name="small_ball1611" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(314, -839)
+
+[node name="small_ball1613" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(268, -796)
+
+[node name="small_ball1616" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(270, -881)
+mass = 0.5
+
+[node name="small_ball1648" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(283, -852)
+
+[node name="small_ball1663" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -802)
+
+[node name="small_ball1671" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(325, -893)
+
+[node name="small_ball1674" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(326, -841)
+
+[node name="small_ball1679" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(289, -835)
+
+[node name="small_ball1686" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -783)
+
+[node name="small_ball1688" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(315, -810)
+
+[node name="small_ball1701" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(309, -788)
+
+[node name="small_ball1706" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(327, -879)
+
+[node name="small_ball1731" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(313, -863)
+
+[node name="small_ball1732" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(303, -779)
+
+[node name="small_ball1735" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(276, -844)
+
+[node name="small_ball1751" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(318, -812)
+
+[node name="small_ball1766" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(326, -748)
+
+[node name="small_ball1777" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(316, -839)
+
+[node name="small_ball1809" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(286, -770)
+
+[node name="small_ball1815" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(316, -778)
+
+[node name="small_ball1850" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(292, -847)
+
+[node name="small_ball1861" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(297, -891)
+
+[node name="small_ball1873" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(317, -766)
+
+[node name="small_ball1877" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(310, -888)
+
+[node name="small_ball1923" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(284, -896)
+mass = 0.5
+
+[node name="small_ball1927" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(273, -850)
+
+[node name="small_ball1981" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(327, -756)
+
+[node name="small_ball1982" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(299, -847)
+
+[node name="small_ball1990" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(286, -764)
+
+[node name="small_ball1997" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(312, -781)
+
+[node name="small_ball2019" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -839)
+
+[node name="small_ball2030" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -773)
+
+[node name="small_ball2042" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(298, -756)
+
+[node name="small_ball2050" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(322, -777)
+
+[node name="small_ball2056" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(322, -896)
+
+[node name="small_ball2095" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(328, -870)
+
+[node name="small_ball2104" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(302, -900)
+
+[node name="small_ball2113" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(272, -825)
+
+[node name="small_ball2114" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(318, -787)
+
+[node name="small_ball2132" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(305, -887)
+
+[node name="small_ball2161" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(266, -814)
+mass = 0.5
+
+[node name="small_ball2271" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(261, -796)
+
+[node name="small_ball2287" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(310, -817)
+
+[node name="small_ball2289" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(254, -864)
+
+[node name="small_ball917" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(258, -758)
+
+[node name="small_ball1080" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(323, -793)
+
+[node name="small_ball1131" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(305, -829)
+
+[node name="small_ball1140" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(323, -793)
+
+[node name="small_ball1546" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(322, -767)
+
+[node name="small_ball1578" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(298, -889)
+
+[node name="small_ball1703" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(292, -782)
+
+[node name="small_ball1726" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(300, -868)
+
+[node name="small_ball1869" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(304, -885)
+
+[node name="small_ball2009" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(328, -824)
+
+[node name="small_ball2077" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(314, -828)
+
+[node name="small_ball2083" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -849)
+
+[node name="small_ball2099" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(314, -828)
+
+[node name="small_ball2194" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(325, -867)
+
+[node name="small_ball2292" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(307, -886)
+
+[node name="small_ball2295" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(289, -824)
+
+[node name="small_ball2304" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(315, -817)
+
+[node name="small_ball2308" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(317, -865)
+
+[node name="small_ball2379" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -884)
+
+[node name="small_ball2388" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(321, -884)
+
+[node name="small_ball2438" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(294, -901)
+
+[node name="small_ball2451" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(303, -758)
+
+[node name="small_ball2456" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(296, -880)
+
+[node name="small_ball2502" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(318, -759)
+
+[node name="small_ball2714" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -796)
+
+[node name="small_ball2718" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(328, -763)
+
+[node name="small_ball2723" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(318, -794)
+
+[node name="small_ball2724" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(324, -796)
+
+[node name="small_ball3157" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(260, -847)
+
+[node name="small_ball3232" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(292, -875)
+
+[node name="small_ball3296" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -782)
+
+[node name="small_ball3370" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(291, -859)
+
+[node name="small_ball3438" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(271, -823)
+
+[node name="small_ball3505" parent="Small_Balls" instance=ExtResource("3_112p8")]
+position = Vector2(156, -556)
+
+[node name="Pins7" type="Node2D" parent="."]
+position = Vector2(0, 270)
+
+[node name="wall" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins7" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins5" type="Node2D" parent="."]
+position = Vector2(0, 210)
+
+[node name="wall" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins5" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins3" type="Node2D" parent="."]
+position = Vector2(0, 150)
+
+[node name="wall" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins3" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins9" type="Node2D" parent="."]
+position = Vector2(0, 90)
+
+[node name="wall" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins9" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins2" type="Node2D" parent="."]
+position = Vector2(20, 120)
+
+[node name="wall" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins2" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins10" type="Node2D" parent="."]
+position = Vector2(20, 60)
+
+[node name="wall" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins10" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins8" type="Node2D" parent="."]
+position = Vector2(20, 300)
+
+[node name="wall" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins8" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins6" type="Node2D" parent="."]
+position = Vector2(20, 240)
+
+[node name="wall" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins6" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="Pins4" type="Node2D" parent="."]
+position = Vector2(20, 180)
+
+[node name="wall" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(0, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall2" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(40, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall3" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(80, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall4" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(120, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall5" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(160, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall6" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(200, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall7" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(240, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall8" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(280, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall9" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(320, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall10" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(360, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall11" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(400, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall12" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(440, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall13" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(480, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall14" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(520, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall15" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(560, 200)
+scale = Vector2(0.03, 0.2)
+
+[node name="wall16" parent="Pins4" instance=ExtResource("2_112p8")]
+position = Vector2(600, 200)
+scale = Vector2(0.03, 0.2)
