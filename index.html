@@ -4,16 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Integral Games</title>
-  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3ae.svg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3ae.svg">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap');
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: 'Roboto', sans-serif;
       background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
@@ -23,99 +15,130 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: fadeIn 1s ease-in-out;
     }
 
     h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3.5rem;
-      margin-bottom: 2.5rem;
-      text-shadow: 0 0 10px #00ffe1, 0 0 20px #0088ff;
-      animation: flicker 2.5s infinite alternate;
+      font-size: 3rem;
       color: #00f7ff;
-    }
-
-    @keyframes flicker {
-      0% { opacity: 0.9; text-shadow: 0 0 5px #0ff, 0 0 15px #08f; }
-      100% { opacity: 1; text-shadow: 0 0 15px #0ff, 0 0 25px #08f; }
+      text-shadow: 0 0 10px #00ffe1, 0 0 20px #0088ff;
+      margin-bottom: 2rem;
     }
 
     ul {
       list-style: none;
-      max-width: 800px;
-      width: 100%;
-      display: grid;
-      gap: 1.5rem;
+      padding-left: 1rem;
     }
 
     li {
-      background: linear-gradient(145deg, #1e3c72, #2a5298);
-      padding: 1.5rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 255, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      backdrop-filter: blur(6px);
-    }
-
-    li:hover {
-      transform: translateY(-10px) scale(1.03);
-      background: linear-gradient(145deg, #2a5298, #3c72b1);
-      box-shadow: 0 15px 35px rgba(0, 255, 255, 0.4), 0 0 25px rgba(0, 255, 255, 0.2);
+      margin: 0.5rem 0;
+      cursor: pointer;
     }
 
     a {
-      color: #ffffff;
-      font-size: 1.5rem;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      font-weight: bold;
-      transition: color 0.3s ease, letter-spacing 0.3s ease;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #00f;
-    }
-
-    li:hover a {
       color: #00f7ff;
-      letter-spacing: 1px;
+      text-decoration: none;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .folder {
+      font-weight: bold;
+      margin-top: 1rem;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.3rem;
-        text-align: center;
-      }
+    .nested {
+      display: none;
+      margin-left: 1rem;
+    }
 
-      a {
-        font-size: 1.2rem;
-      }
+    .active {
+      display: block;
+    }
 
-      li {
-        padding: 1rem;
-      }
+    .toggle::before {
+      content: "📂 ";
+    }
+
+    .file::before {
+      content: "📄 ";
     }
   </style>
 </head>
 <body>
   <h1>🎮 Integral Games</h1>
-  <ul>
-    <li><a href="Your first 2D game/First Game in Godot/html/">First Game in Godot</a></li>
-	<li><a href="Step by step/Creating instances/Galton Board 1/html/">Galton Board 1</a></li>
-	<li><a href="Step by step/Creating your first script/Movements 1/html/">Movements 1</a></li>
-	<li><a href="Step by step/Listening to player input/Movements 2/html/">Movements 2</a></li>
-	<li><a href="Step by step/Using signals/Signals 1/html/">Signals 1</a></li>
-	<li><a href="Step by step/Using signals/Signals 2/html/">Signals 2</a></li>
-	<li><a href="Step by step/Using signals/Signals 3/html/">Signals 3</a></li>
-    <!-- Adicione mais jogos reais conforme necessário -->
-  </ul>
-  <br><br><br><br><br><br>
+  <div id="file-tree"></div>
+
+  <br><br>
   <a href="https://github.com/felipebottega/Games/tree/gh-pages" style="font-size: 16px;">Github: https://github.com/felipebottega/Games/tree/gh-pages</a>
   <br>
-  Last update: 2025-06-07 22:42
-  <br><br>
+  Última atualização: 2025-06-09 18:37
+
+  <script>
+    const files = [
+      { path: "Your first 2D game/First Game in Godot/html/", title: "First Game in Godot" },
+      { path: "Step by step/Creating instances/Galton Board 1/html/", title: "Galton Board 1" },
+      { path: "Step by step/Creating your first script/Movements 1/html/", title: "Movements 1" },
+      { path: "Step by step/Listening to player input/Movements 2/html/", title: "Movements 2" },
+      { path: "Step by step/Using signals/Signals 1/html/", title: "Signals 1" },
+      { path: "Step by step/Using signals/Signals 2/html/", title: "Signals 2" },
+      { path: "Step by step/Using signals/Signals 3/html/", title: "Signals 3" },
+    ];
+
+    function buildTree(files) {
+      const root = {};
+
+      files.forEach(({ path, title }) => {
+        const parts = path.split("/").filter(p => p);
+        let current = root;
+        parts.forEach((part, i) => {
+          if (!current[part]) {
+            current[part] = {};
+          }
+          if (i === parts.length - 1) {
+            current[part]._file = { path, title };
+          }
+          current = current[part];
+        });
+      });
+
+      return root;
+    }
+
+    function renderTree(node, parent) {
+      const ul = document.createElement("ul");
+      for (const key in node) {
+        const li = document.createElement("li");
+
+        if (key === "_file") continue;
+
+        if (node[key]._file) {
+          // É um arquivo
+          li.className = "file";
+          const a = document.createElement("a");
+          a.href = node[key]._file.path;
+          a.textContent = node[key]._file.title;
+          a.target = "_blank";
+          li.appendChild(a);
+        } else {
+          // É uma pasta
+          li.className = "toggle folder";
+          li.textContent = key;
+          const childUL = renderTree(node[key], li);
+          childUL.classList.add("nested");
+          li.addEventListener("click", function (e) {
+            e.stopPropagation();
+            childUL.classList.toggle("active");
+          });
+          li.appendChild(childUL);
+        }
+
+        ul.appendChild(li);
+      }
+      parent.appendChild(ul);
+      return ul;
+    }
+
+    const treeData = buildTree(files);
+    const container = document.getElementById("file-tree");
+    renderTree(treeData, container);
+  </script>
 </body>
 </html>
