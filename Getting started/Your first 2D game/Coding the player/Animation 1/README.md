@@ -8,3 +8,9 @@ Uma coisa interessante que eu não conhecia mas é bem útil é o botão *Group 
     <img src="https://github.com/user-attachments/assets/a761a71f-cb31-43c4-9477-900ee340e000" width="700">
 </p>
 
+Agora vamos para a parte que interessa. Selecione o node `AnimatedSprite2D` e abra a aba *Animation* em *Inspector*. Selecione *Sprite Frame* e *New SpriteFrames*, como mostrado abaixo. Clique no nome *SpriteFrames* que apareceu no mesmo local (figura do meio, abaixo), daí o editor de animação (figura da direita, abaixo) deve aparecer. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ca0a10c6-7b4b-4f6a-a4f6-85119f5294e2" width="1200">
+</p>
+
