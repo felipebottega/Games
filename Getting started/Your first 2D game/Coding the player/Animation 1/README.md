@@ -20,3 +20,20 @@ Começaremos pelo boneco estático, o *idle*. Troque o nome onde está escrito "
     <img src="https://github.com/user-attachments/assets/37526b0f-9682-4346-a548-f4791120b9cb" width="600">
 </p>
 
+Agora adicione animações para caminhar e tomar dano. Você pode selecionar múltiplas imagens no *FileSystem*.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/bcab2a18-a354-495b-ba1d-aa1c0807070f" width="600">
+</p>
+
+Estaremos também usando uma tela menor para ficar coerente com o tamanho dos sprites. Além das opções mostradas na figura abaixo, lembre-se de ir em *Rendering* e em *Textures* colocar a opção *Nearest*.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/af4ae282-5465-4a7f-92da-7b94c0110569" width="500">
+</p>
+
+Adicionar os sprites de animação não é o suficiente, precisamos dizer ao programa quando aquelas animações devem ocorrer. Isso é feito com um script associado ao node raíz do personagem. Repare no primeiro if abaixo. Enquanto o jogador estiver pressinando o botão de se mover para a esquerda, uma velocidade negativa no eixo *x* é acrescentada ao boneco, o que garante que ele vai se deslocar na tela. Após isso o script chama a animação de caminhar. Isso não faz com que ela comece ainda, apenas diz ao programa que o comando `$AnimatedSprite2D.play()` deverá mostrar essa animação. Antes da animação começar, um flip horizontal é aplicado a ela, já que o boneco originalmente está olhando para a direção oposta. Depois disso o play é chamado e aí sim começa a animação. Ela vai continuar até o jogador soltar o botão de caminhar para a esquerda.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/9c7c5270-51fd-4254-bd83-21d1fd4ba49f" width="500">
+</p>
