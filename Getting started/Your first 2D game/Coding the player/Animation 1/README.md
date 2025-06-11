@@ -32,8 +32,13 @@ Estaremos também usando uma tela menor para ficar coerente com o tamanho dos sp
     <img src="https://github.com/user-attachments/assets/af4ae282-5465-4a7f-92da-7b94c0110569" width="500">
 </p>
 
-Adicionar os sprites de animação não é o suficiente, precisamos dizer ao programa quando aquelas animações devem ocorrer. Isso é feito com um script associado ao node raíz do personagem. Repare no primeiro if abaixo. Enquanto o jogador estiver pressinando o botão de se mover para a esquerda, uma velocidade negativa no eixo *x* é acrescentada ao boneco, o que garante que ele vai se deslocar na tela. Após isso o script chama a animação de caminhar. Isso não faz com que ela comece ainda, apenas diz ao programa que o comando `$AnimatedSprite2D.play()` deverá mostrar essa animação. Antes da animação começar, um flip horizontal é aplicado a ela, já que o boneco originalmente está olhando para a direção oposta. Depois disso o play é chamado e aí sim começa a animação. Ela vai continuar até o jogador soltar o botão de caminhar para a esquerda.
+Adicionar os sprites de animação não é o suficiente, precisamos dizer ao programa quando aquelas animações devem ocorrer. Isso é feito com um script associado ao node raíz do personagem. Repare no primeiro if abaixo. Enquanto o jogador estiver pressinando o botão de se mover para a esquerda, uma velocidade negativa no eixo *x* é acrescentada ao boneco, o que garante que ele vai se deslocar na tela. Após isso o script chama a animação de caminhar. Isso não faz com que ela comece ainda, apenas diz ao programa que o comando `$AnimatedSprite2D.play()` deverá mostrar essa animação. Antes da animação começar, um flip horizontal é aplicado a ela, já que o boneco originalmente está olhando para a direção oposta. Depois disso o play é chamado e aí sim começa a animação. Ela vai continuar até o jogador soltar o botão de caminhar para a esquerda. Não se esqueça de ativar o *Lock Rotation* na física do personagem.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/9c7c5270-51fd-4254-bd83-21d1fd4ba49f" width="500">
 </p>
+
+## Testando
+
+Para testar se a animação funciona, vamos criar uma cena principal com um chão e o nosso personagem. Também iremos adicionar a medusa com o seu movimento senóide. 
+
