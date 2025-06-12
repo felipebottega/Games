@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://co5hc816ruqom"]
+
+[ext_resource type="Script" uid="uid://bf1pe8grkuoq0" path="res://scenes/trevor.gd" id="1_25nuh"]
+[ext_resource type="Texture2D" uid="uid://cvy658yeicsv4" path="res://sprites/idle.png" id="1_e6t7y"]
+[ext_resource type="Texture2D" uid="uid://cejaq3r6kec6w" path="res://sprites/hurt1.png" id="2_g3wul"]
+[ext_resource type="Texture2D" uid="uid://bxa4jk3wj8e4v" path="res://sprites/hurt2.png" id="3_3apk8"]
+[ext_resource type="Texture2D" uid="uid://c1be8k5sik2lc" path="res://sprites/walk1.png" id="5_eer3u"]
+[ext_resource type="Texture2D" uid="uid://cfcr4qkxcx88c" path="res://sprites/walk2.png" id="6_dhglg"]
+[ext_resource type="Texture2D" uid="uid://f6om5aalpk6b" path="res://sprites/walk3.png" id="7_v4flu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3jlj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g3wul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3apk8")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e6t7y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eer3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhglg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v4flu")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmw6t"]
+size = Vector2(14, 30)
+
+[node name="Trevor" type="RigidBody2D"]
+lock_rotation = true
+script = ExtResource("1_25nuh")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3jlj6")
+animation = &"hurt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mmw6t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

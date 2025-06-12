@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq5osdo5jhp3q"]
+
+[ext_resource type="PackedScene" uid="uid://co5hc816ruqom" path="res://scenes/trevor.tscn" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://cveelck6wn1jp" path="res://scenes/floor.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cjqmampntubbw" path="res://scenes/medusa.tscn" id="3_sugp2"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Floor" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(168, 183)
+
+[node name="Trevor" parent="." instance=ExtResource("1_0wfyh")]
+position = Vector2(24, 34)
+mass = 50.0
+gravity_scale = 2.0
+jump_velocity = -600
+
+[node name="Medusa" parent="." groups=["inimigo"] instance=ExtResource("3_sugp2")]
+position = Vector2(336, 85)
