@@ -54,14 +54,23 @@ Também vamos simular a animação de dano. São apenas dois quadros de animaç�
     <img src="https://github.com/user-attachments/assets/0f65cb53-cce8-4ebf-ad6b-92d3190056b5" width="600">
 </p>
 
-Adicione a variável global `is_hurt` como falso, no início do script. Depois edite a função `_on_body_entered`, como mostrado abaixo. Devemos colocar a medusa em um grupo (chamado "inimigo" neste exemplo) para que o sinal só tenha efeito com a medusa, caso contrário o próprio chão vai dar dano no personagem. Depois disso a variável `is_hurt` passa a ser verdadeira, indicando que a animação do dano está em vigor. Note que é necessário incluir uma rotina no `_physics_process` para pular a iteração caso `is_hurt` seja verdadeiro. Isso garante que o input não vai cancelar a animação de dano. Por fim, note que incluímos também o sinal `_on_animated_sprite_2d_animation_finished` do `AnimatedSprite2D`. Este sinal é enviado quando uma animação termina.
+Adicione a variável global `is_hurt` como falso, no início do script. Depois edite a função `_on_body_entered`, como mostrado abaixo. Devemos colocar a medusa em um grupo (chamado "inimigo" neste exemplo) para que o sinal só tenha efeito com a medusa, caso contrário o próprio chão vai dar dano no personagem. Depois disso a variável `is_hurt` passa a ser verdadeira, indicando que a animação do dano está em vigor. Note que é necessário incluir uma rotina no `_physics_process` para pular a iteração caso `is_hurt` seja verdadeiro. Isso garante que o input não vai cancelar a animação de dano. Também incluímos também o sinal `_on_animated_sprite_2d_animation_finished` do `AnimatedSprite2D`. Este sinal é enviado quando uma animação termina.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/5e16aa72-16a0-4c7d-88bd-96163ba140ee" width="600">
-    <img src="https://github.com/user-attachments/assets/404e6954-b864-4925-b685-69a7c0e5e6f2" width="600">
-    <img src="https://github.com/user-attachments/assets/e7a9d3a9-8aa3-47f1-a1dc-b19c3e94e4b1" width="600">
-    <img src="https://github.com/user-attachments/assets/76958261-180d-46fa-a474-e7736a1524a4" width="600">
+    <img src="https://github.com/user-attachments/assets/5e16aa72-16a0-4c7d-88bd-96163ba140ee" width="400">
+    <img src="https://github.com/user-attachments/assets/404e6954-b864-4925-b685-69a7c0e5e6f2" width="400">
+    <img src="https://github.com/user-attachments/assets/e7a9d3a9-8aa3-47f1-a1dc-b19c3e94e4b1" width="500">
+    <img src="https://github.com/user-attachments/assets/76958261-180d-46fa-a474-e7736a1524a4" width="350">
 </p>
 
+É necessário selecionar a opção `Contact Monitor` para permitir que um `RigiBody2D` emita sinais em caso de colisão. Por default eles não emitem. Mesmo que você configure todos os sinais bonitinho, sem habilitar essa opção o sinal não é emitido e nada acontece.
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/f84ddc0c-c0ec-44cd-8cc3-7a3db0539fc6" width="250">
+</p>
 
+Por fim, desmarque a opção *Animation Looping* (ao lado do 5.0 FPS), senão o boneco vai ficar em loop na animação para sempre. Por default a animação fica em loop. Isso não causa problema na movimentação pois cada input dá um stop na animação, enquanto que na animação de dano nós desabilitamos os inputs e obrigamos o jogador a esperar a animação de dano. São vários detalhes para se atentar, mas é assim mesmo que é para desenvolver jogos.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/77eea654-0054-4a91-a68a-ccbb8557199b" width="350">
+</p>
