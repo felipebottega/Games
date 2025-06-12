@@ -28,9 +28,9 @@ Todo `RigidBody2D` possui a propriedade de *Collision Layers* e *Collision Masks
 
 O objetivo disso é controlar quem pode colidir com quem. Um objeto $A$ só pode colidir com um objeto $B$ se $B$ está na layer $i$ e $A$ tem a mask $i$ ativada, de modo que $B$ é detectável por $A$. 
 
-> Corner case: Suponha um `RigidBody` que não está em nenhuma layer e detecta mask=1, e um `StaticBody` que está na layer 1 mas nenhuma mask. Neste caso, o `RigidBody` busca ativamente por corpos na layer 1 e vai encontrar o `StaticBody`, de modo que haverá colisão se eles se encontrarem. Agora suponha o contrário, o `RigidBody` na layer 1 sem nenhuma mask, e um `StaticBody` sem nenhuma mas mask=1, Neste caso não haveria colisão pois o `StaticBody` não faz nada ativamente, inclusive coloar masks em corpos estáticos não tem efeito algum.
+> Corner case: Suponha um `RigidBody` que não está em nenhuma layer e detecta mask=1, e um `StaticBody` que está na layer 1 mas nenhuma mask. Neste caso, o `RigidBody` busca ativamente por corpos na layer 1 e vai encontrar o `StaticBody`, de modo que haverá colisão se eles se encontrarem. Agora suponha o contrário, o `RigidBody` na layer 1 sem nenhuma mask, e um `StaticBody` sem nenhuma layer mas com mask=1. Neste caso não haveria colisão pois o `StaticBody` não faz nada ativamente. Aliás, adicionar masks em corpos estáticos não tem efeito algum por eles serem passivos.
 
 ## Exemplo
 
-A medusa da esquerda estará na layer 1 enquanto que a verde estará na layer 2, e ambas com mask 1. Inicialmente o protagonista Trevor estará na layer 1 e com mask 1. Isso significa que ambas as medusas podem detectá-lo e colidir com ele
+A medusa da esquerda estará na layer 1 e com mask 2, enquanto que a verde estará na layer 2 e com mask 1. O boneco estará na layer 1 e com mask 3 para identificar o chão, que deverá estar na layer 3. Isso significa que o boneco não está buscando colisão com nenhum inimigo, ele quer apenas ficar em terra firme, são os inimigos que querem colidir com ele! Neste caso, apenas a medusa verde (da direita) pode colidir com ele, pois ela está buscando corpos na layer 1.
 
