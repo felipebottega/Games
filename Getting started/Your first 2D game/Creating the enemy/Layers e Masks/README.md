@@ -18,5 +18,19 @@ Dois arquivos com duas imagens de medusas com cores diferentes foram criados, ma
 
 Outra opção viável seria o *Make Local*, que fica logo abaixo. A diferença é que o Make Local é um pouco mais "radical", no sentido de que ele fica totalmente desligado da cena original, enquanto que o Editable Child ainda é uma instância dela. Por exemplo, se você mudar a escala da cena original, essa mudança será refletida no Editable Child mas não no Make Local.
 
-## Layers
+## Definição de layer e mask
+
+Todo `RigidBody2D` possui a propriedade de *Layers* e *Masks*, um total de 32 para cada. Cada número destes se refere ao mesmo "espaço". A diferença entre layer e mask é se você está dizendo que seu objeto pertence a um destes espaços ou se ele é capaz de detectar objetos nestes espaços. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/4e152a91-112a-45fa-adde-c551e87ad456" width="350">
+</p>
+
+Layer se refere a localização do seu objeto. Se você coloca a layer 2 para ele, significa que ele está na layer 2. Note que é possível adicionar o objeto a múltiplas layers. Mask se refere às layers que o seu objeto é capaz de detectar. Se você colocar mask 2 para ele, isso significa que ele é capaz de detectar todos os objetos que estão na layer 2. 
+
+O objetivo disso é controlar quem pode colidir com quem. Um objeto $A$ só pode colidir com um objeto $B$ se $B$ está na layer $i$ e $A$ tem a mask $i$ ativada, de modo que $B$ é detectável por $A$.
+
+## Exemplo
+
+A medusa da esquerda estará na layer 1 enquanto que a verde estará na layer 2, e ambas com mask 1. Inicialmente o protagonista Trevor estará na layer 1 e com mask 1. Isso significa que ambas as medusas podem detectá-lo e colidir com ele
 
