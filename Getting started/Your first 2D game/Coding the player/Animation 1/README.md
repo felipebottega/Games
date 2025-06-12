@@ -40,5 +40,10 @@ Adicionar os sprites de animação não é o suficiente, precisamos dizer ao pro
 
 ## Testando
 
-Para testar se a animação funciona, vamos criar uma cena principal com um chão e o nosso personagem. Também iremos adicionar a medusa com o seu movimento senóide. 
+Para testar se a animação funciona, vamos criar uma cena principal com um chão e o nosso personagem. Também iremos adicionar a medusa com o seu movimento senóide. Toda a configuração dela se encontra no projeto *Getting started/Step by step/Listening to player input/Movements 2*. Não se esqueça de selecionar a opção *Freeze* na física da medusa, caso contrário ela não vai ter colisão. A cena principal deve estar como mostrado abaixo.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/7aaa1524-06dc-4c2e-8917-d1c8c54e925f" width="700">
+</p>
+
 
