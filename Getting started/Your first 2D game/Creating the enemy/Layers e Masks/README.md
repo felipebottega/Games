@@ -20,7 +20,7 @@ Outra opção viável seria o *Make Local*, que fica logo abaixo. A diferença �
 
 ## Definição de layer e mask
 
-Todo `RigidBody2D` possui a propriedade de *Collision Layers* e *Collision Masks*, um total de 32 para cada. Cada número destes se refere ao mesmo "espaço". A diferença entre layer e mask é se você está dizendo que seu objeto pertence a uma camada ou se ele é capaz de detectar objetos em alguma camada. Pense nas layers como sendo as camadas em que o objeto está presente e masks como sendo as camadas com quais camadas ele quer colidir. A colisão é registrada do ponto de vista do `RigidBody` ou outro objeto "ativo", fazendo oposição a `StaticBody`, que é passivo. É possível adicionar o objeto a múltiplas layers ou masks. 
+Todo `RigidBody2D` possui a propriedade de *Collision Layers* e *Collision Masks*, um total de 32 para cada. Cada número destes se refere ao mesmo "espaço". A diferença entre layer e mask é se você está dizendo que seu objeto pertence a uma camada ou se ele é capaz de detectar objetos em alguma camada. Pense nas layers como sendo as camadas em que o objeto está presente e masks como sendo as camadas com as quais camadas ele quer colidir. A colisão é registrada do ponto de vista do `RigidBody` ou outro objeto "ativo", fazendo oposição a `StaticBody`, que é passivo. É possível adicionar o objeto a múltiplas layers ou masks. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/4e152a91-112a-45fa-adde-c551e87ad456" width="350">
@@ -28,7 +28,7 @@ Todo `RigidBody2D` possui a propriedade de *Collision Layers* e *Collision Masks
 
 O objetivo disso é controlar quem pode colidir com quem. Um objeto $A$ só pode colidir com um objeto $B$ se $B$ está na layer $i$ e $A$ tem a mask $i$ ativada, de modo que $B$ é detectável por $A$. 
 
-> Corner case: Suponha um `RigidBody` que não está em nenhuma layer e detecta mask=1, e um `StaticBody` que está na layer 1 mas nenhuma mask. Neste caso, o `RigidBody` busca ativamente por corpos na layer 1 e vai encontrar o `StaticBody`, de modo que haverá colisão se eles se encontrarem. Agora suponha o contrário, o `RigidBody` na layer 1 sem nenhuma mask, e um `StaticBody` sem nenhuma layer mas com mask=1. Neste caso não haveria colisão pois o `StaticBody` não faz nada ativamente. Aliás, adicionar masks em corpos estáticos não tem efeito algum por eles serem passivos.
+> Corner case: Suponha um `RigidBody` que não está em nenhuma layer e detecta mask=1, e um `StaticBody` que está na layer 1 mas nenhuma mask. Neste caso, o `RigidBody` busca ativamente por corpos na layer 1 e vai encontrar o `StaticBody`, de modo que haverá colisão se eles se encontrarem. Agora suponha o contrário, o `RigidBody` na layer 1 sem nenhuma mask, e um `StaticBody` sem nenhuma layer mas com mask=1. Neste caso não haverá colisão pois o `StaticBody` não faz nada ativamente. Aliás, adicionar masks em corpos estáticos não tem efeito algum por eles serem passivos.
 
 ## Exemplo
 
