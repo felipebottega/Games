@@ -46,4 +46,22 @@ Para testar se a animação funciona, vamos criar uma cena principal com um chã
     <img src="https://github.com/user-attachments/assets/7aaa1524-06dc-4c2e-8917-d1c8c54e925f" width="700">
 </p>
 
+## Tomando dano
+
+Também vamos simular a animação de dano. São apenas dois quadros de animação, mas isso é o suficiente. Devemos criar um sinal sobre o node raíz do personagem. Como ele é um `RigidBody2D`, possui o sinal `body_entered`, que foi feito para identificar quando outro objeto físico entra em contato com o shape de colisão do personagem. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/0f65cb53-cce8-4ebf-ad6b-92d3190056b5" width="600">
+</p>
+
+Adicione a variável global `is_hurt` como falso, no início do script. Depois edite a função `_on_body_entered`, como mostrado abaixo. Devemos colocar a medusa em um grupo (chamado "inimigo" neste exemplo) para que o sinal só tenha efeito com a medusa, caso contrário o próprio chão vai dar dano no personagem. Depois disso a variável `is_hurt` passa a ser verdadeira, indicando que a animação do dano está em vigor. Note que é necessário incluir uma rotina no `_physics_process` para pular a iteração caso `is_hurt` seja verdadeiro. Isso garante que o input não vai cancelar a animação de dano. Por fim, note que incluímos também o sinal `_on_animated_sprite_2d_animation_finished` do `AnimatedSprite2D`. Este sinal é enviado quando uma animação termina.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/5e16aa72-16a0-4c7d-88bd-96163ba140ee" width="600">
+    <img src="https://github.com/user-attachments/assets/404e6954-b864-4925-b685-69a7c0e5e6f2" width="600">
+    <img src="https://github.com/user-attachments/assets/e7a9d3a9-8aa3-47f1-a1dc-b19c3e94e4b1" width="600">
+    <img src="https://github.com/user-attachments/assets/76958261-180d-46fa-a474-e7736a1524a4" width="600">
+</p>
+
+
 
