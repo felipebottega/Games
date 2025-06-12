@@ -48,8 +48,13 @@ animations = [{
 size = Vector2(14, 30)
 
 [node name="Trevor" type="RigidBody2D"]
+mass = 70.0
+gravity_scale = 2.0
 lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 50
 script = ExtResource("1_25nuh")
+jump_velocity = -600
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

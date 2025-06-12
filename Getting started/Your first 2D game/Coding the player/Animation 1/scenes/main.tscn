@@ -10,10 +10,6 @@
 position = Vector2(168, 183)
 
 [node name="Trevor" parent="." instance=ExtResource("1_0wfyh")]
-position = Vector2(24, 34)
-mass = 50.0
-gravity_scale = 2.0
-jump_velocity = -600
 
 [node name="Medusa" parent="." groups=["inimigo"] instance=ExtResource("3_sugp2")]
 position = Vector2(336, 85)

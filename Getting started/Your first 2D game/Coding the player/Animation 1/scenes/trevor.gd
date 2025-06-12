@@ -2,11 +2,10 @@ extends RigidBody2D
 
 @export var speed = 200
 @export var jump_velocity = -400
-var screen_size
 var is_hurt = false
 
 func _ready():
-	screen_size = get_viewport_rect().size
+	pass
 
 func _physics_process(_delta):
 	# Se não fizer isso, a animação do hurt será cancelada por uma das 3 abaixo.
