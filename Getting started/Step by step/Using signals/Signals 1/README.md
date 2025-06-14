@@ -40,7 +40,9 @@ A variável `force` é um vetor que foi definido globalmente no código, como mo
     <img src="https://github.com/user-attachments/assets/20b951c5-7486-4f8c-bf19-4a4805a53125" width="750">
 </p>
 
-> PS: É possível fazer atualizações de física com o `_process` em vez do `_physics_process`, ainda vai funcionar. O primeiro é chamado a cada frame, podendo ser suscetível a lags ou ter atualização muito rápida. Normalmente se usa a variável `delta` para fazer as correções necessárias e atualizar de acordo com o tempo, não o frame. O segundo nativamente já atualiza a uma taxa constante no tempo, ou seja, tem o `delta` constante. Isso é o ideal se quisermos consistência nos fenômenos físicos. Além disso, a  `_physics_process` é otimizada para física.
+##  _physics_process vs  _process
+
+É possível fazer atualizações de física com o `_process` em vez do `_physics_process`, ainda vai funcionar. O primeiro é chamado a cada frame, podendo ser suscetível a lags ou ter atualização muito rápida. Normalmente se usa a variável `delta` para fazer as correções necessárias e atualizar de acordo com o tempo, não o frame. O segundo nativamente já atualiza a uma taxa constante no tempo, ou seja, tem o `delta` constante. Isso é o ideal se quisermos consistência nos fenômenos físicos. Além disso, a  `_physics_process` é otimizada para física.
 
 ## Signals
 
