@@ -32,6 +32,24 @@ Crie três tipos de animação e arraste os respectivos sprites de *FileSystem* 
     <img src="https://github.com/user-attachments/assets/f221ad2b-5a7b-49e0-add1-d580b4e7a6db" width="700">
 </p>
 
+Aproveite para já colocar a shape de colisão no boneco.
 
+## RigidBody2D vs CharacterBody2D vs Node2D
+
+Se você não quer usar a física, e quer controle total sobre a posição, o tipo de node ideal seria `CharacterBody2D` (se quer colisão com controle) ou `Node2D` (se for visual apenas). `RigidBody2D` só deve ser usado se você quer que o movimento obedeça as leis da física, como gravidade, colisões, impulsos etc. Um resumo geral é dado na tabela abaixo.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/355f04a9-ad66-4cc8-a113-694a3ae10d6c" width="800">
+</p>
+
+Vale ressaltar que essa é uma tabela de recomendações, não de regras absolutas. Em diversos exemplos anteriores nós criamos a medusa como `RigidBody2D` e mudamos sua posição manualmente com o `position`. O `RigidBody2D` é controlado pelo motor de física da Godot. Quando você define a posição diretamente, está lutando contra o sistema de física, que pode sobrescrever sua posição no mesmo frame ou nos seguintes. Isso causa comportamentos inconsistentes. Nos nossos exemplos anteriores tudo ficou ok, mas vamos tentar fazer as coisas corretas daqui para frente. 
+
+## Animações com aleatoriedade
+
+O script do boneco está mostrado abaixo. Ele começa definindo um array de fatores de velocidade e escolhe aleatoriamente um deles. Depois, na função `_process`, o boneco se locomove um pouco para frente no eixo $x$ a cada frame. Se você trocar o `CharacterBody2D` por `RigidBody2D` (e tirar a gravidade no segundo caso), vai notar que o boneco fica um pouco parado no início. Esse comportamento inesperado se deve ao que falamos anteriormente sobre forçar posição em um `RigidBody2D`. É possível, mas pode levar a comortamentos inesperados.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ce5c13ab-474f-43fb-94c2-cba58715b87f" width="500">
+</p>
 
 
