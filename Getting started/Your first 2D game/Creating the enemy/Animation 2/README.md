@@ -46,10 +46,20 @@ Vale ressaltar que essa é uma tabela de recomendações, não de regras absolut
 
 ## Animações com aleatoriedade
 
-O script do boneco está mostrado abaixo. Ele começa definindo um array de fatores de velocidade e escolhe aleatoriamente um deles. Depois, na função `_process`, o boneco se locomove um pouco para frente no eixo $x$ a cada frame. Se você trocar o `CharacterBody2D` por `RigidBody2D` (e tirar a gravidade no segundo caso), vai notar que o boneco fica um pouco parado no início. Esse comportamento inesperado se deve ao que falamos anteriormente sobre forçar posição em um `RigidBody2D`. É possível, mas pode levar a comortamentos inesperados.
+O script do boneco está mostrado abaixo. Ele começa definindo um array de fatores de velocidade e escolhe aleatoriamente um deles. Depois, define um array com os nomes das animações ("fly", "swim", "walk"), escolhe um deles aleatoriamente e dá play na animação. Na função `_process`, o boneco se locomove um pouco para frente no eixo $x$ a cada frame. 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/ce5c13ab-474f-43fb-94c2-cba58715b87f" width="500">
+    <img src="https://github.com/user-attachments/assets/c1365882-1a4a-4b0f-94db-043c10f5ee13" width="500">
 </p>
 
+> PS: Se você trocar o `CharacterBody2D` por `RigidBody2D` (e tirar a gravidade no segundo caso), vai notar que o boneco fica um pouco parado no início. Esse comportamento inesperado se deve ao que falamos anteriormente sobre forçar posição em um `RigidBody2D`. É possível, mas pode levar a comportamentos inesperados.
 
+## VisibleOnScreenNotifier2D
+
+Agora vá para o node `VisibleOnScreenNotifier2D` e ative o sinal `screen_exited`.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/59ed5a8f-d50f-4622-9a0a-b40462834f77" width="800">
+</p>
+
+Na função `_on_visible_on_screen_notifier_2d_screen_exited`, basta acrescentar o comando `queue_free()`. Isto coloca o rsepectivo node na fila para ser deletado ao fim do frame. Como o sinal foi feito para ser emitido apenas quando o sprite sair da tela, isso é exatamente o que queremos, pois vai evitar armazenar objetos sem utilidade na memória.
