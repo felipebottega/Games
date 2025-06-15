@@ -8,6 +8,3 @@
 
 [node name="P2" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(150, 0)
-
-[editable path="P1"]
-[editable path="P2"]

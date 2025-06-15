@@ -15,7 +15,8 @@ func _physics_process(delta: float) -> void:
 	if nome == "P1":
 		progress_ratio += 0.001
 	elif nome == "P2":
-		progress_ratio = sin(t)
+		progress_ratio = sin(
+			t)
 		
 	t += 0.1 * delta
 	if t > PI/2:
