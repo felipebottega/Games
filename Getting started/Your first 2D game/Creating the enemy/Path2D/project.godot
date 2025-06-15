@@ -11,5 +11,12 @@ config_version=5
 [application]
 
 config/name="Path2D"
+run/main_scene="uid://cjtgr0mucpdbk"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=240
+window/stretch/mode="viewport"
