@@ -26,5 +26,14 @@ A cena principal será um `Node2D` contendo a cena do `Path2D` e um `Timer`. Com
     <img src="https://github.com/user-attachments/assets/da653f2e-1af7-4633-9152-11fb50dcacb7" width="700">
 </p>
 
+Vamos começar com o script simples mostrado abaixo e, aos poucos, vamos colocando mais linhas de código nele.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/d15065ca-c3d4-44f5-a09f-e67074799fbe" width="700">
+</p>
+
+Note que a função `_on_timer_timeout` possui o ícone verde ao lado, indicando que é uma função que é disparada por um sinal. Primeiro ela acessa o objeto `PathFollow2D`, que é o ponto que se move ao longo da trajetória. Depois disso ela altera o `progress_ratio` (o percentual da posição do ponto em relação ao trajeto) para um número aleatório entre 0 e 1. Isso significa que a função muda a posição do ponto na trajetória. Como esta ponto tem um sprite associado, conseguimos ver ele mudando de posição. Do jeito que está o projeto, já é possível executar e ver o sprite mudando de posição aleatoriamente.
+
+
 
 
