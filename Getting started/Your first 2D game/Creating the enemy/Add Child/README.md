@@ -23,7 +23,7 @@ Uma outra coisa que aprendi na prática é que o percurso de um `PathFollow2D` s
 A cena principal será um `Node2D` contendo a cena do `Path2D` e um `Timer`. Com este último objeto, queremos lançar um mob na tela a cada 1 segundo. Faremos isso usando o sinal `timeout`, como mostrado abaixo. Note que o *Autostart* deve estar ativado.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/da653f2e-1af7-4633-9152-11fb50dcacb7" width="700">
+    <img src="https://github.com/user-attachments/assets/da653f2e-1af7-4633-9152-11fb50dcacb7" width="750">
 </p>
 
 Vamos começar com o script simples mostrado abaixo e, aos poucos, vamos colocando mais linhas de código nele.
@@ -33,6 +33,16 @@ Vamos começar com o script simples mostrado abaixo e, aos poucos, vamos colocan
 </p>
 
 Note que a função `_on_timer_timeout` possui o ícone verde ao lado, indicando que é uma função que é disparada por um sinal. Primeiro ela acessa o objeto `PathFollow2D`, que é o ponto que se move ao longo da trajetória. Depois disso ela altera o `progress_ratio` (o percentual da posição do ponto em relação ao trajeto) para um número aleatório entre 0 e 1. Isso significa que a função muda a posição do ponto na trajetória. Como esta ponto tem um sprite associado, conseguimos ver ele mudando de posição. Do jeito que está o projeto, já é possível executar e ver o sprite mudando de posição aleatoriamente.
+
+## PackedScene
+
+Um `PackedScene` é uma classe que representa uma cena salva em memória e pronta para ser instanciada em tempo de execução. Quando você cria uma cena, ela é salva como um arquivo *.tscn*. Se você quiser criar cópias dessa cena no jogo (como vários inimigos iguais), você carrega o arquivo como um PackedScene, e então você pode instanciá-lo quantas vezes quiser. 
+
+No código abaixo, a variável `mob_scene` é como um molde da cena original. A variável `mob` é uma instância real da cena, ou seja, é um node que pode ser manipulado, movido, animado, receber sinais, etc. Porém, ele só passa a existir de fato na árvore de nodes do seu jogo depois de `add_child`. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/bd5a00fb-7817-4930-ac00-189ca15ff587" width="700">
+</p>
 
 
 
