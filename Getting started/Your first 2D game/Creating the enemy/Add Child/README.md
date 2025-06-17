@@ -5,13 +5,13 @@ Assim como foi ocorreu no [jogo do tutorial](https://felipebottega.github.io/Gam
 Vamos começar preparando a cena do mob, que consiste das 3 animações que ele possui. Estamos nos baseando parcialmente no projeto [Animation 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Animation%202) para a criação desta cena. Abaixo segue um resumo gerawl de como as coisas estão configuradas. O objeto raíz da cena é um `RigidBody2D`. Uma coisa que percebi na prática é que esses objetos perdem velocidade com o tempo mesmo sem gravidade e fricção e com todos os damps zerados. Para evitar que isso aconteça, vá em *Linear → Damp Mode* e selecione a opção *Replace*. 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/df8dd26c-814c-46c9-ab0b-50e3e9aebab9" width="1100">
+    <img src="https://github.com/user-attachments/assets/df8dd26c-814c-46c9-ab0b-50e3e9aebab9" width="1150">
 </p>
 
 Agora vamos criar uma cena com uma trajetória, baseado nos aprendizados vistos em [Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D). O sprite não é necessário para o jogo do tutorial, apenas vamos incluí-lo para visualizar o que está acontecendo, ou seja, onde está o `PathFollow2D` a cada instante. É mais didático assim.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/75235ea3-d3fb-498c-93c2-5ce991851b32" width="700">
+    <img src="https://github.com/user-attachments/assets/75235ea3-d3fb-498c-93c2-5ce991851b32" width="750">
 </p>
 
 ## position vs global_position em Path2D
@@ -23,13 +23,13 @@ Uma outra coisa que aprendi na prática é que o percurso de um `PathFollow2D` s
 A cena principal será um `Node2D` contendo a cena do `Path2D` e um `Timer`. Com este último objeto, queremos lançar um mob na tela a cada 1 segundo. Faremos isso usando o sinal `timeout`, como mostrado abaixo. Note que o *Autostart* deve estar ativado.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/da653f2e-1af7-4633-9152-11fb50dcacb7" width="750">
+    <img src="https://github.com/user-attachments/assets/da653f2e-1af7-4633-9152-11fb50dcacb7" width="800">
 </p>
 
 Vamos começar com o script simples mostrado abaixo e, aos poucos, vamos colocando mais linhas de código nele.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/d15065ca-c3d4-44f5-a09f-e67074799fbe" width="700">
+    <img src="https://github.com/user-attachments/assets/d15065ca-c3d4-44f5-a09f-e67074799fbe" width="750">
 </p>
 
 Note que a função `_on_timer_timeout` possui o ícone verde ao lado, indicando que é uma função que é disparada por um sinal. Primeiro ela acessa o objeto `PathFollow2D`, que é o ponto que se move ao longo da trajetória. Depois disso ela altera o `progress_ratio` (o percentual da posição do ponto em relação ao trajeto) para um número aleatório entre 0 e 1. Isso significa que a função muda a posição do ponto na trajetória. Como esta ponto tem um sprite associado, conseguimos ver ele mudando de posição. Do jeito que está o projeto, já é possível executar e ver o sprite mudando de posição aleatoriamente.
@@ -46,4 +46,14 @@ No código abaixo, a variável `mob_scene` é como um molde da cena original. A 
 
 ## Movimentando os mobs
 
-Após posicionar o mob, 
+Após posicionar o mob, fazemos uma rotação de nele e adicionamos uma velocidade linear. A rotação é para ele ficar orientado para o meio da tela e a velocidade será entre um valor aleatório 0 e 50. Não vou entrar em detalhes sobre como esse trecho funciona, isso ficará para outra hora. 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/8e07362e-12ee-4454-a671-78826e580119" width="400">
+</p>
+
+Por fim, vá em *Debug* e marque a opção *Visible Paths*. Com isso você consegue ver a trajetória durante o jogo.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/f23674b3-fc89-428a-83c8-57d2241449ef" width="900">
+</p>
