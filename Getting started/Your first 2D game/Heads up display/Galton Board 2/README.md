@@ -16,9 +16,10 @@ Também faz parte de um processo organizado saber como você vai trabalhar o pro
 2) Cena do pilar
 3) Cena da bola
 4) Cena do funil
-5) Cena principal (Main)
-6) Cena do HUD
-7) Extras
+5) Cena das bordas
+6) Cena principal (Main)
+7) Cena do HUD
+8) Extras
 
 ## Configurações gerais
 
@@ -58,6 +59,28 @@ Depois de ajustar os shapes de colisão e encaixar os sprites adequadamente, o r
   <img src="https://github.com/user-attachments/assets/a784199c-e47b-4f1c-88de-ff1d6de927fe" width="800">
 </p>
 
+## Cena das bordas
+
+Essa é a cena mais fácil, basta colocar shapes de colisão retangulares no chão a nas laterais. Apenas deixamos o chão com alguma textura pois apenas ele será visível ao jogador. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/98f35ca6-174a-4512-8c5a-dde4ab7bc9fa" width="700">
+</p>
+
+
 ## Main
 
-Inicialmente, a cena principal contém apenas a cena `Funnel`. O chão e as paredes poderiam ser outra cena, mas 
+A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner de objetos 2D. Inicialmente ela apenas contém a cena `Funnel` e `Border`. Note que não é precio fazer nenhum ajustes pois construímos essas cenas de modo que elas já entram na main adequadas.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/02860918-af2c-43f9-92d5-2e16054f5dc7" width="700">
+</p>
+
+Agora que começa a parte cerebral. Em vez de colocar os pinos e pilares manualmente como fizemos no [Galton Board 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201), eles serão inseridos automaticamente quando a cena iniciar, via script. Dado uma distância *step* entre os pinos (em pixels), o programa vai inserir os pinos de modo a formar um quadriculado na tela (em uma região delimitada) e vai inserir os pilares na base, em função dessa distância também. Tudo isso é possível pela lógica do código abaixo que está na main.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/64138cda-2754-4e09-b5ab-c3efc77e6100" width="500">
+</p>
+
+
+
