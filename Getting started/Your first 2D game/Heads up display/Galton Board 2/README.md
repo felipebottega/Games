@@ -88,11 +88,16 @@ Não vou explicar o código nos mínimos detalhes mas vale a pena falar como ele
 
 **Pilares:** Aquele loop inicial percorre as posições dos pilares no eixo $x$. Ele começa num valor *initial_step* que é ligeiramente maior que zero apenas para o pilar não ficar muito escondido. Depois disso ele anda em passos de *step* + 10 pixels inserindo os pilares na base da tela. 
 
-**Pinos:** O primeiro nível do loop representa cada fileira (horizontal), enquanto que o segundo loop insere cada um dos pinos daquela fileira. Note que o segundo loop é muito parecido com o lop dos pilares, com a exceção que o passo é de tamanho *step*. Por definição *step* é a distância entre os pinos, emntão tem que ser isso mesmo. Nos pilares nós demos um espaço a mais para acomodar mais bolas. A variável *x_shift* é para fazer o intercalamento da posição dos pinos que tem nas fileiras. A figura abaixo ilustra o que está acontecendo. A fórmula de *y_shift* foi modelada para que o quadriculado seja formado por quadrados de fato, e não losangos.
+**Pinos:** O primeiro nível do loop representa cada fileira (horizontal), enquanto que o segundo loop insere cada um dos pinos daquela fileira. Note que o segundo loop é muito parecido com o lop dos pilares, com a exceção que o passo é de tamanho *step*. Por definição *step* é a distância entre os pinos, emntão tem que ser isso mesmo. Nos pilares nós demos um espaço a mais para acomodar mais bolas. A variável *x_shift* é para fazer o intercalamento da posição dos pinos que tem nas fileiras. A figura abaixo ilustra o que está acontecendo. A fórmula de *y_shift* foi modelada para que o quadriculado seja formado por quadrados de fato, e não losangos. Note que os pinos ficam limitados a $30\%$ e $68\%$ do espaço vertical do tabuleiro. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b2bf6798-841b-43bb-ae50-ba3fb58c6ea4" width="250">
+ <img src="https://github.com/user-attachments/assets/9ad5d24e-9303-4a7a-b3e3-96d3d94405d1" width="250">
 </p>
 
+Agora crie um script na main e coloque o código abaixo antes da *set_stage*. Isso já basta para mostrar a geração automática do tabuleiro. Você pode testar os valores de *step* para produzir dinamicamente diversas configurações.
+
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/a153cccb-a11a-41c2-8295-5c3c4bdee934" width="400">
+</p>
 
 
