@@ -44,3 +44,12 @@ A criação da cena da bola é bem similar à do pilar, mas dessa vez o node ra�
 
 ## Cena do funil
 
+### Refletindo horizontalmente
+
+Vou começar logo com uma dica valiosa pois eu apanhei bastante com isso. Se você criou um objeto, fez uma rotação por um ângulo $\alpha$ com ele e quer um duplicata refletida horizontalmente (como se o eixo $y$ fosse o espelho), você deve fazer a duplicata (*ctrl+D*, *ctrl+C*) e aplicar uma rotação de $-\alpha$ nela. No exemplo abaixo, o objeto original (da esquerda) foi rotacionadopor $120^\circ$, então a sua duplicata refletida foi refletida por $-120^\circ$.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/52901bb9-6de8-4ef9-832e-d4c3dc32e998" width="600">
+</p>
+
+
