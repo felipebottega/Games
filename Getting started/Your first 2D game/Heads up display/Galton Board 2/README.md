@@ -76,10 +76,22 @@ A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner d
   <img src="https://github.com/user-attachments/assets/02860918-af2c-43f9-92d5-2e16054f5dc7" width="700">
 </p>
 
+### Inserindo objetos de maneira programática
+
 Agora que começa a parte cerebral. Em vez de colocar os pinos e pilares manualmente como fizemos no [Galton Board 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201), eles serão inseridos automaticamente quando a cena iniciar, via script. Dado uma distância *step* entre os pinos (em pixels), o programa vai inserir os pinos de modo a formar um quadriculado na tela (em uma região delimitada) e vai inserir os pilares na base, em função dessa distância também. Tudo isso é possível pela lógica do código abaixo que está na main.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/64138cda-2754-4e09-b5ab-c3efc77e6100" width="500">
+</p>
+
+Não vou explicar o código nos mínimos detalhes mas vale a pena falar como ele funciona de maneira geral. 
+
+**Pilares:** Aquele loop inicial percorre as posições dos pilares no eixo $x$. Ele começa num valor *initial_step* que é ligeiramente maior que zero apenas para o pilar não ficar muito escondido. Depois disso ele anda em passos de *step* + 10 pixels inserindo os pilares na base da tela. 
+
+**Pinos:** O primeiro nível do loop representa cada fileira (horizontal), enquanto que o segundo loop insere cada um dos pinos daquela fileira. Note que o segundo loop é muito parecido com o lop dos pilares, com a exceção que o passo é de tamanho *step*. Por definição *step* é a distância entre os pinos, emntão tem que ser isso mesmo. Nos pilares nós demos um espaço a mais para acomodar mais bolas. A variável *x_shift* é para fazer o intercalamento da posição dos pinos que tem nas fileiras. A figura abaixo ilustra o que está acontecendo. A fórmula de *y_shift* foi modelada para que o quadriculado seja formado por quadrados de fato, e não losangos.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b2bf6798-841b-43bb-ae50-ba3fb58c6ea4" width="250">
 </p>
 
 
