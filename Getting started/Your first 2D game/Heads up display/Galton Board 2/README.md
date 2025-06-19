@@ -110,10 +110,10 @@ Agora crie um script na main e coloque o código a seguir antes da *set_stage*. 
   <img src="https://github.com/user-attachments/assets/f4c87e79-d93e-4a31-aa56-3d856ab3b5d6" width="400">
 </p>
 
-A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira randomizada. A ideia de gerar objetos acima se aplica a esta situação. Vamos alterar o código um pouco para obter esse resultado. Acrescentamos a variável *ball* para carregar a cena e um contador para dar um efeito de delay entre cada bola que é chamda pelo *_process*. Poderíamos ter usado um timer também se quiséssemos. Se for necessário ajustar a escala da bola, faça isso na cena original dela, que isso será refletido automaticamente quando o programa for gerá-las.
+A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira randomizada. O método de gerar objetos recém discutido se aplica a esta situação. Vamos alterar o código um pouco para obter esse resultado. Ao carregar a cena, também acrescentamos a variável *ball*, e definimos um contador para dar um efeito de delay entre cada bola que é chamda pelo *_physics_process*. Poderíamos ter usado um timer também se quiséssemos. Se for necessário ajustar a escala da bola, faça isso na cena original dela, que isso será refletido automaticamente quando o programa for gerá-las.
 
 <p align="center">
- <img src="https://github.com/user-attachments/assets/8952c364-2a26-41a2-abb1-b5667c644418" width="400">
- <img src="https://github.com/user-attachments/assets/173e6c1d-b090-4f8f-9b7f-ac74bfcd35cb" width="400">
+  <img src="https://github.com/user-attachments/assets/e13666f4-82af-4822-91db-a4ce927bd13d" width="350">
+  <img src="https://github.com/user-attachments/assets/1147f601-21b5-4546-9675-e0fb80a0c39c" width="500">
 </p>
 
