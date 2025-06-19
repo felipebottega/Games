@@ -183,4 +183,7 @@ Queremos que todo o jogo reinicie quando este botão for pressionado. Além diss
 <p align="center">
   <img src="https://github.com/user-attachments/assets/32ecccaa-69e5-4cbd-81ba-4fe312877875" width="200">
   <img src="https://github.com/user-attachments/assets/3a18c2e5-ef9b-40cd-926b-80f511616042" width="300">
+  <img src="https://github.com/user-attachments/assets/42cbe785-13d2-42d3-8822-0cee70d4b4b2" width="350">
 </p>
+
+**StepSlider:** 
