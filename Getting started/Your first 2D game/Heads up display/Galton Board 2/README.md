@@ -169,6 +169,6 @@ Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são a�
 Altere o script da Main para ocultar todos os elementos e o processamento da física, exceto o botão de Start. Ao apertar o botão, a `new_game` vai trazer tudo de volta e o jogo vai começar.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/eb785366-0755-45f0-8e87-28e8316359b2" width="500">
+  <img src="https://github.com/user-attachments/assets/eb785366-0755-45f0-8e87-28e8316359b2" width="400">
 </p>
 
