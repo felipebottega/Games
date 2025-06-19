@@ -143,7 +143,7 @@ Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + 
 
 > PS: Lembre-se que quando você cria uma cena, está criando um template. Toda função de um script de uma cena será usado na Main de uma maneira ou de outra.
 
-**Start:** É um node do tipo `Button` que o usuário aperta para começar o jogo. Em uma única imagem tentamos resumir todo o processo que foi feito na criação deste botão, com exceção do script.
+**Start:** É um node do tipo `Button` que o usuário aperta para começar o jogo. Em uma única imagem tentamos resumir todo o processo que foi feito na criação deste botão, com exceção do script e sinais.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0ade2bee-1b69-4fe1-8485-632c0b849f47" width="800">
@@ -152,6 +152,8 @@ Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + 
 Anteriormente o script do HUD só tinha a função `update_num_balls`. Agora vamos criar um sinal para este botão. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c8b45d32-797c-4eb8-a26a-e7bab4d3cc94" width="400">
+  <img src="https://github.com/user-attachments/assets/c8b45d32-797c-4eb8-a26a-e7bab4d3cc94" width="200">
+  <img src="https://github.com/user-attachments/assets/a6a1f160-d74f-4015-8a9f-75ead37c561a" width="500">
 </p>
 
+Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pressionado. Este sinal faz o HUD esconder obotão de Start e emitr um [sinal customizado]() que chamamos de `start_game`. Note que este sinal customizado envia um float junto, isto também é possível. 
