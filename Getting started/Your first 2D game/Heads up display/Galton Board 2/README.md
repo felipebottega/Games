@@ -143,7 +143,7 @@ Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + 
 
 > PS: Lembre-se que quando você cria uma cena, está criando um template. Toda função de um script de uma cena será usado na Main de uma maneira ou de outra.
 
-**Start:** É um node do tipo `Button` que o usuário aperta para começar o jogo. Em uma única imagem tentamos resumir todo o processo que foi feito na criação deste botão, com exceção do script e sinais.
+**Start:** É um node do tipo `Button` que o usuário aperta para começar o jogo. Em uma única imagem tentamos resumir todo o processo que foi feito na criação deste botão, com exceção do script e sinais. Para alterar a cor, vá em *Theme Overrides → Colors → Font Color*.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0ade2bee-1b69-4fe1-8485-632c0b849f47" width="800">
@@ -161,7 +161,7 @@ Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pr
 Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são ações independentes do ambiente externo. Para conectar o sinal `start_game` à Main, precisamos ir na HUD instanciada na Main. Clique na HUD da Main e vá em Node do painel à direita, ali deve estar presente o sinal `start_game`. Clique no sinal e defina a função `new_game` na Main.  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c" width="500">
+  <img src="https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c" width="900">
 </p>
 
 > PS: O sinal vem do node HUD e não do botão Start, apesar de ser este o botão que aciona o trigger. Porém, no script você pode notar que o sinal foi criado no cabeçalho, sendo uma variável global do HUD e, a princípio, sem relação direta com o botão de Start. Essa relação ocorre quando a função `_on_start_pressed` é acionada, pois ela emite o sinal `start_game`. Sendo assim, o evento de pressionar o botão não aciona diretamente a função `new_game`, ele aciona um outro sinal que aciona a função `new_game`. É importante ter isso em mente para não ter confusão na hora e, por exemplo, procurar o sinal `start_game` no botão de Start (eu fiz isso).
@@ -169,6 +169,18 @@ Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são a�
 Altere o script da Main para ocultar todos os elementos e o processamento da física, exceto o botão de Start. Ao apertar o botão, a `new_game` vai trazer tudo de volta e o jogo vai começar.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/eb785366-0755-45f0-8e87-28e8316359b2" width="400">
+  <img src="https://github.com/user-attachments/assets/eb785366-0755-45f0-8e87-28e8316359b2" width="350">
 </p>
 
+**Quit:** Quando todas as bolinhas caírem, o jogador pode querer recomeçar. Do jeito que está agora isso não é possível, então vamos resolver esta questão. Adicione um node do tipo `Button` como mais um filho do HUD e renomeie este botão para *Quit*. Em *Inspector → Text*, escreva "Quit". Pode usar a mesma fonte especial que tem na pasta de fontes e faça os ajustes estético que preferir. A posição do botão na cena do HUD não é tão relevante, podemos deixar pra arrumar na cena principal (aliás, essa observação vale para todos os itens do HUD). Deixamos o botão alinhado com a caixa de contagem.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d5053e46-b96b-47b7-81c7-fd8c659c5b1a" width="800">
+</p>
+
+Queremos que todo o jogo reinicie quando este botão for pressionado. Além disso, só faz sentido que ele esteja na tela após o Start ter sido pressionado. Para obter o primeiro comportamento, criamos um sinal ao pressionar o botão de Quit. O comando `get_tree().reload_current_scene()` busca o nível mais alto da árvore de execução e recomeça tudo dali. Ou seja, dentro da Main este botão terá o efeito de retroceder toda a Main, nos levando ao início do jogo.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/32ecccaa-69e5-4cbd-81ba-4fe312877875" width="200">
+  <img src="https://github.com/user-attachments/assets/3a18c2e5-ef9b-40cd-926b-80f511616042" width="300">
+</p>
