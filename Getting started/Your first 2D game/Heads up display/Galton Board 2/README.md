@@ -160,6 +160,15 @@ Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pr
 
 Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são ações independentes do ambiente externo. Para conectar o sinal `start_game` à Main, precisamos ir na HUD instanciada na Main. Clique na HUD da Main e vá em Node do painel à direita, ali deve estar presente o sinal `start_game`. Clique no sinal e defina a função `new_game` na Main.  
 
-![image](https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c" width="500">
+</p>
 
 > PS: O sinal vem do node HUD e não do botão Start, apesar de ser este o botão que aciona o trigger. Porém, no script você pode notar que o sinal foi criado no cabeçalho, sendo uma variável global do HUD e, a princípio, sem relação direta com o botão de Start. Essa relação ocorre quando a função `_on_start_pressed` é acionada, pois ela emite o sinal `start_game`. Sendo assim, o evento de pressionar o botão não aciona diretamente a função `new_game`, ele aciona um outro sinal que aciona a função `new_game`. É importante ter isso em mente para não ter confusão na hora e, por exemplo, procurar o sinal `start_game` no botão de Start (eu fiz isso).
+
+Altere o script da Main para ocultar todos os elementos e o processamento da física, exceto o botão de Start. Ao apertar o botão, a `new_game` vai trazer tudo de volta e o jogo vai começar.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eb785366-0755-45f0-8e87-28e8316359b2" width="500">
+</p>
+
