@@ -9,6 +9,8 @@ Começamos criando uma nova cena, que é um node raíz do tipo `Area2D` com uma 
     <img src="https://github.com/user-attachments/assets/9e5c8c3d-83e7-4efd-8e06-4d0c3f79e869" width="450">
 </p>
 
+## Criando o seu próprio sinal
+
 Para criar um sinal, basta usar a sintaxe `signal {my_signal}`, onde `my_signal` é qualquer nome que você queira dar para o teu sinal. Note que, automaticamente, ele já aparece na aba Node à direita da tela. Dentro do `_physics_process` o programa faz as verificações de contagem e velocidade que mencionamos anteriormente. Caso tudo se verifique, o comando `ganhou.emit()` faz com que o sinal seja emitido. Com isso, toda a lógica está pronta e o restante do procedimento é idêntico ao que vimos em *Signals 1*. 
 
 <p align="center">
