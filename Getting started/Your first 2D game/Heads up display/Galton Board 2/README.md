@@ -17,9 +17,10 @@ Também faz parte de um processo organizado saber como você vai trabalhar o pro
 3) Cena da bola
 4) Cena do funil
 5) Cena das bordas
-6) Cena principal (Main)
-7) Cena do HUD
-8) Extras
+6) Cena dos pinos
+7) Cena principal (Main)
+8) Cena do HUD
+9) Extras
 
 ## Configurações gerais
 
@@ -81,7 +82,7 @@ A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner d
 Agora que começa a parte cerebral. Em vez de colocar os pinos e pilares manualmente como fizemos no [Galton Board 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201), eles serão inseridos automaticamente quando a cena iniciar, via script. Dado uma distância *step* entre os pinos (em pixels), o programa vai inserir os pinos de modo a formar um quadriculado na tela (em uma região delimitada) e vai inserir os pilares na base, em função dessa distância também. Tudo isso é possível pela lógica do código abaixo que está na main.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/64138cda-2754-4e09-b5ab-c3efc77e6100" width="500">
+  <img src="https://github.com/user-attachments/assets/f696f1f2-6921-425c-9c76-7cef770649ce" width="500">
 </p>
 
 Não vou explicar o código nos mínimos detalhes mas vale a pena falar como ele funciona de maneira geral. 
@@ -94,10 +95,12 @@ Não vou explicar o código nos mínimos detalhes mas vale a pena falar como ele
  <img src="https://github.com/user-attachments/assets/9ad5d24e-9303-4a7a-b3e3-96d3d94405d1" width="250">
 </p>
 
-Agora crie um script na main e coloque o código abaixo antes da *set_stage*. Isso já basta para mostrar a geração automática do tabuleiro. Você pode testar os valores de *step* para produzir dinamicamente diversas configurações.
+> PS: Em vez de criar a cena do pino, minha primeira abordagem foi reutilizar os pilares, diminuindo a escala até eles terem o tamanho de pinos. Isso bugou a física das bolinhas quando elas caíam. Acredito que diminuir a escala não diminui a quantidade de informação que tem no objeto, e acabou sendo muita conta de colisão em um espaço pequeno da tela. Fica a lição.
+
+Agora crie um script na main e coloque o código a seguir antes da *set_stage*. Isso já basta para mostrar a geração automática do tabuleiro. Você pode testar os valores de *step* para produzir dinamicamente diversas configurações.
 
 <p align="center">
- <img src="https://github.com/user-attachments/assets/a153cccb-a11a-41c2-8295-5c3c4bdee934" width="400">
+  <img src="https://github.com/user-attachments/assets/f4c87e79-d93e-4a31-aa56-3d856ab3b5d6" width="400">
 </p>
 
 A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira randomizada. A ideia de gerar objetos acima se aplica a esta situação. Vamos alterar o código um pouco para obter esse resultado. Acrescentamos a variável *ball* para carregar a cena e um contador para dar um efeito de delay entre cada bola que é chamda pelo *_process*. Poderíamos ter usado um timer também se quiséssemos. Se for necessário ajustar a escala da bola, faça isso na cena original dela, que isso será refletido automaticamente quando o programa for gerá-las.
