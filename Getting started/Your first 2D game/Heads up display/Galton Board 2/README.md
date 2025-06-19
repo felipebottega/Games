@@ -205,4 +205,21 @@ Desse jeito ele é apenas um slider bonito na tela. Para ter funcionalidade, pre
   <img src="https://github.com/user-attachments/assets/a7fb3c6c-8221-473c-9dbc-52f107a2b640" width="1000">
 </p>
 
-> PS: Não precisa se preocupar com o reaparecimento deste botão e de todos os outros que foram omitidos e queremos de volta na tela incial, pois o Quit dá um hard reset no jogo, então tudo é carregado novamente.
+> PS: Não precisa se preocupar com o reaparecimento deste botão e de todos os outros que foram omitidos e queremos de volta na tela inicial, pois o Quit dá um hard reset no jogo, então tudo é carregado novamente.
+
+## Extras
+
+Como você já deve ter notado, o background e os objetos da cena não harmonizam bem. O principal é a semelhança de cores. Para resolver isso, colocaremos um sprite como background. Ele é o arquivo *HD-wallpaper-beautiful-sunset-beauty-blue-sky.jpg* na pasta de sprites. É importante que ele seja o primeiro elemento da cena Main, assim fiará atrás de tudo. Poderíamos criar uma cena para ele, mas como é algo tão simples, vai direto na cena Main.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0bccbdd2-c7a2-40c7-942c-bdedf4ae4c48" width="800">
+</p>
+
+Por fim, adicionamos o node `AudioStreamPlayer` à cena Main e arrastamos a música *John Cage - Dream.mp3* para *Inspector → Stream*. Clique na setinha ao lado do nome da música no Inspector e selecione *Make Unique*, só assim você poderá fazer a música ficar em loop. Também selecione a opção *Autoplay* para que a música comece automaticamente assim que a cena começar a rodar.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/50a008f5-d2e6-4027-a6f7-0dfcdab7dc75" width="200">
+  <img src="https://github.com/user-attachments/assets/7c9627f2-60f2-4278-a1ca-4e3361ef8084" width="200">
+  <img src="https://github.com/user-attachments/assets/d7049497-df0c-4e58-9fa6-f7da5c17662d" width="200">
+</p>
+
