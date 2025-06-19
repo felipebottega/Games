@@ -76,9 +76,9 @@ Não há muito o que dizer, é apenas a bola amarela bastante diminuída, como u
   <img src="https://github.com/user-attachments/assets/6e82ac41-66ec-43d2-a2bb-6c8ce640272b" width="600">
 </p>
 
-## Main
+## Cena principal (Main)
 
-A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner de objetos 2D. Inicialmente ela apenas contém a cena `Funnel` e `Border`. Note que não é precio fazer nenhum ajustes pois construímos essas cenas de modo que elas já entram na main adequadas.
+A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner de objetos 2D. Inicialmente ela apenas contém a cena `Funnel` e `Border`. Note que não é precio fazer nenhum ajustes pois construímos essas cenas de modo que elas já entram na Main adequadas.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/02860918-af2c-43f9-92d5-2e16054f5dc7" width="700">
@@ -86,7 +86,7 @@ A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner d
 
 ### Inserindo objetos de maneira programática
 
-Agora que começa a parte cerebral. Em vez de colocar os pinos e pilares manualmente como fizemos no [Galton Board 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201), eles serão inseridos automaticamente quando a cena iniciar, via script. Dado uma distância *step* entre os pinos (em pixels), o programa vai inserir os pinos de modo a formar um quadriculado na tela (em uma região delimitada) e vai inserir os pilares na base, em função dessa distância também. Tudo isso é possível pela lógica do código abaixo que está na main.
+Agora que começa a parte cerebral. Em vez de colocar os pinos e pilares manualmente como fizemos no [Galton Board 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201), eles serão inseridos automaticamente quando a cena iniciar, via script. Dado uma distância *step* entre os pinos (em pixels), o programa vai inserir os pinos de modo a formar um quadriculado na tela (em uma região delimitada) e vai inserir os pilares na base, em função dessa distância também. Tudo isso é possível pela lógica do código abaixo que está na Main.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f696f1f2-6921-425c-9c76-7cef770649ce" width="500">
@@ -104,7 +104,7 @@ Não vou explicar o código nos mínimos detalhes mas vale a pena falar como ele
 
 > PS: Em vez de criar a cena do pino, minha primeira abordagem foi reutilizar os pilares, diminuindo a escala até eles terem o tamanho de pinos. Isso bugou a física das bolinhas quando elas caíam. Acredito que diminuir a escala não diminui a quantidade de informação que tem no objeto, e acabou sendo muita conta de colisão em um espaço pequeno da tela. Fica a lição.
 
-Agora crie um script na main e coloque o código a seguir antes da *set_stage*. Isso já basta para mostrar a geração automática do tabuleiro. Você pode testar os valores de *step* para produzir dinamicamente diversas configurações.
+Agora crie um script na Main e coloque o código a seguir antes da *set_stage*. Isso já basta para mostrar a geração automática do tabuleiro. Você pode testar os valores de *step* para produzir dinamicamente diversas configurações.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f4c87e79-d93e-4a31-aa56-3d856ab3b5d6" width="400">
@@ -116,4 +116,29 @@ A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira rando
   <img src="https://github.com/user-attachments/assets/e13666f4-82af-4822-91db-a4ce927bd13d" width="350">
   <img src="https://github.com/user-attachments/assets/1147f601-21b5-4546-9675-e0fb80a0c39c" width="500">
 </p>
+
+## Cena do HUD
+
+"HUD" significa "heads-up display", uma exibição informativa que aparece como uma sobreposição na parte superior da visualização do jogo. É comum usar o node `CanvasLayer` para elementos de UI ("user interface"), como botões, menus, barras de vida, painéis, sliders, HUD, entre outros. Vamos adicionar um cena chamada "HUD", do tipo `CanvasLayer`. Assim como no exemplo do tutorial, essa cena terá o propósito duplo de servir como heads-up display e menu inicial. 
+
+Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.  um `Button` para começar o jogo, um `Button` paras sair do jogo, um `Hslider`para escolher o tamanho do step (distância entre os pinos) e um `Label` para descrever ao usuário o que o slider faz. 
+
+**Message:** É um node do tipo `Label` para mostrar quantas bolas já caíram. Podemos deixar a caixa de texto vazia, pois ela será preenchida dinamicamente por uma função do script associado ao HUD. Inicialmente a cena do HUD estará como mostrado abaixo. Claro que no momento essa função não faz nada, já que o HUD não faz parte da Main ainda. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/74275ffa-fdbd-4379-be68-928e0f8147f4" width="700">
+</p>
+
+Para o estilo da fonte, vá em *Inspector → Theme Overrides → Fonts* e selecione a fonte da pasta *fontes*. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/83c611d6-769f-453a-ba9f-51eac7240464" width="200">
+</p>
+
+Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + int(counter/10))` dentro do if do `_physics_process`. Para mover a caixa da label na Main você deve marcar o HUD como *Editable Child*, recomendo fazer isso. Após seguir estes passos a contagem já deve estar automática.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/61def68c-af75-48a2-868a-268ccaf7c995" width="400">
+</p>
+
 
