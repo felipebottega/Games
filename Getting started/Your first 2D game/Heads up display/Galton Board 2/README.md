@@ -68,6 +68,13 @@ Essa é a cena mais fácil, basta colocar shapes de colisão retangulares no ch�
   <img src="https://github.com/user-attachments/assets/98f35ca6-174a-4512-8c5a-dde4ab7bc9fa" width="700">
 </p>
 
+## Cena dos pinos 
+
+Não há muito o que dizer, é apenas a bola amarela bastante diminuída, como um `StaticBody2D`.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6e82ac41-66ec-43d2-a2bb-6c8ce640272b" width="600">
+</p>
 
 ## Main
 
