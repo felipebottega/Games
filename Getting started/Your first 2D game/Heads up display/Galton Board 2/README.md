@@ -121,7 +121,7 @@ A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira rando
 
 "HUD" significa "heads-up display", uma exibição informativa que aparece como uma sobreposição na parte superior da visualização do jogo. É comum usar o node `CanvasLayer` para elementos de UI ("user interface"), como botões, menus, barras de vida, painéis, sliders, HUD, entre outros. Vamos adicionar um cena chamada "HUD", do tipo `CanvasLayer`. Assim como no exemplo do tutorial, essa cena terá o propósito duplo de servir como heads-up display e menu inicial. 
 
-Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.  um `Button` para começar o jogo, um `Button` paras sair do jogo, um `Hslider`para escolher o tamanho do step (distância entre os pinos) e um `Label` para descrever ao usuário o que o slider faz. 
+Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.   um `Button` paras sair do jogo, um `Hslider`para escolher o tamanho do step (distância entre os pinos) e um `Label` para descrever ao usuário o que o slider faz. 
 
 **Message:** É um node do tipo `Label` para mostrar quantas bolas já caíram. Podemos deixar a caixa de texto vazia, pois ela será preenchida dinamicamente por uma função do script associado ao HUD. Inicialmente a cena do HUD estará como mostrado abaixo. Claro que no momento essa função não faz nada, já que o HUD não faz parte da Main ainda. 
 
@@ -129,7 +129,7 @@ Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.  um `Button` par
   <img src="https://github.com/user-attachments/assets/74275ffa-fdbd-4379-be68-928e0f8147f4" width="700">
 </p>
 
-Para o estilo da fonte, vá em *Inspector → Theme Overrides → Fonts* e selecione a fonte da pasta *fontes*. 
+Para o estilo da fonte, vá em *Inspector → Theme Overrides → Fonts → Load* e selecione a fonte da pasta *fontes*. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/83c611d6-769f-453a-ba9f-51eac7240464" width="200">
@@ -141,4 +141,17 @@ Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + 
   <img src="https://github.com/user-attachments/assets/61def68c-af75-48a2-868a-268ccaf7c995" width="400">
 </p>
 
+> PS: Lembre-se que quando você cria uma cena, está criando um template. Toda função de um script de uma cena será usado na Main de uma maneira ou de outra.
+
+**Start:** É um node do tipo `Button` que o usuário aperta para começar o jogo. Em uma única imagem tentamos resumir todo o processo que foi feito na criação deste botão, com exceção do script.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0ade2bee-1b69-4fe1-8485-632c0b849f47" width="800">
+</p>
+
+Anteriormente o script do HUD só tinha a função `update_num_balls`. Agora vamos criar um sinal para este botão. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c8b45d32-797c-4eb8-a26a-e7bab4d3cc94" width="400">
+</p>
 
