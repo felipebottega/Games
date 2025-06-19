@@ -156,4 +156,10 @@ Anteriormente o script do HUD só tinha a função `update_num_balls`. Agora vam
   <img src="https://github.com/user-attachments/assets/a6a1f160-d74f-4015-8a9f-75ead37c561a" width="500">
 </p>
 
-Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pressionado. Este sinal faz o HUD esconder obotão de Start e emitr um [sinal customizado]() que chamamos de `start_game`. Note que este sinal customizado envia um float junto, isto também é possível. 
+Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pressionado. Este sinal faz o HUD esconder obotão de Start e emitir um [sinal customizado](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203) que chamamos de `start_game`. Note que este sinal customizado envia um float junto, isto também é possível. 
+
+Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são ações independentes do ambiente externo. Para conectar o sinal `start_game` à Main, precisamos ir na HUD instanciada na Main. Clique na HUD da Main e vá em Node do painel à direita, ali deve estar presente o sinal `start_game`. Clique no sinal e defina a função `new_game` na Main.  
+
+![image](https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c)
+
+> PS: O sinal vem do node HUD e não do botão Start, apesar de ser este o botão que aciona o trigger. Porém, no script você pode notar que o sinal foi criado no cabeçalho, sendo uma variável global do HUD e, a princípio, sem relação direta com o botão de Start. Essa relação ocorre quando a função `_on_start_pressed` é acionada, pois ela emite o sinal `start_game`. Sendo assim, o evento de pressionar o botão não aciona diretamente a função `new_game`, ele aciona um outro sinal que aciona a função `new_game`. É importante ter isso em mente para não ter confusão na hora e, por exemplo, procurar o sinal `start_game` no botão de Start (eu fiz isso).
