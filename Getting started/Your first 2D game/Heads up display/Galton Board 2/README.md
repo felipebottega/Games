@@ -186,4 +186,23 @@ Queremos que todo o jogo reinicie quando este botão for pressionado. Além diss
   <img src="https://github.com/user-attachments/assets/42cbe785-13d2-42d3-8822-0cee70d4b4b2" width="350">
 </p>
 
-**StepSlider:** 
+**StepSlider:** Existe um node em Godot chamado `HSlider`, que é um slider na horizontal. O usuário pode clicar e arrastar para mudar um parâmetro dentro de um range de valores. Usaremos isso no menu principal para o usuário definir o valor do parâmetro *step*. Adicione ele ao HUD, renomeie para "StepSlider" e defina os valores `Min Value` = 18, `Step` = 1 e `Value` = 40, como mostrado abaixo.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eb632954-f877-46f5-a005-4bf31d5855f3" width="1000">
+</p>
+
+Desse jeito ele é apenas um slider bonito na tela. Para ter funcionalidade, precisamos que o seu valor defina o novo *step* de fato. Lembra que na Main o step estava definido no topo como sendo igual a 70? Vamos redefinir este valor com base no atributo `value` do nosso novo slider. Alteramos a função `_on_start_pressed` para enviar a variável `step_value` com algum valor (antes ela foi inicializada mas nunca usada, mas por default vale zero), e esse valor é o `value` do slider. Esse valor entra no `emit` do sinal `start_game` que entra na `new_game` e substitui o antigo valor do `step`. Assim o `set_stage` usará esse valor novo para montar o cenário. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8f60d2a1-96d2-47d9-9bd6-5a3b4c42482c" width="250">
+  <img src="https://github.com/user-attachments/assets/77cc2492-4382-4724-aa31-5991c8d35ac7" width="250">
+</p>
+
+**StepSliderInfo:** Nosso último elemento do HUD é um node do tipo `Label` que apenas informa ao usuário o que aquele slider faz. A imagem abaixo deve ser o suficiente para explicar tudo. Não esquecer que ele também deve ser omitido após o jogador pressionar o Start. Coloque isso no `new_game` junta das outras chamadas do mesmo tipo. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a7fb3c6c-8221-473c-9dbc-52f107a2b640" width="1000">
+</p>
+
+> PS: Não precisa se preocupar com o reaparecimento deste botão e de todos os outros que foram omitidos e queremos de volta na tela incial, pois o Quit dá um hard reset no jogo, então tudo é carregado novamente.
