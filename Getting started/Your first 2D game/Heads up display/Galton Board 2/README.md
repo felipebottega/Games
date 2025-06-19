@@ -223,3 +223,4 @@ Por fim, adicionamos o node `AudioStreamPlayer` à cena Main e arrastamos a mús
   <img src="https://github.com/user-attachments/assets/d7049497-df0c-4e58-9fa6-f7da5c17662d" width="200">
 </p>
 
+Com isso o jogo está pronto!!!
