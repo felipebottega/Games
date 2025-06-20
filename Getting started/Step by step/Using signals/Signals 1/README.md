@@ -64,11 +64,17 @@ Feito isso, você será redirecionado para o script automaticamente, e a funçã
     <img src="https://github.com/user-attachments/assets/3cc0494b-3c3d-495d-9544-21a4d4e48727" width="300">
 </p>
 
-Neste jogo, o botão se conecta com o node responsável pelos impulsos de ar nas bolinhas. Parte do script associado a este node está mostrado abaixo, com a função nova que é ativada quando o sinal do botão é enviado. O comando `set_physics_process(not is_physics_processing())` liga ou desliga todos os processos físicos deste node. Logo abaixo temos uma condicional que altera a cor do botão dependendo se a física está ligada ou desligada. O node `Left Button`, por exemplo, se conecta com o `Impulse 1`, que é um quadrado de colisão invisível no lado esquerdo da tela, responsável pelos impulsos de ar naquela parte da tela. Como o script está vinculado à `Impulse 1`, a linha de código `$"../../Left Button"` faz o caminho relativo para acessar o objeto `Left Button` e assim acessar seus métodos e atributos. É assim que o pressionar do botão consegue alterar o estado de mais de um node.
+Neste jogo, o botão se conecta com o node responsável pelos impulsos de ar nas bolinhas. Parte do script associado a este node está mostrado abaixo, com a função nova que é ativada quando o sinal do botão é enviado. O comando `set_physics_process(not is_physics_processing())` liga ou desliga todos os processos físicos deste node. Logo abaixo temos uma condicional que altera a cor do botão dependendo se a física está ligada ou desligada. O node `Left Button`, por exemplo, se conecta com o `Impulse 1`, que é um quadrado de colisão invisível no lado esquerdo da tela, responsável pelos impulsos de ar naquela parte da tela. Como o script está vinculado à `Impulse 1`, a linha de código `$"../../Left Button"` faz o caminho relativo para acessar o objeto `Left Button` e assim acessar seus métodos e atributos. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/e474fc29-9217-43ca-84e4-8c28c2c3b8dc" width="600">
     <img src="https://github.com/user-attachments/assets/3574021d-ddf0-48b4-abc5-b3be89c1181a" width="400">
+</p>
+
+Esta é uma maneira que o pressionar do botão consegue alterar o estado de mais de um node. Outra maneira seria definir mais uma conexão a partir do mesmo sinal, e esta conexão ser no próprio botão. Daí seria necessário ter um script para o botão e o código abaixo efetua a mesma lógica de alterar cores.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/a613e793-63c9-410b-bc64-970de023a9f6" width="300">
 </p>
 
 > PS: Note que o script da cena original de impulso foi instanciada em `Impulse 1`, `Impulse 2` e `Impulse 3`, sendo que a chamada de `_on_left_button_pressed` não tem relação alguma com `Impulse 2` e `Impulse 3`. Ainda assim, ao pressionar o botão esquerdo essa função desliga a física como um todo. Por que só o `Impulse 1` foi afetado? Acontece que cada uma dessas instâncias compartilha o mesmo script, mas possui seu próprio estado interno e responde a eventos de forma independente. O botão `Left Button` está conectado especificamente à instância `Impulse 1`. O `set_physics_process` está sendo chamado dentro da instância `Impulse 1`. Cada instância executa seu próprio script separadamente, como se fossem cópias independentes em memória, embora compartilhem o mesmo "molde" (a cena base + script). Apesar da função `_on_left_button_pressed` estar presente em `Impulse 2` e `Impulse 3`, o sinal de pressionar o botão esquerdo chega apenas em `Impulse 1`.
