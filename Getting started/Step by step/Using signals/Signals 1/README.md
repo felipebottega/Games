@@ -37,7 +37,7 @@ A lógica é simples, o método `get_overlapping_bodies` gera uma lista de todos
 A variável `force` é um vetor que foi definido globalmente no código, como mostrado abaixo. O interessante de definir usando o `@export` é que essa variável passa a ser manipulável na aba *Inspector* à direita da tela. Isso pode ser feito para qualquer variável global.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/20b951c5-7486-4f8c-bf19-4a4805a53125" width="750">
+    <img src="https://github.com/user-attachments/assets/20b951c5-7486-4f8c-bf19-4a4805a53125" width="800">
 </p>
 
 ##  _physics_process vs  _process
