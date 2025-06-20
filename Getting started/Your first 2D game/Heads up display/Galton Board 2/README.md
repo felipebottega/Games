@@ -28,7 +28,7 @@ Estaremos usando tela com dimensões $660 \times 820$, posição inicial *Absolu
 
 ## Cena do pilar
 
-O pilar são as barreiras verticais que ficam na base do tabuleiro e fazem a separação da distribuição. Neste caso são mini-pilares. Ele é composto de node principal, que é um `StaticBody2D`, e dois pedaços, um do corpo e outro da cabeça do pilar (cada um tem um sprite e um shape de colisão próprio). 
+O pilar são as barreiras verticais que ficam na base do tabuleiro e fazem a separação da distribuição. Neste caso são mini-pilares. Seu node raíz é um `StaticBody2D` e ele contém dois pedaços, um do corpo e outro da cabeça do pilar (cada um tem um sprite e um shape de colisão próprio). 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ebe0d2e7-422f-4df0-ab50-9aa165944ca3" width="650">
@@ -48,13 +48,13 @@ A criação da cena da bola é bem similar à do pilar, mas dessa vez o node ra�
 
 ### Refletindo horizontalmente
 
-Vou começar logo com uma dica valiosa pois eu apanhei bastante com isso. Se você criou um objeto, fez uma rotação por um ângulo $\alpha$ com ele e quer um duplicata refletida horizontalmente (como se o eixo $y$ fosse o espelho), você deve fazer a duplicata (*ctrl+D*, *ctrl+C*) e aplicar uma rotação de $-\alpha$ nela. No exemplo abaixo, o objeto original (da esquerda) foi rotacionado por $120^\circ$, então a sua duplicata refletida foi refletida por $-120^\circ$.
+Vou começar logo com uma dica valiosa pois eu apanhei bastante com isso. Se você criou um objeto, fez uma rotação por um ângulo $\alpha$ com ele e quer uma duplicata refletida horizontalmente (como se o eixo $y$ fosse o espelho), você deve fazer a duplicata (*ctrl+D*, *ctrl+C*) e aplicar uma rotação de $-\alpha$ nela. No exemplo abaixo, o objeto original (da esquerda) foi rotacionado por $120^\circ$, então a sua duplicata refletida foi refletida por $-120^\circ$.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/52901bb9-6de8-4ef9-832e-d4c3dc32e998" width="600">
 </p>
 
-Depois de ajustar os shapes de colisão e encaixar os sprites adequadamente, o resultado é o que temos abaixo. Cada `Sprite2D{i}` está associado ao `CollisionShape2D{i}`. Se não vamos usar nomes bonitinhos, pelo menos a nomenclatura deve ser consistente. Note que os objetos acima são sobrepostos pelos que vem abaixo, o cenário sempre é desenhado do topo para baixo. A escolha da ordem dos sprites não acidental, queremos que as rampas estejam mais à frente que a pequena parede reta ao fim das rampas. Nesta cena o node raíz *Funnel* é do tipo `StaticBody2D` já que todos os objetos da cena são estáticos.
+Depois de ajustar os shapes de colisão e encaixar os sprites adequadamente, o resultado é o que temos abaixo. Cada `Sprite2D{i}` está associado ao `CollisionShape2D{i}`. Se não vamos usar nomes bonitinhos, pelo menos a nomenclatura deve ser consistente. Note que os objetos acima são sobrepostos pelos que vem abaixo, o cenário sempre é desenhado do topo para baixo. A escolha da ordem dos sprites não foi acidental, queremos que as rampas estejam mais à frente que a pequena parede reta ao fim das rampas. Nesta cena o node raíz *Funnel* é do tipo `StaticBody2D` já que todos os objetos da cena são estáticos.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a784199c-e47b-4f1c-88de-ff1d6de927fe" width="800">
@@ -78,7 +78,7 @@ Não há muito o que dizer, é apenas a bola amarela bastante diminuída, como u
 
 ## Cena principal (Main)
 
-A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner de objetos 2D. Inicialmente ela apenas contém a cena `Funnel` e `Border`. Note que não é precio fazer nenhum ajustes pois construímos essas cenas de modo que elas já entram na Main adequadas.
+A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner de objetos 2D. Inicialmente ela apenas contém a cena `Funnel` e `Border`. Note que não é preciso fazer nenhum ajustes pois construímos essas cenas de modo que elas já entram na Main adequadas.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/02860918-af2c-43f9-92d5-2e16054f5dc7" width="700">
@@ -86,7 +86,7 @@ A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner d
 
 ### Inserindo objetos de maneira programática
 
-Agora que começa a parte cerebral. Em vez de colocar os pinos e pilares manualmente como fizemos no [Galton Board 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201), eles serão inseridos automaticamente quando a cena iniciar, via script. Dado uma distância *step* entre os pinos (em pixels), o programa vai inserir os pinos de modo a formar um quadriculado na tela (em uma região delimitada) e vai inserir os pilares na base, em função dessa distância também. Tudo isso é possível pela lógica do código abaixo que está na Main.
+Agora que começa a parte cerebral. Em vez de colocar os pinos e pilares manualmente como fizemos no [Galton Board 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201), eles serão inseridos automaticamente quando a cena iniciar, via script. Dada uma distância *step* entre os pinos (em pixels), o programa vai inserir os pinos de modo a formar um quadriculado na tela (em uma região delimitada) e vai inserir os pilares na base, em função dessa distância também. Tudo isso é possível pela lógica do código abaixo que está na Main.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f696f1f2-6921-425c-9c76-7cef770649ce" width="500">
@@ -96,7 +96,7 @@ Não vou explicar o código nos mínimos detalhes mas vale a pena falar como ele
 
 **Pilares:** Aquele loop inicial percorre as posições dos pilares no eixo $x$. Ele começa num valor *initial_step* que é ligeiramente maior que zero apenas para o pilar não ficar muito escondido. Depois disso ele anda em passos de *step* + 10 pixels inserindo os pilares na base da tela. 
 
-**Pinos:** O primeiro nível do loop representa cada fileira (horizontal), enquanto que o segundo loop insere cada um dos pinos daquela fileira. Note que o segundo loop é muito parecido com o lop dos pilares, com a exceção que o passo é de tamanho *step*. Por definição *step* é a distância entre os pinos, emntão tem que ser isso mesmo. Nos pilares nós demos um espaço a mais para acomodar mais bolas. A variável *x_shift* é para fazer o intercalamento da posição dos pinos que tem nas fileiras. A figura abaixo ilustra o que está acontecendo. A fórmula de *y_shift* foi modelada para que o quadriculado seja formado por quadrados de fato, e não losangos. Note que os pinos ficam limitados a $30\%$ e $68\%$ do espaço vertical do tabuleiro. 
+**Pinos:** O primeiro nível do loop representa cada fileira (horizontal), enquanto que o segundo loop insere cada um dos pinos daquela fileira. Note que o segundo loop é muito parecido com o loop dos pilares, com a exceção que o passo é de tamanho *step*. Por definição *step* é a distância entre os pinos, então tem que ser isso mesmo. Nos pilares nós demos um espaço a mais para acomodar mais bolas. A variável *x_shift* é para fazer o intercalamento da posição dos pinos que tem nas fileiras. A figura abaixo ilustra o que está acontecendo. A fórmula de *y_shift* foi modelada para que o quadriculado seja formado por quadrados de fato, e não losangos. Note que os pinos ficam limitados a $30$% e $68$% do espaço vertical do tabuleiro. 
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/9ad5d24e-9303-4a7a-b3e3-96d3d94405d1" width="250">
@@ -110,7 +110,7 @@ Agora crie um script na Main e coloque o código a seguir antes da *set_stage*. 
   <img src="https://github.com/user-attachments/assets/f4c87e79-d93e-4a31-aa56-3d856ab3b5d6" width="400">
 </p>
 
-A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira randomizada. O método de gerar objetos recém discutido se aplica a esta situação. Vamos alterar o código um pouco para obter esse resultado. Ao carregar a cena, também acrescentamos a variável *ball*, e definimos um contador para dar um efeito de delay entre cada bola que é chamda pelo *_physics_process*. Poderíamos ter usado um timer também se quiséssemos. Se for necessário ajustar a escala da bola, faça isso na cena original dela, que isso será refletido automaticamente quando o programa for gerá-las.
+A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira randomizada. O método recém discutido de gerar objetos se aplica a esta situação. Vamos alterar o código um pouco para obter esse resultado. Ao carregar a cena, também acrescentamos a variável *ball*, e definimos um contador para dar um efeito de delay entre cada bola que é chamda pelo *_physics_process*. Poderíamos ter usado um timer também se quiséssemos. Se for necessário ajustar a escala da bola, faça isso na cena original dela, que isso será refletido automaticamente quando o programa for gerá-las.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e13666f4-82af-4822-91db-a4ce927bd13d" width="350">
@@ -121,7 +121,7 @@ A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira rando
 
 "HUD" significa "heads-up display", uma exibição informativa que aparece como uma sobreposição na parte superior da visualização do jogo. É comum usar o node `CanvasLayer` para elementos de UI ("user interface"), como botões, menus, barras de vida, painéis, sliders, HUD, entre outros. Vamos adicionar um cena chamada "HUD", do tipo `CanvasLayer`. Assim como no exemplo do tutorial, essa cena terá o propósito duplo de servir como heads-up display e menu inicial. 
 
-Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.   um `Button` paras sair do jogo, um `Hslider`para escolher o tamanho do step (distância entre os pinos) e um `Label` para descrever ao usuário o que o slider faz. 
+Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.
 
 **Message:** É um node do tipo `Label` para mostrar quantas bolas já caíram. Podemos deixar a caixa de texto vazia, pois ela será preenchida dinamicamente por uma função do script associado ao HUD. Inicialmente a cena do HUD estará como mostrado abaixo. Claro que no momento essa função não faz nada, já que o HUD não faz parte da Main ainda. 
 
