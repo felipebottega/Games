@@ -1,6 +1,6 @@
 # Signals 3
 
-Nem todos os sinais disponibilizados pela Godot servem a todos os propósitos. Há momentos em que você vai querer um sinal que não está no conjunto de sinais deles. Par estes casos, é possível customizar seus próprios sinais. Neste projeto nós iremos fazer apenas um sinal customizado, que determina quando o jogo acabou e dispara uma mensagem de vitória na tela.
+Nem todos os sinais disponibilizados pela Godot servem a todos os propósitos. Há momentos em que você vai querer um sinal que não está no conjunto de sinais deles. Para estes casos, é possível customizar seus próprios sinais. Neste projeto nós iremos fazer apenas um sinal customizado, que determina quando o jogo acabou e dispara uma mensagem de vitória na tela.
 
 Começamos criando uma nova cena, que é um node raíz do tipo `Area2D` com uma shape de colisão. É a mesma receita usada para a área de impulso, mas em vez de aplicar impulso, estaremos contando o número de bolinhas na região e suas velocidades. A condição é que se todas as 36 bolinhas estiverem na região e a soma das suas velocidades horizontais forem praticamente nulas, então o jogador ganhou o jogo.
 
