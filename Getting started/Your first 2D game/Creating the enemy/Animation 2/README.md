@@ -20,7 +20,7 @@ Vamos relembrar rapidamente como acrescentar animações para o seu boneco. Come
     <img src="https://github.com/user-attachments/assets/127c3452-87b0-4f71-a117-eee5dbca3853" width="200">
 </p>
 
-Vá em `AnmatedSprite2D` → *Inspector → Animation → Sprite Frames → New SpriteFrames* e clique novamente no mesmo local onde estava *New SpriteFrames* (agora terá escrito *SpriteFrames*, o novo objeto de edição que você acabou de criar).  
+Vá em `AnimatedSprite2D` → *Inspector → Animation → Sprite Frames → New SpriteFrames* e clique novamente no mesmo local onde estava *New SpriteFrames* (agora terá escrito *SpriteFrames*, o novo objeto de edição que você acabou de criar).  
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/2a53779f-8841-41c6-a5db-834870486863" width="250">
@@ -36,7 +36,7 @@ Aproveite para já colocar a shape de colisão no boneco.
 
 ## RigidBody2D vs CharacterBody2D vs Node2D
 
-Se você não quer usar a física, e quer controle total sobre a posição, o tipo de node ideal seria `CharacterBody2D` (se quer colisão com controle) ou `Node2D` (se for visual apenas). `RigidBody2D` só deve ser usado se você quer que o movimento obedeça as leis da física, como gravidade, colisões, impulsos etc. Um resumo geral é dado na tabela abaixo.
+Se você não quer usar a física, e quer controle total sobre a posição, o tipo de node ideal é `Node2D`, trabalha apenas com o visual. O `CharacterBody2D` permite colisão mas te deixa com algum controle. O `RigidBody2D` só deve ser usado se você quer que o movimento obedeça as leis da física, como gravidade, colisões, impulsos etc. Um resumo geral é dado na tabela abaixo.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/355f04a9-ad66-4cc8-a113-694a3ae10d6c" width="800">
@@ -59,7 +59,7 @@ O script do boneco está mostrado abaixo. Ele começa definindo um array de fato
 Agora vá para o node `VisibleOnScreenNotifier2D` e ative o sinal `screen_exited`.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/59ed5a8f-d50f-4622-9a0a-b40462834f77" width="800">
+    <img src="https://github.com/user-attachments/assets/59ed5a8f-d50f-4622-9a0a-b40462834f77" width="1000">
 </p>
 
-Na função `_on_visible_on_screen_notifier_2d_screen_exited`, basta acrescentar o comando `queue_free()`. Isto coloca o rsepectivo node na fila para ser deletado ao fim do frame. Como o sinal foi feito para ser emitido apenas quando o sprite sair da tela, isso é exatamente o que queremos, pois vai evitar armazenar objetos sem utilidade na memória.
+Na função `_on_visible_on_screen_notifier_2d_screen_exited`, basta acrescentar o comando `queue_free()`. Isto coloca o respectivo node na fila para ser deletado ao fim do frame. Como o sinal foi feito para ser emitido apenas quando o sprite sair da tela, isso é exatamente o que queremos, pois vai evitar armazenar objetos sem utilidade na memória.
