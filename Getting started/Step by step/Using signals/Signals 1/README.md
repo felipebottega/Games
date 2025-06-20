@@ -12,7 +12,7 @@ Antes de falar de sinais, quero falar de algumas coisas novas que aprendi, come�
 
 ## Polygon2D e CollisionPolygon2D
 
-Para este jogo, eu queria formatos que não fossem quadrados ou elipses. Até tem como usar formas côncavas com o `CollisionShape2D` mas não consegui fazer funcionar e o próprio editor me recomendou usar `Polygon2D` e `CollisionPolygon2D`. Ao carregar o `CollisionPolygon2D`, ele te dá uma forma de quadrado no espaço 2D, é para criar o seu shape dentro deste quadrado. Repare nas três opções acima do quadrado, na figura abaixo. A que está marcada por default é para acrescentar pontos para o seu shape. A opção ao lado é editar o shape depois de pronto. A terceira opção é para remover pontos (na minha opinião a opção de edição já faz adição e remoção de pontos, então a terceira me pareceu redundante). 
+Para este jogo, eu queria formatos que não fossem quadrados ou elipses. Até tem como usar formas côncavas com o `CollisionShape2D` mas não consegui fazer funcionar e o próprio editor me recomendou usar `Polygon2D` e `CollisionPolygon2D`. Ao carregar o `CollisionPolygon2D`, ele te dá uma forma de quadrado no espaço 2D, é para criar o seu shape dentro deste quadrado. Repare nas três opções acima do quadrado, na figura abaixo. A que está marcada por default é para acrescentar pontos para o seu shape. A opção ao lado é para editar o shape depois de pronto. A terceira opção é para remover pontos (na minha opinião a opção de edição já faz adição e remoção de pontos, então a terceira me pareceu redundante). 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/173a51f1-f9a7-4344-af7f-718864ac4f55" width="200">
