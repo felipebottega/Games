@@ -28,7 +28,7 @@ Este jogo é basicamente uma simulação de <a href="https://www.anos80.com.br/b
     <img src="https://github.com/user-attachments/assets/f28238b3-4a76-4919-ab18-71b8e1c0a224" width="300">
 </p>
 
-A lógica é simples, o método `get_overlapping_bodies` gera uma lista de todos os objetos físicos dentro da região em um instante. Daí faz um loop nestes objetos e aplica uma força `force` nele. 
+A lógica é simples, o método `get_overlapping_bodies` gera uma lista de todos os objetos físicos dentro da região em um instante/frame. Daí faz um loop nestes objetos e aplica uma força `force` em cada um deles. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/1ef91515-97c7-4acd-8708-5ec77c2f2d01" width="300">
