@@ -13,6 +13,6 @@ Além de configurar os valores nos sliders, você também deve adaptar o script 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/791fdbf5-8cd2-4ae6-83bc-f583f2813334" width="500">
   <img src="https://github.com/user-attachments/assets/11aaa3b3-63da-4aff-8907-f0b2b7a987ca" width="250">
-  <img src="https://github.com/user-attachments/assets/865dcc63-d71d-4e97-8787-817dd0c8dc48" width="450">
-  <img src="https://github.com/user-attachments/assets/1e90b2e1-8a39-4f8a-8769-330b01308c97" width="400">
+  <img src="https://github.com/user-attachments/assets/865dcc63-d71d-4e97-8787-817dd0c8dc48" width="480">
+  <img src="https://github.com/user-attachments/assets/1e90b2e1-8a39-4f8a-8769-330b01308c97" width="430">
 </p>
