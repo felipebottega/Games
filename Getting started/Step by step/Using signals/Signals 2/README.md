@@ -20,7 +20,7 @@ O node `Timer` possui poucas propriedades para mexer, portanto é um node simple
 
 ## Criando a conexão com o sinal via código
 
-Na aba *Node* do `Timer`, notasmo que ele possui apenas um sinal próprio, o `timeout`. Este sinal é emitido quando o countdown termina. Uma coisa que vale a pena mencionar é que os outros sinais mostrados na janela são dos nodes pais de `Timer`. Ele herda estes sinais, então pode usá-los também. 
+Na aba *Node* do `Timer`, notamos que ele possui apenas um sinal próprio, o `timeout`. Este sinal é emitido quando o countdown termina. Uma coisa que vale a pena mencionar é que os outros sinais mostrados na janela são dos nodes pais de `Timer`. Ele herda estes sinais, então pode usá-los também. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/57020a7d-c76f-48f2-90b9-9f415953cc61" width="250">
