@@ -17,4 +17,4 @@ Além de configurar os valores nos sliders, você também deve adaptar o script 
   <img src="https://github.com/user-attachments/assets/1e90b2e1-8a39-4f8a-8769-330b01308c97" width="430">
 </p>
 
-> PS: Não é possível utilizar `$ball.Sprite2D.scale = Vector2(ball_scale, ball_scale)` nem `$ball.CollisionShape2D.scale = Vector2(ball_scale, ball_scale)` no script, pois em Godot, `$node_name` é um atalho para `get_node("node_name")`, mas `ball` é uma instância criada dinamicamente que só existe dentro do `_physics_process`. Como ela não é um filho da cena Main, a chamada não funciona.
+> PS: Não é possível utilizar `$Ball/Sprite2D.scale = Vector2(ball_scale, ball_scale)` nem `$Ball/CollisionShape2D.scale = Vector2(ball_scale, ball_scale)` no script, pois em Godot, `$node_name` é um atalho para `get_node("node_name")`, mas `ball` é uma instância criada dinamicamente que só existe dentro do `_physics_process`. Como ela não é um filho da cena Main, a chamada não funciona.
