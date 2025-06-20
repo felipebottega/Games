@@ -46,7 +46,7 @@ A variável `force` é um vetor que foi definido globalmente no código, como mo
 
 ## Signals
 
-Agora sim vamos falar de sinais! Há dois botões principais, um para "soltar ar" pelo canal direito e outro pelo esquerdo. Uma vez que você criou e configurou a aparência do node `Button`, vá na aba *Node* à direita do painel. Este painel contém todos os sinais que o botão pode emitir, cada um exige que se tire um tempo para entender como funciona. Aqui neste exemplo usaremos o sinal `pressed`. Ele emite um sinal quando o botão é pressionado. Dê o segundo clique nele e selecine a opção de conectar.
+Agora sim vamos falar de sinais! Há dois botões principais, um para "soltar ar" pelo canal direito e outro pelo esquerdo. Uma vez que você criou e configurou a aparência do node `Button`, vá na aba *Node* à direita do painel. Este painel contém todos os sinais que o botão pode emitir, cada um exige que se tire um tempo para entender como funciona. Aqui neste exemplo usaremos o sinal `pressed`. Ele emite um sinal quando o botão é pressionado. Dê o segundo clique nele e selecione a opção de conectar.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/d1786bb6-463f-47e3-a21b-d1fdb28167fc" width="250">
