@@ -11,7 +11,9 @@ Começamos criando uma nova cena, que é um node raíz do tipo `Area2D` com uma 
 
 ## Criando o seu próprio sinal
 
-Para criar um sinal, basta usar a sintaxe `signal {my_signal}`, onde `my_signal` é qualquer nome que você queira dar para o teu sinal. Note que, automaticamente, ele já aparece na aba Node à direita da tela. Dentro do `_physics_process` o programa faz as verificações de contagem e velocidade que mencionamos anteriormente. Caso tudo se verifique, o comando `ganhou.emit()` faz com que o sinal seja emitido. Com isso, toda a lógica está pronta e o restante do procedimento é idêntico ao que vimos em *Signals 1*. 
+Para criar um sinal, basta usar a sintaxe `signal {my_signal}`, onde `my_signal` é qualquer nome que você queira dar para o teu sinal. Note que, automaticamente, ele já aparece na aba Node à direita da tela. 
+
+Dentro do `_physics_process` o programa faz as verificações de contagem e velocidade que mencionamos anteriormente. Caso tudo se verifique, o comando `ganhou.emit()` faz com que o sinal seja emitido. Com isso, toda a lógica está pronta e o restante do procedimento é idêntico ao que vimos em *Signals 1*. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/de9b2788-00d7-45bb-b045-32fcd494fffb" width="900">
