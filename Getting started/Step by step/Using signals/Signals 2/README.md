@@ -1,6 +1,6 @@
 # Signals 2
 
-Como prometido, vamos abordar agora o tópico avançado de sinais. Não é avançado de verdade, o que muda é que o em vez de configurá-los clicando em ícones, agora eles são configurados via código. O projeto será o mesmo de antes, só vamos incluir um sinal a mais. 
+Como prometido, vamos abordar agora o tópico avançado de sinais. Não é avançado de verdade, o que muda é que em vez de configurá-los clicando em ícones, agora eles são configurados via código. O projeto será o mesmo de antes, só vamos incluir um sinal a mais. 
 
 Se você jogou o jogo, deve ter notado que existe uma zona de impulso vertical localizada quase no centro do jogo, e ela fica 100% do tempo ativa para evitar que as bolinhas fiquem presas ali. Vamos alterar essa dinâmica para que esse impulso central fique oscilando entre ativado e desativado a cada 4 segundos. Para este fim, vamos adicionar um node `Timer` à cena original do impulso. 
 
