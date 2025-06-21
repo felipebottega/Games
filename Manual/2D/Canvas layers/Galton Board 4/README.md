@@ -15,7 +15,7 @@ O node `CanvasItem` é a base para todos os nodes 2D, com o `Node2D` e `Control`
 O node `Viewport` é filho direto de `Node`, e tem o papel de criar e manipular diferentes telas. Apesar de `CanvasItem` e `Viewport` não terem nenhuma relação hereditária, os filhos de `CanvasItem` são filhos de `Viewport` de maneira direta ou indireta. Essa é uma escolha de design da engine, e faz sentido uma vez que deformar a tela também deforma os elementos visíveis nela (a maior parte sendo do `Node2D` ou `Control`). Abaixo temos um resumo visual do parentesco entre os nodes mencionados. Os gráficos completos podem ser encontrados [aqui](https://docs.godotengine.org/en/stable/contributing/development/core_and_modules/inheritance_class_tree.html).
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/6a59f7c2-2a8c-440a-b3af-9b7500836f34" width="800">
+    <img src="https://github.com/user-attachments/assets/6a59f7c2-2a8c-440a-b3af-9b7500836f34" width="1000">
 </p>
 
 ## Viewport.canvas_transform
@@ -26,11 +26,11 @@ Uma das várias funcionalidades do `Viewport` é a função `Viewport.canvas_tra
     <img src="https://github.com/user-attachments/assets/bdeaff7e-aa5a-40fd-902a-5bf4e8fccd58" width="600">
 </p>
 
-> PS: Tome cuidado com objetos que já foram transladados previamente a esta função. O espaço vazio entre o objeto transladado e a origem também entra na conta, daí o objeto pode de posição mais do que o esperado.
+> PS: Tome cuidado com objetos que já foram transladados previamente a esta função. O espaço vazio entre o objeto transladado e a origem também entra na conta, daí o objeto pode mudar de posição de maneira inesperada.
 
 ## CanvasLayers
 
-Tem um detalhe importante a se considerar com o método descrito acima: às vezes nós queremos deformar certos elementos da tela, mas não todos. A solução para isso é o node `CanvasLayer`. Este node adiciona uma camada de renderização 2D separada para todos os seus filhos e filhos dos filhos. Por default os filhos da `Viewport` são desenhados na camada "0", enquanto um `CanvasLayer` desenhará em qualquer outra camada. é padrão da engine Godto que camadas com um número maior sejam desenhadas acima daquelas com um número menor. Isso explica aquele comportamento observado no [HUD do Galton Board 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer).
+Tem um detalhe importante a se considerar com o método descrito acima: às vezes nós queremos deformar certos elementos da tela, mas não todos. A solução para isso é o node `CanvasLayer`. Este node adiciona uma camada de renderização 2D separada para todos os seus filhos e os filhos dos filhos. Por default os filhos da `Viewport` são desenhados na camada "0", enquanto um `CanvasLayer` desenhará em qualquer outra camada. É padrão da engine Godto que camadas com um número maior sejam desenhadas acima daquelas com um número menor. Isso explica aquele comportamento observado no [HUD do Galton Board 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer).
 
 ##  Implementando o shake para o tabuleiro de Galton
 
@@ -46,13 +46,13 @@ Começamos criando a cena, que será um node `Area2D` com uma `CollisionShape2D`
     <img src="https://github.com/user-attachments/assets/a582c561-fe8b-4e03-8369-fdaa03388fbf" width="900">
 </p>
 
-No HUD, adicionamos o botão, que deverá ser semelhante ao botão de Quit. Feito isso, colocaremos esse botão acima do botão de Quit. Também aproveitamos para instanciar a cena da área de colisão na Main e ajustamos o tamanho para cobrir a área desejada.
+No HUD, adicionamos o botão, que deverá ser semelhante ao botão de Quit. Também aproveitamos para instanciar a cena da área de colisão na Main e ajustamos o tamanho para cobrir a área desejada.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/b56c00fd-a7d1-4cf1-b4ff-fe574436cdea" width="800">
 </p>
 
-Queremos que a função `apply_shake` do script da área seja ativado por $0.5$ segundos quando o botão de shake for pressionado. Para isso, devemos enviar um sinal do botão e devemos também ter um `Timer`. Definimos a variável booleana `shaking` no script da Main, ele será *true* quando o shake tem que ocorrer e *false* caso contrário. Também na `_physics_process`, incluímos a linha `$ShakeArea.apply_shake(shaking)` para chamar a função. Deste modo, toda a lógica se restringe a alterar o estado da variável `shaking`.
+Queremos que a função `apply_shake` do script da área seja ativada por $0.5$ segundos quando o botão de shake for pressionado. Para isso, devemos enviar um sinal do botão e devemos também ter um `Timer`. Definimos a variável booleana `shaking` no script da Main, ele será *true* quando o shake tem que ocorrer e *false* caso contrário. Também na `_physics_process`, incluímos a linha `$ShakeArea.apply_shake(shaking)` para chamar a função. Deste modo, toda a lógica se restringe a alterar o estado da variável `shaking`.
 
 O primeiro passo natural é acrescentar um sinal ao botão. Como o HUD não possui a variável `shaking` nem o `Timer`, devemos criar um sinal extra para enviar à Main. É o mesmo approach que usamos para o Start.
 
@@ -60,7 +60,7 @@ O primeiro passo natural é acrescentar um sinal ao botão. Como o HUD não poss
     <img src="https://github.com/user-attachments/assets/e825768b-a1ee-4664-b67a-55f2e66842aa" width="950">
 </p>
 
-Chamamos este sinal simplesmente de `shake`. Quando o botão é pressionado, este sinal é enviado do HUD para a Main, que então executa a função `_on_hud_shake`. Esta função altera o estado do `shaking` para *true* e dá start no `Timer`. Ele foi configurado para durar $0.5$ segundos e quando terminar emitir um sinal para voltar o `shaking` para *false*, como podemos ver no script abaixo.
+Chamamos este sinal simplesmente de `shake`. Quando o botão é pressionado, o sinal do shake é emitido, a Main capta esse sinal e então executa a função `_on_hud_shake`. Esta função altera o estado do `shaking` para *true* e dá start no `Timer`. Ele foi configurado para durar $0.5$ segundos e quando terminar emitir um sinal para voltar o `shaking` para *false*, como podemos ver no script abaixo.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/5c745f4b-b6f4-4ddc-a9be-7ca38f0f5745" width="950">
