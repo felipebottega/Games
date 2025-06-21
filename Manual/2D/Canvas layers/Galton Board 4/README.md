@@ -25,3 +25,9 @@ Uma das várias funcionalidades do `Viewport` é a função `Viewport.canvas_tra
 <p align="center">
     <img src="https://github.com/user-attachments/assets/bdeaff7e-aa5a-40fd-902a-5bf4e8fccd58" width="600">
 </p>
+
+> PS: Tome cuidado com objetos que já foram transladados previamente a esta função. O espaço vazio entre o objeto transladado e a origem também entra na conta, daí o objeto pode de posição mais do que o esperado.
+
+## CanvasLayers
+
+
