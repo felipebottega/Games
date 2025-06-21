@@ -60,7 +60,7 @@ O primeiro passo natural é acrescentar um sinal ao botão. Como o HUD não poss
     <img src="https://github.com/user-attachments/assets/e825768b-a1ee-4664-b67a-55f2e66842aa" width="950">
 </p>
 
-Chamamos este sinal simplesmente de `shake`. Quando o botão é pressionado, o sinal do shake é emitido, a Main capta esse sinal e então executa a função `_on_hud_shake`. Esta função altera o estado do `shaking` para *true* e dá start no `Timer`. Ele foi configurado para durar $0.5$ segundos e quando terminar emitir um sinal para voltar o `shaking` para *false*, como podemos ver no script abaixo.
+Chamamos este sinal simplesmente de `shake`. Quando o botão é pressionado, o sinal do shake é emitido, a Main capta esse sinal e então executa a função `_on_hud_shake`. Esta função altera o estado do `shaking` para *true* e dá start no `Timer`. Ele foi configurado para durar $0.5$ segundos e quando terminar, emitir um sinal para voltar o `shaking` para *false*, como podemos ver no script abaixo.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/5c745f4b-b6f4-4ddc-a9be-7ca38f0f5745" width="950">
