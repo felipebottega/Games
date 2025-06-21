@@ -23,5 +23,5 @@ O node `Viewport` é filho direto de `Node`, e tem o papel de criar e manipular 
 Uma das várias funcionalidades do `Viewport` é a função `Viewport.canvas_transform`. Esta função recebe três vetores em $\mathbb{R}^2$, sendo o primeiro associado ao eixo $x$, o segundo ao eixo $y$ e o terceiro à "origem" da tela. Por default o primeiro vetor é $e_1 = (1, 0)$, o segundo é $e_2 = (0, 1)$ e o terceiro é $v_o = (0, 0)$. Mudando $e_1$ e $e_2$ nós aplicamos deformações lineares na tela, enquanto que mudando $v_o$ nós transladamos a tela. Por exemplo definir $e_1 = (2, 0)$ altera a escala de toda a tela no eixo $x$, ampliando em 2 vezes. Definir $e_1 = (1, -1)$ aplica uma deformação no eixo x do viewport por $45^\circ$. A figura abaixo ilustra a ideia geral dessas transformações.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/c2e80c74-25c6-4995-a49a-e25478158780" width="600">
+    <img src="https://github.com/user-attachments/assets/bdeaff7e-aa5a-40fd-902a-5bf4e8fccd58" width="600">
 </p>
