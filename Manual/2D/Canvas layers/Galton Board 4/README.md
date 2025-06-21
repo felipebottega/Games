@@ -43,7 +43,7 @@ Tudo já está perfeitamente alinhado para que o shake seja implementado.
 Começamos criando a cena, que será um node `Area2D` com uma `CollisionShape2D` retangular, e o script com a lógica do shake. Não precisamos nos preocupar em ajustar o shape de colisão, pois faremos isso quando essa cena for instanciada na Main.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/5bf4d5ba-bf28-47ec-a1ec-b70898870f72" width="900">
+    <img src="https://github.com/user-attachments/assets/a582c561-fe8b-4e03-8369-fdaa03388fbf" width="900">
 </p>
 
 No HUD, adicionamos o botão, que deverá ser semelhante ao botão de Quit. Feito isso, colocaremos esse botão acima do botão de Quit. Também aproveitamos para instanciar a cena da área de colisão na Main e ajustamos o tamanho para cobrir a área desejada.
@@ -51,4 +51,19 @@ No HUD, adicionamos o botão, que deverá ser semelhante ao botão de Quit. Feit
 <p align="center">
     <img src="https://github.com/user-attachments/assets/f8113cb5-e79a-44d8-beee-750fbad4e841" width="750">
 </p>
+
+Queremos que a função `apply_shake` do script da área seja ativado por $0.5$ segundos quando o botão de shake for pressionado. Para isso, devemos enviar um sinal do botão e devemos também ter um `Timer`. Definimos a variável booleana `shaking` no script da Main, ele será *true* quando o shake tem que ocorrer e *false* caso contrário. Também na `_physics_process`, incluímos a linha `$ShakeArea.apply_shake(shaking)` para chamar a função. Deste modo, toda a lógica se restringe a alterar o estado da variável `shaking`.
+
+O primeiro passo natural é acrescentar um sinal ao botão. Como o HUD não possui a variável `shaking` nem o `Timer`, devemos criar um sinal extra para enviar à Main. É o mesmo approach que usamos para o Start.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/e825768b-a1ee-4664-b67a-55f2e66842aa" width="950">
+</p>
+
+Chamamos este sinal simplesmente de `shake`. Quando o botão é pressionado, este sinal é enviado do HUD para a Main, que então executa a função `_on_hud_shake`. Esta função altera o estado do `shaking` para *true* e dá start no `Timer`. Ele foi configurado para durar $0.5$ segundos e quando terminar emitir um sinal para voltar o `shaking` para *false*, como podemos ver no script abaixo.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/5c745f4b-b6f4-4ddc-a9be-7ca38f0f5745" width="950">
+</p>
+
 
