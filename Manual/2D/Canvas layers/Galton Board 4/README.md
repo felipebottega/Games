@@ -1,20 +1,18 @@
-# Galton Board 3
+# Galton Board 4
 
-Assim que mostrei o Galton Board 2 para alguns conhecidos, recebi pedidos. Como estes pedidos faziam bastante sentido e são fáceis de implementar, resolvi fazer logo. Um pedido era para aumentar o slider pois ele estava muito discreto e o outro era para colocar poder alterar mais parâmetros (com sliders). Então vamos lá!
+Este é o primeiro projeto relativo ao [manual oficial de Godot](https://docs.godotengine.org/en/stable/tutorials/2d/canvas_layers.html). Na minha terceira versão do tabuleiro de Galton, me pediram para fazer uma opção "shake", ou seja, de tremer o tabuleiro. Isto porque às vezes as bolas ficavam empacadas na entrada. Parte da culpa é do usuário que quis entupir de bola usando parâmetros inadequados, mas a ideia de tremer o tabuleiro é interessante. Na época eu não implementei pois não sabia como, e por acaso logo no primeiro item do manual a solução me aparece! Então vamos lá!
 
-Colocar mais sliders visualmente é fácil, só ir no HUD e acrescentar os nodes necessários e seus labels. Mudei um pouco algumas coisas na nomenclatura, mas nada demais. Cada slider tem sua própria configuração de parâmetros, não se esqueça de configurar.
+## Viewport e Canvas items
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/23bf0370-078e-4a8b-abfe-5179a557d167" width="700">
-</p>
-
-Além de configurar os valores nos sliders, você também deve adaptar o script de acordo. A ideia geral é seguir a receita do que foi feito para o slider que já existia. O único que requer um pouco mais de atenção é o fator de escala da bolinha. A observação que foi feita [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Animation%202#rigidbody2d-vs-characterbody2d-vs-node2d) para a posição de `RigidBody2D` também vale para mudança de escala. Não altere a escala de um `RigidBody2D` diretamente, mas sim de seus filhos, um `Sprite2D` e um `CollisionShape2D` nesse caso.
+"Canvas" significa "tela" em inglês, enquanto que "viewport" significa "janela de visualização". Podemos entender o canvas como sendo todo o espaço 2D que temos para trabalhar, enquanto que viewport é a tela que o jogador enxerga.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/791fdbf5-8cd2-4ae6-83bc-f583f2813334" width="500">
-  <img src="https://github.com/user-attachments/assets/11aaa3b3-63da-4aff-8907-f0b2b7a987ca" width="250">
-  <img src="https://github.com/user-attachments/assets/865dcc63-d71d-4e97-8787-817dd0c8dc48" width="480">
-  <img src="https://github.com/user-attachments/assets/1e90b2e1-8a39-4f8a-8769-330b01308c97" width="430">
+    <img src="https://github.com/user-attachments/assets/cf0ea1a7-0fe5-4ed2-8ddb-2ef1c4958070" width="800">
 </p>
 
-> PS: Não é possível utilizar `$Ball/Sprite2D.scale = Vector2(ball_scale, ball_scale)` nem `$Ball/CollisionShape2D.scale = Vector2(ball_scale, ball_scale)` no script, pois em Godot, `$node_name` é um atalho para `get_node("node_name")`, mas `ball` é uma instância criada dinamicamente que só existe dentro do `_physics_process`. Como ela não é um filho da cena Main, a chamada não funciona.
+O node `CanvasItem` é a base para todos os nodes 2D, com o `Node2D` e `Control` sendo seus primeiros filhos. Uma característica crucial desta classe é que todos seus filhos herdam a transformação dos pais, isto é, se você transformar um `Node2D` (mudar posição, escala, ect), seus filhos serão transformados juntos. Vale ressaltar que `CanvasItem` é uma classe abstrata e não é diretamente manipulável em Godot. 
+
+O node `Viewport` é filho direto de `Node`, e tem o papel de criar e manipular diferentes telas. Apesar de `CanvasItem` e `Viewport` não terem nenhuma relação hereditária, os filhos de `CanvasItem` são filhos de `Viewport`, direta ou indiretamente. Essa é uma escolha do design da engine, e faz sentido pois deformar a tela também deformar todos os elementos visíveis nela, e boa parte vem do `Node2D` ou `Control`. Abaixo temos um resumo visual do parentesco entre os nodes mencionados. Os gráficos completos podem ser encontrados [aqui](https://docs.godotengine.org/en/stable/contributing/development/core_and_modules/inheritance_class_tree.html).
+
+![image](https://github.com/user-attachments/assets/6a59f7c2-2a8c-440a-b3af-9b7500836f34)
+
