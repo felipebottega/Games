@@ -8,6 +8,7 @@ var ball_scene
 var initial_step = 2
 var num_fileiras = 100
 var total_balls = 0
+var shaking = false
 @export var step: int = 70
 @export var max_num_balls: int = 1000
 @export var ball_delay: float = 1.0
@@ -23,6 +24,7 @@ func _ready():
 	$Border.hide()
 	$HUD/Message.hide()
 	$HUD/Quit.hide()
+	$HUD/Shake.hide()
 	set_physics_process(false)
 
 func new_game(step_value: float, num_balls: int, delay: float, gravity: float, bscale: float):
@@ -36,6 +38,7 @@ func new_game(step_value: float, num_balls: int, delay: float, gravity: float, b
 	$Border.show()
 	$HUD/Message.show()
 	$HUD/Quit.show()
+	$HUD/Shake.show()
 	$HUD/SliderPin.hide()
 	$HUD/SliderNumBalls.hide()
 	$HUD/SliderDelay.hide()
@@ -100,3 +103,11 @@ func _physics_process(_delta: float) -> void:
 		$HUD.update_num_balls(total_balls)
 		
 	counter += 1
+	$ShakeArea.apply_shake(shaking)
+	
+func _on_hud_shake() -> void:
+	shaking = true
+	$Timer.start()
+
+func _on_timer_timeout() -> void:
+	shaking = false

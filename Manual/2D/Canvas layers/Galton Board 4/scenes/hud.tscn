@@ -41,6 +41,16 @@ theme_override_font_sizes/font_size = 32
 text = "Quit
 "
 
+[node name="Shake" type="Button" parent="."]
+offset_left = 303.0
+offset_top = 33.0
+offset_right = 380.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 32
+text = "Shake
+"
+
 [node name="SliderPin" type="HSlider" parent="."]
 offset_left = 168.0
 offset_top = 551.0
@@ -132,3 +142,4 @@ text = "Ball Scale"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Shake" to="." method="_on_shake_pressed"]

@@ -7,6 +7,7 @@ var delay: float
 var gravity: float
 var bscale: float
 signal start_game(step_value: float, num_balls: int, delay: float, gravity: float, bscale: float)
+signal shake
 
 func update_num_balls(n):
 	$Message.text = "Num balls = " + str(n)
@@ -22,3 +23,6 @@ func _on_start_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().reload_current_scene()
+
+func _on_shake_pressed():
+	shake.emit()

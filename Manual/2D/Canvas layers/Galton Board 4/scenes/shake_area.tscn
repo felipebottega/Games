@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://h0utmufmo3f5"]
+
+[ext_resource type="Script" uid="uid://dmoxqyjiq5k0y" path="res://scripts/shake_area.gd" id="1_qtv4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8t8r"]
+
+[node name="ShakeArea" type="Area2D"]
+script = ExtResource("1_qtv4k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a8t8r")
