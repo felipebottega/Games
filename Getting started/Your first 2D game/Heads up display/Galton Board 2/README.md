@@ -119,9 +119,9 @@ A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira rando
 
 ## Cena do HUD
 
-"HUD" significa "heads-up display", uma exibição informativa que aparece como uma sobreposição na parte superior da visualização do jogo. É comum usar o node `CanvasLayer` para elementos de UI ("user interface"), como botões, menus, barras de vida, painéis, sliders, HUD, entre outros. Vamos adicionar um cena chamada "HUD", do tipo `CanvasLayer`. Assim como no exemplo do tutorial, essa cena terá o propósito duplo de servir como heads-up display e menu inicial. 
+"HUD" significa "heads-up display", uma exibição informativa que aparece como uma sobreposição na parte superior da visualização do jogo. É comum usar o node `CanvasLayer` para elementos de UI ("user interface"), como botões, menus, barras de vida, painéis, sliders, HUD, entre outros. Vamos adicionar um cena chamada "HUD", do tipo `CanvasLayer`. 
 
-Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.
+Assim como no exemplo do tutorial, essa cena terá o propósito duplo de servir como heads-up display e menu inicial. Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.
 
 **Message:** É um node do tipo `Label` para mostrar quantas bolas já caíram. Podemos deixar a caixa de texto vazia, pois ela será preenchida dinamicamente por uma função do script associado ao HUD. Inicialmente a cena do HUD estará como mostrado abaixo. Claro que no momento essa função não faz nada, já que o HUD não faz parte da Main ainda. 
 
@@ -224,3 +224,7 @@ Por fim, adicionamos o node `AudioStreamPlayer` à cena Main e arrastamos a mús
 </p>
 
 Com isso o jogo está pronto!!!
+
+### Sobre o CanvasLayer
+
+O `CanvasLayer` não é um nó posicional comum como `Node2D` ou `Control`. Ele serve para desenhar seus filhos em uma camada de renderização separada, geralmente usada para HUDs, menus ou overlays que não se movem com o mundo do jogo. Ele não responde a position, rotation ou scale do pai (ele ignora transformações do pai). Ele cria uma camada própria de desenho que é renderizada acima dos elementos normais do jogo, por isso ignora transformações da câmera. Por isso não importa tanto o posicionamento e escala dos elementos no HUD, apenas os crie os deixe "largados" na cena. O ajuste acontece quando eles são instanciados na cena que vai aparecer no jogo. 
