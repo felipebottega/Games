@@ -49,7 +49,7 @@ Começamos criando a cena, que será um node `Area2D` com uma `CollisionShape2D`
 No HUD, adicionamos o botão, que deverá ser semelhante ao botão de Quit. Feito isso, colocaremos esse botão acima do botão de Quit. Também aproveitamos para instanciar a cena da área de colisão na Main e ajustamos o tamanho para cobrir a área desejada.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/f8113cb5-e79a-44d8-beee-750fbad4e841" width="750">
+    <img src="https://github.com/user-attachments/assets/b56c00fd-a7d1-4cf1-b4ff-fe574436cdea" width="800">
 </p>
 
 Queremos que a função `apply_shake` do script da área seja ativado por $0.5$ segundos quando o botão de shake for pressionado. Para isso, devemos enviar um sinal do botão e devemos também ter um `Timer`. Definimos a variável booleana `shaking` no script da Main, ele será *true* quando o shake tem que ocorrer e *false* caso contrário. Também na `_physics_process`, incluímos a linha `$ShakeArea.apply_shake(shaking)` para chamar a função. Deste modo, toda a lógica se restringe a alterar o estado da variável `shaking`.
