@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://51mj6asud66a"]
+
+[ext_resource type="Texture2D" uid="uid://ba6ejk36mwxnh" path="res://sprites/ball.png" id="1_01pxi"]
+[ext_resource type="Texture2D" uid="uid://tfh026xsmn32" path="res://sprites/wall.png" id="2_q1crh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7rdn4"]
+radius = 12.0416
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bjas"]
+size = Vector2(12, 637)
+
+[node name="Pillar" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_01pxi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(3.57628e-07, 319.25)
+scale = Vector2(0.01875, 0.512068)
+texture = ExtResource("2_q1crh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.53, 0.53)
+shape = SubResource("CircleShape2D_7rdn4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 319.5)
+scale = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_0bjas")

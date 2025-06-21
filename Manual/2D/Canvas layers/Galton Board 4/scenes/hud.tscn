@@ -1,0 +1,134 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0vjjalh6mm80"]
+
+[ext_resource type="Script" uid="uid://drlewby2ksmgw" path="res://scripts/hud.gd" id="1_ahhtf"]
+[ext_resource type="FontFile" uid="uid://c6a0a6x1lusbb" path="res://fonts/Xolonium-Regular.ttf" id="2_oo0fn"]
+
+[sub_resource type="Theme" id="Theme_6fi6k"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_ahhtf")
+
+[node name="Message" type="Label" parent="."]
+offset_left = -1.0
+offset_right = 234.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 20
+text = "Num balls = "
+
+[node name="Start" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.5
+offset_top = -51.0
+offset_right = 154.5
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.52467, 0.345682, 0.975592, 1)
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 80
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 32
+text = "Quit
+"
+
+[node name="SliderPin" type="HSlider" parent="."]
+offset_left = 168.0
+offset_top = 551.0
+offset_right = 331.0
+offset_bottom = 567.0
+scale = Vector2(2, 2)
+theme = SubResource("Theme_6fi6k")
+min_value = 10.0
+value = 40.0
+
+[node name="SliderNumBalls" type="HSlider" parent="."]
+offset_left = 168.0
+offset_top = 611.0
+offset_right = 331.0
+offset_bottom = 627.0
+scale = Vector2(2, 2)
+min_value = 100.0
+max_value = 2000.0
+step = 10.0
+value = 1000.0
+
+[node name="SliderDelay" type="HSlider" parent="."]
+offset_left = 168.0
+offset_top = 670.0
+offset_right = 331.0
+offset_bottom = 686.0
+scale = Vector2(2, 2)
+min_value = 0.2
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="SliderGravity" type="HSlider" parent="."]
+offset_left = 168.0
+offset_top = 728.0
+offset_right = 331.0
+offset_bottom = 744.0
+scale = Vector2(2, 2)
+min_value = 0.1
+max_value = 2.0
+step = 0.05
+value = 0.2
+
+[node name="SliderScale" type="HSlider" parent="."]
+offset_left = 168.0
+offset_top = 784.0
+offset_right = 331.0
+offset_bottom = 800.0
+scale = Vector2(2, 2)
+min_value = 0.01
+max_value = 0.03
+step = 0.001
+value = 0.018
+
+[node name="SliderInfoPin" type="Label" parent="."]
+offset_left = 65.0
+offset_top = 555.0
+offset_right = 153.0
+offset_bottom = 578.0
+text = "Pin Spacing"
+
+[node name="SliderInfoNumBalls" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 615.0
+offset_right = 153.0
+offset_bottom = 638.0
+text = "Number of Balls"
+
+[node name="SliderInfoDelay" type="Label" parent="."]
+offset_left = 109.0
+offset_top = 673.0
+offset_right = 159.0
+offset_bottom = 696.0
+text = "Delay"
+
+[node name="SliderInfoGravity" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 730.0
+offset_right = 164.0
+offset_bottom = 753.0
+text = "Gravity"
+
+[node name="SliderInfoScale" type="Label" parent="."]
+offset_left = 82.0
+offset_top = 788.0
+offset_right = 154.0
+offset_bottom = 811.0
+text = "Ball Scale"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
