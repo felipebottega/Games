@@ -30,4 +30,25 @@ Uma das várias funcionalidades do `Viewport` é a função `Viewport.canvas_tra
 
 ## CanvasLayers
 
+Tem um detalhe importante a se considerar com o método descrito acima: às vezes nós queremos deformar certos elementos da tela, mas não todos. A solução para isso é o node `CanvasLayer`. Este node adiciona uma camada de renderização 2D separada para todos os seus filhos e filhos dos filhos. Por default os filhos da `Viewport` são desenhados na camada "0", enquanto um `CanvasLayer` desenhará em qualquer outra camada. é padrão da engine Godto que camadas com um número maior sejam desenhadas acima daquelas com um número menor. Isso explica aquele comportamento observado no [HUD do Galton Board 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer).
+
+##  Implementando o shake para o tabuleiro de Galton
+
+Tudo já está perfeitamente alinhado para que o shake seja implementado.
+
+- Acabamos de ver como fazer transformações sobre a tela;
+- O HUD do tabuleiro de Galton foi contruído como um `CanvasLayer`, então o shake não vai afetá-lo;
+- Sabemos como aplicar forças sobre áreas por causa do nosso [AquaPlay](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201).
+
+Começamos criando a cena, que será um node `Area2D` com uma `CollisionShape2D` retangular, e o script com a lógica do shake. Não precisamos nos preocupar em ajustar o shape de colisão, pois faremos isso quando essa cena for instanciada na Main.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/5bf4d5ba-bf28-47ec-a1ec-b70898870f72" width="900">
+</p>
+
+No HUD, adicionamos o botão, que deverá ser semelhante ao botão de Quit. Feito isso, colocaremos esse botão acima do botão de Quit. Também aproveitamos para instanciar a cena da área de colisão na Main e ajustamos o tamanho para cobrir a área desejada.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/f8113cb5-e79a-44d8-beee-750fbad4e841" width="750">
+</p>
 
