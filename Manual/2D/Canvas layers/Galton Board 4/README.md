@@ -14,5 +14,14 @@ O node `CanvasItem` é a base para todos os nodes 2D, com o `Node2D` e `Control`
 
 O node `Viewport` é filho direto de `Node`, e tem o papel de criar e manipular diferentes telas. Apesar de `CanvasItem` e `Viewport` não terem nenhuma relação hereditária, os filhos de `CanvasItem` são filhos de `Viewport`, direta ou indiretamente. Essa é uma escolha do design da engine, e faz sentido pois deformar a tela também deformar todos os elementos visíveis nela, e boa parte vem do `Node2D` ou `Control`. Abaixo temos um resumo visual do parentesco entre os nodes mencionados. Os gráficos completos podem ser encontrados [aqui](https://docs.godotengine.org/en/stable/contributing/development/core_and_modules/inheritance_class_tree.html).
 
-![image](https://github.com/user-attachments/assets/6a59f7c2-2a8c-440a-b3af-9b7500836f34)
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6a59f7c2-2a8c-440a-b3af-9b7500836f34" width="800">
+</p>
 
+## Viewport.canvas_transform
+
+Uma das várias funcionalidades do `Viewport` é a função `Viewport.canvas_transform`. Esta função recebe três vetores em $\mathbb{R}^2$, sendo o primeiro associado ao eixo $x$, o segundo ao eixo $y$ e o terceiro à "origem" da tela. Por default o primeiro vetor é $e_1 = (1, 0)$, o segundo é $e_2 = (0, 1)$ e o terceiro é $v_o = (0, 0)$. Mudando $e_1$ e $e_2$ nós aplicamos deformações lineares na tela, enquanto que mudando $v_o$ nós transladamos a tela. Por exemplo definir $e_1 = (2, 0)$ altera a escala de toda a tela no eixo $x$, ampliando em 2 vezes. Definir $e_1 = (1, 1)$ aplica uma rotação na tela em $45^\circ$. A figura abaixo ilustra essas transformações.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/a40d441e-a761-4169-8721-fcd5eecfc4a8" width="600">
+</p>
