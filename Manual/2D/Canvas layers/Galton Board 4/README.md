@@ -26,7 +26,75 @@ Uma das várias funcionalidades do `Viewport` é a função `Viewport.canvas_tra
     <img src="https://github.com/user-attachments/assets/bdeaff7e-aa5a-40fd-902a-5bf4e8fccd58" width="600">
 </p>
 
-> PS: Tome cuidado com objetos que já foram transladados previamente a esta função. O espaço vazio entre o objeto transladado e a origem também entra na conta, daí o objeto pode mudar de posição de maneira inesperada.
+O video abaixo ilustra como funcionam estas transformações. Note que não foi apenas o quadrado que foi transformado, o background foi transformado junto. Apenas as labels ficaram inalteradas pois foram criadas a partir de um `CanvasLayer`, enquanto que os outros itens são `Sprites2D` dentro de um `Node2D`. Você pode alterar o `Node2D` da posição origem, mas é importante que os sprites estejam na coordenadas $(0, 0)$. Caso contrário as transformações em $e_1$ e $e_2$ também irão mover o sprite de posição (note como o canto superior esquerdo dele ficou fixo durante as alterações em $e_1$ e $e_2$). 
+
+https://github.com/user-attachments/assets/c818281f-2294-4f57-97d7-d0b30ecdbd52
+
+O código para gerar este vídeo não está no projeto, então vou deixá-lo aqui embaixo diretamente.
+
+```gdscript
+extends Node2D
+
+var e1
+var e2
+var vo
+var x1 = Vector2(1, 0)
+var x2 = Vector2(1, 2)
+var x3 = Vector2(2, 0)
+var y1 = Vector2(0, 1)
+var y2 = Vector2(2, 1)
+var y3 = Vector2(0, 2)
+var o1 = Vector2(0, 0)
+var o2 = Vector2(1000, 100)
+var o3 = Vector2(100, 1000)
+@export var quantidade = 1000
+var interps = []
+
+var i = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var x_interp1 = interpolate(x1, x2)
+	var x_interp2 = interpolate(x2, x3)
+	var x_interp3 = interpolate(x3, x1)
+	var y_interp1 = interpolate(y1, y2)
+	var y_interp2 = interpolate(y2, y3)
+	var y_interp3 = interpolate(y3, y1)
+	var o_interp1 = interpolate(o1, o2)
+	var o_interp2 = interpolate(o2, o3)
+	var o_interp3 = interpolate(o3, o1)
+	interps.append_array(x_interp1)
+	interps.append_array(x_interp2)
+	interps.append_array(x_interp3)
+	interps.append_array(y_interp1)
+	interps.append_array(y_interp2)
+	interps.append_array(y_interp3)
+	interps.append_array(o_interp1)
+	interps.append_array(o_interp2)
+	interps.append_array(o_interp3)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(delta: float) -> void:
+	if i < 3 * quantidade:
+		get_viewport().canvas_transform.x = interps[i]
+	if i >= 3 * quantidade and i < 6 * quantidade:
+		get_viewport().canvas_transform.y = interps[i]
+	if i >= 6 * quantidade and i < 9 * quantidade:
+		get_viewport().canvas_transform.origin = interps[i]
+		
+	var text = "e1 = " + str(get_viewport().canvas_transform.x) + "\n" + "e2 = " + str(get_viewport().canvas_transform.y) + "\n" + "vo = " + str(get_viewport().canvas_transform.origin) + "\n"
+	$CanvasLayer/Label.text = text
+	i += 1
+	
+func interpolate(a, b) -> Array:
+	var lista = []
+	
+	for i in range(quantidade):
+		var t = float(i) / (quantidade - 1)  # varia de 0.0 até 1.0
+		lista.append(a.lerp(b, t))
+		
+	return lista
+```
 
 ## CanvasLayers
 
