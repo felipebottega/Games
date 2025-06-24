@@ -80,3 +80,8 @@ E como que fica a situação se colocarmos o `Node2D` no *World* e rotacioná-lo
   <img src="https://github.com/user-attachments/assets/f39ca2d8-a0ee-496f-9d80-85178f792598" width="1200">
 </p>
 
+Por mais que a rotação do `Node2D` tenha acrescentado um pouco mais de rotação ao sprite em relação à tela, seu ângulo ainda é de $45^\circ$ pois este é o ângulo em relação ao pai. 
+
+Acredito que não seja necessário levar o `Node2D` para o *World* para checar que este comportamento irá se repetir lá. Inclusive, o experimento da translação poderia ter sido feito na cena do `Node2D`. Se ele for transladado da origem, a posição do sprite continuará a mesma (no `transform` e no Inspector), pois ela sempre é em relação ao node pai. Apenas fizemos essa mudança de cena para efeito didático, pois é o que vai acontecer mais vezes na prática.
+
+Vale ressaltar que quaisquer outros efeitos de mudar escala e distorção seguem a mesma lógica, isto é, os valores mostrados são os valores em relação ao node pai. Além disso, ressaltamos também que as transformações de converter coordenadas levam em conta tudo o que discutimos até aqui, não apenas translações.
