@@ -40,7 +40,7 @@ O que está acontecendo é que a posição mostrada no *Transform* sempre diz re
 No [tabuleiro de Galton 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204) vimos sobre o `Viewport.canvas_transform`. Na verdade esse é só um exemplo de aplicação do `Transform2D`, que é uma classe de transformações lineares de Godot. Em particular, estamos interessados na matriz mencionada no projeto. Essa matriz é acessível por qualquer node filho do `CanvasItem` através do atributo `transform`. Considere o script simples mostrado abaixo.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cb558283-2ed0-4f03-9dac-c2199f7ebe2f" width="500">
+  <img src="https://github.com/user-attachments/assets/cb558283-2ed0-4f03-9dac-c2199f7ebe2f" width="250">
 </p>
 
 Se você executá-lo na cena do `Node2D`, vai obter $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (0.0, 0.0)]$ e $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (485.0, 243.0)]$, que se refere aos vetores $e_1, e_2, v_o$ definidos no outro projeto. O node raíz está com os valores default e o sprite está com a translação mencionada acima. Ao executar a cena `World`, obtemos $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (44.0, 112.0)]$ e $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (485.0, 243.0)]$. O `Node2D` foi transladado da origem nessa cena. Note que o `transform` do `Sprite2D` não se alterou, pois ele se refere ao sistema de coordenadas local, isto é, em relação ao seu pai e não a cena onde ele está. 
