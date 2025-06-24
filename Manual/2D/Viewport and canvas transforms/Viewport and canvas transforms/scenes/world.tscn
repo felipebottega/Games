@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://clme0ahq5410a"]
+
+[ext_resource type="PackedScene" uid="uid://jtxr27spl37f" path="res://scenes/node_2d.tscn" id="1_nnsk1"]
+
+[node name="World" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_nnsk1")]
+position = Vector2(44, 112)
+
+[editable path="Node2D"]

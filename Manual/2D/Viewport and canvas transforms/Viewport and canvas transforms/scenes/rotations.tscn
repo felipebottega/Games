@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhrk2wd842lqk"]
+
+[ext_resource type="Script" uid="uid://b5upyktcpxwbt" path="res://scripts/rotations.gd" id="1_pwkd7"]
+[ext_resource type="Texture2D" uid="uid://dj7fn8pbka5ga" path="res://icon.svg" id="2_bkbin"]
+
+[node name="Rotations" type="Node2D"]
+rotation = 0.174887
+script = ExtResource("1_pwkd7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(485, 243)
+rotation = 0.785398
+texture = ExtResource("2_bkbin")
