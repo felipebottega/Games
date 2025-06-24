@@ -37,13 +37,26 @@ O que está acontecendo é que a posição mostrada no *Transform* sempre diz re
 
 ## Atributo transform
 
-No [tabuleiro de Galton 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204) vimos sobre o `Viewport.canvas_transform`. Na verdade esse é só um exemplo de aplicação do `Transform2D`, que é uma classe de transformações lineares de Godot. Em particular, estamos interessados na matriz mencionada no projeto. Essa matriz é acessível por qualquer node filho do `CanvasItem` através do atributo `transform`. Considere o script simples mostrado abaixo.
+No [tabuleiro de Galton 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204) vimos sobre o `Viewport.canvas_transform`. Na verdade esse é só um exemplo de aplicação do `Transform2D`, que é uma classe de transformações lineares de Godot. Em particular, estamos interessados na matriz mencionada no projeto. Essa matriz é acessível por qualquer node filho do `CanvasItem`, através do atributo `transform`. Considere o script simples mostrado abaixo.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/cb558283-2ed0-4f03-9dac-c2199f7ebe2f" width="250">
 </p>
 
-Se você executá-lo na cena do `Node2D`, vai obter $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (0.0, 0.0)]$ e $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (485.0, 243.0)]$, que se refere aos vetores $e_1, e_2, v_o$ definidos no outro projeto. O node raíz está com os valores default e o sprite está com a translação mencionada acima. Ao executar a cena `World`, obtemos $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (44.0, 112.0)]$ e $[X: (1.0, 0.0),\ Y: (0.0, 1.0),\ O: (485.0, 243.0)]$. O `Node2D` foi transladado da origem nessa cena. Note que o `transform` do `Sprite2D` não se alterou, pois ele se refere ao sistema de coordenadas local, isto é, em relação ao seu pai e não a cena onde ele está. 
+Se você executá-lo na cena do `Node2D`, vai obter $[X: (1, 0),\ Y: (0, 1),\ O: (0, 0)]$ e $[X: (1, 0.0),\ Y: (0, 1),\ O: (485, 243)]$, que se refere aos vetores $e_1, e_2, v_o$ definidos no outro projeto. O node raíz está com os valores default e o sprite está com a translação mencionada acima. Ao executar a cena `World`, obtemos $[X: (1, 0),\ Y: (0, 1),\ O: (44, 112)]$ e $[X: (1, 0),\ Y: (0, 1),\ O: (485, 243)]$. O `Node2D` foi transladado da origem nessa cena. Note que o `transform` do `Sprite2D` não se alterou, pois ele se refere ao sistema de coordenadas local, isto é, em relação ao seu pai e não a cena onde ele está. Isto nada mais é do que acessarmos as informações mostradas acimas por meio de código.
 
+O atributo `transform` é interpretado em Godot como a matriz $2 \times 3$ dada por $\left[ e_1, e_2, v_o \right]$. Assim como temos a posição local dos objetos (em relação ao pai), também temos a posição global deles, que são as coordenadas em relação à tela, o mundo real. O primeiro se chama *Item Coordinates* e o segundo se chama *Canvas Coordinates*. Por estarmos no contexto de álgebra linear, sabemos que existem matrizes de conversão de coordenadas. A matriz que converte as coordenadas locais em globais é dada por `get_global_transform()`, e a matriz que converte coordenadas globais em locais é dada por `get_global_transform().affine_inverse()`. Obviamente, temos que `get_global_transform().affine_inverse()` = `get_global_transform()`$^{-1}$.
 
+Agora vamos considerar o script abaixo. Ele vai nos mostrar todas as informações discutidas aqui. Ao executarmos o script na cena *World*, o vetor $v_o$ se descolou para $(44, 112)$, que é a translação que de fato fizemos com o `Node2D` nesta cena. Daí temos que <p align="center">`get_global_transform()` $\cdot [(1, 0),\ (0, 1),\ (485, 243)] = [(1, 0),\ (0, 1),\ (529, 355)]$.</p> 
+
+Note que $(529, 355) = (485+44, 243+12)$, que é justamente o que esperávamos, é apenas a translação do ponto de acordo com a translação feita no node pai. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b12fb6e1-54d0-4721-b3a4-19e1cbe4b4cf" width="350">
+  <img src="https://github.com/user-attachments/assets/2b7fa680-3a20-4408-817c-62a97d0f17ff" width="350">
+</p>
+
+> Atenção: Você não deve aplicar a transformação sobre o próprio `Node2D`. A matriz `transform` é uma "ponte" entre o node pai e seus filhos, ela serve apenas para converter as coordenadas dos filhos. Se você quisesse mudar as coordenadas de `Node2D`, teria que criar um script para o node pai da cena *World* e trabalhar ali, pois nesta cena `Node2D` é um filho. Por esta mesma razão, se você tiver uma cadeia de nodes aninhados e quiser converter as coordenadas do filho no fim da cadeia, tem que colocar o script no pai direto do filho, no penúltimo nível desta cadeia.
+
+## Rotações
 
