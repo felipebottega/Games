@@ -60,3 +60,17 @@ Note que $(529, 355) = (485+44, 243+12)$, que é justamente o que esperávamos, 
 
 ## Rotações
 
+Vamos repetir a cena do `Node2D`, mas dessa vez vamos também rotacionar o sprite por $45^\circ$. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/83f65359-a89d-41d2-b237-2e9fda3509f0" width="1100">
+</p>
+
+Ao executar o primeiro script, vemos que `($Sprite2D.transform` $= [X: (0.707107, 0.707107),\ Y: (-0.707107, 0.707107),\ O: (485, 243)]$. Não há nada demais na translação, já sabemos o que está acontecendo. Mas e os vetores $e_1, e_2$? Basta desenhá-los no plano e a situação fica bastante clara. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/388b190b-016f-4c3e-a2a5-8ac56a20a81e" width="300">
+</p>
+
+Vendo a imagem do editor já sabíamos que a rotação era no sentido horário, mas agora a posição dos vetores mata qualquer possível dúvida em relação a isso.
+
