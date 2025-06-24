@@ -74,4 +74,9 @@ Ao executar o primeiro script, vemos que `$Sprite2D.transform` $= [X: (0.707107,
 
 Vendo a imagem do editor já sabíamos que a rotação era no sentido horário, mas agora a posição dos vetores mata qualquer possível dúvida em relação a isso.
 
-E como que fica a situação se colocarmos o `Node2D` no *World* e rotacioná-lo?
+E como que fica a situação se colocarmos o `Node2D` no *World* e rotacioná-lo? A resposta para isso reside na própria cena do `Node2D`. Abaixo, a figura de cima mostra a situação em que apenas o sprite foi rotacionado (por $45^\circ$), e na figura seguinte o `Node2D` foi rotacionado por $10^\circ$. Podemos ver que essa rotação extra foi aplicada ao sprite, só que o pivô central da rotação é no centro do `Node2D`. Ou seja, funciona como uma composição de rotações.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f39ca2d8-a0ee-496f-9d80-85178f792598" width="1200">
+</p>
+
