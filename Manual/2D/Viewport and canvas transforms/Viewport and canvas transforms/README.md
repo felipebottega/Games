@@ -85,3 +85,16 @@ Por mais que a rotação do `Node2D` tenha acrescentado um pouco mais de rotaç�
 Acredito que não seja necessário levar o `Node2D` para o *World* para checar que este comportamento irá se repetir lá. Inclusive, o experimento da translação poderia ter sido feito na cena do `Node2D`. Se ele for transladado da origem, a posição do sprite continuará a mesma (no `transform` e no Inspector), pois ela sempre é em relação ao node pai. Apenas fizemos aquela mudança de cena para efeito didático, pois é o que vai acontecer mais vezes na prática.
 
 Vale ressaltar que quaisquer outros efeitos de mudar escala e distorção seguem a mesma lógica, isto é, os valores mostrados são os valores em relação ao node pai. Além disso, ressaltamos também que as transformações de converter coordenadas são aplicáveis em tudo o que discutimos até aqui, não apenas translações.
+
+## Movimento após rotação
+
+Todo node sempre possui duas "setinhas" ("gizmos" em inglês) indicando as direções $x$ e $y$ do node. Deste modo, cada node possui seu próprio referencial. Quando aplicamos uma rotação, este referencial é rotacionado junto.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fa71629b-9769-4b9e-a0bf-8317b5788263" width="460">
+  <img src="https://github.com/user-attachments/assets/cae8971c-4228-4093-b849-acc8ac62f266" width="500">
+</p>
+
+O atributo `position` sempre se refere à tela (o mundo real, posição global, etc). Note que $e_1$ e $e_2$ são os vetores que indicam essas setinhas da rotação. Então se quisermos andar com o node pelo sei eixo $x$, por exemplo, basta fazer algo como `position += speed * transform.x`, em que `speed` é um float que determina a velocidade. Se fosse um `CharacterBody2D ` você poderia usar `velocity = speed * transform.x` e depois `move_and_slide()`. Se fosse um `RigidBody2D` você não usaria o `position` pois isso "brigaria" com a física, mas é possível usar `linear_velocity = speed * transform.x`. 
+
+Há diversas outras aplicações. O principal é ter esse conceito em mente, pois ele é muito útil em jogos.
