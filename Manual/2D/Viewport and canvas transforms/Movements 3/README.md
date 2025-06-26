@@ -31,7 +31,7 @@ O parâmetro `delay` controla quando um sprite do rastro será adicionado, usand
 Este é o meu primeiro projeto que possui uma cena especificamente para o menu. À primeira vista, ela contém apenas um botão para iniciar o jogo, um botão para mostrar instruções e um background móvel. Aliás, note que o script está todo no background. O `_process` contém a lógica que faz o backrgound se mover em torno do botão de Start enquanto muda sua escala suavemente também. Ao pressionar no botão de instruções, vários itens se omitem e o sprite com as instruções se abre, além do background sofrer uma aplicação do `modulate` que o deixa mais escurecido. O botão de start executa a linha `get_tree().change_scene_to_file("res://scenes/rotations_composition.tscn")`, que serve para mudar fazer mudança de cena.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/40201d8e-2e33-4df4-921a-65cc47c8c753" width="850">
+  <img src="https://github.com/user-attachments/assets/40201d8e-2e33-4df4-921a-65cc47c8c753" width="900">
 </p>
 
 ## HUD de sliders
