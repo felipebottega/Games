@@ -1,0 +1,216 @@
+[gd_scene load_steps=16 format=3 uid="uid://djvwuw1gx1o4e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toqtt"]
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahhtf"]
+bg_color = Color(0.132574, 0.66943, 0.767074, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oo0fn"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fi6k"]
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ysmq"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo2fv"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_047uy"]
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pdws"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hd3ao"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i1j5"]
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mphia"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m4u7"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apjy4"]
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5n1hp"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eld54"]
+bg_color = Color(0.133333, 0.670588, 0.768627, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[node name="HUD" type="CanvasLayer"]
+metadata/_edit_horizontal_guides_ = [833.0, 797.0]
+
+[node name="HSliderDelay" type="HSlider" parent="."]
+offset_left = 12.0
+offset_top = 806.0
+offset_right = 173.0
+offset_bottom = 851.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_toqtt")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ahhtf")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_oo0fn")
+min_value = 0.001
+max_value = 4.0
+step = 0.001
+value = 0.1
+exp_edit = true
+
+[node name="HSliderScale" type="HSlider" parent="."]
+offset_left = 206.0
+offset_top = 806.0
+offset_right = 367.0
+offset_bottom = 851.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_6fi6k")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_5ysmq")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_uo2fv")
+min_value = 0.01
+max_value = 1.2
+step = 0.01
+value = 0.3
+
+[node name="HSliderSeconds" type="HSlider" parent="."]
+offset_left = 403.0
+offset_top = 806.0
+offset_right = 564.0
+offset_bottom = 851.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_047uy")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_5pdws")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_hd3ao")
+max_value = 10.0
+step = 0.1
+value = 3.0
+
+[node name="HSliderCoreSpeed" type="HSlider" parent="."]
+offset_left = 612.0
+offset_top = 806.0
+offset_right = 773.0
+offset_bottom = 851.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_0i1j5")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_mphia")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_0m4u7")
+min_value = 0.001
+max_value = 50.0
+step = 0.001
+value = 0.1
+exp_edit = true
+
+[node name="HSliderOrbitalSpeed" type="HSlider" parent="."]
+offset_left = 873.0
+offset_top = 806.0
+offset_right = 1034.0
+offset_bottom = 851.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_apjy4")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_5n1hp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_eld54")
+min_value = 0.001
+max_value = 50.0
+step = 0.001
+value = 0.5
+exp_edit = true
+
+[node name="LabelDelay" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = -88.0
+offset_right = 139.0
+offset_bottom = -46.0
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Delay"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="LabelScale" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 241.0
+offset_top = -88.0
+offset_right = 334.0
+offset_bottom = -46.0
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Scale"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="LabelSeconds" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 412.0
+offset_top = -88.0
+offset_right = 550.0
+offset_bottom = -46.0
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Seconds"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="LabelCoreSpeed" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 603.0
+offset_top = -88.0
+offset_right = 780.0
+offset_bottom = -46.0
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Core Speed"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="LabelOrbitalSpeed" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 840.0
+offset_top = -88.0
+offset_right = 1017.0
+offset_bottom = -46.0
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Orbital Speed"
+horizontal_alignment = 1
+uppercase = true

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://g0yympi5rd1l"]
+
+[ext_resource type="Texture2D" uid="uid://blo8sh737jj50" path="res://sprites/pngimg.com - snowflakes_PNG7578.png" id="1_0daxb"]
+[ext_resource type="Script" uid="uid://8tmlxa7m3n1f" path="res://scripts/sprite_2d.gd" id="2_h2p1k"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_0daxb")
+script = ExtResource("2_h2p1k")

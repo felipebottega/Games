@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://celt0dhemryan"]
+
+[ext_resource type="Texture2D" uid="uid://dj7fn8pbka5ga" path="res://icon.svg" id="1_uqc67"]
+[ext_resource type="Script" uid="uid://2vuoewmye0ng" path="res://scripts/movement_after_rotation.gd" id="2_qdh8w"]
+
+[node name="MovementAfterRotation" type="Sprite2D"]
+position = Vector2(324, 234)
+rotation = 0.709452
+texture = ExtResource("1_uqc67")
+script = ExtResource("2_qdh8w")
