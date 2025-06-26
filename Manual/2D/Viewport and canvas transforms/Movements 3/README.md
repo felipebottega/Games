@@ -18,9 +18,11 @@ Cada sprite contém o script simples mostrado abaixo. O atributo `modulate` serv
 
 ## Rastro de sprites
 
-Para os comportamentos orbitais, o que foi descrito anteriormente basta. Mas não paramos por aí, queremos mais beleza para o jogo! O script do node principal da cena contém a lógica para que cada sprite deixe um "rastro" por onde passa, como um cometa.
+Para os comportamentos orbitais, o que foi descrito anteriormente basta. Mas não paramos por aí, queremos mais beleza para o jogo! O script do node principal da cena contém a lógica para que cada sprite deixe um "rastro" por onde passa, como um cometa. Vou explicar alguns trechos do código. Primeiramente, o comando `@export var sprite_scene: PackedScene` cria um espaço no Inspector para arrastar cenas. No nosso caso, arrastamos a cena `sprite_2d.tscn`, que é o mesmo sprite de *A, B, C, D, E*. Esse comando é equivalente a `preload("res://scenes/sprite_2d.tscn")`, que já foi abordado no [tutorial Add Child](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#packedscene). 
+
+
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fe7ae4cf-0a25-49ed-a4a8-1c7db4912ed5" width="900">
+  <img src="https://github.com/user-attachments/assets/fe7ae4cf-0a25-49ed-a4a8-1c7db4912ed5" width="500">
 </p>
 
