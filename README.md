@@ -17,6 +17,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Getting started\Step by step\Using signals\Signals 1: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201">  Signals
  </a> </li>
+<li> Getting started\Step by step\Using signals\Signals 1: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201">  Restart
+ </a> </li>
 <li> Getting started\Step by step\Using signals\Signals 2: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202">  Timer
  </a> </li>
 <li> Getting started\Step by step\Using signals\Signals 2: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202">  Criando a conexão com o sinal via código
@@ -86,5 +88,27 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> Getting started\Your first 2D game\Heads up display\Galton Board 2: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202">  Cena do HUD
  </a> </li>
 <li> Getting started\Your first 2D game\Heads up display\Galton Board 2: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202">  Extras
+ </a> </li>
+<li> Getting started\Your first 2D game\Heads up display\Galton Board 2: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202"> # Sobre o CanvasLayer
+ </a> </li>
+<li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">  Viewport e Canvas items
+ </a> </li>
+<li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">  Viewport.canvas_transform
+ </a> </li>
+<li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">  CanvasLayers
+ </a> </li>
+<li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">   Implementando o shake para o tabuleiro de Galton
+ </a> </li>
+<li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Sistema de coordenadas locais
+ </a> </li>
+<li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Atributo transform
+ </a> </li>
+<li> Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms">  Sistema de coordenadas locais
+ </a> </li>
+<li> Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms">  Atributo transform
+ </a> </li>
+<li> Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms">  Rotações
+ </a> </li>
+<li> Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms">  Movimento após rotação
  </a> </li>
 </ul>
