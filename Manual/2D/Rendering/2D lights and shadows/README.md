@@ -38,3 +38,49 @@ Volta na cena da tocha e acrescente o node `PointLight2D` como filho. Apenas iss
   <img src="https://github.com/user-attachments/assets/da102034-47e0-4efc-8e0f-0fb1e269c0b1" width="200">
 </p>
 
+## Propriedades do PointLight2D
+
+Apesar da tocha de fato estar emitindo luz, provavelmente não está satisfatório. Agora chegamos na etapa de configurar os parâmetros deste node. A breve descrição abaixo deve ser suficiente para entender como funciona.
+
+- **Texture Scale:** O tamanho do alcance da luz.
+- **Color:** A cor da luz.
+- **Energy**: A instensidade da luz.
+- **Blend Mode:** Algoritmos da iluminação. O `Add`(default) é a iluminação o normal, os outros dois é testar e ver onde encaixa.
+
+Mesmo que você diminua o alcance de intensidade da luz, ainda vai achar que a iluminação da tocha é irrelevante para cena. Isso não é culpa da iluminação. O que acontece é que geralmente os sprites são claros. Então você precisa escurecê-los um pouco para que o efeito de luz tenha algum impacto. Isso é possível com o comando `modulate = Color(x, y, z)` no script da Main. O `modulate` é um atributo nativo de todos os filhos do `Node2D` e serve para alterar a cor do sprite. Vimos ele [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites). Como ele será aplicado no node pai, o escurecimento será para a cena inteira, que é o que queremos mesmo.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2528f479-3c10-40c9-9c84-54a2bb23a319" width="400">
+  <img src="https://github.com/user-attachments/assets/cafed418-852d-477e-aa8a-a5365737a032" width="700">
+</p>
+
+  ## Configurando sombras
+
+  O resultado obtido até aqui já é muito bom, é possível parar neste ponto e já ter um jogo com efeitos de luz e sombra bonitos. Mas dá para fazer melhor! Note que a luz da nossa cena é absoluta, ela ultrapassa qualquer objeto. Nehuma sombra ocorre por algum objeto estar no caminho da luz, a única sombra que tem é a da cena escurecida que está longe o suficiente da esfera de luz absoluta. 
+
+  Para obter sombras de fato, usaremos o node `LightOccluder2D`. Vá para a cena dos blocos, selecione o sprite e clique no botão *Sprite2D* acima da tela 2D. Feito isso, selecione a opção *Create LightOccluder2D Sibling*.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d09dc018-c0aa-4859-b1f0-e0b1f2a67a49" width="700">
+</p>
+
+A janela mostrada abaixo irá se abrir. O objetivo desta janela é criar um shape de sombra para o seu sprite. A região dentro deste shape estará na sombra e vai também bloquear a luz para tudo que vier depois. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3b5a3b67-6bf4-4543-aca1-37bace72d2be" width="450">
+</p>
+
+Não se preocupe se você não conseguir configurar perfeito agora, depois é possível editar manualmente o shape que nem se faz com um `Path2D`.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b00480cd-bbf6-4d02-b196-513e0926b9e5" width="600">
+</p>
+
+Depois de fazer isso, crie uma shape de sombra para o pilar também. O último (e mais importante) passo é você voltar ao `PointLight2D` e deixar o sombreamento habilitado, caso contrário nada disso terá efeito.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fa64e81b-1963-49d9-b151-24d04d93dd5d" width="200">
+</p>
+
+
+
