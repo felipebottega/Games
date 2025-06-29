@@ -17,8 +17,24 @@ Além dos sprites anteriores, também incluímos um sprite para o fundo, outro d
 
 Na cena principal, também colocamos barreiras laterais invisíveis para que o jogador não saia da tela. Faça essas paredes invisíveis como `StaticBody2D` sem textura e fricção igual a zero. Abaixo temos uma visão geral de como está o projeto até o momento.
 
+## PointLight2D
+
+Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação.
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d0d6efb5-0519-426f-b46b-2d060fdfbbdd" width="700">
 </p>
 
-Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco pois eles não cobrem o seu pé quando ele ele estpa em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade.
+Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco pois eles não cobrem o seu pé quando ele ele estpa em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore de nods, coloque-a depois dos blocos e antes do Trevor.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c905f6fa-3b7b-4ef5-a608-5dc69478f6f1" width="400">
+</p>
+
+Volta na cena da tocha e acrescente o node `PointLight2D` como filho. Apenas isso não basta para a luz surgir, você deve adicionar uma textura para ela, um sprite que irá ditar o formato da luz. Nesse caso nós utilizamos uma esfera em gradiente, que decai aos poucos. Você já pode voltar à cena Main e constatar que o efeito de luz já está funcionando.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2010d08f-2fcd-4e0d-943c-824d69405541" width="200">
+  <img src="https://github.com/user-attachments/assets/da102034-47e0-4efc-8e0f-0fb1e269c0b1" width="200">
+</p>
+
