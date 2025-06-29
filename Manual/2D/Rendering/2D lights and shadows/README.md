@@ -51,7 +51,7 @@ Mesmo que você diminua o alcance de intensidade da luz, ainda vai achar que a i
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2528f479-3c10-40c9-9c84-54a2bb23a319" width="400">
-  <img src="https://github.com/user-attachments/assets/cafed418-852d-477e-aa8a-a5365737a032" width="700">
+  <img src="https://github.com/user-attachments/assets/cafed418-852d-477e-aa8a-a5365737a032" width="600">
 </p>
 
   ## Configurando sombras
@@ -82,5 +82,15 @@ Depois de fazer isso, crie uma shape de sombra para o pilar também. O último (
   <img src="https://github.com/user-attachments/assets/fa64e81b-1963-49d9-b151-24d04d93dd5d" width="200">
 </p>
 
+Agora você tem uma cena com iluminação e sombras de verdade. Nada mal!
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/01aa1319-55ca-4064-8158-a6e7fc9b4734" width="600">
+</p>
 
+## Propriedades da sombra
+
+- **Color:** Cor das áreas sombreadas. O default é deixar preto.
+- **Filter:** Tipo de renderização das sombras. As renderizações deixam ela mais suave. Caso você escolha alguma, vai aparecer o slider *Filter Smooth*, onde você configura o nível de suavidade da sombra.
+
+Tanto para luz quanto para sombra há outras propriedades que não mencionei aqui. Esse é o "pacote básico" e com certeza vai servir para a maior parte das ocasiões. O restante você aprenderá com o tempo.
