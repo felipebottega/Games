@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqw51thqr3arx"]
+
+[ext_resource type="Texture2D" uid="uid://d1qekmtiogq7u" path="res://sprites/bikini.png" id="1_exy8k"]
+[ext_resource type="Texture2D" uid="uid://d31m18fnx2fd3" path="res://sprites/bikini_n.png" id="2_h3j10"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rwwcy"]
+diffuse_texture = ExtResource("1_exy8k")
+normal_texture = ExtResource("2_h3j10")
+
+[node name="Bikini" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(183, 332)
+scale = Vector2(0.72, 0.72)
+texture = SubResource("CanvasTexture_rwwcy")

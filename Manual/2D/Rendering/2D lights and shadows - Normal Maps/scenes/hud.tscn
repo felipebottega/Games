@@ -1,0 +1,134 @@
+[gd_scene load_steps=2 format=3 uid="uid://b80h6qst1an6c"]
+
+[ext_resource type="Texture2D" uid="uid://odwx8vqlh4wi" path="res://sprites/buttons_background.png" id="1_ahhtf"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="HUDBackground" type="Sprite2D" parent="."]
+position = Vector2(329.5, 323)
+scale = Vector2(2.25309, 2.42969)
+texture = ExtResource("1_ahhtf")
+
+[node name="ScaleLabel" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 9.0
+offset_right = 194.0
+offset_bottom = 32.0
+theme_override_font_sizes/font_size = 30
+text = "Scale"
+
+[node name="ScaleSlider" type="HSlider" parent="."]
+offset_left = 310.0
+offset_top = 26.0
+offset_right = 498.0
+offset_bottom = 42.0
+max_value = 10.0
+step = 0.01
+value = 7.0
+
+[node name="EnergyLabel" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 46.0
+offset_right = 253.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 30
+text = "Energy"
+
+[node name="EnergySlider" type="HSlider" parent="."]
+offset_left = 310.0
+offset_top = 63.0
+offset_right = 498.0
+offset_bottom = 79.0
+max_value = 5.0
+step = 0.01
+value = 3.0
+
+[node name="ShadowLabel" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 89.0
+offset_right = 268.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 30
+text = "Shadow"
+
+[node name="ShadowSlider" type="HSlider" parent="."]
+offset_left = 310.0
+offset_top = 106.0
+offset_right = 498.0
+offset_bottom = 122.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="HeightLabel" type="Label" parent="."]
+offset_left = 154.0
+offset_top = 130.0
+offset_right = 268.0
+offset_bottom = 172.0
+theme_override_font_sizes/font_size = 30
+text = "Height"
+
+[node name="HeightSlider" type="HSlider" parent="."]
+offset_left = 310.0
+offset_top = 147.0
+offset_right = 498.0
+offset_bottom = 163.0
+value = 50.0
+
+[node name="CubeButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 227.0
+offset_right = 254.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 35
+text = "Cube"
+alignment = 0
+
+[node name="WolverineButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 294.0
+offset_right = 338.0
+offset_bottom = 351.0
+theme_override_font_sizes/font_size = 35
+text = "Wolverine"
+alignment = 0
+
+[node name="BikiniButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 364.0
+offset_right = 267.0
+offset_bottom = 421.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "Bikini"
+alignment = 0
+
+[node name="NarutoButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 432.0
+offset_right = 267.0
+offset_bottom = 489.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "Naruto"
+alignment = 0
+
+[node name="StellarBladeButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 500.0
+offset_right = 288.0
+offset_bottom = 557.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "Stellar Blade"
+alignment = 0
+
+[node name="RPGMakerButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 569.0
+offset_right = 358.0
+offset_bottom = 626.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "RPG Maker"
+alignment = 0

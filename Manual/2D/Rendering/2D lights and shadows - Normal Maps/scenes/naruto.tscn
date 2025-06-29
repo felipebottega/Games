@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://k7rx60tmaubr"]
+
+[ext_resource type="Texture2D" uid="uid://yx272yyq2exv" path="res://sprites/naruto.png" id="1_xo1ar"]
+[ext_resource type="Texture2D" uid="uid://okvbftwsqla1" path="res://sprites/naruto_n.png" id="2_f1qe3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_r0j8o"]
+diffuse_texture = ExtResource("1_xo1ar")
+normal_texture = ExtResource("2_f1qe3")
+
+[node name="Naruto" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(418, 407)
+scale = Vector2(1.04347, 1.04347)
+texture = SubResource("CanvasTexture_r0j8o")

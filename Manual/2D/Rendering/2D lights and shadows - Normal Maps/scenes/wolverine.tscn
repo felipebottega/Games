@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnjw6v2scvci0"]
+
+[ext_resource type="Texture2D" uid="uid://vp1jlwx8i6um" path="res://sprites/wolverine.png" id="1_5lkqc"]
+[ext_resource type="Texture2D" uid="uid://b43lnslfdar8s" path="res://sprites/wolverine_n.png" id="2_pj6gf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_k50y1"]
+diffuse_texture = ExtResource("1_5lkqc")
+normal_texture = ExtResource("2_pj6gf")
+
+[node name="Wolverine" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_k50y1")

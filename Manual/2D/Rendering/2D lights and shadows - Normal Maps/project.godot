@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="2D lights and shadows - Normal Mapping"
+config/name="2D lights and shadows - Normal Maps"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
