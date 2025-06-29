@@ -70,7 +70,13 @@ A janela mostrada abaixo irá se abrir. O objetivo desta janela é criar um shap
   <img src="https://github.com/user-attachments/assets/3b5a3b67-6bf4-4543-aca1-37bace72d2be" width="450">
 </p>
 
-Não se preocupe se você não conseguir configurar perfeito agora, depois é possível editar manualmente o shape que nem se faz com um `Path2D`.
+Segue abaixo uma breve descrição dos parâmetros:
+
+- **Simplification:** Quantidade de pontos para identificar o shape da imagem. Quanto maior é este parâmetro, mais ele vai simplificar o shape.
+- **Shrink:** Encolhe o shape em alguns pixels em relação a imagem. É útil quando você não quer cobrir literalmente tudo que está a vista.
+- **Grow:** Faz o contrário do *shrink*, aumenta o shape em alguns pixels. É útil quando o sprite possui buracos e você não quer que eles sejam levados em conta, por exemplo.
+
+Não se preocupe se você não conseguir configurar perfeito agora, depois é possível editar manualmente o shape que nem se faz com um `Path2D`. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b00480cd-bbf6-4d02-b196-513e0926b9e5" width="600">
