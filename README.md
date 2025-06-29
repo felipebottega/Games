@@ -99,13 +99,21 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">   Implementando o shake para o tabuleiro de Galton
  </a> </li>
-<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">  PointLight2D
+<li> Manual\2D\Rendering\2D lights and shadows - 2D Meshes: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%202D%20Meshes">  Adicionando mesh ao sprite
  </a> </li>
-<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">  Propriedades do PointLight2D
+<li> Manual\2D\Rendering\2D lights and shadows - Introduction: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction">  PointLight2D
  </a> </li>
-<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">    Configurando sombras
+<li> Manual\2D\Rendering\2D lights and shadows - Introduction: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction">  Propriedades do PointLight2D
  </a> </li>
-<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">  Propriedades da sombra
+<li> Manual\2D\Rendering\2D lights and shadows - Introduction: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction">    Configurando sombras
+ </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows - Introduction: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction">  Propriedades da sombra
+ </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows - Normal Maps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps">  Normal map na prática
+ </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows - Normal Maps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps">  Luz seguindo o mouse
+ </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows - Normal Maps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps">  Criando normal maps
  </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Sprites de sprites
  </a> </li>
