@@ -8,3 +8,14 @@ As meshes (malhas) basicamente são um conjunto de triângulos que preenchem o s
 
 ## Adicionando mesh ao sprite
 
+Crie um `Sprite2D` e vá na opção escrita *Sprite2D* acima da tela (a mesma usada para acesar o shape de sombra). Selecione a opção *Convert to MeshInstance 2D*.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4b1bacba-21ba-4da8-b0dd-e755e4289080" width="800">
+</p>
+
+A janela mostrada abaixo irá se abrir. O objetivo desta janela é criar um shape triangularizado de mesh para o seu sprite. A funcionalidade dos parâmetros é a mesma vista na parte de [configuração de sombras](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction#configurando-sombras) quando estudamos iluminação em Godot.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/610e24b6-5c72-4961-8c49-36ccd0098b51" width="700">
+</p>
