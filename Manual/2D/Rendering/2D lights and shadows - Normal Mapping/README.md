@@ -47,4 +47,13 @@ Depois disso, acrescentamos os sliders (e labels para identificar) dos parâmetr
    <img src="https://github.com/user-attachments/assets/c18de11e-ef94-4949-a571-69e7c07166fa" width="1000">
 </p>
 
+## Criando normal maps
+
+Como normal maps são figuras PNG, você pode simplesmente desenhar um na mão, editando os pixels. Porém, vamos pegar o caminho mais fácil e usar um programa feito para gerar normal maps. Na própria documentação da Godot eles indicam uma feramenta chamada [Laigter](https://docs.godotengine.org/en/stable/tutorials/2d/2d_lights_and_shadows.html#normal-and-specular-maps). Baixe e instale o programa no seu computador.
+
+Abaixo segue um resumo dos itens básicos do programa para gerar seus normal maps.
+
+
+
+![image](https://github.com/user-attachments/assets/4c83e9f1-d0c5-4c84-b9cb-84c827566565)
 
