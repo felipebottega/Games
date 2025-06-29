@@ -63,7 +63,7 @@ Adicione a variável global `is_hurt` como falso, no início do script. Depois e
     <img src="https://github.com/user-attachments/assets/76958261-180d-46fa-a474-e7736a1524a4" width="350">
 </p>
 
-É necessário selecionar a opção `Contact Monitor` para permitir que um `RigiBody2D` emita sinais em caso de colisão. Por default eles não emitem. Mesmo que você configure todos os sinais bonitinho, sem habilitar essa opção o sinal não é emitido e nada acontece.
+É necessário selecionar a opção `Contact Monitor` para permitir que um `RigiBody2D` emita sinais em caso de colisão. Por default eles não emitem. Mesmo que você configure todos os sinais bonitinho, sem habilitar essa opção o sinal não é emitido e nada acontece. Também é necessário colocar o parâmetro `Max Contact Reported` para um número positivo.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/f84ddc0c-c0ec-44cd-8cc3-7a3db0539fc6" width="250">
