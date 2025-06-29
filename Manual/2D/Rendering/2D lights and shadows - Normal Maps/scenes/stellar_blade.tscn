@@ -10,5 +10,6 @@ normal_texture = ExtResource("2_b8fnr")
 [node name="StellarBlade" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(232, 396)
+position = Vector2(221, 318)
+scale = Vector2(1.30836, 1.30836)
 texture = SubResource("CanvasTexture_trwvc")
