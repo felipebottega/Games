@@ -62,3 +62,4 @@ Abaixo segue um resumo dos itens básicos do programa para gerar seus normal map
 
 ![image](https://github.com/user-attachments/assets/4c83e9f1-d0c5-4c84-b9cb-84c827566565)
 
+Ao exportar o arquivo, o programa gera um arquivo com o nome {meu_arquivo}_n.png, em que *meu_arquivo* é o nome do seu arquivo original. Feito isso, jogue ambos os arquivos na pasta do seu projeto em Godot e siga os passos descritos anteriormente.
