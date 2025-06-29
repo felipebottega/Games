@@ -33,3 +33,18 @@ A cena Main será um `Node2D` contendo um background preto e a cena do Wolverine
 
 https://github.com/user-attachments/assets/c5255852-55b5-4019-b785-546b5cc12fb5
 
+## Luz seguindo o mouse
+
+Poderíamos parar por aqui e isso já seria o suficiente para muitos jogos com luz estática. Para fins didáticos, faremos um projeto em que a luz se move junto com o mouse, assim como é no editor. Além disso, colocaremos alguns sliders para alterar certos parâmetros de iluminação. Basicamente estamos trazendo algumas ferramentas do editor para a cena. Crie um script para a Main e coloque o código abaixo nele.
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/af6cdd02-d96a-4a74-9fd1-b05825151d72" width="400">
+</p>
+
+Depois disso, acrescentamos os sliders (e labels para identificar) dos parâmetros que estamos interesasdos. Não esqueça de fazer o HUD ser *Editable Child* na Main, pois só assim você consegue mover seus objetos. Isso acontece porque ele reside numa outra camada, mas não vamos explorar este tópico aqui.
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/c18de11e-ef94-4949-a571-69e7c07166fa" width="1000">
+</p>
+
+
