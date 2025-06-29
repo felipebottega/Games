@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://blmuprpbv7n6w"]
+
+[ext_resource type="Texture2D" uid="uid://86b27y0da73p" path="res://sprites/torch1.png" id="1_my26j"]
+[ext_resource type="Texture2D" uid="uid://d1tvnq6c0lo4o" path="res://sprites/torch2.png" id="2_o2tjn"]
+[ext_resource type="Texture2D" uid="uid://pt1x2357qmvh" path="res://sprites/2d_lights_and_shadows_neutral_point_light.webp" id="3_o2tjn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3k50"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_my26j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o2tjn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Torch" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_r3k50")
+autoplay = "default"
+frame_progress = 0.104473
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 5.0
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 0.5
+texture = ExtResource("3_o2tjn")
+texture_scale = 3.0

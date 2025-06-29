@@ -99,6 +99,14 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">   Implementando o shake para o tabuleiro de Galton
  </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">  PointLight2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">  Propriedades do PointLight2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">    Configurando sombras
+ </a> </li>
+<li> Manual\2D\Rendering\2D lights and shadows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows">  Propriedades da sombra
+ </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Sprites de sprites
  </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Rastro de sprites

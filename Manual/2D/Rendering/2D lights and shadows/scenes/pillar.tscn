@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://be8uiste223ln"]
+
+[ext_resource type="Texture2D" uid="uid://bsuqeo74vj1bf" path="res://sprites/pillar.png" id="1_fv82l"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fv82l"]
+polygon = PackedVector2Array(16, -6, 13, -13, -1, -26, -8, -26, -14, -26, -16, -25, -16, -4.9, 14, -5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_01pxi"]
+polygon = PackedVector2Array(16, 2, 16, -11, -16, -11, -16, -2.8, -15, -0.299999, -15, 4.3, 14.3, 2)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q1crh"]
+polygon = PackedVector2Array(16, 28, 16, -3, -16, -3, -16, 26.7, 0.4, 28)
+
+[node name="Pillar" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fv82l")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_fv82l")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_01pxi")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_q1crh")
