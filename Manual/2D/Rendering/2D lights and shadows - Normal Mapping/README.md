@@ -16,4 +16,20 @@ Abaixo, temos o cubo e o seu normal map associado. Geralmente as cores de um nor
 
 Vamos mostrar um de projeto contendo apenas uma figura com normal map, mas o projeto de Godot nesta página contém diversos outros exemplos para você checar depois. Você pode baixar o projeto ou pode interagir com ele diretamente [por aqui]().
 
+Começamos criando uma cena com um `Node2D` contendo um `Sprite2D` (poderia ser apenas o `Sprite2D` mas eu não fiz isso só para evitar o warning do editor). Chame o node raíz de *Wolverine*, pois será uma imagem dele. Vá em *Inspector → Sprite2D → Texture → Setinha da direita (ou no empty) → New CanvasTexture*. Depois clique em *Canvas Texture* que apareceu na aba do *Texture*. 
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/5911c959-a305-49c0-93ea-677ee18a9212" width="220">
+   <img src="https://github.com/user-attachments/assets/b3bed145-6252-4128-9ce8-09054affcf03" width="270">
+</p>
+
+A aba *Diffuse* é para a figura do sprite normal, e a aba *NormalMap* é para a figura do normal map do sprite. A figura do normal map (até onde eu sei) é um PNG. Arraste as suas duas figuras para suas respectivas abas.
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/a4d0530a-6b8d-4ab9-b638-bd0146bc5200" width="270">
+</p>
+
+A cena Main será um `Node2D` contendo um background preto e a cena do Wolverine. Apenas isso não basta para vermos o efeito do normal map, lembre que o propósito dele é reagir à luz. Então vamos adicionar luz ao nosso projeto (não se esqueça de adicionar textura para a luz). Note que é possível já interagir com a luz e o sprite no próprio editor, sem precisar carregar a cena.
+
+https://github.com/user-attachments/assets/c5255852-55b5-4019-b785-546b5cc12fb5
 
