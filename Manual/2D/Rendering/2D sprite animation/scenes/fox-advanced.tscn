@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtu3qju03l5v2"]
+[gd_scene load_steps=6 format=3 uid="uid://cvv2fuvf472wf"]
 
-[ext_resource type="Texture2D" uid="uid://otpbo3qw2to3" path="res://sprites/2d_animation_player-run.webp" id="1_q320a"]
-[ext_resource type="Script" uid="uid://dxr0j234li1fd" path="res://scripts/fox.gd" id="1_ufccv"]
+[ext_resource type="Script" uid="uid://dxr0j234li1fd" path="res://scripts/fox.gd" id="1_w2dxd"]
+[ext_resource type="Texture2D" uid="uid://otpbo3qw2to3" path="res://sprites/2d_animation_player-run.webp" id="2_3j5e2"]
 
 [sub_resource type="Animation" id="Animation_q320a"]
 length = 0.001
-step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -43,11 +42,11 @@ _data = {
 &"walk": SubResource("Animation_ufccv")
 }
 
-[node name="fox" type="CharacterBody2D"]
-script = ExtResource("1_ufccv")
+[node name="fox-advanced" type="CharacterBody2D"]
+script = ExtResource("1_w2dxd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_q320a")
+texture = ExtResource("2_3j5e2")
 hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
