@@ -1,1 +1,1 @@
-Got to [https://github.com/felipebottega/Games/tree/gh-pages](https://github.com/felipebottega/Games/tree/gh-pages).
+Go to [https://github.com/felipebottega/Games/tree/gh-pages](https://github.com/felipebottega/Games/tree/gh-pages).
