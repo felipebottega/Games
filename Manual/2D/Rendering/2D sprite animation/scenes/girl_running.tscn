@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://5vc6clh2f8g3"]
+
+[ext_resource type="Texture2D" uid="uid://ponaafemwbdq" path="res://sprites/run-1.png" id="1_22lao"]
+[ext_resource type="Script" uid="uid://b8f6a20sftinc" path="res://scripts/girl_running.gd" id="1_t1xs0"]
+[ext_resource type="Texture2D" uid="uid://cvyeqi4an6nlp" path="res://sprites/run-2.png" id="2_t1xs0"]
+[ext_resource type="Texture2D" uid="uid://cnt4a3mpvwbsr" path="res://sprites/run-3.png" id="3_7uyho"]
+[ext_resource type="Texture2D" uid="uid://7xi4cw5lumky" path="res://sprites/run-4.png" id="4_ocb3e"]
+[ext_resource type="Texture2D" uid="uid://cu4i3x34w0jc7" path="res://sprites/run-5.png" id="5_0tumu"]
+[ext_resource type="Texture2D" uid="uid://css2uw8ghfswr" path="res://sprites/run-6.png" id="6_xybtl"]
+[ext_resource type="Texture2D" uid="uid://2tpn8bxp4k4t" path="res://sprites/run-7.png" id="7_p6xfm"]
+[ext_resource type="Texture2D" uid="uid://cij3smv63nhph" path="res://sprites/run-8.png" id="8_tii4q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nckey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_22lao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t1xs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7uyho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ocb3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0tumu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xybtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p6xfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tii4q")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="girl_running" type="CharacterBody2D"]
+script = ExtResource("1_t1xs0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(371.5, 234.5)
+sprite_frames = SubResource("SpriteFrames_nckey")
+animation = &"run"
+frame_progress = 0.287651
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(371.5, 234.5)
