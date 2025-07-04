@@ -94,5 +94,3 @@ Por fim, adicione um script ao node raíz. Ele é quase idêntico ao script do `
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2ad33ae4-6030-4dca-97eb-3fda706f5380" width="300">
 </p>
-
-## Customizações do AnimationPlayer
