@@ -10,7 +10,7 @@ Para cirar um node de partículas, utilizamos o `GPUParticles2D`. Começamos a n
 
 ## Propriedades do GPUParticles2D
 
-Essa lista não é completa, mas cobre as principais propriedades de partíclas.
+Essa lista não é completa, mas cobre as principais propriedades de partíclas. 
 
 ### Propriedades básicas do GPUParticles2D
 
@@ -77,6 +77,14 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Procce
 - **Turbulence/Influence:** O nível em que as partículas afetam umas as outras. O valor 0 significa que elas se movem de maneira totalmente independente, enquanto que o valor 1 faz elas basicamente ficarem à espera do que as outras vão fazer.
 - **Collision/Mode:** Define como a partícula se comportará ao colidir com algum outro objeto.
 - **Collision/Friction:** Nível de fricção da partícula ao colidir com algum outro objeto.
-- **Collision/Friction:** Nível do quanto a partícula vai quicar ao colidir com algum outro objeto.
+- **Collision/Bounce:** Nível do quanto a partícula vai quicar ao colidir com algum outro objeto.
 
-  > PS: 
+> PS: A colisão só funciona em objetos com o `LightOccluder2D`. Vimos sobre isso [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction#configurando-sombras).
+
+## Texturas em GPUParticles2D
+
+Como dito anteriormente, a textura é um arquivo de imagem que é utilizado para ser a aparência das partículas. Para adicionar uma textura, basta arrastar um sprite qualquer para a aba de textura. É interessante que a figura tenha transparência para simular efeito de luz ou fumaça, entre outros. Lembre que o mesmo era necessário para a textura de luz. Se a figura estiver muito grande, você pode controlar o tamanho em *Proccess Material/Display/Scale*.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/687cf02b-1fde-4f03-8de9-dbc85061ad0f" width="350">
+</p>
