@@ -147,4 +147,18 @@ Para deixa a cena melhor ainda, vamos colocar um chão para as partículas colid
   <img src="https://github.com/user-attachments/assets/20dbd161-e813-48f8-a182-489d5e2d59d9" width="900">
 </p>
 
+## Fumaça
+
+Para a fumaça, vamos colocar 20 partículas por ciclo, 30 segundos de tempo de vida, vamos diminuir a sua escala e deixa a gravidade negativa. O resultado ainda não é satisfatório pois tudo está muito linear, mas é assim que começa.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b58dc490-0173-4751-a885-e245d1511536" width="950">
+</p>
+
+Para obter aleatoriedade na emissão de cada fumaça. coloque o *Randomness* no máximo. Para as fumaças não ficarem subindo em linha reta, vamos adicionar alguma turbulência ao sistema. No fim das contas, usamos as configurações abaixo.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8457eadc-f86a-4da5-a137-5c5da5b671b5" width="950">
+</p>
+
 
