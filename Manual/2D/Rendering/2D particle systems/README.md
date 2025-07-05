@@ -91,10 +91,21 @@ Como dito anteriormente, a textura é um arquivo de imagem que é utilizado para
 
 ## Animação de flipbook em GPUParticles2D
 
-Um *flipbook* faz o papel de uma sprite sheet para partículas. Basicamente é um conjunto de imagens que serão utilizadas como textura. No caso de partículas não teremos uma animação de sprites, apenas teremos uma variedade maior de texturas sendo geradas. Iremos utilizar o flipbook abaixo, que é disponibilizado no próprio [tutorial de partículas da Godot](https://docs.godotengine.org/en/stable/tutorials/2d/particle_systems_2d.html).
+Um *flipbook* faz o papel de uma sprite sheet para partículas. Basicamente é um conjunto de imagens que serão utilizadas como textura. No caso de partículas não teremos uma única animação de sprites, cada linha do flipbook corresponde a uma animação que pode ser escolhida aleatoriamente. Iremos utilizar o flipbook abaixo, que é disponibilizado no próprio [tutorial de partículas da Godot](https://docs.godotengine.org/en/stable/tutorials/2d/particle_systems_2d.html).
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/38963ab0-4420-49d2-b78b-7f88f017085e" width="400">
+  <img src="https://github.com/user-attachments/assets/38963ab0-4420-49d2-b78b-7f88f017085e" width="230">
 </p>
 
-Para criar uma animação com flipbook, vá em *CanvasItem → Material* e na aba *Material* selecione *New CanvasItemMaterial*. 
+Para criar uma animação com flipbook, vá em *CanvasItem → Material* e na aba *Material* selecione *New CanvasItemMaterial*. Uma nova aba irá se abrir, clique na opção *Particles Animation* e configure as opções *H Frames* (quantidade horizontal de frames no flipbook) e *V Frames* (quantidade vertical de frames no flipbook) de acordo.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/121ddf64-46e5-4c1a-a4f0-b1935b230d1e" width="350">
+</p>
+
+Depois que você fizer os passos acima, a aba *Animation* estará disponível em *Display*. Você deve colocar o máximo do parâmetro *Speed* para um valor positivo, só aí as animações começam a surgir na tela. Este parâmetro controla a velocidade da animação, mas por default a velocidade inicial é nula.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a2476727-fd9f-474c-8070-039d86bc044f" width="350">
+</p>
+
