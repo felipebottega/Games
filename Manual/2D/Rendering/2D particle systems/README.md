@@ -24,7 +24,7 @@ Essa lista não é completa, mas cobre as principais propriedades de partíclas.
 
 ### Propriedades avançadas do GPUParticles2D
 
-O que chamamos de "propriedades avançadas" aqui são as propriedades do *Proccess Material*. Para acessá-las, clique no *New ParticleProcessMaterial* que você criou alguns passos atrás. Uma aba com mais propriedades irá se abrir.
+O que chamamos de "propriedades avançadas" aqui são as propriedades do *Process Material*. Para acessá-las, clique no *New ParticleProcessMaterial* que você criou alguns passos atrás. Uma aba com mais propriedades irá se abrir.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/404897c4-2899-4dc2-92fd-89ac1dd9d691" width="300">
@@ -83,7 +83,7 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Procce
 
 ## Texturas em GPUParticles2D
 
-Como dito anteriormente, a textura é um arquivo de imagem que é utilizado para ser a aparência das partículas. Para adicionar uma textura, basta arrastar um sprite qualquer para a aba de textura. É interessante que a figura tenha transparência para simular efeito de luz ou fumaça, entre outros. Lembre que o mesmo era necessário para a textura de luz. Se a figura estiver muito grande, você pode controlar o tamanho em *Proccess Material/Display/Scale*.
+Como dito anteriormente, a textura é um arquivo de imagem que é utilizado para ser a aparência das partículas. Para adicionar uma textura, basta arrastar um sprite qualquer para a aba de textura. É interessante que a figura tenha transparência para simular efeito de luz ou fumaça, entre outros. Lembre que o mesmo era necessário para a textura de luz. Se a figura estiver muito grande, você pode controlar o tamanho em *Process Material/Display/Scale*.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/687cf02b-1fde-4f03-8de9-dbc85061ad0f" width="350">
@@ -108,4 +108,43 @@ Depois que você fizer os passos acima, a aba *Animation* estará disponível em
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a2476727-fd9f-474c-8070-039d86bc044f" width="350">
 </p>
+
+## Exemplos de GPUParticles2D
+
+Encerraremos este tutorial mostrando alguns exemplos de aplicação de partículas.
+
+### Fogos de artifício
+
+Começamos criando um `Node2D` com o filho `GPUParticles2D` e adicionamos o flipbook ` textura do node. O passo mandatório após isso é criar o *New ParticleProcessMaterial* na aba *Process Material*. Isso foi ensinado no início deste tutorial.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0d5a41ec-f60b-4b82-9f42-d47224e97a6b" width="1100">
+</p>
+
+De início a animação vai estar bem bugada, pois ele não está tratando a textura como um flipbook ainda. Vamos ajustar isso. Vá em *CanvasItem → Material* e na aba *Material* selecione *New CanvasItemMaterial* e continue com os passos ensinados para flipbook. Agora vá para *Process Material → Spawn → Position* e configure para as partículas aparecerem dentro de um retângulo com as dimensões que você preferir. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2d7c9ef6-2800-4f17-afd0-0cce323234e6" width="300">
+</p>
+
+Por fim, vá em *Process Material → Display → Animation* e coloque a *Speed* máxima para um valor positivo. Com isso a cena está pronta!
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/282ec973-2af0-4a04-a48a-0b7062b4441e" width="800">
+</p>
+
+## Fagulhas
+
+Para este exemplo, deixaremos a textura default de quadrados. Vamos apenas alterar as cores indo em *Process Material → Display → Color Curves → Color* (a esta altura já assumimos que o processo de criar um *New CanvasItemMaterial* é evidente). Depois disso aumente o número de partículas para 200. Por fim, vá para *Process Material → Spawn → Velocity* e coloque *Spread* = $15$, *Direction* = $(0, 1)$ e *Initial Velocity* entre $80$ e $100$. Teremos a emissão de fagulhas abaixo, que simula alguma feramenta em uso.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7e4ab854-caad-4053-8ef3-c72090492e3b" width="700">
+</p>
+
+Para deixa a cena melhor ainda, vamos colocar um chão para as partículas colidirem. Esse chão será um `Sprite2D` com um `LightOccluder2D` (lembrando que só assim é possível termos colisão com partículas). Feito isso, coloque o parâmetro *Collision* como *Rigid* e deixe o *Bounce* positivo. A partir daí é bom ir testando combinações de parâmetros para obter o efeito desejado. Por exemplo aumentar o *Bounce* para as faíscas quicarem um pouco no chão antes de desaparecerem, aumentar o *Lifetime* para elas terem mais tempo de vida, alterar o *Lifetime Randomness* para elas terem tempos de vida distintos (e assim a animação ficar mais realista), entre outros.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/20dbd161-e813-48f8-a182-489d5e2d59d9" width="900">
+</p>
+
 
