@@ -79,7 +79,7 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Proces
 - **Collision/Friction:** Nível de fricção da partícula ao colidir com algum outro objeto.
 - **Collision/Bounce:** Nível do quanto a partícula vai quicar ao colidir com algum outro objeto.
 
-> PS: A colisão só funciona em objetos com o `LightOccluder2D`. Vimos sobre `LightOccluder2D` [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction#configurando-sombras).
+  > PS: A colisão só funciona em objetos com o `LightOccluder2D`. Vimos sobre `LightOccluder2D` [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction#configurando-sombras).
 
 ## Texturas em GPUParticles2D
 
