@@ -33,7 +33,13 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Procce
 - **Lifetime Randomness:** É um parâmetro que varia entre 0 e 1. Controla o tempo de vida de cada partícula. O default de 0 significa que ela vive durante todo o seu tempo de vida, enquanto que o valor de 1 significa que ele pode desaparecer assim que é emitida. Valores mais altas limitam o tempo de vida de modo aleatório.
 - **Emission Shape Offset:** Muda a posição da origem da emissão de partículas, em relação as coordenadas locais. Note na figura abaixo que a origem do node está no $(0, 0)$ mas a origem da emissão foi shiftada para $(-10, -20)$ em relação ao node.
 
-  <p align="center">
+<p align="center">
   <img src="https://github.com/user-attachments/assets/eb6b6d22-85e7-4392-b393-dc5fb056c7fb" width="700">
+</p>
+
+- **Emission Shape Scale/Emission Shape:** Primeiro você deve escolher e configurar uma opção para o *Emission Shape* e depois definir o ajuste de escala com o *Emission Shape Scale*. O *Emission Shape* define os pontos de ondeas partículas serão emitidas. Por default elas são emitidas a partir de um único ponto, mas podem ser emitidas a partir de pontos dentro de uma esfera, retângulo, anel, entre outros. Vale a pela explorar as possibilidades.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b2c71453-7726-499a-9ee8-cde425502f02" width="700">
 </p>
 
