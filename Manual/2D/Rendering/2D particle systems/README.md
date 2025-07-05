@@ -49,4 +49,23 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Procce
   <img src="https://github.com/user-attachments/assets/bd4fcea9-8801-4deb-9955-a2a338d961fc" width="700">
 </p>
 
+- **Gravity:** Essa propriedade fica em *Accelerations*. A gravidade pode ser manipulada não apenas verticalmente, mas horizontalmente também.
+- **Scale:** Controla o tamanho das partículas. Se o mínimo e o máximo forem diferentes, a variação de escala é aleatória. Você pode selecionar a opção *CurveTexture* no parâmetro *Scale Curve*. Com isso você pode determinar como a escala varia com o tempo para cada partícula. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/36a6bfe8-4ad6-41ae-aa97-92424614804d" width="750">
+</p>
+
+- **Color:** Altera a cor das partículas.
+- **Color Ramp:** Define uma variação de uma cor para outra durante o tempo de vida da partícula. Vale ressaltar que as cores da partícula variam de acordo com a cor do gradiente multiplicado pela cor definda por *Color*. Se quiser que a variação seja exatamente a do gradiente que aparece, deixe *Color* como branco. Abaixo temos um exemplo de aplicação.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9e7da29b-00d5-4015-838a-00e070c1a06c" width="600">
+</p>
+
+- **Alpha Curve:** Define a variação de transparência da partícula ao longo do seu tempo de vida. Abaixo temos um exemplo de aplicação.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b43130c7-cfb7-496a-855f-49eac873116f" width="600">
+</p>
 
