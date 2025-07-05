@@ -24,4 +24,16 @@ Essa lista não é completa, mas cobre as principais propriedades de partíclas.
 
 ### Propriedades avançadas do GPUParticles2D
 
+O que chamamos de "propriedades avançadas" aqui são as propriedades do *Proccess Material*. Para acessá-las, clique no *New ParticleProcessMaterial* que você criou alguns passos atrás. Uma aba com mais propriedades irá se abrir.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/404897c4-2899-4dc2-92fd-89ac1dd9d691" width="300">
+</p>
+
+- **Lifetime Randomness:** É um parâmetro que varia entre 0 e 1. Controla o tempo de vida de cada partícula. O default de 0 significa que ela vive durante todo o seu tempo de vida, enquanto que o valor de 1 significa que ele pode desaparecer assim que é emitida. Valores mais altas limitam o tempo de vida de modo aleatório.
+- **Emission Shape Offset:** Muda a posição da origem da emissão de partículas, em relação as coordenadas locais. Note na figura abaixo que a origem do node está no $(0, 0)$ mas a origem da emissão foi shiftada para $(-10, -20)$ em relação ao node.
+
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/eb6b6d22-85e7-4392-b393-dc5fb056c7fb" width="700">
+</p>
 
