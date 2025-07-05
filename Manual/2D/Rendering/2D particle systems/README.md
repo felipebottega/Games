@@ -88,3 +88,13 @@ Como dito anteriormente, a textura é um arquivo de imagem que é utilizado para
 <p align="center">
   <img src="https://github.com/user-attachments/assets/687cf02b-1fde-4f03-8de9-dbc85061ad0f" width="350">
 </p>
+
+## Animação de flipbook em GPUParticles2D
+
+Um *flipbook* faz o papel de uma sprite sheet para partículas. Basicamente é um conjunto de imagens que serão utilizadas como textura. No caso de partículas não teremos uma animação de sprites, apenas teremos uma variedade maior de texturas sendo geradas. Iremos utilizar o flipbook abaixo, que é disponibilizado no próprio [tutorial de partículas da Godot](https://docs.godotengine.org/en/stable/tutorials/2d/particle_systems_2d.html).
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/38963ab0-4420-49d2-b78b-7f88f017085e" width="400">
+</p>
+
+Para criar uma animação com flipbook, vá em *CanvasItem → Material* e na aba *Material* selecione *New CanvasItemMaterial*. 
