@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="2D particle systems"
+run/main_scene="uid://djixqleuikpr3"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1100
+window/size/viewport_height=500
+window/stretch/mode="viewport"
 
 [rendering]
 

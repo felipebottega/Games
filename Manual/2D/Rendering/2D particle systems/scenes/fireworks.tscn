@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://drk5ysp55ksia"]
+
+[ext_resource type="Texture2D" uid="uid://hfrgu1518wst" path="res://sprites/particles_flipbook_example.webp" id="1_q76is"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cvf0l"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fvmay"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 200, 1)
+gravity = Vector3(0, 98, 0)
+anim_speed_max = 2.0
+
+[node name="Fireworks" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_cvf0l")
+position = Vector2(569, 310)
+amount = 50
+texture = ExtResource("1_q76is")
+speed_scale = 0.7
+process_material = SubResource("ParticleProcessMaterial_fvmay")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://djixqleuikpr3"]
+
+[ext_resource type="Texture2D" uid="uid://v7cdk1ryt7j8" path="res://sprites/HD-wallpaper-beautiful-sunset-beauty-blue-sky.jpg" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://drk5ysp55ksia" path="res://scenes/fireworks.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://c8c33sqf043v2" path="res://scenes/sparkles.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://3fjri275kxy4" path="res://scenes/smoke.tscn" id="3_tbgi4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(584, 458.75)
+scale = Vector2(1.565, 1.11588)
+texture = ExtResource("1_jyhfs")
+
+[node name="Fireworks" parent="." instance=ExtResource("1_sugp2")]
+position = Vector2(-557, -105)
+
+[node name="Sparkles" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(114, 1)
+
+[node name="Smoke" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(332, -35)
