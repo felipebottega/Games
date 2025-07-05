@@ -7,3 +7,21 @@ Para cirar um node de partículas, utilizamos o `GPUParticles2D`. Começamos a n
 </p>
 
 > PS: Existe o node `CPUParticles2D`, porém ele é mais lento e está em processo de ser descontinuado. Não o utilize.
+
+## Propriedades do GPUParticles2D
+
+Essa lista não é completa, mas cobre as principais propriedades de partíclas.
+
+### Propriedades básicas do GPUParticles2D
+
+- **Amount:** Número base de partículas por ciclo. 
+- **Amount Ratio:** Multiplicador do número base de partículas por ciclo, de modo que em cada ciclo teremos $\text{Amount} \times \text{Amount Ratio}$ partículas.
+- **Texture:** Arquivo de imagem para ser a aparência das partículas. Veremos mais sobre isso adiante.
+- **Lifetime:** Tempo de vida de cada partícula emitida. No fim das contas, a Godot vai emitir $\frac{\text{Amount} \times \text{Amount Ratio}}{\text{Lifetime}}$ partículas por segundo.
+- **Speed Scale:** Velocidade do sistema como um todo. Note que isso não aumenta apenas a taxa de emissão das partículas, mas também a velocidade da animação delas.
+- **Explosiveness:** É um parâmetro que varia entre 0 e 1. Seu default de 0 significa que as partículas são emitidas a uma taxa constante no tempo. O valor 1 significa que todas são emitidas de uma vez.
+- **Randomness:** É um parâmetro que varia entre 0 e 1 também. Controla o momento em que cada partícula é emitida. O default de 0 significa que elas são emitidas deterministicamente em momentos equidistantes, enquanto 1 significa que elas são emitidas em momentos totalmente aleatórios dentro do tempo do ciclo.
+
+### Propriedades avançadas do GPUParticles2D
+
+
