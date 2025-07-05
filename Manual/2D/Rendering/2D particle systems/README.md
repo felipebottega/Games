@@ -40,6 +40,13 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Procce
 - **Emission Shape Scale/Emission Shape:** Primeiro você deve escolher e configurar uma opção para o *Emission Shape* e depois definir o ajuste de escala com o *Emission Shape Scale*. O *Emission Shape* define os pontos de ondeas partículas serão emitidas. Por default elas são emitidas a partir de um único ponto, mas podem ser emitidas a partir de pontos dentro de uma esfera, retângulo, anel, entre outros. Vale a pela explorar as possibilidades.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b2c71453-7726-499a-9ee8-cde425502f02" width="700">
+  <img src="https://github.com/user-attachments/assets/b2c71453-7726-499a-9ee8-cde425502f02" width="800">
 </p>
+
+- **Direction/Spread/Flatness/Initial Velocity:** Primeiro você deve escolher e configurar o *Initial Velocity*. Isso define o range da velocidade inicial com que a partícula é emitida. Por default é 0, o que significa que apenas a gravidade está agindo sobre a partícula. Após definir este range, o *Direction* define o vetor de direção da partícula, *Spread* define uma abertura de ângulo que a partícula pode desviar do vetor de direção, e *Flatness* aplica um fator de encurtamento para o *Spread* (no meu entendimento isso é equivalente a diminuir o *Spread*).
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bd4fcea9-8801-4deb-9955-a2a338d961fc" width="700">
+</p>
+
 
