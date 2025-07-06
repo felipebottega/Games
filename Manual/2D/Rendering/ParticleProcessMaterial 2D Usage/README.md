@@ -11,17 +11,19 @@ Vimos bastante coisa no [tutorial de partículas](https://github.com/felipebotte
   <img src="https://github.com/user-attachments/assets/3aada1fa-acc3-4ea2-8936-bd669b750577" width="600">
 </p>
 
-- **Animated Velocity:** Define a velocidade da rotação que foi definida na propriedade *Angle*. A lógica dos parâmetros é a de sempre.
-- **Orbital Velocity:** Define a velocidade com que as partículas orbitam em torno da origem do node. É interessante deixar a gravidade baixa para isso, caso contrário elas simplesmente vão cair e a órbita sequer será notada.
+- **Animated Velocity/Angular Velocity:** Define a velocidade da rotação que foi definida na propriedade *Angle*. A lógica dos parâmetros é a de sempre.
+- **Animated Velocity/Orbital Velocity:** Define a velocidade com que as partículas orbitam em torno da origem do node. É interessante deixar a gravidade baixa para isso, caso contrário elas simplesmente vão cair e a órbita sequer será notada.
   > PS: Notei que há um problema na animação quando as partículas vão para cima quando esta propriedade está ativa. Aumentar o FPS para $120$ resolver. O FPs é a propriedade *Fixed FPS* que fica dentro de *Time*.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bb7e1bc2-e879-4374-b3e6-71107ff548ae" width="750">
 </p>
 
-- **Radial Velocity:** É a velocidade com que as partículas se afastam do centro. Se for negativa, elas são atraídas para o centro. 
-- **Linear Accel:** Define a aceleração linear de cada partícula. Deste modo, ela pode ganhar mais velocidade com o passar do tempo.
-- **Radial Accel:** Análogo à aceleração linear, mas é para a velocidade radial.
+- **Animated Velocity/Radial Velocity:** É a velocidade com que as partículas se afastam do centro. Se for negativa, elas são atraídas para o centro. 
+- **Accelerations/Linear Acceleration:** Define a aceleração linear de cada partícula. Deste modo, ela pode ganhar mais velocidade com o passar do tempo.
+- **Accelerations/Radial Acceleration:** Análogo à aceleração linear, mas é para a velocidade radial.
+- **Accelerations/Tangential Acceleration:** Análogo aos anteriores, mas usa o vetor tangente ao centro para definir a direção da aceleração.
+- **Accelerations/Damping:** Aplica fricção às partículas, forcendo elas a ficarem mais lentas ou pararem. 
 
 ## Experimento com velocidade radial
 
