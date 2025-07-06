@@ -23,7 +23,15 @@ Vimos bastante coisa no [tutorial de partículas](https://github.com/felipebotte
 - **Accelerations/Linear Acceleration:** Define a aceleração linear de cada partícula. Deste modo, ela pode ganhar mais velocidade com o passar do tempo.
 - **Accelerations/Radial Acceleration:** Análogo à aceleração linear, mas é para a velocidade radial.
 - **Accelerations/Tangential Acceleration:** Análogo aos anteriores, mas usa o vetor tangente ao centro para definir a direção da aceleração.
-- **Accelerations/Damping:** Aplica fricção às partículas, forcendo elas a ficarem mais lentas ou pararem. 
+- **Accelerations/Damping:** Aplica fricção às partículas, forcendo elas a ficarem mais lentas ou pararem.
+
+## Load Emission Mask
+
+É possível fazer com que as partículas sejam emitidas a partir de um shape de um sprite. Para isso, selecione o node `GPUParticles2D` e clique no ícone *GPUParticles2D* que aparece no topo da viewport. Com isso, você pode escolher o sprite que quer para dar o shape de origem, pode usar a borda do sprite, definir se as partículas usam a cor do sprite, entre outras coisas. No exemplo abaixo, eu alterei a gravidade para as partículas se moverem para baixo na diagonal. É possível obter muitos efeitos interessantes sobre sprites com isso. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9b51b7f3-31fa-40d2-84b6-6690196a6f8e" width="1000">
+</p>
 
 ## Experimento com velocidade radial
 
@@ -32,3 +40,5 @@ De início, a velocidade e aceleração radial podem parecer conceitos vagos, ma
 <p align="center">
   <img src="https://github.com/user-attachments/assets/820b62df-1db0-4b1b-b876-a5f1bfbe7c48" width="750">
 </p>
+
+Eu fiz uma cena interativa onde eu tentei juntar os meus conhecimentos de partículas para obter efeitos legais. Você pode checar esta cena [aqui]().
