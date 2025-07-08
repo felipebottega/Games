@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://3uxdwjxggxb0"]
+
+[ext_resource type="Texture2D" uid="uid://cn51fra737k7a" path="res://sprites/Nina.png" id="1_w3ci0"]
+
+[sub_resource type="GDScript" id="GDScript_w3ci0"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ao05"]
+atlas = ExtResource("1_w3ci0")
+region = Rect2(0, 0, 41, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gb8f"]
+atlas = ExtResource("1_w3ci0")
+region = Rect2(41, 0, 41, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hh8ik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ao05")
+}, {
+"duration": 20.0,
+"texture": SubResource("AtlasTexture_4gb8f")
+}],
+"loop": true,
+"name": &"sit",
+"speed": 5.0
+}]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w3ci0"]
+polygon = PackedVector2Array(-8, 17, -5, 13, -3, 11, 4, 11, 7, 9, 8, 10, 4, 12, -2, 12)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4ao05"]
+polygon = PackedVector2Array(13, -5, 13, -4, 15, 0, 15, 10, 17, 10, 16, -2, 15, -3, 14, -5, 12, -7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3ci0"]
+size = Vector2(7.53828, 17.6438)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao05"]
+size = Vector2(7.06084, 13.4144)
+
+[node name="Nina" type="Node2D"]
+script = SubResource("GDScript_w3ci0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+sprite_frames = SubResource("SpriteFrames_hh8ik")
+animation = &"sit"
+autoplay = "sit"
+frame_progress = 0.58074
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="AnimatedSprite2D"]
+occluder = SubResource("OccluderPolygon2D_w3ci0")
+occluder_light_mask = 4
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="AnimatedSprite2D"]
+occluder = SubResource("OccluderPolygon2D_4ao05")
+occluder_light_mask = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.29905, -10.1497)
+rotation = 0.547523
+scale = Vector2(0.672, 1.02838)
+shape = SubResource("RectangleShape2D_w3ci0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8.85738, -8.39006)
+rotation = -0.491591
+shape = SubResource("RectangleShape2D_4ao05")

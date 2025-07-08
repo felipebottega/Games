@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbx4ebq8ftvm"]
+
+[ext_resource type="Texture2D" uid="uid://dn3h7bfn2u6p3" path="res://sprites/book.png" id="1_f8d72"]
+[ext_resource type="Texture2D" uid="uid://dmjxjt14ggvjr" path="res://sprites/horse.png" id="1_ywqc4"]
+[ext_resource type="Texture2D" uid="uid://c5n43b7o40dbf" path="res://sprites/sword.png" id="2_nabpm"]
+[ext_resource type="Texture2D" uid="uid://dvurh4jqijcbk" path="res://sprites/shadow.png" id="3_q4x7s"]
+[ext_resource type="Texture2D" uid="uid://bgr8aqwhfxvn0" path="res://sprites/bag.png" id="5_kprad"]
+
+[node name="OtherSprites" type="Node2D"]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0.1, 0.1, 0.1, 0.5)
+position = Vector2(2, 0)
+texture = ExtResource("3_q4x7s")
+
+[node name="Horse" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_ywqc4")
+
+[node name="Sword" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("2_nabpm")
+
+[node name="Book" type="Sprite2D" parent="."]
+texture = ExtResource("1_f8d72")
+
+[node name="Bag" type="Sprite2D" parent="."]
+texture = ExtResource("5_kprad")
