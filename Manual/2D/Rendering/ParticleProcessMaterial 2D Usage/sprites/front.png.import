@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8cmmc0d57wtj"
-path="res://.godot/imported/ParticleProcessMaterial 2D Usage.apple-touch-icon.png-821086b00220eb41335a8f539a98b486.ctex"
+uid="uid://c65djt854lug"
+path="res://.godot/imported/front.png-9b31bbc7e44db339cb8813d3c4bcf295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://html/ParticleProcessMaterial 2D Usage.apple-touch-icon.png"
-dest_files=["res://.godot/imported/ParticleProcessMaterial 2D Usage.apple-touch-icon.png-821086b00220eb41335a8f539a98b486.ctex"]
+source_file="res://sprites/front.png"
+dest_files=["res://.godot/imported/front.png-9b31bbc7e44db339cb8813d3c4bcf295.ctex"]
 
 [params]
 

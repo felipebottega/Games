@@ -13,7 +13,10 @@ config_version=5
 config/name="ParticleProcessMaterial 2D Usage"
 run/main_scene="uid://c7ivtivqbdnp4"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0.00566115, 0.00566115, 0.00566115, 1)
+boot_splash/image="uid://c65djt854lug"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=2000
 
 [display]
 
