@@ -10,3 +10,13 @@ A primeira maneira (e mais geral) para aplicar o antialiasing é indo em *Projec
   <img src="https://github.com/user-attachments/assets/e41e0368-b76d-4ef2-a662-75fed06e8984" width="700">
 </p>
 
+## Antialiasing como propriedades
+
+Alguns nodes possuem a propriedade configurável do antialiasing. A lista abaixo não é completa, mas tem os principais nodes que ter antialiasing configurável como parâmetro:
+
+- `Line2D`
+- `Polygon2D`
+- `Font`
+- `Style_Box`
+- `Text_Server`
+- Diversos tipos de métodos *draw* do `CanvasItem`
