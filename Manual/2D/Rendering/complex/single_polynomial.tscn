@@ -1,0 +1,164 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbrccc0mrlhcv"]
+
+[ext_resource type="Script" uid="uid://bojs8rsvbxrgl" path="res://single_polynomial.gd" id="1_emdh4"]
+[ext_resource type="Script" uid="uid://2eju0j5tou7y" path="res://single_polynomial_plotter.gd" id="2_ijmia"]
+[ext_resource type="Script" uid="uid://rfcuwesrw8tv" path="res://label.gd" id="3_6qdqe"]
+
+[node name="SinglePolynomial" type="Node"]
+script = ExtResource("1_emdh4")
+metadata/_edit_horizontal_guides_ = [611.0]
+
+[node name="Plotter" type="Node2D" parent="."]
+script = ExtResource("2_ijmia")
+
+[node name="VSlider_a" type="VSlider" parent="."]
+offset_left = 56.0
+offset_top = 611.0
+offset_right = 72.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_b" type="VSlider" parent="."]
+offset_left = 120.0
+offset_top = 611.0
+offset_right = 136.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_c" type="VSlider" parent="."]
+offset_left = 184.0
+offset_top = 610.0
+offset_right = 200.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_d" type="VSlider" parent="."]
+offset_left = 248.0
+offset_top = 610.0
+offset_right = 264.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_e" type="VSlider" parent="."]
+offset_left = 312.0
+offset_top = 610.0
+offset_right = 328.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_f" type="VSlider" parent="."]
+offset_left = 376.0
+offset_top = 610.0
+offset_right = 392.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_g" type="VSlider" parent="."]
+offset_left = 439.0
+offset_top = 610.0
+offset_right = 455.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_h" type="VSlider" parent="."]
+offset_left = 504.0
+offset_top = 610.0
+offset_right = 520.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_i" type="VSlider" parent="."]
+offset_left = 568.0
+offset_top = 610.0
+offset_right = 584.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_j" type="VSlider" parent="."]
+offset_left = 632.0
+offset_top = 610.0
+offset_right = 648.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_k" type="VSlider" parent="."]
+offset_left = 696.0
+offset_top = 610.0
+offset_right = 712.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_l" type="VSlider" parent="."]
+offset_left = 760.0
+offset_top = 610.0
+offset_right = 776.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VSlider_m" type="VSlider" parent="."]
+offset_left = 823.0
+offset_top = 610.0
+offset_right = 839.0
+offset_bottom = 687.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 664.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 13
+text = "1.0 x^12 + 1.0 x^11 + 1.0 x^10 + 1.0 x^9 + 1.0 x^8 + 1.0 x^7 + 1.0 x^6 + 1.0 x^5 + 1.0 x^4 + 1.0 x^3 + 1.0 x^2 + 1.0 x^1 + 1.0 x^0
+"
+script = ExtResource("3_6qdqe")
+
+[connection signal="value_changed" from="VSlider_a" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_b" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_c" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_d" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_e" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_f" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_g" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_h" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_i" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_j" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_k" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_l" to="." method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="VSlider_m" to="." method="_on_v_slider_value_changed"]
