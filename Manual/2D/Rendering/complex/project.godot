@@ -11,19 +11,22 @@ config_version=5
 [application]
 
 config/name="complex"
-run/main_scene="uid://bbrccc0mrlhcv"
+run/main_scene="uid://c5pe1rto6mp47"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="uid://b7etojs5vsss3"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=1000
 
 [display]
 
 window/size/viewport_width=1000
 window/size/viewport_height=700
 window/stretch/mode="viewport"
+window/vsync/vsync_mode=0
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.000660799, 0.0215954, 0.000618152, 1)
