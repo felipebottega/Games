@@ -7,7 +7,6 @@ func _ready() -> void:
 func _on_complex_polynomial_roots_button_pressed() -> void:
 	$SinglePolynomial.show()
 	$LittlewoodPolynomials.hide()
-	$Credits.hide()
 	$ComplexPolynomialRootsButton.hide()
 	$LittlewoodPolynomialRootsButton.hide()
 	$AnimatedSprite2D.hide()
@@ -15,7 +14,6 @@ func _on_complex_polynomial_roots_button_pressed() -> void:
 func _on_littlewood_polynomial_roots_button_pressed() -> void:
 	$SinglePolynomial.hide()
 	$LittlewoodPolynomials.show()
-	$Credits.hide()
 	$ComplexPolynomialRootsButton.hide()
 	$LittlewoodPolynomialRootsButton.hide()
 	$AnimatedSprite2D.hide()
