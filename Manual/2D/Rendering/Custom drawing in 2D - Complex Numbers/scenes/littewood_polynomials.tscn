@@ -1,0 +1,284 @@
+[gd_scene load_steps=4 format=3 uid="uid://uk3exnied68f"]
+
+[ext_resource type="Script" uid="uid://b4xmwtn8lx4bv" path="res://scripts/littlewood_polynomials.gd" id="1_mcf5e"]
+[ext_resource type="Script" uid="uid://bdemwgrbr5vsa" path="res://scripts/plotter.gd" id="2_pp0cr"]
+[ext_resource type="Texture2D" uid="uid://dgn65llndxyq" path="res://instructions2.png" id="3_dq4pe"]
+
+[node name="LittlewoodPolynomials" type="Node2D"]
+script = ExtResource("1_mcf5e")
+
+[node name="Plotter" type="Node2D" parent="."]
+script = ExtResource("2_pp0cr")
+
+[node name="Sliders" type="Node2D" parent="."]
+
+[node name="Speed" type="VSlider" parent="Sliders"]
+offset_left = 88.0
+offset_top = 538.0
+offset_right = 104.0
+offset_bottom = 685.0
+min_value = 1.0
+value = 10.0
+
+[node name="Size" type="VSlider" parent="Sliders"]
+offset_left = 156.0
+offset_top = 538.0
+offset_right = 172.0
+offset_bottom = 685.0
+min_value = 0.5
+max_value = 5.0
+step = 0.1
+value = 2.0
+
+[node name="VSlider_order" type="VSlider" parent="Sliders"]
+offset_left = 23.0
+offset_top = 538.0
+offset_right = 47.0
+offset_bottom = 686.0
+min_value = 1.0
+max_value = 8.0
+value = 6.0
+scrollable = false
+tick_count = 8
+ticks_on_borders = true
+
+[node name="HSlider_a" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 17.0
+offset_right = 126.0
+offset_bottom = 33.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider_b" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 126.0
+offset_bottom = 68.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider_c" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 90.0
+offset_right = 126.0
+offset_bottom = 106.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider_d" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 128.0
+offset_right = 126.0
+offset_bottom = 144.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider_e" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 167.0
+offset_right = 126.0
+offset_bottom = 183.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider_f" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 207.0
+offset_right = 126.0
+offset_bottom = 223.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider_g" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 248.0
+offset_right = 126.0
+offset_bottom = 264.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider_h" type="HSlider" parent="Sliders"]
+offset_left = 45.0
+offset_top = 292.0
+offset_right = 126.0
+offset_bottom = 308.0
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+metadata/_edit_use_anchors_ = true
+
+[node name="Labels" type="Node2D" parent="."]
+
+[node name="Label_speed" type="Label" parent="Labels"]
+offset_left = 72.0
+offset_top = 504.0
+offset_right = 120.0
+offset_bottom = 527.0
+text = "Speed"
+
+[node name="Label_size" type="Label" parent="Labels"]
+offset_left = 146.0
+offset_top = 504.0
+offset_right = 194.0
+offset_bottom = 527.0
+text = "Size"
+
+[node name="Label_order" type="Label" parent="Labels"]
+offset_left = 7.0
+offset_top = 504.0
+offset_right = 66.0
+offset_bottom = 527.0
+text = "Order"
+
+[node name="Label_order_nums" type="Label" parent="Labels"]
+offset_left = 50.0
+offset_top = 535.0
+offset_right = 64.0
+offset_bottom = 715.0
+theme_override_constants/line_spacing = 3
+theme_override_constants/paragraph_spacing = -2
+theme_override_font_sizes/font_size = 13
+text = "8
+7
+6
+5
+4
+3
+2
+1"
+
+[node name="Label_a" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 40.0
+offset_bottom = 35.0
+text = "a"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_b" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 47.0
+offset_right = 40.0
+offset_bottom = 70.0
+text = "b"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_c" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 85.0
+offset_right = 40.0
+offset_bottom = 108.0
+text = "c"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_d" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 123.0
+offset_right = 40.0
+offset_bottom = 146.0
+text = "d"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_e" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 162.0
+offset_right = 40.0
+offset_bottom = 185.0
+text = "e"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_f" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 202.0
+offset_right = 40.0
+offset_bottom = 225.0
+text = "f"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_g" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 243.0
+offset_right = 40.0
+offset_bottom = 266.0
+text = "g"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_g2" type="Label" parent="Labels"]
+offset_left = 11.0
+offset_top = 287.0
+offset_right = 40.0
+offset_bottom = 310.0
+text = "h"
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress" type="Label" parent="Labels"]
+offset_left = 940.0
+offset_top = 356.0
+offset_right = 1030.0
+offset_bottom = 439.0
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Instructions" type="Button" parent="Buttons"]
+modulate = Color(0.0235294, 1, 1, 1)
+offset_left = 725.0
+offset_top = 640.0
+offset_right = 849.0
+offset_bottom = 690.0
+theme_override_font_sizes/font_size = 20
+text = "Instructions"
+
+[node name="Quit" type="Button" parent="Buttons"]
+modulate = Color(0.0235294, 1, 1, 1)
+offset_left = 880.0
+offset_top = 640.0
+offset_right = 981.0
+offset_bottom = 690.0
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[node name="Instructions" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(497, 343)
+scale = Vector2(0.85277, 0.85277)
+texture = ExtResource("3_dq4pe")
+
+[node name="Back" type="Button" parent="."]
+visible = false
+modulate = Color(0.0235294, 1, 1, 1)
+offset_left = 725.0
+offset_top = 593.0
+offset_right = 849.0
+offset_bottom = 643.0
+theme_override_font_sizes/font_size = 20
+text = "Back"
+
+[connection signal="drag_ended" from="Sliders/Speed" to="." method="_on_speed_drag_ended"]
+[connection signal="drag_ended" from="Sliders/Size" to="." method="_on_size_drag_ended"]
+[connection signal="drag_ended" from="Sliders/VSlider_order" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_a" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_b" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_c" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_d" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_e" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_f" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_g" to="." method="_on_slider_drag_ended"]
+[connection signal="value_changed" from="Sliders/HSlider_h" to="." method="_on_slider_drag_ended"]
+[connection signal="pressed" from="Buttons/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
