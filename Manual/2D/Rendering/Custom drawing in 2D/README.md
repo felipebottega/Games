@@ -82,3 +82,9 @@ O default do editor da Godot é só mostrar o seu desenho quando você roda a ce
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/7f247dff-7966-4f0f-a7a5-e4ef0b33a62b" />
 </p>
+
+Chamar a `queue_draw` para redesenhar a rotação a cada frame é bastante caro, mas aplicar a rotação da maneira acima é bem barata, pois apenas usamos transformações lineares sobre o objeto, nada foi redesenhado. Porém, existem casos em que redesenhar é inevitável. Vamos considerar a situação em que queremos que o comprimento da boca mude de tamanho. O código abaixo mostra a primeira vez que precisamos usar a `queue_draw`, pois agora o desenho muda a cada frame e precisa ser refeito.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/177400bb-17a3-47a0-adb6-7cc2ea8aaad1" />
+</p>
