@@ -66,3 +66,19 @@ O node `Label` é o método mais comum de inserir textos na tela, mas também é
   <img width="550" src="https://github.com/user-attachments/assets/db0d4393-1669-4fe7-a9ef-efcd242cc50d" />
   <img width="300" src="https://github.com/user-attachments/assets/05f6911e-09da-4a7b-b1de-6778d760274d" />
 </p>
+
+## Mostrar o desenho no editor
+
+O default do editor da Godot é só mostrar o seu desenho quando você roda a cena. Se quiser que ele apareça no editor, coloque o comando `@tool` no topo do script e vá em *Scenes → Reload Saved Scene*. É necessário fazer isso toda vez que a cena é atualizada.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/6056e4ba-cdc0-4ba3-9f9e-61c1064c5f82" />
+</p>
+
+## Animação
+
+É possível obter alguns tipos de animação aplicando transformações lineares comuns da Godot. Por exemplo, adicionar um `_process` com `rotation += delta` rotaciona o desenho ao longo do centro do node pai (uma aplicação deste comportamento está implementado [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203)). Para rotacionar o desenho em torno do seu próprio centro, devemos deixar o centro do node pai e filho na mesma posição da tela. Para o node pai, basta utilizar o comando `position = Vector2(x, y)`. Para o filho, utilizamos a função `draw_set_transform`, que foi feita especificamente para ser a `Transform2D` dos desenhos.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/7f247dff-7966-4f0f-a7a5-e4ef0b33a62b" />
+</p>
