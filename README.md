@@ -99,7 +99,9 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">   Implementando o shake para o tabuleiro de Galton
  </a> </li>
-<li> Manual\2D\Rendering\2D lights and shadows - 2D Meshes: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%202D%20Meshes">  Adicionando mesh ao sprite
+<li> Manual\2D\Rendering\2D antialiasing: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20antialiasing">  Antialiasing no projeto
+ </a> </li>
+<li> Manual\2D\Rendering\2D antialiasing: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20antialiasing">  Antialiasing como propriedades
  </a> </li>
 <li> Manual\2D\Rendering\2D lights and shadows - Introduction: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction">  PointLight2D
  </a> </li>
@@ -114,6 +116,56 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> Manual\2D\Rendering\2D lights and shadows - Normal Maps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps">  Luz seguindo o mouse
  </a> </li>
 <li> Manual\2D\Rendering\2D lights and shadows - Normal Maps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps">  Criando normal maps
+ </a> </li>
+<li> Manual\2D\Rendering\2D Meshes: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Meshes">  Adicionando mesh ao sprite
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems">  Propriedades do GPUParticles2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems"> # Propriedades básicas do GPUParticles2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems"> # Propriedades avançadas do GPUParticles2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems">  Texturas em GPUParticles2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems">  Animação de flipbook em GPUParticles2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems">  Exemplos de GPUParticles2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems"> # Fogos de artifício
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems">  Fagulhas
+ </a> </li>
+<li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems">  Fumaça
+ </a> </li>
+<li> Manual\2D\Rendering\2D sprite animation: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation">  AnimatedSprite2D com imagens individuais
+ </a> </li>
+<li> Manual\2D\Rendering\2D sprite animation: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation">  AnimatedSprite2D com sprite sheet
+ </a> </li>
+<li> Manual\2D\Rendering\2D sprite animation: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation">  Customizações do AnimatedSprite2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D sprite animation: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation">  AnimationPlayer
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  _draw vs _queue_draw
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  draw_polygon
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  draw_polyline
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  draw_circle
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  draw_line
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  draw_string
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  Mostrar o desenho no editor
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  Animação
+ </a> </li>
+<li> Manual\2D\Rendering\ParticleProcessMaterial 2D Usage: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">  Mais propriedades do Particle Process Material
+ </a> </li>
+<li> Manual\2D\Rendering\ParticleProcessMaterial 2D Usage: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">  Load Emission Mask
+ </a> </li>
+<li> Manual\2D\Rendering\ParticleProcessMaterial 2D Usage: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">  Experimento com velocidade radial
  </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Sprites de sprites
  </a> </li>
