@@ -26,3 +26,11 @@ Uma coisa que eu aprendi neste projeto foi criar um único botão na main e deix
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/c068b381-4dd6-45f0-995e-ca5aab655893" />
 </p>
+
+## Desenhando retas e círculos
+
+Do tutorial de desenho, utilizamos as funções de desenhar retas e círculos. Diferentemente do tutorial, aqui a função `queue_draw` foi chamada extensivamente. Para atualizar os desenhos, note que deixamos as variáveis `zeros, pointsize` e `point_scale` externas à função `draw`. Toda a lógica de atualizar os desenhos se baseou em atualizar estas variáveis apenas.
+
+<p align="center">
+  <img width="650" src="https://github.com/user-attachments/assets/371db4bd-c395-4e84-8693-0702c451cb88" />
+</p>
