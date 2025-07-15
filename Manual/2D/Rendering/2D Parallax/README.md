@@ -20,7 +20,7 @@ Note que o objeto mais da frente tem dimensões $1302 \times 402$. Além de se a
 
 ### Dica para criar sprite sheet
 
-A segunda camada eu quero que sejam diversas bolas lado a lado. Para obter uma separação uniforme, o ideal é criar uma grid para controle. Isso também serve para sprite sheets. Começamos com a figura de uma única bola. Note que a largura da imagem já está em $1302$..
+A segunda camada eu quero que sejam diversas bolas lado a lado. Para obter uma separação uniforme, o ideal é criar uma grid para controle. Isso também serve para sprite sheets. Começamos com a figura de uma única bola. Note que a largura da imagem já está em $1302$.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/0c725d62-9589-4fcd-8ba1-0edf5a298504" />
@@ -78,7 +78,9 @@ Abaixo, mostramos duas imagens, a primeira usando um *Repeat Size* menor que $13
   <img width="1000" src="https://github.com/user-attachments/assets/6fc91352-23d1-4d0b-a17f-5883bf250922" />
 </p>
 
-Para esta figura qualquer desvio do tamanho original ficará errado. Porém, o que é um erro aqui é um ajuste para o caso das bolas. Lembre que elas tem um espaço a mais sobrando. Podemos resolver isso antecipando a repetição. Essa repetição vai ficar por cima do espaço extra que queremos esconder. A escolha do quanto o *Repeat Size* deve ficar abaixo de $1302$ acaba sendo no olho, mas podemos usar a ferramenta da regra para ganhar mais precisão no ajuste.
+### Arrumando paralaxe para figura com o tamanho correto mas espaço extra sobrando
+
+Para a figura acima, qualquer desvio do tamanho original ficará errado. Porém, o que é um erro aqui é um ajuste para o caso das bolas. Lembre que elas tem um espaço a mais sobrando. Podemos resolver isso antecipando a repetição. Essa repetição vai ficar por cima do espaço extra que queremos esconder. A escolha do quanto o *Repeat Size* deve ficar abaixo de $1302$ acaba sendo no olho, mas podemos usar a ferramenta da regra para ganhar mais precisão no ajuste.
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/eda844eb-a062-4de3-a19c-80be5abe286f" />
@@ -88,3 +90,15 @@ Note que a velocidade desta camada é mais baixa que a anterior. Como ela está 
 
 https://github.com/user-attachments/assets/ad941bc4-4858-4e5c-93a0-400abb6bfd6c
 
+### Arrumando paralaxe para figura com o espaçamento correto mas figura menor que o viewport
+
+Agora vamos para a terceira camada. Apesar dela ser um quadriculado onde o fim se encaixa com o início corretamente, ela é menor que o viewport. 
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/d941642f-3c76-4330-bf18-2d47822086c0" />
+</p>
+
+Há pelo menos duas maneiras de se resolver isso no editor:
+
+- Aumentar a escala do sprite
+- Diminuir o *Repeat Size* que nem fizemos anteriormente
