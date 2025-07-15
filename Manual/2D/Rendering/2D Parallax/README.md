@@ -1,5 +1,9 @@
 # 2D Parallax
 
+Para apresentar as principais funcionalidades de paralaxe em Godot, faremos uma cena de paralaxe com objetos abstratos. 
+
+## O quadriculado do editor é 8x8 pixels
+
 Para obter o efeito de paralaxe, você deve preparar as figuras das camadas e se certificar de que elas tem os tamanhos apropriados. O modo mais comum de errar paralaxe é errando nos tamanhos. Caso os tamanhos sejam diferentes e você pretenda ajustar no editor da Godot, tenha em mente que o ajuste pelo gráfico se dá de 8 em 8 pixels. O ajuste fino deve ser no *Inspector*.
 
 <p align="center">
@@ -8,7 +12,7 @@ Para obter o efeito de paralaxe, você deve preparar as figuras das camadas e se
 
 ## Preparando as camadas para o Parallax2D
 
-Para este exemplo, eu vou fazer uma cena de paralaxe com objetos abstratos. Note que o objeto mais da frente tem dimensões $1302 \times 402$. Além de se atentar a isso quando for fazer as outras camadas, também não esqueça de configurar o viewport de acordo. Neste exemplo eu quero que o viewport tenha a largura igual à da figura.
+Note que o objeto mais da frente tem dimensões $1302 \times 402$. Além de se atentar a isso quando for fazer as outras camadas, também não esqueça de configurar o viewport de acordo. Neste exemplo eu quero que o viewport tenha a largura igual à da figura.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/1d784fd5-3b89-469b-9273-6576d374680b" />
