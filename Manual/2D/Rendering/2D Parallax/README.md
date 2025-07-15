@@ -95,10 +95,12 @@ https://github.com/user-attachments/assets/ad941bc4-4858-4e5c-93a0-400abb6bfd6c
 Agora vamos para a terceira camada. Apesar dela ser um quadriculado onde o fim se encaixa com o início corretamente, ela é menor que o viewport. 
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/d941642f-3c76-4330-bf18-2d47822086c0" />
+  <img width="650" src="https://github.com/user-attachments/assets/d941642f-3c76-4330-bf18-2d47822086c0" />
 </p>
 
 Há pelo menos duas maneiras de se resolver isso no editor:
 
-- Aumentar a escala do sprite
-- Diminuir o *Repeat Size* que nem fizemos anteriormente
+1. Aumentar a escala do sprite
+2. Diminuir o *Repeat Size* que nem fizemos anteriormente
+
+
