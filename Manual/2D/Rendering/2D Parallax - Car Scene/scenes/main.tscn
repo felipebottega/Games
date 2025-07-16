@@ -1,0 +1,145 @@
+[gd_scene load_steps=20 format=3 uid="uid://khm4ti7e2lol"]
+
+[ext_resource type="Script" uid="uid://ck4vkkiu3au8a" path="res://scenes/main.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://bewaxb5bkdihr" path="res://sprites/plx1.png" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://b4jp8yieeka0p" path="res://sprites/plx2.png" id="3_tefeu"]
+[ext_resource type="Texture2D" uid="uid://cgvv2jewqscyo" path="res://sprites/plx3.png" id="4_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://dgmjetjwa20a5" path="res://sprites/plx4night.png" id="5_85g3d"]
+[ext_resource type="Texture2D" uid="uid://b3sgjg2dvgsu6" path="res://sprites/plx3night.png" id="5_choun"]
+[ext_resource type="Texture2D" uid="uid://dpdggtsvqvmso" path="res://sprites/plx4.png" id="5_tipki"]
+[ext_resource type="Texture2D" uid="uid://doq5bbws2jtam" path="res://sprites/plx5.png" id="6_tefeu"]
+[ext_resource type="Texture2D" uid="uid://d2jd2qrjrgpwu" path="res://sprites/car.png" id="7_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://dkho8rj7fqxb7" path="res://sprites/2d_lights_and_shadows_neutral_point_light.webp" id="10_choun"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tipki"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(0, 0, 115, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(115, 0, 115, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_choun"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(230, 0, 115, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya4ey"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(345, 0, 115, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb6dy"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(460, 0, 115, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trceg"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(575, 0, 115, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8y0u"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(690, 0, 115, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkv2x"]
+atlas = ExtResource("7_o6xl0")
+region = Rect2(805, 0, 115, 115)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbj1t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tipki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85g3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_choun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya4ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb6dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trceg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8y0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkv2x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 50.0
+}]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_sugp2")
+
+[node name="NuvemBaixa" type="Parallax2D" parent="."]
+repeat_size = Vector2(695, 0)
+autoscroll = Vector2(-50, 0)
+
+[node name="SpriteDia" type="Sprite2D" parent="NuvemBaixa"]
+position = Vector2(348.5, 155)
+scale = Vector2(0.998563, 1)
+texture = ExtResource("4_o6xl0")
+
+[node name="SpriteNoite" type="Sprite2D" parent="NuvemBaixa"]
+position = Vector2(348.5, 155)
+scale = Vector2(0.998563, 1)
+texture = ExtResource("5_choun")
+
+[node name="NuvemAlta" type="Parallax2D" parent="."]
+repeat_size = Vector2(696, 0)
+autoscroll = Vector2(-20, 0)
+
+[node name="SpriteDia" type="Sprite2D" parent="NuvemAlta"]
+position = Vector2(348, -4)
+scale = Vector2(1.0131, 1)
+texture = ExtResource("5_tipki")
+
+[node name="SpriteNoite" type="Sprite2D" parent="NuvemAlta"]
+position = Vector2(348, -4)
+scale = Vector2(1.0131, 1)
+texture = ExtResource("5_85g3d")
+
+[node name="Montanhas" type="Parallax2D" parent="."]
+repeat_size = Vector2(695, 0)
+autoscroll = Vector2(-100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Montanhas"]
+position = Vector2(348, 199)
+texture = ExtResource("3_tefeu")
+
+[node name="Floresta" type="Parallax2D" parent="."]
+repeat_size = Vector2(695, 0)
+autoscroll = Vector2(-150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floresta"]
+position = Vector2(348, 273)
+texture = ExtResource("2_tbgi4")
+
+[node name="Estrada" type="Parallax2D" parent="."]
+repeat_size = Vector2(695, 0)
+autoscroll = Vector2(-150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Estrada"]
+position = Vector2(347, 335)
+scale = Vector2(1.04662, 1.08333)
+texture = ExtResource("6_tefeu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(332, 317)
+sprite_frames = SubResource("SpriteFrames_jbj1t")
+autoplay = "default"
+frame = 3
+frame_progress = 0.649706
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(442.5, 332.5)
+scale = Vector2(0.707031, 0.121094)
+energy = 3.38
+texture = ExtResource("10_choun")
