@@ -137,4 +137,14 @@ Feito os ajustes, temos a cena finalizada.
 
 https://github.com/user-attachments/assets/ec5900c3-49fb-4061-a361-27057a0c4c92
 
+## Paralaxe com movimento de câmera
 
+Não vamos entrar em muitos detalhes deste tópico pois ainda não vimos nada sobre câmeras. No caso de estarmos nesse contexto, devemos usar mais o parâmetro *Scroll Scale*. Ele funciona como um multiplicador de velocidade de rolagem, permitindo que as camadas se movam a uma velocidade diferente da câmera para cada conjunto de eixos. Um valor de $1$ faz com que a camada role na mesma velocidade da câmera. Se quiser que sua imagem pareça mais distante ao rolar, use um valor menor que $1$, com $0$ parando-a completamente. Se quiser que algo pareça mais próximo da câmera, use um valor maior que $1$, para que a rolagem seja mais rápida.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/c257ed87-ad63-450a-9238-1c596bfcae3f" />
+</p>
+
+A diferença entre esse parâmetro e a velocidade do *Autoscroll* é que o primeiro é dinâmico, ele define as relações de velocidade entre as camadas em relação a câmera. É de fato para ser utilizado in-game. O segundo é basicamente um script estático. As camadas terão aquela velocidade definida independentemente de qualquer outra coisa. 
+
+Eu fiz uma cena bem legal com paralaxe [neste link](). Vale a pena conferir!
