@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="2D Parallax"
+run/main_scene="uid://dtk6cqjkrtyot"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1302
+window/size/viewport_height=800
+window/stretch/mode="viewport"
 
 [rendering]
 

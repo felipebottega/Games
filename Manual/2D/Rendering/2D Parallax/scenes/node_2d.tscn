@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtk6cqjkrtyot"]
+
+[ext_resource type="Texture2D" uid="uid://djxoeivtdehg" path="res://sprites/camada2.png" id="1_4dvvg"]
+[ext_resource type="Texture2D" uid="uid://jeplcpxdcn3c" path="res://sprites/camada1.png" id="1_6e84v"]
+[ext_resource type="Texture2D" uid="uid://b1c8e0jep8x4x" path="res://sprites/camada3.png" id="1_rnjyy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camada3" type="Parallax2D" parent="."]
+scroll_offset = Vector2(177, 0)
+repeat_size = Vector2(1100, 385)
+autoscroll = Vector2(-10, -20)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Camada3"]
+position = Vector2(550, 200)
+texture = ExtResource("1_rnjyy")
+
+[node name="Camada2" type="Parallax2D" parent="."]
+repeat_size = Vector2(1193, 500)
+autoscroll = Vector2(-20, -30)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Camada2"]
+position = Vector2(651, 399)
+texture = ExtResource("1_4dvvg")
+
+[node name="Camada1" type="Parallax2D" parent="."]
+repeat_size = Vector2(1302, 500)
+autoscroll = Vector2(-50, -80)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Camada1"]
+position = Vector2(651, 599)
+texture = ExtResource("1_6e84v")
