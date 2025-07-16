@@ -103,4 +103,28 @@ Há pelo menos duas maneiras de se resolver isso no editor:
 1. Aumentar a escala do sprite
 2. Diminuir o *Repeat Size* que nem fizemos anteriormente
 
+Para esse exemplo nós usamos a segunda maneira.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/c252af7d-6cfe-4fd2-86d5-40ccb3ea20f8" />
+</p>
+
+## Repeat Times
+
+Note que por default o parâmetro *Repeat Times* é igual a $1$. Este parâmetro define quantas repetições da figura existem na tela. Para este loop em particular bastou ter uma, mas em algumas situações você vai querer mais repetições, como situações de zoom out ou quando você tem uma figura pequena e quer várias repetições na tela, entre outros. 
+
+## Movimento vertical
+
+Você deve ter notado que também temos os parâmetros para o eixo $y$. A lógica deles é a mesma do eixo $x$. Vamos fazer a cena de antes também se mover para cima, só que um pouco mais rápido que o movimento do eixo $x$. Note que neste caso é necessário configurar o parâmetro *Repeat Size* adequadamente para o eixo $y$. Vamos deixar este valor igual a $400$ pixels para todas as três camadas. Antes de rodar, olhe a cena como está. 
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/7fbec401-8c26-4b70-b048-478f5c99d794" />
+</p>
+
+A altura do viewport é de 800 pixels. Sendo $400$ pixels o *Repeat Size* do eixo $y$, temos que as figuras vão desaparecer (para a seguinte aparecer no loop) antes mesmo de saírem do viewport. Podemos resolver isso aumentando o *Repeat Times* para $3$.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/0d095d93-9c97-4854-9d52-2675d465f34b" />
+</p>
+
 
