@@ -127,4 +127,14 @@ A altura do viewport é de 800 pixels. Sendo $400$ pixels o *Repeat Size* do eix
   <img width="900" src="https://github.com/user-attachments/assets/0d095d93-9c97-4854-9d52-2675d465f34b" />
 </p>
 
+A aparência da grid no fundo não ficou muito satisfatória pois a parte de baixo está com "pontas soltas". Ficaria mais interessante se fosse tudo uma única grid. Podemos resolver isso facilmente diminuindo o parâmetro *Repeat Size* para $y$. Tudo é questão de testar e ajustar.
+
+<p align="center">
+  <img width="1200" src="https://github.com/user-attachments/assets/75a5a4b8-876f-4d69-a3d1-46cebf693132" />
+</p>
+
+Feito os ajustes, temos a cena finalizada.
+
+https://github.com/user-attachments/assets/ec5900c3-49fb-4061-a361-27057a0c4c92
+
 
