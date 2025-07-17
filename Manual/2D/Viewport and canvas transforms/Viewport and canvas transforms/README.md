@@ -99,4 +99,4 @@ O atributo `position` sempre se refere à tela (o mundo real, posição global, 
 
 Há diversas outras aplicações. O principal é ter esse conceito em mente, pois ele é muito útil em jogos.
 
-> Importante: Os vetores $e_1$ e $e_2$ (`transform.x` e `transform.y`) sempre são globais. Estes vetores do node filho não são alterados quando o node pai rotaciona, assim $v_o$ não é alterado quando o node pai é transladado, apesar deste último ser local, e não global.
+> ⚠️ Importante: Os vetores $e_1$ e $e_2$ (`transform.x` e `transform.y`) sempre são globais. Estes vetores do node filho não são alterados quando o node pai rotaciona, assim como $v_o$ não é alterado quando o node pai é transladado, apesar deste último ser local, e não global.
