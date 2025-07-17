@@ -98,5 +98,3 @@ Todo node sempre possui duas "setinhas" ("gizmos" em inglês) indicando as dire�
 O atributo `position` sempre se refere à tela (o mundo real, posição global, etc). Note que $e_1$ e $e_2$ são os vetores que indicam essas setinhas da rotação. Então se quisermos andar com o node pelo sei eixo $x$, por exemplo, basta fazer algo como `position += speed * transform.x`, em que `speed` é um float que determina a velocidade. Se fosse um `CharacterBody2D ` você poderia usar `velocity = speed * transform.x` e depois `move_and_slide()`. Se fosse um `RigidBody2D` você não usaria o `position` pois isso "brigaria" com a física, mas é possível usar `linear_velocity = speed * transform.x`. 
 
 Há diversas outras aplicações. O principal é ter esse conceito em mente, pois ele é muito útil em jogos.
-
-> ⚠️ Importante: Os vetores $e_1$ e $e_2$ (`transform.x` e `transform.y`) sempre são globais. Estes vetores do node filho não são alterados quando o node pai rotaciona, assim como $v_o$ não é alterado quando o node pai é transladado, apesar deste último ser local, e não global.
