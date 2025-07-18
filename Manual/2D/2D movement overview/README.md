@@ -45,11 +45,11 @@ Agora vamos explicar as principais componentes deste script:
 Neste tipo de movimentação, você usa os botões esquerda-direita para rotacionar o boneco, e cima-baixo para ir para frente ou para trás. O nome "Asteroids-style" é porque essa é a movimentação clássica dos jogos de arcade estilo Asteroids. O script dele segue abaixo.
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/4fb9dac1-5a02-49ba-b6a1-3c5f1c9a9fb6" />
+  <img width="500" src="https://github.com/user-attachments/assets/fad347cf-3dd7-46eb-bbbb-84a05218fc9e" />
 </p>
 
 - **Input.get_axis:** Recebe dois inputs como parâmetros. Quando o primeiro input é detectado, a função retorna $-1$. Quando o segundo input é detectado, a função retorna $1$.
 - **rotation:** Atributo nativo do `CharacterBody2D`. Representa a rotação do objeto, em radianos.
 
-> ⚠️ Atenção: O comando `velocity = transform.x * Input.get_axis("ui_down", "ui_up") * speed` foi o que começou a confusão mental que me levou à falar sobre coordenadas aqui. Se você rotacionar o node pai, o boneco vai apontar numa direção que não é o $(1, 0)$ do mundo, mas o `transform.x` dele será $(1, 0)$ em coordenadas locais. Este  comando para definir `velocity` só faz sentido quando as coordenadas locais e globais concordam. Caso contrário, o boneco rotacionado vai receber o vetor `transform.x` $= (1, 0)$ e vai se mover horizontalmente em relação ao mundo mesmo que esteja inclinado. Isso porque `velocity` é um vetor de movimentação em coordenadas globais. Eu estou copiando o tutorial, mas aconselho a não fazer assim na prática. Como `velocity` é global, você deveria usar um vetor global para definir `velocity`, não um vetor que depende de coordenadas locais.
+> ⚠️ Atenção: No tutorial eles utilizam o comando `velocity = transform.x * Input.get_axis("ui_down", "ui_up") * speed`, que foi o que começou a confusão mental que me levou à falar sobre coordenadas aqui. Se você rotacionar o node pai, o boneco vai apontar numa direção que não é o $(1, 0)$ do mundo, mas o `transform.x` dele será $(1, 0)$ em coordenadas locais. Este  comando para definir `velocity` só faz sentido quando as coordenadas locais e globais concordam. Caso contrário, o boneco rotacionado vai receber o vetor `transform.x` $= (1, 0)$ e vai se mover horizontalmente em relação ao mundo mesmo que esteja inclinado. Isso porque `velocity` é um vetor de movimentação em coordenadas globais. Eu estou copiando o tutorial, mas aconselho a não fazer assim na prática. Como `velocity` é global, você deveria usar um vetor global para definir `velocity`, não um vetor que depende de coordenadas locais.
   
