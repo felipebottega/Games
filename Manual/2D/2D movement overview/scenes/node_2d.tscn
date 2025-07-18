@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd7np6207sjns"]
+
+[ext_resource type="Texture2D" uid="uid://b1x7p25c3dynk" path="res://sprites/enemyWalking_1.png" id="1_6e84v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dvvg"]
+size = Vector2(102, 96)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(500, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(15, 0)
+shape = SubResource("RectangleShape2D_4dvvg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_6e84v")

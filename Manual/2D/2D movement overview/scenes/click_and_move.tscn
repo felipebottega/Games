@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://06cmpgudcgpo"]
+
+[ext_resource type="Script" uid="uid://dt82e0tgyr1i3" path="res://scripts/click_and_move.gd" id="1_x0kbs"]
+[ext_resource type="Texture2D" uid="uid://b1x7p25c3dynk" path="res://sprites/enemyWalking_1.png" id="2_uha0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dvvg"]
+size = Vector2(102, 96)
+
+[node name="click_and_move" type="Node2D"]
+
+[node name="click_and_move" type="CharacterBody2D" parent="."]
+position = Vector2(500, 300)
+script = ExtResource("1_x0kbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="click_and_move"]
+position = Vector2(15, 0)
+shape = SubResource("RectangleShape2D_4dvvg")
+
+[node name="Sprite2D" type="Sprite2D" parent="click_and_move"]
+texture = ExtResource("2_uha0c")

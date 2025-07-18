@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlrm6jxvcppig"]
+
+[ext_resource type="Script" uid="uid://dv2bi5ya6uses" path="res://scripts/asteroids.gd" id="1_46dfx"]
+[ext_resource type="Texture2D" uid="uid://b1x7p25c3dynk" path="res://sprites/enemyWalking_1.png" id="2_72i4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dvvg"]
+size = Vector2(102, 96)
+
+[node name="Asteroids" type="Node2D"]
+
+[node name="Asteroids" type="CharacterBody2D" parent="."]
+position = Vector2(500, 300)
+script = ExtResource("1_46dfx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroids"]
+position = Vector2(15, 0)
+shape = SubResource("RectangleShape2D_4dvvg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Asteroids"]
+texture = ExtResource("2_72i4m")

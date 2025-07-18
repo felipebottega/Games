@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://qg3kc1id7csv"]
+
+[ext_resource type="Script" uid="uid://c3tiy103ksstb" path="res://scripts/8_way.gd" id="1_fabw2"]
+[ext_resource type="Texture2D" uid="uid://b1x7p25c3dynk" path="res://sprites/enemyWalking_1.png" id="2_5nyr3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dvvg"]
+size = Vector2(102, 96)
+
+[node name="8way" type="Node2D"]
+
+[node name="8way" type="CharacterBody2D" parent="."]
+position = Vector2(500, 300)
+script = ExtResource("1_fabw2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="8way"]
+position = Vector2(15, 0)
+shape = SubResource("RectangleShape2D_4dvvg")
+
+[node name="Sprite2D" type="Sprite2D" parent="8way"]
+texture = ExtResource("2_5nyr3")
