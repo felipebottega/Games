@@ -20,8 +20,6 @@ Agora vamos rotacionar o node pai. Como podemos ver abaixo, o `CharacterBody2D` 
   <img width="1100" src="https://github.com/user-attachments/assets/a8f3937c-32e1-4a90-a6a0-a7a1adf997c6" />
 </p>
 
-Podemos obter os vetores em termos de mundo real com a transformação linear `get_global_transform()`, algo também visto no tutorial mencionado anteriormente. Neste caso, o resultado é <p align="center">`get_global_transform() * transform` $= [(0.925775,\ -0.378075),\ (0.378075,\ 0.925775),\  (1470.62,\ 363.3901)]$.</p>
-
 Mas para quê essa recapitulação toda? Como veremos adiante, ao pressionar o botão de "ir para frente", o boneco não irá se mover na direção $(1, 0)$ nas coordenadas locais, mas sim nas globais. É bom ter isso em mente agora para não fazer confusão mais tarde sobre qual sistema de coordenadas o boneco vai se mover (é na global). 
 
 ## 8-way movement
@@ -53,3 +51,24 @@ Neste tipo de movimentação, você usa os botões esquerda-direita para rotacio
 
 > ⚠️ Atenção: No tutorial eles utilizam o comando `velocity = transform.x * Input.get_axis("ui_down", "ui_up") * speed`, que foi o que começou a confusão mental que me levou à falar sobre coordenadas aqui. Se você rotacionar o node pai, o boneco vai apontar numa direção que não é o $(1, 0)$ do mundo, mas o `transform.x` dele será $(1, 0)$ em coordenadas locais. Este  comando para definir `velocity` só faz sentido quando as coordenadas locais e globais concordam. Caso contrário, o boneco rotacionado vai receber o vetor `transform.x` $= (1, 0)$ e vai se mover horizontalmente em relação ao mundo mesmo que esteja inclinado. Isso porque `velocity` é um vetor de movimentação em coordenadas globais. Eu estou copiando o tutorial, mas aconselho a não fazer assim na prática. Como `velocity` é global, você deveria usar um vetor global para definir `velocity`, não um vetor que depende de coordenadas locais.
   
+## Rotação e movimento com mouse
+
+Este é uma variação do anterior, mas a rotação é obtida pelo mouse. Em vez do jogador pressionar para direita ou esquerda, ele mexe o mouse e o boneco olha na direção do mouse com o comando `look_at(get_global_mouse_position())`. O resto é a mesma coisa.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/f5488c55-3cb8-454b-aa81-a236bd38f6aa" />
+</p>
+
+## Clicar e mover
+
+Esse é no estilo Age of Empires. Você clica com o mouse e o boneco vai para onde você clicou. Para esse, você deve ir em *Project → Prpject Settings → Input Map* e configurar para reconhecer o clique esquerdo do mouse. Vimos sobre configuração de inputs [nesse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs). 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/c9e00c00-a7ac-468d-bca0-c981330aed29" />
+</p>
+
+O script para este movimento é dado abaixo. Caso você queira que o boneco vire na direção onde você está apontado ao se mover, basta descomentar o comando `look_at(target)`. VocÊ também pode fazê-lo olhar constantemente para a direção do mouse, basta trocar esse comando por `look_at(get_global_mouse_position())`. Por fim, se você quiser que o boneco fique constantemente perseguindo a posição do mouse, comente a linha `if event.is_action_pressed("click"):`.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/863dd74b-ae18-4475-9438-f36abc463351" />
+</p>
