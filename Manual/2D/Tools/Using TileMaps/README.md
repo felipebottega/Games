@@ -24,4 +24,12 @@ Depois clique em *TileSet* no editor abaixo do canvas (rodapé da imagem abaixo)
   <img width="900" src="https://github.com/user-attachments/assets/10935ae9-3276-495c-8a52-7f239fa9ca31" />
 </p>
 
+## Coordenadas do tilemap
 
+Uma coisa importante para ficar atento logo de início é que o tilemap possui seu próprio sistema de coordenadas. Como você pode ver pelas imagens abaixo, o $(0, 0)$ está no bloco cujo canto superior esquerdo está no $(0, 0)$ do mundo. Depois disso ele segue o mesmo esquema de $x$ aumentando para a direita e $y$ aumentando para baixo. É altamente recomendado não mover o tilemap da origem pois isto pode deixar as referências espaciais muito confusas depois.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/8a3489b9-7672-4302-85cd-49f167e2eff3" />
+</p>
+
+> PS: Note que cada bloco tem $64 \times 64$ pixels, pois este é o tamanho de cada tile, como vimos anteriormente. 
