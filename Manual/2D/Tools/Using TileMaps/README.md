@@ -64,5 +64,13 @@ Agora vamos aos modificadores. É importante ressaltar que você deve selecionar
 
 - <img width="40" src="https://github.com/user-attachments/assets/ca4903b8-cc21-46bb-8974-bbf00a3d7765" /> Aplica um flip vertical no tile.
 
+- <img width="40" src="https://github.com/user-attachments/assets/0a185904-ee33-464f-9782-c61853a7aed3" /> "Picker tool". Você clica no tile no canvas e ela muda a seleção para este tile. É só uma ferramenta de seleção, mas em vez de catar o tile no atlas, você seleciona direto da cena. Serve para agilizar o trabalho.
+
+- <img width="40" src="https://github.com/user-attachments/assets/3a60ae08-5f7c-491c-ac17-ec9f71ba85c3" /> Você vai apagar tiles de acordo com a maneira de desenhar da ferramenta selecionada. Por exemplo, se estiver com a borracha e a ferramenta de retângulo selecionado, você pode apagar em formatos retângulares de qualquer tamanho.
+
+- <img width="140" src="https://github.com/user-attachments/assets/3a940f6e-00d7-4a13-83b1-e9c6c823b019" /> Pode aplicar ou não a ferramenta de desenho. Quanto maior o *Scattering*, maior a probabilidade de não desenhar. Um exemplo de aplicação seria você fazer uma linha de tiles de árvore, mas você quer que apenas algumas sejam desenhadas, para parecer mais orgânico.
+ 
+
+
 
 
