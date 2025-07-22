@@ -33,3 +33,36 @@ Uma coisa importante para ficar atento logo de início é que o tilemap possui s
 </p>
 
 > PS: Note que cada bloco tem $64 \times 64$ pixels, pois este é o tamanho de cada tile, como vimos anteriormente. 
+
+## Desenhando tiles na tela
+
+A principal ferramenta para desenhar com tiles é este pequeno conjunto de opções destacado na imagem abaixo. Só isso já é suficiente para cobrir a maioria das necessidades com tiles. Apenas os primeiros 5 itens são ferramentas de fato, o que vem depois são modificadores das ferramentas. No caso da ferarmenta de seleção (que é a que está sendo usada na imagem), ela não é afetada por nenhum modificador. Vamos passar um por um.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/3efed9b7-4fde-4c96-a332-0f69a64d08ed" />
+</p>
+
+- <img width="40" src="https://github.com/user-attachments/assets/c245310f-a5f1-4f4a-8492-47bc3081cb03" /> O lápis é a ferramenta de desenho comum. Basta você selecionar o tile no editor e depois pode ir no canvas para desenhar os tiles como bem entender.
+
+- <img width="40" src="https://github.com/user-attachments/assets/ceb82f16-16c3-40fe-a516-d6d11577a626" /> O traço é a ferramenta para desenhar segmentos de reta com tiles. Você tem que clicar e segurar o botão do mouse no ponto ininial, então basta mover o mouse para decidir o ponto final e soltar o clique.
+
+- <img width="40" src="https://github.com/user-attachments/assets/6a86c611-38a1-4ca6-a3e4-f8e90c1aff81" /> Ferramenta de retângulo preenchido. Também é só questão de clicar e segurar o clique do mouse, depois o mova e solte onde achar melhor.
+
+- <img width="40" src="https://github.com/user-attachments/assets/5097ffe1-2a7d-4ec1-aa16-9e9c0ba1d59a" /> Ferramenta de preenchimento. Basta clicar na região e ela será preenchida com o tile selecionado. Assim que você seleciona essa ferramenta, ao lado aparece um modificador especial só dela. O botão <img width="80" src="https://github.com/user-attachments/assets/695d8e98-f30f-40d7-a7d9-7a39510cf7d8" /> serve para fazer um preenchimento contínuo ou não. Recomendo testar para entender o comportamento, não é difícil.
+
+Agora vamos aos modificadores. É importante ressaltar que você deve selecionar o modificador antes de começar o desenho. A imagem abaixo exemplifica o caso em que selecionamos a ferramenta de desenho junto de um modificador de rotação. Caso fique em dúvida do que vai sair, você sempre pode passar o mouse no canvas e vai aparecer o preview do tile que será desenhado.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/64a77e84-a6ed-472a-8e9d-72bec239f641" />
+</p>
+
+- <img width="40" src="https://github.com/user-attachments/assets/dfe793f7-a213-454e-b01f-f25e045811a7" /> Rotaciona o tile para a esquerda em $90^\circ$. Cada vez que você clica no modificador ele faz mais uma rotação.
+
+- <img width="40" src="https://github.com/user-attachments/assets/96de6302-0200-4460-96b1-dd7f4d914d1b" /> Análogo ao anterior, mas rotaciona para a direita.
+
+- <img width="40" src="https://github.com/user-attachments/assets/415773b6-531b-48d8-90ff-178984d30024" /> Aplica um flip horizontal no tile.
+
+- <img width="40" src="https://github.com/user-attachments/assets/ca4903b8-cc21-46bb-8974-bbf00a3d7765" /> Aplica um flip vertical no tile.
+
+
+
