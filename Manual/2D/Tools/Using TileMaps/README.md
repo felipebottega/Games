@@ -68,8 +68,13 @@ Agora vamos aos modificadores. É importante ressaltar que você deve selecionar
 
 - <img width="40" src="https://github.com/user-attachments/assets/3a60ae08-5f7c-491c-ac17-ec9f71ba85c3" /> Você vai apagar tiles de acordo com a maneira de desenhar da ferramenta selecionada. Por exemplo, se estiver com a borracha e a ferramenta de retângulo selecionado, você pode apagar em formatos retângulares de qualquer tamanho.
 
-- <img width="140" src="https://github.com/user-attachments/assets/3a940f6e-00d7-4a13-83b1-e9c6c823b019" /> Pode aplicar ou não a ferramenta de desenho. Quanto maior o *Scattering*, maior a probabilidade de não desenhar. Um exemplo de aplicação seria você fazer uma linha de tiles de árvore, mas você quer que apenas algumas sejam desenhadas, para parecer mais orgânico.
+- <img width="140" src="https://github.com/user-attachments/assets/3a940f6e-00d7-4a13-83b1-e9c6c823b019" /> Pode aplicar ou não a ferramenta de desenho na região selecionada. Quanto maior o *Scattering*, maior a probabilidade de não desenhar. Um exemplo de aplicação seria você fazer uma linha de tiles de árvore, mas você quer que apenas algumas sejam desenhadas, para parecer mais orgânico.
  
+Todas essas funcionalidades não precisam ser aplicadas a uma única seleção de tile. Com a ferramenta de seleção <img width="40" src="https://github.com/user-attachments/assets/222a15e5-dbbd-4e89-864d-56c7e3af3aae" /> você pode ir no atlas e selecionar múltiplos tiles ao mesmo tempo (use o shift para isso). Depois escolha a sua ferramenta de desenho e experimente. No exemplo abaixo nós selecionamos a ferramenta de desenhar segmentos de reta. Note o que a preview mostra, é possível desenhar uma linha reta em diagonal de um conjunto de tiles selecionados. As possibilidades que temos a partir disso são enormes, basta ter criatividade e visão!
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/80194def-9be2-4f4e-a3c3-0d3b96cd8bfd" />
+</p>
 
 
 
