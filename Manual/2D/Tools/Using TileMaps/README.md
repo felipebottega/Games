@@ -10,7 +10,7 @@ Este tutorial é consituído dos tutoriais [Using TileMaps](https://docs.godoten
 - **Tilesheet:** É uma imagem contendo vários tiles. A tilesheet é utilizada para criar o objeto tileset, que então é utilizado para compor o tilemap do jogo.
 - **Atlas:** É o tilesheet com a divisão quadriculada já pronta.
 
-## Criando um tileset
+## Criando um TileSet
 
 Começamos baixando o tilesheet [Kenney's "Abstract Platformer" pack](https://kenney.nl/assets/abstract-platformer) que é de licença free. Descompacte o arquivo e coloque a imagem na pasta do seu projeto. Feito isso, crie um node `TileMapLayer` e no Inspector vá em *TileSet → NewTileSet*. Clique novamente neste ícone para abrir as opções e coloque o *Tile Size* para $64 \times 64$. Neste caso estas são as dimensões de cada tile, vocÊ vai ter que saber isso antes de proceder.
 
@@ -69,6 +69,8 @@ Agora vamos aos modificadores. É importante ressaltar que você deve selecionar
 - <img width="40" src="https://github.com/user-attachments/assets/3a60ae08-5f7c-491c-ac17-ec9f71ba85c3" /> Você vai apagar tiles de acordo com a maneira de desenhar da ferramenta selecionada. Por exemplo, se estiver com a borracha e a ferramenta de retângulo selecionado, você pode apagar em formatos retângulares de qualquer tamanho.
 
 - <img width="140" src="https://github.com/user-attachments/assets/3a940f6e-00d7-4a13-83b1-e9c6c823b019" /> Pode aplicar ou não a ferramenta de desenho na região selecionada. Quanto maior o *Scattering*, maior a probabilidade de não desenhar. Um exemplo de aplicação seria você fazer uma linha de tiles de árvore, mas você quer que apenas algumas sejam desenhadas, para parecer mais orgânico.
+
+> PS: O parâmetro *Scattering* varia entre 0 (probabilidade 100% de desenhar) até 1000 (probabilidade quase 0% de desenhar). A fórmula é $\frac{1}{1 + Scattering}$ para a probabilidade de desenhar um tile. Apesar de ser uma escala estranha, isso é para ter um controle maior para probabilidades perto de 0%. Em particular, note que para *Scattering* $=1$ a probabilidade é de 50%. 
  
 Todas essas funcionalidades não precisam ser aplicadas a uma única seleção de tile. Com a ferramenta de seleção <img width="40" src="https://github.com/user-attachments/assets/222a15e5-dbbd-4e89-864d-56c7e3af3aae" /> você pode ir no atlas e selecionar múltiplos tiles ao mesmo tempo (use o shift para isso). Depois escolha a sua ferramenta de desenho e experimente. No exemplo abaixo nós selecionamos a ferramenta de desenhar segmentos de reta. Note o que a preview mostra, é possível desenhar uma linha reta em diagonal de um conjunto de tiles selecionados. As possibilidades que temos a partir disso são enormes, basta ter criatividade e visão!
 
@@ -97,6 +99,18 @@ Só para dar um exemplo concreto, criamos um padrão de quadriculado $2 \times 2
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/d01f9ea9-aab8-41a0-97a5-5471fe0d616c" />
+</p>
+
+## TileSets
+
+Vimos bastante sobre como desenhar os tiles na cena, que é manipulação do atlas e suas ferramentas na aba *TileMap* do editor. Porém, note que ao lado dela temos também a aba *TileSet*. Enquanto a *TileMap* trata de desenhar os tiles na cena, a *TileSet* trata de configurar os tiles. Veremos nesta seção que dá para fazer muito coisa sobre os tiles antes dele serem desenhados.
+
+### Propriedades do TileSet no Inspector
+
+Todas as propriedades mostradas na figura dizem respeito ao TileSet. Vamos dar uma olhada no significado delas.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/7ab948b9-f816-4d78-8e74-0c7bbe40da6d" />
 </p>
 
 
