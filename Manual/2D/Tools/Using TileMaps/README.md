@@ -6,9 +6,11 @@ Este tutorial é consituído dos tutoriais [Using TileMaps](https://docs.godoten
 
 - **Tiles:** Pode ser traduzido como "ladrilhos". São basicamente sprites, mas que são alocados repetidamente nos cenários, podendo ser os blocos que formam o chão, paredes, parede, objetos de decoração, entre outros. Por ter esse caráter de ser um objeto que aparece repetidamente, ele pode ser tratado na engine de maneira coletiva. Isso possibilita algumas otimizações e facilidades que não existe com o sprite, pois este último é tratado como um objeto único e diferenciado do restante.
 - **Tilemap:** É uma grid de tiles.
-- **Tileset:** É um conjunto de tiles que pode ser colocado no tilemap do jogo.
+- **TileSet:** É um conjunto de tiles que pode ser colocado no tilemap do jogo.
 - **Tilesheet:** É uma imagem contendo vários tiles. A tilesheet é utilizada para criar o objeto tileset, que então é utilizado para compor o tilemap do jogo.
 - **Atlas:** É o tilesheet com a divisão quadriculada já pronta.
+
+> PS: É comum usar os termos TileSet e atlas par a mesma coisa. Não nos importaremos muito com a distinção entre os termos.
 
 ## Criando um TileSet
 
@@ -119,4 +121,27 @@ Todas as propriedades mostradas na figura dizem respeito ao TileSet. Vamos dar u
 
 - **Tile Offset Axis:** Se o layout acima estará orientado pelo eixo $x$ ou $y$. Tem que testar para decidir se vai usar.
 
-- **Tile Size:** Essa nós já vimos anteriormente, são as dimensões do tile na tilesheet, em pixels. 
+- **Tile Size:** Essa nós já vimos anteriormente, são as dimensões do tile na tilesheet, em pixels.
+
+### Propriedades do TileSet no editor
+
+Todas as propriedades mostradas na figura dizem respeito ao atlas selecionado. Vamos dar uma olhada no significado delas.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/31584674-9a67-4218-bce5-8f5bb07e981b" />
+</p>
+
+- **ID:** Identificador único do TileSet/atlas. É preferível não mudar e deixar a engine fazer a ordenação automática.
+
+- **Name:** O nome do TileSet. O usuário pode escolher o nome que quiser para identificar pelo nome o TileSet.
+  
+- **Texture:** O arquivo do tilesheet.
+  
+- **Margins:** Desloca toda a divisão quadricular do TileSet no eixo $x$ ou $y$. É útil quando ele vem originalmente com margens. 
+
+- **Separation:** Cria um vão entre os tiles, deixando uma camada de transparência entre eles.
+
+- **Texture Region Size:** Tamanho dos tiles no TileSet. Em geral este valor será igual ao que você definiu com *Tile Size* (visto acima), mas você pode querer alterar aqui. O *Tile Size* define o atlas, enquanto que este pode ser visto como uma deformação posterior do atlas.
+
+- **Use Texture Padding:** Adiciona um pixel de transparência ao redor de cada tile. Isto ajuda a prevenir o efeito de "texture bleeding", que é quando alguns pixels do tile podem "vazar" para os tiles vizinhos. Isto não acontecerá para tiles fixos vindo de um TileSet bem configurado, mas podem surgir artefatos quando há efeitos de luz, deformação, colisão, entre outros.
+-  
