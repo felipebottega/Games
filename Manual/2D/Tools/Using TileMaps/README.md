@@ -113,4 +113,10 @@ Todas as propriedades mostradas na figura dizem respeito ao TileSet. Vamos dar u
   <img width="200" src="https://github.com/user-attachments/assets/7ab948b9-f816-4d78-8e74-0c7bbe40da6d" />
 </p>
 
+- **Tile Shape:** Até agora só vimos tiles quadrados, mas eles podem ter outros formatos que atendem a outros tipos de layouts de jogos.
 
+- **Tile Layout:** Um segundo nível de layout. Depende da escolha da opção acima.
+
+- **Tile Offset Axis:** Se o layout acima estará orientado pelo eixo $x$ ou $y$. Tem que testar para decidir se vai usar.
+
+- **Tile Size:** Essa nós já vimos anteriormente, são as dimensões do tile na tilesheet, em pixels. 
