@@ -76,6 +76,27 @@ Todas essas funcionalidades não precisam ser aplicadas a uma única seleção d
   <img width="700" src="https://github.com/user-attachments/assets/80194def-9be2-4f4e-a3c3-0d3b96cd8bfd" />
 </p>
 
+A ferramenta de seleção não serve apenas para o atlas, você também pode selecionar tiles na cena, e então movês-los, deletá-los, etc. 
 
+## Patterns
+
+Até agora estávamos na aba *Tiles* do editor. Vamos trocar para a aba *Patterns*, logo ao lado. Com a ferramenta de seleção, selecione uma região do tilemap no canvas e pressione ctrl+C. Depois, no editor, faça ctrl+V. A sua seleção vai ficar armazenada na lista do *Patterns*. Fizemos dois exemplo abaixo. O primeiro de uma seleção retangular e o segundo escolhendo ponto a ponto.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/6f18b7de-1c14-41f5-98b1-954d73b66863" />
+  <img width="500" src="https://github.com/user-attachments/assets/438fad1d-1cb9-4a70-b3ae-2181d89d051a" />
+</p>
+
+O legal disso é que cada um desses padrões escolhidos podem ser utilizados nas mesmas ferramentas descritas anteriormente, como se fossem tiles. Por exemplo, escolhemos o primeiro padrão e a ferramenta de desenho retangular para preencher uma região retangular com este padrão. Veja como ficou o resultado. Na esquerda o original e na direta o resultado com o preenchimento retangular do padrão. Novamente, este é um exemplo abstrato, mas com criatividade e visão você pode fazer muitas coisas legais com isso.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/060034bf-6cfa-48fd-8cf0-dfdd99d2d80b" />
+</p>
+
+Só para dar um exemplo concreto, criamos um padrão de quadriculado $2 \times 2$ e usamos a ferramenta de senho retangular para criar um tabuleiro. 
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/d01f9ea9-aab8-41a0-97a5-5471fe0d616c" />
+</p>
 
 
