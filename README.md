@@ -1,5 +1,5 @@
 # Integral Games
-Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os jogos que considero interessantes para mostrar a outras pessoas. Dentro de cada pasta deste repositório há um readme detalhando sobre o que é o jogo e explicando alguns detalhes técnicos que considero relevantes. Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
+Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os jogos que considero interessantes para mostrar a outras pessoas. Dentro de cada pasta deste repositório há um readme detalhando sobre o que é o jogo e explicando alguns detalhes técnicos que considero relevantes. Este repositório não contém os projetos em Godot, mas apenas os arquivos necessários para jogar. Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
 
 <h2>Busca rápida de palavras-chave</h2>
 
@@ -91,6 +91,16 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Getting started\Your first 2D game\Heads up display\Galton Board 2: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202"> # Sobre o CanvasLayer
  </a> </li>
+<li> Manual\2D\2D movement overview: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview">  Todos os vetores do transform são em coordenadas locais
+ </a> </li>
+<li> Manual\2D\2D movement overview: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview">  8-way movement
+ </a> </li>
+<li> Manual\2D\2D movement overview: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview">  Rotação e movimento ("Asteroids-style")
+ </a> </li>
+<li> Manual\2D\2D movement overview: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview">  Rotação e movimento com mouse
+ </a> </li>
+<li> Manual\2D\2D movement overview: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview">  Clicar e mover
+ </a> </li>
 <li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">  Viewport e Canvas items
  </a> </li>
 <li> Manual\2D\Canvas layers\Galton Board 4: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">  Viewport.canvas_transform
@@ -118,6 +128,26 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> Manual\2D\Rendering\2D lights and shadows - Normal Maps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps">  Criando normal maps
  </a> </li>
 <li> Manual\2D\Rendering\2D Meshes: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Meshes">  Adicionando mesh ao sprite
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  O quadriculado do editor é 8x8 pixels
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Preparando as camadas para o Parallax2D
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax"> # Dica para criar sprite sheet
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Posicionando as camadas de paralaxe
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Paralaxe sem movimento de câmera
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax"> # Arrumando paralaxe para figura com o tamanho correto mas espaço extra sobrando
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax"> # Arrumando paralaxe para figura com o espaçamento correto mas figura menor que o viewport
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Repeat Times
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Movimento vertical
+ </a> </li>
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Paralaxe com movimento de câmera
  </a> </li>
 <li> Manual\2D\Rendering\2D particle systems: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems">  Propriedades do GPUParticles2D
  </a> </li>
@@ -161,11 +191,49 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\2D\Rendering\Custom drawing in 2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">  Animação
  </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D - Complex Numbers: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers">  Boot Splash 
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D - Complex Numbers: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers">  Script externo
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D - Complex Numbers: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers">  Botões globais
+ </a> </li>
+<li> Manual\2D\Rendering\Custom drawing in 2D - Complex Numbers: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers">  Desenhando retas e círculos
+ </a> </li>
 <li> Manual\2D\Rendering\ParticleProcessMaterial 2D Usage: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">  Mais propriedades do Particle Process Material
  </a> </li>
 <li> Manual\2D\Rendering\ParticleProcessMaterial 2D Usage: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">  Load Emission Mask
  </a> </li>
 <li> Manual\2D\Rendering\ParticleProcessMaterial 2D Usage: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">  Experimento com velocidade radial
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  Definições básicas 
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  Criando um TileSet
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  Coordenadas do tilemap
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  Desenhando tiles na tela
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  Patterns
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  TileSets
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Propriedades do TileSet no Inspector
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Aba Setup
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Fusão de atlas
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Aba Select
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Colisão 
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Navigation e light occlusion para o TileSet
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Metadados
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Aba Paint
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Tiles alternativos
  </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Sprites de sprites
  </a> </li>
