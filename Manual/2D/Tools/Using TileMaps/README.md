@@ -206,7 +206,7 @@ O modo de adicionar e customizar estas propriedades para os TileSets é inteiram
 
 ### Metadados
 
-É possível adicionar metadados aos tiles individualmente ou em grupo. Por exemplo, poderíamos ter um tile de lava, daí teríamos um metadado tipo *damage = 15*. O metadado em si não faz nada, é apenas uma informação para ser acessada. Note que outros nodes, como `Sprite2D`, não possuem isso, então seria necessário criar um dicionário para gerar metadados para estas estruturas. OS tiles possuem tratamento diferenciado pois eles foram feitos para serem tratados em quantidade. Portanto a engine está otimizada para acessar mnetadados de conjuntos grandes de tiles, mas para um conjunto grande de `Sprite2D`, por exemplo, pois cada `Sprite2D` é uma entidade única e separada das outras. 
+É possível adicionar metadados aos tiles individualmente ou em grupo. Por exemplo, poderíamos ter um tile de lava, daí teríamos um metadado tipo *damage* $= 15$. O metadado em si não faz nada, é apenas uma informação para ser acessada. Note que outros nodes, como `Sprite2D`, não possuem isso, então seria necessário criar um dicionário para gerar metadados para estas estruturas. OS tiles possuem tratamento diferenciado pois eles foram feitos para serem tratados em quantidade. Portanto a engine está otimizada para acessar mnetadados de conjuntos grandes de tiles, mas para um conjunto grande de `Sprite2D`, por exemplo, pois cada `Sprite2D` é uma entidade única e separada das outras. 
 
 Para poder adicionar metadados, primeiro clique na aba *Custom Data Layers* e depois em adicionar para ir adicionando cada um dos metadados. Abaixo temos um exemplo simples com a criação de dois metadados. O primeiro é o *damage*, do tipo *int*. O segundo é o *insta_kill*, do tipo *bool*. 
 
@@ -218,5 +218,19 @@ Note que estes metadados foram criados para o TileSet inteiro. Ou seja, eles ser
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/63a6df85-d21b-4606-aa08-032a951428b4" />
+</p>
+
+### Aba Paint
+
+Esta aba é simples. Basta escolher uma propriedade que você quer "pintar" no atlas. No exemplo abaixo nós escolhemos o metadado *damage*. Vamos supor que queremos inserir *damage* $=25$ em diversos tiles. É só escrever o valor e no próprio atlas você clica com o mouse, se gura o clique, e percorre com o mouse sobre o atlas. Você vai notar que ele começa a "pintar" o valor $25$ por onde você passa com o mouse clicado. Esta é a funcionalidade desta aba.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/465a1466-76e5-402b-af3d-4e276ccb1699" />
+</p>
+
+Outra maneira de se fazer múltiplas atribuições de valores é indo na aba *Select*, selecionando vários tiles e alterando o valor para o que você quer. É menos dinâmico que pintar os valores, mas se for um conjunto retangular e grande de tiles, por exemplo, é mais prático. Depende de cada caso qual o modo de atribuição múltipla você vai utilizar.
+
+<p align="center">
+  <img width="650" src="https://github.com/user-attachments/assets/70890641-de50-4ee6-8810-1e4904fb5b2d" />
 </p>
 
