@@ -5,12 +5,10 @@ Este tutorial é consituído dos tutoriais [Using TileMaps](https://docs.godoten
 ## Definições básicas 
 
 - **Tiles:** Pode ser traduzido como "ladrilhos". São basicamente sprites, mas que são alocados repetidamente nos cenários, podendo ser os blocos que formam o chão, paredes, parede, objetos de decoração, entre outros. Por ter esse caráter de ser um objeto que aparece repetidamente, ele pode ser tratado na engine de maneira coletiva. Isso possibilita algumas otimizações e facilidades que não existe com o sprite, pois este último é tratado como um objeto único e diferenciado do restante.
-- **Tilemap:** É uma grid de tiles.
+- **Tilemap:** É uma grid de tiles pronta para ser colocada no jogo.
 - **TileSet:** É um conjunto de tiles que pode ser colocado no tilemap do jogo.
 - **Tilesheet:** É uma imagem contendo vários tiles. A tilesheet é utilizada para criar o objeto tileset, que então é utilizado para compor o tilemap do jogo.
-- **Atlas:** É o tilesheet com a divisão quadriculada já pronta.
-
-> PS: É comum usar os termos TileSet e atlas par a mesma coisa. Não nos importaremos muito com a distinção entre os termos.
+- **Atlas:** É o tilesheet com a divisão quadriculada já pronta. Um TileSet pode conter vários atlas diferentes.
 
 ## Criando um TileSet
 
@@ -131,17 +129,53 @@ Todas as propriedades mostradas na figura dizem respeito ao atlas selecionado. V
   <img width="850" src="https://github.com/user-attachments/assets/31584674-9a67-4218-bce5-8f5bb07e981b" />
 </p>
 
-- **ID:** Identificador único do TileSet/atlas. É preferível não mudar e deixar a engine fazer a ordenação automática.
+- **ID:** Identificador único do atlas. É preferível não mudar e deixar a engine fazer a ordenação automática.
 
-- **Name:** O nome do TileSet. O usuário pode escolher o nome que quiser para identificar pelo nome o TileSet.
+- **Name:** O nome do atlas. O usuário pode escolher o nome que quiser para identificar pelo nome o atlas.
   
 - **Texture:** O arquivo do tilesheet.
   
-- **Margins:** Desloca toda a divisão quadricular do TileSet no eixo $x$ ou $y$. É útil quando ele vem originalmente com margens. 
+- **Margins:** Desloca toda a divisão quadricular do atlas no eixo $x$ ou $y$. É útil quando ele vem originalmente com margens. 
 
 - **Separation:** Cria um vão entre os tiles, deixando uma camada de transparência entre eles.
 
-- **Texture Region Size:** Tamanho dos tiles no TileSet. Em geral este valor será igual ao que você definiu com *Tile Size* (visto acima), mas você pode querer alterar aqui. O *Tile Size* define o atlas, enquanto que este pode ser visto como uma deformação posterior do atlas.
+- **Texture Region Size:** Tamanho dos tiles no atlas. Em geral este valor será igual ao que você definiu com *Tile Size* (visto acima), mas você pode querer alterar aqui. O *Tile Size* define o atlas, enquanto que este pode ser visto como uma deformação posterior do atlas.
 
 - **Use Texture Padding:** Adiciona um pixel de transparência ao redor de cada tile. Isto ajuda a prevenir o efeito de "texture bleeding", que é quando alguns pixels do tile podem "vazar" para os tiles vizinhos. Isto não acontecerá para tiles fixos vindo de um TileSet bem configurado, mas podem surgir artefatos quando há efeitos de luz, deformação, colisão, entre outros.
--  
+
+Quando estiver mexendo com *Margins, Separation* e *Texture Region Size*, lguns tiles podem desaparecer. Para garantir que isso não aconteça, selecione a opção *Create Tiles in Non-Transparent Texture Regions* mostrada abaixo.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/a1875f5f-90af-4331-bf5a-5ea4c96e5a45" />
+</p>
+
+### Fusão de atlas
+
+Você pode vários atlas no mesmo TileSet. Em alguns casos pode ser mais conveniente fundir os atlas em um único. Para isso, selecione a opção *Open Atlas Merging Tool* como mostrado abaixo.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/4dbc82ed-506f-45fa-8488-9bfdd78aa228" />
+</p>
+
+Isto vai abrir a janela mostrada abaixo. Agora basta selecionar os atlas que você quer fundir e selecionar uma das opções abaixo. DAlém disso, dependendo de como você configura a opção *Next Line After Column*, os atlas podem ficar alinhados horizontalmente ou verticalmente caso sejam só 2 atlas. Se forem mais atlas, você pode ainda ter um retângulo de atlas. É questão de testar os valores.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/36ded95d-e519-4cbf-a51f-63752f95c8a5" />
+</p>
+
+### Aba Select
+
+### Colisão 
+
+Para poder adicionar colisão aos tiles, primeiro você deve criar uma camada de física indo em *Add Element* no *Physics Layers*, como mostrado abaixo. Ao fazer isso, vai aparecer mais coisas, mas você não precisa mexer nelas. 
+
+<p align="center">
+  <img width="220" src="https://github.com/user-attachments/assets/dab1ca88-1997-4481-a432-0b97d4656fc3" />
+</p>
+
+Feito isso, vá para a aba *Select* no editor e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D). 
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/56d20c52-5766-457e-8bce-a7e13b97fb26" />
+  <img width="220" src="https://github.com/user-attachments/assets/15cb3d9c-a702-4438-9bd1-400919843ef9" />
+</p>
