@@ -121,7 +121,7 @@ Todas as propriedades mostradas na figura dizem respeito ao TileSet. Vamos dar u
 
 - **Tile Size:** Essa nós já vimos anteriormente, são as dimensões do tile na tilesheet, em pixels.
 
-### Propriedades do TileSet no editor
+### Aba Setup
 
 Todas as propriedades mostradas na figura dizem respeito ao atlas selecionado. Vamos dar uma olhada no significado delas.
 
@@ -165,6 +165,19 @@ Isto vai abrir a janela mostrada abaixo. Agora basta selecionar os atlas que voc
 
 ### Aba Select
 
+Na aba *Select* (selecionada em azul, ao lado de *Setup*), temos as propriedades mostradas abaixo. Vamos explicá-las.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/7c23a17f-ab4e-4c54-b39f-14f8a6a215cf" />
+</p>
+
+- **Atlas Coords:** São as *coordenadas do tilemap* que vimos no início deste tutorial. Não é editável.
+
+- **Size in Atlas:** Tamanho do tile em termos das coordenadas do tilemap. Não é editável.
+
+
+
+
 ### Colisão 
 
 Para poder adicionar colisão aos tiles, primeiro você deve criar uma camada de física indo em *Add Element* no *Physics Layers*, como mostrado abaixo. Ao fazer isso, vai aparecer mais coisas, mas você não precisa mexer nelas. 
@@ -173,11 +186,11 @@ Para poder adicionar colisão aos tiles, primeiro você deve criar uma camada de
   <img width="220" src="https://github.com/user-attachments/assets/dab1ca88-1997-4481-a432-0b97d4656fc3" />
 </p>
 
-Feito isso, vá para a aba *Select* no editor e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D). 
+Feito isso, vá para a aba *Select* no editor e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [Polygon2D e CollisionPolygon2D]([https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D)). 
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/56d20c52-5766-457e-8bce-a7e13b97fb26" />
   <img width="220" src="https://github.com/user-attachments/assets/15cb3d9c-a702-4438-9bd1-400919843ef9" />
 </p>
 
-> PS: Geralmente é mais conveniente começar já com um quadrado de colisão selecionado, ocupando os 4 vértices do tile. Para isso, basta clicar no tile, dentro da parte de edição, e apertar F.
+> Dica: Geralmente é mais conveniente começar já com um quadrado de colisão selecionado, ocupando os 4 vértices do tile. Para isso, basta clicar no tile, dentro da parte de edição, e apertar F.
