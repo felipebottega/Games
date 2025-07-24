@@ -214,7 +214,7 @@ Para poder adicionar metadados, primeiro clique na aba *Custom Data Layers* e de
   <img width="200" src="https://github.com/user-attachments/assets/e905f17c-a0b7-472a-9fe9-8c2fd25f4583" />
 </p>
 
-Note que estes metadados poram criados para o TileSet inteiro. Ou seja, eles serão acessíveis por todos os atlas que você colocar ali. Inclusive, na aba *Select* no editor, você pode reparar que a aba *Custom Data* já apareceu automaticamente, incluindo os metadados que você criou (a engine sempre atribui valores default para cada tipo de variável). No exemplo da imagem abaixo, podemos ver que é possível configurar os metadados para cada tile individualmente. Este valor fica evidenciado no próprio atlas, à direita da imagem.
+Note que estes metadados foram criados para o TileSet inteiro. Ou seja, eles serão acessíveis por todos os atlas que você colocar ali. Inclusive, na aba *Select* no editor, você pode reparar que a aba *Custom Data* já apareceu automaticamente, incluindo os metadados que você criou (a engine sempre atribui valores default para cada tipo de variável). No exemplo da imagem abaixo, podemos ver que é possível configurar os metadados para cada tile individualmente. Este valor fica evidenciado no próprio atlas, à direita da imagem.
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/63a6df85-d21b-4606-aa08-032a951428b4" />
