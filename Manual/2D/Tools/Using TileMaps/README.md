@@ -179,3 +179,5 @@ Feito isso, vá para a aba *Select* no editor e selecione algum tile. Note que a
   <img width="600" src="https://github.com/user-attachments/assets/56d20c52-5766-457e-8bce-a7e13b97fb26" />
   <img width="220" src="https://github.com/user-attachments/assets/15cb3d9c-a702-4438-9bd1-400919843ef9" />
 </p>
+
+> PS: Geralmente é mais conveniente começar já com um quadrado de colisão selecionado, ocupando os 4 vértices do tile. Para isso, basta clicar no tile, dentro da parte de edição, e apertar F.
