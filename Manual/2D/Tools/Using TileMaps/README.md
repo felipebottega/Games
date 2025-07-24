@@ -165,7 +165,7 @@ Isto vai abrir a janela mostrada abaixo. Agora basta selecionar os atlas que voc
 
 ### Aba Select
 
-Na aba *Select* (selecionada em azul, ao lado de *Setup*), temos as propriedades mostradas abaixo. Vamos explicá-las.
+Na aba *Select* (selecionada em azul, ao lado de *Setup*), temos as propriedades mostradas abaixo. Vamos explicar algumas delas abaixo.
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/7c23a17f-ab4e-4c54-b39f-14f8a6a215cf" />
@@ -175,8 +175,9 @@ Na aba *Select* (selecionada em azul, ao lado de *Setup*), temos as propriedades
 
 - **Size in Atlas:** Tamanho do tile em termos das coordenadas do tilemap. Não é editável.
 
+- **Rendering/Texture Origin:** Altera a posição do centro do tile.
 
-
+-  **Rendering/Modulate:** Altera a coloração do tile.
 
 ### Colisão 
 
@@ -194,3 +195,28 @@ Feito isso, vá para a aba *Select* no editor e selecione algum tile. Note que a
 </p>
 
 > Dica: Geralmente é mais conveniente começar já com um quadrado de colisão selecionado, ocupando os 4 vértices do tile. Para isso, basta clicar no tile, dentro da parte de edição, e apertar F.
+
+### Navigation e light occlusion para o TileSet
+
+O modo de adicionar e customizar estas propriedades para os TileSets é inteiramente análogo ao que fizemos para colisão. A maior diferença é o ponto de partida. Enquanto na colisão nós adicionamos física, os outros requerem interação em outras abas.
+
+<p align="center">
+  <img width="180" src="https://github.com/user-attachments/assets/1d63b176-7fff-4b58-9afd-31b596c1fce5" />
+</p>
+
+### Metadados
+
+É possível adicionar metadados aos tiles individualmente ou em grupo. Por exemplo, poderíamos ter um tile de lava, daí teríamos um metadado tipo *damage = 15*. O metadado em si não faz nada, é apenas uma informação para ser acessada. Note que outros nodes, como `Sprite2D`, não possuem isso, então seria necessário criar um dicionário para gerar metadados para estas estruturas. OS tiles possuem tratamento diferenciado pois eles foram feitos para serem tratados em quantidade. Portanto a engine está otimizada para acessar mnetadados de conjuntos grandes de tiles, mas para um conjunto grande de `Sprite2D`, por exemplo, pois cada `Sprite2D` é uma entidade única e separada das outras. 
+
+Para poder adicionar metadados, primeiro clique na aba *Custom Data Layers* e depois em adicionar para ir adicionando cada um dos metadados. Abaixo temos um exemplo simples com a criação de dois metadados. O primeiro é o *damage*, do tipo *int*. O segundo é o *insta_kill*, do tipo *bool*. 
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/e905f17c-a0b7-472a-9fe9-8c2fd25f4583" />
+</p>
+
+Note que estes metadados poram criados para o TileSet inteiro. Ou seja, eles serão acessíveis por todos os atlas que você colocar ali. Inclusive, na aba *Select* no editor, você pode reparar que a aba *Custom Data* já apareceu automaticamente, incluindo os metadados que você criou (a engine sempre atribui valores default para cada tipo de variável).
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/55637a4c-b330-446c-a653-ebe81c2fcc14" />
+</p>
+
