@@ -234,3 +234,13 @@ Outra maneira de se fazer múltiplas atribuições de valores é indo na aba *Se
   <img width="650" src="https://github.com/user-attachments/assets/70890641-de50-4ee6-8810-1e4904fb5b2d" />
 </p>
 
+### Tiles alternativos
+
+Para criar um tile alternativo, basta dar o segundo clique em algum tile e selecionar *Create Alternative Tile*. Feito isso, note que em *Rendering* ele possui algumas propriedades extras que podem ser modificadas.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/19015b3f-2fa8-432b-9d62-f9f7ff700a06" />
+  <img width="500" src="https://github.com/user-attachments/assets/06bc2ef7-3afc-4978-8bbf-5bdab6eb1e1d" />
+</p>
+
+> PS: Tiles alternativos possuem um ID alternativo, como pode ser visto na imagem. É recomendado não alterar este valor. Deixa o automático da engine dar conta da ordenação.
