@@ -12,7 +12,7 @@ Este tutorial é consituído dos tutoriais [Using TileMaps](https://docs.godoten
 
 ## Criando um TileSet
 
-Começamos baixando o tilesheet [Kenney's "Abstract Platformer" pack](https://kenney.nl/assets/abstract-platformer) que é de licença free. Descompacte o arquivo e coloque a imagem na pasta do seu projeto. Feito isso, crie um node `TileMapLayer` e no Inspector vá em *TileSet → NewTileSet*. Clique novamente neste ícone para abrir as opções e coloque o *Tile Size* para $64 \times 64$. Neste caso estas são as dimensões de cada tile, vocÊ vai ter que saber isso antes de proceder.
+Começamos baixando o tilesheet [Kenney's "Abstract Platformer" pack](https://kenney.nl/assets/abstract-platformer) que é de licença free. Descompacte o arquivo e coloque a imagem na pasta do seu projeto. Feito isso, crie um node `TileMapLayer` e no Inspector vá em *TileSet → NewTileSet*. Clique novamente neste ícone para abrir as opções e coloque o *Tile Size* para $64 \times 64$. Neste caso estas são as dimensões de cada tile, você vai ter que saber isso antes de proceder.
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/382a4ec0-e0e7-48fc-bd11-26992f270058" />
