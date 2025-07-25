@@ -56,3 +56,20 @@ res://
 
 Obviamente eu ainda não devo precisar nem da metade dessa estrutura toda, mas vou deixar aqui registrada para futura referência. Além disso, ela será útil para o jogo que farei agora, pois quero que ele fique organizado (não só ele, mas os próximos que virão depois).
 
+## Plataforma com tiles
+
+Começaremos com o objeto principal deste tutorial, os tiles! De maneira análoga ao tutorial sobre tiles, iremos utilizar o [Kenney's "Abstract Platformer" pack](https://kenney.nl/assets/abstract-platformer). Devemos criar um node `TileMapLayer` e ir em *Inspector → TileSet → NewTileSet*. Daí clicamos novamente neste ícone para abrir as opções e colocamos o *Tile Size* para $64 \times 64$. Chamaremos esta cena de "Platforms", pois ela é constituída apenas das plataformas de tiles. Como queremos bastante espaço para praticar tiles, teremos uma viewport de tamanho $4000 \times 1600$. Ajuste isso no *Project Settings* e coloque *Size/Mode = Maximized* e *Stretch/Mode = viewport".
+
+Iremos trabalhar principalmente com os 3 tiles destacados abaixo. Adicione uma camada de colisão à eles, conforme ensinado no tutorial de tiles.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/c880212a-0f5f-4951-bbba-fc7d37b20cbe" />
+</p>
+
+O chão foi feito com os dois primeiros tiles indicados acima (o da esquerda e o do meio). Colocamos o primeiro tile mais à esquerda individualmente e depois utilizamos a ferramenta de traçar retas para fazer a linha de tiles repetidos até o final da tela. Para a parte inferior (a terra, talvez), usamos a ferramenta de retângulo para fazer um retângulo preenchido. Depois selecionamos os dois tiles selecionados na figura abaixo e colocamos uma probabilidade para a ferramenta. Daí repetimos o desenho retangular para estes desenhos serem alocados aleatoriamente em alguns pontos. Isso deixa a imagem mais dinâmica e agradável aos olhos.
+
+<p align="center">
+    <img width="900" src="https://github.com/user-attachments/assets/14bb95b6-0659-4a43-a9b9-1021b32fd203" />
+</p>
+
+
