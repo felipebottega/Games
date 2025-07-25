@@ -11,7 +11,7 @@ res://
 ├── assets/                        # Arquivos brutos de mídia (nunca editados por Godot)
 │   ├── graphics/                  # Imagens e sprites (ex: PNG, SVG, sprite sheets)
 │   │   ├── characters/            # Personagens (ex: jogador, inimigos)
-│   │   ├── environment/           # Tilesets, cenários, objetos de mapa
+│   │   ├── environment/           # Cenários, objetos de mapa
 │   │   ├── ui/                    # Ícones e imagens para menus e HUD
 │   │   └── effects/               # Explosões, partículas, transições visuais
 │   ├── audio/                     # Arquivos de áudio organizados por tipo
