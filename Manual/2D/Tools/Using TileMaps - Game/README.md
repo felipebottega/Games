@@ -72,4 +72,33 @@ O chão foi feito com os dois primeiros tiles indicados acima (o da esquerda e o
     <img width="900" src="https://github.com/user-attachments/assets/14bb95b6-0659-4a43-a9b9-1021b32fd203" />
 </p>
 
+Depois disso acrescente mais daqueles 3 tiles para criar plataformas flutuantes.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/097f0b63-5e65-4bdf-9de1-2465e869d351" />
+</p>
+
+Agora selecione as plantas e a ferramenta de traçar reta, com o modificador de probabilidade. Então trace uma reta logo acima do chão para acrescentar algumas plantas. Depois disso, colocamos algumas plantas grandes manualmente.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/0134dbf4-38ba-47ac-ab66-b7cdbb346bdc" />
+</p>
+
+Depois de salvar esta cena, vamos criar uma nova, que vamos chamar de "PlatformsFront". Vá em *FileSystem*, crie uma duplicata da cena anterior e altere o nome.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/320f049c-628f-4224-a400-cdb7a012aff7" />
+</p>
+
+Nesta cena, deixe um `Node2D` como node raíz, crie uma duplicate do node `Platforms` mas apague todo o desenho deste novo node. Você vai repetir o procedimento que fizemos para colocar as plantas no chão do cenário.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/13feca19-bc87-4934-8bab-f3082f126bfd" />
+</p>
+
+Após ter feito o desenho, faça com que o node `PlatformsFront` fique um pouco mais abaixo que o `Platforms`, como indicado na figura. Feito isso, você pode remover o `Platforms` da cena, colocar o `PlatformsFront` como raíz e remover o `Node2D`. A ideia é que o personagem do jogo ficará entre as duas camadas de plantas, o que dará uma sensação de profundidade sutil. É um detalhe, mas vale a pena.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/4874c6fc-e337-4022-914b-678a54489f65" />
+</p>
 
