@@ -54,7 +54,7 @@ res://
 └── main.tscn                   # Cena inicial (ex: menu principal)
 ```
 
-Obviamente eu ainda não devo precisar nem da metade dessa estrutura toda, mas vou deixar aqui registrada para futura referência. Além disso, ela será útil para o jogo que farei agora, pois quero que ele fique organizado (não só ele, mas os próximos que virão depois).
+Obviamente eu ainda não devo precisar nem da metade dessa estrutura toda, mas vou deixar aqui registrada para futura referência. Além disso, ela será útil para o jogo que farei agora, pois quero que ele fique organizado (não só ele, mas os próximos que virão depois). 
 
 ## Plataforma com tiles
 
@@ -96,11 +96,39 @@ Nesta cena, deixe um `Node2D` como node raíz, crie uma duplicate do node `Platf
   <img width="800" src="https://github.com/user-attachments/assets/13feca19-bc87-4934-8bab-f3082f126bfd" />
 </p>
 
-Após ter feito o desenho, faça com que o node `PlatformsFront` fique um pouco mais abaixo que o `Platforms`, como indicado na figura. Feito isso, você pode remover o `Platforms` da cena, colocar o `PlatformsFront` como raíz e remover o `Node2D`. A ideia é que o personagem do jogo ficará entre as duas camadas de plantas, o que dará uma sensação de profundidade sutil. É um detalhe, mas vale a pena.
+Após ter feito o desenho, faça com que o node *PlatformsFront* fique um pouco mais abaixo que o *Platforms*, como indicado na figura. Feito isso, você pode remover o *Platforms* da cena, colocar o *PlatformsFront* como raíz e remover o `Node2D`. A ideia é que o personagem do jogo ficará entre as duas camadas de plantas, o que dará uma sensação de profundidade sutil. É um detalhe, mas vale a pena.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/4874c6fc-e337-4022-914b-678a54489f65" />
 </p>
 
 > PS: A engine vai reclamar que você não deveria mudar a posição do node raiz, e talvez não precise mesmo. Poderíamos deixar na origem e mover só na cena principal, mas preferi fazer agora para já ter esse passo evidenciado no tutorial.
+
+Crie a cena *Level* como um `Node2D` sem nada por enquanto. Aos poucos vamos popular esta cena com os objetos necessários. No momento atual, já é possível colocar as duas cenas de plataforma sobrespostas.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/734b7bba-6ef6-41bc-af75-8e3594ac18b5" />
+</p>
+
+## Personagem principal
+
+A cena do personagem será um `CharacterBody2D`. Primeiramente, vamos configurar as animações. As spritesheets da *Vampire Girl* foram obtidas no [Craftpix](https://craftpix.net/freebies/free-vampire-pixel-art-sprite-sheets/?num=1&count=80&sq=vampire%20girl&pos=3). Iremos utilizar as animações *idle, jump, run* e *walk*. Ao fim das configuraçõs, o resultado deve estar como mostrado abaixo.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/3462d798-6820-4a8f-84e5-92dd5be7ddda" />
+</p>
+
+Adicione uma caixa de colisão para o personagem, se baseando na animação idle para decidir o tamanho do shape. Aumente em 3 vezes a escala do personagem. Adicione os 3 efeitos sonoros na cena (`AudioStreamPlayer`), como mostrado abaixo.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/f40ca28c-9d90-4493-add4-b75b791640a6" />
+</p>
+
+Depois disso, adicione o script abaixo ao `CharacterBody2D`. Agora já é possível adicionar o personagem na cena *Level*. Lembre-se de colocá-lo após *Platforms* e antes de *PlatformsFront*. 
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/6b59b2b1-6265-4841-a9f9-b761f9ffc358" />
+</p>
+
+> PS: A partir daqui já entramos em um ponto que podemos começar a testar o jogo na prática, basta executar a cena *Level*. Duas coisas que eu fiz neste estágio: coloquei manualmente lgumas plantas grandes no *PlatformsFront* e ajustei os volumes dos efeitos sonoros.
 
