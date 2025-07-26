@@ -127,7 +127,7 @@ Adicione uma caixa de colisão para o personagem, se baseando na animação idle
 Depois disso, adicione o script abaixo ao `CharacterBody2D`. Agora já é possível adicionar o personagem na cena *Level*. Lembre-se de colocá-lo após *Platforms* e antes de *PlatformsFront*. 
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/6b59b2b1-6265-4841-a9f9-b761f9ffc358" />
+  <img width="500" src="https://github.com/user-attachments/assets/e76cd871-2223-42dd-b88e-2be14dbcd63e" />
 </p>
 
 > PS: A partir daqui já entramos em um ponto que podemos começar a testar o jogo na prática, basta executar a cena *Level*. Duas coisas que eu fiz neste estágio: coloquei manualmente lgumas plantas grandes no *PlatformsFront* e ajustei os volumes dos efeitos sonoros.
