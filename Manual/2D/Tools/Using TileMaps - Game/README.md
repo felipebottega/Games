@@ -132,3 +132,16 @@ Depois disso, adicione o script abaixo ao `CharacterBody2D`. Agora já é possí
 
 > PS: A partir daqui já entramos em um ponto que podemos começar a testar o jogo na prática, basta executar a cena *Level*. Duas coisas que eu fiz neste estágio: coloquei manualmente lgumas plantas grandes no *PlatformsFront* e ajustei os volumes dos efeitos sonoros.
 
+## Nuvens
+
+Vamos aproveitar a oportunidade e relembrar o que aprendemos de paralaxe. Usaremos as nuvens disponíveis [nest link do Craftpix](https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/?num=1&count=180&sq=clouds%20sky%20background&pos=2). Crie uma nova cena com um `Node2D` como raíz e 3 filhos do tipo `Parallax2D`. Renomeamos os nodes filhos e adicionamos seus respectivos sprites. Começaremos analisando a situação com o terceira nuvem, que é a mais próxima. Abaixo, temos as configurações do node de paralaxe, que já estão corretos. O que está errado é que o tamanho do sprite é muito pequeno em relação a viewport. Para ajustar isso, devemos aumentar a escala do `Sprite2D` filho. Como já vimos no tutorial de paralaxe, esse é um ajuste delicado. Você pode ajustar manipulando visualmente, mas lembre que [cada bloco do editor equivale a 8 pixels](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#o-quadriculado-do-editor-%C3%A9-8x8-pixels).
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/5ffd5505-b23d-4cb5-848f-5ab4c4180481" />
+</p>
+
+> PS: Uma sequência de básica de passos que garante mais exatidão: Coloque o `Sprite2D` na posição desejada → Ajuste a escala do `Sprite2D` para o tamanho desejado → Ajuste o parâmetro *Repeat Size* até visualizar o encaixe perfeito na tela. Mas idealmente você deveria ajustar o sprite em algum editor de imagem, como o GIMP, e usar a Godot para as outras coisas.
+
+Depois que tiver ajustado corretamente essa camada de nuvens, basta repetir os passos para as outras camadas e adicionar a cena no *Level*. Como elas são background, devem estar acima dos outros nodes na árvore (exceto a raíz).
+
+Assim como utilizamos duas camadas de plantas para dar uma sensação de profundidade, utilizaremos duas camdas de nuvens. Além da sensação de profundidade na cena, também vai mostrar que o cenário se passa num local muito alto (que é a minha intenção). Crie uma nova cena, chamaremos ela de *CloudsFront*. 
