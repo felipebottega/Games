@@ -247,5 +247,54 @@ Como este jogo será exportado para HTML5, é possível que algumas coisas do jo
 
 Note que o background padrão do jogo está no cinza default da Godot. Queremos uma cor preta, que também é classico deste tipo de tela de pressionar tecla. Para isso, você deve ir em *Project Setings → General → Rendering Environment → Default Clear Color*.
 
+Por esta cena ser a primeira coisa do jogo que vai aparecer, ela será a cena main. Então salve-a com o nome *Main* e a coloque na pasta principal, assim como indicado na estrutura mostrada no início deste tutorial.
+
+## Vento
+
+
+
+## Controles
+
+
 ## Toques finais
 
+Não queremos que o player possa morrer nesse jogo. Então vamos colocar uma parede invisível no lado direito da viewport e vamos também implementar uma lógica para que o player caia do céu quando ele cair no buraco. A parede invisível não tem nenhum mistério, a imagem abaixo resume tudo.
+
+<p align="center">
+  <img width="1200" src="https://github.com/user-attachments/assets/74022574-8114-4a2a-889d-70feec865bd4" />
+</p>
+
+Para a lógica do player, vá no script do player e acrescente uma condicional em `_physics_process`. Se a global posição $y$ do player ficar abaixo do limite inferior da viewport, ele é teleportado para o topo da tela (e coloque o eixo $x$ no meio da tela para evitar loop de cair em buraco quando há vento). Coloque o código abaixo logo após a parte de animações do player.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/d31515c8-9c55-4464-83be-5f8cf627c8a3" />
+</p>
+
+Como mencionado anteriormente, quero colocar uma música para tocar logo no início do jogo, e quero que ela toque continuamente, em loop. Este comportamento de cena global e independente do jogo é possível através de um [autoload](https://docs.godotengine.org/en/latest/tutorials/scripting/singletons_autoload.html). Esse é outro conceito que ainda não vimos, mas vamos pegar emprestado "do futuro" para a nossa aplicação atual. Por enquanto, basta saber que é uma cena glocal que vai rodar continuamente, sem ser interrompida pelos eventos do jogo. 
+
+Crie uma cena com um único node `AudioStreamPlayer` e configure como mostrado abaixo. Chamaremos esta cena de *Music*.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/043d3b88-9b29-4d9d-a925-b9c16c23280f" />
+</p>
+
+Depois de configurada a cena, precisamos habilitar o autoload para ela. Vá em *Project Settings → Globals*, clique no ícone de pasta para buscar arquivo, selecione a cena *music.tscn* e clique em *+Add*. Isso é o suficiente para termos ela carregando automaticamente no início do jogo e rodando independentemente de qualquer coisa. 
+
+<p align="center">
+  <img width="1200" src="https://github.com/user-attachments/assets/3ea72da1-ac55-423b-8863-5d3e99cd30be" />
+</p>
+
+Quando o player coleta todas as moedas, queremos pausar o jogo e exigir uma mensagem de vitória na tela. Comece criando uma cópia do node do score no HUD, mude a mensagem para uma mensagem de vitória e deixe este node invisível por default. A posição dele e tamanho não importa, pois isto será determinado via script.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/ac189bf8-4144-4cf7-90fc-b79fd88cc246" />
+</p>
+
+Mostramos abaixo como deve ser atualizado o script de *Level*. O segundo vector, `Vector2i(250, 50)`, que aparece na centralização, foi um ajuste posterior, feito no olho mesmo pois eu não gostei da centralização inicial.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/ff254948-b49f-492e-bc65-935e6d49ff5e" />
+  <img width="500" src="https://github.com/user-attachments/assets/ebfcad2d-6625-4f2d-a5b0-44854a488466" />
+</p>
+
+Depois disso acabou, o jogador ganhou! Também acabou o tutorial/documentação deste meu primeiro jogo mais sério. Este é o primeiro de muitos!
