@@ -4,7 +4,7 @@ Este projeto será o meu primeiro jogo com o objetivo de ser um jogo de fato. O 
 
 ## Organização de um projeto
 
-Em um [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#organiza%C3%A7%C3%A3o-de-um-projeto), vimos superficialmente como organizar um projeto em Godot. Eu olhei essa questão mais a fundo cheguei a uma estrutura de pastas bem organizada e voltada a projetos sérios. 
+[Neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#organiza%C3%A7%C3%A3o-de-um-projeto), vimos superficialmente como organizar um projeto em Godot. Eu olhei essa questão mais a fundo cheguei a uma estrutura de pastas bem organizada e voltada a projetos sérios. 
 
 ```text
 res://
@@ -134,7 +134,7 @@ Depois disso, adicione o script abaixo ao `CharacterBody2D`. Agora já é possí
 
 ## Nuvens
 
-Vamos aproveitar a oportunidade e relembrar o que aprendemos de paralaxe. Usaremos as nuvens disponíveis [nest link do Craftpix](https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/?num=1&count=180&sq=clouds%20sky%20background&pos=2). Crie uma nova cena com um `Node2D` como raíz e 3 filhos do tipo `Parallax2D`. Renomeamos os nodes filhos e adicionamos seus respectivos sprites. Começaremos analisando a situação com o terceira nuvem, que é a mais próxima. Abaixo, temos as configurações do node de paralaxe, que já estão corretos. O que está errado é que o tamanho do sprite é muito pequeno em relação a viewport. Para ajustar isso, devemos aumentar a escala do `Sprite2D` filho. Como já vimos no tutorial de paralaxe, esse é um ajuste delicado. Você pode ajustar manipulando visualmente, mas lembre que [cada bloco do editor equivale a 8 pixels](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#o-quadriculado-do-editor-%C3%A9-8x8-pixels).
+Vamos aproveitar a oportunidade e relembrar o que aprendemos de paralaxe. Usaremos as nuvens disponíveis [neste link do Craftpix](https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/?num=1&count=180&sq=clouds%20sky%20background&pos=2). Crie uma nova cena com um `Node2D` como raíz e 3 filhos do tipo `Parallax2D`. Renomeamos os nodes filhos e adicionamos seus respectivos sprites. Começaremos analisando a situação com o terceira nuvem, que é a mais próxima. Abaixo, temos as configurações do node de paralaxe, que já estão corretos. O que está errado é que o tamanho do sprite é muito pequeno em relação a viewport. Para ajustar isso, devemos aumentar a escala do `Sprite2D` filho. Como já vimos no tutorial de paralaxe, esse é um ajuste delicado. Você pode ajustar manipulando visualmente, mas lembre que [cada bloco do editor equivale a 8 pixels](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#o-quadriculado-do-editor-%C3%A9-8x8-pixels).
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/5ffd5505-b23d-4cb5-848f-5ab4c4180481" />
@@ -214,3 +214,20 @@ Este timer começa a executar assim que começa o jogo, e encerra quando o jogad
   <img width="500" src="https://github.com/user-attachments/assets/9479d9b0-58c9-4672-bc37-23a638cf5468" />
 </p>
 
+## Menu
+
+Para fazer o menu, você pode começar criando uma cópia da cena de paralaxe das nuvens, mudando o nome da raíz para *Menu*. Faça isso com a opção *Move/Duplicate To...*. Não esqueça de renomear o arquivo para *menu.tscn*.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/7c917e65-09d9-4e14-ae12-d4649c8cd0fc" />
+</p>
+
+No meio da tela, coloque 3 botões: *Start Game, Controls* e *Credits*. Os três devem ter a mesma cor, usar a fonte e *Gabriola.ttf* e tamanho 200. Em *Theme → Type Variation*, ative a opção *Flat Button* para deixar o fundo do botão transparente. 
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/ef6bb562-b7bd-4343-b7ac-0ca9280cccd7" />
+</p>
+
+Crie um script para o node raíz da cena e um sinal para cada um dos botões. 
+
+O botão do start game é o mais fácil, basta colocar o comando `get_tree().change_scene_to_file("res://scenes/game/levels/level.tscn")` para ser executado. Isso carrega a cena *Level*. Para os controles, colocamos um `Sprite2D` com a descrição dos controles. Aí quando o jogador clica no botão, alguns itens do menu ficam escondidos ou escurecidos, e apaerce a sprite na frente. Os créditos ficaram sendo um node `Label` simplesmente. Vale notar que estes dois últimos precisam de um botão para voltar ao menu. 
