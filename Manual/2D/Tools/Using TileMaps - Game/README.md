@@ -308,3 +308,11 @@ Mostramos abaixo como deve ser atualizado o script de *Level*. O segundo vector,
 </p>
 
 Depois disso acabou, o jogador ganhou! Também acabou o tutorial/documentação deste meu primeiro jogo mais sério. Este é o primeiro de muitos!
+
+## Extra - Export de jogo sem modo DEBUG
+
+Demorou um pouco para eu descobrir como fazer isso. A opção estava meio escondida, o chatGPT estava desatualizado e na internet eu não encontrei (também não procurei muito). Por acaso agora eu vi onde remove a opção de upload com DEBUG. Quando estiver na última etapa antes de exportar o projeto, a opção está ali embaixo. Basta tirar a seleção dela e o projeto vai sem DEBUG.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/a9c29c7c-d72a-4d03-92f8-b00b503135b2" />
+</p>
