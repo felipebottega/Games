@@ -237,3 +237,15 @@ O botão do start game é o mais fácil, basta colocar o comando `get_tree().cha
   <img width="380" src="https://github.com/user-attachments/assets/db3554be-cbfb-4b91-9f6b-43b764714072" />
 </p>
 
+## Pré-Menu
+
+Como este jogo será exportado para HTML5, é possível que algumas coisas do jogo não carreguem antes do jogador apertar algum botão. Em particular, minha ideia é colcar uma música para tocar assim que entrar o menu. Então preciso que alguma interação do jogador ocorra antes disso. Uma solução simples é usar a clássica tela de "Pressione qualquer tecla/botão para começar". Além de posicionar o botão, também acrescentamos um script ao node raíz para lidar com a lógica do botão e efeito visual de piscar para chamar a atenção. É verdade que ainda não vimos nada sobre a função `_input`. Por enquanto vamos apenas aceitar que é uma função nativa de Godot que detecta eventos de input.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/ad08fe81-42ab-42c2-8ad1-84e3dc75ee3e" />
+</p>
+
+Note que o background padrão do jogo está no cinza default da Godot. Queremos uma cor preta, que também é classico deste tipo de tela de pressionar tecla. Para isso, você deve ir em *Project Setings → General → Rendering Environment → Default Clear Color*.
+
+## Toques finais
+
