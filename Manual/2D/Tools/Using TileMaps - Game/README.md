@@ -170,7 +170,7 @@ Por fim, crie uma duplicata deste node com ctrl+D, mude o texto para "TIMER = 0.
   <img width="1000" src="https://github.com/user-attachments/assets/9c219463-6785-423e-8168-6263a32d44fc" />
 </p>
 
-## Partículas como folhas
+## Partículas com folhas
 
 O objetivo desse joguinho é coletar umas bandeirinhas que dão pontos, até coletar todas. Vamos introduzir um desafio extra colocando eventos de vento no jogo. Então de tempos em tempos o jogador será empurrado para o buraco que tem no lado esquerdo da tela. Além da força exercida sobre o personagem, o cenrário terá diversas folhas voando para indicar a força do vento. Isso será feito com partículas, algo que já [vimos anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems). Para começar, crie uma cena com um node `GPUParticles2D` e vamos chamá-la de *Leaves*.
 
@@ -182,3 +182,26 @@ A ideia por trás dos parâmetros abaixo foi a de ter as folhas voando para a es
   <img width="250" src="https://github.com/user-attachments/assets/8fd252a3-1822-45cc-ba13-f397c669c02c" />
 </p>
 
+## Score
+
+Vamos colocar alguns tiles de bandeiras espalhadas pelo cenário. Cada bandeira vale um ponto, e o jogo acaba quando o jogador coleta todas elas. Vamos voltar ao cenário de plataformas e inserir as bandeiras. Isso é feito facilmente com a ferramenta de lápis.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/ae2781fe-378e-417e-90e5-15b08f1a91f6" />
+</p>
+
+Agora crie um metadado chamado *Points* e atribua o valor $1$ para a bandeira, indo em, *TileSet → Select → Custom Data → Points*, com a seleção na bandeira.
+
+<p align="center">
+  <img width="220" src="https://github.com/user-attachments/assets/7e5ae326-0412-4552-838a-fc3f232db797" />
+  <img width="600" src="https://github.com/user-attachments/assets/3558aee0-bb5b-469b-bca6-ab8ff89b1863" />
+</p>
+
+Agora precisamos de um código para implementar a seguinte sequência lógica: *personagem toca na bandeira → tile da bandeira desaparece → score aumenta em 1 → valor do score na tela é atualizado*. Isso tudo é feito com o código abaixo no node raíz de *Level*.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/514609f1-54da-45dd-8dca-fe2ce34c7883" />
+  <img width="550" src="https://github.com/user-attachments/assets/959c84ec-8035-45f1-8eac-2a58f65ec0ef" />
+</p>
+
+> PS: Uma coisa que pode chamar a atenção é aquele loop `for i in [-1, 0, 1]`. Em cada verificação, o código vai pegar a posição do player e checar o tile dessa posição, o tile acima e o abaixo. Isto tem que ser feito pois o player ocupa 3 tiles, só que a sua posição é um ponto em específico, que só fica acima de um único tile.
