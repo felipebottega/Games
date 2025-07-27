@@ -204,4 +204,13 @@ Agora precisamos de um código para implementar a seguinte sequência lógica: *
   <img width="550" src="https://github.com/user-attachments/assets/959c84ec-8035-45f1-8eac-2a58f65ec0ef" />
 </p>
 
-> PS: Uma coisa que pode chamar a atenção é aquele loop `for i in [-1, 0, 1]`. Em cada verificação, o código vai pegar a posição do player e checar o tile dessa posição, o tile acima e o abaixo. Isto tem que ser feito pois o player ocupa 3 tiles, só que a sua posição é um ponto em específico, que só fica acima de um único tile.
+> PS: Uma coisa que pode chamar a atenção é aquele loop `for i in [-1, 0, 1]`. Em cada verificação, o código vai pegar a posição do player e checar o tile dessa posição, o tile acima e o abaixo. Isto tem que ser feito pois o player ocupa 3 tiles de altura, só que a sua posição é um ponto em específico, que só fica acima de um único tile.
+
+## Timer
+
+Este timer começa a executar assim que começa o jogo, e encerra quando o jogador coleta todas as bandeiras. O único intuito dele é instigar no jogador a vontade de bater seus próprios recordes. Esse é muito mais simples que o score. Basta criar uma variável no código e fazer um incremento de *delta* a cada iteração. Quando bater o total de bandeiras coletadas (35), paramos de incrementar. 
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/9479d9b0-58c9-4672-bc37-23a638cf5468" />
+</p>
+
