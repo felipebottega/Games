@@ -11,10 +11,23 @@ config_version=5
 [application]
 
 config/name="Using TileMaps - Game"
+run/main_scene="uid://dx55g1rb4yqf6"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Music="*res://autoload/music.tscn"
+
+[display]
+
+window/size/viewport_width=4000
+window/size/viewport_height=1600
+window/size/mode=2
+window/stretch/mode="viewport"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.0885598, 0.08856, 0.0885599, 1)

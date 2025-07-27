@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx55g1rb4yqf6"]
+
+[ext_resource type="Script" uid="uid://cgo1roew6pyip" path="res://scripts/ui/pre_menu.gd" id="1_1h816"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1h816")
+metadata/_edit_vertical_guides_ = [1997.0]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1326.0
+offset_top = 1303.0
+offset_right = 2647.0
+offset_bottom = 1386.0
+theme_override_font_sizes/font_size = 60
+text = "Pressione qualquer tecla/botão para começar"

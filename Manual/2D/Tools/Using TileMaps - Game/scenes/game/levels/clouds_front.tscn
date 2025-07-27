@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmsbbd32lxsf4"]
+
+[ext_resource type="Texture2D" uid="uid://uw5kseuqkaw8" path="res://assets/graphics/environment/Clouds-3.png" id="1_yclhu"]
+
+[node name="CloudsFront" type="Node2D"]
+
+[node name="Clouds-3" type="Parallax2D" parent="."]
+modulate = Color(0.0666667, 0.4, 0.85098, 0.470588)
+repeat_size = Vector2(1728, 0)
+autoscroll = Vector2(-100, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds-3"]
+position = Vector2(2000, 1276)
+scale = Vector2(-3, 2)
+texture = ExtResource("1_yclhu")
