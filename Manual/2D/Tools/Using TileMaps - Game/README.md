@@ -164,9 +164,21 @@ Teremos dois elementos HUD na tela: um para o score e outro o timer. Crie uma ce
   <img width="250" src="https://github.com/user-attachments/assets/41081d3c-36fb-4f10-b9c7-164a9bcf0125" />
 </p>
 
-Por fim, crie uma duplicata deste node com ctrl+D, mude o texto para "TIMER = 0.00" e coloque o elemento do outro lado da tela. O primeiro vai se chamar *Score*, e o segundo, *Timer*. Não esqueça de adicionar o HUD à cena *Level*.
+Por fim, crie uma duplicata deste node com ctrl+D, mude o texto para "TIMER = 0.00" e coloque o elemento do outro lado da tela. O primeiro vai se chamar *Score*, e o segundo, *Timer*. Não esqueça de adicionar o HUD à cena *Level*. Por enquanto vamos deixar estes elementos sem nenhum uso. Mais adiante isso será resolvido.
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/9c219463-6785-423e-8168-6263a32d44fc" />
+</p>
+
+## Partículas como folhas
+
+O objetivo desse joguinho é coletar umas bandeirinhas que dão pontos, até coletar todas. Vamos introduzir um desafio extra colocando eventos de vento no jogo. Então de tempos em tempos o jogador será empurrado para o buraco que tem no lado esquerdo da tela. Além da força exercida sobre o personagem, o cenrário terá diversas folhas voando para indicar a força do vento. Isso será feito com partículas, algo que já [vimos anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems). Para começar, crie uma cena com um node `GPUParticles2D` e vamos chamá-la de *Leaves*.
+
+A ideia por trás dos parâmetros abaixo foi a de ter as folhas voando para a esquerda, ocupando toda a tela, e tendo um comportamento mais orgânico, em que um jato de ar pode empurrar um pequeno grupo de folhas pelo mesmo caminho. Também colocamos um pouco de *Explosiveness* para que as folhas não fossem aparecendo na tela de maneira linear e previsível. Coloque esta cena na *Level*, antes do *HUD*. Aliás, o *HUD* deve vir depois de tudo. 
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/6c2d4bb7-a211-4bd8-87f3-533f736f5767" />
+  <img width="250" src="https://github.com/user-attachments/assets/7bf8b470-303c-47ac-b414-a6d3dbd9ce50" />
+  <img width="250" src="https://github.com/user-attachments/assets/8fd252a3-1822-45cc-ba13-f397c669c02c" />
 </p>
 
