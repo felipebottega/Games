@@ -251,7 +251,12 @@ Por esta cena ser a primeira coisa do jogo que vai aparecer, ela será a cena ma
 
 ## Vento
 
+Para implementar a lógica do vento, criamos um `Timer` que muda a força horizontal a cada $10$ segundos, tanto no player quanto nas partículas. Mostramos abaixo as mudanças que devem ser feitas no script do *Level* (esquerda) e do *Player* (direita). Note que no *Player* foi só questão de adicionar uma variável de vento no movimento horizontal. O valor dessa variável vem do script do *Level*.
 
+<p align="center">
+  <img width="570" src="https://github.com/user-attachments/assets/1d05ede7-903f-4e53-bfe2-819054631bad" />
+  <img width="430" src="https://github.com/user-attachments/assets/fb57d023-a7aa-4c0e-aa57-84cc6c38facf" />
+</p>
 
 ## Controles
 
@@ -293,7 +298,7 @@ Quando o player coleta todas as moedas, queremos pausar o jogo e exigir uma mens
 Mostramos abaixo como deve ser atualizado o script de *Level*. O segundo vector, `Vector2i(250, 50)`, que aparece na centralização, foi um ajuste posterior, feito no olho mesmo pois eu não gostei da centralização inicial.
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/ff254948-b49f-492e-bc65-935e6d49ff5e" />
+  <img width="500" src="https://github.com/user-attachments/assets/58471a02-472d-475a-9258-03fa8c0c57c8" />
   <img width="500" src="https://github.com/user-attachments/assets/ebfcad2d-6625-4f2d-a5b0-44854a488466" />
 </p>
 
