@@ -230,4 +230,10 @@ No meio da tela, coloque 3 botões: *Start Game, Controls* e *Credits*. Os três
 
 Crie um script para o node raíz da cena e um sinal para cada um dos botões. 
 
-O botão do start game é o mais fácil, basta colocar o comando `get_tree().change_scene_to_file("res://scenes/game/levels/level.tscn")` para ser executado. Isso carrega a cena *Level*. Para os controles, colocamos um `Sprite2D` com a descrição dos controles. Aí quando o jogador clica no botão, alguns itens do menu ficam escondidos ou escurecidos, e apaerce a sprite na frente. Os créditos ficaram sendo um node `Label` simplesmente. Vale notar que estes dois últimos precisam de um botão para voltar ao menu. 
+O botão do start game é o mais fácil, basta colocar o comando `get_tree().change_scene_to_file("res://scenes/game/levels/level.tscn")` para ser executado. Isso carrega a cena *Level*. Para os controles, colocamos um `Sprite2D` com a descrição dos controles. Aí quando o jogador clica no botão, alguns itens do menu ficam escondidos ou escurecidos, e apaerce a sprite na frente. Os créditos ficaram sendo um node `Label` simplesmente. Vale notar que estes dois últimos precisam de um botão para voltar ao menu. Por fim, adicionamos o node do personagem para instanciar apenas a animação de caminhar na cena. Colocamos abaixo o script completo do menu.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/0f321766-4323-4e6f-b6ea-26dac65d5365" />
+  <img width="380" src="https://github.com/user-attachments/assets/db3554be-cbfb-4b91-9f6b-43b764714072" />
+</p>
+
