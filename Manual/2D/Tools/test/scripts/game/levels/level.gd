@@ -11,6 +11,7 @@ var toggle = false
 
 func _ready():
 	start_timer()
+	$Leaves.emitting = false
 
 func start_timer():
 	# Cria um Timer que vai ficar rodando durante todo o jogo, mudando de estado a cada 10 segundos.
@@ -35,6 +36,9 @@ func _process(delta):
 	else:
 		elapsed_time += 0
 		vitoria(delta)
+		
+	if elapsed_time > 2 and $Leaves.emitting == false:
+		$Leaves.emitting = true
 
 func check_item_collection():
 	for i in [-1, 0, 1]:
