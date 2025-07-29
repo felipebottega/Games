@@ -6,7 +6,6 @@ var time_passed: float = 0.0
 var base_color: Color
 
 func _ready():
-	ResourceLoader.load_threaded_request("res://scenes/game/levels/level.tscn")
 	base_color = $Label.modulate
 
 func _input(event: InputEvent):
