@@ -6,6 +6,7 @@ var time_passed: float = 0.0
 var base_color: Color
 
 func _ready():
+	MusicGD.preload_and_instantiate("res://scenes/game/levels/level.tscn")
 	base_color = $Label.modulate
 
 func _input(event: InputEvent):
@@ -26,3 +27,5 @@ func _process(delta):
 	var pulse = (sin(time_passed * pulse_speed * PI * 2) + 1) / 2  # valor entre 0 e 1
 	var brightness_factor = 1.0 - pulse_amplitude * pulse
 	$Label.modulate = base_color * brightness_factor
+	
+	MusicGD.check_and_instantiate("res://scenes/game/levels/level.tscn")

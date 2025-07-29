@@ -23,7 +23,7 @@ func start_timer():
 
 func _on_timer_timeout():
 	toggle = !toggle
-	#$Leaves.process_material.gravity.x = gravity_wind if toggle else gravity_no_wind    # aplica força do vento nas folhas
+	$Leaves.process_material.gravity.x = gravity_wind if toggle else gravity_no_wind    # aplica força do vento nas folhas
 	$Player.wind = gravity_wind/15 if toggle else 0    # aplica força do vento no player
 
 func _process(delta):

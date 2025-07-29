@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxg4o8guwfi1t"]
+[gd_scene load_steps=10 format=3 uid="uid://dxg4o8guwfi1t"]
 
 [ext_resource type="PackedScene" uid="uid://be2401ej777sc" path="res://scenes/game/levels/clouds.tscn" id="1_5h323"]
 [ext_resource type="Script" uid="uid://drvw2dynoqo6v" path="res://scripts/game/levels/level.gd" id="1_5pk33"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bnsy4e5uly5s0" path="res://scenes/characters/player.tscn" id="3_ru8df"]
 [ext_resource type="PackedScene" uid="uid://dmsbbd32lxsf4" path="res://scenes/game/levels/clouds_front.tscn" id="5_spbf7"]
 [ext_resource type="PackedScene" uid="uid://dsute0c5q713x" path="res://scenes/ui/hud.tscn" id="6_qftuo"]
+[ext_resource type="PackedScene" uid="uid://joc1eh3nytlq" path="res://scenes/game/levels/leaves.tscn" id="7_5pk33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5pk33"]
 size = Vector2(218, 2416)
@@ -20,6 +21,9 @@ script = ExtResource("1_5pk33")
 
 [node name="Player" parent="." instance=ExtResource("3_ru8df")]
 position = Vector2(439, 1093)
+
+[node name="Leaves" parent="." instance=ExtResource("7_5pk33")]
+position = Vector2(3938, 625)
 
 [node name="PlatformsFront" parent="." instance=ExtResource("2_ru8df")]
 

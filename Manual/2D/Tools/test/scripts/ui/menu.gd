@@ -16,7 +16,13 @@ func _ready():
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene_to_file("res://scenes/game/levels/level.tscn")
+		#get_tree().change_scene_to_file("res://scenes/game/levels/level.tscn")
+		if MusicGD.instantiation_ready:
+			get_tree().root.add_child(MusicGD.cached_scene)
+			get_tree().current_scene.free()
+			get_tree().current_scene = MusicGD.cached_scene
+		else:
+			print("Ainda não carregou completamente.")
 
 func _on_start_game_pressed():
 	get_tree().change_scene_to_file("res://scenes/game/levels/level.tscn")
