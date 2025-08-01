@@ -22,4 +22,10 @@ Você pode clicar para adicionar mais terrenos, todos dentro do mesmo Terrain Se
 
 ## A lógica de terrenos
 
-Cada *mode* significa uma atribuir uma certa subdivisão aos tiles. Cada pedaço dessa subdivisão pode estar, ou não, associado a um dos terrenos que você definiu anteriormente. Essas subdivisões são chamadas de *peering bits*. Todo tile com terreno sempre terá um pedaço central, chamado de *central bit*. Este bit central serve para definir qual o terreno daquele tile. Você pode ter um tile com *peering bits* de vários terrenos misturados, mas é o central que vai determinar qual o terreno "oficial" daquele tile. 
+Cada *mode* significa uma atribuir uma certa subdivisão aos tiles. Cada pedaço dessa subdivisão pode estar, ou não, associado a um dos terrenos que você definiu anteriormente. Essas subdivisões são chamadas de *peering bits*. Todo tile com terreno sempre terá um pedaço central, chamado de *central bit*. Este bit central serve para definir qual o terreno daquele tile. Você pode ter um tile com *peering bits* de vários terrenos misturados, mas é o central que vai determinar qual o terreno "oficial" daquele tile. Mostramos abaixo os três modes de Terrain Sets.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/bdfcc8ee-92f3-48bd-ac4d-4b0a893f55ad" />
+</p>
+
+Na figura, apontamos apenas um peering bit como exemplo, mas todos os bits que não são o central são "peering". 
