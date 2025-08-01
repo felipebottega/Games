@@ -1,6 +1,6 @@
 # Terrain Sets
 
-Em teoria, não é necessário usar Terrain Sets para gerar os seus cenários com tiles, pois Terrain Sets é apenas uma ferramenta para facilitar e agilizar o processo de desenhar tiles. É uma maneira de automatizar transição entre terrenos diferentes, quinas, final de segmentos, entre outros. Vamos explicar como funciona na prática. Primeiramente, comece criando um TileSet normalmente. 
+Em teoria, não é necessário usar Terrain Sets para gerar os seus cenários com tiles, pois Terrain Sets é apenas uma ferramenta para facilitar e agilizar o processo de desenhar tiles. É uma maneira de automatizar transição entre terrenos diferentes, quinas, final de segmentos, cenários gerados de maneira procedural, entre outros. Vamos explicar como funciona na prática. Primeiramente, comece criando um TileSet normalmente. 
 
 ## Criando um Terrain Set
 
@@ -19,3 +19,7 @@ Você pode clicar para adicionar mais terrenos, todos dentro do mesmo Terrain Se
 <p align="center">
   <img width="330" src="https://github.com/user-attachments/assets/11eb0b37-7e53-4650-a992-33d1e628d071" />
 </p>
+
+## A lógica de terrenos
+
+Cada *mode* significa uma atribuir uma certa subdivisão aos tiles. Cada pedaço dessa subdivisão pode estar, ou não, associado a um dos terrenos que você definiu anteriormente. Essas subdivisões são chamadas de *peering bits*. Todo tile com terreno sempre terá um pedaço central, chamado de *central bit*. Este bit central serve para definir qual o terreno daquele tile. Você pode ter um tile com *peering bits* de vários terrenos misturados, mas é o central que vai determinar qual o terreno "oficial" daquele tile. 
