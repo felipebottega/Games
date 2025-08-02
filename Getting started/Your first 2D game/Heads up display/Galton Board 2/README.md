@@ -31,7 +31,7 @@ Estaremos usando tela com dimensões $660 \times 820$, posição inicial *Absolu
 O pilar são as barreiras verticais que ficam na base do tabuleiro e fazem a separação da distribuição. Neste caso são mini-pilares. Seu node raíz é um `StaticBody2D` e ele contém dois pedaços, um do corpo e outro da cabeça do pilar (cada um tem um sprite e um shape de colisão próprio). 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ebe0d2e7-422f-4df0-ab50-9aa165944ca3" width="650">
+  <img src="https://github.com/user-attachments/assets/ebe0d2e7-422f-4df0-ab50-9aa165944ca3" width="700">
 </p>
 
 ## Cena da bola
@@ -51,13 +51,13 @@ A criação da cena da bola é bem similar à do pilar, mas dessa vez o node ra�
 Vou começar logo com uma dica valiosa pois eu apanhei bastante com isso. Se você criou um objeto, fez uma rotação por um ângulo $\alpha$ com ele e quer uma duplicata refletida horizontalmente (como se o eixo $y$ fosse o espelho), você deve fazer a duplicata (*ctrl+D*, *ctrl+C*) e aplicar uma rotação de $-\alpha$ nela. No exemplo abaixo, o objeto original (da esquerda) foi rotacionado por $120^\circ$, então a sua duplicata refletida foi refletida por $-120^\circ$.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/52901bb9-6de8-4ef9-832e-d4c3dc32e998" width="600">
+  <img src="https://github.com/user-attachments/assets/52901bb9-6de8-4ef9-832e-d4c3dc32e998" width="650">
 </p>
 
 Depois de ajustar os shapes de colisão e encaixar os sprites adequadamente, o resultado é o que temos abaixo. Cada `Sprite2D{i}` está associado ao `CollisionShape2D{i}`. Se não vamos usar nomes bonitinhos, pelo menos a nomenclatura deve ser consistente. Note que os objetos acima são sobrepostos pelos que vem abaixo, o cenário sempre é desenhado do topo para baixo. A escolha da ordem dos sprites não foi acidental, queremos que as rampas estejam mais à frente que a pequena parede reta ao fim das rampas. Nesta cena o node raíz *Funnel* é do tipo `StaticBody2D` já que todos os objetos da cena são estáticos.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a784199c-e47b-4f1c-88de-ff1d6de927fe" width="800">
+  <img src="https://github.com/user-attachments/assets/a784199c-e47b-4f1c-88de-ff1d6de927fe" width="850">
 </p>
 
 ## Cena das bordas
@@ -126,13 +126,13 @@ Assim como no exemplo do tutorial, essa cena terá o propósito duplo de servir 
 **Message:** É um node do tipo `Label` para mostrar quantas bolas já caíram. Podemos deixar a caixa de texto vazia, pois ela será preenchida dinamicamente por uma função do script associado ao HUD. Inicialmente a cena do HUD estará como mostrado abaixo. Claro que no momento essa função não faz nada, já que o HUD não faz parte da Main ainda. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/74275ffa-fdbd-4379-be68-928e0f8147f4" width="700">
+  <img src="https://github.com/user-attachments/assets/74275ffa-fdbd-4379-be68-928e0f8147f4" width="750">
 </p>
 
 Para o estilo da fonte, vá em *Inspector → Theme Overrides → Fonts → Load* e selecione a fonte da pasta *fontes*. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/83c611d6-769f-453a-ba9f-51eac7240464" width="200">
+  <img src="https://github.com/user-attachments/assets/83c611d6-769f-453a-ba9f-51eac7240464" width="220">
 </p>
 
 Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + int(counter/10))` dentro do if do `_physics_process`. Para mover a caixa da label na Main você deve marcar o HUD como *Editable Child*, recomendo fazer isso. Após seguir estes passos a contagem já deve estar automática.
@@ -146,14 +146,14 @@ Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + 
 **Start:** É um node do tipo `Button` que o usuário aperta para começar o jogo. Em uma única imagem tentamos resumir todo o processo que foi feito na criação deste botão, com exceção do script e sinais. Para alterar a cor, vá em *Theme Overrides → Colors → Font Color*.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0ade2bee-1b69-4fe1-8485-632c0b849f47" width="800">
+  <img src="https://github.com/user-attachments/assets/0ade2bee-1b69-4fe1-8485-632c0b849f47" width="1000">
 </p>
 
 Anteriormente o script do HUD só tinha a função `update_num_balls`. Agora vamos criar um sinal para este botão. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c8b45d32-797c-4eb8-a26a-e7bab4d3cc94" width="200">
-  <img src="https://github.com/user-attachments/assets/a6a1f160-d74f-4015-8a9f-75ead37c561a" width="500">
+  <img src="https://github.com/user-attachments/assets/a6a1f160-d74f-4015-8a9f-75ead37c561a" width="550">
 </p>
 
 Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pressionado. Este sinal faz o HUD esconder obotão de Start e emitir um [sinal customizado](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203) que chamamos de `start_game`. Note que este sinal customizado envia um float junto, isto também é possível. 
@@ -161,7 +161,7 @@ Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pr
 Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são ações independentes do ambiente externo. Para conectar o sinal `start_game` à Main, precisamos ir na HUD instanciada na Main. Clique na HUD da Main e vá em Node do painel à direita, ali deve estar presente o sinal `start_game`. Clique no sinal e defina a função `new_game` na Main.  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c" width="900">
+  <img src="https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c" width="1000">
 </p>
 
 > PS: O sinal vem do node HUD e não do botão Start, apesar de ser este o botão que aciona o trigger. Porém, no script você pode notar que o sinal foi criado no cabeçalho, sendo uma variável global do HUD e, a princípio, sem relação direta com o botão de Start. Essa relação ocorre quando a função `_on_start_pressed` é acionada, pois ela emite o sinal `start_game`. Sendo assim, o evento de pressionar o botão não aciona diretamente a função `new_game`, ele aciona um outro sinal que aciona a função `new_game`. É importante ter isso em mente para não ter confusão na hora e, por exemplo, procurar o sinal `start_game` no botão de Start (eu fiz isso).
@@ -175,7 +175,7 @@ Altere o script da Main para ocultar todos os elementos e o processamento da fí
 **Quit:** Quando todas as bolinhas caírem, o jogador pode querer recomeçar. Do jeito que está agora isso não é possível, então vamos resolver esta questão. Adicione um node do tipo `Button` como mais um filho do HUD e renomeie este botão para *Quit*. Em *Inspector → Text*, escreva "Quit". Pode usar a mesma fonte especial que tem na pasta de fontes e faça os ajustes estético que preferir. A posição do botão na cena do HUD não é tão relevante, podemos deixar pra arrumar na cena principal (aliás, essa observação vale para todos os itens do HUD). Deixamos o botão alinhado com a caixa de contagem.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d5053e46-b96b-47b7-81c7-fd8c659c5b1a" width="800">
+  <img src="https://github.com/user-attachments/assets/d5053e46-b96b-47b7-81c7-fd8c659c5b1a" width="900">
 </p>
 
 Queremos que todo o jogo reinicie quando este botão for pressionado. Além disso, só faz sentido que ele esteja na tela após o Start ter sido pressionado. Para obter o primeiro comportamento, criamos um sinal ao pressionar o botão de Quit. O comando `get_tree().reload_current_scene()` busca o nível mais alto da árvore de execução e recomeça tudo dali. Ou seja, dentro da Main este botão terá o efeito de retroceder toda a Main, nos levando ao início do jogo.
