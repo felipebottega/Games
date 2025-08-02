@@ -98,3 +98,37 @@ Abaixo, mostramos de maneira sucinta a configuração dos outros tiles de intere
   <img width="340" src="https://github.com/user-attachments/assets/1bb0fb96-581e-4e48-b5b6-363119e8e3b3" />
   <img width="370" src="https://github.com/user-attachments/assets/53341f53-7aa0-4d16-998e-c8e8ae2f9ad1" />
 </p>
+
+### Pintando terrenos pelo Paint
+
+Já vimos como o *Paint* funciona [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#aba-paint), basicamente você escolhe uma propriedade que quer pintar e é só ir pintando ela pelo atlas. Começamos selecionando a propriedade *Terrains*, como mostrado abaixo.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/44d4fe20-a171-4a96-8a72-2e16f8f70835" />
+</p>
+
+Selecione o Terrain Set e pinte os tiles que devem estar associados a ele. Não tem um fator visual muito indicativo, os tiles apenas ficam um pouco mais claros.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/003a9257-ab2d-46c6-83d6-698ffd9aaa47" />
+</p>
+
+Feitas as seleções de Terain Set, escolha o terreno que quer pintar. Em vez de mostrar a ID, como foi no caso da aba *Select*, aqui o que aparece é o nome do terreno. Neste exemplo nós só criamos um Terrain Set contendo um único terreno, então está fácil.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/6bcb9595-8a8f-4b8e-9379-59ee291507ab" />
+</p>
+
+E Agora chegou a hora de pintar. É só passar o mouse pelas regiões e ir pintando de acordo. O método pelo "Paint* é mais dinâmico que o *Select*, mas é bom saber os dois.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/407ace77-dbe2-4667-9d96-dbd32868066d" />
+</p>
+
+## Desenhando terrenos
+
+Só o que falta agora é saber como desenhar os terrenos na tela. Na verdade esse é o passo mais fácil de todos. Baste ir em *TileMap*, no editor, e selecionar a aba *Terrains*. Os ícones das ferramentas de desenho vão aparecer e, na janela abaixo, você deve escolher qual Terrain Set e terreno quer desenhar. Em geral, o modo de desenho <img width="30" src="https://github.com/user-attachments/assets/152cf6f2-11fe-4410-95c0-b6180c100e31" /> é o que atende as necessidades mais gerais, enquanto que o <img width="30" src="https://github.com/user-attachments/assets/eb672c15-1c59-4d9f-ae3f-13ca276f022d" /> é mais específico. Não vou entrar nos detalhes das diferenças deles, isso é outra coisa que você deve aprender na prática. Os outros ícones ao lado forçam a desenhar um tile específico do conjunto de tiles do Terrain Set, o que pode ser necessário às vezes (lembrando também que é sempre possível voltar ao modo normal de desenhar tiles, isto é, sem nada de terrenos).
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/c4312216-6ffb-40e0-ab38-c6ceb49eebdc" />
+</p>
