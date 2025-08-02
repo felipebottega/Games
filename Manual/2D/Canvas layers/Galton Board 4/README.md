@@ -98,7 +98,7 @@ func interpolate(a, b) -> Array:
 
 ## CanvasLayers
 
-Tem um detalhe importante a se considerar com o método descrito acima: às vezes nós queremos deformar certos elementos da tela, mas não todos. A solução para isso é o node `CanvasLayer`. Este node adiciona uma camada de renderização 2D separada para todos os seus filhos e os filhos dos filhos. Por default os filhos da `Viewport` são desenhados na camada "0", enquanto um `CanvasLayer` desenhará em qualquer outra camada. É padrão da engine Godto que camadas com um número maior sejam desenhadas acima daquelas com um número menor. Isso explica aquele comportamento observado no [HUD do Galton Board 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer).
+Tem um detalhe importante a se considerar com o método descrito acima: às vezes nós queremos deformar certos elementos da tela, mas não todos. A solução para isso é o node `CanvasLayer`. Este node adiciona uma camada de renderização 2D separada para todos os seus filhos e os filhos dos filhos. Por default os filhos da `Viewport` são desenhados na camada "0", enquanto um `CanvasLayer` desenhará em qualquer outra camada. É padrão da engine Godot que camadas com um número maior sejam desenhadas acima daquelas com um número menor. Isso explica aquele comportamento observado no [HUD do Galton Board 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer).
 
 ##  Implementando o shake para o tabuleiro de Galton
 
