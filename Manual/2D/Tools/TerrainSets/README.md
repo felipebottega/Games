@@ -132,3 +132,31 @@ Só o que falta agora é saber como desenhar os terrenos na tela. Na verdade ess
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/c4312216-6ffb-40e0-ab38-c6ceb49eebdc" />
 </p>
+
+## Templates
+
+Existem assets de cenários 2D que já levam em conta todas as possíveis configurações de terrenos. Basta configurar os peering bits e você já tem um lindo atlas pronto para fazer seus cenários rapidamente. A questão é a configuração dos peering bits. O template é apenas uma tilesheet normal, não tem nenhum indicativo de onde devem ir os peering bits de cada tile. Por isso existem convenções de como devem vir esses templates. Mostramos abaixos os templates mais comuns, com a estrutura à esquerda e um exemplo real à direita.
+
+**Match Sides**
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/4890773b-b033-49b9-ad5a-dbdf35aef0df" />
+  <img width="360" src="https://github.com/user-attachments/assets/f3ef9771-5f22-4b56-9a7a-976301b19eb5" />
+</p>
+
+**Match Corners**
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/7e7bbbce-666f-47e0-a563-3df9f5226c2a" />
+  <img width="350" src="https://github.com/user-attachments/assets/e0f615e1-5e63-4116-a317-e094c3efdbfa" />
+</p>
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/71bf2cb3-c2f1-4066-841b-a918295cc5c4" />
+  <img width="350" src="https://github.com/user-attachments/assets/77c12f8b-babd-4319-aa9b-7ee9edce0d87" />
+</p>
+
+**Match Corners and Sides**
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/d0d2374a-178d-429f-8d8b-6dfc6b2b4b3a" />
+  <img width="500" src="https://github.com/user-attachments/assets/bf9782ea-b453-40b2-a907-f7cec9ce59d2" />
+</p>
