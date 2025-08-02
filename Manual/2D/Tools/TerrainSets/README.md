@@ -28,4 +28,4 @@ Cada *mode* significa uma atribuir uma certa subdivisão aos tiles. Cada pedaço
   <img width="600" src="https://github.com/user-attachments/assets/bdfcc8ee-92f3-48bd-ac4d-4b0a893f55ad" />
 </p>
 
-Na figura, apontamos apenas um peering bit como exemplo, mas todos os bits que não são o central são "peering". 
+Na figura, apontamos apenas um peering bit como exemplo, mas todos os bits que não são o central são "peering". Em vez de explicar teoricamente, iremos explicar com um exemplo prático. 
