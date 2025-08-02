@@ -160,3 +160,5 @@ Existem assets de cenários 2D que já levam em conta todas as possíveis config
   <img width="500" src="https://github.com/user-attachments/assets/d0d2374a-178d-429f-8d8b-6dfc6b2b4b3a" />
   <img width="500" src="https://github.com/user-attachments/assets/bf9782ea-b453-40b2-a907-f7cec9ce59d2" />
 </p>
+
+Para aprofundar mais no assunto, recomendo ler o PDF [deste repositório](https://github.com/dandeliondino/godot-4-tileset-terrains-docs).
