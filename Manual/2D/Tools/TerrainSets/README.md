@@ -43,3 +43,58 @@ Escolhemos o mode *Match Sides* e configuramos os peering bits como mostrado aba
 Por exemplo, se tiver o tile <img width="50" src="https://github.com/user-attachments/assets/41903ebf-f8e0-4c2c-a679-e217c88affe2" /> e você clicar para desenhar outro tile à esquerda deste, automaticamente a engine vai desenhar o tile <img width="50" src="https://github.com/user-attachments/assets/e6145de8-ea30-4b6a-b9fd-95794a0a27b9" />. O principal motivo é porque o peering bit à esquerda do primeiro dá match com o peering bit à direita do segundo. É natural se questionar porque os outros dois tiles são descartados já que eles também possuem peering bits na direita. Note que eles teriam mais peering bits com terreno indo "no vazio" caso eles fossem escolhidos. Então o tile escolhido é escolhido não apenas pelo peering bit que deu match, mas também porque seus peering bits sem terreno foram no vazio, o que conta como um match também. Em outras palavras, todos os peering bits do tile são levados em conta na hora da escolha. 
 
 > PS: Uma maneira simplificada de pensar o que norteia a escolha de tiles: A engine quer dar match de peering bits com o mesmo terreno e não quer peering bits com terreno sendo vizinhos de vazio ou de outros terrenos.
+
+Aí você desenhou os dois tiles (figura abaixo) e agora vai clicar para desenhar mais um tile à esquerda. O que acontece?
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/74a84180-134c-4f42-8dc1-0d155f59c729" />
+</p>
+
+A engine automaticamente corrige o tile central e desenha o fim do chão com o tile curvado para o lado certo, como gostaríamos. 
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/8f7cd9a5-cdc0-4978-8572-20bd711fb3f7" />
+</p>
+
+Quando você clica para desenhar um tile, a engine procura não apenas desenhar o seu tile baseado nos vizinhos, mas ela também verifica se deve alterar algum vizinha para ter o encaixe ótimo. Pela maneira como os peering bits foram configurados, a forma mostrada acima é a melhor solução. Não por acaso, essa configuração é ideal para desenhar chãos. Você pode clicar e arrastar o mouse, a engine vai resolver da maneira correta. Artefatos podem aparecer se você se empolgar demais e sair do esperado, mas ainda assim o processo de desenhar fica muito mais rápido do que fazer manualmente. 
+
+A mesma ideia se aplica aos outros modes. O que muda são os formatos dos peering bits e quantidade. Não tenho a intenção de me aprofundar demais nas diferenças de cada um. Acredito que a melhor maneira para aprender esses pormenores é com a experiência.
+
+## Pintando terrenos
+
+Falamos de pintar terrenos nos tiles e desenhar tiles sem explicar como estas tarefas são feitas. Isto foi proposital, a intenção era entender o conceito primeiro. Agora que ele foi entendido, podemos passar para os processos.
+
+Existem duas maneiras de pintar terrenos nos tiles. Você pode fazer pela aba *Select* ou *Paint*, no *TileSet* do editor.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/4ebbbcf8-c971-464d-a909-5a586964ee57" />
+</p>
+
+### Pintando terrenos pelo Select
+
+Antes mesmo de querer começar a pintar terrenos, não se esqueça de ter o atlas já acertado no teu TileSet, e tenha o terreno correto criado dentro do TileSet também. Podemos ver abaixo que tudo já está pronto, só falta dar o próximo passo. Selecione o tile que quer confiugurar e clique em *Terrains*, dentro da janela do *Select*, no editor.
+
+<p align="center">
+  <img width="1000" src="https://github.com/user-attachments/assets/1b7b66a9-f51f-45ff-a678-35d4393e96fb" />
+</p>
+
+Ao abrir a aba, selecione a ID do Terrain Set e do terreno. Por default, a indexação começa em zero e incrementa de 1 em 1 conforme você adiciona mais Terrains Sets e terrenos. Lembro que um Terrain Set pode possuir diversos terrenos. É importante ter isso em mente no caso de ter mais de um Terrain Set. Pois nessa situação existirão terrenos distintos de IDs iguais, mas que estarão em Terrain Sets diferentes. Uma vez que você escolheu as IDs corretas, está na hora de configurar os peering bits do seu tile. Clique em *Terrains Peering Bits*. A caixa abaixo vai se abrir.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/ee3a1322-a06e-4cce-8e7f-927b7851a17f" />
+  <img width="350" src="https://github.com/user-attachments/assets/90861998-938d-4c8e-a6d6-433170254053" />
+</p>
+
+Alteramos o valor de cada peering bit para a ID do terreno que queremos. Caso haja mais de um terreno no Terrain Set, é totalmente possível um mesmo tile ter múltiplos terrenos. Note que não é necessário configurar o central bit, pois estamos associado este tile a um terreno, logo, o central bit automaticamente é do mesmo terreno. A configuração deste primeiro é mais fácil, pois sabemos que todos os seus lados podem estar pareando com vizinhos do mesmo tipo de terreno.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/9e458b4b-01a6-4218-9ba8-a4382016f3e4" />
+</p>
+
+Abaixo, mostramos de maneira sucinta a configuração dos outros tiles de interesse.
+
+<p align="center">
+  <img width="290" src="https://github.com/user-attachments/assets/87d5546d-03ea-4c9a-93f1-9f2057efda29" />
+  <img width="340" src="https://github.com/user-attachments/assets/1bb0fb96-581e-4e48-b5b6-363119e8e3b3" />
+  <img width="370" src="https://github.com/user-attachments/assets/53341f53-7aa0-4d16-998e-c8e8ae2f9ad1" />
+</p>
