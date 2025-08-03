@@ -147,4 +147,4 @@ Não vamos entrar em muitos detalhes deste tópico pois ainda não vimos nada so
 
 A diferença entre esse parâmetro e a velocidade do *Autoscroll* é que o primeiro é dinâmico, ele define as relações de velocidade entre as camadas em relação a câmera. É de fato para ser utilizado in-game. O segundo é basicamente um script estático. As camadas terão aquela velocidade definida independentemente de qualquer outra coisa. 
 
-Eu fiz uma cena bem legal com paralaxe [neste link](). Vale a pena conferir!
+Eu fiz uma cena bem legal com paralaxe [neste link](https://felipebottega.github.io/Games/Manual/2D/Rendering/2D%20Parallax%20-%20Car%20Scene/html/). Vale a pena conferir!
