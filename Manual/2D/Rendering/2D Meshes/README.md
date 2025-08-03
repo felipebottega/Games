@@ -8,7 +8,7 @@ As meshes (malhas) basicamente são um conjunto de triângulos que preenchem o s
 
 ## Adicionando mesh ao sprite
 
-Crie um `Sprite2D` e vá na opção escrita *Sprite2D* acima da tela (a mesma usada para acesar o shape de sombra). Selecione a opção *Convert to MeshInstance 2D*.
+Crie um `Sprite2D` e vá na opção escrita *Sprite2D* acima da tela. Selecione a opção *Convert to MeshInstance 2D*.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4b1bacba-21ba-4da8-b0dd-e755e4289080" width="800">
