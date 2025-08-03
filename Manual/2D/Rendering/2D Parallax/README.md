@@ -12,15 +12,15 @@ Para obter o efeito de paralaxe, você deve preparar as figuras das camadas e se
 
 ## Preparando as camadas para o Parallax2D
 
-Note que o objeto mais da frente tem dimensões $1302 \times 402$. Além de se atentar a isso quando for fazer as outras camadas, também não esqueça de configurar o viewport de acordo. Neste exemplo eu quero que o viewport tenha a largura igual à da figura.
+Note que o primeiro objeto tem dimensões $1302 \times 402$. Além de se atentar a isso quando for fazer as outras camadas, também não esqueça de configurar o viewport de acordo. Neste exemplo eu quero que o viewport tenha a largura igual à da figura.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/1d784fd5-3b89-469b-9273-6576d374680b" />
 </p>
 
-### Dica para criar sprite sheet
+### Criar sprite sheet no GIMP
 
-A segunda camada eu quero que sejam diversas bolas lado a lado. Para obter uma separação uniforme, o ideal é criar uma grid para controle. Isso também serve para sprite sheets. Começamos com a figura de uma única bola. Note que a largura da imagem já está em $1302$.
+A segunda camada eu quero que sejam diversas bolas lado a lado. Vamos utilizar o GIMP para isso. Para obter uma separação uniforme, o ideal é criar uma grid para controle. Isso também serve para sprite sheets. Começamos com a figura de uma única bola. Note que a largura da imagem já está em $1302$.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/0c725d62-9589-4fcd-8ba1-0edf5a298504" />
@@ -39,7 +39,7 @@ A colocação da bola dentro de cada frame foi no olho. Pode-se melhorar a preci
   <img width="800" src="https://github.com/user-attachments/assets/03d55fd3-f408-4e93-8e07-3b590fac7615" />
 </p>
 
-Este procedimento mostra a grade mas ela não é salva quando você exporta para PNG. Se fizer questão de salvar a grade junto, deve ir em *Filtros → Renderizar → Texturas → Grade*, como mostrado abaixo. 
+Este procedimento mostra a grade, mas ela não é salva quando você exporta para PNG. Se fizer questão de salvar a grade junto, deve ir em *Filtros → Renderizar → Texturas → Grade*, como mostrado abaixo. 
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/cdbf041c-6b43-4d45-b6c0-39c5baaa8dbc" />
@@ -53,7 +53,7 @@ A terceira e última camada não tem o mesmo problema que a segunda, mas a figur
 
 ## Posicionando as camadas de paralaxe
 
-Em termos de estrutura da árvore de nodes não tem mistério, adicionamos um node `Parallax2D` com um filho `Sprite2D` para cada camada. É importante lembrar que os últimos nodes são os que vão aparecer mais à frente.
+Em termos de estrutura da árvore de nodes, não tem mistério, adicionamos um node `Parallax2D` com um filho `Sprite2D` para cada camada. É importante lembrar que os últimos nodes são os que vão aparecer mais à frente.
 
 Na hora de posicionar os nodes, basta posicionar o `Sprite2D`, e deixe `Parallax2D` na origem. Note que ambos se encaixaram perfeitamente na viewport. Ainda não colocamos a terceira camada.
 
@@ -80,7 +80,7 @@ Abaixo, mostramos duas imagens, a primeira usando um *Repeat Size* menor que $13
 
 ### Arrumando paralaxe para figura com o tamanho correto mas espaço extra sobrando
 
-Para a figura acima, qualquer desvio do tamanho original ficará errado. Porém, o que é um erro aqui é um ajuste para o caso das bolas. Lembre que elas tem um espaço a mais sobrando. Podemos resolver isso antecipando a repetição. Essa repetição vai ficar por cima do espaço extra que queremos esconder. A escolha do quanto o *Repeat Size* deve ficar abaixo de $1302$ acaba sendo no olho, mas podemos usar a ferramenta da regra para ganhar mais precisão no ajuste.
+Para a figura acima, qualquer desvio do tamanho original ficará errado. Porém, o que era erro antes, agora é um ajuste para o caso das bolas. Lembre que elas tem um espaço extra sobrando. Podemos resolver isso antecipando a repetição. Essa repetição vai ficar por cima do espaço extra que queremos esconder. A escolha do quanto o *Repeat Size* deve ficar abaixo de $1302$ acaba sendo no olho, mas podemos usar a ferramenta da régua para ganhar mais precisão no ajuste.
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/eda844eb-a062-4de3-a19c-80be5abe286f" />
