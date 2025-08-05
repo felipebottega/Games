@@ -61,7 +61,7 @@ Este é uma variação do anterior, mas a rotação é obtida pelo mouse. Em vez
 
 ## Clicar e mover
 
-Esse é no estilo Age of Empires. Você clica com o mouse e o boneco vai para onde você clicou. Para esse, você deve ir em *Project → Prpject Settings → Input Map* e configurar para reconhecer o clique esquerdo do mouse. Vimos sobre configuração de inputs [nesse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs). 
+Esse é no estilo Age of Empires. Você clica com o mouse e o boneco vai para onde você clicou. Para esse, você deve ir em *Project → Project Settings → Input Map* e configurar para reconhecer o clique esquerdo do mouse. Vimos sobre configuração de inputs [nesse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs). 
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/c9e00c00-a7ac-468d-bca0-c981330aed29" />
