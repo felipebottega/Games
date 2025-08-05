@@ -67,7 +67,7 @@ Esse é no estilo Age of Empires. Você clica com o mouse e o boneco vai para on
   <img width="800" src="https://github.com/user-attachments/assets/c9e00c00-a7ac-468d-bca0-c981330aed29" />
 </p>
 
-O script para este movimento é dado abaixo. Caso você queira que o boneco vire na direção onde você está apontado ao se mover, basta descomentar o comando `look_at(target)`. VocÊ também pode fazê-lo olhar constantemente para a direção do mouse, basta trocar esse comando por `look_at(get_global_mouse_position())`. Por fim, se você quiser que o boneco fique constantemente perseguindo a posição do mouse, comente a linha `if event.is_action_pressed("click"):`.
+O script para este movimento é dado abaixo. Caso você queira que o boneco vire na direção onde você está apontado ao se mover, basta descomentar o comando `look_at(target)`. Você também pode fazê-lo olhar constantemente para a direção do mouse, basta trocar esse comando por `look_at(get_global_mouse_position())`. Por fim, se você quiser que o boneco fique constantemente perseguindo a posição do mouse, comente a linha `if event.is_action_pressed("click"):`.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/863dd74b-ae18-4475-9438-f36abc463351" />
