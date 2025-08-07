@@ -1,0 +1,1 @@
+Essa pasta serve para incluir os tópicos que não estão no manual oficial, mas deveriam estar (na minha opinião).
