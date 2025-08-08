@@ -106,6 +106,8 @@ Saber limitar o que a câmera enxerga é o básico para se ter um jogo que não 
 
 **Zoom:** Como o próprio nome diz, aplica zoom-in ou zoom-out. Se você der zoom em apenas um dos eixos, a imagem vai se distorcer.
 
+**Process Callback:** Escolhe se a câmera deve ser atualiza via `_process` ou `_physics_process`.
+
 ## Avançado de Camera2D
 
 ### Drag
@@ -117,4 +119,24 @@ Para começar, ative as opções *Draw Limits* e *Draw Drag Margin* no Inspector
   <img width="600" src="https://github.com/user-attachments/assets/179022e1-95d5-4658-b662-6e5ca579427c" />
 </p>
 
-Já vimos
+Já vimos sobre limites anteriormente. A opção marcada deixa evidente na tela onde estão os limites, que são as linhas amarelas. Aquele quadrado verde no meio (talvez azul?) marca os limites do *drag* que já vem por default. Esse quadrado demarca limites horizontais e verticais que servem como triger para a câmera poder se mover. Ou seja, Se o boneco for para a esquerda, a câmera só vai começar a acompanhar quando ele ultrapassar a linha vertical esquerda. Se ele resolver voltar para a direita, a câmera não vai se mover até ele ultrapassar a linha vertical direita. O mesmo raciocínio se aplica a ir para cima ou para baixo na tela. Sem o drag, a câmera fica eternamente se movimentando em resposta a qualquer mínimo movimento do jogador, e nem sempre isso é desejável.
+
+> PS: Sem o drag a câmera pode deixar de se mover também caso o jogador esta perto dos limites. Aí a câmera trava na posição do limite.
+
+Para ativar o drag vertical ou horizontal, devemos marcar as opções *Drag → Vertical Enabled* e/ou *Drag → Horizontal Enabled*. Depois disso, escolha os valores para *Left Margin, Top Margin, Right Margin, Bottom Margin*. Estes valores representam a distância entre o centro e o final da câmera, em percentual.
+
+### Smoothing
+
+Temos as opções *Position Smoothing* e *Rotation Smoothing* no Inspector. Por default elas vem desativadas. Quando você ativa a *Position Smoothing*, a câmera não acompanha o boneco automaticamente. Ela vai atrás dele com um pouco de atraso, parando suavemente. O mesmo vale para a *Rotation Smoothing*, mas em vez de mudar de posição é em relação a rotação. 
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/2024a1cb-fe1f-41e6-b15b-c8f1c10157f8" />
+</p>
+
+## Zoom via script
+
+Podemos implementar uma dinâmica onde o jogo começa com um certo zoom e o jogador consegue alterar o zoom pelo scroll do mouse. Isso é possível pelo script abaixo, que deve ser anexado ao node `Camera2D`.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/65e818f8-c58b-4f0c-bb55-0c1b84f41e89" />
+</p>
