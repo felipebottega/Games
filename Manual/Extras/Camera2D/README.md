@@ -65,7 +65,11 @@ Como dissemos no início, basta colocar um node `Camera2D` como filho do player 
   <img width="200" src="https://github.com/user-attachments/assets/970d6a23-fe02-4bcc-b09a-48a0e732a8de" />
 </p>
 
-Com este setup, você tem um jogo em que a câmera fica sempre centrada no boneco e o segue assim que ele se move. Abaixo, mostramos como é a cena inicial do jogo quando colocamos para rodar. Logo de cara já percebemos que tem algum problema. A câmera está mostrando trechos do espaço sem textura. Não queremos isso!
+Com este setup, você tem um jogo em que a câmera fica sempre centrada no boneco e o segue assim que ele se move. Abaixo, mostramos como é a cena inicial do jogo quando colocamos para rodar. 
+
+## Básico de Camera2D
+
+Logo de cara já percebemos que tem algum problema. A câmera está mostrando trechos do espaço sem textura. Não queremos isso!
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/4af1aa8b-0d0f-4a12-b4f7-612c899820b4" />
@@ -77,8 +81,40 @@ Indo na cena Main, podemos ver claramente a razão disso: o boneco começa no ca
   <img width="700" src="https://github.com/user-attachments/assets/8ab41b0f-a444-4bae-a162-686439dd45bb" />
 </p>  
 
-A solução correta é usar os parâmetros de limitação, *Left, Top, Right, Bottom*. Eles definem coordenadas absolutas de onde a câmera nunca pode passar. Pela imagem acima, podemos concluir que o $x$ nunca deveria ser maior que $3000$ e o $y$ nunca deveria ser maior que $1500$. O que faz sentido, pois é o tamanho da viewport. Também não queremos que a câmera mostre o que tem antes de $x = 0$ e $y = 0$, pois não há textura além disso.
+A solução correta é usar os parâmetros de limitação, *Left, Top, Right, Bottom*. Eles definem coordenadas absolutas de onde a câmera nunca pode passar. Pela imagem acima, podemos concluir que o $x$ nunca deveria ser maior que $3000$ e o $y$ nunca deveria ser maior que $1500$. O que faz sentido, pois é o tamanho da viewport. Também não queremos que a câmera mostre o que tem antes de $x = -3000$ e $y = -400$, pois não há textura além disso.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/aac15134-9c9d-402f-afbd-7d4d460c40d4" />
+  <img width="800" src="https://github.com/user-attachments/assets/876f23cf-613e-4c64-b249-332a6b37aeee" />
 </p>
+
+## Intermediário de Camera2D
+
+Saber limitar o que a câmera enxerga é o básico para se ter um jogo que não seja feio, mas dá para obter algumas melhorias. Vamos ver os principais parâmetros aqui.
+
+**Offset:** Força a câmera a se posicionar a alguns pixels de distância da posição default. Tenha em mente que esse parâmetro desrespeita os limites. No exemplo abaixo, colocamos um offset de $y = 200$ pixels. Isso significa que a câmera vai se posicionar $200$ pixels abaixo do que deveria. Com isso, a câmera acaba mostrando a parte sem textura, mesmo com o limite anterior definido.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/56522101-49a0-4a9f-a2ab-9a93430b6ef6" />
+  <img width="700" src="https://github.com/user-attachments/assets/2cac7f63-48c1-4eaa-ab63-9cdd9d912199" />
+</p>
+
+**Ignore Rotation:** Se houver algum rotação em um node superior, ela não afeta câmera. Com essa opção desabilitada a câmera rotaciona junto.
+
+**Enabled:** Controla se a câmera está ativada ou não.
+
+> PS: Só para lembrar, a câmera desativada significa apenas que a tela não vai se mover junto com o boneco, ela não vai escurecer.
+
+**Zoom:** Como o próprio nome diz, aplica zoom-in ou zoom-out. Se você der zoom em apenas um dos eixos, a imagem vai se distorcer.
+
+## Avançado de Camera2D
+
+### Drag
+
+Para começar, ative as opções *Draw Limits* e *Draw Drag Margin* no Inspector.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/63ae4680-086a-466b-aaaa-5a850356087d" />
+  <img width="600" src="https://github.com/user-attachments/assets/179022e1-95d5-4658-b662-6e5ca579427c" />
+</p>
+
+Já vimos
