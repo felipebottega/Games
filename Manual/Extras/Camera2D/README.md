@@ -38,3 +38,11 @@ Criamos mais um nível de tiles, agora para os tiles das casas. Novamente, são 
 </p>
 
 Feito isso, você tem as ferramentas prontas para desenhar o cenário do jeito que preferir.
+
+A última coisa é criar o player. Utilizamos a estrutura clássica de um `CharacterBody2D` contendo a animação e colisão. Também criamos um `Sprite2D` com a sombra debaixo do boneco. Para este exemplo, utilizamos *Motion Mode* igual a *Floating*, que é o indicado para jogos top-down. Se você utilizar o script default da Godot para `CharacterBody2D`, não esqueça de remover a parte da gravidade. Na verdade, aconselho a copiar o script de *Clicar e mover* mostrado no tutorial [2D movement overview]([<p align="center">](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#clicar-e-mover)).
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/0e61287c-5f65-4f21-aff5-c5833547e4b0" />
+  <img width="500" src="https://github.com/user-attachments/assets/ca163035-6b4f-4aef-9444-fb0b393df5d5" />
+</p>
+
