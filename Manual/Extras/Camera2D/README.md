@@ -70,3 +70,15 @@ Com este setup, você tem um jogo em que a câmera fica sempre centrada no bonec
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/4af1aa8b-0d0f-4a12-b4f7-612c899820b4" />
 </p>
+
+Indo na cena Main, podemos ver claramente a razão disso: o boneco começa no canto da tela, e a câmera tem um campo de visão que acaba indo além disso mesmo. Poderíamos colocar o boneco para começar mais para o centro, mas ele poderia simplesmente andar até aquele ponto novamente. Isso não resolveria o problema. Poderíamos também adicionar mais textura no cenário e criar uma parede invisível no caminho. Isso até resolveria, mas essa parede deveria fazer o boneco travar no meio da tela, nunca no canto. 
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/8ab41b0f-a444-4bae-a162-686439dd45bb" />
+</p>  
+
+A solução correta é usar os parâmetros de limitação, *Left, Top, Right, Bottom*. Eles definem coordenadas absolutas de onde a câmera nunca pode passar. Pela imagem acima, podemos concluir que o $x$ nunca deveria ser maior que $3000$ e o $y$ nunca deveria ser maior que $1500$. O que faz sentido, pois é o tamanho da viewport. Também não queremos que a câmera mostre o que tem antes de $x = 0$ e $y = 0$, pois não há textura além disso.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/aac15134-9c9d-402f-afbd-7d4d460c40d4" />
+</p>
