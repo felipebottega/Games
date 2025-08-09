@@ -18,7 +18,7 @@ Começamos baixando o tilesheet [Kenney's "Abstract Platformer" pack](https://ke
   <img width="200" src="https://github.com/user-attachments/assets/382a4ec0-e0e7-48fc-bd11-26992f270058" />
 </p>
 
-Depois clique em *TileSet* no editor abaixo do canvas (rodapé da imagem abaixo), selecione o tilesheet em *FileSystem* e arraste o tilesheet para o espaço vazio. Vai abrir uma mensagem perguntando se você quer gerar automaticamente o atlas, selecione sim. Raramente você vai precisar fazer o atlas na mão. O resultado deverá ser parecido com o da figura abaixo.
+Depois clique em *TileSet* no painel abaixo do canvas (rodapé da imagem abaixo), selecione o tilesheet em *FileSystem* e arraste o tilesheet para o espaço vazio. Vai abrir uma mensagem perguntando se você quer gerar automaticamente o atlas, selecione sim. Raramente você vai precisar fazer o atlas na mão. O resultado deverá ser parecido com o da figura abaixo.
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/10935ae9-3276-495c-8a52-7f239fa9ca31" />
@@ -42,7 +42,7 @@ A principal ferramenta para desenhar com tiles é este pequeno conjunto de opç�
   <img width="500" src="https://github.com/user-attachments/assets/3efed9b7-4fde-4c96-a332-0f69a64d08ed" />
 </p>
 
-- <img width="40" src="https://github.com/user-attachments/assets/c245310f-a5f1-4f4a-8492-47bc3081cb03" /> O lápis é a ferramenta de desenho comum. Basta você selecionar o tile no editor e depois pode ir no canvas para desenhar os tiles como bem entender.
+- <img width="40" src="https://github.com/user-attachments/assets/c245310f-a5f1-4f4a-8492-47bc3081cb03" /> O lápis é a ferramenta de desenho comum. Basta você selecionar o tile no painel e depois pode ir no canvas para desenhar os tiles como bem entender.
 
 - <img width="40" src="https://github.com/user-attachments/assets/ceb82f16-16c3-40fe-a516-d6d11577a626" /> O traço é a ferramenta para desenhar segmentos de reta com tiles. Você tem que clicar e segurar o botão do mouse no ponto ininial, então basta mover o mouse para decidir o ponto final e soltar o clique.
 
@@ -82,7 +82,7 @@ A ferramenta de seleção não serve apenas para o atlas, você também pode sel
 
 ## Patterns
 
-Até agora estávamos na aba *Tiles* do editor. Vamos trocar para a aba *Patterns*, logo ao lado. Com a ferramenta de seleção, selecione uma região do tilemap no canvas e pressione ctrl+C. Depois, no editor, faça ctrl+V. A sua seleção vai ficar armazenada na lista do *Patterns*. Fizemos dois exemplo abaixo. O primeiro de uma seleção retangular e o segundo escolhendo ponto a ponto.
+Até agora estávamos na aba *Tiles* do painel. Vamos trocar para a aba *Patterns*, logo ao lado. Com a ferramenta de seleção, selecione uma região do tilemap no canvas e pressione ctrl+C. Depois, no painel, faça ctrl+V. A sua seleção vai ficar armazenada na lista do *Patterns*. Fizemos dois exemplo abaixo. O primeiro de uma seleção retangular e o segundo escolhendo ponto a ponto.
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/6f18b7de-1c14-41f5-98b1-954d73b66863" />
@@ -103,7 +103,7 @@ Só para dar um exemplo concreto, criamos um padrão de quadriculado $2 \times 2
 
 ## TileSets
 
-Vimos bastante sobre como desenhar os tiles na cena, que é manipulação do atlas e suas ferramentas na aba *TileMap* do editor. Porém, note que ao lado dela temos também a aba *TileSet*. Enquanto a *TileMap* trata de desenhar os tiles na cena, a *TileSet* trata de configurar os tiles. Veremos nesta seção que dá para fazer muito coisa sobre os tiles antes dele serem desenhados.
+Vimos bastante sobre como desenhar os tiles na cena, que é manipulação do atlas e suas ferramentas na aba *TileMap* do painel. Porém, note que ao lado dela temos também a aba *TileSet*. Enquanto a *TileMap* trata de desenhar os tiles na cena, a *TileSet* trata de configurar os tiles. Veremos nesta seção que dá para fazer muito coisa sobre os tiles antes dele serem desenhados.
 
 ### Propriedades do TileSet no Inspector
 
@@ -187,7 +187,7 @@ Para poder adicionar colisão aos tiles, primeiro você deve criar uma camada de
   <img width="220" src="https://github.com/user-attachments/assets/dab1ca88-1997-4481-a432-0b97d4656fc3" />
 </p>
 
-Feito isso, vá para a aba *Select* no editor e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [Polygon2D e CollisionPolygon2D]([https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D)). 
+Feito isso, vá para a aba *Select* no painel e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [Polygon2D e CollisionPolygon2D]([https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D)). 
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/56d20c52-5766-457e-8bce-a7e13b97fb26" />
@@ -214,7 +214,7 @@ Para poder adicionar metadados, primeiro clique na aba *Custom Data Layers* e de
   <img width="200" src="https://github.com/user-attachments/assets/e905f17c-a0b7-472a-9fe9-8c2fd25f4583" />
 </p>
 
-Note que estes metadados foram criados para o TileSet inteiro. Ou seja, eles serão acessíveis por todos os atlas que você colocar ali. Inclusive, na aba *Select* no editor, você pode reparar que a aba *Custom Data* já apareceu automaticamente, incluindo os metadados que você criou (a engine sempre atribui valores default para cada tipo de variável). No exemplo da imagem abaixo, podemos ver que é possível configurar os metadados para cada tile individualmente. Este valor fica evidenciado no próprio atlas, à direita da imagem.
+Note que estes metadados foram criados para o TileSet inteiro. Ou seja, eles serão acessíveis por todos os atlas que você colocar ali. Inclusive, na aba *Select* no painel, você pode reparar que a aba *Custom Data* já apareceu automaticamente, incluindo os metadados que você criou (a engine sempre atribui valores default para cada tipo de variável). No exemplo da imagem abaixo, podemos ver que é possível configurar os metadados para cada tile individualmente. Este valor fica evidenciado no próprio atlas, à direita da imagem.
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/63a6df85-d21b-4606-aa08-032a951428b4" />
