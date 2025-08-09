@@ -4,7 +4,7 @@ Vimos um pouco sobre animação de sprites [anteriormente](https://github.com/fe
 
 ## AnimatedSprite2D com imagens individuais
 
-Selecione o node `AnimatedSprite2D` e abra a aba *Animation* em *Inspector*. Selecione *Sprite Frame* e *New SpriteFrames*, como mostrado abaixo. Clique no nome *SpriteFrames* que apareceu no mesmo local (figura do meio, abaixo), daí o editor de animação (figura da direita, abaixo) deve aparecer. Daí arraste os sprites de *File System* para a caixa de animação. Troque o nome para *run* e mude a velocidade da animação para 10 FPS.  
+Selecione o node `AnimatedSprite2D` e abra a aba *Animation* em *Inspector*. Selecione *Sprite Frame* e *New SpriteFrames*, como mostrado abaixo. Clique no nome *SpriteFrames* que apareceu no mesmo local (figura do meio, abaixo), daí o painel de animação (figura da direita, abaixo) deve aparecer. Daí arraste os sprites de *File System* para a caixa de animação. Troque o nome para *run* e mude a velocidade da animação para 10 FPS.  
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a0f44fc1-b7cc-4177-8b74-c6e191f87d9f" width="1100">
