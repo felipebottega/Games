@@ -64,7 +64,7 @@ A mesma ideia se aplica aos outros modes. O que muda são os formatos dos peerin
 
 Falamos de pintar terrenos nos tiles e desenhar tiles sem explicar como estas tarefas são feitas. Isto foi proposital, a intenção era entender o conceito primeiro. Agora que ele foi entendido, podemos passar para os processos.
 
-Existem duas maneiras de pintar terrenos nos tiles. Você pode fazer pela aba *Select* ou *Paint*, no *TileSet* do editor.
+Existem duas maneiras de pintar terrenos nos tiles. Você pode fazer pela aba *Select* ou *Paint*, no *TileSet* do painel.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/4ebbbcf8-c971-464d-a909-5a586964ee57" />
@@ -72,7 +72,7 @@ Existem duas maneiras de pintar terrenos nos tiles. Você pode fazer pela aba *S
 
 ### Pintando terrenos pelo Select
 
-Antes mesmo de querer começar a pintar terrenos, não se esqueça de ter o atlas já acertado no teu TileSet, e tenha o terreno correto criado dentro do TileSet também. Podemos ver abaixo que tudo já está pronto, só falta dar o próximo passo. Selecione o tile que quer confiugurar e clique em *Terrains*, dentro da janela do *Select*, no editor.
+Antes mesmo de querer começar a pintar terrenos, não se esqueça de ter o atlas já acertado no teu TileSet, e tenha o terreno correto criado dentro do TileSet também. Podemos ver abaixo que tudo já está pronto, só falta dar o próximo passo. Selecione o tile que quer confiugurar e clique em *Terrains*, dentro da janela do *Select*, no painel.
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/1b7b66a9-f51f-45ff-a678-35d4393e96fb" />
@@ -127,7 +127,7 @@ E Agora chegou a hora de pintar. É só passar o mouse pelas regiões e ir pinta
 
 ## Desenhando terrenos
 
-Só o que falta agora é saber como desenhar os terrenos na tela. Na verdade esse é o passo mais fácil de todos. Baste ir em *TileMap*, no editor, e selecionar a aba *Terrains*. Os ícones das ferramentas de desenho vão aparecer e, na janela abaixo, você deve escolher qual Terrain Set e terreno quer desenhar. Em geral, o modo de desenho <img width="30" src="https://github.com/user-attachments/assets/152cf6f2-11fe-4410-95c0-b6180c100e31" /> é o que atende as necessidades mais gerais, enquanto que o <img width="30" src="https://github.com/user-attachments/assets/eb672c15-1c59-4d9f-ae3f-13ca276f022d" /> é mais específico. Não vou entrar nos detalhes das diferenças deles, isso é outra coisa que você deve aprender na prática. Os outros ícones ao lado forçam a desenhar um tile específico do conjunto de tiles do Terrain Set, o que pode ser necessário às vezes (lembrando também que é sempre possível voltar ao modo normal de desenhar tiles, isto é, sem nada de terrenos).
+Só o que falta agora é saber como desenhar os terrenos na tela. Na verdade esse é o passo mais fácil de todos. Baste ir em *TileMap*, no painel, e selecionar a aba *Terrains*. Os ícones das ferramentas de desenho vão aparecer e, na janela abaixo, você deve escolher qual Terrain Set e terreno quer desenhar. Em geral, o modo de desenho <img width="30" src="https://github.com/user-attachments/assets/152cf6f2-11fe-4410-95c0-b6180c100e31" /> é o que atende as necessidades mais gerais, enquanto que o <img width="30" src="https://github.com/user-attachments/assets/eb672c15-1c59-4d9f-ae3f-13ca276f022d" /> é mais específico. Não vou entrar nos detalhes das diferenças deles, isso é outra coisa que você deve aprender na prática. Os outros ícones ao lado forçam a desenhar um tile específico do conjunto de tiles do Terrain Set, o que pode ser necessário às vezes (lembrando também que é sempre possível voltar ao modo normal de desenhar tiles, isto é, sem nada de terrenos).
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/c4312216-6ffb-40e0-ab38-c6ceb49eebdc" />
