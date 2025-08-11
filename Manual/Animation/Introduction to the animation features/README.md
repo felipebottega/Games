@@ -34,8 +34,47 @@ Clique em *+ Add Track* e selecione *Property Track*. Uma janela com a árvore d
   <img width="630" src="https://github.com/user-attachments/assets/b6073fb1-efa8-4a5d-9d3c-71affe3df3b5" />
 </p>
 
-Dê o segundo clique do mouse sobre a linha vertical azul no track (essa linha marca o ponto da animação que o editor está no momento) e selecione a opção *Insert Key*.
+Dê o segundo clique do mouse sobre a linha vertical azul no track (essa linha marca o ponto da animação que o editor está no momento) e selecione a opção *Insert Key*. Logo após isso, vai aparecer uma "bolinha" no timeline, no local onde você clicou. Você acabou de inserir um evento de animação, que é chamado de "key" na Godot. 
 
-<img width="576" height="257" alt="image" src="https://github.com/user-attachments/assets/ae30d732-0bab-43ac-ae9e-3531e7874224" />
-<img width="445" height="244" alt="image" src="https://github.com/user-attachments/assets/c7ce6f08-fb89-4716-8a54-d02ae3ddb4a5" />
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/ae30d732-0bab-43ac-ae9e-3531e7874224" />
+  <img width="325" src="https://github.com/user-attachments/assets/c7ce6f08-fb89-4716-8a54-d02ae3ddb4a5" />
+</p>
 
+Agora clique na bolinha e olhe para o Inspector. Estas são as configurações das propriedades do `position` do `Sprite2D` naquele instante marcado. Estamos dizendo à engine que queremos o sprite na origem no instante inicial.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/9097e2e8-9439-4684-915e-85f4403d0405" />
+</p>
+
+ Agora repita o procedimento para colocar o sprite na posição $(100, 100)$ no instante $1.0$ (em segundos). Se você fez tudo certo, o editor deve estar como mostrado abaixo. Note que não é necessário inserir a bolinha na posição perfeita, pois você pode editar o instante dela no Inspector caso ele fique um pouco deslocada do momento que você queria. Depois disso você já pode dar o play e ver a sua animação acontecer. 
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/09ec1e7e-edbc-4bb5-856d-5b09ba0a3447" />
+</p>
+
+Esses foi o nosso primeiro passo no mundo de `AnimationPlayer`. A partir disso você já deve ter uma ideia das possibilidades. Aos poucos o nosso arsenal de ferramentas só vai aumentar.
+
+## Animation Controls
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/1ace4903-6c7c-49e1-8a19-c7c3f352ce33" />
+</p>
+
+1- Botões de play, stop, etc. Nenhum mistério aqui.
+
+2- Instante da animação que está no editor (corresponden tanto à linha vertical azul no Timeline quando a imagem que está na tela acima).
+
+3- Opções mais gerais de gerenciamento, como criar novas animações, renomear. Depois iremos ver sobre a *Manage Animations*, que merece um pouco mais de atenção.
+
+4- Lista de animações. Um mesmo node de animações pode ter várias animações, assim como o `AnimatedSprite2D`. E assim como o `AnimatedSprite2D`, só é permitido tocar uma animação por vez. A animação *RESET* é especial. Iremos ver depois o papel dela.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/5686799f-d264-4418-9711-7f8c40f5b7cf" />
+</p>
+
+5- Botão de autoplay. Se estiver marcado, a animação começa automaticamente assim que a cena é carregada.
+
+6- Conjunto de opções sobre as tracks. Iremos abordar isso mais tarde.
+
+7- 
