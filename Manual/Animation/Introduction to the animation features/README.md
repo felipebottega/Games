@@ -187,6 +187,27 @@ Enquanto se vai editando, é sempre interessante usar o Onion Skinning para ver 
   <img width="700" src="https://github.com/user-attachments/assets/74de0765-682d-4370-b2c3-888f904564ea" />
 </p>
 
+Para ter algo diferente das transformações 2D, vamos animar a propriedade *modulate*. Basta seguir o procedimento utilizado para a rotação, mas dessa vez com o outra propriedade. Fora as transformações 2D, todas as outras tem que ser por este método.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/99dfe671-79ab-4ea1-860f-1d8901daaf61" />
+  <img width="1100" src="https://github.com/user-attachments/assets/43e67424-153e-452b-8f7a-e157405c86b5" />
+</p>
+
+Fizemos o modulate oscilando entre a cor original e uma adição de vermelho. Vale notar que eu apenas configurei as duas primeiras keyframes. Todas as seguintes foram ctrl+C ctrl+V de keyframes, é possível fazer isso.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/dcc9f9ae-665a-4be9-a629-260d0fc2d6db" />
+</p>
+
+A animação final ficou assim.
+
+https://github.com/user-attachments/assets/9c43842b-8f2f-4a2d-8d8b-c4b15a4addb5
+
+
+
+
+
 
 ## Keyframes for other properties
 
