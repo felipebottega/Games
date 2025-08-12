@@ -1,6 +1,8 @@
 # Introduction to the animation features
 
-O node `AnimationPlayer` pode gerar animações sobre qualquer outro node, então não é preciso se preocupar se ele é filho ou pai de algum node em específico. Começamos com uma simples cena de um `Node2D` contendo um `AnimationPlayer` e um `Sprite2D` que será animado. Ressaltamos que a animação de agora não é animação como um `AnimatedSprite2D`, mas sim animação das transformações 2D sobre o sprite.
+O node `AnimationPlayer` pode gerar animações sobre qualquer outro node, então não é preciso se preocupar se ele é filho ou pai de algum node em específico. A exceção a isso é quando quisermos que a animação "acompanhe" algum node pai, daí ele tem que ser filho (por exemplo, se a animação se move junto do player).
+
+Começamos com uma simples cena de um `Node2D` contendo um `AnimationPlayer` e um `Sprite2D` que será animado. Ressaltamos que a animação de agora não é animação como um `AnimatedSprite2D`, mas sim animação das transformações 2D sobre o sprite.
 
 No painel de animação, clique para adicionar uma nova animação e escolha um nome para ela.
 
@@ -16,12 +18,6 @@ O painel de animação possui 4 partes principais:
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/85166f4b-d008-4074-83e4-993831ca7800" />
-</p>
-
-> PS: Como mostrado na figura abaixo, algumas opções aparecem no editor quando você está no node `AnimationPlayer`. Nós iremos ignorar estes botões em favor da edição mais precisa pelo Inspector. Portanto, pode simplesmente fingir que eles não existem.
-
-<p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/7621a87f-9e9e-4b42-b031-c5411b7e6cd6" />
 </p>
 
 ## Animando propriedades
@@ -167,7 +163,18 @@ Marcadores são úteis como ferramentas de edição, quando você quer se concen
 
 ## Exemplo prático
 
-Vamos continuar trabalhando a nossa animação, mas dessa vez com um arsenal maior de ferramentas.
+Vamos continuar trabalhando a nossa animação, mas dessa vez com um arsenal maior de ferramentas. Inclusive iremos apresentar mais algumas neste exemplo. Quando o node `AnimationPlayer` está selecionado, algumas opções aparecem no editor. O que nos interessa são os primeiros 4 botões: posição, rotação, escala e inserir keyframne. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/7621a87f-9e9e-4b42-b031-c5411b7e6cd6" />
+</p>
+
+A ideia basicamente é selecionar um destes botões, alterar o sprite com a transformação correspondente ao botão e clicar no botão de inserir keyframe. é análogo ao estilo de animação *stopmotion*, onde você modelo o objeto em cada posição e vai tirando fotos de cada instante. O video abaixo ilustra o procedimento para a edição das posições.
+
+https://github.com/user-attachments/assets/404d1a19-bf9e-4dfc-b2ed-6b03264d5a59
+
+
+
 
 ## Keyframes for other properties
 
