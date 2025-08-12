@@ -208,6 +208,13 @@ Fizemos o modulate oscilando entre a cor original e uma adição de vermelho. Va
   <img width="700" src="https://github.com/user-attachments/assets/dcc9f9ae-665a-4be9-a629-260d0fc2d6db" />
 </p>
 
-A animação final ficou assim.
+Para finalizar, criamos mais uma animação de posição, deslocando a espada da origem para não ficar coberta em partes não-visíveis pela câmera. Neste caso, a posição é somada com a animação de posição anterior (soma vetorial mesmo), mas o comportamento nem sempre é simples assim. Tem que experimentar para ganhar um entendimento.
+
+<p align="center">
+  <img width="680" src="https://github.com/user-attachments/assets/83948e23-c721-4a1e-bd5a-5fe3a3269681" />
+  <img width="250" src="https://github.com/user-attachments/assets/9e5ef2bb-f939-4fa7-8fdd-46e75eba167e" />
+</p>
+
+Abaixo temos a animação final.
 
 https://github.com/user-attachments/assets/9c43842b-8f2f-4a2d-8d8b-c4b15a4addb5
