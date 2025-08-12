@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Introduction to the animation features"
+run/main_scene="uid://cefvn87514rn6"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=240
 
 [rendering]
 
