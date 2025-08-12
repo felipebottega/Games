@@ -125,4 +125,22 @@ Quando você adiciona uma track, aparecem algumas opções junto a ela. Estas op
 
   4. Opção de deletar a track.
 
+## Controles da Timeline
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/852fbc5a-0f2f-4ab3-a554-d2c580b33595" />
+</p>
+
+  1. Tempo de cada frame na animação. Este valor não tem nada a ver com o jogo, é apenas para auxiliar na edição da animação. Se você quiser uma animação com menos frames, isto pode ser útil para análises com o Onion Skinning, mas quando for rodar a cena, o número de frames dela é o default do jogo.
+
+  2. Determina se você quer trabalhar com as unidades de segundos (default) ou FPS. Se for alterar para FPS, o painel inteiro sde adapta para essa unidade.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/0e517f11-1b0a-4e8b-b667-d328776985e7" />
+</p>
+
+  3. Zoom-in e zoom-out na Timeline.
+
+  4. Ajusta o zoom da Timeline para ocupar o todo o espaço da track.
+     
 
