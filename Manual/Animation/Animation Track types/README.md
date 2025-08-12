@@ -42,4 +42,27 @@ Depois que a fnção foi criada, basta repetir os passos anteriores, mas dessa v
   <img width="950" src="https://github.com/user-attachments/assets/9cccd53c-62c6-47bc-a64c-a7e6951cb35b" />
 </p>
 
+## Audio Playback Track
+
+Para inserir sons na sua animação, é necessário que sua cena tenha um node `AudioStreamPlayer`, `AudioStreamPlayer2D`, ou `AudioStreamPlayer3D`. Vamos considerar o `AudioStreamPlayer` nesse exemplo. 
+
+<p align="center">
+  <img width="150" src="https://github.com/user-attachments/assets/2ca92729-8290-4b2b-8497-82596b8c978d" />
+  <img width="300" src="https://github.com/user-attachments/assets/da0669a6-d865-4b97-b10a-5cd0f9e5031f" />
+</p>
+
+Depois disso comece a inserir as keyframes de audio nos instantes que você quiser. Para cada keyframe, no Inspector você pode arrastar o arquivo de áudio normalmente como faria no `AudioStreamPlayer`. Note que o arquivo pode ser diferente em cada keyframe.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/f4830fb0-3724-4167-afae-273239ed5bbe" />
+  <img width="250" src="https://github.com/user-attachments/assets/732a65f8-5ed7-4312-a051-2b5ade60688d" />
+</p>
+
+A opção de usar *Blend* ou não só importa quando estamos fazendo mix de animações distintas. Isso nós iremos ver mais para frente no tópico de `AnimationTree`.
+
+<p align="center">
+  <img width="120" src="https://github.com/user-attachments/assets/3e9194c4-b743-4f4c-8676-aea8ffc8a550" />
+</p>
+
+
 
