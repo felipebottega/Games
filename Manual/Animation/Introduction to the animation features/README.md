@@ -160,7 +160,7 @@ Depois de decidir o nome e a cor do marcador, dê ok. Ele ficará destacado na T
 Criamos dois marcadores como exemplo. Se você segurar shift e clicar em dois marcadores, a região entre eles ficará destacada em vermelho. Ao dar play, apenas a animação deste trecho será executada. 
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/b93b3a5b-eb91-4b77-9b0d-0785140a4dce" />
+  <img width="550" src="https://github.com/user-attachments/assets/b93b3a5b-eb91-4b77-9b0d-0785140a4dce" />
 </p>
 
 Marcadores são úteis como ferramentas de edição, quando você quer se concentrar em um trecho, ou quer deixar marcado como lembrete para voltar ali mais tarde, entre outros. Além da edição, você pode animar apenas o trecho entre marcadores no jogo através da função `play_section_with_markers` (aí tem quer ser via script). Também dá para chamar a função `play_section_with_markers_backwards` para executar o trecho ao contrário no jogo.
