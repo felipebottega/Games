@@ -173,7 +173,19 @@ A ideia basicamente é selecionar um destes botões, alterar o sprite com a tran
 
 https://github.com/user-attachments/assets/404d1a19-bf9e-4dfc-b2ed-6b03264d5a59
 
+Vamos também aplicar uma rotação na espada, para simular um balanço. Dessa vez usaremos o método ensinado inicialmente. Vamos em *Add Track → Property Track → Sprite2D → Node2D/rotation*. Inserimos o primeiro keyframe no instante zero e sem nenhuma rotação. Depois acrescentamos keyframes nos mesmos instantes onde foram inseridos os keyframes das posições, intercalando entre $45^\circ$ e $-45^\circ$. Note que no Inspector nós temos a curva *Easing* para editar. Ela define o quanto da rotação será aplicado a cada instante. Nesta curva, em particular, adiamos a rotação para ser mais aplicada no fim da animação. Tem como se conseguir diversos efeitos com essa curva. 
 
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/5daed26d-1a38-4ec7-9a03-6d2dae7e1c44" />
+</p>
+
+> PS: A curva *Easing* não depende do método de animação escolhido. Ou seja, podemos ir no Inspector da posição e editar suas curvas também se quisermos.
+
+Enquanto se vai editando, é sempre interessante usar o Onion Skinning para ver se os frames anteriores (vermelho) e posteriores (verde) estão próximos do que você deseja. Note que colocamos a velocidade da animação para $0.5$ segundos por frame (abaixo, na figura). Essa lentidão no FPS ajuda a enxergar frames mais distantes no Onion Skinning.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/74de0765-682d-4370-b2c3-888f904564ea" />
+</p>
 
 
 ## Keyframes for other properties
