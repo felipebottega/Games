@@ -29,4 +29,17 @@ Para este exemplo, vamos utilizar o método `rotate`. Insira uma keyframe nesta 
 </p>
 
 > PS: A função `rotate` é diferente da `rotation` que temos usado até agora. A `rotation` trabalha com radianos e ela não define o ângulo, ela incrementa.
-> 
+
+Você pode ir além das funções nativas. É possível chamar funções que você mesmo escreveu para inserir nas animações. Além da movimentação e rotação na espada, iremos utilizar a função abaixo para dar um efeito de cores na espada por um período certo de tempo. Chamamos atenção para o fato do script não estar no `Sprite2D`. Ou seja, é possível chamar uma função de qualquer script que esteja na mesma cena.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/0e87c984-127d-4e41-9fae-973b92155129" />
+</p>
+
+Depois que a fnção foi criada, basta repetir os passos anteriores, mas dessa vez buscando essa função. O painel de animação deve estar assim.
+
+<p align="center">
+  <img width="950" src="https://github.com/user-attachments/assets/9cccd53c-62c6-47bc-a64c-a7e6951cb35b" />
+</p>
+
+
