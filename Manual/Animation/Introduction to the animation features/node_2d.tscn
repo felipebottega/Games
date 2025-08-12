@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://cefvn87514rn6"]
+
+[ext_resource type="Texture2D" uid="uid://bvaanu5eqqnqk" path="res://Sword Familiar.png" id="1_wtcfe"]
+
+[sub_resource type="Animation" id="Animation_0e48y"]
+resource_name = "new_animation"
+loop_mode = 1
+step = 0.033
+markers = [{
+"color": Color(0.00392157, 1, 1, 1),
+"name": &"Marcador 1",
+"time": 0.111841
+}, {
+"color": Color(1, 0.0392157, 1, 1),
+"name": &"Marcador 2",
+"time": 0.401244
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(100, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_epypp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hol4"]
+_data = {
+&"RESET": SubResource("Animation_epypp"),
+&"new_animation": SubResource("Animation_0e48y")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0hol4")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wtcfe")
