@@ -163,7 +163,7 @@ Marcadores são úteis como ferramentas de edição, quando você quer se concen
 
 ## Keyframes for other properties
 
-Uma outra maneira de inserir keyframes é indo direto no Inspector do node que tem a propriedade que se quer editar e clicar na chave que aparece ao lado da propriedade. O painel deve animação deve estar aberto, com a marcação do Timeline no instante em que você quer inserir a keyframe. Quando você clica no ícone da chave, ele insere automaticamente o valor naquele instante, no track da propriedade correspondente. Lembre que foi este o método utilizado para inserir sprites na animação vista num [tutorial passado](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animationplayer).
+Uma maneira de inserir keyframes é indo direto no Inspector do node que tem a propriedade que se quer editar e clicar na chave que aparece ao lado da propriedade. O painel deve animação deve estar aberto, com a marcação do Timeline no instante em que você quer inserir a keyframe. Quando você clica no ícone da chave, ele insere automaticamente o valor naquele instante, no track da propriedade correspondente. Lembre que foi este o método utilizado para inserir sprites na animação vista num [tutorial passado](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animationplayer).
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/b439c746-7aca-4239-ae31-bbd69002ff7c" />
