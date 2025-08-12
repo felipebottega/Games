@@ -161,6 +161,14 @@ Criamos dois marcadores como exemplo. Se você segurar shift e clicar em dois ma
 
 Marcadores são úteis como ferramentas de edição, quando você quer se concentrar em um trecho, ou quer deixar marcado como lembrete para voltar ali mais tarde, entre outros. Além da edição, você pode animar apenas o trecho entre marcadores no jogo através da função `play_section_with_markers` (aí tem quer ser via script). Também dá para chamar a função `play_section_with_markers_backwards` para executar o trecho ao contrário no jogo.
 
+## Keyframes for other properties
+
+Uma outra maneira de inserir keyframes é indo direto no Inspector do node que tem a propriedade que se quer editar e clicar na chave que aparece ao lado da propriedade. O painel deve animação deve estar aberto, com a marcação do Timeline no instante em que você quer inserir a keyframe. Quando você clica no ícone da chave, ele insere automaticamente o valor naquele instante, no track da propriedade correspondente. Lembre que foi este o método utilizado para inserir sprites na animação vista num [tutorial passado](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animationplayer).
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/b439c746-7aca-4239-ae31-bbd69002ff7c" />
+</p>
+
 ## Exemplo prático
 
 Vamos continuar trabalhando a nossa animação, mas dessa vez com um arsenal maior de ferramentas. Inclusive iremos apresentar mais algumas neste exemplo. Quando o node `AnimationPlayer` está selecionado, algumas opções aparecem no editor. O que nos interessa são os primeiros 4 botões: posição, rotação, escala e inserir keyframne. 
@@ -187,7 +195,7 @@ Enquanto se vai editando, é sempre interessante usar o Onion Skinning para ver 
   <img width="700" src="https://github.com/user-attachments/assets/74de0765-682d-4370-b2c3-888f904564ea" />
 </p>
 
-Para ter algo diferente das transformações 2D, vamos animar a propriedade *modulate*. Basta seguir o procedimento utilizado para a rotação, mas dessa vez com o outra propriedade. Fora as transformações 2D, todas as outras tem que ser por este método.
+Para ter algo diferente das transformações 2D, vamos animar a propriedade *modulate*. Basta seguir o procedimento utilizado para a rotação, mas dessa vez com o outra propriedade. Fora as transformações 2D, todas as outras tem que ser por este método ou o visto em *Keyframes for other properties*, logo acima.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/99dfe671-79ab-4ea1-860f-1d8901daaf61" />
@@ -203,11 +211,3 @@ Fizemos o modulate oscilando entre a cor original e uma adição de vermelho. Va
 A animação final ficou assim.
 
 https://github.com/user-attachments/assets/9c43842b-8f2f-4a2d-8d8b-c4b15a4addb5
-
-
-
-
-
-
-## Keyframes for other properties
-
