@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Animation Track types"
+run/main_scene="uid://ebfeib8t63w0"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=240
+window/stretch/mode="viewport"
 
 [rendering]
 

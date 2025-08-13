@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=3 uid="uid://ebfeib8t63w0"]
+
+[ext_resource type="Script" uid="uid://cjkjwcwckga1r" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://b5w4u0mkifqhn" path="res://Sword Familiar.png" id="1_wtcfe"]
+[ext_resource type="AudioStream" uid="uid://bog3sckqxj7j4" path="res://sfx100v2_loop_machine_03.ogg" id="2_epypp"]
+
+[sub_resource type="Animation" id="Animation_epypp"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(28, 116)]
+}
+
+[sub_resource type="Animation" id="Animation_0e48y"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.814133, 2.01, 2.98, 3.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(33, 143), Vector2(131, 64), Vector2(211, 151), Vector2(363, 69), Vector2(471, 175)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.0],
+"method": &"rotate"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"crazy_sword"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.4807,
+"start_offset": 0.0,
+"stream": ExtResource("2_epypp")
+}],
+"times": PackedFloat32Array(2.6)
+}
+tracks/3/use_blend = true
+tracks/4/type = "animation"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": PackedStringArray("normal"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hol4"]
+_data = {
+&"RESET": SubResource("Animation_epypp"),
+&"new_animation": SubResource("Animation_0e48y")
+}
+
+[sub_resource type="Animation" id="Animation_0hol4"]
+resource_name = "normal"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.97, 2.03),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(36, 64), Vector2(453, 175), Vector2(451, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_q6r6c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(36, 64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdubu"]
+_data = {
+&"RESET": SubResource("Animation_q6r6c"),
+&"normal": SubResource("Animation_0hol4")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0e48y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0hol4")
+}
+autoplay = "new_animation"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kdubu")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28, 116)
+texture = ExtResource("1_wtcfe")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(36, 64)
+texture = ExtResource("1_wtcfe")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
