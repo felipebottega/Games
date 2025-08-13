@@ -64,5 +64,22 @@ A opção de usar *Blend* ou não só importa quando estamos fazendo mix de anim
   <img width="120" src="https://github.com/user-attachments/assets/3e9194c4-b743-4f4c-8676-aea8ffc8a550" />
 </p>
 
+## Animation Playback Track
 
+O *Animation Playback Track* permite sequenciar as animações de outros nodes do `AnimationPlayer` em uma cena. Por exemplo, você pode usá-las para animar vários personagens em uma mesma cena. O procedimento é análogo aos anteriores. Após selecionar o outro node `AnimationPlayer`, ele vai aparecer nas suas tracks.
 
+<p align="center">
+  <img width="650" src="https://github.com/user-attachments/assets/3c7e05de-713c-4627-8e1d-e9246534e8c6" />
+</p>
+
+Dê o clique direito na timeline para inserir uma keyframe no instante onde você que comece a outra animação. Depois disso clique no keyframe e vá para o Inspector para selecionar qual animação você quer tocar. Nesse exemplo nós chamamos a outra animação de "normal", e é ela que selecionaremos.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/6c6d8f2e-1540-4b42-ac54-02fc4a56607e" />
+</p>
+
+⚠️ Atenção: Caso você queira múltiplas animações do mesmo objeto rolando ao mesmo tempo, cada `AnimationPlayer` precisa referenciar objetos distintos, ainda que um seja uma cópia do outro. Caso contrário, ambas as animações vão entrar em conflito ao tentar manipular o mesmo objeto. Neste exemplo em particular eu fiz duas animações da espada, e tive que criar dois `Sprite2D` idênticos para isso.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/a10ef6c8-4af0-4d5d-9766-96c34c10082f" />
+</p>
