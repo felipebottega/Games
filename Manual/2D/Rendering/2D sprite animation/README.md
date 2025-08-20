@@ -58,7 +58,7 @@ O funcionamento deste é diferente, devemos carregar a sprite sheet no `Sprite2D
   <img src="https://github.com/user-attachments/assets/0cbc2b84-d997-401d-b141-0af5dc90b7b8" width="1000">
 </p>
 
-No *Inspector*, clique na aba *Animation* e coloque a opção *Hframes* para 6. *Hframes* é a quantidade de frames horizontalmente e *Vframes* é a quantidade de frames verticalmente. Agora você alterar a propriedade *Frame* (abaixo de *Vframes*). Note que ela tem a função de mostrar um dos frames dentre os totais, de acordo com a divisão feita pelo *Hframes*.
+No *Inspector*, clique na aba *Animation* e coloque a opção *Hframes* para 6. *Hframes* é a quantidade de frames horizontalmente e *Vframes* é a quantidade de frames verticalmente. Agora você pode alterar a propriedade *Frame* (abaixo de *Vframes*). Note que ela tem a função de mostrar um dos frames dentre os totais, de acordo com a divisão feita pelo *Hframes*.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9520e08a-bcbb-4194-ba17-0119931b0d97" width="200">
