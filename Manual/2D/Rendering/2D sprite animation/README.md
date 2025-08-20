@@ -76,8 +76,7 @@ Queremos que cada frame dure 0.1 segundos e que o total seja 0.6 segundos. Com i
   <img src="https://github.com/user-attachments/assets/5fd84603-7e66-4ae6-bfb6-a812042aca1f" width="350">
 </p>
 
-O passo acima foi apenas para configurar a animação, mas ela não possui frames ainda. Note que não há nenhum tipo de conexão entre o `Sprite2D` e o `AnimationPlayer`. Lembra da 
-propriedade *Frame* do *Animation* do `Sprite2D`, ela servia para mostrar um frame de animação em específico. Selecione o primeiro frame e clique na chave destacada na imagem. Repare que ela foi adicionada ao primeiro frame do painel de animação. Repita este passos para acrescentar os outros frames em sequência.
+O passo acima foi apenas para configurar a animação, mas ela não possui frames ainda. Note que não há nenhum tipo de conexão entre o `Sprite2D` e o `AnimationPlayer`. Lembre da propriedade *Frame* do *Animation* do `Sprite2D`, ela servia para mostrar um frame de animação em específico. Selecione o primeiro frame e clique na chave destacada na imagem. Repare que ela foi adicionada ao primeiro frame do painel de animação. Repita este passos para acrescentar os outros frames em sequência.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5799a1eb-177c-47ff-a10a-984541e9a070" width="900">
