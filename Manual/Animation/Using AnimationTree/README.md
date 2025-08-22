@@ -52,10 +52,31 @@ Este primeiro `AnimationPlayer` foi constituído apenas de spritesheets, o que p
   <img width="700" src="https://github.com/user-attachments/assets/782ff24c-406a-4703-b433-35a2fd82047f" />
 </p>
 
-## AnimationNodeBlendSpace1D
+## Introdução ao AnimationTree
 
-AnimationTree
+Depois de adicionar o node `AnimationTree` à sua árvore de nodes, é necessário escolher uma *Tree Root* e um `AnimationPlayer` para a propriedade *Anim Player*. Cada *Tree Root* pode ser vista como um conjunto de ferramentas diferente para manipular o `AnimationPlayer` escolhido no *Anim Player*.  
 
-<img width="368" height="513" alt="image" src="https://github.com/user-attachments/assets/61c9c0dc-6292-40c8-822c-8785be280353" />
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/b4ff9cae-c564-41ec-ad62-b2bda464f758" />
+</p>
+
+### AnimationNodeBlendSpace1D
+
+Em *Inspector → Tree Root*, selecione *AnimationNodeBlendSpace1D*. Esse é o tipo de AnimationTree mais fácil de entender e manipular. Começaremos com o `AnimationPlayer` dos sprites.
+
+O painel de edição estará como mostrado abaixo. A ideia é que você pode inserir "pontos de animação" no eixo $x$ (por isso o "1D" no nome ), e cada ponto representa uma animação do `AnimationPlayer` associado. Depois de ter os pontos inseridos no espaço, você pode definir em qual posição deste espaço você quer inserir o *blending point* (ponto de mistura). Conforme este ponto muda de posição, a animação também muda. Se o *Blend Mode* for *Contiunous*, a engine tenta mesclar as animações usando ponderações de acordo com a distância a cada ponto de animação no espaço. Se o *Blend Mode* for *Discrete*, a animação que toca é a do ponto mais próximo. O modo *Capture* é igual ao discreto, mas o primeiro frame da animação é a que o boneco já estava anteriormente.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/63e29a53-555c-4258-a9de-ce3c7bb5b85f" />
+</p>
+
+  1. Com este botão selecionado, você escohe a posição do *blending point*.
+  2. Botão de edição geral. Você pode arrastar os pontos de animação já inseridos ou pode adicionar novos com os segundo clique do mouse.
+  3. Botão de criar pontos de animação.
+  4. Botão para deletar pontos de animação.
+  5. Seleção do Blend Mode.
+  6. *Blending point*.
+
+
 
 
