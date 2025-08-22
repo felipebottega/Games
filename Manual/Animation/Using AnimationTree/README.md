@@ -42,3 +42,15 @@ Existem duas outras maneiras de se fazer isso, possivelmente com menos trabalho.
 
 > Dicas sobre o approach 2 acima: Evite inserir frames com a animação rolando na tela, isso inibe a edição. Também não se esqueça de colocar o *Loop Wrap Mode* dos frames para o modo *Clamp*. Reveja [este tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features#configura%C3%A7%C3%B5es-de-track) caso tenha esquecido o que isso faz.
 
+Repita estes passos para as outras animações e você terá toda a coleção de animações do seu spritesheet no `AnimationPlayer`.
+
+## Segundo AnimationPlayer
+
+Este primeiro `AnimationPlayer` foi constituído apenas de spritesheets, o que pode ser visto como um conjunto discreto de animações. Será relavante termos também um conjunto contínuo de animações. Definimos abaixo algumas animações de transformações 2D sobre um sprite de espada. Vimos como fazer isso no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features).
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/782ff24c-406a-4703-b433-35a2fd82047f" />
+</p>
+
+
+
