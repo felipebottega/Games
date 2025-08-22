@@ -1,1 +1,4 @@
 # Using AnimationTree
+
+Vimos que o `AnimatedSprite2D` é uma maneira direta e simples de criar animações a partir de uma spritesheet. Essa simplicidade é acompanhada de limitações, ou seja, não dá oara fazer muita coisa complexa com este node. O `AnimationPlayer` é uma ferramenta muito mais completa para animações. Não só animações de sprites, mas de propriedades, funções, sons, entre outros. Neste sentido, o `AnimationPlayer` não é simplesmente uma ferramenta de animação, mas sim um editor visual e versátil de diversos objetos de Godot. O `AnimationTree` não faz animação nenhuma. Ele é uma camada de abstração extra ao `AnimationPlayer`, ou seja, é um conjunto de ferramentas visuais para combinar e manipular diversas instâncias do `AnimationPlayer`. A princípio não é muito claro o que o `AnimationTree` faz. Seu papel vai ficar mais claro conforme formos evoluindo neste tutorial. 
+
