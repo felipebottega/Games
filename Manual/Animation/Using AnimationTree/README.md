@@ -161,10 +161,10 @@ Agora vamos ver as propriedades das transições.
   <img width="380" src="https://github.com/user-attachments/assets/9efa5a47-0596-440c-9625-d62cae9a877a" />
 </p>
 
-- **Xfade Time:** Tempo que uma animação pode continuar tocando mesmo após a próxima já ter começado.
-- **Xfade Curve:** Você pode definir a curva de peso do fade-out animnação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
-- **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
-- **Switch Mode:** É o tipo de transição, que é escolhido ao se criar a conexão. As opções são *Immediate, Sync* e *At End*, como já vimos acima.
+  - **Xfade Time:** Tempo que uma animação pode continuar tocando mesmo após a próxima já ter começado.
+  - **Xfade Curve:** Você pode definir a curva de peso do fade-out animnação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
+  - **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
+  - **Switch Mode:** É o tipo de transição, que é escolhido ao se criar a conexão. As opções são *Immediate, Sync* e *At End*, como já vimos acima.
 
 ⚠️ Atenção: Conforme você vai criando mais `AnimatedTree` na cena, sempre volte para o `AnimationPlayer` e deixe na posição RESET. É comum as animações do `AnimatedTree` ficarem tocando na tela, e isso pode levar a conflitos de animação que podem deixar toda a engine bugada.
 
@@ -195,4 +195,36 @@ Como podemos notar, a primeira animação de fato foi tocada por $5$ segundos, m
 Com esse conhecimento de *State Machine* é possível implementar uma variedade absurda de lógicas de animação. Ainda há a propriedade *Expression* para manipular, mas vou deixar isso para outro momento. O que temos em mãos agora já supre a grande maioria das necessidades (talvez todas).
 
 ### AnimationNodeBlendTree
+
+Esta é a última modalidade do `AnimationTree` que veremos. Ela é tão poderosa que após ela não precisaremos ver mais nenhuma outra. O *Blend Tree* permite mixar todas as modalidades vistas acima em uma estrutura de fluxograma. Mas em vez de ser um fluxograma como a *State Machine*, o *Blend Tree* não trabalha com condicionais. Em vez disso ele possui diversas ferramentas de suporte para a animação. Veremos adiante como funciona.
+
+Se você inicializou o node corretamente, o painel de edição deve estar como mostrado abaixo. O node de output sempre estará presente, e é necessário que ele esteja conectado a algo para tocar as animações. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/198043f3-f027-4798-adf5-ed4c6de11011" />
+</p>
+
+Você pode clicar em *Add Node* ou dar o segundo clique do mouse no espaço no painel de edição. As opções abaixo vão aparecer. Apenas como exemplo, clique na opção *Animation* (a primeira do topo). Uma caixa representando este node vai aparecer no painel. Todas as opções abrem uma caixa similar no painel, mas cada uma com as suas próprias propriedades. 
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/47bcebce-a69c-4845-9c1b-045716584db2" />
+  <img width="320" src="https://github.com/user-attachments/assets/51c1ca8f-68ad-48ea-8825-5ef10e6d9003" />
+</p>
+
+> PS: Assim como em *State Machine*, é necessário conectar os nodes para determinar a sequência de eventos.
+
+Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um pequeno exemplo de aplicação.
+
+  - **Animation:** É o node mais simples de todos, ele simplesmente toca uma animação.
+  - **OneShot:** Toca uma animação uma única vez caso seja requisitado (via código). A estrutura e o código estão mostrados abaixo. Como a requisição foi feita logo na entrada da cena, e engine primeiro vai tocar a animação *idle* e logo depois a *run*, que ficará em loop. Para que a *idle* não fique presa no loop, você pode ativar a opção *Break Loop at End* no *Inspector* do *One Shot*.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/e0c5d32e-b7c3-4839-aa0d-a61f22fe65eb" />
+  <img width="400" src="https://github.com/user-attachments/assets/00dc2611-f0b4-4253-8c9e-969bc1f31c16" />
+  <img width="200" src="https://github.com/user-attachments/assets/c9ef4988-a793-427a-892c-bbbf62cb79e5" />
+</p>
+
+> PS: Note que há diversas outras propriedades para explorar no *Inspector* do *One Shot*. Vale a pena gastar um tempo explorando as propriedades dos nodes do *Blend Tree*.
+
+  - **Add2:**  
 
