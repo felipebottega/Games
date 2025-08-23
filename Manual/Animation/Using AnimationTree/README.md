@@ -1,6 +1,6 @@
 # Using AnimationTree
 
-Vimos que o `AnimatedSprite2D` é uma maneira direta e simples de criar animações a partir de uma spritesheet. Essa simplicidade é acompanhada de limitações, ou seja, não dá oara fazer muita coisa complexa com este node. O `AnimationPlayer` é uma ferramenta muito mais completa para animações. Não só animações de sprites, mas de propriedades, funções, sons, entre outros. Neste sentido, o `AnimationPlayer` não é simplesmente uma ferramenta de animação, mas sim um editor visual e versátil de diversos objetos de Godot. 
+Vimos que o `AnimatedSprite2D` é uma maneira direta e simples de criar animações a partir de uma spritesheet. Essa simplicidade é acompanhada de limitações, ou seja, não dá para fazer muita coisa complexa com este node. O `AnimationPlayer` é uma ferramenta muito mais completa para animações. Não só animações de sprites, mas de propriedades, funções, sons, entre outros. Neste sentido, o `AnimationPlayer` não é simplesmente uma ferramenta de animação, mas sim um editor visual e versátil de diversos objetos de Godot. 
 
 O `AnimationTree` não faz animação nenhuma. Ele é uma camada de abstração extra ao `AnimationPlayer`, ou seja, é um conjunto de ferramentas visuais para combinar e manipular diversas instâncias do `AnimationPlayer`. A princípio não é muito claro o que o `AnimationTree` faz, seu papel vai ficar mais claro conforme formos evoluindo neste tutorial. 
 
@@ -65,6 +65,8 @@ Depois de adicionar o node `AnimationTree` à sua árvore de nodes, é necessár
 Em *Inspector → Tree Root*, selecione *AnimationNodeBlendSpace1D*. Esse é o tipo de AnimationTree mais fácil de entender e manipular. Começaremos com o `AnimationPlayer` dos sprites.
 
 O painel de edição estará como mostrado abaixo. A ideia é que você pode inserir "pontos de animação" no eixo $x$ (por isso o "1D" no nome ), e cada ponto representa uma animação do `AnimationPlayer` associado. Depois de ter os pontos inseridos no espaço, você pode definir em qual posição deste espaço você quer inserir o *blending point* (ponto de mistura). Conforme este ponto muda de posição, a animação também muda. Se o *Blend Mode* for *Contiunous*, a engine tenta mesclar as animações usando ponderações de acordo com a distância a cada ponto de animação no espaço. Se o *Blend Mode* for *Discrete*, a animação que toca é a do ponto mais próximo. O modo *Capture* é igual ao discreto, mas o primeiro frame da animação é a que o boneco já estava anteriormente.
+
+> PS: Essa "ponderação" que o blend usa é uma interpolação do tipo $\alpha A + \beta B$, em que $A, B$ são as animações e $\alpha + \beta = 1$. Esse modo de interpretar vale para qualquer tipo de blend que aparecer mais para frente. 
 
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/63e29a53-555c-4258-a9de-ce3c7bb5b85f" />
@@ -226,14 +228,35 @@ Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um peq
 
 > PS: Note que há diversas outras propriedades para explorar no *Inspector* do *One Shot*. Vale a pena gastar um tempo explorando as propriedades dos nodes do *Blend Tree*.
 
-  - **Add2:**  Soma duas animações, obtendo uma nova no processo. Somar animações é diferente do blend, pois o blend faz transição onde toca cada umas das animações parcialmente. De fato elas são somadas no blend, mas de maneira ponderada no tempo, omitindo uma animação enquanto a outra ganha mais peso. O *Add2* sempre toca a animação "in" como é originalmente (ver figura abaixo), e adiciona a outra conforme o parâmetro de peso definido no node.
+  - **Add2:**  Soma duas animações, obtendo uma nova no processo. Somar animações é diferente do blend, pois o blend faz transição onde toca cada umas das animações parcialmente. De fato elas são somadas no blend, mas de maneira ponderada no tempo, omitindo uma animação enquanto a outra ganha mais peso (é uma interpolação do tipo $\alpha A + \beta B$, como já foi observado antes). O *Add2* sempre toca a animação "in" como é originalmente (ver figura abaixo), e adiciona a outra conforme o parâmetro de peso definido no node.
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/397b994c-4f4f-4a1f-948e-11988c7471a3" />
 </p>
 
   - **Add3:** Análogo ao *Add2*, mas com 3 animações e uma delas entra subtraíndo em vez de adicionar.
-  - **Blend2:** 
+  - **Blend2, Blend3:** Segue a mesma lógica do *Add2, Add3*, mas fazendo blend em vez de adicionar as animações.
+  - **Sub2:** Semelhante ao *Add2*, mas a segunda animação entra subtraindo em vez de adicionar. No *Add2* e *Add3* dá para colocar valores negativos no parâmetro, que tem o  mesmo efeito de subtrair. Então não sei se o *Sub2* tem tanta utilidade assim.
+  - **TimeSeek:** Este node causa um delay na animação conectada à ele. O valor default $-1$ significa que ele não faz nada. A ativação deste node é feita por código, ele executa a requisição uma única vez e volta ao default $-1$ (semelhante ao *OneShot* que é executado uma única vez via código também). Abaixo mostramos como ele deve ser estruturado. Este node serve para "buscar" (seek) a um ponto específico no tempo de uma animação. Ele permite que você comece a animação a partir de um determinado instante.
 
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/a3fd4257-31aa-4d98-9fe3-1af948e143c0" />
+</p>
 
+> PS: Caso seja uma animação de loop, não adianta alterar o $-1$ no painel, tem que ser por código (logo abaixo). E este node também só funciona na execução da cena, não na prévia do editor. 
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/3da4e97d-b282-4ba2-b62e-872872701b81" />
+</p>
+
+  - **TimeScale:** Basta adicionar esse node após uma animação e escolher uma valor para acelerar ou desacelerar a animação.
+
+<p align="center">
+  <img width="470" src="https://github.com/user-attachments/assets/92c487bd-bc7b-4824-8b55-30e1dac22c18" />
+</p>
+
+  - **Transition/BlendTree:** O *Transition* é um modo muito simlpes de *State Machine*. Como o próprio *State Machine* é um node acessível pelo `AnimationNodeBlendTree`, vou desconsiderar este node. O *BlendTree* é o próprio node pai destes todos, de modo que inserir um outro dentro dele significa ter uma estrutura recursiva. Além de muito complexo isso deve matar a performance. Por isso este também será desconsiderado.
+  - **BlendSpace1D/BlendSpace2D/StateMachine:** São instâncias das modalidades de mesmo nome vistas anteriormente. Com isto, podemos ver que o `AnimationNodeBlendTree` é capaz de encapsular tudo que vimos de `AnimationTree` em uma única estrutura.
+
+## Exemplo prático
 
