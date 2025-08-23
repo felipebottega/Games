@@ -97,7 +97,7 @@ Agora repetimos o procedimento para a animação da espada. Essa é uma animaç�
 
 https://github.com/user-attachments/assets/042798ef-a3b1-4620-b180-77d37901c652
 
-### AnimationNodeBlendSpace1D
+### AnimationNodeBlendSpace2D
 
 A lógica desse modo é totalmente análogo ao anterior, mas agora podemos ter pontos de animação no espaço 2D em vez de 1D. Isso dá mais possibilidades de mesclas de animações, com ponderações mais variadas. 
 
@@ -108,3 +108,31 @@ A lógica desse modo é totalmente análogo ao anterior, mas agora podemos ter p
 No caso do sprite, note que no espaço 1D o boneco tinha que passar pela animação *walk* entre e *idle* e a *run*, agora ele pode ir diretamente de *idle* para *run*.
 
 ### AnimationNodeStateMachine
+
+Agora criamos outro `AnimationTree` e selecionamos o modo *AnimationNodeStateMachine*. O painel de edição deve estar como mostrado abaixo. Isso funciona basicamente como uma [máquina de estados finitos](https://pt.wikipedia.org/wiki/M%C3%A1quina_de_estados_finita). Para não complicar muito, interprete isso como um fluxograma de animações, onde cada caixa/node corresponde a uma animação selecionada (com exceção do *Start* e *End*), e as setas/transições levam de uma animação para outra de acordo com certas condições.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/da2d925b-a68f-4fce-a6ab-ca73a49dec34" />
+</p>
+
+> PS: Neste contexto cada caixa é chamada de *node*, mas não é um node de Godot, e sim uma animação de um `AnimationPlayer`.
+
+Começamos colocando a animação de *walk* entre o *Start* e o *End* e conectamos os nodes. O painel deve estar como abaixo. Não vou gastar tempo aqui explicando como adicionar/deletar nodes e transições pois o editor é bem simples e não deve ser nenhuma dificuldade aprender isso rápido.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/9faf3575-92e2-448f-903c-0a20e4252b33" />
+</p>
+
+⚠️ Atenção: Assim como foi com a track do tipo *call method*, a animação com *state machine* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
+
+Note que com esta configuração nenhuma animação é tocada quando você executa a cena. Porém, se você deletar a transição entre a animação e o node *End*, a animação toca. Por que isto acontece? É simples, não existe nenhuma condicional imposta sobre as transições, então o fluxo segue de um node para o outro sem interrupções. Ou seja, assim que ele ia tocar a animação ele já vai para o próximo node e a animação é interrompida. Sem a última transição, o ponto final do fluxo fica na animação *walk*, por isso funciona. Se você trocar o modo de trasição para *At End*, como mostrado abaixo, aí sim a animação toca normalmente. 
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/dd06bb1b-7812-4921-b41f-5791e4960c43" />
+</p>
+
+O exemplo acima mostra que o tipo de transição importa para o fluxo da *state machine*. Vamos explicar os 3 tipos de transições que existem em Godot.
+
+  - **Immediate:**
+  - **Sync:**
+  - **At End:**
