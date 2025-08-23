@@ -106,3 +106,5 @@ A lógica desse modo é totalmente análogo ao anterior, mas agora podemos ter p
 </p>
 
 No caso do sprite, note que no espaço 1D o boneco tinha que passar pela animação *walk* entre e *idle* e a *run*, agora ele pode ir diretamente de *idle* para *run*.
+
+### AnimationNodeStateMachine
