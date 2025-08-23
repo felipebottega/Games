@@ -67,7 +67,7 @@ Em *Inspector → Tree Root*, selecione *AnimationNodeBlendSpace1D*. Esse é o t
 O painel de edição estará como mostrado abaixo. A ideia é que você pode inserir "pontos de animação" no eixo $x$ (por isso o "1D" no nome ), e cada ponto representa uma animação do `AnimationPlayer` associado. Depois de ter os pontos inseridos no espaço, você pode definir em qual posição deste espaço você quer inserir o *blending point* (ponto de mistura). Conforme este ponto muda de posição, a animação também muda. Se o *Blend Mode* for *Contiunous*, a engine tenta mesclar as animações usando ponderações de acordo com a distância a cada ponto de animação no espaço. Se o *Blend Mode* for *Discrete*, a animação que toca é a do ponto mais próximo. O modo *Capture* é igual ao discreto, mas o primeiro frame da animação é a que o boneco já estava anteriormente.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/63e29a53-555c-4258-a9de-ce3c7bb5b85f" />
+  <img width="850" src="https://github.com/user-attachments/assets/63e29a53-555c-4258-a9de-ce3c7bb5b85f" />
 </p>
 
   1. Com este botão selecionado, você escohe a posição do *blending point*.
@@ -77,6 +77,16 @@ O painel de edição estará como mostrado abaixo. A ideia é que você pode ins
   5. Seleção do Blend Mode.
   6. *Blending point*.
 
+Para adicionar um ponto de animação, use o botões 2 ou 3, clique no espaço e seleciona uma das animaçaões do seu `AnimationPlayer`, assim como mostrado abaixo. Neste tutorial, iremos mostrar a dinâmica para uma animação discreta (*idle, run, walk*) e depois para uma animação contínua (*sword_pos, sword_rot*).
 
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/72f6c556-9ac3-4558-87c0-0e03fcd66bbe" />
+</p>
+
+> PS: Com o botão 3 selecionado, você pode clicar nos pontos de animação e editar suas propriedades pelo Inspector.
+
+Mostramos abaixo como é a dinâmica da animação conforme mudamos de posição o *blending point*. Vale destacar que com animações discretas como essa o *Blend Mode* tem que ser discreto. No caso contínuo a a nimação simplesmente desaparece, pois não é possível mesclar esses tipo de animação, ela não muda continuamente.
+
+https://github.com/user-attachments/assets/e7a54ea1-2c72-4dbd-8cb7-700c9b17664e
 
 
