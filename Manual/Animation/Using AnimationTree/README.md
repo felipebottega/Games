@@ -133,6 +133,10 @@ Note que com esta configuração nenhuma animação é tocada quando você execu
 
 O exemplo acima mostra que o tipo de transição importa para o fluxo da *state machine*. Vamos explicar os 3 tipos de transições que existem em Godot.
 
-  - **Immediate:**
-  - **Sync:**
-  - **At End:**
+  - **Immediate:** Muda para o próximo estágio imediatamente. Ocorre um pequeno blend entre o fim da animação atual e o início da seguinte.
+  - **Sync:** Também muda para o próximo estágio imediatamente, mas continua a animação nova a partir da posição exata onde a anterior estava, mantendo a continuidade temporal.
+  - **At End:** Espera a animação atual encerrar antes de ir para a seguinte.
+
+⚠️ Atenção: Se a animação estiver configurada para ficar em loop, a transição *At End* vai fazer com que aquele estágio toque para sempre, sem ir para o seguinte.
+
+
