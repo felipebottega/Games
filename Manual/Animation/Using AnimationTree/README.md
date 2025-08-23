@@ -164,8 +164,32 @@ Agora vamos ver as propriedades das transições.
 - **Xfade Time:** Tempo que uma animação pode continuar tocando mesmo após a próxima já ter começado.
 - **Xfade Curve:** Você pode definir a curva de peso do fade-out animnação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
 - **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
-- **
-
-
+- **Switch Mode:** É o tipo de transição, que é escolhido ao se criar a conexão. As opções são *Immediate, Sync* e *At End*, como já vimos acima.
 
 ⚠️ Atenção: Conforme você vai criando mais `AnimatedTree` na cena, sempre volte para o `AnimationPlayer` e deixe na posição RESET. É comum as animações do `AnimatedTree` ficarem tocando na tela, e isso pode levar a conflitos de animação que podem deixar toda a engine bugada.
+
+### Condicionamento do AnimationNodeStateMachine
+
+A parte *Advance* do *Inspector* é a parte onde introduzimos condicionais para as transições. Ou seja, a transição só ocorre se certas condições forem satisfeitas. Para poder usar essas lógicas de maneira apropriada, deixe a propriedade *Mode* em *auto*. Você só vai querer mudar isso se for chamar o método `travel()` por código (algo que eu não acho que seja muito usado). 
+
+Agora vamos ver como criar condições na prática. Primeiro deixe todas as transições como *Immediate* e coloque as animações para rodar em loop. Feito isso, crie um script no node `AnimationNodeStateMachine`. Este script cria a variável *time*, que vai apenas contar o número de segundo que passou desde que se iniciou a cena. O principal é a linha `set("parameters/conditions/x", time > 5)`. Com ela, nós criamos uma variável condicional $x$ que será igual ao resultado da condição *time* $>5$. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/91c2bf26-9f92-48be-a090-9ba6749d2d61" />
+</p>
+
+> PS: Note que $x$ é um booleano, que é falso durante os primeiros $5$ segundos da cene a depois passa a ser verdadeiro pelo restante da cena.
+
+Volte para o painel de edição e selecione a transição entre as duas animações. No *Inspector* desta transição, coloque a variável $x$ no campo *Condition*. A partir de agora essa transição só vai ser ativada quando $x$ for verdadeiro. Isso quer dizer que a primeira animação vai ficar sendo executada no seu loop por $5$ segundos antes de passar para a próxima animação.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/b08c2b2d-6382-4a99-83ba-2de1ccea9a59" />
+</p>
+
+Como podemos notar, a primeira animação de fato foi tocada por $5$ segundos, mas a segunda animação foi totalmente ignorada. Na verdade ela não foi ignorada, o que aconteceu é que a transição *Immediate* fez com que o fluxo fosse direto para o fim da *State Machine*. Vamos fazer a segunda animação tocar por $3$ segundos. Para isso, criamos mais uma variável condicional, na última transição.
+
+<p align="center">
+  <img width="950" src="https://github.com/user-attachments/assets/2d646492-2f27-4cf8-a2ac-5a40ee410517" />
+</p>
+
+
