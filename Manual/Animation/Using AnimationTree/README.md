@@ -219,12 +219,21 @@ Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um peq
   - **OneShot:** Toca uma animação uma única vez caso seja requisitado (via código). A estrutura e o código estão mostrados abaixo. Como a requisição foi feita logo na entrada da cena, e engine primeiro vai tocar a animação *idle* e logo depois a *run*, que ficará em loop. Para que a *idle* não fique presa no loop, você pode ativar a opção *Break Loop at End* no *Inspector* do *One Shot*.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/e0c5d32e-b7c3-4839-aa0d-a61f22fe65eb" />
+  <img width="300" src="https://github.com/user-attachments/assets/e0c5d32e-b7c3-4839-aa0d-a61f22fe65eb" />
   <img width="400" src="https://github.com/user-attachments/assets/00dc2611-f0b4-4253-8c9e-969bc1f31c16" />
-  <img width="200" src="https://github.com/user-attachments/assets/c9ef4988-a793-427a-892c-bbbf62cb79e5" />
+  <img width="300" src="https://github.com/user-attachments/assets/c9ef4988-a793-427a-892c-bbbf62cb79e5" />
 </p>
 
 > PS: Note que há diversas outras propriedades para explorar no *Inspector* do *One Shot*. Vale a pena gastar um tempo explorando as propriedades dos nodes do *Blend Tree*.
 
-  - **Add2:**  
+  - **Add2:**  Soma duas animações, obtendo uma nova no processo. Somar animações é diferente do blend, pois o blend faz transição onde toca cada umas das animações parcialmente. De fato elas são somadas no blend, mas de maneira ponderada no tempo, omitindo uma animação enquanto a outra ganha mais peso. O *Add2* sempre toca a animação "in" como é originalmente (ver figura abaixo), e adiciona a outra conforme o parâmetro de peso definido no node.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/397b994c-4f4f-4a1f-948e-11988c7471a3" />
+</p>
+
+  - **Add3:** Análogo ao *Add2*, mas com 3 animações e uma delas entra subtraíndo em vez de adicionar.
+  - **Blend2:** 
+
+
 
