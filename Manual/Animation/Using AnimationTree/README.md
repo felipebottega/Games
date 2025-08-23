@@ -89,4 +89,13 @@ Mostramos abaixo como é a dinâmica da animação conforme mudamos de posição
 
 https://github.com/user-attachments/assets/e7a54ea1-2c72-4dbd-8cb7-700c9b17664e
 
+A aplicação disso (assim como outras modalidades do `AnimationTree`) é a capacidade de customizar as coisas graficamente. Muito menos código é necessário para obter a variação de animações. E isso é só a ponta do iceberg.
+
+⚠️ **Atenção:** Pelo que eu testei, o *Animation Playback Track* não funciona no `AnimationTree`. Ou seja, todas as animações que você carregar devem estar integralmente contidas no `AnimationPlayer` carregado.
+
+Agora repetimos o procedimento para a animação da espada. Essa é uma animação contínua, então podemos deixar o *Blend Mode* como contínuo. Isso significa que, em vez de trocar de animação, ele vai mesclar as animações de acordo com a distância aos pontos de animação. Essa mescla funciona como uma ponderação. Por exemplo, se o *blending point* estiver $80 \%$ próximo da animação A e $20 \%$ próximo da animação B, então a engine vai tocar $80 \%$ da animação A e $20 \%$ da animação B. Note que isso significa que nenhuma das animações vai tocar até o fim. Por conta disso, é importante ter o *Loop Wrap Mode = Wrap Loop Interp* na animação. Assim a engine interpola o ponto final com o inicial e a animação fica suave.
+
+https://github.com/user-attachments/assets/042798ef-a3b1-4620-b180-77d37901c652
+
+
 
