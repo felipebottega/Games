@@ -20,7 +20,9 @@ Na timeline do track *call method*, dê o segundo clique do mouse em algum insta
   <img width="900" src="https://github.com/user-attachments/assets/26c8fbe4-b44b-437e-b8e3-f59a60f061e6" />
 </p>
 
-Para este exemplo, vamos utilizar o método `rotate`. Insira uma keyframe nesta track e vá para o Inspector. Você deve editar o que está em *Args*, que são os parâmetros passados para a função. É importante ter em mente que a animação com *call method* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
+Para este exemplo, vamos utilizar o método `rotate`. Insira uma keyframe nesta track e vá para o Inspector. Você deve editar o que está em *Args*, que são os parâmetros passados para a função. 
+
+⚠️ **Atenção:** É importante ter em mente que a animação com *call method* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/eecc1ebc-9962-4199-9f17-0e10aa234855" />
