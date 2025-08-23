@@ -54,7 +54,7 @@ Este primeiro `AnimationPlayer` foi constituído apenas de spritesheets, o que p
 
 ## Introdução ao AnimationTree
 
-Depois de adicionar o node `AnimationTree` à sua árvore de nodes, é necessário escolher uma *Tree Root* e um `AnimationPlayer` para a propriedade *Anim Player*. Cada *Tree Root* pode ser vista como um conjunto de ferramentas diferente para manipular o `AnimationPlayer` escolhido no *Anim Player*.  
+Depois de adicionar o node `AnimationTree` à sua árvore de nodes, é necessário escolher uma *Tree Root* e um `AnimationPlayer` para a propriedade *Anim Player*. Cada *Tree Root* pode ser vista como um conjunto de ferramentas diferente para manipular o `AnimationPlayer` escolhido no *Anim Player*. Vamos ver cada uma dessas na sequência. 
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/b4ff9cae-c564-41ec-ad62-b2bda464f758" />
@@ -97,5 +97,12 @@ Agora repetimos o procedimento para a animação da espada. Essa é uma animaç�
 
 https://github.com/user-attachments/assets/042798ef-a3b1-4620-b180-77d37901c652
 
+### AnimationNodeBlendSpace1D
 
+A lógica desse modo é totalmente análogo ao anterior, mas agora podemos ter pontos de animação no espaço 2D em vez de 1D. Isso dá mais possibilidades de mesclas de animações, com ponderações mais variadas. 
 
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/e831451b-0c10-49e4-8725-28b0b3eb2f5c" />
+</p>
+
+No caso do sprite, note que no espaço 1D o boneco tinha que passar pela animação *walk* entre e *idle* e a *run*, agora ele pode ir diretamente de *idle* para *run*.
