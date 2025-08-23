@@ -192,4 +192,4 @@ Como podemos notar, a primeira animação de fato foi tocada por $5$ segundos, m
   <img width="950" src="https://github.com/user-attachments/assets/2d646492-2f27-4cf8-a2ac-5a40ee410517" />
 </p>
 
-
+Com esse conhecimento de *State Machine* é possível implementar uma variedade absrudo de lógicas de animação. Ainda há a propriedade *Expression* para manipular, mas vou deixar isso para outro momento. O que temos em mãos agora já supre a grande maioria das necessidades (talvez todas).
