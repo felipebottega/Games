@@ -260,3 +260,4 @@ Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um peq
 
 ## Exemplo prático
 
+Provavelmente este será o maior tutorial de todos porque além de ter muitos itens para abordar eu ainda decidi incluir este exemplo prático. Isto é necessário justamente porque a quantidade de informação é muito grande, precisamos aplicar algumas coisas na prática para reter o conhecimento. Fora que, com certeza, algumas aplicações que veremos aqui não são óbvias a partir do tutorial, que é teórico.
