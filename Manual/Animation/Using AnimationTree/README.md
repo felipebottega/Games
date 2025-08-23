@@ -44,9 +44,9 @@ Existem duas outras maneiras de se fazer isso, possivelmente com menos trabalho.
 
 Repita estes passos para as outras animações e você terá toda a coleção de animações do seu spritesheet no `AnimationPlayer`.
 
-## Segundo AnimationPlayer
+## Animações contínuas
 
-Este primeiro `AnimationPlayer` foi constituído apenas de spritesheets, o que pode ser visto como um conjunto discreto de animações. Será relavante termos também um conjunto contínuo de animações. Definimos abaixo algumas animações de transformações 2D sobre um sprite de espada. Vimos como fazer isso no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features).
+O `AnimationPlayer` está constituído apenas de spritesheets, o que pode ser visto como um conjunto discreto de animações. Será relavante termos também um conjunto contínuo de animações. Definimos abaixo algumas animações de transformações 2D sobre um sprite de espada. Vimos como fazer isso no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features).
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/782ff24c-406a-4703-b433-35a2fd82047f" />
@@ -123,7 +123,7 @@ Começamos colocando a animação de *walk* entre o *Start* e o *End* e conectam
   <img width="850" src="https://github.com/user-attachments/assets/9faf3575-92e2-448f-903c-0a20e4252b33" />
 </p>
 
-⚠️ Atenção: Assim como foi com a track do tipo *call method*, a animação com *state machine* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
+⚠️ Atenção: Assim como foi com a track do tipo *call method*, a animação com *State Machine* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
 
 Note que com esta configuração nenhuma animação é tocada quando você executa a cena. Porém, se você deletar a transição entre a animação e o node *End*, a animação toca. Por que isto acontece? É simples, não existe nenhuma condicional imposta sobre as transições, então o fluxo segue de um node para o outro sem interrupções. Ou seja, assim que ele ia tocar a animação ele já vai para o próximo node e a animação é interrompida. Sem a última transição, o ponto final do fluxo fica na animação *walk*, por isso funciona. Se você trocar o modo de trasição para *At End*, como mostrado abaixo, aí sim a animação toca normalmente. 
 
@@ -131,7 +131,7 @@ Note que com esta configuração nenhuma animação é tocada quando você execu
   <img width="850" src="https://github.com/user-attachments/assets/dd06bb1b-7812-4921-b41f-5791e4960c43" />
 </p>
 
-O exemplo acima mostra que o tipo de transição importa para o fluxo da *state machine*. Vamos explicar os 3 tipos de transições que existem em Godot.
+O exemplo acima mostra que o tipo de transição importa para o fluxo da *State Machine*. Vamos explicar os 3 tipos de transições que existem em Godot.
 
   - **Immediate:** Muda para o próximo estágio imediatamente. Ocorre um pequeno blend entre o fim da animação atual e o início da seguinte.
   - **Sync:** Também muda para o próximo estágio imediatamente, mas continua a animação nova a partir da posição exata onde a anterior estava, mantendo a continuidade temporal.
@@ -139,4 +139,33 @@ O exemplo acima mostra que o tipo de transição importa para o fluxo da *state 
 
 ⚠️ Atenção: Se a animação estiver configurada para ficar em loop, a transição *At End* vai fazer com que aquele estágio toque para sempre, sem ir para o seguinte.
 
+No painel de edição, no topo direito, você pode notar que há duas opções de *Play Mode*. Você vai querer usar isso quando chamar algum node para tocar via código. A descrição delas está abaixo.
 
+  - **Travel:** Segue o caminho de transições definido no *State Machine* (respeita blends).
+  - **Immediate:** Troca instantânea, pulando o grafo e começando direto o novo estado.
+
+Tantos os nodes quanto as transições possuem propriedades para serem modificadas no *Inspector*. Vamos começar descrevendo as propriedades dos nodes.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/02f1b39a-8662-4bab-bbe1-7f7e4c98caba" />
+</p>
+
+  - **Animation:** Modifica a animação que você quer tocar naquele node.
+  - **Play Mode:** Determina se você quer tocar a animação na ordem default ou ao contrário.
+  - **Advance on Start:** Se estiver habilitado, pula o primeiro frame ao exibir a animação.
+  - **Use Custom Timeline:** Se estiver habilitado, logo abaixo se abre um pequeno painel para edições temporais sobre a animação.
+
+Agora vamos ver as propriedades das transições.
+
+<p align="center">
+  <img width="380" src="https://github.com/user-attachments/assets/9efa5a47-0596-440c-9625-d62cae9a877a" />
+</p>
+
+- **Xfade Time:** Tempo que uma animação pode continuar tocando mesmo após a próxima já ter começado.
+- **Xfade Curve:** Você pode definir a curva de peso do fade-out animnação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
+- **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
+- **
+
+
+
+⚠️ Atenção: Conforme você vai criando mais `AnimatedTree` na cena, sempre volte para o `AnimationPlayer` e deixe na posição RESET. É comum as animações do `AnimatedTree` ficarem tocando na tela, e isso pode levar a conflitos de animação que podem deixar toda a engine bugada.
