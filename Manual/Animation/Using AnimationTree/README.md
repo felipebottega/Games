@@ -135,7 +135,7 @@ Note que com esta configuração nenhuma animação é tocada quando você execu
   <img width="850" src="https://github.com/user-attachments/assets/dd06bb1b-7812-4921-b41f-5791e4960c43" />
 </p>
 
-O exemplo acima mostra que o tipo de transição importa para o fluxo da *State Machine*. Vamos explicar os 3 tipos de transições que existem em Godot.
+O exemplo acima mostra que o tipo de transição importa para o fluxo do *State Machine*. Vamos explicar os 3 tipos de transições que existem em Godot.
 
   - **Immediate:** Muda para o próximo estágio imediatamente. Ocorre um pequeno blend entre o fim da animação atual e o início da seguinte.
   - **Sync:** Também muda para o próximo estágio imediatamente, mas continua a animação nova a partir da posição exata onde a anterior estava, mantendo a continuidade temporal.
@@ -190,7 +190,7 @@ Volte para o painel de edição e selecione a transição entre as duas animaç�
   <img width="900" src="https://github.com/user-attachments/assets/b08c2b2d-6382-4a99-83ba-2de1ccea9a59" />
 </p>
 
-Como podemos notar, a primeira animação de fato foi tocada por $5$ segundos, mas a segunda animação foi totalmente ignorada. Na verdade ela não foi ignorada, o que aconteceu é que a transição *Immediate* fez com que o fluxo fosse direto para o fim da *State Machine*. Vamos fazer a segunda animação tocar por $3$ segundos. Para isso, criamos mais uma variável condicional, na última transição.
+Como podemos notar, a primeira animação de fato foi tocada por $5$ segundos, mas a segunda animação foi totalmente ignorada. Na verdade ela não foi ignorada, o que aconteceu é que a transição *Immediate* fez com que o fluxo fosse direto para o fim do *State Machine*. Vamos fazer a segunda animação tocar por $3$ segundos. Para isso, criamos mais uma variável condicional, na última transição.
 
 <p align="center">
   <img width="950" src="https://github.com/user-attachments/assets/2d646492-2f27-4cf8-a2ac-5a40ee410517" />
@@ -204,7 +204,7 @@ Por fim, inserimos mais um node, repetindo a primeira animação, e na transiç�
 
 ### AnimationNodeBlendTree
 
-Esta é a última modalidade do `AnimationTree` que veremos. Ela é tão poderosa que após ela não precisaremos ver mais nenhuma outra. O *Blend Tree* permite mixar todas as modalidades vistas acima em uma estrutura de fluxograma. Mas em vez de ser um fluxograma como a *State Machine*, o *Blend Tree* não trabalha com condicionais. Em vez disso ele possui diversas ferramentas de suporte para a animação. Veremos adiante como funciona.
+Esta é a última modalidade do `AnimationTree` que veremos. Ela é tão poderosa que após ela não precisaremos ver mais nenhuma outra. O *Blend Tree* permite mixar todas as modalidades vistas acima em uma estrutura de fluxograma. Mas em vez de ser um fluxograma como o *State Machine*, o *Blend Tree* não trabalha com condicionais. Em vez disso ele possui diversas ferramentas de suporte para a animação. Veremos adiante como funciona.
 
 Se você inicializou o node corretamente, o painel de edição deve estar como mostrado abaixo. O node de output sempre estará presente, e é necessário que ele esteja conectado a algo para tocar as animações. 
 
@@ -289,9 +289,46 @@ Volte para o `Sprite2D` e coloque *HFrames* $= 5$ e *VFrames* $= 4$, pois temos 
   <img width="600" src="https://github.com/user-attachments/assets/35e7e381-d13a-46fa-892b-fb2bc61911b0" />
 </p>
 
-Isso encerra o papel do `AnimationPlayer` neste projeto. Antes de partir para o `AnimationTree`, adiciona uma caixa de colisão para a engine parar de reclamar.
+Isso encerra o papel do `AnimationPlayer` neste projeto. Antes de partir para o `AnimationTree`, adicione uma caixa de colisão para a engine parar de reclamar.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/cd41cffb-235e-4747-99ff-380cc68992a6" />
 </p>
 
+Também vamos criar um script de movimentação "8-way", como visto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#8-way-movement). Com isso, já temos movimentação, só falta a animação.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/877e92d2-36a7-4c9c-8e9e-983a7ff2070e" />
+</p>
+
+Adicione um `AnimationTree` como filho do `CharacterBody2D`. A ideia será criar um *AnimationNodeBlendTree* contendo um node *State Machine* e um *TimeScale* para controlar a velocidade da animação de acordo com a posição do sprite na tela. A estrutura inicial está mostrada abaixo. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/9248a5b3-f25a-4168-a1d5-ee66ad88014a" />
+</p>
+
+Começaremos editando o *State Machine*, então clique em *Open Editor* para começarmos a edição deste node. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. Insira 4 pontos, de modo que *up* $= (0, -1)$, *down* $=(0, 1)$, *right* $=(1, 0)$, *left* $=(-1, 0)$. Coloque o modo blend como discreto e se certifique de que a conexão entre o *Start* e o *BlendSpace2D* é do tipo *Immediate*. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/c14a75a1-9f6b-4b49-a539-16f61a0fcced" />
+  <img width="800" src="https://github.com/user-attachments/assets/4443cfb5-8a9f-4750-8ca0-a1dd9ec5051e" />
+</p>
+
+> PS: Talvez por estar num nível mais profundo da lógica da engine, não é possível ver a animações ao trocar ao manipular a posição do *blending point* no editor.
+
+Uma coisa que não foi dita na discussão acima é que as novas propriedades que surgem a partir dos novos nodes aparecem no *Inspector*. Na figura abaixo, podemos ver que tanto o *blending point* (chamado de *Blend Position*) quanto o tempo do *Time Scale* são parâmetros manipuláveis pelo *Inspector*.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/6def3435-3139-4a4c-baf6-12fde0a0d45f" />
+</p>
+
+Não podemos esquecer da condicional, algo que acabamos de aprender sobre *State Machine*. Selecione a transição entre o *Start* e o *BlendSpace2D* e em *Inspector → 
+advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai.
+
+No script do `CharacterBody2D`, note que a variável `direction` recebe a direção normalizada para onde o sprite está se movendo. Portanto basta fazer o *blending point* ser igual a essa variável para que a animação correta seja mostrada quando o sprite se locomover. Para isso, inserimos o comando `$AnimationTree.set("parameters/StateMachine/BlendSpace2D/blend_position", direction)`. Isso é análogo ao que fizemos para a condicional, mas em vez de definir a variável condicional, nós sobrescrevemos o valor de uma variável que já existe.
+
+> Dica: Você pode clicar em qualquer nome de propriedade no *Inspector* e simplesmente arrastar para dentro do script. Na figura abaixo isso foi feito para o *Blend Position*. Note como o nome já aparece enquanto ainda o estamos arrastando.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/bfd4d9ef-5f3c-4e6e-b7a0-c9512d857918" />
+</p>
