@@ -332,3 +332,21 @@ No script do `CharacterBody2D`, note que a variável `direction` recebe a direç
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/bfd4d9ef-5f3c-4e6e-b7a0-c9512d857918" />
 </p>
+
+Com isso, temos o script abaixo. 
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/3299fca5-c60e-4963-a006-c7b424cb91a9" />
+</p>
+
+Este script já é funcional, mas ainda pode ser melhorado. Queremos que o "idle" mantenha a direção do sprite. Vamos adicionar mais um node no *State Machine* igual ao anterior, mas que seja ativado com a condição `get_parent().velocity.length() == 0`. Vamos aproveitar e renomear o node anterior para "Movement" e este para "Idle". Não se esqueça de atualizar o script de acordo. A transição do *Movement* para o *Idle* será do tipo *At End* para que a mudança de animação não tenha quebras. Além disso, não se esqueça também de colocar uma transição do *Idle* para *Movement*, que é idêntica a do *Start* para *Movement*.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/1f107a90-7776-4a6d-b6fc-f4c085525385" />
+</p>
+
+Se você fez tudo corretamente, vai perceber que o comportamento do sprite ainda não está como deveria. No estado idle ele sempre fica numa mesma posição em vez de ficar na última que estava. Isto acontece pois ao parar de pressionar a direção, a engine vai para a direção $(0, 0)$, e é esta a direção que vai para o estado idle. Resolvemos isso introduzindo uma variável auxiliar no script para memorizar a última direção não-nula. 
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/b237c09b-0ab7-4a24-9d88-870df7db0484" />
+</p>
