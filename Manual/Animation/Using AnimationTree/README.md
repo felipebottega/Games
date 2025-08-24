@@ -266,7 +266,32 @@ Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um peq
 
 ## Exemplo prático
 
-Provavelmente este será o maior tutorial de todos porque além de ter muitos itens para abordar eu ainda decidi incluir este exemplo prático. Isto é necessário justamente porque a quantidade de informação é muito grande, precisamos aplicar algumas coisas na prática para reter o conhecimento. Fora que algumas aplicações que veremos aqui não são óbvias a partir do tutorial, que foi apenas teórico. Além disso, este exemplo mostrará algumas funcionalidades extras que não foram discutidas acima. 
+Provavelmente este será o maior tutorial de todos porque além de ter muitos itens para abordar eu ainda decidi incluir este exemplo prático. Isto é necessário justamente porque a quantidade de informação é muito grande, precisamos aplicar algumas coisas na prática para reter o conhecimento. Fora que algumas aplicações que veremos aqui não são óbvias a partir do tutorial.
 
+Começamos criando uma cena com um node raíz do tipo `Node2D`, que chamaremos de *BeetleScene*. Nesta cena, adicione um `CharacterBody2D` contendo um `Sprite2D`. Neste `Sprite2D`, adicione a spritesheet que obtivemos [daqui](https://opengameart.org/content/lpc-beetle). 
 
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/f24cfab8-56bb-4d10-a412-1d5af4937e0d" />
+</p>
+
+Vamos mostrar uma maneira de inserir as animações no `AnimationPlayer` a partir de uma spritesheet completa como essa dentro de um `Sprite2D`. Primeiro crie o node `AnimationPlayer` dentro do `CharacterBody2D`. No painel de edição, vamos criar 4 animações distintas: *right, left, up, down*. Vamos começar mostrando a animação *right*. As outras são análogas. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/0b6d9e31-5da3-44e1-bc87-675046d14cbb" />
+</p>
+
+> PS: Como serão 5 frames tocados em $1$ segundo, deixe em $0.2$ segundos o tempo de cada FPS no painel de edição (você muda este valor no campo que fica embaixo). 
+
+Volte para o `Sprite2D` e coloque *HFrames* $= 5$ e *VFrames* $= 4$, pois temos uma spritesheet $4 \times 5$. Feito isso, vá no campo *Frame* e comece a passar de um em um, até encontrar o primeiro do sprite se movimentando para a direita. Assim que encontrar este sprite, clique no picone de chave ao lado para adicioná-lo ao `AnimationPlayer`, e vá clicando na chave para adicionar os seguintes. Você irá inserir $5$ frames no total. Não se esqueça de deixar a animação em loop.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/92962484-96b8-4caf-980c-0058d0d4de55" />
+  <img width="600" src="https://github.com/user-attachments/assets/35e7e381-d13a-46fa-892b-fb2bc61911b0" />
+</p>
+
+Isso encerra o papel do `AnimationPlayer` neste projeto. Antes de partir para o `AnimationTree`, adiciona uma caixa de colisão para a engine parar de reclamar.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/cd41cffb-235e-4747-99ff-380cc68992a6" />
+</p>
 
