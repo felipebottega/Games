@@ -350,3 +350,13 @@ Se você fez tudo corretamente, vai perceber que o comportamento do sprite ainda
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/b237c09b-0ab7-4a24-9d88-870df7db0484" />
 </p>
+
+Para finalizar, vamos considerar duas regiões da tela, com o lado esquerdo sendo o "normal" e o lado direito o "acelerado". Lá atrás, já colocamos a node *Time Scale* no editor, então só falta a lógica. Logo após a parte de animação no script, inserimos condicionais para o comando `$AnimationTree.set("parameters/TimeScale/scale", x)`, alterando o valor de $x$ de acordo com o lado da tela onde está o sprite. Lembrando, o caminho "parameters/TimeScale/scale" você pode obter ao ir no respectivo parâmetro no *Inspector* e arastando para o script. O script final deve estar da seguinte maneira:
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/660688b0-804b-4685-8bff-dd38c92f6cdc" />
+</p>
+
+Também incluímos um `Sprite2D` de background para evidenciar as duas regiões. Abaixo temos uma prévio de como está o jogo. Você pode interagir com ele através [deste link]().
+
+https://github.com/user-attachments/assets/bc8fda04-4c3c-4180-b965-b4f2bb5400c4
