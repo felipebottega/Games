@@ -60,6 +60,8 @@ Depois de adicionar o node `AnimationTree` à sua árvore de nodes, é necessár
   <img width="1100" src="https://github.com/user-attachments/assets/b4ff9cae-c564-41ec-ad62-b2bda464f758" />
 </p>
 
+> PS: Para este tutorial eu criei diversos nodes `AnimationTree` na mesma cena, referenciando o mesmo `AnimationPlayer`. Fiz isso apenas para ter os exemplos no mesmo lugar, mas é importante saber que as animações do último `AnimationTree` ficam por cima das anteriores, já que estão referenciando o mesmo objeto.
+
 ### AnimationNodeBlendSpace1D
 
 Em *Inspector → Tree Root*, selecione *AnimationNodeBlendSpace1D*. Esse é o tipo de AnimationTree mais fácil de entender e manipular. Começaremos com o `AnimationPlayer` dos sprites.
@@ -104,7 +106,7 @@ https://github.com/user-attachments/assets/042798ef-a3b1-4620-b180-77d37901c652
 A lógica desse modo é totalmente análogo ao anterior, mas agora podemos ter pontos de animação no espaço 2D em vez de 1D. Isso dá mais possibilidades de mesclas de animações, com ponderações mais variadas. 
 
 <p align="center">
-  <img width="850" src="https://github.com/user-attachments/assets/e831451b-0c10-49e4-8725-28b0b3eb2f5c" />
+  <img width="800" src="https://github.com/user-attachments/assets/e831451b-0c10-49e4-8725-28b0b3eb2f5c" />
 </p>
 
 No caso do sprite, note que no espaço 1D o boneco tinha que passar pela animação *walk* entre e *idle* e a *run*, agora ele pode ir diretamente de *idle* para *run*.
@@ -194,7 +196,11 @@ Como podemos notar, a primeira animação de fato foi tocada por $5$ segundos, m
   <img width="950" src="https://github.com/user-attachments/assets/2d646492-2f27-4cf8-a2ac-5a40ee410517" />
 </p>
 
-Com esse conhecimento de *State Machine* é possível implementar uma variedade absurda de lógicas de animação. Ainda há a propriedade *Expression* para manipular, mas vou deixar isso para outro momento. O que temos em mãos agora já supre a grande maioria das necessidades (talvez todas).
+Por fim, inserimos mais um node, repetindo a primeira animação, e na transição após ele colocamos para tocar até o décimo segundo (então essa animação tocará por $2$ segundos). Porém, em vez de utilizarmos o campo *Condition*, usaremos o *Expression*. Neste caso, basta colocar diretamente a condicional que queremos, assim como seria no código. Neste caso, `time>10`.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/83ddb328-8048-4b1f-b9f1-efdc49f838fc" />
+</p>
 
 ### AnimationNodeBlendTree
 
@@ -260,5 +266,7 @@ Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um peq
 
 ## Exemplo prático
 
-Provavelmente este será o maior tutorial de todos porque além de ter muitos itens para abordar eu ainda decidi incluir este exemplo prático. Isto é necessário justamente porque a quantidade de informação é muito grande, precisamos aplicar algumas coisas na prática para reter o conhecimento. Fora que, com certeza, algumas aplicações que veremos aqui não são óbvias a partir do tutorial, que é apenas teórico.
+Provavelmente este será o maior tutorial de todos porque além de ter muitos itens para abordar eu ainda decidi incluir este exemplo prático. Isto é necessário justamente porque a quantidade de informação é muito grande, precisamos aplicar algumas coisas na prática para reter o conhecimento. Fora que algumas aplicações que veremos aqui não são óbvias a partir do tutorial, que foi apenas teórico. Além disso, este exemplo mostrará algumas funcionalidades extras que não foram discutidas acima. 
+
+
 
