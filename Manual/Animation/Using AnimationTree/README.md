@@ -357,6 +357,6 @@ Para finalizar, vamos considerar duas regiões da tela, com o lado esquerdo send
   <img width="600" src="https://github.com/user-attachments/assets/660688b0-804b-4685-8bff-dd38c92f6cdc" />
 </p>
 
-Também incluímos um `Sprite2D` de background para evidenciar as duas regiões. Abaixo temos uma prévia deste mini-jogo. Você pode brincar com ele [neste link](https://felipebottega.github.io/Games/Manual/Animation/Using%20AnimationTree/html/).
+Também incluímos um `Sprite2D` de background para evidenciar as duas regiões. Abaixo temos uma prévia deste mini-game. Você pode brincar com ele [neste link](https://felipebottega.github.io/Games/Manual/Animation/Using%20AnimationTree/html/).
 
 https://github.com/user-attachments/assets/bc8fda04-4c3c-4180-b965-b4f2bb5400c4
