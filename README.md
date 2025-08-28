@@ -133,7 +133,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Preparando as camadas para o Parallax2D
  </a> </li>
-<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax"> # Dica para criar sprite sheet
+<li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax"> # Criar sprite sheet no GIMP
  </a> </li>
 <li> Manual\2D\Rendering\2D Parallax: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax">  Posicionando as camadas de paralaxe
  </a> </li>
@@ -205,6 +205,20 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\2D\Rendering\ParticleProcessMaterial 2D Usage: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">  Experimento com velocidade radial
  </a> </li>
+<li> Manual\2D\Tools\TerrainSets: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets">  Criando um Terrain Set
+ </a> </li>
+<li> Manual\2D\Tools\TerrainSets: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets">  A lógica de terrenos
+ </a> </li>
+<li> Manual\2D\Tools\TerrainSets: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets">  Pintando terrenos
+ </a> </li>
+<li> Manual\2D\Tools\TerrainSets: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets"> # Pintando terrenos pelo Select
+ </a> </li>
+<li> Manual\2D\Tools\TerrainSets: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets"> # Pintando terrenos pelo Paint
+ </a> </li>
+<li> Manual\2D\Tools\TerrainSets: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets">  Desenhando terrenos
+ </a> </li>
+<li> Manual\2D\Tools\TerrainSets: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets">  Templates
+ </a> </li>
 <li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  Definições básicas 
  </a> </li>
 <li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps">  Criando um TileSet
@@ -235,6 +249,34 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\2D\Tools\Using TileMaps: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps"> # Tiles alternativos
  </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Organização de um projeto
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Plataforma com tiles
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Personagem principal
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Nuvens
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  HUD
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Partículas com folhas
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Score
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Timer
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Menu
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Pré-Menu
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Vento
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Controles
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Toques finais
+ </a> </li>
+<li> Manual\2D\Tools\Using TileMaps - Game: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">  Extra - Export de jogo sem modo DEBUG
+ </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Sprites de sprites
  </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Movements 3: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">  Rastro de sprites
@@ -250,5 +292,67 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms">  Rotações
  </a> </li>
 <li> Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms">  Movimento após rotação
+ </a> </li>
+<li> Manual\Animation\Animation Track types: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types">  Call Method Track
+ </a> </li>
+<li> Manual\Animation\Animation Track types: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types">  Audio Playback Track
+ </a> </li>
+<li> Manual\Animation\Animation Track types: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types">  Animation Playback Track
+ </a> </li>
+<li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Animando propriedades
+ </a> </li>
+<li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Animation Controls
+ </a> </li>
+<li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Configurações de track
+ </a> </li>
+<li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Controles da Timeline
+ </a> </li>
+<li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Marcadores
+ </a> </li>
+<li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Keyframes for other properties
+ </a> </li>
+<li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Exemplo prático
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">  AnimationPlayer com diversas spritesheets
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">  Animações contínuas
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">  Introdução ao AnimationTree
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree"> # AnimationNodeBlendSpace1D
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree"> # AnimationNodeBlendSpace2D
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree"> # AnimationNodeStateMachine
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree"> # Condicionamento do AnimationNodeStateMachine
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree"> # AnimationNodeBlendTree
+ </a> </li>
+<li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">  Exemplo prático
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Montando a cena para o uso da Camera2D
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Método 1 para lidar com tiles de tamanhos diferentes do TileSet
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Método 2 para lidar com tiles de tamanhos diferentes do TileSet
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Método 3 para lidar com tiles de tamanhos diferentes do TileSet
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Player com movimento de *clicar e mover*
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Super básico de Camera2D
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Básico de Camera2D
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Intermediário de Camera2D
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Avançado de Camera2D
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Drag
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Smoothing
+ </a> </li>
+<li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Zoom via script
  </a> </li>
 </ul>
