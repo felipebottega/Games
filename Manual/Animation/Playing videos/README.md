@@ -35,4 +35,4 @@ A Godot não trabalha com os clássicos formatos como *mp4, avi, mkv, mpg*, entr
   1. O comando `ffmpeg -i input.mp4 -q:v 6 -q:a 6 -g:v 64 output.ogv` converte o vídeo mantendo a resolução original. A taxa de bits do vídeo e do áudio será variável para maximizar a qualidade, economizando espaço em partes do vídeo/áudio que não exigem uma taxa de bits alta (como cenas estáticas).
   2. O comando `ffmpeg -i input.mp4 -vf "scale=-1:720" -q:v 6 -q:a 6 -g:v 64 output.ogv` redimensiona um vídeo para 720 pixels de altura (720p), preservando sua proporção de tela atual. Isso ajuda a reduzir significativamente o tamanho do arquivo se a fonte for gravada em uma resolução superior a 720p.
 
-Se quiser ver uma demonstração deste node na prática, fiz um mini-game de exemplo [nest link]().
+Se quiser ver uma demonstração deste node na prática, fiz um mini-game de exemplo que pode ser acessado [neste link](https://felipebottega.github.io/Games/Manual/Animation/Playing%20videos/html/).
