@@ -30,7 +30,9 @@ As outras propriedades eu não sei o que fazem, mas não são muito importantes 
 
 ## Encoding dos vídeos
 
-A Godot não trabalho com os clássicos formatos como *mp4, avi, mkv, mpg*, entre outros. Apenas o formato *ogv* (Ogg Theora) é aceito. É interessante que você tenha o [FFmpeg](https://ffmpeg.org/) instalado para poder converter vários formatos de vídeo em *ogv*. No terminal, onde está o arquivo a ser convertido, você tem duas possibilidades:
+A Godot não trabalha com os clássicos formatos como *mp4, avi, mkv, mpg*, entre outros. Apenas o formato *ogv* (Ogg Theora) é aceito. É interessante que você tenha o [FFmpeg](https://ffmpeg.org/) instalado para poder converter vários formatos de vídeo em *ogv*. No terminal, onde está o arquivo a ser convertido, você tem duas possibilidades:
 
   1. O comando `ffmpeg -i input.mp4 -q:v 6 -q:a 6 -g:v 64 output.ogv` converte o vídeo mantendo a resolução original. A taxa de bits do vídeo e do áudio será variável para maximizar a qualidade, economizando espaço em partes do vídeo/áudio que não exigem uma taxa de bits alta (como cenas estáticas).
   2. O comando `ffmpeg -i input.mp4 -vf "scale=-1:720" -q:v 6 -q:a 6 -g:v 64 output.ogv` redimensiona um vídeo para 720 pixels de altura (720p), preservando sua proporção de tela atual. Isso ajuda a reduzir significativamente o tamanho do arquivo se a fonte for gravada em uma resolução superior a 720p.
+
+Se quiser ver uma demonstração deste node na prática, fiz um mini-game de exemplo [nest link]().
