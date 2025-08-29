@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://coild744it8xr"]
+
+[ext_resource type="VideoStream" uid="uid://wv3oah0hf0fl" path="res://assets/video1.ogv" id="1_eiuhb"]
+[ext_resource type="Texture2D" uid="uid://btmof0t5rkpo2" path="res://assets/pngegg.png" id="2_irl1m"]
+[ext_resource type="Script" uid="uid://c8m1y8k3kwy38" path="res://scripts/video_1.gd" id="2_tb1ec"]
+
+[node name="Video1" type="VideoStreamPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -179.0
+offset_right = 320.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_eiuhb")
+volume_db = -10.0
+script = ExtResource("2_tb1ec")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(99, 52.5)
+scale = Vector2(0.247458, 0.571606)
+energy = 1.2
+texture = ExtResource("2_irl1m")
