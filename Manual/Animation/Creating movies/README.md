@@ -15,3 +15,5 @@ Ainda no *Movie File*, ative as opções avançadas. O parâmetro *MJPEG Quality
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/94e1641e-2fea-4ca9-b4c0-e03e0014c6e7" />
 </p>
+
+> PS: Com *FPS *$= 60$ em um jogo 2D simples, a jogo rodou mais rápido que o normal com a opção *Movie Maker* ativada, mas na hora de ver o vídeo a velocidade estava normal.
