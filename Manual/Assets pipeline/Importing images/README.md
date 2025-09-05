@@ -50,9 +50,26 @@ A desvantagem dos mipmaps é que eles aumentam o uso de memória em cerca de $33
 
 ### Roughness
 
-  - **Mode:** O canal de cor a ser considerado como um mapa de rugosidade nesta textura. Somente efetivo se *Roughness/Src Normal* não estiver vazio.
-  - **Src Normal:** O caminho para a textura a ser considerado como um mapa normal para filtragem de rugosidade (Roughness ) na importação. Especificar isso pode ajudar a reduzir ligeiramente o aliasing especular em 3D.
+  - **Mode:** O canal de cor a ser considerado como um mapa de rugosidade (roughness) nesta textura. Somente efetivo se *Roughness/Src Normal* não estiver vazio.
+  - **Src Normal:** O caminho para a textura a ser considerado como um mapa normal para filtragem de rugosidade (roughness) na importação. Especificar isso pode ajudar a reduzir ligeiramente o aliasing especular em 3D.
   
   > PS: A filtragem de rugosidade (roughness) na importação é usada apenas em renderização 3D, não em 2D.
 
-### 
+### Process 
+
+  - **Fix Alpha Border:** Coloca pixels da mesma cor circundante em transição de áreas transparentes para opacas. Para texturas exibidas com filtro bilinear, isso ajuda a atenuar o efeito de contorno ao exportar imagens de um editor de imagens. É recomendado deixar essa opção ativada (default), a menos que isso cause problemas para uma imagem específica.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/27a742c7-8695-4235-93d2-27333b67d8e0" />
+</p>
+
+  - **Premult Alpha:** Uma alternativa para corrigir bordas escurecidas com *Fix Alpha Border* é usar o alfa pré-multiplicado. Ao habilitar esta opção, a textura será convertida para este formato. Uma textura alfa pré-multiplicada requer materiais específicos para ser exibida corretamente.
+  - **Normal Map Invert Y:** A Godot exige que o mapa normal use as coordenadas X+, Y+ e Z+, o que é conhecido como um mapa normal no estilo OpenGL. Se você importou um material criado para ser usado em outra engine, ele pode estar no estilo DirectX. Nesse caso, o mapa normal precisa ser convertido habilitando a opção de importação *Normal Map Invert Y*.
+  - **HDR as sRGB:** Algumas imagens HDR que você encontra online podem estar corrompidas e conter dados de cores sRGB (em vez de dados de cores lineares). É aconselhável não usar esses arquivos. Se for absolutamente necessário, ativar esta opção fará com que pareçam corretas.
+
+> PS: Habilitar HDR como sRGB em imagens HDR bem formatadas fará com que a imagem resultante pareça muito escura, então deixe essa opção desabilitada se não tiver certeza.
+  - **HDR Clamp Exposure:** Algumas imagens panorâmicas HDR que você encontra online podem conter pixels extremamente brilhantes, por terem sido tiradas de fontes reais sem qualquer corte. Ativar a opção *HDR Clamp Exposure* pode resolver esse problema usando uma fórmula que não introduz clipping visível.
+  - **Size Limit:** Se definido como um valor maior que 0, o tamanho da textura será limitado a um valor menor ou igual ao valor especificado aqui. Para texturas não quadradas, o limite de tamanho afeta a dimensão maior, com a dimensão menor sendo dimensionada para preservar a proporção. O redimensionamento é realizado usando interpolação cúbica. Isso pode ser usado para reduzir o uso de memória sem afetar as imagens de origem ou evitar problemas com texturas que não são exibidas em plataformas móveis/web (já que estas geralmente não conseguem exibir texturas maiores que $4096 \times 4096$).
+
+### Detect 3D 
+  - **Compress To:** Isso altera a opção *Compress/Mode*, usada quando uma textura é detectada como sendo usada em 3D. Alterar esta opção para *Disabled* e, em seguida, reimportar, não alterará o modo de compressão existente em uma textura (se for detectado que ela está sendo usada em 3D), mas escolher *VRAM Compressed* or *Basis Universal* alterará.
