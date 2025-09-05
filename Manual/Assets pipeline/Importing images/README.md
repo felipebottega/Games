@@ -43,7 +43,16 @@ Images are one of the largest assets in a game. To handle them efficiently, they
 
 Se habilitado, versões menores da textura serão geradas na importação. Por exemplo, uma textura de $64 \times 64$ gerará 6 mipmaps ($32 \times 32, 16 \times 16, 8 \times 8, 4 \times 4, 2 \times 2, 1 \times 1$). Isso traz vários benefícios:
 
-  - As texturas não ficarão granuladas à distância (em 3D) ou se forem reduzidas devido ao zoom da câmera ou à escala do CanvasItem (em 2D).
+  - As texturas não ficarão granuladas à distância (em 3D) ou se forem reduzidas devido ao zoom da câmera ou à escala do `CanvasItem` (em 2D).
   - O desempenho melhorará se a textura for exibida à distância, já que a amostragem de versões menores da textura original é mais rápida e requer menos largura de banda de memória.
 
 A desvantagem dos mipmaps é que eles aumentam o uso de memória em cerca de $33\%$. É recomendável habilitar os mipmaps em 3D. No entanto, em 2D, isso só deve ser habilitado se o seu projeto se beneficiar visivelmente da ativação dos mipmaps. Se a câmera nunca diminuir o zoom significativamente, não haverá benefício em habilitar mipmaps, mas o uso de memória aumentará.
+
+### Roughness
+
+  - **Mode:** O canal de cor a ser considerado como um mapa de rugosidade nesta textura. Somente efetivo se *Roughness/Src Normal* não estiver vazio.
+  - **Src Normal:** O caminho para a textura a ser considerado como um mapa normal para filtragem de rugosidade (Roughness ) na importação. Especificar isso pode ajudar a reduzir ligeiramente o aliasing especular em 3D.
+  
+  > PS: A filtragem de rugosidade (roughness) na importação é usada apenas em renderização 3D, não em 2D.
+
+### 
