@@ -20,7 +20,7 @@ Como vimos no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh
 
 ## Opções de import
 
-### Compress/Model
+### Compress/Mode
 
 Images are one of the largest assets in a game. To handle them efficiently, they need to be compressed. Godot offers several compression methods, depending on the use case.
 
