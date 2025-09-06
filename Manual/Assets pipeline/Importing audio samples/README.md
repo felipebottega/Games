@@ -48,3 +48,21 @@ A Godot oferece 3 opções para importar seus dados de áudio: WAV, Ogg Vorbis e
 <p align="center">
   <img width="220" src="https://github.com/user-attachments/assets/16f47828-5c58-4684-8a23-c810fe171367" />
 </p>
+
+## Configurações avançadas de importação (WAV)
+
+Se você clicar duas em um arquivo de áudio WAV pelo *FileSystem*, vão aparecer algumas opções de edição no *Inspector*. É limitado, mas permite aditar algumas coisas sem a necessidade de ter que reimportar o arquivo. Além disso, você pode ouvir o áudio antes de utilizá-lo.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/fbe27703-4b50-4bc9-b9d7-fb8ad5f755e8" />
+</p>
+
+## Configurações avançadas de importação (Ogg Vorbis ou MP3)
+
+Se você clicar duas em um arquivo de áudio Ogg Vorbis ou MP3 pelo *FileSystem*, a janela com configurações avançadas de áudio vai abrir. Esta janela permite editar o ponto de loop do áudio com uma prévia em tempo real, além do BPM, da contagem de batidas e dos compassos. Essas três configurações não são utilizadas no momento, mas serão usadas no futuro para suporte a música interativa (o que permite transições suaves entre diferentes faixas de música). Note que várias das opções de import mostradas acima podem ser editadas diretamente nesta janela, sem a necessidade de reimportar o áudio.
+
+<p align="center">
+  <img width="380" src="https://github.com/user-attachments/assets/0ef793f4-6dd3-4369-af95-338e2c127b91" />
+</p>
+
+
