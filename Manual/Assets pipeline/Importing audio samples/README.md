@@ -29,10 +29,22 @@ A Godot oferece 3 opções para importar seus dados de áudio: WAV, Ogg Vorbis e
    
   ### Compress/Mode 
 
-    - **Disabled/Uncompressed:** Não reduz nada.
-    - **IMA-ADPC:** Reduz um pouco o tamanho do arquivo e o uso de memória, mas reduz a qualidade de forma audível.
-    - **QOA (Quite OK Audio):** Reduz o tamanho do arquivo um pouco mais do que a RAM (IMA-ADPCM), e a redução na qualidade é muito menos perceptível, mas aumenta o uso da CPU (ainda muito menor do que o MP3).
+   - **Disabled/Uncompressed:** Não reduz nada.
+   - **IMA-ADPC:** Reduz um pouco o tamanho do arquivo e o uso de memória, mas reduz a qualidade de forma audível.
+   - **QOA (Quite OK Audio):** Reduz o tamanho do arquivo um pouco mais do que a RAM (IMA-ADPCM), e a redução na qualidade é muito menos perceptível, mas aumenta o uso da CPU (ainda muito menor do que o MP3).
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/c15ed063-60ad-44ed-be04-5daf1bb7ee42" />
+  <img width="220" src="https://github.com/user-attachments/assets/c15ed063-60ad-44ed-be04-5daf1bb7ee42" />
+</p>
+
+## Opções de import do Ogg Vorbis e MP3
+
+  - **Loop:** Se ativado, o áudio começará a ser reproduzido do início após o término da reprodução. No `AudioStreamPlayer`, o sinal finalizado não será emitido para o áudio em loop quando atingir o final do arquivo de áudio, pois o áudio continuará sendo reproduzido indefinidamente.
+  - **Loop Offset:** O deslocamento de loop determina onde o áudio começará a ser repetido após a reprodução atingir o final. Isso pode ser usado para repetir apenas uma parte do arquivo de áudio, o que é útil para alguns sons ambientes ou músicas. O valor é determinado em segundos em relação ao início do áudio, portanto, $0$ repetirá todo o arquivo de áudio. Só tem efeito se o *Loop* estiver habilitado. 
+  - **BPM:** Batidas por minuto da faixa de áudio. Deve corresponder à medida de BPM usada para compor a faixa. Isso é relevante apenas para músicas que desejam usar a funcionalidade musical interativa, não efeitos sonoros.
+  - **Beat Count:** A contagem de batidas da faixa de áudio. Isso é relevante apenas para músicas que desejam usar a funcionalidade musical interativa, não efeitos sonoros.
+  - **Bar Beats:** O número de compassos dentro de uma única batida na faixa de áudio. Isso é relevante apenas para músicas que desejam usar a funcionalidade musical interativa, não efeitos sonoros.
+
+<p align="center">
+  <img width="220" src="https://github.com/user-attachments/assets/16f47828-5c58-4684-8a23-c810fe171367" />
 </p>
