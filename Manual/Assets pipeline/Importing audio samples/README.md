@@ -22,10 +22,16 @@ A Godot oferece 3 opções para importar seus dados de áudio: WAV, Ogg Vorbis e
   - **Trim:** O arquivo de áudio de origem pode conter longos silêncios no início e/ou no final. Ativar o Trim cortará automaticamente o início e o fim do áudio se estiver abaixo de -50 dB após a normalização (veja Editar > Normalizar abaixo). Um período de fade-in/fade-out também é usado durante o corte para evitar estalos audíveis.
   - **Normalize:** Se ativado, o volume do áudio será normalizado para que seu pico seja igual a 0 dB. Quando ativado, a normalização tornará o áudio mais alto, dependendo do seu pico de volume original.
   - **Loop Mode:** Ao contrário do Ogg Vorbis e do MP3, os arquivos WAV podem conter metadados para indicar se estão em loop (além dos pontos de loop). Por padrão, o Godot seguirá esses metadados, mas você pode optar por aplicar um modo de loop específico:
-    - Desativado: Não reproduz o áudio em loop, mesmo que os metadados indiquem que o arquivo deve ser reproduzido em loop.
-    - Avançar: Loop de áudio padrão.
-    - Ping-Pong: Reproduz o áudio para frente até terminar de tocar, depois reproduz para trás e repete. Isso é semelhante à repetição de textura espelhada, mas para áudio.
-    - Retroceder: Reproduz o áudio ao contrário e retorna ao final ao terminar de tocar.
+    - **Disabled:** Não reproduz o áudio em loop, mesmo que os metadados indiquem que o arquivo deve ser reproduzido em loop.
+    - **Forward:** Loop de áudio padrão.
+    - **Ping-Pong:** Reproduz o áudio para frente até terminar de tocar, depois reproduz para trás e repete. Isso é semelhante à repetição de textura espelhada, mas para áudio.
+    - **Backward:** Reproduz o áudio ao contrário e retorna ao final ao terminar de tocar.
+   
+  ### Compress/Mode 
+
+    - **Disabled/Uncompressed:** Não reduz nada.
+    - **IMA-ADPC:** Reduz um pouco o tamanho do arquivo e o uso de memória, mas reduz a qualidade de forma audível.
+    - **QOA (Quite OK Audio):** Reduz o tamanho do arquivo um pouco mais do que a RAM (IMA-ADPCM), e a redução na qualidade é muito menos perceptível, mas aumenta o uso da CPU (ainda muito menor do que o MP3).
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/c15ed063-60ad-44ed-be04-5daf1bb7ee42" />
