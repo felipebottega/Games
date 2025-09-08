@@ -42,4 +42,4 @@ Você pode clicar em *Add Bus* para adicionar outro audio bus no painel. O fluxo
   <img width="950" src="https://github.com/user-attachments/assets/c3189139-40a8-499f-a1d4-f2fa1d741a08" />
 </p>
 
-> PS: Você editar os nomes dos canais de áudio.
+O layout default do canal de áudio é salvo automaticamente no arquivo `res://default_bus_layout.tres`. Layouts personalizados de canais de áudio podem ser salvos e carregados no disco.
