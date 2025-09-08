@@ -19,7 +19,7 @@ Um *audio bus* (também chamado de *audio channel*/*canal de áudio*) pode ser c
 Crie uma cena com um `AudioStreamPlayer` como node raíz e abra o painel de Audio, mostrado abaixo, na imagem.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/896029c6-65a1-4e53-b8e4-caa5b77d589c" />
+  <img width="950" src="https://github.com/user-attachments/assets/896029c6-65a1-4e53-b8e4-caa5b77d589c" />
 </p>
 
 Agora selecione algum audio no *FileSystem* e o arraste para a propriedade *Stream* no *Inspector* do `AudioStreamPlayer`. Lembre que Godot apenas aceita *ogg, wav* e *mp3*. Para adicionar algum efeito, basta clicar em *Add Effect* no painel de audio e selecionar algum. Depois disso, você pode escutar o audio com o efeito no próprio editor, bastante habilitar a propriedade *Playing* no *Inspector*.
@@ -28,4 +28,18 @@ Agora selecione algum audio no *FileSystem* e o arraste para a propriedade *Stre
   <img width="300" src="https://github.com/user-attachments/assets/177de6b9-d161-4656-9af1-08b5fdc21e98" />
 </p>
 
+Você ter vários efeitos por audio bus. Caso não queria mais algum efeito, basta dar o segundo clique do mouse e selecionar para deletar. Além disso, ao selecionar um dos efeitos, vai aparecer um conjunto de parâmetros modificáveis no *Inspector*. Cada efeito tem seus próprios parâmetros para mexer.
 
+<p align="center">
+  <img width="145" src="https://github.com/user-attachments/assets/2300e08a-0508-4a79-ad7b-9b54611300f5" />
+  <img width="200" src="https://github.com/user-attachments/assets/1c0193ca-24f9-4497-8217-8b766bfc1d75" />
+  <img width="250" src="https://github.com/user-attachments/assets/abb45f18-7c67-4c28-9f6d-eb561a1ee3c7" />
+</p>
+
+Você pode clicar em *Add Bus* para adicionar outro audio bus no painel. O fluxo dos dados é da direita para a esquerda, sendo o *Master* o último canal a ser acessado pelo áudio (que já deverá ter várias modificações a essa altura). Nte que parte inferior de cada audio bus há um nome, isso é a saída do audio, ou seja, para onde ele vai. O novo audio bus, chamado *New Bus*, tem seu output indo para o canal *Master*, e desse o output vai os *Speakers*, que são a caixa de som de fato. 
+
+<p align="center">
+  <img width="950" src="https://github.com/user-attachments/assets/c3189139-40a8-499f-a1d4-f2fa1d741a08" />
+</p>
+
+> PS: Você editar os nomes dos canais de áudio.
