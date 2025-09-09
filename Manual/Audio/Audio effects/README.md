@@ -14,4 +14,18 @@ Quando você clica no *Add Effect* no audio bus, muitas opções de efeito apare
   - **Distortion:** Efeitos de distorções genéricas. Os principais modos de distorções são: *Clip, ATan, Lofi, Overdrive, Wave Shape*.
   - **EQ:** É o equalizador padrão, que tem em programas de tocar música, rádios, etc. Você manipula o quanto cada faixa de frequência tem peso no conjunto.
   - **EQ 6, 10, 21:** É a mesma coisa que o *EQ*, mas mudando o número de faixas de frequência que você quer manipular.
-  - **Filter:** 
+  - **Filter:** Não deve ser manipulado diretamente. Por enquanto simplesmente evite esse.
+  - **HardLimiter:** É semelhante ao *Compressor*, mas é menos flexível e projetado para evitar que a amplitude de um sinal exceda um determinado limite de dB. Adicionar um limitador ao Master é uma boa prática, pois oferece uma proteção fácil contra clipping.
+  - **HighPassFilter:** Corta frequências abaixo de uma frequência de corte específica. O *HighPassFilter* é usado para reduzir os graves de um sinal. Dá para fazer uns efeitos de música de elevador com isso.
+  - **HighShelfFilter:** Reduz todas as frequências acima de uma frequência de corte específica.
+  - **Limiter:** Descontinuado. Use o *HardLimiter * no lugar.
+  - **LowPassFilter:** Corta frequências acima de uma frequência de corte específica e também pode ressoar (aumentar frequências próximas à frequência de corte). Este filtro pode ser usado ​​para simular sons "abafados". Por exemplo, sons subaquáticos, sons bloqueados por paredes ou sons distantes.
+  - **LowShelfFilter:** Reduz todas as frequências abaixo de uma frequência de corte específica.
+  - **NotchFilter:** O oposto do *BandPass*, ele remove uma faixa de som do espectro de frequência em uma determinada frequência de corte.
+  - **Panner:** O *Panner* permite ajustar o equilíbrio estéreo de um sinal entre os canais esquerdo e direito. Fones de ouvido são recomendados para a configuração deste efeito. Ele é bom para manipular ambientes, com sons vindo pela direita ou esquerda do fone.
+  - **Phaser:** Este efeito é formado pela defasagem de duas duplicatas do mesmo som, de forma que se cancelem de forma interessante. O Phaser produz um som que se move para frente e para trás pelo espectro de áudio e pode ser uma ótima maneira de criar efeitos de ficção científica.
+  - **PitchShift:** Este efeito permite o ajuste do tom do sinal independentemente de sua velocidade. O *PitchShift* pode ser útil para criar vozes excepcionalmente altas ou graves.
+  - **Record:** Este efeito permite ao usuário gravar som de um microfone.
+  - **Reverb:** O *Reverb* simula salas de diferentes tamanhos. Possui parâmetros ajustáveis ​​que podem ser ajustados para obter o som de uma sala específica.
+  - **SpectrumAnalyzer:** Este efeito não altera o áudio, você o adiciona canais de áusdio dos quais deseja uma análise de espectro. Isso pode ser usado para visualização de áudio. Por exemplo, visualizar vozes pode ser uma ótima maneira de chamar a atenção para elas sem apenas aumentar o volume.
+  - **StereoEnhance:** Este efeito usa alguns algoritmos para melhorar o som estéreo.
