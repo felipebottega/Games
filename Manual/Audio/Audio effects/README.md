@@ -1,1 +1,11 @@
 # Audio effects
+
+Quando você clica no *Add Effect* no audio bus, muitas opções de efeito aparecem. O recomendado é testar na prática e buscar conhecer mais sobre o efeito conforme a necessidade surgir. No entanto, vamos deixar uma descrição geral de cada efeito aqui, apenas para referência. Para cada efeito, sempre se atento ao *Inspector*, pois lá teremos vários parâmetros para ajustar.
+
+  - **Amplify:** Amplifica alterações no volume do sinal.
+  - **BandLimitFilter e BandPass:** Estes são filtros que bloqueiam frequências em torno do ponto de corte. O *BandPass* pode ser usado para simular o som passando por uma linha telefônica antiga ou um megafone. O *BandPass* pode simular o som de um pedal de guitarra wah-wah, como a guitarra em Voodoo Child (Slight Return), de Jimi Hendrix.
+  - **Capture:** O efeito *Capture* copia os quadros de áudio audio bus em que se encontra para um buffer interno. Isso pode ser usado para capturar dados do microfone ou transmitir áudio pela rede em tempo real.
+  - **Chorus:** O efeito *Chorus* faz com que uma única amostra de áudio soe como um coro inteiro. Ele faz isso duplicando um sinal e alterando levemente o tempo e o tom de cada duplicata, variando isso ao longo do tempo. Embora o coro seja tradicionalmente usado para vozes, ele pode ser desejável com quase qualquer tipo de som.
+  - **Compressor:** O *Compressor* de range dinâmico atenua automaticamente (reduz) o nível do sinal quando sua amplitude excede um determinado limite. O nível de atenuação aplicado é proporcional à distância que o áudio de entrada ultrapassa o limite. O parâmetro *Ratio* do *Compressor* controla o grau de atenuação. Uma das principais utilidades de um compressor é reduzir o range dinâmico de sinais com partes muito barulhentas e quietas. Reduzir o range dinâmico de um sinal pode torná-lo mais adequado à mixagem.
+
+> Dica: Se o seu objetivo é evitar que um sinal exceda completamente uma determinada amplitude, em vez de reduzir o range dinâmico do sinal, o efeito **Limiter** (veremos sobre ele daqui a pouco) é provavelmente uma escolha melhor do que um compressor para esse fim. No entanto, aplicar compressão antes de um limitador ainda é uma boa prática.
