@@ -38,7 +38,7 @@ Você pode ir além das funções nativas. É possível chamar funções que voc
   <img width="900" src="https://github.com/user-attachments/assets/0e87c984-127d-4e41-9fae-973b92155129" />
 </p>
 
-Depois que a fnção foi criada, basta repetir os passos anteriores, mas dessa vez buscando essa função. O painel de animação deve estar assim.
+Depois que a função foi criada, basta repetir os passos anteriores, mas dessa vez buscando essa função. O painel de animação deve estar assim.
 
 <p align="center">
   <img width="950" src="https://github.com/user-attachments/assets/9cccd53c-62c6-47bc-a64c-a7e6951cb35b" />
