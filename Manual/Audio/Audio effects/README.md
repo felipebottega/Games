@@ -27,5 +27,5 @@ Quando você clica no *Add Effect* no audio bus, muitas opções de efeito apare
   - **PitchShift:** Este efeito permite o ajuste do tom do sinal independentemente de sua velocidade. O *PitchShift* pode ser útil para criar vozes excepcionalmente altas ou graves.
   - **Record:** Este efeito permite ao usuário gravar som de um microfone.
   - **Reverb:** O *Reverb* simula salas de diferentes tamanhos. Possui parâmetros ajustáveis ​​que podem ser ajustados para obter o som de uma sala específica.
-  - **SpectrumAnalyzer:** Este efeito não altera o áudio, você o adiciona canais de áusdio dos quais deseja uma análise de espectro. Isso pode ser usado para visualização de áudio. Por exemplo, visualizar vozes pode ser uma ótima maneira de chamar a atenção para elas sem apenas aumentar o volume.
+  - **SpectrumAnalyzer:** Este efeito não altera o áudio, você o adiciona canais de áudio dos quais deseja uma análise de espectro. Isso pode ser usado para visualização de áudio. Por exemplo, visualizar vozes pode ser uma ótima maneira de chamar a atenção para elas sem apenas aumentar o volume.
   - **StereoEnhance:** Este efeito usa alguns algoritmos para melhorar o som estéreo.
