@@ -381,6 +381,12 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\Audio\Audio buses: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses">  Testando o som do seu audio bus
  </a> </li>
+<li> Manual\Extras\Audio Server: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server">  Atributos do Audio Server
+ </a> </li>
+<li> Manual\Extras\Audio Server: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server">  Métodos do Audio Server
+ </a> </li>
+<li> Manual\Extras\Audio Server: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server">  Adicionando efeitos de áudio por código
+ </a> </li>
 <li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Montando a cena para o uso da Camera2D
  </a> </li>
 <li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Método 1 para lidar com tiles de tamanhos diferentes do TileSet
