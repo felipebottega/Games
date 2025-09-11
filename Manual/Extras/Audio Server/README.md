@@ -33,4 +33,8 @@ Como mencionando acima, para adicionar um efeito de áudio você deve utilizar o
   - **AudioEffectReverb.new()**
   - **AudioEffectDistortion.new()**
 
-Um exemplo de aplicação pode ser encontrado [neste pequeno mini-game](https://felipebottega.github.io/Games/Manual/Extras/Audio%20Server/html/). Infelizmente os efeitos de áudio não funcionam em HTML5. Neste caso, recomendo baixar o projeto e rodar localmente.
+Um exemplo de aplicação pode ser encontrado [neste pequeno mini-game](https://felipebottega.github.io/Games/Manual/Extras/Audio%20Server/html/). Infelizmente os efeitos de áudio não funcionam em HTML5 se você deixar no default. Para fazer funcionar, vá na propriedade *Playback Type* do `AudioStreamPlayer` e altere para *Stream*. Você também pode ir em *Project Settings → Audio → General → Default Playback Type.web* e alterar para *Stream*.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/1631c900-7f2a-472d-8f9b-5cad2b1b055d" />
+</p>
