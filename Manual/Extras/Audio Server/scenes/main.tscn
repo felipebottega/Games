@@ -74,6 +74,7 @@ script = ExtResource("1_0wfyh")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMP3_o5qli")
 autoplay = true
+playback_type = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
