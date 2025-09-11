@@ -299,6 +299,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\Animation\Animation Track types: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types">  Animation Playback Track
  </a> </li>
+<li> Manual\Animation\Creating movies: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Creating%20movies">  Customizações na criação de vídeo
+ </a> </li>
 <li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Animando propriedades
  </a> </li>
 <li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Animation Controls
@@ -312,6 +314,12 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Keyframes for other properties
  </a> </li>
 <li> Manual\Animation\Introduction to the animation features: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">  Exemplo prático
+ </a> </li>
+<li> Manual\Animation\Playing videos: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos">  Primeiros passos com o VideoStreamPlayer
+ </a> </li>
+<li> Manual\Animation\Playing videos: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos">  Propriedades do VideoStreamPlayer
+ </a> </li>
+<li> Manual\Animation\Playing videos: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos">  Encoding dos vídeos
  </a> </li>
 <li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">  AnimationPlayer com diversas spritesheets
  </a> </li>
@@ -330,6 +338,48 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree"> # AnimationNodeBlendTree
  </a> </li>
 <li> Manual\Animation\Using AnimationTree: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">  Exemplo prático
+ </a> </li>
+<li> Manual\Assets pipeline\Import process: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Import%20process">  Alterando os parâmetros dos imports
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples">  Formatos de áudio suportados
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples">  Opções de import do WAV
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples"> # Force
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples"> # Edit
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples">   # Compress/Mode 
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples">  Opções de import do Ogg Vorbis e MP3
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples">  Configurações avançadas de importação (WAV)
+ </a> </li>
+<li> Manual\Assets pipeline\Importing audio samples: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples">  Configurações avançadas de importação (Ogg Vorbis ou MP3)
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images">  Alterando o tipo
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images">  Opções de import
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images"> # Compress/Mode
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images"> # Compress/Channel Pack
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images"> # Mipmaps/Generate
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images"> # Roughness
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images"> # Process 
+ </a> </li>
+<li> Manual\Assets pipeline\Importing images: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images"> # Detect 3D 
+ </a> </li>
+<li> Manual\Assets pipeline\Importing translations: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20translations">  Opções de import
+ </a> </li>
+<li> Manual\Audio\Audio buses: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses">  Escala de decibel 
+ </a> </li>
+<li> Manual\Audio\Audio buses: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses">  Audio buses
+ </a> </li>
+<li> Manual\Audio\Audio buses: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses">  Testando o som do seu audio bus
  </a> </li>
 <li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Montando a cena para o uso da Camera2D
  </a> </li>

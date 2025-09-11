@@ -31,7 +31,7 @@ func _ready() -> void:
 	# Velocidade da execução do áudio (default=1).
 	print("Velocidade da reprodução do áudio = ", AudioServer.playback_speed_scale)
 	
-	# Retorna o índice do canal de áudio de nome {bus_name}. Se naõ existir, retorna -1.
+	# Retorna o índice do canal de áudio de nome {bus_name}. Se não existir, retorna -1.
 	var bus_name = "Master"
 	print("Índice do canal 'Master' = ", AudioServer.get_bus_index(bus_name))
 	print("Índice do canal 'Blob' = ", AudioServer.get_bus_index("Blob"), " (-1 significa que não existe)")
@@ -70,47 +70,47 @@ func _on_scenario_room_change(pos_x):
 			
 			if key < 700:
 				# Inicializa uma instância de um objeto de um efeito de áudio para entrar.
-				var audio_effect := AudioEffectStereoEnhance.new()
+				var audio_effect = AudioEffectStereoEnhance.new()
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Schubert - Allegro Scherzando Impromptu Op. 142, 2"
 			
 			elif key == 700:
-				var audio_effect := AudioEffectBandPassFilter.new()
+				var audio_effect = AudioEffectBandPassFilter.new()
 				audio_effect.cutoff_hz = 4000
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Band Pass Filter"
 				
 			elif key == 1400:
-				var audio_effect := AudioEffectChorus.new()
+				var audio_effect = AudioEffectChorus.new()
 				audio_effect.dry = 0.5
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Chorus"
 			
 			elif key == 2100:
-				var audio_effect := AudioEffectPhaser.new()
+				var audio_effect = AudioEffectPhaser.new()
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Phaser"
 			
 			elif key == 2800:
-				var audio_effect := AudioEffectPitchShift.new()
+				var audio_effect = AudioEffectPitchShift.new()
 				audio_effect.pitch_scale = 0.4
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Pitch Shift 0.4"
 			
 			elif key == 3500:
-				var audio_effect := AudioEffectPitchShift.new()
+				var audio_effect = AudioEffectPitchShift.new()
 				audio_effect.pitch_scale = 1.2
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Pitch Shift 1.2"
 			
 			elif key == 4200:
-				var audio_effect := AudioEffectPitchShift.new()
+				var audio_effect = AudioEffectPitchShift.new()
 				audio_effect.pitch_scale = 2.0
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Pitch Shift 2.0"
 			
 			elif key == 4900:
-				var audio_effect := AudioEffectDelay.new()
+				var audio_effect = AudioEffectDelay.new()
 				audio_effect.tap1_level_db = -3
 				audio_effect.tap1_pan = 0.3
 				audio_effect.tap2_level_db = -6
@@ -119,16 +119,16 @@ func _on_scenario_room_change(pos_x):
 				text = "Delay"
 			
 			elif key == 5600:
-				var audio_effect := AudioEffectReverb.new()
+				var audio_effect = AudioEffectReverb.new()
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				text = "Reverb"
 			
 			elif key == 6300:
-				var audio_effect := AudioEffectDistortion.new()
+				var audio_effect = AudioEffectDistortion.new()
 				audio_effect.mode = AudioEffectDistortion.MODE_LOFI 
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect, effect_idx)
 				
-				var audio_effect2 := AudioEffectPhaser.new()
+				var audio_effect2 = AudioEffectPhaser.new()
 				audio_effect2.rate_hz = 2.7
 				AudioServer.add_bus_effect(bus_master_idx, audio_effect2, effect_idx+1)
 				text = "Distortion LOFI + Phaser"
