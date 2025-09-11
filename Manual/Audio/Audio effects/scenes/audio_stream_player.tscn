@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://nvfocybnvg4q"]
-
-[ext_resource type="AudioStream" uid="uid://cwqckitsea3rk" path="res://assets/FadingPast.ogg" id="1_nbeep"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_nbeep")
