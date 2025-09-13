@@ -33,13 +33,11 @@ Cada plataforma possui seus próprios parâmetros a serem customizados antes da 
 
 Eu recomendo usar apenas a opção *Export Project* e exportar para uma plataforma de cada vez. Isto te dá mais controle sobre o que está acontecendo. Caso você queria exportar para todas de uma vez, é necessário que o campo *Export Path* esteja preenchido para todas as plataformas. Em relação a exportar para PCK/ZIP, eu ainda prefiro ter o projeto no GitHub ou simplesmente compactar tudo em um zip (em ambos os casos a pasta `.godot` deve ser omitida). Caso queira fazer esta exportação, prefira o PCK pois é o oficial e não possui report de bugs (o ZIP possui).
 
-> PS: Quando for exportar, não se esqueça de desmarcar a opção *Export With Debug*.
+> PS: Quando for exportar, não se esqueça de desmarcar a opção *Export With Debug*. No caso
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/f45dc6ae-4ffd-40be-89a1-a59fef52d9dd" />
 </p>
-
-> Dica: Quando você exporta um jogo para Windows, ele cria um executável um arquivo PCK. Este segundo arquivo pode ser deletado. Basta o executável para rodar o jogo.
 
 ## Configuration files 
 
