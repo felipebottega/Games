@@ -13,5 +13,5 @@ Primeiro vamos estabelecer algumas definições.
 Anteriormente, vimos como exportar o executável do jogo. Você deve ter notado que ele sempre gera um arquivo PCK junto. Este arquivo não é necessário e até pode ser deletado que o joga no executável roda normalmente. O mais recomendado é marcar a opção *Embed PCK* para gerar apenas o executável. Com isso, eliminamos de vez qualquer vestígio de arquivos PCK no projeto.
 
 <p align="center">
-  <img width="650" src="https://github.com/user-attachments/assets/59fa66ba-f9f7-4be4-b66e-d62401b45ac0" />
+  <img width="650" src="https://github.com/user-attachments/assets/ab058298-c82e-4532-896e-c80433b68a8d" />
 </p>
