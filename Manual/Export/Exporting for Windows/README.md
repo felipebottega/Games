@@ -2,11 +2,10 @@
 
 ## Changing the executable icon
 
-Ao gerar o executável do seu jogo no Windows, o ícone utilizado é o símbolo da Godot <img width="28" src="https://github.com/user-attachments/assets/0a3c6ed7-5dd2-48ef-9d63-a6492b698d50" /> por default. Para alterar issdo, vá em *Project Settings → Application → Config → Icon* e escolha o arquivo do novo ícone. Depois disso, ao exportar o jogo para executável o ícone do arquivo será o que você escolheu.
+Ao gerar o executável do seu jogo no Windows, o ícone utilizado é o símbolo da Godot <img width="28" src="https://github.com/user-attachments/assets/0a3c6ed7-5dd2-48ef-9d63-a6492b698d50" /> por default. Para alterar isso quando for exportar, vá em *Options → Application → Icon* e escolha o arquivo do novo ícone. Depois disso, ao exportar o jogo para executável o ícone do arquivo será o que você escolheu. O ícone de  *Console Wrapper Icon* só faz sentido se você exportar com debug, pois isso cria um arquivo de console além do arquivo do jogo.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/5cb1c8d7-7ed1-41c6-9aaa-096e22fa062c" />
-  <img width="891" height="684" alt="image" src="https://github.com/user-attachments/assets/eba61d48-641b-493d-926f-cb82e28b86f5" />
+  <img width="650" height="684" alt="image" src="https://github.com/user-attachments/assets/eba61d48-641b-493d-926f-cb82e28b86f5" />
 </p>
 
 ## Copiando cenas entre projetos e problemas com uid
