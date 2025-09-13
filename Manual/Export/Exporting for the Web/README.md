@@ -3,7 +3,7 @@
 Tudo que temos para falar sobre exportar jogos para a web pode ser colocado em uma lista de observações. 
 
 1. Quando for exportar para web, prefira salvar usando o nome *index.html*, pois na maioria das vezes o servidores vão buscar este arquivo para rodar o jogo.
-2. Se vocÊ for criar um jogo e quer que ele possa ser jogado na web, ele tem que ser criado no modo *Compatibility*, pois os outros dois modos não funcionam na web.
+2. Se você for criar um jogo e quer que ele possa ser jogado na web, ele tem que ser criado no modo *Compatibility*, pois os outros dois modos não funcionam na web.
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/5954efc1-a04c-4917-a330-32bdb23acf70" />
@@ -14,4 +14,7 @@ Tudo que temos para falar sobre exportar jogos para a web pode ser colocado em u
 
 > Dica: Para jogos web, use *Sample* para efeitos curtos e *Stream* para música de fundo, para não sobrecarregar o navegador.
 
-5. 
+5. O jogo será pausado pelo navegador quando a aba não estiver mais ativa no navegador do usuário. Isso significa que funções como `_process` e `_physics_process` não serão mais executadas até que o usuário volte para a aba.
+6. Browsers não entram automaticamente em fullscreen. Por conta disso, é melhor não configurar para que o jogo não comece em fullscreen e deixa isso como opção. Se o usuário escolher a opção fullscreen dentro do jogo, aí sim vai funcionar.
+7. Browsers só tocam áudios do jogo após o usuário interagir. Por conta disso, deixe um botão para o usuário clicar para começar o jogo. Caso contrário, você corre o risco de ter a sua abertura ou menu rodando toalmente no silêncio.
+8. 
