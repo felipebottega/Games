@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dts2em2p8h6bj"]
+
+[ext_resource type="Script" uid="uid://def8oe6cpgdvf" path="res://label.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 158.0
+offset_top = 250.0
+offset_right = 979.0
+offset_bottom = 415.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 120
+text = "Export tests"
+uppercase = true
+script = ExtResource("1_wtcfe")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Label" method="_on_timer_timeout"]
