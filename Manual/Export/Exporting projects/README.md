@@ -16,9 +16,9 @@ Depois disso, uma janela com as opções de exportação irá abrir. A primeira 
   <img width="550" src="https://github.com/user-attachments/assets/5d4ac10b-1d72-4729-9f46-44568ed4fd93" />
 </p>
 
-Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algumas ferramentas (SDKs) e templates para a exportação funcionar. A própria mensagem de erro serve de guia para o que deve ser instalado. [Neste link](https://godotengine.org/download/windows/) você encontra os templates da Godot para efetuar as exportações. 
+Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algumas ferramentas (SDKs) e templates para a exportação funcionar. A própria mensagem de erro serve de guia para o que deve ser instalado. [Neste link](https://godotengine.org/download/windows/) você encontra os templates da Godot que devem ser instalados. Depois de baixar os templates, vá em *Editor → Manage Export Templates* e selecione os templates para instalar. Note que você também baixar a partir daí. Faça o que for mais conveniente para você.
 
-Antes mesmo de tentar exportar, é bom saber que tipo de exportação você quer fazer. Existem três alternativas.
+Antes mesmo de tentar exportar o seu jogo, é bom saber que tipo de exportação você quer fazer. Existem três alternativas.
 
   - **Export All:** Exporta o jogo para todas as plataformas selecionadas de uma vez.
   - **Export Project:** Exporta o jogo para uma platafoprma selecionada.
@@ -32,3 +32,18 @@ Cada plataforma possui seus próprios parâmetros a serem customizados antes da 
 </p>
 
 Eu recomendo usar apenas a opção *Export Project* e exportar para uma plataforma de cada vez. Isto te dá mais controle sobre o que está acontecendo. Caso você queria exportar para todas de uma vez, é necessário que o campo *Export Path* esteja preenchido para todas as plataformas. Em relação a exportar para PCK/ZIP, eu ainda prefiro ter o projeto no GitHub ou simplesmente compactar tudo em um zip (em ambos os casos a pasta `.godot` deve ser omitida).
+
+> PS: Quando for exportar, não se esqueça de desmarcar a opção *Export With Debug*.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/f45dc6ae-4ffd-40be-89a1-a59fef52d9dd" />
+</p>
+
+## Configuration files 
+
+A configuração de exportação é armazenada em dois arquivos, ambos encontrados no diretório do projeto:
+
+  - **export_presets.cfg:** Este arquivo contém a grande maioria da configuração de exportação e pode ser submetido com segurança ao controle de versão. Não há nada aqui que você normalmente precisaria manter em segredo.
+  - **.godot/export_credentials.cfg:** Este arquivo contém opções de exportação consideradas confidenciais, como senhas e chaves de criptografia. Geralmente, ele não deve ser submetido ao controle de versão nem compartilhado com terceiros, a menos que você saiba exatamente o que está fazendo.
+
+Como o arquivo de credenciais geralmente é mantido fora dos sistemas de controle de versão, algumas opções de exportação estarão ausentes se você clonar o projeto para uma nova máquina. A maneira mais fácil de lidar com isso é copiar o arquivo manualmente do local antigo para o novo.
