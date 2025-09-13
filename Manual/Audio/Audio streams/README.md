@@ -23,4 +23,4 @@ Para iniciar um node `AudioStreamPlayer2D`, o processo é o mesmo do `AudioStrea
   - **Max Polyphony:** Número máximo de áudios que o node pode tocar ao mesmo tempo. Caso ultrapasse esse valor, ele começa a cancelar áudios antigos para a entrada dos novos.
   - **Panning Strength:** Quanto mais alto, mais a diferença entre som esquerdo e direito é realçado.
   - **Bus:** Canal de áudio por onde o som vai sair.
-  - **Playback Type:** Como já observado [aqui]([https://en.wikipedia.org/wiki/Doppler_effect](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), quando esta propriedade está em *Stream*, é possível ter os efeitos de áudio rodando em HTML5.
+  - **Playback Type:** Como já observado [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), quando esta propriedade está em *Stream*, é possível ter os efeitos de áudio rodando em HTML5.
