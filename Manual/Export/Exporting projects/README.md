@@ -39,6 +39,8 @@ Eu recomendo usar apenas a opção *Export Project* e exportar para uma platafor
   <img width="550" src="https://github.com/user-attachments/assets/f45dc6ae-4ffd-40be-89a1-a59fef52d9dd" />
 </p>
 
+> Dica: Quando você exporta um jogo para Windows, ele cria um executável um arquivo PCK. Este segundo arquivo pode ser deletado. Basta o executável para rodar o jogo.
+
 ## Configuration files 
 
 A configuração de exportação é armazenada em dois arquivos, ambos encontrados no diretório do projeto:
