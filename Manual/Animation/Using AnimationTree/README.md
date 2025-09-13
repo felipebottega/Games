@@ -174,7 +174,7 @@ Agora vamos ver as propriedades das transições.
 
 ### Condicionamento do AnimationNodeStateMachine
 
-A parte *Advance* do *Inspector* é a parte onde introduzimos condicionais para as transições. Ou seja, a transição só ocorre se certas condições forem satisfeitas. Para poder usar essas lógicas de maneira apropriada, deixe a propriedade *Mode* em *auto*. Você só vai querer mudar isso se for chamar o método `travel()` por código (algo que eu não acho que seja muito usado). 
+A parte *Advance* do *Inspector* é a parte onde introduzimos condicionais para as transições. Ou seja, a transição só ocorre se certas condições forem satisfeitas. Para poder usar essas lógicas de maneira apropriada, deixe a propriedade *Mode* em *auto*. Você só vai querer mudar isso se for chamar o método `travel` por código (algo que eu não acho que seja muito usado). 
 
 Agora vamos ver como criar condições na prática. Primeiro deixe todas as transições como *Immediate* e coloque as animações para rodar em loop. Feito isso, crie um script no node `AnimationNodeStateMachine`. Este script cria a variável *time*, que vai apenas contar o número de segundo que passou desde que se iniciou a cena. O principal é a linha `set("parameters/conditions/x", time > 5)`. Com ela, nós criamos uma variável condicional $x$ que será igual ao resultado da condição *time* $>5$. 
 
