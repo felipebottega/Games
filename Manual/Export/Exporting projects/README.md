@@ -1,6 +1,6 @@
 # Exporting projects
 
-Vimos algumas coisas sobre exportação de projeto conforme a necessidade surgia, mas agora vamos abordr este tema de maneira sistemática e mais completa.
+Vimos algumas coisas sobre exportação de projeto conforme a necessidade surgia, mas agora vamos abordar este tema de maneira sistemática e mais completa.
 
 ## Básico de exportação
 
