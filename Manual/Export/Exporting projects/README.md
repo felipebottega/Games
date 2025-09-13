@@ -31,7 +31,7 @@ Cada plataforma possui seus próprios parâmetros a serem customizados antes da 
   <img width="500" src="https://github.com/user-attachments/assets/74bfa58b-fe65-43d1-9a6f-5cd6809ea524" />
 </p>
 
-Eu recomendo usar apenas a opção *Export Project* e exportar para uma plataforma de cada vez. Isto te dá mais controle sobre o que está acontecendo. Caso você queria exportar para todas de uma vez, é necessário que o campo *Export Path* esteja preenchido para todas as plataformas. Em relação a exportar para PCK/ZIP, eu ainda prefiro ter o projeto no GitHub ou simplesmente compactar tudo em um zip (em ambos os casos a pasta `.godot` deve ser omitida).
+Eu recomendo usar apenas a opção *Export Project* e exportar para uma plataforma de cada vez. Isto te dá mais controle sobre o que está acontecendo. Caso você queria exportar para todas de uma vez, é necessário que o campo *Export Path* esteja preenchido para todas as plataformas. Em relação a exportar para PCK/ZIP, eu ainda prefiro ter o projeto no GitHub ou simplesmente compactar tudo em um zip (em ambos os casos a pasta `.godot` deve ser omitida). Caso queira fazer esta exportação, prefira o PCK pois é o oficial e não possui report de bugs (o ZIP possui).
 
 > PS: Quando for exportar, não se esqueça de desmarcar a opção *Export With Debug*.
 
@@ -47,3 +47,17 @@ A configuração de exportação é armazenada em dois arquivos, ambos encontrad
   - **.godot/export_credentials.cfg:** Este arquivo contém opções de exportação consideradas confidenciais, como senhas e chaves de criptografia. Geralmente, ele não deve ser submetido ao controle de versão nem compartilhado com terceiros, a menos que você saiba exatamente o que está fazendo.
 
 Como o arquivo de credenciais geralmente é mantido fora dos sistemas de controle de versão, algumas opções de exportação estarão ausentes se você clonar o projeto para uma nova máquina. A maneira mais fácil de lidar com isso é copiar o arquivo manualmente do local antigo para o novo.
+
+Abaixo nós temos o conteúdo que tipicamente aparece no `export_presets.cfg`. Note que o *preset.0* se refere à exportação Web, como mostramos em uma imagem acima. Depois disso, no mesmo arquivo de texto, vem o *preset.1*, referente à exportação Windows, e assim por diante. 
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/8e89c06e-7522-49d9-845d-692e66425177" />
+  <img width="400" src="https://github.com/user-attachments/assets/f0545703-5016-4e2c-a393-f20852626d2e" />
+</p>
+
+Abaixo temos o conteúdo do `export_credentials.cfg`. Para este projeto nenhum tipo de credencial foi criada, por isso não há nada no arquivo.
+
+<p align="center">
+  <img width="170" src="https://github.com/user-attachments/assets/1cccb600-bc2a-4d66-8898-d4a39b21c70d" />
+</p>
+
