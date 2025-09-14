@@ -15,7 +15,7 @@ Tudo que temos para falar sobre exportar jogos para a Web pode ser colocado em u
 > Dica: Em jogos Web, use *Sample* para efeitos curtos e *Stream* para música de fundo, para não sobrecarregar o navegador.
 
 5. O jogo será pausado pelo navegador quando a aba não estiver mais ativa no navegador do usuário. Isso significa que funções como `_process` e `_physics_process` não serão mais executadas até que o usuário volte para a aba.
-6. Browsers não entram automaticamente em fullscreen. Por conta disso, é melhor não configurar para que o jogo não comece em fullscreen e deixa isso como opção. Se o usuário escolher a opção fullscreen dentro do jogo, aí sim vai funcionar.
+6. Browsers não entram automaticamente em fullscreen. Por conta disso, é melhor configurar para que o jogo não comece em fullscreen e deixe isso como opção. Se o usuário escolher a opção fullscreen dentro do jogo, aí sim vai funcionar.
 7. Browsers só tocam áudios do jogo após o usuário interagir. Por conta disso, deixe um botão para o usuário clicar para começar o jogo. Caso contrário, você corre o risco de ter a sua abertura ou menu rodando toalmente no silêncio.
 8. Fique atento aos *addons* que usa, pois nem todos funcionam em jogos Web (o perigo é que as mensagens de erro podem não ajudar a detectar que o problema é o addon).
 9. Depois de ter exportado seu jogo como HTML5 (com o nome *index.html*), você pode ir na pasta do jogo, abrir o *cmd* e executar o comando `python -m http.server`. Esse comando roda o seu jogo em um servidor local através da porta $8000$. Você pode testá-lo pelo endereço *http://127.0.0.1:8000/*.
