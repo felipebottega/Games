@@ -21,7 +21,7 @@ Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algu
 Antes mesmo de tentar exportar o seu jogo, é bom saber que tipo de exportação você quer fazer. Existem três alternativas.
 
   - **Export All:** Exporta o jogo para todas as plataformas selecionadas de uma vez.
-  - **Export Project:** Exporta o jogo para uma platafoprma selecionada.
+  - **Export Project:** Exporta o jogo para uma plataforma selecionada.
   - **Export PCK/ZIP:** Exporta os recursos do jogo como um arquivo PCK ou ZIP. Não é jogável.
 
 Cada plataforma possui seus próprios parâmetros a serem customizados antes da exportação. O que vem por default na Godot muito provavelmente já está correto e você só vai querer alterar parâmetros mais superficiais, como ícones, metadados e o destino para onde exportar. 
