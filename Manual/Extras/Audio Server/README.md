@@ -23,7 +23,7 @@ A lista mostrada abaixo não é completa, mas mostra os principais atributos do 
 
 ## Adicionando efeitos de áudio por código
 
-Como mencionando acima, para adicionar um efeito de áudio você deve utilizar o comando `AudioServer.add_bus_effect(bus_idx, audio_effect, effect_idx)`. O objeto `audio_effect` é um *resource* de Godot, portanto deve ser chamado diretamente, ou seja, não é filho de alguma classe de áudio. Por exemplo, se quiser usar o efeito *Band Pass Filter*, você pode definir a variável `audio_effect = AudioEffectBandPassFilter.new()`, mudar alguns de seus atributos (como `audio_effect.cutoff_hz`) e então usar o comando para adicionar este efeito. Abaixo seguem algumas outras possibilidades.
+Como mencionando acima, para adicionar um efeito de áudio você deve utilizar o comando `AudioServer.add_bus_effect(bus_idx, audio_effect, effect_idx)`. O objeto `audio_effect` é um recurso (*resource*) da Godot, portanto deve ser chamado diretamente, ou seja, não é filho de alguma classe de áudio. Por exemplo, se quiser usar o efeito *Band Pass Filter*, você pode definir a variável `audio_effect = AudioEffectBandPassFilter.new()`, mudar alguns de seus atributos (como `audio_effect.cutoff_hz`) e então usar o comando para adicionar este efeito. Abaixo seguem algumas outras possibilidades.
 
   - **AudioEffectStereoEnhance.new()**
   - **AudioEffectChorus.new()**
