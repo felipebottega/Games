@@ -8,7 +8,7 @@ Ao gerar o executável do seu jogo no Windows, o ícone utilizado é o ícone da
   <img width="650" height="684" alt="image" src="https://github.com/user-attachments/assets/eba61d48-641b-493d-926f-cb82e28b86f5" />
 </p>
 
-Na imagem acima, podemos notar que, além do ícone, também é possível editar diversos metadados. Essas funcionalidades não vem de graça com a Godot, é necessário baixar o programa *rcedit.exe* do Windows, colocá-lo em algum lugar do seu computador e inserir este caminho em *Editor → General → Export → rcedit*, como mostrado abaixo (provavelmente você deverá reiniciar a Godot após estes passos).
+Na imagem acima, podemos notar que, além do ícone, também é possível editar diversos metadados. Essas funcionalidades não vem de graça com a Godot, é necessário baixar o programa *rcedit.exe* do Windows, colocá-lo em algum lugar do seu computador e inserir este caminho em *Editor → General → Export → rcedit*, como mostrado abaixo. Provavelmente você terá reiniciar a Godot após estes passos.
 
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/754ca574-c65f-4735-a75e-d31518e6efdc" />
