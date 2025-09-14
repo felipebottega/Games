@@ -16,7 +16,7 @@ Depois disso, uma janela com as opções de exportação irá abrir. A primeira 
   <img width="550" src="https://github.com/user-attachments/assets/5d4ac10b-1d72-4729-9f46-44568ed4fd93" />
 </p>
 
-Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algumas ferramentas (SDKs) e templates para a exportação funcionar. A própria mensagem de erro serve de guia para o que deve ser instalado. [Neste link](https://godotengine.org/download/windows/) você encontra os templates da Godot que devem ser instalados. Depois de baixar os templates, vá em *Editor → Manage Export Templates* e selecione os templates para instalar. Note que você também baixar a partir daí. Faça o que for mais conveniente para você.
+Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algumas ferramentas (SDKs) e templates para a exportação funcionar. A própria mensagem de erro serve de guia para o que deve ser instalado. [Neste link](https://godotengine.org/download/windows/) você encontra os templates da Godot que devem ser instalados. Depois de baixar os templates, vá em *Editor → Manage Export Templates* e selecione os templates para instalar. Note que você também pode baixar a partir dessa janela. Faça o que for mais conveniente para você.
 
 Antes mesmo de tentar exportar o seu jogo, é bom saber que tipo de exportação você quer fazer. Existem três alternativas.
 
