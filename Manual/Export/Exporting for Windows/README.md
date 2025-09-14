@@ -16,7 +16,7 @@ Na imagem acima, podemos notar que, além do ícone, também é possível editar
 
 ## Copiando cenas entre projetos e problemas com uid
 
-Saindo um pouco do tópico, pois esbarrei nesse problema enquanto trabalhava nesse tutorial. É comum que a engine reclame de uid desconhecida quando você copia diretamente uma cena de um projeto para outro. Na Godot, os arquivos *.tscn* e *.gd* têm um sistema de uids para identificar recursos. Eles não são portáveis entre projetos diferentes — cada projeto tem seu próprio mapeamento. Abaixo temos um exemplo simples de arquivo *.tscn*. 
+Saindo um pouco do tópico, pois esbarrei neste problema enquanto trabalhava no tutorial. É comum que a engine reclame de uid desconhecida quando você copia diretamente uma cena de um projeto para outro. Na Godot, os arquivos *.tscn* e *.gd* têm um sistema de uids para identificar recursos. Eles não são portáveis entre projetos diferentes — cada projeto tem seu próprio mapeamento. Abaixo temos um exemplo simples de arquivo *.tscn*. 
 
 ```
 [gd_scene load_steps=2 format=3 uid="uid://dqmh2chf8nud5"]
