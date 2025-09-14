@@ -10,7 +10,7 @@ Tudo que temos para falar sobre exportar jogos para a Web pode ser colocado em u
 </p>
 
 3. Jogos exportados para Web também funcionam em celular, mas com performance inferior aos exportados para *Android* ou *iOS* diretamente.
-4. Como observado no [tutorial Audio Server](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), os efeitos de áudio não funcionam na Web se você deixar o *Playback Type* do `AudioStreamPlayer` no default, que é o *Sample*. Então ele deve ser alterado para *Stream*. A principal diferença entre estes dois é que o *Sample* carrega o áudio inteiro na memória antes de tocar, enquanto que o *Stream* carrega o áudio em partes, à medida que toca (streaming do arquivo do disco ou da rede).
+4. Como observado no [tutorial Audio Server](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), os efeitos de áudio não funcionam na Web se você deixar o *Playback Type* do `AudioStreamPlayer` no default, que é o *Sample* quando exportado para Web. Então ele deve ser alterado para *Stream*. A principal diferença entre estes dois é que o *Sample* carrega o áudio inteiro na memória antes de tocar, enquanto que o *Stream* carrega o áudio em partes, à medida que toca (streaming do arquivo do disco ou da rede).
 
 > Dica: Em jogos Web, use *Sample* para efeitos curtos e *Stream* para música de fundo, para não sobrecarregar o navegador.
 
