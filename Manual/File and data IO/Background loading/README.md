@@ -21,4 +21,8 @@ Funciona parecido com a `preload`, mas carrega dinamicamente, no momento em que 
 
 > PS: De fato, o `preload` é mais rápido que o `load`, mas ele tem a limitação de só poder ser chamado na inicialização/compilação do scritp uma vez. 
 
-## 
+## preload e load em loops
+
+Se por alguma razão você quer instanciar um objeto várias vezes, o ideal é carregá-lo com `preload` e `load` fora do loop e apenas criar instâncias dele no loop. Caso você (sem querer) coloque o `preload` em um loop, ele mantém o objeto carregado em cache, então não executa o `preload` mais que uma vez. Porém, o mesmo não acontece com o `load`. Colocar o `load` dentro de um loop vai fazer com que ele seja reexecutado diversas vezes. Isso não é indicado pois vai causar problemas de performance no jogo.
+
+
