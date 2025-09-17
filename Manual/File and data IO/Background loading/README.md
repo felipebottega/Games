@@ -6,8 +6,8 @@ Existem alguns métodos em Godot para carregar cenas, recursos, texturas, entre 
 
 Este foi o primeiro método de carregamento que vimos. Ele foi introduzido no tutorial [Add Child](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child) lá atrás. Ela funciona seguindo os passos mostrados abaixo.
 
-1. `var minha_cena = preload("res://scenes/minha_cena.tscn")`    # carrega a cena na memória e retorna um objeto do tipo `PackedScene`
-2. `var cena_instancia = minha_cena.instantiate()`    # cria uma instância da cena (variável do tipo `Node`)
+1. `minha_cena = preload("res://scenes/minha_cena.tscn")`    # carrega a cena na memória e retorna um objeto do tipo `PackedScene`
+2. `cena_instancia = minha_cena.instantiate()`    # cria uma instância da cena (variável do tipo `Node`)
 3. `cena_instancia.position = Vector2(x, y)`    # altera atributos da cena
 4. `add_child(cena_instancia)`    # adiciona a cena dentro da cena principal, como um filho (entra na árvode de nodes)
 
@@ -29,14 +29,34 @@ Se por alguma razão você quer instanciar um objeto várias vezes, o ideal é c
 
 A chamada `get_tree().change_scene_to_file("res://scenes/minha_cena.tscn")` troca a cena atual por outra, usando o caminho do arquivo. Ela faz o carregamento da cena no momento da chamada, basicamente como se você estivesse fazendo isso:
 
-1. `var minha_cena = load("res://scenes/minha_cena.tscn")`
+1. `minha_cena = load("res://scenes/minha_cena.tscn")`
 2. `get_tree().change_scene_to(minha_cena)`
 
 A segunda função, `get_tree().change_scene_to()`, também troca a cena atual por outra, mas ela recebe a cena como um objeto `PackedScene` em vez da string do caminho.
 
 Se você tiver uma cena grande e quiser evitar pequenas pausas ao trocar, você pode fazer algo assim:
 
-1. `var minha_cena = preload("res://scenes/minha_cena.tscn")`    # carregada antes
+1. `minha_cena = preload("res://scenes/minha_cena.tscn")`    # carregada antes
 2. `get_tree().change_scene_to(minha_cena)`    # troca instantânea
 
 Aqui você pré-carregou a cena, então a troca é quase instantânea, evitando o lag que normalmente aconteceria com `get_tree().change_scene_to_file()` direto.
+
+## ResourceLoader
+
+Como vimos, os dois métodos anteriores carregam cenas mas custam na performance do jogo. A diferença é se você quer que o custo seja pago antes de entrar na cena (`preload`) ou durante a cena (`load`). Este trade-off depende da flexibilidade que você deseja nos carregamentos. 
+
+Existe um método que não traz custo nenhum de performance no jogo, pois o carregamento acontece totalmente em segundo plano. Este método funciona seguindo os passos mostrados abaixo.
+
+1. `ResourceLoader.load_threaded_request("res://scenes/minha_cena.tscn")`    # solicita que o recurso seja carregado em background
+2. `status, array = ResourceLoader.load_threaded_get_status("res://scenes/minha_cena.tscn", array)`    # permite checar quanto falta (percentual)
+3. `minha_cena = ResourceLoader.load_threaded_get("res://scenes/minha_cena.tscn")`    # carrega a cena na memória e retorna um objeto do tipo `PackedScene`
+
+A chamnada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do `_process` ou `_physics_process` até o status ser igual a $3$ (você pode ver sobre os tipos de status [aqui](https://docs.godotengine.org/en/stable/classes/class_resourceloader.html#enum-resourceloader-threadloadstatus)). Quando isso acontece, significa que a cena terminou de ser carregada. O array é opcional, caso você queira uma barra de progresso ou algo do tipo. Depois do passo 3, a continuação é só repetir o passo 2 do `preload` em diante. 
+
+> PS: Existe também o método `ResourceLoader.load`, mas ele é basicamente o `load` com algumas opções extras que não importam muito. Recomendo deixar de lado.
+
+## Tabela comparativa dos tipos de carregamento
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/24717e94-9d90-410d-95df-8fa750271ef7" />
+</p>
