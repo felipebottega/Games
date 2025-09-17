@@ -7,9 +7,9 @@ Existem alguns métodos em Godot para carregar cenas, recursos, texturas, entre 
 Este foi o primeiro método de carregamento que vimos. Ele foi introduzido no tutorial [Add Child](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child) lá atrás. Ela funciona seguindo os passos mostrados abaixo.
 
 1. `var minha_cena = preload("res://scenes/minha_cena.tscn")`    # carrega a cena na memória e retorna um objeto do tipo `PackedScene`
-2. `var cena_instancia = minha_cena.instantiate()`    # cria uma instância da cena
+2. `var cena_instancia = minha_cena.instantiate()`    # cria uma instância da cena (variável do tipo `Node`)
 3. `cena_instancia.position = Vector2(x, y)`    # altera atributos da cena
-4. `add_child(cena_instancia)`    # adiciona a cena dentro da cena principal, como um filho
+4. `add_child(cena_instancia)`    # adiciona a cena dentro da cena principal, como um filho (entra na árvode de nodes)
 
 O `preload` é executado assim que script é inicializado/compilado, não dá para ficar chamando ele dinamicamente durante a execução várias vezes. É indicado para carregar recursos/cenas que são mais pesados ou que serão utilizados diversas vezes. Para otimizar a velocidade do carregamento, prefira chamar o `preload` antes mesmo da `_ready`, junto da definição das variáveis globais.
 
