@@ -53,7 +53,7 @@ Existe um método que não traz custo nenhum de performance no jogo, pois o carr
 
 A chamnada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do `_process` ou `_physics_process` até o status ser igual a $3$ (você pode ver sobre os tipos de status [aqui](https://docs.godotengine.org/en/stable/classes/class_resourceloader.html#enum-resourceloader-threadloadstatus)). Quando isso acontece, significa que a cena terminou de ser carregada. O array é opcional, caso você queira uma barra de progresso ou algo do tipo. Depois do passo 3, a continuação é só repetir o passo 2 do `preload` em diante. 
 
-> PS: Existe também o método `ResourceLoader.load`, mas ele é basicamente o `load` com algumas opções extras que não importam muito. Recomendo deixar de lado.
+> PS: Existe também o método `ResourceLoader.load`, mas ele é basicamente o `load` com algumas opções extras que não importam muito. 
 
 > ⚠️: Não chame a `ResourceLoader.load_threaded_get` sem ter certeza que o carregamento finalizou, senão você vai travar o jogo.
 
