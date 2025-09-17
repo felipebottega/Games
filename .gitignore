@@ -1,2 +1,3 @@
 # Ignora todas as pastas .godot dentro dos subdiretórios
 **/.godot/
+**/.vscode/

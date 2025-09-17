@@ -17,7 +17,7 @@ func _input(event: InputEvent):
 	elif event is InputEventMouseButton and event.pressed:
 		get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")
 		
-# Detecta qualquer botão do controle pressionado.
+	# Detecta qualquer botão do controle pressionado.
 	elif event is InputEventJoypadButton and event.pressed:
 		get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")
 
