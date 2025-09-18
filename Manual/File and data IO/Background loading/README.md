@@ -78,13 +78,25 @@ Em todos os casos, estaremos chamando `get_tree().change_scene_to_file()` ou `ge
 5. **Load2:** Carrega a cena com o `load` no `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
 6. **Load3:** Faz tudo só quando passam os $3$ segundos.
 7. **get_tree().change_scene_to_file():** Chama o `get_tree().change_scene_to_file()` quando passam os $3$ segundos.
-8. **ResourceLoader1:** Faz o request da cena antes do `_ ready` e a carrega quando passam os $3$ segundos.
-9. **ResourceLoader2:** Faz o request da cena no `_ ready` e a carrega quando passam os $3$ segundos.
+8. **ResourceLoader:** Faz o request da cena no `_ ready` e a carrega quando passam os $3$ segundos.
 
-Abaixo temos o tempos em segundos de cada método. O primeiro é o tempo que levou para entrar no `_ready`, o segundo é o tempo que levou para passar os $3$ segundos do `Timer`, e o último é o tempo que levou para a primeira bola aparecer na tela. O primeiro bloco de tempos acima é o caso default, em que não há nada na primeira cena para atrapalhar o `Timer`. No segundo bloco de tempos, há um sistema de partículas com turbulência na primeira cena.
+Abaixo temos o tempos em segundos de cada método. O *start* é o tempo que levou para entrar no `_ready`, o *timer* é o tempo que levou para passar os $3$ segundos do `Timer`, e o *finish* é o tempo que levou para a primeira bola aparecer na tela. O primeiro bloco de tempos é o caso default, em que não há nada na primeira cena para atrapalhar o `Timer`. No segundo bloco de tempos, há um sistema de partículas com turbulência na primeira cena.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/722a41ef-e770-482e-9fa8-a631c922a79e" />
 </p>
 
 Podemos notar que a posição do `preload` não fez diferença. Isso já era esperado, uma vez que ele é chamado em tempo de compilação do script. O `load` teve tempo parecido com o `preload` apenas quando ele foi chamado antes mesmo da `_ready`. Nos outros casos podemos notar que o tempo para o carregamento ficou postergado para depois. O `get_tree().change_scene_to_file()` e `ResourceLoader` foram semelhantes ao `load` que entrou mais tarde. Vale notar que, no segundo bloco de tempos, o atraso do `Timer` se deu por conta das partículas. O carregamento delas se dá na GPU e paralisa o jogo todo mesmo, incluindo carregamentos de segundo plano, por isso o `ResourceLoader` não teve benefícios no segundo bloco.
+
+> PS: Não é possível fazer o request da cena antes do `_ ready` com o `ResourceLoader`.
+
+Em termos de ganho total, a conclusão é que todos os métodos são equivalentes. O que muda é quando é feito o carregamento. Se quisermos um pouco de lag no início, usamos o `preload`, se estivermos ok com um pouco de lag no meio do jogo, usamos o `load` ou `get_tree().change_scene_to_file()`. Por fim, o `ResourceLoader` pode sim evitar lags de carregamento no jogo e dar um ganho de tempo, mas isso não é possível quando o carregamento envolve shaders (no caso das partículas). 
+
+Tivemos duas fontes de lentidão: as partículas da primeira cena e as partículas da segunda cena. Em todos os casos, os métodos descritos não ajudam. Eles carregam a cena na memória, mas não fazem pré-carregamento de partículas. Essas apenas são carregadas quando aparecem na tela.
+
+## Método extra de pré-carregamento 
+
+Alguns devs usam uma cena de loading que já contém todas as partículas usadas no jogo, cada uma instanciada uma vez e deixada invisível, só para garantir que os shaders fiquem prontos. Ou seja, carregamos tudo logo no loading inicial do jogo e deixamos disponível como variável global, usando *autoload/singleton*. Vimos um pouco deste assunto no nosso [jogo usando tiles](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#toques-finais), onde foi necessário ter a música como cena global que ficasse tocando independentemente da cena em que estávamos. Este approach não nos faz ganhar ganhar tempo, mas coloca todo o tempo de espera para o início, antes mesmo do jogo começar. Com isso, evitamos qualquer tipo de lag ou congelamento no meio do jogo. Vamos mostrar como se faz.
+
+
+
