@@ -84,7 +84,7 @@ Em todos os casos, estaremos chamando `get_tree().change_scene_to_file()` ou `ge
 Abaixo temos o tempos em segundos de cada método. O primeiro é o tempo que levou para entrar no `_ready`, o segundo é o tempo que levou para passar os $3$ segundos do `Timer`, e o último é o tempo que levou para a primeira bola aparecer na tela. O primeiro bloco de tempos acima é o caso default, em que não há nada na primeira cena para atrapalhar o `Timer`. No segundo bloco de tempos, há um sistema de partículas com turbulência na primeira cena.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/c7cf4f0b-fda3-4782-8be2-46e6e8f13f53" />
+  <img width="700" src="https://github.com/user-attachments/assets/722a41ef-e770-482e-9fa8-a631c922a79e" />
 </p>
 
 Podemos notar que a posição do `preload` não fez diferença. Isso já era esperado, uma vez que ele é chamado em tempo de compilação do script. O `load` teve tempo parecido com o `preload` apenas quando ele foi chamado antes mesmo da `_ready`. Nos outros casos podemos notar que o tempo para o carregamento ficou postergado para depois. O `get_tree().change_scene_to_file()` e `ResourceLoader` foram semelhantes ao `load` que entrou mais tarde. Vale notar que, no segundo bloco de tempos, o atraso do `Timer` se deu por conta das partículas. O carregamento delas se dá na GPU e paralisa o jogo todo mesmo, incluindo carregamentos de segundo plano, por isso o `ResourceLoader` não teve benefícios no segundo bloco.
