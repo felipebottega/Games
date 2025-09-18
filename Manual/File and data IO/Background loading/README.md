@@ -71,12 +71,12 @@ Criamos um jogo onde a tela inicial não tem nada, mas possui um `Timer` de $3$ 
 
 Em todos os casos, estaremos chamando `get_tree().change_scene_to_file()` ou `get_tree().change_scene_to()` para fazer a mudança de cena. Vale ressaltar que `add_child` é usado para adicionar um elemento à sua árvore de nodes, e isso é diferente de mudança de cena, por isso este último não é indicado para este caso. Os métodos que iremos testar são os seguintes:
 
-1. **Preload1 + get_tree().change_scene_to_packed():** Carrega a cena com o `preload` antes do `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
-2. **Preload2 + get_tree().change_scene_to_packed():** Carrega a cena com o `preload` no `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
-3. **Preload3 + get_tree().change_scene_to_packed():** Faz tudo só quando passam os $3$ segundos.
-4. **Load1 + get_tree().change_scene_to_packed():** Carrega a cena com o `load` antes do `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
-5. **Load2 + get_tree().change_scene_to_packed():** Carrega a cena com o `load` no `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
-6. **Load3 + get_tree().change_scene_to_packed():** Faz tudo só quando passam os $3$ segundos.
+1. **Preload1:** Carrega a cena com o `preload` antes do `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
+2. **Preload2:** Carrega a cena com o `preload` no `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
+3. **Preload3:** Faz tudo só quando passam os $3$ segundos.
+4. **Load1:** Carrega a cena com o `load` antes do `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
+5. **Load2:** Carrega a cena com o `load` no `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
+6. **Load3:** Faz tudo só quando passam os $3$ segundos.
 7. **get_tree().change_scene_to_file():** Chama o `get_tree().change_scene_to_file()` quando passam os $3$ segundos.
 8. **ResourceLoader1:** Faz o request da cena antes do `_ ready` e a carrega quando passam os $3$ segundos.
 9. **ResourceLoader2:** Faz o request da cena no `_ ready` e a carrega quando passam os $3$ segundos.
