@@ -79,3 +79,5 @@ Criamos um jogo onde a tela inicial só possui um botão de *Start*. Assim que o
 8. **get_tree().change_scene_to():** Carrega a cena com `preload`, dentro do `_ ready`,  e faz a chamada quando o botão é pressionado.
 9. **ResourceLoader1:** Faz o request da cena dentro do `_ ready` e só faz a carrega quando o botão é pressionado.
 10. **ResourceLoader2:** Faz o request da cena na parte das variáveis globais, fora do `_ ready`, e a carrega quando o botão é pressionado.
+
+Todos estes métodos serão testados num export em HTML5, com a tela do jogo sendo gravada. Vamos monitorar o tempo entre o botão *Start* ser pressionado e a cena ser totalmente renderizada. A ideia de gravar o jogo é que podemos começar e parar no exato frame, obtendo uma medição precisa.
