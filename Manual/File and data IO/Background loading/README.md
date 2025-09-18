@@ -67,17 +67,17 @@ A chamada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do
 
 Vamos comparar os métodos vistos para o caso de se querer carregar um estágio novo de um jogo. Já sabemos que nem todo método é ideal para isso, mas vamos testar para ter uma noção de como os métodos se comparam. 
 
-Criamos um jogo onde a tela inicial só possui um botão de *Start*. Assim que o jogador pressiona este botão, o jogo muda para a cena do estágio. Este é um estágio pesado, feito para ser lento no carregamento. Ele possui 3 sistemas de partículas, sendo um com física de turbulência, 2 sprites de background, com um deles gigantesco, e pouco mais de $600$ `RigidBody2D` de bolas com textura, colisão e luz própria (`PointLight2D`). Os métodos que iremos testar são os seguintes:
+Criamos um jogo onde a tela inicial não tem nada, mas possui um `Timer` de $3$ segundos. Assim que acaba esse tempo, o jogo muda para a cena do estágio. Este é um estágio pesado, feito para ser lento no carregamento. Ele possui 3 sistemas de partículas, sendo um com física de turbulência, 2 sprites de background, com um deles gigantesco, e pouco mais de $600$ `RigidBody2D` de bolas com textura, colisão e luz própria (`PointLight2D`). Os métodos que iremos testar são os seguintes:
 
-1. **Preload1:** Carrega a cena dentro do `_ ready` e só faz `add_child` quando o botão é pressionado.
-2. **Preload2:** Carrega a cena na parte das variáveis globais, fora do `_ ready`,  e só faz `add_child` quando o botão é pressionado.
-3. **Preload3:** Carrega a cena e faz `add_child` só quando o botão é pressionado.
-4. **Load1:** Carrega a cena dentro do `_ ready` e só faz `add_child` quando o botão é pressionado.
-5. **Load2:** Carrega a cena e faz `add_child` só quando o botão é pressionado.
-6. **get_tree().change_scene_to_file():** Faz a chamada quando o botão é pressionado.
-7. **get_tree().change_scene_to():** Carrega a cena com `preload` na parte das variáveis globais, fora do `_ ready`,  e faz a chamada quando o botão é pressionado.
-8. **get_tree().change_scene_to():** Carrega a cena com `preload`, dentro do `_ ready`,  e faz a chamada quando o botão é pressionado.
-9. **ResourceLoader1:** Faz o request da cena dentro do `_ ready` e só faz a carrega quando o botão é pressionado.
-10. **ResourceLoader2:** Faz o request da cena na parte das variáveis globais, fora do `_ ready`, e a carrega quando o botão é pressionado.
+1. **Preload1:** Carrega a cena dentro do `_ ready` e só faz `add_child` quando passam os $3$ segundos.
+2. **Preload2:** Carrega a cena na parte das variáveis globais, fora do `_ ready`,  e só faz `add_child` quando passam os $3$ segundos.
+3. **Preload3:** Carrega a cena e faz `add_child` só quando passam os $3$ segundos.
+4. **Load1:** Carrega a cena dentro do `_ ready` e só faz `add_child` quando passam os $3$ segundos.
+5. **Load2:** Carrega a cena e faz `add_child` só quando passam os $3$ segundos.
+6. **get_tree().change_scene_to_file():** Faz a chamada quando passam os $3$ segundos.
+7. **get_tree().change_scene_to():** Carrega a cena com `preload` na parte das variáveis globais, fora do `_ ready`,  e faz a chamada quando passam os $3$ segundos.
+8. **get_tree().change_scene_to():** Carrega a cena com `preload`, dentro do `_ ready`,  e faz a chamada quando passam os $3$ segundos.
+9. **ResourceLoader1:** Faz o request da cena dentro do `_ ready` e só faz a carrega quando passam os $3$ segundos.
+10. **ResourceLoader2:** Faz o request da cena na parte das variáveis globais, fora do `_ ready`, e a carrega quando passam os $3$ segundos.
 
-Todos estes métodos serão testados num export em HTML5, com a tela do jogo sendo gravada. Vamos monitorar o tempo entre o botão *Start* ser pressionado e a cena ser totalmente renderizada. A ideia de gravar o jogo é que podemos começar e parar no exato frame, obtendo uma medição precisa.
+Todos estes métodos serão testados num export em HTML5, com a tela do jogo sendo gravada. Vamos monitorar o tempo entre o primeiro frame da nova cena e o último frame que determina quando ela já carregou tudo. Como há elementos determinísticos na cena e é tudo gravado, é possível escolher um frame final fixo para determinar o fim da medição. Com isso, temos uma medição precisa do tempo de carregamento.
