@@ -51,7 +51,7 @@ Existe um método que não traz custo nenhum de performance no jogo, pois o carr
 2. `status, array = ResourceLoader.load_threaded_get_status("res://scenes/minha_cena.tscn", array)`    # permite checar quanto falta (percentual)
 3. `minha_cena = ResourceLoader.load_threaded_get("res://scenes/minha_cena.tscn")`    # carrega a cena na memória e retorna um objeto do tipo `PackedScene`
 
-A chamada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do `_process` ou `_physics_process` até o status ser igual a $3$ (você pode ver sobre os tipos de status [aqui](https://docs.godotengine.org/en/stable/classes/class_resourceloader.html#enum-resourceloader-threadloadstatus)). Quando isso acontece, significa que a cena terminou de ser carregada. O array é opcional, caso você queira uma barra de progresso ou algo do tipo. Depois do passo 3, a continuação é só repetir o passo 2 do `preload` em diante. 
+A chamada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do `_process` ou `_physics_process` até o status ser igual a $3$ (você pode ver sobre os tipos de status [aqui](https://docs.godotengine.org/en/stable/classes/class_resourceloader.html#enum-resourceloader-threadloadstatus)). Quando isso acontece, significa que a cena terminou de ser carregada. O array é opcional, caso você queira uma barra de progresso ou algo do tipo. Depois do passo 3, a continuação é só repetir o passo 2 do `preload` em diante ou fazer o `get_tree().change_scene_to_packed()` se for uma mudança de cena. 
 
 > PS: Existe também o método `ResourceLoader.load`, mas ele é basicamente o `load` com algumas opções extras que não importam muito. 
 
@@ -81,4 +81,10 @@ Em todos os casos, estaremos chamando `get_tree().change_scene_to_file()` ou `ge
 8. **ResourceLoader1:** Faz o request da cena antes do `_ ready` e a carrega quando passam os $3$ segundos.
 9. **ResourceLoader2:** Faz o request da cena no `_ ready` e a carrega quando passam os $3$ segundos.
 
-Todos estes métodos serão testados num export em HTML5, com a tela do jogo sendo gravada. Vamos monitorar o tempo entre o primeiro frame da nova cena e o último frame que determina quando ela já carregou tudo. Como há elementos determinísticos na cena e é tudo gravado, é possível escolher um frame final fixo para determinar o fim da medição. Com isso, temos uma medição precisa do tempo de carregamento.
+Abaixo temos o tempos em segundos de cada método. O primeiro é o tempo que levou para entrar no `_ready`, o segundo é o tempo que levou para passar os $3$ segundos do `Timer`, e o último é o tempo que levou para a primeira bola aparecer na tela. O primeiro bloco de tempos acima é o caso default, em que não há nada na primeira cena para atrapalhar o `Timer`. No segundo bloco de tempos, há um sistema de partículas com turbulência na primeira cena.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/c7cf4f0b-fda3-4782-8be2-46e6e8f13f53" />
+</p>
+
+Podemos notar que a posição do `preload` não fez diferença. Isso já era esperado, uma vez que ele é chamado em tempo de compilação do script. O `load` teve tempo parecido com o `preload` apenas quando ele foi chamado antes mesmo da `_ready`. Nos outros casos podemos notar que o tempo para o carregamento ficou postergado para depois. O `get_tree().change_scene_to_file()` e `ResourceLoader` foram semelhantes ao `load` que entrou mais tarde. Vale notar que, no segundo bloco de tempos, o atraso do `Timer` se deu por conta das partículas. O carregamento delas se dá na GPU e paralisa o jogo todo mesmo, incluindo carregamentos de segundo plano, por isso o `ResourceLoader` não teve benefícios no segundo bloco.
