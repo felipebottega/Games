@@ -51,7 +51,7 @@ Existe um método que não traz custo nenhum de performance no jogo, pois o carr
 2. `status, array = ResourceLoader.load_threaded_get_status("res://scenes/minha_cena.tscn", array)`    # permite checar quanto falta (percentual)
 3. `minha_cena = ResourceLoader.load_threaded_get("res://scenes/minha_cena.tscn")`    # carrega a cena na memória e retorna um objeto do tipo `PackedScene`
 
-A chamnada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do `_process` ou `_physics_process` até o status ser igual a $3$ (você pode ver sobre os tipos de status [aqui](https://docs.godotengine.org/en/stable/classes/class_resourceloader.html#enum-resourceloader-threadloadstatus)). Quando isso acontece, significa que a cena terminou de ser carregada. O array é opcional, caso você queira uma barra de progresso ou algo do tipo. Depois do passo 3, a continuação é só repetir o passo 2 do `preload` em diante. 
+A chamada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do `_process` ou `_physics_process` até o status ser igual a $3$ (você pode ver sobre os tipos de status [aqui](https://docs.godotengine.org/en/stable/classes/class_resourceloader.html#enum-resourceloader-threadloadstatus)). Quando isso acontece, significa que a cena terminou de ser carregada. O array é opcional, caso você queira uma barra de progresso ou algo do tipo. Depois do passo 3, a continuação é só repetir o passo 2 do `preload` em diante. 
 
 > PS: Existe também o método `ResourceLoader.load`, mas ele é basicamente o `load` com algumas opções extras que não importam muito. 
 
@@ -63,3 +63,19 @@ A chamnada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro d
   <img width="900" src="https://github.com/user-attachments/assets/24717e94-9d90-410d-95df-8fa750271ef7" />
 </p>
 
+## Testes
+
+Vamos comparar os métodos vistos para o caso de se querer carregar um estágio novo de um jogo. Já sabemos que nem todo método é ideal para isso, mas vamos testar para ter uma noção de como os métodos se comparam. 
+
+Criamos um jogo onde a tela inicial só possui um botão de *Start*. Assim que o jogador pressiona este botão, o jogo muda para a cena do estágio. Este é um estágio pesado, feito para ser lento no carregamento. Ele possui 3 sistemas de partículas, sendo um com física de turbulência, 2 sprites de background, com um deles gigantesco, e pouco mais de $600$ `RigidBody2D` de bolas com textura, colisão e luz própria (`PointLight2D`). Os métodos que iremos testar são os seguintes:
+
+1. **Preload1:** Carrega a cena dentro do `_ ready` e só faz `add_child` quando o botão é pressionado.
+2. **Preload2:** Carrega a cena na parte das variáveis globais, fora do `_ ready`,  e só faz `add_child` quando o botão é pressionado.
+3. **Preload3:** Carrega a cena e faz `add_child` só quando o botão é pressionado.
+4. **Load1:** Carrega a cena dentro do `_ ready` e só faz `add_child` quando o botão é pressionado.
+5. **Load2:** Carrega a cena e faz `add_child` só quando o botão é pressionado.
+6. **get_tree().change_scene_to_file():** Faz a chamada quando o botão é pressionado.
+7. **get_tree().change_scene_to():** Carrega a cena com `preload` na parte das variáveis globais, fora do `_ ready`,  e faz a chamada quando o botão é pressionado.
+8. **get_tree().change_scene_to():** Carrega a cena com `preload`, dentro do `_ ready`,  e faz a chamada quando o botão é pressionado.
+9. **ResourceLoader1:** Faz o request da cena dentro do `_ ready` e só faz a carrega quando o botão é pressionado.
+10. **ResourceLoader2:** Faz o request da cena na parte das variáveis globais, fora do `_ ready`, e a carrega quando o botão é pressionado.
