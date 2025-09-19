@@ -130,3 +130,5 @@ Com isso, obtivemos os tempos mostrados abaixo. O tempo total ainda é o mesmo, 
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/f607d790-7d53-4ed5-b36e-68b3c839e341" />
 </p>
+
+> PS: O fato do fim do `Timer` ter sido próximo aos $6$ segundos não é algo para se estranhar. Isso significa que o início do `Timer` foi adiado mais do que anteriormente. Isso porque a engine gastou mais tempo pré-carregando recursos para o jogo. É isto que queremos mesmo. 
