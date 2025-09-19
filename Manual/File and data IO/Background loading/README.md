@@ -116,7 +116,7 @@ Primeiro coloque todos os arquivos destas cenas/objetos na pasta *autoload* do p
 Essa parte não é muito divertida, mas você deve abrir o arquivo `scene.tscn`, remover as uids dos objetos mencionados acima e trocar o caminho para *autoload*. Isso só deve ser feito para este caso em que estamos redefinindo todo o projeto. Se for seguir do jeito normal, isto é, criar outro projeto apra isso, pode pular esse passo.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/ca3b6536-a4b3-4bb0-9458-3fb23877b094" />
+  <img width="850" src="https://github.com/user-attachments/assets/ca3b6536-a4b3-4bb0-9458-3fb23877b094" />
 </p>
 
 Após isso, toda referência a um dos objetos acima é via autoload. É importante que você chame os objetos carregados no autoload através de script, usando os nomes deles. Por exemplo, removemos o node *SmokeBig* que tinha na árvore de nodes e fizemos sua chamada por script. Isso garante que você vai usar o objeto global. Se colocasse na árvore pelo editor, criaria uma instância nova que seria carregada na hora, criando mais lag desnecessário.
