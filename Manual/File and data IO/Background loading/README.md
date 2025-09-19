@@ -86,7 +86,7 @@ Abaixo temos o tempos em segundos de cada método. O *start* é o tempo que levo
   <img width="700" src="https://github.com/user-attachments/assets/722a41ef-e770-482e-9fa8-a631c922a79e" />
 </p>
 
-Podemos notar que a posição do `preload` não fez diferença. Isso já era esperado, uma vez que ele é chamado em tempo de compilação do script. O `load` teve tempo parecido com o `preload` apenas quando ele foi chamado antes mesmo da `_ready`. Nos outros casos podemos notar que o tempo para o carregamento ficou postergado para depois. O `get_tree().change_scene_to_file()` e `ResourceLoader` foram semelhantes ao `load` que entrou mais tarde. Vale notar que, no segundo bloco de tempos, o atraso do `Timer` se deu por conta das partículas. O carregamento delas se dá na GPU e paralisa o jogo todo mesmo, incluindo carregamentos de segundo plano, por isso o `ResourceLoader` não teve benefícios no segundo bloco.
+Podemos notar que a posição do `preload` não fez diferença. Isso já era esperado, uma vez que ele é chamado em tempo de compilação do script. O `load` teve tempo parecido com o `preload` apenas quando ele foi chamado antes mesmo da `_ready`. Nos outros casos podemos notar que o tempo para o carregamento ficou postergado para depois. O `get_tree().change_scene_to_file()` e `ResourceLoader` foram semelhantes ao `load` que entrou mais tarde. Vale notar que, no segundo bloco de tempos, o atraso do `Timer` se deu por conta das partículas. O carregamento delas se dá na GPU e paralisa o jogo todo mesmo, incluindo carregamentos de segundo plano. Por isso o `Timer` começou mais tarde e o `ResourceLoader` não teve benefícios no segundo bloco.
 
 > PS: Não é possível fazer o request da cena antes do `_ ready` com o `ResourceLoader`.
 
@@ -94,9 +94,39 @@ Em termos de ganho total, a conclusão é que todos os métodos são equivalente
 
 Tivemos duas fontes de lentidão: as partículas da primeira cena e as partículas da segunda cena. Em todos os casos, os métodos descritos não ajudam. Eles carregam a cena na memória, mas não fazem pré-carregamento de partículas. Essas apenas são carregadas quando aparecem na tela.
 
-## Método extra de pré-carregamento 
+## Método esperto de pré-carregamento 
 
 Alguns devs usam uma cena de loading que já contém todas as partículas usadas no jogo, cada uma instanciada uma vez e deixada invisível, só para garantir que os shaders fiquem prontos. Ou seja, carregamos tudo logo no loading inicial do jogo e deixamos disponível como variável global, usando *autoload/singleton*. Vimos um pouco deste assunto no nosso [jogo usando tiles](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#toques-finais), onde foi necessário ter a música como cena global que ficasse tocando independentemente da cena em que estávamos. Este approach não nos faz ganhar ganhar tempo, mas coloca todo o tempo de espera para o início, antes mesmo do jogo começar. Com isso, evitamos qualquer tipo de lag ou congelamento no meio do jogo. Vamos mostrar como se faz.
 
+### Adicionando cenas no Autoload
 
+A cena do jogo possui 4 objetos com partículas: *Fireworks, Sparkles, Smoke, Ball*. Além disso, a cena inicial carrega o objeto *SmokeBig*, que também possui partículas.
 
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/dcfc5e83-ed7b-453e-8be4-d7e0b46ad3cb" />
+  <img width="190" src="https://github.com/user-attachments/assets/a5f3dba2-032a-4ce0-948e-8913c94d8770" />
+</p>
+
+Primeiro coloque todos os arquivos destas cenas/objetos na pasta *autoload* do projeto. Depois sá em *Project Settings → Globals* e adicione cada um delas como global. Para adicionar, vá no ícone de pasta e selecione o arquivo, e depois clique em *Add* para ele entrar na lista. Ele será referenciado nos scripts através do nome na colune *Name* (é editável). 
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/57c7c994-1908-4c4b-b472-c48f4bc0a5d8" />
+</p>
+
+Essa parte não é muito divertida, mas você deve abrir o arquivo `scene.tscn`, remover as uids dos objetos mencionados acima e trocar o caminho para *autoload*. Isso só deve ser feito para este caso em que estamos redefinindo todo o projeto. Se for seguir do jeito normal, isto é, criar outro projeto apra isso, pode pular esse passo.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/ca3b6536-a4b3-4bb0-9458-3fb23877b094" />
+</p>
+
+Após isso, toda referência a um dos objetos acima é via autoload. É importante que você chame os objetos carregados no autoload através de script, usando os nomes deles. Por exemplo, removemos o node *SmokeBig* que tinha na árvore de nodes e fizemos sua chamada por script. Isso garante que você vai usar o objeto global. Se colocasse na árvore pelo editor, criaria uma instância nova que seria carregada na hora, criando mais lag desnecessário.
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/13e5d178-659b-4864-8e7d-097dcdeef80a" />
+</p>
+
+Com isso, obtivemos os tempos mostrados abaixo. O tempo total ainda é o mesmo, algo que é inevítável. O importante é que concentramos todo o tempo de carregamento o mais cedo possível. Note que o delay entre *timer* e *finish* é o menor de todos, independentemente do método escolhido. Isso significa que a transição de cena é suave, sem lags. Prefira este método quando for ter objetos pesados no jogo.
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/f607d790-7d53-4ed5-b36e-68b3c839e341" />
+</p>
