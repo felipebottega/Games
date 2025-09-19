@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://d1yqy8bc01ve6"
+
+[deps]
+
+files=["res://resultados.Preload1.translation", "res://resultados.Preload2.translation", "res://resultados.Preload3.translation", "res://resultados.Load1.translation", "res://resultados.Load2.translation", "res://resultados.Load3.translation", "res://resultados.ChangeSceneToFile.translation", "res://resultados.ResourceLoader.translation"]
+
+source_file="res://resultados.csv"
+dest_files=["res://resultados.Preload1.translation", "res://resultados.Preload2.translation", "res://resultados.Preload3.translation", "res://resultados.Load1.translation", "res://resultados.Load2.translation", "res://resultados.Load3.translation", "res://resultados.ChangeSceneToFile.translation", "res://resultados.ResourceLoader.translation"]
+
+[params]
+
+compress=true
+delimiter=0

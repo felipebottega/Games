@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://7gee556bnejh"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 937.0
+offset_top = 8.0
+offset_right = 994.0
+offset_bottom = 31.0
+text = "START: "
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 937.0
+offset_top = 37.0
+offset_right = 994.0
+offset_bottom = 60.0
+text = "TIMER: "
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 937.0
+offset_top = 68.0
+offset_right = 998.0
+offset_bottom = 91.0
+text = "FINISH: "

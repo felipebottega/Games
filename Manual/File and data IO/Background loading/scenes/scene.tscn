@@ -1,0 +1,1758 @@
+[gd_scene load_steps=7 format=3 uid="uid://djixqleuikpr3"]
+
+[ext_resource type="Texture2D" uid="uid://v7cdk1ryt7j8" path="res://assets/HD-wallpaper-beautiful-sunset-beauty-blue-sky.jpg" id="1_jyhfs"]
+[ext_resource type="PackedScene" path="res://autoload/fireworks.tscn" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://byniqb2l05xmx" path="res://scripts/scene.gd" id="1_t7and"]
+[ext_resource type="PackedScene" path="res://autoload/sparkles.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://qg4lcd4odc20" path="res://autoload/smoke.tscn" id="3_tbgi4"]
+[ext_resource type="PackedScene" path="res://autoload/ball.tscn" id="5_gjmho"]
+
+[node name="Scene" type="Node2D"]
+script = ExtResource("1_t7and")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(584, 458.75)
+scale = Vector2(1.565, 1.11588)
+texture = ExtResource("1_jyhfs")
+
+[node name="Fireworks" parent="." instance=ExtResource("1_sugp2")]
+position = Vector2(-557, -105)
+
+[node name="Sparkles" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(114, 1)
+
+[node name="Smoke" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(332, -35)
+
+[node name="Ball" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(702, -785)
+
+[node name="Ball2" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(448, -948)
+
+[node name="Ball3" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(364, -1309)
+
+[node name="Ball4" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(493, -1525)
+
+[node name="Ball5" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(668, -1187)
+
+[node name="Ball6" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(334, -1043)
+
+[node name="Ball7" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(913, -863)
+
+[node name="Ball8" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(659, -1026)
+
+[node name="Ball9" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(575, -1387)
+
+[node name="Ball10" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(704, -1603)
+
+[node name="Ball11" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(879, -1265)
+
+[node name="Ball12" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(545, -1121)
+
+[node name="Ball13" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(559, -1657)
+
+[node name="Ball14" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(305, -1820)
+
+[node name="Ball15" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(221, -2181)
+
+[node name="Ball16" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(350, -2397)
+
+[node name="Ball17" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(525, -2059)
+
+[node name="Ball18" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(191, -1915)
+
+[node name="Ball19" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(770, -1735)
+
+[node name="Ball20" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(516, -1898)
+
+[node name="Ball21" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(432, -2259)
+
+[node name="Ball22" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(561, -2475)
+
+[node name="Ball23" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(736, -2137)
+
+[node name="Ball24" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(402, -1993)
+
+[node name="Ball25" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(654, -2181)
+
+[node name="Ball26" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(400, -2344)
+
+[node name="Ball27" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(316, -2705)
+
+[node name="Ball28" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(445, -2921)
+
+[node name="Ball29" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(620, -2583)
+
+[node name="Ball30" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(286, -2439)
+
+[node name="Ball31" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(865, -2259)
+
+[node name="Ball32" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(611, -2422)
+
+[node name="Ball33" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(527, -2783)
+
+[node name="Ball34" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(656, -2999)
+
+[node name="Ball35" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(831, -2661)
+
+[node name="Ball36" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(497, -2517)
+
+[node name="Ball37" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(448, -1023)
+
+[node name="Ball38" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(194, -1186)
+
+[node name="Ball39" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(110, -1547)
+
+[node name="Ball40" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(239, -1763)
+
+[node name="Ball41" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(414, -1425)
+
+[node name="Ball42" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(80, -1281)
+
+[node name="Ball43" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(659, -1101)
+
+[node name="Ball44" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(405, -1264)
+
+[node name="Ball45" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(321, -1625)
+
+[node name="Ball46" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(450, -1841)
+
+[node name="Ball47" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(625, -1503)
+
+[node name="Ball48" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(291, -1359)
+
+[node name="Ball49" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(591, -2752)
+
+[node name="Ball50" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(337, -2915)
+
+[node name="Ball51" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(253, -3276)
+
+[node name="Ball52" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(382, -3492)
+
+[node name="Ball53" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(557, -3154)
+
+[node name="Ball54" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(223, -3010)
+
+[node name="Ball55" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(802, -2830)
+
+[node name="Ball56" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(548, -2993)
+
+[node name="Ball57" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(464, -3354)
+
+[node name="Ball58" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(593, -3570)
+
+[node name="Ball59" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(768, -3232)
+
+[node name="Ball60" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(434, -3088)
+
+[node name="Ball61" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(734, -3402)
+
+[node name="Ball62" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(480, -3565)
+
+[node name="Ball63" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(396, -3926)
+
+[node name="Ball64" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(525, -4142)
+
+[node name="Ball65" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(700, -3804)
+
+[node name="Ball66" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(366, -3660)
+
+[node name="Ball67" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(945, -3480)
+
+[node name="Ball68" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(691, -3643)
+
+[node name="Ball69" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(607, -4004)
+
+[node name="Ball70" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(736, -4220)
+
+[node name="Ball71" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(911, -3882)
+
+[node name="Ball72" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(577, -3738)
+
+[node name="Ball73" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(353, -4307)
+
+[node name="Ball74" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(99, -4470)
+
+[node name="Ball75" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(15, -4831)
+
+[node name="Ball76" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(144, -5047)
+
+[node name="Ball77" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(319, -4709)
+
+[node name="Ball78" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-15, -4565)
+
+[node name="Ball79" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(564, -4385)
+
+[node name="Ball80" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(310, -4548)
+
+[node name="Ball81" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(226, -4909)
+
+[node name="Ball82" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(355, -5125)
+
+[node name="Ball83" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(530, -4787)
+
+[node name="Ball84" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(196, -4643)
+
+[node name="Ball85" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(734, -4846)
+
+[node name="Ball86" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(480, -5009)
+
+[node name="Ball87" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(396, -5370)
+
+[node name="Ball88" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(525, -5586)
+
+[node name="Ball89" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(700, -5248)
+
+[node name="Ball90" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(366, -5104)
+
+[node name="Ball91" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(945, -4924)
+
+[node name="Ball92" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(691, -5087)
+
+[node name="Ball93" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(607, -5448)
+
+[node name="Ball94" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(736, -5664)
+
+[node name="Ball95" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(911, -5326)
+
+[node name="Ball96" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(577, -5182)
+
+[node name="Ball97" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(760, -2474)
+
+[node name="Ball98" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(506, -2637)
+
+[node name="Ball99" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(422, -2998)
+
+[node name="Ball100" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(551, -3214)
+
+[node name="Ball101" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(726, -2876)
+
+[node name="Ball102" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(392, -2732)
+
+[node name="Ball103" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(971, -2552)
+
+[node name="Ball104" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(717, -2715)
+
+[node name="Ball105" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(633, -3076)
+
+[node name="Ball106" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(762, -3292)
+
+[node name="Ball107" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(937, -2954)
+
+[node name="Ball108" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(603, -2810)
+
+[node name="Ball109" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(617, -3346)
+
+[node name="Ball110" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(363, -3509)
+
+[node name="Ball111" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(279, -3870)
+
+[node name="Ball112" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(408, -4086)
+
+[node name="Ball113" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(583, -3748)
+
+[node name="Ball114" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(249, -3604)
+
+[node name="Ball115" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(828, -3424)
+
+[node name="Ball116" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(574, -3587)
+
+[node name="Ball117" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(490, -3948)
+
+[node name="Ball118" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(619, -4164)
+
+[node name="Ball119" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(794, -3826)
+
+[node name="Ball120" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(460, -3682)
+
+[node name="Ball121" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(712, -3870)
+
+[node name="Ball122" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(458, -4033)
+
+[node name="Ball123" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(374, -4394)
+
+[node name="Ball124" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(503, -4610)
+
+[node name="Ball125" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(678, -4272)
+
+[node name="Ball126" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(344, -4128)
+
+[node name="Ball127" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(923, -3948)
+
+[node name="Ball128" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(669, -4111)
+
+[node name="Ball129" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(585, -4472)
+
+[node name="Ball130" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(714, -4688)
+
+[node name="Ball131" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(889, -4350)
+
+[node name="Ball132" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(555, -4206)
+
+[node name="Ball133" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(506, -2712)
+
+[node name="Ball134" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(252, -2875)
+
+[node name="Ball135" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(168, -3236)
+
+[node name="Ball136" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(297, -3452)
+
+[node name="Ball137" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(472, -3114)
+
+[node name="Ball138" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(138, -2970)
+
+[node name="Ball139" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(717, -2790)
+
+[node name="Ball140" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(463, -2953)
+
+[node name="Ball141" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(379, -3314)
+
+[node name="Ball142" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(508, -3530)
+
+[node name="Ball143" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(683, -3192)
+
+[node name="Ball144" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(349, -3048)
+
+[node name="Ball145" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(649, -4441)
+
+[node name="Ball146" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(395, -4604)
+
+[node name="Ball147" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(311, -4965)
+
+[node name="Ball148" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(440, -5181)
+
+[node name="Ball149" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(615, -4843)
+
+[node name="Ball150" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(281, -4699)
+
+[node name="Ball151" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(860, -4519)
+
+[node name="Ball152" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(606, -4682)
+
+[node name="Ball153" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(522, -5043)
+
+[node name="Ball154" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(651, -5259)
+
+[node name="Ball155" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(826, -4921)
+
+[node name="Ball156" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(492, -4777)
+
+[node name="Ball157" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(792, -5091)
+
+[node name="Ball158" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(538, -5254)
+
+[node name="Ball159" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(454, -5615)
+
+[node name="Ball160" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(583, -5831)
+
+[node name="Ball161" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(758, -5493)
+
+[node name="Ball162" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(424, -5349)
+
+[node name="Ball163" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(1003, -5169)
+
+[node name="Ball164" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(749, -5332)
+
+[node name="Ball165" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(665, -5693)
+
+[node name="Ball166" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(794, -5909)
+
+[node name="Ball167" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(969, -5571)
+
+[node name="Ball168" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(635, -5427)
+
+[node name="Ball169" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(411, -5996)
+
+[node name="Ball170" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(157, -6159)
+
+[node name="Ball171" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(73, -6520)
+
+[node name="Ball172" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(202, -6736)
+
+[node name="Ball173" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(377, -6398)
+
+[node name="Ball174" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(43, -6254)
+
+[node name="Ball175" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(622, -6074)
+
+[node name="Ball176" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(368, -6237)
+
+[node name="Ball177" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(284, -6598)
+
+[node name="Ball178" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(413, -6814)
+
+[node name="Ball179" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(588, -6476)
+
+[node name="Ball180" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(254, -6332)
+
+[node name="Ball181" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(792, -6535)
+
+[node name="Ball182" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(538, -6698)
+
+[node name="Ball183" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(454, -7059)
+
+[node name="Ball184" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(583, -7275)
+
+[node name="Ball185" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(758, -6937)
+
+[node name="Ball186" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(424, -6793)
+
+[node name="Ball187" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(1003, -6613)
+
+[node name="Ball188" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(749, -6776)
+
+[node name="Ball189" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(665, -7137)
+
+[node name="Ball190" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(794, -7353)
+
+[node name="Ball191" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(969, -7015)
+
+[node name="Ball192" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(635, -6871)
+
+[node name="Ball193" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(683, -4432)
+
+[node name="Ball194" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(429, -4595)
+
+[node name="Ball195" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(345, -4956)
+
+[node name="Ball196" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(474, -5172)
+
+[node name="Ball197" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(649, -4834)
+
+[node name="Ball198" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(315, -4690)
+
+[node name="Ball199" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(894, -4510)
+
+[node name="Ball200" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(640, -4673)
+
+[node name="Ball201" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(556, -5034)
+
+[node name="Ball202" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(685, -5250)
+
+[node name="Ball203" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(860, -4912)
+
+[node name="Ball204" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(526, -4768)
+
+[node name="Ball205" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(540, -5304)
+
+[node name="Ball206" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(286, -5467)
+
+[node name="Ball207" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(202, -5828)
+
+[node name="Ball208" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(331, -6044)
+
+[node name="Ball209" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(506, -5706)
+
+[node name="Ball210" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(172, -5562)
+
+[node name="Ball211" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(751, -5382)
+
+[node name="Ball212" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(497, -5545)
+
+[node name="Ball213" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(413, -5906)
+
+[node name="Ball214" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(542, -6122)
+
+[node name="Ball215" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(717, -5784)
+
+[node name="Ball216" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(383, -5640)
+
+[node name="Ball217" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(635, -5828)
+
+[node name="Ball218" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(381, -5991)
+
+[node name="Ball219" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(297, -6352)
+
+[node name="Ball220" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(426, -6568)
+
+[node name="Ball221" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(601, -6230)
+
+[node name="Ball222" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(267, -6086)
+
+[node name="Ball223" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(846, -5906)
+
+[node name="Ball224" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(592, -6069)
+
+[node name="Ball225" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(508, -6430)
+
+[node name="Ball226" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(637, -6646)
+
+[node name="Ball227" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(812, -6308)
+
+[node name="Ball228" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(478, -6164)
+
+[node name="Ball229" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(429, -4670)
+
+[node name="Ball230" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(175, -4833)
+
+[node name="Ball231" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(91, -5194)
+
+[node name="Ball232" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(220, -5410)
+
+[node name="Ball233" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(395, -5072)
+
+[node name="Ball234" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(61, -4928)
+
+[node name="Ball235" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(640, -4748)
+
+[node name="Ball236" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(386, -4911)
+
+[node name="Ball237" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(302, -5272)
+
+[node name="Ball238" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(431, -5488)
+
+[node name="Ball239" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(606, -5150)
+
+[node name="Ball240" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(272, -5006)
+
+[node name="Ball241" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(572, -6399)
+
+[node name="Ball242" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(318, -6562)
+
+[node name="Ball243" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(234, -6923)
+
+[node name="Ball244" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(363, -7139)
+
+[node name="Ball245" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(538, -6801)
+
+[node name="Ball246" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(204, -6657)
+
+[node name="Ball247" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(783, -6477)
+
+[node name="Ball248" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(529, -6640)
+
+[node name="Ball249" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(445, -7001)
+
+[node name="Ball250" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(574, -7217)
+
+[node name="Ball251" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(749, -6879)
+
+[node name="Ball252" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(415, -6735)
+
+[node name="Ball253" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(715, -7049)
+
+[node name="Ball254" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(461, -7212)
+
+[node name="Ball255" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(377, -7573)
+
+[node name="Ball256" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(506, -7789)
+
+[node name="Ball257" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(681, -7451)
+
+[node name="Ball258" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(347, -7307)
+
+[node name="Ball259" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(926, -7127)
+
+[node name="Ball260" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(672, -7290)
+
+[node name="Ball261" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(588, -7651)
+
+[node name="Ball262" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(717, -7867)
+
+[node name="Ball263" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(892, -7529)
+
+[node name="Ball264" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(558, -7385)
+
+[node name="Ball265" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(334, -7954)
+
+[node name="Ball266" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(80, -8117)
+
+[node name="Ball267" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-4, -8478)
+
+[node name="Ball268" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(125, -8694)
+
+[node name="Ball269" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(300, -8356)
+
+[node name="Ball270" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-34, -8212)
+
+[node name="Ball271" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(545, -8032)
+
+[node name="Ball272" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(291, -8195)
+
+[node name="Ball273" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(207, -8556)
+
+[node name="Ball274" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(336, -8772)
+
+[node name="Ball275" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(511, -8434)
+
+[node name="Ball276" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(177, -8290)
+
+[node name="Ball277" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(715, -8493)
+
+[node name="Ball278" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(461, -8656)
+
+[node name="Ball279" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(377, -9017)
+
+[node name="Ball280" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(506, -9233)
+
+[node name="Ball281" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(681, -8895)
+
+[node name="Ball282" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(347, -8751)
+
+[node name="Ball283" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(926, -8571)
+
+[node name="Ball284" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(672, -8734)
+
+[node name="Ball285" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(588, -9095)
+
+[node name="Ball286" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(717, -9311)
+
+[node name="Ball287" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(892, -8973)
+
+[node name="Ball288" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(558, -8829)
+
+[node name="Ball289" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(548, -5929)
+
+[node name="Ball290" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(294, -6092)
+
+[node name="Ball291" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(210, -6453)
+
+[node name="Ball292" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(339, -6669)
+
+[node name="Ball293" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(514, -6331)
+
+[node name="Ball294" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(180, -6187)
+
+[node name="Ball295" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(759, -6007)
+
+[node name="Ball296" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(505, -6170)
+
+[node name="Ball297" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(421, -6531)
+
+[node name="Ball298" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(550, -6747)
+
+[node name="Ball299" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(725, -6409)
+
+[node name="Ball300" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(391, -6265)
+
+[node name="Ball301" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(405, -6801)
+
+[node name="Ball302" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(151, -6964)
+
+[node name="Ball303" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(67, -7325)
+
+[node name="Ball304" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(196, -7541)
+
+[node name="Ball305" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(371, -7203)
+
+[node name="Ball306" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(37, -7059)
+
+[node name="Ball307" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(616, -6879)
+
+[node name="Ball308" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(362, -7042)
+
+[node name="Ball309" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(278, -7403)
+
+[node name="Ball310" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(407, -7619)
+
+[node name="Ball311" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(582, -7281)
+
+[node name="Ball312" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(248, -7137)
+
+[node name="Ball313" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(500, -7325)
+
+[node name="Ball314" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(246, -7488)
+
+[node name="Ball315" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(162, -7849)
+
+[node name="Ball316" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(291, -8065)
+
+[node name="Ball317" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(466, -7727)
+
+[node name="Ball318" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(132, -7583)
+
+[node name="Ball319" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(711, -7403)
+
+[node name="Ball320" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(457, -7566)
+
+[node name="Ball321" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(373, -7927)
+
+[node name="Ball322" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(502, -8143)
+
+[node name="Ball323" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(677, -7805)
+
+[node name="Ball324" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(343, -7661)
+
+[node name="Ball325" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(294, -6167)
+
+[node name="Ball326" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(40, -6330)
+
+[node name="Ball327" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-44, -6691)
+
+[node name="Ball328" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(85, -6907)
+
+[node name="Ball329" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(260, -6569)
+
+[node name="Ball330" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-74, -6425)
+
+[node name="Ball331" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(505, -6245)
+
+[node name="Ball332" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(251, -6408)
+
+[node name="Ball333" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(167, -6769)
+
+[node name="Ball334" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(296, -6985)
+
+[node name="Ball335" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(471, -6647)
+
+[node name="Ball336" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(137, -6503)
+
+[node name="Ball337" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(437, -7896)
+
+[node name="Ball338" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(183, -8059)
+
+[node name="Ball339" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(99, -8420)
+
+[node name="Ball340" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(228, -8636)
+
+[node name="Ball341" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(403, -8298)
+
+[node name="Ball342" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(69, -8154)
+
+[node name="Ball343" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(648, -7974)
+
+[node name="Ball344" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(394, -8137)
+
+[node name="Ball345" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(310, -8498)
+
+[node name="Ball346" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(439, -8714)
+
+[node name="Ball347" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(614, -8376)
+
+[node name="Ball348" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(280, -8232)
+
+[node name="Ball349" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(580, -8546)
+
+[node name="Ball350" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(326, -8709)
+
+[node name="Ball351" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(242, -9070)
+
+[node name="Ball352" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(371, -9286)
+
+[node name="Ball353" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(546, -8948)
+
+[node name="Ball354" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(212, -8804)
+
+[node name="Ball355" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(791, -8624)
+
+[node name="Ball356" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(537, -8787)
+
+[node name="Ball357" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(453, -9148)
+
+[node name="Ball358" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(582, -9364)
+
+[node name="Ball359" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(757, -9026)
+
+[node name="Ball360" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(423, -8882)
+
+[node name="Ball361" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(199, -9451)
+
+[node name="Ball362" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-55, -9614)
+
+[node name="Ball363" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-139, -9975)
+
+[node name="Ball364" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-10, -10191)
+
+[node name="Ball365" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(165, -9853)
+
+[node name="Ball366" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-169, -9709)
+
+[node name="Ball367" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(410, -9529)
+
+[node name="Ball368" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(156, -9692)
+
+[node name="Ball369" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(72, -10053)
+
+[node name="Ball370" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(201, -10269)
+
+[node name="Ball371" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(376, -9931)
+
+[node name="Ball372" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(42, -9787)
+
+[node name="Ball373" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(580, -9990)
+
+[node name="Ball374" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(326, -10153)
+
+[node name="Ball375" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(242, -10514)
+
+[node name="Ball376" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(371, -10730)
+
+[node name="Ball377" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(546, -10392)
+
+[node name="Ball378" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(212, -10248)
+
+[node name="Ball379" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(791, -10068)
+
+[node name="Ball380" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(537, -10231)
+
+[node name="Ball381" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(453, -10592)
+
+[node name="Ball382" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(582, -10808)
+
+[node name="Ball383" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(757, -10470)
+
+[node name="Ball384" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(423, -10326)
+
+[node name="Ball385" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(529, -7062)
+
+[node name="Ball386" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(275, -7225)
+
+[node name="Ball387" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(191, -7586)
+
+[node name="Ball388" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(320, -7802)
+
+[node name="Ball389" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(495, -7464)
+
+[node name="Ball390" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(161, -7320)
+
+[node name="Ball391" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(740, -7140)
+
+[node name="Ball392" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(486, -7303)
+
+[node name="Ball393" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(402, -7664)
+
+[node name="Ball394" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(531, -7880)
+
+[node name="Ball395" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(706, -7542)
+
+[node name="Ball396" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(372, -7398)
+
+[node name="Ball397" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(386, -7934)
+
+[node name="Ball398" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(132, -8097)
+
+[node name="Ball399" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(48, -8458)
+
+[node name="Ball400" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(177, -8674)
+
+[node name="Ball401" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(352, -8336)
+
+[node name="Ball402" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(18, -8192)
+
+[node name="Ball403" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(597, -8012)
+
+[node name="Ball404" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(343, -8175)
+
+[node name="Ball405" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(259, -8536)
+
+[node name="Ball406" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(388, -8752)
+
+[node name="Ball407" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(563, -8414)
+
+[node name="Ball408" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(229, -8270)
+
+[node name="Ball409" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(481, -8458)
+
+[node name="Ball410" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(227, -8621)
+
+[node name="Ball411" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(143, -8982)
+
+[node name="Ball412" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(272, -9198)
+
+[node name="Ball413" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(447, -8860)
+
+[node name="Ball414" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(113, -8716)
+
+[node name="Ball415" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(692, -8536)
+
+[node name="Ball416" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(438, -8699)
+
+[node name="Ball417" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(354, -9060)
+
+[node name="Ball418" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(483, -9276)
+
+[node name="Ball419" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(658, -8938)
+
+[node name="Ball420" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(324, -8794)
+
+[node name="Ball421" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(275, -7300)
+
+[node name="Ball422" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(21, -7463)
+
+[node name="Ball423" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-63, -7824)
+
+[node name="Ball424" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(66, -8040)
+
+[node name="Ball425" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(241, -7702)
+
+[node name="Ball426" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-93, -7558)
+
+[node name="Ball427" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(486, -7378)
+
+[node name="Ball428" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(232, -7541)
+
+[node name="Ball429" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(148, -7902)
+
+[node name="Ball430" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(277, -8118)
+
+[node name="Ball431" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(452, -7780)
+
+[node name="Ball432" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(118, -7636)
+
+[node name="Ball433" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(418, -9029)
+
+[node name="Ball434" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(164, -9192)
+
+[node name="Ball435" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(80, -9553)
+
+[node name="Ball436" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(209, -9769)
+
+[node name="Ball437" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(384, -9431)
+
+[node name="Ball438" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(50, -9287)
+
+[node name="Ball439" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(629, -9107)
+
+[node name="Ball440" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(375, -9270)
+
+[node name="Ball441" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(291, -9631)
+
+[node name="Ball442" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(420, -9847)
+
+[node name="Ball443" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(595, -9509)
+
+[node name="Ball444" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(261, -9365)
+
+[node name="Ball445" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(561, -9679)
+
+[node name="Ball446" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(307, -9842)
+
+[node name="Ball447" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(223, -10203)
+
+[node name="Ball448" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(352, -10419)
+
+[node name="Ball449" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(527, -10081)
+
+[node name="Ball450" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(193, -9937)
+
+[node name="Ball451" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(772, -9757)
+
+[node name="Ball452" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(518, -9920)
+
+[node name="Ball453" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(434, -10281)
+
+[node name="Ball454" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(563, -10497)
+
+[node name="Ball455" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(738, -10159)
+
+[node name="Ball456" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(404, -10015)
+
+[node name="Ball457" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(180, -10584)
+
+[node name="Ball458" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-74, -10747)
+
+[node name="Ball459" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-158, -11108)
+
+[node name="Ball460" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-29, -11324)
+
+[node name="Ball461" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(146, -10986)
+
+[node name="Ball462" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-188, -10842)
+
+[node name="Ball463" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(391, -10662)
+
+[node name="Ball464" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(137, -10825)
+
+[node name="Ball465" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(53, -11186)
+
+[node name="Ball466" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(182, -11402)
+
+[node name="Ball467" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(357, -11064)
+
+[node name="Ball468" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(23, -10920)
+
+[node name="Ball469" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(561, -11123)
+
+[node name="Ball470" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(307, -11286)
+
+[node name="Ball471" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(223, -11647)
+
+[node name="Ball472" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(352, -11863)
+
+[node name="Ball473" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(527, -11525)
+
+[node name="Ball474" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(193, -11381)
+
+[node name="Ball475" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(772, -11201)
+
+[node name="Ball476" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(518, -11364)
+
+[node name="Ball477" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(434, -11725)
+
+[node name="Ball478" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(563, -11941)
+
+[node name="Ball479" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(738, -11603)
+
+[node name="Ball480" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(404, -11459)
+
+[node name="Ball481" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(702, -9902)
+
+[node name="Ball482" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(448, -10065)
+
+[node name="Ball483" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(364, -10426)
+
+[node name="Ball484" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(493, -10642)
+
+[node name="Ball485" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(668, -10304)
+
+[node name="Ball486" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(334, -10160)
+
+[node name="Ball487" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(913, -9980)
+
+[node name="Ball488" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(659, -10143)
+
+[node name="Ball489" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(575, -10504)
+
+[node name="Ball490" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(704, -10720)
+
+[node name="Ball491" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(879, -10382)
+
+[node name="Ball492" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(545, -10238)
+
+[node name="Ball493" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(559, -10774)
+
+[node name="Ball494" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(305, -10937)
+
+[node name="Ball495" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(221, -11298)
+
+[node name="Ball496" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(350, -11514)
+
+[node name="Ball497" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(525, -11176)
+
+[node name="Ball498" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(191, -11032)
+
+[node name="Ball499" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(770, -10852)
+
+[node name="Ball500" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(516, -11015)
+
+[node name="Ball501" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(432, -11376)
+
+[node name="Ball502" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(561, -11592)
+
+[node name="Ball503" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(736, -11254)
+
+[node name="Ball504" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(402, -11110)
+
+[node name="Ball505" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(654, -11298)
+
+[node name="Ball506" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(400, -11461)
+
+[node name="Ball507" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(316, -11822)
+
+[node name="Ball508" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(445, -12038)
+
+[node name="Ball509" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(620, -11700)
+
+[node name="Ball510" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(286, -11556)
+
+[node name="Ball511" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(865, -11376)
+
+[node name="Ball512" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(611, -11539)
+
+[node name="Ball513" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(527, -11900)
+
+[node name="Ball514" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(656, -12116)
+
+[node name="Ball515" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(831, -11778)
+
+[node name="Ball516" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(497, -11634)
+
+[node name="Ball517" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(448, -10140)
+
+[node name="Ball518" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(194, -10303)
+
+[node name="Ball519" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(110, -10664)
+
+[node name="Ball520" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(239, -10880)
+
+[node name="Ball521" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(414, -10542)
+
+[node name="Ball522" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(80, -10398)
+
+[node name="Ball523" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(659, -10218)
+
+[node name="Ball524" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(405, -10381)
+
+[node name="Ball525" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(321, -10742)
+
+[node name="Ball526" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(450, -10958)
+
+[node name="Ball527" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(625, -10620)
+
+[node name="Ball528" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(291, -10476)
+
+[node name="Ball529" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(591, -11869)
+
+[node name="Ball530" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(337, -12032)
+
+[node name="Ball531" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(253, -12393)
+
+[node name="Ball532" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(382, -12609)
+
+[node name="Ball533" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(557, -12271)
+
+[node name="Ball534" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(223, -12127)
+
+[node name="Ball535" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(802, -11947)
+
+[node name="Ball536" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(548, -12110)
+
+[node name="Ball537" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(464, -12471)
+
+[node name="Ball538" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(593, -12687)
+
+[node name="Ball539" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(768, -12349)
+
+[node name="Ball540" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(434, -12205)
+
+[node name="Ball541" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(734, -12519)
+
+[node name="Ball542" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(480, -12682)
+
+[node name="Ball543" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(396, -13043)
+
+[node name="Ball544" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(525, -13259)
+
+[node name="Ball545" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(700, -12921)
+
+[node name="Ball546" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(366, -12777)
+
+[node name="Ball547" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(945, -12597)
+
+[node name="Ball548" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(691, -12760)
+
+[node name="Ball549" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(607, -13121)
+
+[node name="Ball550" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(736, -13337)
+
+[node name="Ball551" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(911, -12999)
+
+[node name="Ball552" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(577, -12855)
+
+[node name="Ball553" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(353, -13424)
+
+[node name="Ball554" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(99, -13587)
+
+[node name="Ball555" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(15, -13948)
+
+[node name="Ball556" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(144, -14164)
+
+[node name="Ball557" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(319, -13826)
+
+[node name="Ball558" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(-15, -13682)
+
+[node name="Ball559" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(564, -13502)
+
+[node name="Ball560" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(310, -13665)
+
+[node name="Ball561" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(226, -14026)
+
+[node name="Ball562" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(355, -14242)
+
+[node name="Ball563" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(530, -13904)
+
+[node name="Ball564" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(196, -13760)
+
+[node name="Ball565" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(734, -13963)
+
+[node name="Ball566" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(480, -14126)
+
+[node name="Ball567" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(396, -14487)
+
+[node name="Ball568" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(525, -14703)
+
+[node name="Ball569" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(700, -14365)
+
+[node name="Ball570" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(366, -14221)
+
+[node name="Ball571" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(945, -14041)
+
+[node name="Ball572" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(691, -14204)
+
+[node name="Ball573" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(607, -14565)
+
+[node name="Ball574" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(736, -14781)
+
+[node name="Ball575" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(911, -14443)
+
+[node name="Ball576" parent="." instance=ExtResource("5_gjmho")]
+position = Vector2(577, -14299)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(556, -7653.5)
+scale = Vector2(8.4575, 9.74841)
+texture = ExtResource("1_jyhfs")

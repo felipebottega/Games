@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bykpcl6g47jpe"]
+
+[ext_resource type="Script" uid="uid://87m0wrbd8m4j" path="res://scripts/resource_loader.gd" id="1_085nm"]
+
+[node name="ResourceLoader" type="Node2D"]
+script = ExtResource("1_085nm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

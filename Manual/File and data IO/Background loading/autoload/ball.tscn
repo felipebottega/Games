@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://doy0mwonic8rm"]
+
+[ext_resource type="Texture2D" uid="uid://dr5ojul35jqd4" path="res://assets/ballBlue_10.png" id="1_x8fbi"]
+[ext_resource type="Texture2D" uid="uid://mgx7igmhlxe8" path="res://assets/smoke_01.png" id="2_cxlvu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x8fbi"]
+bounce = 0.45
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jiowd"]
+radius = 37.1214
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cxlvu"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+turbulence_noise_strength = 9.31
+collision_mode = 1
+collision_friction = 0.31
+collision_bounce = 0.49
+collision_use_scale = true
+sub_emitter_mode = 1
+sub_emitter_frequency = 4.0
+sub_emitter_keep_velocity = true
+
+[node name="Ball" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_x8fbi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_x8fbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jiowd")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 3.74
+texture = ExtResource("2_cxlvu")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 100
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_cxlvu")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b55mmvq3dm34h"]
+
+[ext_resource type="Script" uid="uid://cx28gil2nqabl" path="res://scripts/preload1.gd" id="1_n7klo"]
+
+[node name="Preload1" type="Node2D"]
+script = ExtResource("1_n7klo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

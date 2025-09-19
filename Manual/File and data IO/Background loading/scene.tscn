@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4p7vwtn34qur"]
-
-[ext_resource type="Texture2D" uid="uid://8t1tp3igkrg6" path="res://HD-wallpaper-beautiful-sunset-beauty-blue-sky.jpg" id="1_ulcgi"]
-
-[node name="Scene" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(319, -71)
-texture = ExtResource("1_ulcgi")
