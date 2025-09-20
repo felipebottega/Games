@@ -5,7 +5,6 @@ var show_label = true
 var label_scale = Vector2(0.7, 0.7)
 var sep = '======================================================================='
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var name = "Integral"
 	var health = 1234
