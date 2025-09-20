@@ -7,6 +7,11 @@ var sep = '=====================================================================
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var name = "Integral"
+	var health = 1234
+
+	print("{0} health is {1}".format([name, health]))
+
 	# Raíz do projeto.
 	var x = "res://"
 	
@@ -38,7 +43,7 @@ func _ready() -> void:
 	z = y.replace("res", "abc")
 	print("replace = {0}".format([z]))
 	
-	# Conveter string para float. Também tem conversões análogas para outros tipos de variável.
+	# Converte string para float. Também tem conversões análogas para outros tipos de variável.
 	z = "123.45".to_float()
 	print("to_float = {0}".format([z]))
 	
