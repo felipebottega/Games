@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cso3husbf2sad"
+path="res://.godot/imported/Sky Run.mp3-39e88648af22c30aeff04b0c9fa5b90f.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Sky Run.mp3"
+dest_files=["res://.godot/imported/Sky Run.mp3-39e88648af22c30aeff04b0c9fa5b90f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

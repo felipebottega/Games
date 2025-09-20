@@ -1,0 +1,143 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcuou3c0kh1yy"]
+
+[ext_resource type="Texture2D" uid="uid://pea5ya0lm5hj" path="res://assets/graphics/environment/Clouds-1.png" id="1_13rgt"]
+[ext_resource type="Script" uid="uid://cq0tfx6ivypkk" path="res://scripts/ui/menu.gd" id="1_cx0sj"]
+[ext_resource type="Texture2D" uid="uid://cm72yo0hx3ybb" path="res://assets/graphics/environment/Clouds-2.png" id="2_ktkvq"]
+[ext_resource type="Texture2D" uid="uid://uw5kseuqkaw8" path="res://assets/graphics/environment/Clouds-3.png" id="3_nwsq6"]
+[ext_resource type="FontFile" uid="uid://7k4mkwuyiopo" path="res://assets/fonts/Gabriola.ttf" id="4_w6y0u"]
+[ext_resource type="Texture2D" uid="uid://c7ufnjsenknp4" path="res://assets/graphics/ui/controls.png" id="6_ntye7"]
+[ext_resource type="Texture2D" uid="uid://6flmvwsxyihd" path="res://assets/graphics/ui/back.png" id="7_cghgw"]
+[ext_resource type="PackedScene" uid="uid://bnsy4e5uly5s0" path="res://scenes/characters/player.tscn" id="8_1pxh0"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_cx0sj")
+metadata/_edit_vertical_guides_ = [2001.0]
+
+[node name="Clouds-1" type="Parallax2D" parent="."]
+repeat_size = Vector2(4000, 0)
+autoscroll = Vector2(-10, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds-1"]
+position = Vector2(2000, 800)
+scale = Vector2(6.945, 5)
+texture = ExtResource("1_13rgt")
+
+[node name="Clouds-2" type="Parallax2D" parent="."]
+repeat_size = Vector2(4000, 0)
+autoscroll = Vector2(-30, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds-2"]
+position = Vector2(2000, 800)
+scale = Vector2(6.945, 5)
+texture = ExtResource("2_ktkvq")
+
+[node name="Clouds-3" type="Parallax2D" parent="."]
+repeat_size = Vector2(4000, 0)
+autoscroll = Vector2(-70, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds-3"]
+position = Vector2(2000, 800)
+scale = Vector2(6.945, 5)
+texture = ExtResource("3_nwsq6")
+
+[node name="StartGame" type="Button" parent="."]
+offset_left = 1574.0
+offset_top = 603.0
+offset_right = 2433.0
+offset_bottom = 812.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_focus_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_pressed_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_fonts/font = ExtResource("4_w6y0u")
+theme_override_font_sizes/font_size = 200
+text = "START GAME"
+
+[node name="Controls" type="Button" parent="."]
+offset_left = 1574.0
+offset_top = 813.0
+offset_right = 2433.0
+offset_bottom = 1022.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_focus_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_pressed_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_fonts/font = ExtResource("4_w6y0u")
+theme_override_font_sizes/font_size = 200
+text = "CONTROLS"
+
+[node name="ControlsImage" type="Sprite2D" parent="."]
+position = Vector2(2012, 782)
+scale = Vector2(1.42673, 1.42673)
+texture = ExtResource("6_ntye7")
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 1574.0
+offset_top = 1026.0
+offset_right = 2433.0
+offset_bottom = 1235.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_focus_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_pressed_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_fonts/font = ExtResource("4_w6y0u")
+theme_override_font_sizes/font_size = 200
+text = "CREDITS"
+
+[node name="CreditsText" type="Label" parent="."]
+offset_left = 1085.0
+offset_top = 10.0
+offset_right = 2993.0
+offset_bottom = 1603.0
+theme_override_colors/font_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_shadow_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_colors/font_outline_color = Color(0.788235, 0.611765, 0.72549, 1)
+theme_override_fonts/font = ExtResource("4_w6y0u")
+theme_override_font_sizes/font_size = 80
+text = "MUSIC:
+\"Sky Run\" by Tad
+https://opengameart.org/content/sky-run
+
+SOUND EFFECTS:
+Various CC0 sound effects by rubberduck
+https://opengameart.org/content/100-cc0-sfx-2
+
+GIRL SPRITES:
+\"Vampire Girl Sprite\" by CraftPix.net
+https://craftpix.net/freebies/free-vampire-pixel-art-sprite-sheets/
+
+CLOUD BACKGROUND:
+\"Pixel Sky with Parallax Clouds\" by CraftPix.net
+https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/
+
+SCENARIO TILES:
+\"Abstract Platformer\" by Kenney.nl
+https://kenney.nl/assets/abstract-platformer"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 3597.0
+offset_top = 1442.0
+offset_right = 3839.0
+offset_bottom = 1574.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.857953, 0.727025, 0.809701, 1)
+theme_override_colors/font_focus_color = Color(0.871907, 0.752274, 0.827488, 1)
+theme_override_colors/font_pressed_color = Color(0.882909, 0.772588, 0.841707, 1)
+theme_override_font_sizes/font_size = 90
+text = "BACK"
+icon = ExtResource("7_cghgw")
+
+[node name="Player" parent="." instance=ExtResource("8_1pxh0")]
+position = Vector2(2582, 564)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 3171.0
+offset_top = 524.0
+offset_right = 3211.0
+offset_bottom = 547.0
+theme_override_font_sizes/font_size = 100
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
