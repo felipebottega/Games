@@ -1,0 +1,1 @@
+# File paths in Godot projects
