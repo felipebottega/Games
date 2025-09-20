@@ -62,4 +62,18 @@ Além da pasta do jogador (uma para cada jogo), também há um local onde dados 
   <img width="450" src="https://github.com/user-attachments/assets/88b41546-57d9-4584-907e-cddcf5df5cdf" />
 </p>
 
+## Varredura pelos arquivos
 
+Associado a este tutorial, temos um jogo de exemplo, mostrando todas as funcionalidades discutidas aqui. Além disso, foi incluída uma função de varredura. A partir de uma pasta raíz, ela faz uma busca recursiva por todas as pastas e arquivos, imprimindo eles na tela de maneira estrutura (a pasta `.godot` e arquivos com extensão `.import` e `.uid` são omitidos). 
+
+<p align="center">
+  <img width="250" height="117" alt="image" src="https://github.com/user-attachments/assets/f6f27317-cddc-4ed0-b2b9-6425e3533b0d" />
+  <img width="400" src="https://github.com/user-attachments/assets/a2d2e053-ee58-49f3-b7c1-2ff7d4f9d437" />
+  <img width="350" src="https://github.com/user-attachments/assets/91cdc358-3995-45c1-b612-31802b7167ef" />
+</p>
+
+O output é mostrado abaixo. À esquerda temos a varredura sobre `res://` e à direita a varredura sobre `user://`. Neste caso, o jogo foi executado na wev, por [este link](https://felipebottega.github.io/Games/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects/html/). Neste caso, o `user://` em Godot HTML5 não tem acesso ao sistema de arquivos real do usuário. Ele usa *IndexedDB* (um banco de dados local do navegador, ou seja, os dados ficam armazenados no computador do usuário) para simular esse armazenamento local. Ou seja, tudo que você salva em `user://` vai para o *IndexedDB* do navegador. Isso permite que o jogo leia e escreva arquivos localmente no navegador como se fosse um disco, mas na verdade é tudo armazenado nesse banco do navegador. É persistente, então mesmo fechando a aba ou o navegador, os dados continuam lá, até serem apagados manualmente ou pelo navegador.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/df3559c0-42ee-4856-8542-fefbc0d93513" />
+</p>
