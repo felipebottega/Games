@@ -44,4 +44,16 @@ Output: Integral health is 1234
 
 ## res:// e user://
 
+De maneira simples e direta, `res://` é a raíz dos arquivos do projeto e `user://` é a raíz dos arquivos dos jogador em relação ao projeto. Esperamos que em `user://` sejam armazenadas coisas como saves, configuração do jogo, entre outros. Em desktop, o `user://` se encontra em uma pasta específica, a depender do sistema operacional.
 
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/3d629e09-4432-446f-92fe-09dd9085ffab" />
+</p>
+
+> PS: No Windows, você pode colocar *%APPDATA%* diretamente na barra de busca do Windows Explorer e ele te levará para o local esperado.
+
+Além da pasta do jogador em relação a um jogo, também há um local onde dados do editor são armazenados. Ali você terá coisas como a configurações do editor, cache de shaders, entre outros. Abaixo, mostramos onde este local se encontra.
+
+<p align="center">
+  <img width="480" src="https://github.com/user-attachments/assets/e18213b4-a673-4d22-8de3-d3bb048734ee" />
+</p>
