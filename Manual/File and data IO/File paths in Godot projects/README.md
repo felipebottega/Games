@@ -75,5 +75,5 @@ Associado a este tutorial, temos um jogo de exemplo, mostrando todas as funciona
 O output é mostrado abaixo. À esquerda temos a varredura sobre `res://` e à direita a varredura sobre `user://`. Neste caso, o jogo foi executado na wev, por [este link](https://felipebottega.github.io/Games/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects/html/). Neste caso, o `user://` em Godot HTML5 não tem acesso ao sistema de arquivos real do usuário. Ele usa *IndexedDB* (um banco de dados local do navegador, ou seja, os dados ficam armazenados no computador do usuário) para simular esse armazenamento local. Ou seja, tudo que você salva em `user://` vai para o *IndexedDB* do navegador. Isso permite que o jogo leia e escreva arquivos localmente no navegador como se fosse um disco, mas na verdade é tudo armazenado nesse banco do navegador. É persistente, então mesmo fechando a aba ou o navegador, os dados continuam lá, até serem apagados manualmente ou pelo navegador.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/df3559c0-42ee-4856-8542-fefbc0d93513" />
+  <img width="800" src="https://github.com/user-attachments/assets/df3559c0-42ee-4856-8542-fefbc0d93513" />
 </p>
