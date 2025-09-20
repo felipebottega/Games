@@ -52,8 +52,14 @@ De maneira simples e direta, `res://` é a raíz dos arquivos do projeto e `user
 
 > PS: No Windows, você pode colocar *%APPDATA%* diretamente na barra de busca do Windows Explorer e ele te levará para o local esperado.
 
-Além da pasta do jogador em relação a um jogo, também há um local onde dados do editor são armazenados. Ali você terá coisas como a configurações do editor, cache de shaders, entre outros. Abaixo, mostramos onde este local se encontra.
+Além da pasta do jogador (uma para cada jogo), também há um local onde dados do editor são armazenados. Ali você terá 3 tipos de dados: 
+
+1. **Editor data:** Contêm modelos de exportação e dados específicos do projeto.
+2. **Editor settings:** Contêm o arquivo principal de configuração do editor, bem como diversas outras personalizações específicas do usuário (layouts do editor, perfis de recursos, modelos de script, etc.).
+3. **Cache:** Contém dados gerados pelo editor ou armazenados temporariamente. Ele pode ser removido com segurança quando o Godot for fechado.
 
 <p align="center">
-  <img width="480" src="https://github.com/user-attachments/assets/e18213b4-a673-4d22-8de3-d3bb048734ee" />
+  <img width="450" src="https://github.com/user-attachments/assets/88b41546-57d9-4584-907e-cddcf5df5cdf" />
 </p>
+
+
