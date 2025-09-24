@@ -17,3 +17,9 @@ Como certos sprites serão colocados em muitas partes do cenário, é mais inter
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/b21f85d1-8526-4268-9781-93a71a4a024b" />
 </p>
+
+Depois disso é só questão de editar os sprites e montar o cenário do jeito que achar melhor. Por enquanto está assim.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/c38deabf-846a-4647-ad2a-ee9af523477e" />
+</p>
