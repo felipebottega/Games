@@ -29,7 +29,7 @@ Adicione uma track e selecione o *Property Track* sobre a propriedade *animation
   <img width="200" src="https://github.com/user-attachments/assets/600afd7c-abfe-4473-b629-403a6d848b24" />
 </p>
 
-Note que definir a animação não dá o play nela. Para dar o play, precisamos manipular outra propriedade. Adiciona mais uma *Property Track*, desta vez será a propriedade *frame* do *AnimatedSprite2D*. Insira um keyframe no instante inicial com o valor $0$. Isso significa que o frame $0$ irá aparecer na tela no início desta chamada. Agora é só repetir os passos para os frames seguintes, colocando eles no instante que deseja.
+Note que definir a animação não dá o play nela. Para dar o play, precisamos manipular outra propriedade. Adicione mais uma *Property Track*, desta vez será a propriedade *frame* do *AnimatedSprite2D*. Insira um keyframe no instante inicial com o valor $0$. Isso significa que o frame $0$ irá aparecer na tela no início desta chamada. Agora é só repetir os passos para os frames seguintes, colocando eles no instante que deseja.
 
 Existem duas outras maneiras de se fazer isso, possivelmente com menos trabalho.
 
