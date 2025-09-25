@@ -44,3 +44,13 @@ Agora vamos seguir a seção [AnimationPlayer com diversas spritesheets](https:/
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/cefd5c7b-588d-471a-a607-9ab2593ca144" />
 </p>
+
+Vamos para a parte funcional do personagem. Adicione um AnimationTree como filho do `CharacterBody2D`. A ideia será criar um *AnimationNodeBlendTree contendo um node *State Machine*. No *State Machine*, clique em *Open Editor* para começar a edição. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. 
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/4cbf2bfe-2835-49cd-9444-847ceed4a73b" />
+  <img width="900" src="https://github.com/user-attachments/assets/d1d24e36-369e-45ec-a390-a3b6e57f8e5a" />
+  <img width="900" src="https://github.com/user-attachments/assets/dd2df39f-3fd1-43bb-8804-adeda42d5e29" />
+</p>
+
+
