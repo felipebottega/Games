@@ -62,7 +62,7 @@ No *State Machine*, clique em *Open Editor* para começar a edição. Dentro do 
 Depois disso, atualizamos o script de acordo. O scritp mostrado abaixo é uma primeira versão funcional. Ele ainda passará por mais mudanças.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/5d9b2a04-50a3-4c17-af85-244a096c180d" />
+  <img width="700" src="https://github.com/user-attachments/assets/a6e96d2f-8a2f-491b-ab52-99d32d094758" />
 </p>
 
 Está quase tudo pronto. Ainda precisamos voltar ao *State Machine* para definir como sair do Start. Selecione a transição entre o *Start* e o *BlendSpace2D* e em *Inspector → advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai. Não conecte nada ao *End*, senão ele vai encerrar a *State Machine*. A ideia é que fique no *BlendSpace2D* durante o jogo inteiro.
