@@ -51,7 +51,7 @@ Vamos para a parte funcional do personagem. Adicione um AnimationTree como filho
   <img width="600" src="https://github.com/user-attachments/assets/fe65f362-3605-43e2-9acf-14009a548016" />
 </p>
 
-No *State Machine*, clique em *Open Editor* para começar a edição. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. Crie 4 pontos, um para cada animação (*idle, jump walk_left, walk_right*), de modo a formar um losango. Coloque o modo blend como discreto e se certifique de que a conexão entre o *Start* e o *BlendSpace2D* do *State Machine* é do tipo *Immediate*.
+No *State Machine*, clique em *Open Editor* para começar a edição. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. Crie 6 pontos, um para cada animação (*idle_left, idle_right, jump_left, jump_right, walk_left, walk_right*). Coloque o modo blend como discreto e se certifique de que a conexão entre o *Start* e o *BlendSpace2D* do *State Machine* é do tipo *Immediate*.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/4cbf2bfe-2835-49cd-9444-847ceed4a73b" />
@@ -65,5 +65,10 @@ Depois disso, atualizamos o script de acordo. O scritp mostrado abaixo é uma pr
   <img width="700" src="https://github.com/user-attachments/assets/a6e96d2f-8a2f-491b-ab52-99d32d094758" />
 </p>
 
-Está quase tudo pronto. Ainda precisamos voltar ao *State Machine* para definir como sair do Start. Selecione a transição entre o *Start* e o *BlendSpace2D* e em *Inspector → advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai. Não conecte nada ao *End*, senão ele vai encerrar a *State Machine*. A ideia é que fique no *BlendSpace2D* durante o jogo inteiro.
+Agora precisamos voltar ao *State Machine* para definir como sair do Start. Selecione a transição entre o *Start* e o *BlendSpace2D* e em *Inspector → advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai. Não conecte nada ao *End*, senão ele vai encerrar a *State Machine*. A ideia é que fique no *BlendSpace2D* durante o jogo inteiro.
 
+Assim como fizemos [neste tutorial](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Animation/Using%20AnimationTree/README.md), vamos introduzir uma variável auxiliar no script para memorizar a última direção não-nula. A partir disso, direcionamos as animações baseado na última direção não-nula do jogador. É importante ter em mente que isso não vale para a movimentação, apenas para a animação. Depois de vários ajustes, chegamos no código final.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/19d4a212-469f-471f-ae26-5b3848443cad" />
+</p>
