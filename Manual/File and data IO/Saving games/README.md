@@ -45,7 +45,13 @@ Agora vamos seguir a seção [AnimationPlayer com diversas spritesheets](https:/
   <img width="900" src="https://github.com/user-attachments/assets/cefd5c7b-588d-471a-a607-9ab2593ca144" />
 </p>
 
-Vamos para a parte funcional do personagem. Adicione um AnimationTree como filho do `CharacterBody2D`. A ideia será criar um *AnimationNodeBlendTree contendo um node *State Machine*. No *State Machine*, clique em *Open Editor* para começar a edição. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. 
+Vamos para a parte funcional do personagem. Adicione um AnimationTree como filho do `CharacterBody2D`. A ideia será criar um *AnimationNodeBlendTree contendo um node *State Machine*. Comece associando o `AnimationTree` ao `AnimationPlayer` através da propriedade *Anim Player*, como mostrado abaixo.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/fe65f362-3605-43e2-9acf-14009a548016" />
+</p>
+
+No *State Machine*, clique em *Open Editor* para começar a edição. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. Crie 4 pontos, um para cada animação (*idle, jump walk_left, walk_right*), de modo a formar um losango. Coloque o modo blend como discreto e se certifique de que a conexão entre o *Start* e o *BlendSpace2D* do *State Machine* é do tipo *Immediate*.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/4cbf2bfe-2835-49cd-9444-847ceed4a73b" />
@@ -53,4 +59,11 @@ Vamos para a parte funcional do personagem. Adicione um AnimationTree como filho
   <img width="900" src="https://github.com/user-attachments/assets/dd2df39f-3fd1-43bb-8804-adeda42d5e29" />
 </p>
 
+Depois disso, atualizamos o script de acordo. O scritp mostrado abaixo é uma primeira versão funcional. Ele ainda passará por mais mudanças.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/5d9b2a04-50a3-4c17-af85-244a096c180d" />
+</p>
+
+Está quase tudo pronto. Ainda precisamos voltar ao *State Machine* para definir como sair do Start. Selecione a transição entre o *Start* e o *BlendSpace2D* e em *Inspector → advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai. Não conecte nada ao *End*, senão ele vai encerrar a *State Machine*. A ideia é que fique no *BlendSpace2D* durante o jogo inteiro.
 
