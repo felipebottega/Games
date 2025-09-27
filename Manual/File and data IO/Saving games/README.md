@@ -70,5 +70,14 @@ Agora precisamos voltar ao *State Machine* para definir como sair do Start. Sele
 Assim como fizemos [neste tutorial](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Animation/Using%20AnimationTree/README.md), vamos introduzir uma variável auxiliar no script para memorizar a última direção não-nula. A partir disso, direcionamos as animações baseado na última direção não-nula do jogador. É importante ter em mente que isso não vale para a movimentação, apenas para a animação. Depois de vários ajustes, chegamos no código final.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/19d4a212-469f-471f-ae26-5b3848443cad" />
+  <img width="850" src="https://github.com/user-attachments/assets/19d4a212-469f-471f-ae26-5b3848443cad" />
+</p>
+
+## Paralaxe
+
+Queremos adicionar um efeito paralaxe no background de floresta mostrado anteriormente. A ideia é que ele está bem distante, então enquanto o player vai subindo, o fundo se move pouco para cima. Para obter este efeito, colocamos o background como filho do node `Paralaxe2D` e alteramos a propriedade *Scroll Scale.y* para $0.07$. Note que deixamos o *Scroll Scale.x* igual a $1$. Isso significa que lateralmente o sprite não se move junto com a câmera. Fizemos isso pois essa cena inicial ocupa uma única tela lateralmente e não será usada em outros lugares.
+
+<p align="center">
+  <img width="150" src="https://github.com/user-attachments/assets/1e21b7e1-976d-4c0b-a9ee-e2ca2eeb1572" />
+  <img width="200" src="https://github.com/user-attachments/assets/15c4db16-1028-4334-bc5d-3f97b8417c5e" />
 </p>
