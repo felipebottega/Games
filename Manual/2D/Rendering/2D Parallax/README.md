@@ -65,7 +65,7 @@ Na hora de posicionar os nodes, basta posicionar o `Sprite2D`, e deixe `Parallax
 
 Vamos começar com o mais simples, que é fazer o background se mover sozinho em loop sem câmera na cena. Isso por si só já dá o efeito de movimento e possui diversas aplicações. 
 
-Omitimos a segundo camada para focar apenas na primeira por enquanto. Como a figura desta camada já está com o formato adequado, basta configurar os parâmetros *Repeat Size* para $1302$ pixels e *Autoscroll.x* para qualquer velocidade que quiser, em pixels/segundo. A velocidade é o mais simples, é a velocidade com que a figura vai se mover em cada eixo. O *Repeat Size* seria algo como a "tela" da paralaxe. Ou seja, depois de $1302$ pixels vai aparecer a mesma figura novamente, dando a ilusão de uma repetição infinita. Por isso que é tão importante a atenção ao tamanho das figuras. 
+Omitimos a segunda camada para focar apenas na primeira por enquanto. Como a figura desta camada já está com o formato adequado, basta configurar os parâmetros *Repeat Size* para $1302$ pixels e *Autoscroll.x* para qualquer velocidade que quiser, em pixels/segundo. A velocidade é o mais simples, é a velocidade com que a figura vai se mover em cada eixo. O *Repeat Size* seria algo como a "tela" da paralaxe. Ou seja, depois de $1302$ pixels vai aparecer a mesma figura novamente, dando a ilusão de uma repetição infinita. Por isso que é tão importante a atenção ao tamanho das figuras. 
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/d17c7357-7dfc-4c41-bad2-2e34b7221260" />
