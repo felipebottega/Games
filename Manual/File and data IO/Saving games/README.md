@@ -81,3 +81,17 @@ Queremos adicionar um efeito paralaxe no background de floresta mostrado anterio
   <img width="150" src="https://github.com/user-attachments/assets/1e21b7e1-976d-4c0b-a9ee-e2ca2eeb1572" />
   <img width="200" src="https://github.com/user-attachments/assets/15c4db16-1028-4334-bc5d-3f97b8417c5e" />
 </p>
+
+## Segundo cenário
+
+Para a continuação do jogo, utilizaremos os assets [fort-of-illusion](https://opengameart.org/content/fort-of-illusion). Não tem nada de muito especial nessa cena, são duas camadas de tilemaps.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/40b442bc-5cd0-4e5f-853c-0a21267dcaf8" />
+</p>
+
+Vale a pena chamar a atenção para uma técnica utilizada. Nós colocamos as figueiras em um nível mais à frente que tudo no jogo. Isso aumenta a sensação de profundidade no jogo. Para obter este efeito, alteramos a propriedade *Z Index* no *Inspector*. Por default, todas os nodes ficam no nível 0, então um node com um número maior fica mais à frente da câmera. Vimos um pouco deste assunto [neste tutorial]().
+
+<p align="center">
+  <img width="200" alt="image" src="https://github.com/user-attachments/assets/57f2e406-f1dc-4302-92a6-8ebea76330d3" />
+</p>
