@@ -103,3 +103,11 @@ A parte da floresta teve o seu background próprio co efeito de paralaxe, mas as
 A resolução do jogo é $500 \times 600$. Vamos nos contentar em fazer um background de $1200$ pixels de largura (supondo que o dobro será rolado pelo paralaxe). A altura precisa ser mais extensa. O background da floresta tem $800$ pixels de altura e conseguiu dar conta de $4000$ pixels através da paralaxe. Estimo que o jogo terá uns $18000$ pixels de altura. Isso significa que esse background geral precisará de $18000/5 = 3600$ pixels de altura. 
 
 > PS: Por ser uma imagem grande, toda vez que eu a editava no GIMP, a engine não atualizava e acusava que não tinha conseguido carregar a imagem. Faça o *Reimport* para esses casos.
+
+No fim das contas, a cena do background é um `Node2D` contendo paralaxes. Ambas as paralaxes tem os mesmos *Scroll Scales*, de acordo com as contas feitas acima. A diferença é que o *ParallaxClouds* tem um efeito adicional, o *Autoscroll*. Vimos sobre este parâmetro no [tutorial de paralaxe](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax). Além dos sprites acompanharem a tela (com um certo efeito de atraso do *Scroll Scale*), eles também se movimentam a uma taxa constante na direção $x$. Isso simula perfeitamente nuvens distantes que estão se movendo. As nuvens e as árvores vieram do [seamless-hd-landscape-in-parts](https://opengameart.org/content/seamless-hd-landscape-in-parts).   
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/6fa2bbb7-c7e5-49c8-9294-af47a0011020" />
+</p>
+
+Poderia ter paralaxe nas árvores também, mas como elas estão muito secundárias no background, não valeu o esforço.
