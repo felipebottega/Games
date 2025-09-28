@@ -62,7 +62,7 @@ No *State Machine*, clique em *Open Editor* para começar a edição. Dentro do 
 Depois disso, atualizamos o script de acordo. O scritp mostrado abaixo é uma primeira versão funcional. Ele ainda passará por mais mudanças.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/a6e96d2f-8a2f-491b-ab52-99d32d094758" />
+  <img width="650" src="https://github.com/user-attachments/assets/a6e96d2f-8a2f-491b-ab52-99d32d094758" />
 </p>
 
 Agora precisamos voltar ao *State Machine* para definir como sair do Start. Selecione a transição entre o *Start* e o *BlendSpace2D* e em *Inspector → advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai. Não conecte nada ao *End*, senão ele vai encerrar a *State Machine*. A ideia é que fique no *BlendSpace2D* durante o jogo inteiro.
@@ -70,7 +70,7 @@ Agora precisamos voltar ao *State Machine* para definir como sair do Start. Sele
 Assim como fizemos [neste tutorial](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Animation/Using%20AnimationTree/README.md), vamos introduzir uma variável auxiliar no script para memorizar a última direção não-nula. A partir disso, direcionamos as animações baseado na última direção não-nula do jogador. É importante ter em mente que isso não vale para a movimentação, apenas para a animação. Depois de vários ajustes, chegamos no código final.
 
 <p align="center">
-  <img width="850" src="https://github.com/user-attachments/assets/19d4a212-469f-471f-ae26-5b3848443cad" />
+  <img width="800" src="https://github.com/user-attachments/assets/19d4a212-469f-471f-ae26-5b3848443cad" />
 </p>
 
 ## Paralaxe
@@ -107,7 +107,7 @@ A resolução do jogo é $500 \times 600$. Vamos nos contentar em fazer um backg
 No fim das contas, a cena do background é um `Node2D` contendo paralaxes. Ambas as paralaxes tem os mesmos *Scroll Scales*, de acordo com as contas feitas acima. A diferença é que o *ParallaxClouds* tem um efeito adicional, o *Autoscroll*. Vimos sobre este parâmetro no [tutorial de paralaxe](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax). Além dos sprites acompanharem a tela (com um certo efeito de atraso do *Scroll Scale*), eles também se movimentam a uma taxa constante na direção $x$. Isso simula perfeitamente nuvens distantes que estão se movendo. As nuvens e as árvores vieram do [seamless-hd-landscape-in-parts](https://opengameart.org/content/seamless-hd-landscape-in-parts).   
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/6fa2bbb7-c7e5-49c8-9294-af47a0011020" />
+  <img width="600" src="https://github.com/user-attachments/assets/6fa2bbb7-c7e5-49c8-9294-af47a0011020" />
 </p>
 
 Poderia ter paralaxe nas árvores também, mas como elas estão muito secundárias no background, não valeu o esforço.
