@@ -165,7 +165,7 @@ Agora na cena do jogo (*level*), podemos ver que o node filho *Sky* possui o sin
 
 ## Queda no abismo
 
-### Problemas ao inseror novas animações no AnimatedSprite2D
+### Problemas ao inserir novas animações no AnimatedSprite2D
 
 Ao tentar inserir mais uma animação no `AnimatedSprite2D`, eu só consegui inserir o objeto mas não consegui manipular a animação nova. Isso pode acontecer quando se está trabalhando com o `AnimationPlayer` junto. Nesses casos, tente fechar e abrir a engine, e tente mudar as animações do `AnimationPlayer`, terminando na RESET. Isso também foi mencionado na seção de AnimationNodeStateMachine [deste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree).
 
@@ -179,7 +179,20 @@ Depois de inserir a animação nova no `AnimatedSprite2D`, é hora de ir para o 
 
 ### Transição para o cenário inicial
 
-Depois que o personagem caiu no abismo e explodiu, queremos um efeito de fade-in fade-out em preto. Ou seja, escurecer a tela e depois voltar, com o personagem no cenário do início do jogo. 
+Depois que o personagem caiu no abismo e explodiu, queremos um efeito de *fade-out fade-in* em preto. Ou seja, escurecer a tela e depois voltar, com o personagem no cenário do início do jogo. 
+
+Para ter a animação dentro da nossa *State Machine*, adicionamos um node de animação e o conectamos com o *BlendSpace2D* que já havia antes. Para ir do *BlendSpace2D* para a animação, a condição `get_parent().position.x > 650 and get_parent().position.y > -750` deve ser satisfeita. Para ir da animação de volta ao ao *BlendSpace2D*, usamos a transição do tipo *At End*, pois essa espera a animação acabar para fazer a transição.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/9c7b6df0-e163-46ff-9a0d-a34b4334163d" />
+  <img width="300" src="https://github.com/user-attachments/assets/67621d24-1ed3-4a65-af68-c48f8a799e9c" />
+</p>
+
+No script do player, adicionamos um bloco para lidar com essa animação. Note que ele trava aposição $y$ em $-750$ pixels de altura e zera a velocidade. Isso é necessário para cancelar os efeitos da física e gerar a animação na mesma posição. Depois disso ele emite um sinal. Este sinal é captado pelo node do jogo, que vai então executar o script de *fade-out fade-in*. Fizemos este efeito com código, mas seria possível também ter um `AnimationPlayer` animando o *modulate* da cena do jogo.  
+
+<p align="center">
+  <img width="350" height="188" alt="image" src="https://github.com/user-attachments/assets/2caae1f2-bcca-4e4f-8248-42263c5ed089" />
+</p>
 
 ## NPCs
 
