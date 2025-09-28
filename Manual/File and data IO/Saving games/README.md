@@ -194,7 +194,7 @@ No script do player, adicionamos um bloco para lidar com essa animação. Note q
   <img width="350" height="188" alt="image" src="https://github.com/user-attachments/assets/2caae1f2-bcca-4e4f-8248-42263c5ed089" />
 </p>
 
-## NPCs
+## NPCs e checkpoints
 
 ## Final do jogo
 
