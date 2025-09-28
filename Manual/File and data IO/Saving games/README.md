@@ -111,3 +111,19 @@ No fim das contas, a cena do background é um `Node2D` contendo paralaxes. Ambas
 </p>
 
 Poderia ter paralaxe nas árvores também, mas como elas estão muito secundárias no background, não valeu o esforço.
+
+## Terceiro cenário
+
+A tore vem logo após a parte da ponte e é constituída dos mesmos tiles utilizados para o cenário da ponte. 
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/c50adf74-2aaf-4905-a12d-2364902bfafe" />
+</p>
+
+À primeira vista, não está muito claro porque utilizamos 3 TileSets. Mostramos abaixo os 3 separados. O primeiro TileSet (da esquerda) corresponde ao que deve ficar mais ao fundo, é nele também que estão as plataformas com colisão. O segundo TileSet é constituído dos ornamentos da cena, e devem ficar mais à frente do primeiro TileSet. O terceiro é constituído das paredes verticais da torre. Estas paredes não possuem colisão, são apenas para dar um efeito de profundidade ao personagem passar por trás delas no jogo (tivemos que *Z Index* $=1$ para isso). Toda a colisão vem de uma outra parede por trás que veio do primeiro TileSet.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/09f2d86b-816d-48d6-9a7e-9ec0a6331136" />
+  <img width="300" src="https://github.com/user-attachments/assets/de3f6327-56e7-46e4-8f33-34896c018ab3" />
+  <img width="300" src="https://github.com/user-attachments/assets/5676919c-7126-4749-b18a-e9f19c1cad6c" />
+</p>
