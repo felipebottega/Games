@@ -134,3 +134,32 @@ Note que o chão possui colisão, mas logo acima na parede temos o mesmo tile do
   <img width="600" src="https://github.com/user-attachments/assets/3465bebc-5cc1-4baa-9b6a-4e5cbaf93644" />
 </p>
 
+## Último cenário
+
+Uma coisa que eu não comentei antes e é relevante é que você copiar nodes de outras cenas dando o segundo clique do mouse e selecionado para copiar. Depois vá para a cena onde você quer colocar o node e seleciona para colar. Também pode simplesmente fazer o famoso *Ctrl+C* *Ctrl+V*. Inclusive eu fiz isso no cenário da torre, uma vez que estava reutilizando o node de tiles da cena da ponte.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/d8bd6d57-0012-45cc-aa97-2f3b2edc3992" />
+  <img width="300" src="https://github.com/user-attachments/assets/de21a3dd-62ca-48d7-af0b-3fbba5f06f3f" />
+</p>
+
+> PS: Essa cópia vai trazer junto toda a sua montagem de tiles. Você pode deletá-los sem medo, o node original não está associado a este novo.
+
+Depois de passar por algumas plataformas, o jogador vai se deparar com uma área que possui partículas e um node `Area2D` que detecta quando o jogador entra na área. A ideia é que esta esta região envia um sinal para a cena do jogo, e lá o jogo vai acrescentar uma velocidade vertical para o jogador. Ao ser impulsionado para cima, ele vai se deparar com as plataformas finais do jogo.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/e5bb88c9-113c-4e0b-952e-f2c7b0d69658" />
+</p>
+
+Para criar este sinal, vamos utilizar o aprendizado do [tutorial 3 de sinais](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203). Começamos criando um script no node raíz da cena. Como variável global do script, definimos `signal area`. No node `Area2D`, vamos para o *Inspector → Node → body_entered* para criar a função que se ativa quando um corpo entra na área. Dentro desta função apenas adicionamos a linha `area.emit()`. Isso vai emitir um sinal que será recebido pelo node pai do jogo (*level*) que contém essa cena do céu. É na cena pai que iremos aplicar as forças.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/3da9f23f-04b6-4acf-bda8-0694e64c2ac0" />
+</p>
+
+Agora na cena do jogo (*level*), podemos ver que o node filho *Sky* possui o sinal customizado *area*. 
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/a191c87d-f17e-44cd-a5e2-7b3f5c937a3a" />
+</p>
+
