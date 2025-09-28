@@ -163,3 +163,12 @@ Agora na cena do jogo (*level*), podemos ver que o node filho *Sky* possui o sin
   <img width="1100" src="https://github.com/user-attachments/assets/a191c87d-f17e-44cd-a5e2-7b3f5c937a3a" />
 </p>
 
+## Quedas
+
+## NPCs
+
+## Final do jogo
+
+O jogo acaba quando o jogador pega o cálice do céu. Aliás, este cálice é um asset de [free-pirate-stuff-pixel-art-icons](https://craftpix.net/freebies/free-pirate-stuff-pixel-art-icons/).
+
+## Menu
