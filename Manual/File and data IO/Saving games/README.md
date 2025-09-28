@@ -163,7 +163,23 @@ Agora na cena do jogo (*level*), podemos ver que o node filho *Sky* possui o sin
   <img width="1100" src="https://github.com/user-attachments/assets/a191c87d-f17e-44cd-a5e2-7b3f5c937a3a" />
 </p>
 
-## Quedas
+## Queda no abismo
+
+### Problemas ao inseror novas animações no AnimatedSprite2D
+
+Ao tentar inserir mais uma animação no `AnimatedSprite2D`, eu só consegui inserir o objeto mas não consegui manipular a animação nova. Isso pode acontecer quando se está trabalhando com o `AnimationPlayer` junto. Nesses casos, tente fechar e abrir a engine, e tente mudar as animações do `AnimationPlayer`, terminando na RESET. Isso também foi mencionado na seção de AnimationNodeStateMachine [deste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree).
+
+### Animação nova
+
+Depois de inserir a animação nova no `AnimatedSprite2D`, é hora de ir para o `AnimationPlayer`. Adicione essa animação nova que nem foi com as anteriores. Quando ele cai no abismo, exibimos essa animação nova de explosão de sangue. A animação só ocorre uma vez, sem loops. Porém, o `AnimationPlayer` trava no último frame até a animação se alterar. Existem várias maneiras de se resolver isso. Nós utilizamos o método mostrado abaixo. Ele consiste de animar a propriedade *modulate* também, no método discreto. Nós repetimos o último frame da animação, mas apenas neste último o alpha do *modulate* é alterado para deixar o frame invisível. Então é como se a animação toda tivesse rolado normalmente e depois sumido.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/d741e437-c2c6-427e-a71a-ef411aa67500" />
+</p>
+
+### Transição para o cenário inicial
+
+Depois que o personagem caiu no abismo e explodiu, queremos um efeito de fade-in fade-out em preto. Ou seja, escurecer a tela e depois voltar, com o personagem no cenário do início do jogo. 
 
 ## NPCs
 
