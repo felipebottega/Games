@@ -127,3 +127,10 @@ A tore vem logo após a parte da ponte e é constituída dos mesmos tiles utiliz
   <img width="300" src="https://github.com/user-attachments/assets/de3f6327-56e7-46e4-8f33-34896c018ab3" />
   <img width="300" src="https://github.com/user-attachments/assets/5676919c-7126-4749-b18a-e9f19c1cad6c" />
 </p>
+
+Note que o chão possui colisão, mas logo acima na parede temos o mesmo tile do chão saparecendo novamente, só que sem colisão. Para conseguir isso basta criar tiles alternativos e não colocar colisão neles.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/3465bebc-5cc1-4baa-9b6a-4e5cbaf93644" />
+</p>
+
