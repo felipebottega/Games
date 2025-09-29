@@ -196,6 +196,15 @@ No script do player, adicionamos um bloco para lidar com essa animação. Note q
 
 ## NPCs e checkpoints
 
+Este jogo tem 3 NPCs, cada um dando dicas sobre como prosseguir e soltando algumas falas engraçadas. Devemos ter pelo menos dois diálogos diferentes por NPC, no primeiro ele fala algo important, no segundo ele fala de outra maneira e pode até falar algo inesperado. Além das dicas, cada NPC é um ponto a ser marcado como checkpoint in-game. Caso você caia no abismo, volta para o último checkpoint registrado ao lado do NPC. 
+
+### Save game
+
+Para praticar o save game e load game, estes checkpoints também serão salvos de maneira permanente. A ideia é que o menu terá a possibilidade de começar o jogo a partir de algum checkpoint (*Parte I - Floresta, Parte II - Ponte, Parte III - Torre*). Para isso ser possível, é necessário salvar os checkpoints quando passamos pelo respectivo NPC.
+
+
+### Load game
+
 ## Final do jogo
 
 O jogo acaba quando o jogador pega o cálice do céu. Aliás, este cálice é um asset de [free-pirate-stuff-pixel-art-icons](https://craftpix.net/freebies/free-pirate-stuff-pixel-art-icons/).
