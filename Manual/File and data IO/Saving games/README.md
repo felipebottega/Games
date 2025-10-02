@@ -196,7 +196,25 @@ No script do player, adicionamos um bloco para lidar com essa animação. Note q
 
 ## NPCs e checkpoints
 
-Este jogo tem 3 NPCs, cada um dando dicas sobre como prosseguir e soltando algumas falas engraçadas. Devemos ter pelo menos dois diálogos diferentes por NPC, no primeiro ele fala algo important, no segundo ele fala de outra maneira e pode até falar algo inesperado. Além das dicas, cada NPC é um ponto a ser marcado como checkpoint in-game. Caso você caia no abismo, volta para o último checkpoint registrado ao lado do NPC. 
+Este jogo contém 3 NPCs, cada um dando dicas sobre como prosseguir e  às vezes soltando algumas falas engraçadas. Além das dicas, cada NPC é um ponto a ser marcado como checkpoint no jogo. Caso você caia no abismo, volta para o último checkpoint registrado, ao lado do respectivo NPC. As falas dos NPCs são feitas com nodes `Label`, e seu gerenciamento se dá através de variáveis globais no autoload.
+
+O script pertence ao arquivo *manager.gd* do autoload. Ele informa ao jogo os NPCs que já foram vistos (variável que será usada para os checkpoints), se o jogador deve ficar imobilizado ou não (durante conversas) e se ele está perto de algum NPC ou não (para ser capaz de começar uma conversa com o botão de ação).
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/4f6ccb4f-44d3-479e-87d7-6ce39d6cb0c2" />
+</p>
+
+Podemos ver abaixo como se dá a troca de informação entre o script do jogo, *level.gd*, e o do autoload, no que diz respeito a distância entre o jogador e os NPCs. Caso a distância seja menor que $200$ pixels, consideramos que o jogador está perto o suficiente do NPC, então ele pode falar com este NPC.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/b93d5390-6a7a-49cd-9eb6-cfe9c579545e" />
+</p>
+
+Para a questão dos checkpoints, há uma função que reposiciona o jogador sempre que ele cai no abismo. Note que esta função escolhe a posição baseado na variável *status*, que é justamente a variável que diz qual o último NPC com o qual o jogador interagiu.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/12f00b4b-524f-4594-9002-a48112a990f8" />
+</p>
 
 ### Save game
 
