@@ -225,6 +225,17 @@ Para praticar o save game e load game, estes checkpoints também serão salvos d
 
 ## Final do jogo
 
-O jogo acaba quando o jogador pega o cálice do céu. Aliás, este cálice é um asset de [free-pirate-stuff-pixel-art-icons](https://craftpix.net/freebies/free-pirate-stuff-pixel-art-icons/).
+O jogo acaba quando o jogador pega o cálice do céu. Aliás, este cálice é um asset de [free-pirate-stuff-pixel-art-icons](https://craftpix.net/freebies/free-pirate-stuff-pixel-art-icons/). Neste instante, o script abaixo é executado. Ele pausa todo o movimento do jogador e toca a animação de créditos.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/b6424ebf-635b-4618-9d4a-12c0d3276064" />
+</p>
+
+A animação tocada é o `AnimationPlayer` mostrado abaixo. A primera track é um *modulate* na cena do jogo que espera $2$ segundos sem fazer nada e depois começa a escurecer a tela. Este escurecimento é só no vermellho e verde, mantendo o azul intacto. Isto tem o efeito de deixar o personagem escurecido contra a luz a Lua, o que dá um efeito bonito. As tracks seguintes manipulam propriedades da cena dos créditos, que é um `CanvasLayer`. A propriedade *transform* é a mesma discutida no [tutorial de Canvas Layer](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms), é aquela matriz $\left[ e_1, e_2, v_o \right]$. Para este jogo nós animamos apenas a variável $y$ do $v_o$, para fazer subir o texto contendo os créditos. É importante lembrar que um node `CanvasLayer` nunca "funciona" nas coordenadas globais. Ele não tem posição no mundo, mas sim na tela diretamente. A outra propriedade que manipulamos foi a de deixar visível os créditos, pois eles entram invisíveis na cena do jogo.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/aea5768e-e3e4-44c1-a56d-e9a76177f1ac" />
+  <img width="500" src="https://github.com/user-attachments/assets/40a98016-faf4-425a-a1cc-3bff3c3a1141" />
+</p>
 
 ## Menu
