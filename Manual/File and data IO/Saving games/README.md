@@ -224,12 +224,37 @@ https://penzilla.itch.io/free-animated-protagonist
 
 https://penzilla.itch.io/animated-protagonist)
 
-### Save game
+## Save game
 
-Para praticar o save game e load game, estes checkpoints também serão salvos de maneira permanente. A ideia é que o menu terá a possibilidade de começar o jogo a partir de algum checkpoint (*Parte I - Floresta, Parte II - Ponte, Parte III - Torre*). Para isso ser possível, é necessário salvar os checkpoints quando passamos pelo respectivo NPC.
+Para praticar o save game e load game, estes checkpoints também serão salvos de maneira permanente. A ideia é que o menu terá a possibilidade de começar o jogo a partir de algum checkpoint (*Parte I - Floresta, Parte II - Ponte, Parte III - Torre*). Para isso ser possível, é necessário salvar os checkpoints quando passamos pelos respectivos NPCs.
 
+A primeira coisa que precisamos entender é que o método de save que iremos ver apenas salva propriedades/atributos de nodes. Devemos criar um grupo, colocar os nodes desejados neste grupo, e então salvamos as propriedades que queremos. As informações destas propriedades ficam armazenadas em um arquivo localizado na pasta do `user://`. Vimos osbre isso no tutorial [File paths in Godot projects](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects). A nossa única intenção é salvar algumas variáveis do script *manager.gd*, mas como apenas dados de cenas podem ser salvas, criamos uma cena do Manager e a associamos ao respectivo script. Agora essas variáveis são propriedades da cena e podem ser salvas.
 
-### Load game
+<p align="center">
+  <img width="950" src="https://github.com/user-attachments/assets/d6853316-905d-4064-8d4c-f29ba579a2f9" />
+</p>
+
+Crie um grupo global e coloque esta cena no grupo. Na hora de salvar, a função vai passar por todas as cenas neste grupo. Neste caso temos apenas uma.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/40326942-d3f8-440b-8003-297ad7d7517b" />
+</p>
+
+Agora criamos a função que salva o estado do jogo. Esta é uma função geral que percorre todos os nodes do grupo *Save* e extrai as propriedades que deverão ser salvas. Ela é independente de caminho e local de onde foi chamada, então não importa onde ela está. Então vamos deixar esta função dentro do *manager.gd*. A única coisa que os nodes a serem salvos precisam é de uma função `save` retornando o dicionário das propriedades a serem salvas. É interessante chamar a função de save nos pontos de save de fato. Isso ocorre quando o jogo encontra um NPC e incrementa a variável global *state*. Abaixo segue a função geral de save.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/77053c2e-3e3f-4ec4-816e-007380aaa15d" />
+</p>
+
+Abaixo segue a função que retorna o dicionário das propriedades a serem salvas. Ressaltamos que as propriedades *filename* e *parent* são obrigatórias. A função `save_game` acima só precisa estar em um script. A função `save` abaixo tem que estar em todos os nodes no grupo *Save*, pois a função `save_game` vai varrer este grupo para buscar estes dicionários.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/8cb85369-02fc-4359-9e41-c46cb2729e91" />
+</p>
+
+Para saber quando salvar, monitoramos a variável *close_to_npc* no `manager.gd`. Sempre que essa variável **aumentar**, salvamos o jogo. Destacamos o "aumentar" pois é muito fácil pensar em salvar quando esta variável muda, e isto seria um perigo pois ela vai para zero quando o jogo é reiniciado.
+
+## Load game
 
 ## Final do jogo
 
