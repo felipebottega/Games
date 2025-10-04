@@ -252,7 +252,7 @@ Abaixo segue a função que retorna o dicionário das propriedades a serem salva
   <img width="300" src="https://github.com/user-attachments/assets/8cb85369-02fc-4359-9e41-c46cb2729e91" />
 </p>
 
-Para saber quando salvar, monitoramos a variável *close_to_npc* no `manager.gd`. Sempre que essa variável **aumentar**, salvamos o jogo. Destacamos o "aumentar" pois é muito fácil pensar em salvar quando esta variável muda, e isto seria um perigo pois ela vai para zero quando o jogo é reiniciado.
+Para saber quando salvar, monitoramos a variável *state* no `manager.gd`. Sempre que essa variável **aumentar**, salvamos o jogo. Destacamos o "aumentar" pois é muito fácil pensar em salvar quando esta variável muda, e isto seria um perigo pois ela vai para zero quando o jogo é reiniciado.
 
 ## Load game
 
