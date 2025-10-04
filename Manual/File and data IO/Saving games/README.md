@@ -251,5 +251,5 @@ A animação tocada é o `AnimationPlayer` mostrado abaixo. A primera track é u
 O nosso menu é apenas um `Sprite2D` com botões e efeito de partículas para ficar bonitinho. O interessante aqui é a parte de load game, que é o aprendizado que queríamos aplicar desde o início.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/772451d6-2224-4d8b-a453-b3100f9ec101" />
+  <img width="700" src="https://github.com/user-attachments/assets/772451d6-2224-4d8b-a453-b3100f9ec101" />
 </p>
