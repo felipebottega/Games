@@ -216,6 +216,14 @@ Para a questão dos checkpoints, há uma função que reposiciona o jogador semp
   <img width="300" src="https://github.com/user-attachments/assets/12f00b4b-524f-4594-9002-a48112a990f8" />
 </p>
 
+Os NPCs do jogo vieram destas fontes: 
+
+https://monopixelart.itch.io/forest-monsters-pixel-art 
+
+https://penzilla.itch.io/free-animated-protagonist 
+
+https://penzilla.itch.io/animated-protagonist)
+
 ### Save game
 
 Para praticar o save game e load game, estes checkpoints também serão salvos de maneira permanente. A ideia é que o menu terá a possibilidade de começar o jogo a partir de algum checkpoint (*Parte I - Floresta, Parte II - Ponte, Parte III - Torre*). Para isso ser possível, é necessário salvar os checkpoints quando passamos pelo respectivo NPC.
@@ -239,3 +247,9 @@ A animação tocada é o `AnimationPlayer` mostrado abaixo. A primera track é u
 </p>
 
 ## Menu
+
+O nosso menu é apenas um `Sprite2D` com botões e efeito de partículas para ficar bonitinho. O interessante aqui é a parte de load game, que é o aprendizado que queríamos aplicar desde o início.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/772451d6-2224-4d8b-a453-b3100f9ec101" />
+</p>
