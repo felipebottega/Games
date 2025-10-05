@@ -198,7 +198,7 @@ No script do player, adicionamos um bloco para lidar com essa animação. Note q
 
 Este jogo contém 3 NPCs, cada um dando dicas sobre como prosseguir e  às vezes soltando algumas falas engraçadas. Além das dicas, cada NPC é um ponto a ser marcado como checkpoint no jogo. Caso você caia no abismo, volta para o último checkpoint registrado, ao lado do respectivo NPC. As falas dos NPCs são feitas com nodes `Label`, e seu gerenciamento se dá através de variáveis globais no autoload.
 
-O script pertence ao arquivo *manager.gd* do autoload. Ele informa ao jogo os NPCs que já foram vistos (variável que será usada para os checkpoints), se o jogador deve ficar imobilizado ou não (durante conversas) e se ele está perto de algum NPC ou não (para ser capaz de começar uma conversa com o botão de ação).
+O script pertence ao arquivo *manager.gd* do autoload, que está associado à cena *Manager*, também no autoload. Ele informa ao jogo os NPCs que já foram vistos (variável que será usada para os checkpoints), se o jogador deve ficar imobilizado ou não (durante conversas) e se ele está perto de algum NPC ou não (para ser capaz de começar uma conversa com o botão de ação).
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/4f6ccb4f-44d3-479e-87d7-6ce39d6cb0c2" />
@@ -207,13 +207,13 @@ O script pertence ao arquivo *manager.gd* do autoload. Ele informa ao jogo os NP
 Podemos ver abaixo como se dá a troca de informação entre o script do jogo, *level.gd*, e o do autoload, no que diz respeito a distância entre o jogador e os NPCs. Caso a distância seja menor que $200$ pixels, consideramos que o jogador está perto o suficiente do NPC, então ele pode falar com este NPC.
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/b93d5390-6a7a-49cd-9eb6-cfe9c579545e" />
+  <img width="450" src="https://github.com/user-attachments/assets/7260823d-19eb-4997-b1eb-9dd37d9f3543" />
 </p>
 
 Para a questão dos checkpoints, há uma função que reposiciona o jogador sempre que ele cai no abismo. Note que esta função escolhe a posição baseado na variável *status*, que é justamente a variável que diz qual o último NPC com o qual o jogador interagiu.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/12f00b4b-524f-4594-9002-a48112a990f8" />
+  <img width="300" src="https://github.com/user-attachments/assets/e3ecf2d5-32a8-4bd8-b9d1-1738dc4db195" />
 </p>
 
 Os NPCs do jogo vieram destas fontes: 
@@ -228,33 +228,45 @@ https://penzilla.itch.io/animated-protagonist)
 
 Para praticar o save game e load game, estes checkpoints também serão salvos de maneira permanente. A ideia é que o menu terá a possibilidade de começar o jogo a partir de algum checkpoint (*Parte I - Floresta, Parte II - Ponte, Parte III - Torre*). Para isso ser possível, é necessário salvar os checkpoints quando passamos pelos respectivos NPCs.
 
-A primeira coisa que precisamos entender é que o método de save que iremos ver apenas salva propriedades/atributos de nodes. Devemos criar um grupo, colocar os nodes desejados neste grupo, e então salvamos as propriedades que queremos. As informações destas propriedades ficam armazenadas em um arquivo localizado na pasta do `user://`. Vimos osbre isso no tutorial [File paths in Godot projects](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects). A nossa única intenção é salvar algumas variáveis do script *manager.gd*, mas como apenas dados de cenas podem ser salvas, criamos uma cena do Manager e a associamos ao respectivo script. Agora essas variáveis são propriedades da cena e podem ser salvas.
+O método de save que iremos ver apenas salva propriedades/atributos de nodes. Existem outros métodos de salvar mas este é o mais seguro. Devemos criar um grupo, colocar os nodes desejados neste grupo, e então salvamos as propriedades que queremos através de uma função em cada node do grupo. As informações destas propriedades ficam armazenadas em um arquivo localizado na pasta do `user://`. Vimos osbre isso no tutorial [File paths in Godot projects](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects). 
+
+Neste exemplo, queremos apenas salvar algumas variáveis do *Manager* (lembrando que apenas dados de cenas podem ser salvas). Criamos um node global novo para gerenciar os saves e loads. Este gerenciamento em teoria pode ser feito por qualquer cena, desde que ela não seja uma das cenas salvas (isto dá conflito, pois a cena é deletada antes de ser carregada a nova).
 
 <p align="center">
-  <img width="950" src="https://github.com/user-attachments/assets/d6853316-905d-4064-8d4c-f29ba579a2f9" />
+  <img width="950" src="https://github.com/user-attachments/assets/26ec53c8-a613-4bd4-8676-f8e6eb8f7527" />
 </p>
 
-Crie um grupo global e coloque esta cena no grupo. Na hora de salvar, a função vai passar por todas as cenas neste grupo. Neste caso temos apenas uma.
+Crie um grupo global e coloque as cenas que quer salvar no grupo. Na hora de salvar, a função vai passar por todas as cenas deste grupo. 
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/40326942-d3f8-440b-8003-297ad7d7517b" />
+  <img width="150" src="https://github.com/user-attachments/assets/3a77effa-b46a-4c90-a637-18df184ead4a" />
 </p>
 
-Agora criamos a função que salva o estado do jogo. Esta é uma função geral que percorre todos os nodes do grupo *Save* e extrai as propriedades que deverão ser salvas. Ela é independente de caminho e local de onde foi chamada, então não importa onde ela está. Então vamos deixar esta função dentro do *manager.gd*. A única coisa que os nodes a serem salvos precisam é de uma função `save` retornando o dicionário das propriedades a serem salvas. É interessante chamar a função de save nos pontos de save de fato. Isso ocorre quando o jogo encontra um NPC e incrementa a variável global *state*. Abaixo segue a função geral de save.
+Apesar do sistema de save ser igual para todos, há dois tipos de grupos para diferenciar na hora do load. Em resumo, os nodes das cenas normais são removidos e depois colocados de volta na cena, com as propriedades do load carregadas, enquanto que nodes das cenas do autoload apenas tem suas propriedades atualizadas. Não se pode remover nada de autoload e carregar depois novamente.
+
+A função geral de save percorre todos os nodes do grupo e extrai as propriedades que deverão ser salvas. Ela é independente de caminho e local de onde foi chamada. A única coisa que os nodes a serem salvos precisam é de uma função `save` retornando o dicionário das propriedades a serem salvas. É interessante chamar a função de save nos pontos de save de fato. Isso ocorre quando o jogo encontra um NPC e incrementa a variável global *state*. Abaixo segue a função geral de save.
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/77053c2e-3e3f-4ec4-816e-007380aaa15d" />
 </p>
 
-Abaixo segue a função que retorna o dicionário das propriedades a serem salvas. Ressaltamos que as propriedades *filename* e *parent* são obrigatórias. A função `save_game` acima só precisa estar em um script. A função `save` abaixo tem que estar em todos os nodes no grupo *Save*, pois a função `save_game` vai varrer este grupo para buscar estes dicionários.
+Abaixo segue a função que retorna o dicionário das propriedades a serem salvas. Ressaltamos que as propriedades *filename*, *parent* e *index* são obrigatórias. A função `save_game` acima só precisa estar em um script. A função `save` abaixo tem que estar em todos os nodes do grupo, pois a função `save_game` vai varrer este grupo para buscar estes dicionários.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/8cb85369-02fc-4359-9e41-c46cb2729e91" />
+  <img width="300" src="https://github.com/user-attachments/assets/06bc2dc6-71f6-4c5f-bf67-86fb60406e49" />
 </p>
 
-Para saber quando salvar, monitoramos a variável *state* no `manager.gd`. Sempre que essa variável **aumentar**, salvamos o jogo. Destacamos o "aumentar" pois é muito fácil pensar em salvar quando esta variável muda, e isto seria um perigo pois ela vai para zero quando o jogo é reiniciado.
-
 ## Load game
+
+Como mencionamos anteriormente, há dois grupos: "Save" e "SaveAutoload". O primeiro se refere aos nodes que serão carregados de maneira normal, enquanto que o segundo se refere aos nodes no autoload. Mostramos abaixo as duas funções de load.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/abe2780b-9d30-41fb-bc78-29bfca7f8b1f" />
+  <img width="700" src="https://github.com/user-attachments/assets/a0252deb-6bd8-4c08-8c33-f17f906f2094" />
+</p>
+
+> ⚠️ Aviso: Não coloque a função de load game em uma cena que será atualizada com o load. Se fizer isso, vai entrar em um loop infinito. O mais adequado é colocar a função na cena *SaveLoad*, que foi feita especificamente para gerenciar estas coisas e não depende delas.
+
 
 ## Final do jogo
 
