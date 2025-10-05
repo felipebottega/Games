@@ -267,6 +267,18 @@ Como mencionamos anteriormente, há dois grupos: "Save" e "SaveAutoload". O prim
 
 > ⚠️ Aviso: Não coloque a função de load game em uma cena que será atualizada com o load. Se fizer isso, vai entrar em um loop infinito. O mais adequado é colocar a função na cena *SaveLoad*, que foi feita especificamente para gerenciar estas coisas e não depende delas.
 
+Para esse jogo de exemplo, o conteúdo do arquivo de savbe é bem curto.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/aeb5cba4-86af-4194-ab6d-65e12bd9be53" />
+  <img width="600" src="https://github.com/user-attachments/assets/b7a6293e-445d-4fba-b944-84558543271a" />
+</p>
+
+Assim que o jogo inicia, o `_ready` do menu já tenta fazer os dois tipos de load. Com isso, a variável *status* já começa no último valor que estava antes. As funções mostradas antes eram bem genéricas, podendo ser reutilizadas em outros jogos. Por outro lado, esse `_ready` é específico para esse jogo. Outros jogos podem requerer que o load seja feito em outro momento e de outra maneira. Cabe ressaltar também que o *status* carregado só é utilizado na tela de load game. Se o usuário der start game, ele vai começar do início, com o *status* zerado.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/cb3dabba-35a5-4f20-8a4e-02ee9e396d82" />
+</p>
 
 ## Final do jogo
 
@@ -280,7 +292,7 @@ A animação tocada é o `AnimationPlayer` mostrado abaixo. A primera track é u
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/aea5768e-e3e4-44c1-a56d-e9a76177f1ac" />
-  <img width="500" src="https://github.com/user-attachments/assets/40a98016-faf4-425a-a1cc-3bff3c3a1141" />
+  <img width="550" src="https://github.com/user-attachments/assets/40a98016-faf4-425a-a1cc-3bff3c3a1141" />
 </p>
 
 ## Menu
