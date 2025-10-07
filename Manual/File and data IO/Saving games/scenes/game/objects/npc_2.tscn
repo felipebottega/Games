@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://c22eu3rc5m58s"]
+
+[ext_resource type="Texture2D" uid="uid://tak6yyeea4jx" path="res://assets/graphics/npc/Idle.png" id="1_vkhn3"]
+[ext_resource type="Script" uid="uid://co5t0rr76lmv8" path="res://scripts/game/objects/npc_2.gd" id="2_6flcr"]
+[ext_resource type="FontFile" uid="uid://ouv20juh3lao" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_nt7j1"]
+[ext_resource type="Texture2D" uid="uid://ktumo11q8i5t" path="res://assets/graphics/npc/talk_icon.png" id="4_3ahjh"]
+[ext_resource type="Script" uid="uid://du6qtqnbjv07b" path="res://scripts/game/objects/talk_icon_npc.gd" id="5_imvxy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31yd6"]
+atlas = ExtResource("1_vkhn3")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4un3c"]
+atlas = ExtResource("1_vkhn3")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kcvjh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31yd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4un3c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="NPC2" type="AnimatedSprite2D"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kcvjh")
+animation = &"idle"
+autoplay = "idle"
+script = ExtResource("2_6flcr")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1389.0
+offset_bottom = 333.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nt7j1")
+theme_override_font_sizes/font_size = 90
+text = "Eu já sei de tudo. Você está
+na busca pelo cálice sagrado.
+ Me disseram."
+
+[node name="TalkIconNPC" type="Sprite2D" parent="."]
+position = Vector2(-305, -215)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_3ahjh")
+script = ExtResource("5_imvxy")

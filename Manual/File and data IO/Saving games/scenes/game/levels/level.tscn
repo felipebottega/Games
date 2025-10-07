@@ -1,0 +1,163 @@
+[gd_scene load_steps=18 format=3 uid="uid://xso00kd6sxvm"]
+
+[ext_resource type="Script" uid="uid://ccbpb54xguvk1" path="res://scripts/game/levels/level.gd" id="1_m0wqc"]
+[ext_resource type="PackedScene" uid="uid://cb403f8yobjfw" path="res://scenes/game/levels/background.tscn" id="1_sc1r3"]
+[ext_resource type="PackedScene" uid="uid://cgxc5yebuurmn" path="res://scenes/game/levels/forest.tscn" id="1_xyvlh"]
+[ext_resource type="Script" uid="uid://bf3ylddqk2cdy" path="res://scripts/game/levels/forest.gd" id="2_5h323"]
+[ext_resource type="PackedScene" uid="uid://6mwpfybcnsvn" path="res://scenes/game/levels/sky.tscn" id="2_5pk33"]
+[ext_resource type="PackedScene" uid="uid://d10wnydcssbmg" path="res://scenes/game/levels/tower.tscn" id="2_qftuo"]
+[ext_resource type="PackedScene" uid="uid://8u6c8j7qiwnd" path="res://scenes/characters/player.tscn" id="2_ru8df"]
+[ext_resource type="PackedScene" uid="uid://vtwwr1dhp155" path="res://scenes/game/levels/bridge.tscn" id="3_spbf7"]
+[ext_resource type="PackedScene" uid="uid://20jfmm83ftif" path="res://scenes/game/objects/firefly.tscn" id="4_5h323"]
+[ext_resource type="PackedScene" uid="uid://c25k3ynjgs0mv" path="res://scenes/game/objects/npc.tscn" id="8_pbvl5"]
+[ext_resource type="PackedScene" uid="uid://c22eu3rc5m58s" path="res://scenes/game/objects/npc_2.tscn" id="9_2cqii"]
+[ext_resource type="PackedScene" uid="uid://dary0sylxcmxl" path="res://scenes/game/objects/npc_3.tscn" id="10_t2tv3"]
+[ext_resource type="PackedScene" uid="uid://1gkb00ty8cb3" path="res://scenes/ui/credits.tscn" id="13_28l7a"]
+[ext_resource type="AudioStream" uid="uid://dhm2sw8hqw0wg" path="res://assets/sfx/getruby.mp3" id="13_ov5bf"]
+
+[sub_resource type="Animation" id="Animation_28l7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits:transform")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.133333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Transform2D(1, 0, 0, 1, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Credits:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_t2tv3"]
+resource_name = "credits"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0.627451, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits:transform")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 59.9333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Transform2D(1, 0, 0, 1, 0, 1500), Transform2D(1, 0, 0, 1, 0, -800)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Credits:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.133333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ov5bf"]
+_data = {
+&"RESET": SubResource("Animation_28l7a"),
+&"credits": SubResource("Animation_t2tv3")
+}
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_m0wqc")
+
+[node name="Background" parent="." instance=ExtResource("1_sc1r3")]
+position = Vector2(592, -1029)
+
+[node name="Sky" parent="." instance=ExtResource("2_5pk33")]
+position = Vector2(7469, -7379)
+
+[node name="Tower" parent="." instance=ExtResource("2_qftuo")]
+position = Vector2(7081, -4981)
+
+[node name="Bridge" parent="." instance=ExtResource("3_spbf7")]
+position = Vector2(689, -5311)
+
+[node name="Forest" parent="." instance=ExtResource("1_xyvlh")]
+script = ExtResource("2_5h323")
+
+[node name="NPC" parent="." instance=ExtResource("8_pbvl5")]
+position = Vector2(372, 511)
+
+[node name="NPC2" parent="." instance=ExtResource("9_2cqii")]
+position = Vector2(2477, -4721)
+
+[node name="NPC3" parent="." instance=ExtResource("10_t2tv3")]
+position = Vector2(8422, -7005)
+
+[node name="Player" parent="." instance=ExtResource("2_ru8df")]
+position = Vector2(6503, -11649)
+
+[node name="Fireflies" type="Node2D" parent="."]
+
+[node name="Firefly" parent="Fireflies" instance=ExtResource("4_5h323")]
+position = Vector2(84, 501)
+
+[node name="Firefly2" parent="Fireflies" instance=ExtResource("4_5h323")]
+position = Vector2(458, 508)
+
+[node name="Firefly3" parent="Fireflies" instance=ExtResource("4_5h323")]
+position = Vector2(261, 534)
+
+[node name="Firefly4" parent="Fireflies" instance=ExtResource("4_5h323")]
+position = Vector2(421, 433)
+
+[node name="Firefly5" parent="Fireflies" instance=ExtResource("4_5h323")]
+position = Vector2(556, 485)
+
+[node name="WinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ov5bf")
+volume_db = -10.0
+
+[node name="Credits" parent="." instance=ExtResource("13_28l7a")]
+visible = false
+
+[node name="CreditsAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ov5bf")
+}
+
+[connection signal="area" from="Sky" to="." method="_on_sky_area"]
+[connection signal="dead" from="Player" to="." method="_on_player_dead"]

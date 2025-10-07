@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmydwusrksgg1"]
+
+[ext_resource type="Script" uid="uid://dvk2mg11eedm3" path="res://autoload/manager.gd" id="1_js8yk"]
+
+[node name="Manager" type="Node" groups=["SaveAutoload"]]
+script = ExtResource("1_js8yk")

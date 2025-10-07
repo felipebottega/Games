@@ -1,0 +1,366 @@
+[gd_scene load_steps=10 format=3 uid="uid://cb403f8yobjfw"]
+
+[ext_resource type="Texture2D" uid="uid://dvfx4dgn5bfju" path="res://assets/graphics/environment/Background/background.png" id="1_0awv2"]
+[ext_resource type="Texture2D" uid="uid://65a7lt6uylf0" path="res://assets/graphics/environment/Background/moon.png" id="2_eclcp"]
+[ext_resource type="Texture2D" uid="uid://ckma4p5ecwurs" path="res://assets/graphics/environment/2d_lights_and_shadows_neutral_point_light.webp" id="3_eclcp"]
+[ext_resource type="Texture2D" uid="uid://bnfs7t7wq5to8" path="res://assets/graphics/environment/Background/flare_01.png" id="4_eclcp"]
+[ext_resource type="Texture2D" uid="uid://b24okwpixa3vs" path="res://assets/graphics/environment/Background/landscape_0004_5_clouds.png" id="4_ed1re"]
+[ext_resource type="Texture2D" uid="uid://c84umxx8qfxmg" path="res://assets/graphics/environment/Background/landscape_0003_4_mountain.png" id="5_3tf08"]
+[ext_resource type="Texture2D" uid="uid://bsxcmmk4ro04w" path="res://assets/graphics/environment/Background/landscape_0002_3_trees.png" id="6_3hbhm"]
+[ext_resource type="Texture2D" uid="uid://by4emxjorboj3" path="res://assets/graphics/environment/Background/landscape_0001_2_trees.png" id="7_tbjm3"]
+[ext_resource type="Texture2D" uid="uid://bsq0gcw0wll2n" path="res://assets/graphics/environment/Background/landscape_0000_1_trees.png" id="8_jdrd2"]
+
+[node name="Background" type="Node2D"]
+
+[node name="ParallaxSky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.05, 0.22)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxSky"]
+texture = ExtResource("1_0awv2")
+
+[node name="Moon" type="Sprite2D" parent="ParallaxSky"]
+position = Vector2(-7, -1480)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_eclcp")
+
+[node name="PointLight2D" type="PointLight2D" parent="ParallaxSky/Moon"]
+texture = ExtResource("3_eclcp")
+texture_scale = 5.0
+
+[node name="Stars" type="Node2D" parent="ParallaxSky"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-330, -1327)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-401, -1430)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-389, -1399)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-458, -1525)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(233, -1628)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(309, -1507)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(342, -1427)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(121, -1362)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(121, -1362)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D10" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-526, -1329)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D11" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-123, -1276)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D12" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(178, -1053)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D13" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(178, -1053)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D14" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-127, -972)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D15" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(249, -864)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D16" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(421, -1390)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D17" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(421, -1390)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D18" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(487, -1615)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D19" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(432, -1656)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D20" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(395, -1622)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D21" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(365, -1714)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D22" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(431, -1712)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D23" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(410, -1627)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D24" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(281, -1673)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D25" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(359, -1685)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D26" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-157, -1669)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D27" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-396, -1680)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D28" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-460, -1648)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D29" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-490, -1699)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D30" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-426, -1687)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D31" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-447, -1715)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D32" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-454, -1697)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D33" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-516, -1635)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D34" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-537, -1630)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D35" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-532, -1612)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D36" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-502, -1674)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D37" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-493, -1577)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D38" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-325, -1699)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D39" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-359, -1602)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D40" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-320, -1621)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D41" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-557, -1559)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D42" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-555, -1729)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D43" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-133, -1748)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D44" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(430, -1270)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D45" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(29, -1631)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D46" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(100, -625)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D47" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-102, -418)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D48" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(352, -556)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D49" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(71, -951)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D50" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(287, -680)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D51" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-182, -1183)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D52" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-68, -1193)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D53" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-185, -1216)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D54" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-418, -1265)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D55" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(-252, -1286)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D56" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(96, -1247)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D57" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(78, -1169)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D58" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(138, -1203)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D59" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(244, -1255)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Sprite2D60" type="Sprite2D" parent="ParallaxSky/Stars"]
+position = Vector2(270, -1294)
+scale = Vector2(0.1, 0.15)
+texture = ExtResource("4_eclcp")
+
+[node name="Mountains" type="Sprite2D" parent="ParallaxSky"]
+position = Vector2(113, 760)
+scale = Vector2(-1, 1)
+texture = ExtResource("5_3tf08")
+
+[node name="Trees" type="Node2D" parent="ParallaxSky"]
+position = Vector2(59, -47)
+
+[node name="Trees1" type="Sprite2D" parent="ParallaxSky/Trees"]
+position = Vector2(22, 844)
+texture = ExtResource("6_3hbhm")
+
+[node name="Trees2" type="Sprite2D" parent="ParallaxSky/Trees"]
+position = Vector2(29, 835)
+texture = ExtResource("7_tbjm3")
+
+[node name="Trees3" type="Sprite2D" parent="ParallaxSky/Trees"]
+position = Vector2(-21, 902)
+texture = ExtResource("8_jdrd2")
+
+[node name="ParallaxClouds" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.05, 0.22)
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 2
+
+[node name="Clouds" type="Sprite2D" parent="ParallaxClouds"]
+position = Vector2(-173, 226)
+scale = Vector2(0.4, 0.7)
+texture = ExtResource("4_ed1re")
+
+[node name="Clouds2" type="Sprite2D" parent="ParallaxClouds"]
+position = Vector2(-48, 649)
+scale = Vector2(-0.4, 0.5)
+texture = ExtResource("4_ed1re")

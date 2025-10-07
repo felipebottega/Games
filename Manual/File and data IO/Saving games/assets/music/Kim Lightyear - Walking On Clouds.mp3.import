@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bic7d52276amc"
+path="res://.godot/imported/Kim Lightyear - Walking On Clouds.mp3-41af3f8e313601452fce60dac596723f.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Kim Lightyear - Walking On Clouds.mp3"
+dest_files=["res://.godot/imported/Kim Lightyear - Walking On Clouds.mp3-41af3f8e313601452fce60dac596723f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

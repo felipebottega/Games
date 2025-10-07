@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://dary0sylxcmxl"]
+
+[ext_resource type="Texture2D" uid="uid://dcl0aqkf7kfdb" path="res://assets/graphics/npc/Character_Idle.png" id="1_k06c1"]
+[ext_resource type="Script" uid="uid://cxyyy8kipoco3" path="res://scripts/game/objects/npc_3.gd" id="2_urvq1"]
+[ext_resource type="FontFile" uid="uid://ouv20juh3lao" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_hm05k"]
+[ext_resource type="Texture2D" uid="uid://ktumo11q8i5t" path="res://assets/graphics/npc/talk_icon.png" id="4_61fq6"]
+[ext_resource type="Script" uid="uid://du6qtqnbjv07b" path="res://scripts/game/objects/talk_icon_npc.gd" id="5_746vt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wj47"]
+atlas = ExtResource("1_k06c1")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jayp"]
+atlas = ExtResource("1_k06c1")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4sfv"]
+atlas = ExtResource("1_k06c1")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urvq1"]
+atlas = ExtResource("1_k06c1")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hm05k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wj47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jayp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4sfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urvq1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="NPC3" type="AnimatedSprite2D"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_hm05k")
+autoplay = "default"
+script = ExtResource("2_urvq1")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1389.0
+offset_bottom = 333.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hm05k")
+theme_override_font_sizes/font_size = 90
+text = "Eu já sei de tudo. Você está
+na busca pelo cálice sagrado.
+ Me disseram."
+
+[node name="TalkIconNPC" type="Sprite2D" parent="."]
+position = Vector2(-265, -180)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_61fq6")
+script = ExtResource("5_746vt")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://20jfmm83ftif"]
+
+[ext_resource type="Texture2D" uid="uid://c22ub5qvbao3f" path="res://assets/graphics/environment/firefly.png" id="1_3ch8y"]
+[ext_resource type="Texture2D" uid="uid://ckma4p5ecwurs" path="res://assets/graphics/environment/2d_lights_and_shadows_neutral_point_light.webp" id="2_mrpn7"]
+[ext_resource type="Script" uid="uid://cw1lvo5gkydog" path="res://scripts/game/objects/firefly.gd" id="2_turuu"]
+
+[node name="Firefly" type="Sprite2D"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_3ch8y")
+script = ExtResource("2_turuu")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 1, 0.0823529, 1)
+energy = 2.0
+texture = ExtResource("2_mrpn7")
+texture_scale = 1.5

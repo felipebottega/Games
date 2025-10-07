@@ -1,0 +1,161 @@
+[gd_scene load_steps=15 format=3 uid="uid://crafpat7n240d"]
+
+[ext_resource type="Texture2D" uid="uid://b03jt318a1m41" path="res://assets/graphics/ui/menu.png" id="1_7w7rl"]
+[ext_resource type="Script" uid="uid://c7rjrxgtljt58" path="res://scripts/game/ui/menu.gd" id="1_w6y0u"]
+[ext_resource type="Texture2D" uid="uid://cvicpcdbsd45y" path="res://assets/graphics/ui/arrow.png" id="2_wedc3"]
+[ext_resource type="Script" uid="uid://duwxdmiflu418" path="res://scripts/game/ui/arrow.gd" id="3_c2n5p"]
+[ext_resource type="Texture2D" uid="uid://2ikhqundbdu2" path="res://assets/graphics/ui/loadgame1.png" id="3_cghgw"]
+[ext_resource type="Texture2D" uid="uid://c0iatqlsdirjs" path="res://assets/graphics/ui/loadgame2.png" id="4_1pxh0"]
+[ext_resource type="Texture2D" uid="uid://d0as1dwmrbwkv" path="res://assets/graphics/ui/loadgame3.png" id="5_e11en"]
+[ext_resource type="AudioStream" uid="uid://dc66cayqjc3eg" path="res://assets/sfx/misc_menu_2.wav" id="8_1pxh0"]
+[ext_resource type="AudioStream" uid="uid://q5iqvm0np87t" path="res://assets/sfx/load.mp3" id="9_e11en"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2n5p"]
+bg_color = Color(0.960784, 0.6, 0.6, 0.733333)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wedc3"]
+bg_color = Color(0.960784, 0.6, 0.6, 0.376471)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6y0u"]
+bg_color = Color(1, 0.921569, 0.6, 0.596078)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7w7rl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w6y0u"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(400, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(-30, 50, 0)
+scale_min = 0.5
+scale_max = 4.0
+color = Color(1, 0.47451, 1, 1)
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_w6y0u")
+
+[node name="Cover" type="Sprite2D" parent="."]
+position = Vector2(269, 301)
+scale = Vector2(1.11544, 1.30061)
+texture = ExtResource("1_7w7rl")
+metadata/_edit_lock_ = true
+
+[node name="LoadGame1" type="Sprite2D" parent="."]
+position = Vector2(314, 134)
+scale = Vector2(0.76005, 0.962145)
+texture = ExtResource("3_cghgw")
+
+[node name="LoadGame1" type="Button" parent="LoadGame1"]
+offset_left = -299.0
+offset_top = -54.0
+offset_right = 304.0
+offset_bottom = 83.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_c2n5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wedc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w6y0u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7w7rl")
+
+[node name="LoadGame2" type="Sprite2D" parent="."]
+position = Vector2(307.5, 296)
+scale = Vector2(0.76005, 0.962145)
+texture = ExtResource("4_1pxh0")
+
+[node name="LoadGame2" type="Button" parent="LoadGame2"]
+offset_left = -297.0
+offset_top = -67.0
+offset_right = 303.0
+offset_bottom = 67.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_c2n5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wedc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w6y0u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7w7rl")
+
+[node name="LoadGame3" type="Sprite2D" parent="."]
+position = Vector2(303.5, 448)
+scale = Vector2(0.76005, 0.962145)
+texture = ExtResource("5_e11en")
+
+[node name="LoadGame3" type="Button" parent="LoadGame3"]
+offset_left = -295.0
+offset_top = -72.0
+offset_right = 309.0
+offset_bottom = 65.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_c2n5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wedc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w6y0u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7w7rl")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(265, -9)
+amount = 50
+lifetime = 10.0
+process_material = SubResource("ParticleProcessMaterial_w6y0u")
+
+[node name="StartGame" type="Button" parent="."]
+offset_left = 89.0
+offset_top = 94.0
+offset_right = 451.0
+offset_bottom = 212.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_c2n5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wedc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w6y0u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7w7rl")
+
+[node name="LoadGame" type="Button" parent="."]
+offset_left = 89.0
+offset_top = 236.0
+offset_right = 451.0
+offset_bottom = 354.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_c2n5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wedc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w6y0u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7w7rl")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 167.0
+offset_top = 379.0
+offset_right = 374.0
+offset_bottom = 497.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_c2n5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wedc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w6y0u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7w7rl")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(47.5, 154.5)
+scale = Vector2(1.3, 1.22917)
+texture = ExtResource("2_wedc3")
+script = ExtResource("3_c2n5p")
+
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1pxh0")
+volume_db = -10.0
+
+[node name="Confirm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_e11en")
+volume_db = -10.0
+
+[connection signal="pressed" from="LoadGame1/LoadGame1" to="." method="_on_load_game_1_pressed"]
+[connection signal="pressed" from="LoadGame2/LoadGame2" to="." method="_on_load_game_2_pressed"]
+[connection signal="pressed" from="LoadGame3/LoadGame3" to="." method="_on_load_game_3_pressed"]
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="load_game" from="Arrow" to="." method="_on_arrow_load_game"]
+[connection signal="quit" from="Arrow" to="." method="_on_arrow_quit"]
+[connection signal="start_game" from="Arrow" to="." method="_on_arrow_start_game"]

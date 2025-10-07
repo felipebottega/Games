@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://1gkb00ty8cb3"]
+
+[ext_resource type="FontFile" uid="uid://cg6o2djjahv8i" path="res://assets/fonts/segoeprb.ttf" id="1_oap8i"]
+
+[node name="Credits" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -245.5
+offset_right = 82.5
+offset_bottom = 245.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_oap8i")
+theme_override_font_sizes/font_size = 15
+text = "Créditos
+
+Cenários: ansimuz
+https://opengameart.org/content/sunnyland-tall-forest-environment
+https://opengameart.org/content/fort-of-illusion
+
+Background: PWL
+https://opengameart.org/content/seamless-hd-landscape-in-parts
+
+NPC cogumelo: MonoPixelArt
+https://monopixelart.itch.io/forest-monsters-pixel-art
+
+Outros NPCs: Penzilla
+https://penzilla.itch.io/free-animated-protagonist
+https://penzilla.itch.io/animated-protagonist
+
+Cálice: https://craftpix.net/freebies/free-pirate-stuff-pixel-art-icons/
+
+Gafanhoto: Felipe Integral
+
+Música jogo: Kim Lightyear
+https://opengameart.org/content/walking-on-clouds
+
+Música créditos: Tad
+https://opengameart.org/content/live-mixing-compilation 
+
+Efeitos sonoros:
+Lokif
+    https://opengameart.org/content/gui-sound-effects
+
+Independent.nu
+    https://opengameart.org/content/8-wet-squish-slurp-impacts
+
+Red Eclipse
+    https://opengameart.org/content/red-eclipse-sounds
+
+mieki256
+    https://opengameart.org/content/get-ruby-se
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FIM
+-----"
+horizontal_alignment = 1
