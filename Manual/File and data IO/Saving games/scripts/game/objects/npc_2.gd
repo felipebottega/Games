@@ -8,7 +8,7 @@ func _ready() -> void:
 	return
 
 func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("focus_next") or Input.is_action_just_pressed("accept")) and Manager.close_to_npc == 2:
+	if Input.is_action_just_pressed("focus_next") and Manager.close_to_npc == 2:
 		if conversa == 1:
 			conversa_1()
 			
