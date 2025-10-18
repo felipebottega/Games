@@ -17,9 +17,9 @@ func _process(_delta: float) -> void:
 	# Verifica se o jogador está próximo de algum NPC.
 	if $Player.global_position.distance_to($NPC.global_position) < 200:
 		Manager.close_to_npc = 1
-	elif $Player.global_position.distance_to($NPC2.global_position) < 200:
+	elif $Player.global_position.distance_to($NPC2.global_position) < 130:
 		Manager.close_to_npc = 2
-	elif $Player.global_position.distance_to($NPC3.global_position) < 200:
+	elif $Player.global_position.distance_to($NPC3.global_position) < 130:
 		Manager.close_to_npc = 3
 	else:
 		Manager.close_to_npc = 0

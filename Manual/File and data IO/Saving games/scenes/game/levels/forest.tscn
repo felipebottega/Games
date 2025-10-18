@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cgxc5yebuurmn"]
+[gd_scene load_steps=22 format=4 uid="uid://cgxc5yebuurmn"]
 
 [ext_resource type="Texture2D" uid="uid://dmklithoe4oss" path="res://assets/graphics/environment/back.png" id="1_fxp72"]
 [ext_resource type="Texture2D" uid="uid://tyvfp15x0igh" path="res://assets/graphics/environment/far.png" id="1_xlwc2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d10wdew3us5uo" path="res://assets/graphics/environment/Rock.png" id="5_6goid"]
 [ext_resource type="Texture2D" uid="uid://bdk7x0jou7e86" path="res://assets/graphics/environment/tileset.png" id="6_1slu6"]
 [ext_resource type="Texture2D" uid="uid://d1ntfxx30iivw" path="res://assets/graphics/environment/tree_top.png" id="8_6goid"]
+[ext_resource type="Texture2D" uid="uid://h7h3c8pdqs6o" path="res://assets/graphics/environment/wood_arrow.png" id="9_1slu6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nul4i"]
 texture = ExtResource("2_uy161")
@@ -391,6 +392,11 @@ position = Vector2(-279, -505)
 rotation = -0.606904
 tile_map_data = PackedByteArray("AABoAK//BQABAAEAAABoALD/BQABAAIAAABoALH/BQABAAMAAABpAK//BQABAAUAAABpALD/BQABAAYAAABpALH/BQABAAcAAABqAK//BQACAAUAAABqALD/BQACAAYAAABqALH/BQACAAcAAABrAK//BQADAAUAAABrALD/BQADAAYAAABrALH/BQADAAcAAABsAK//BQAFAAEAAABsALD/BQAFAAIAAABsALH/BQAFAAMAAAA=")
 tile_set = SubResource("TileSet_7khuk")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(118, -4704)
+scale = Vector2(0.395, 0.395)
+texture = ExtResource("9_1slu6")
 
 [node name="Trees" type="Node2D" parent="."]
 

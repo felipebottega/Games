@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://vtwwr1dhp155"]
+[gd_scene load_steps=16 format=4 uid="uid://vtwwr1dhp155"]
 
 [ext_resource type="Texture2D" uid="uid://bfb68yur5681j" path="res://assets/graphics/environment/fort_of_illusion_files/all-props.png" id="1_573g3"]
 [ext_resource type="Texture2D" uid="uid://cfn10c33i2jsc" path="res://assets/graphics/environment/fort_of_illusion_files/front.png" id="2_ycjrx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dpqt0l5d62lkg" path="res://assets/graphics/environment/fort_of_illusion_files/fire.png" id="4_ycjrx"]
 [ext_resource type="Texture2D" uid="uid://ckma4p5ecwurs" path="res://assets/graphics/environment/2d_lights_and_shadows_neutral_point_light.webp" id="5_t32ul"]
 [ext_resource type="Script" uid="uid://b6uccd1wq2jwc" path="res://scripts/game/objects/point_light_2d.gd" id="7_qtd21"]
+[ext_resource type="Texture2D" uid="uid://h7h3c8pdqs6o" path="res://assets/graphics/environment/wood_arrow.png" id="7_se0vu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s4s5u"]
 texture = ExtResource("1_573g3")
@@ -382,3 +383,13 @@ energy = 2.0
 texture = ExtResource("5_t32ul")
 texture_scale = 0.4
 script = ExtResource("7_qtd21")
+
+[node name="Arrow1" type="Sprite2D" parent="."]
+position = Vector2(4219, 607)
+scale = Vector2(0.395, 0.395)
+texture = ExtResource("7_se0vu")
+
+[node name="Arrow2" type="Sprite2D" parent="."]
+position = Vector2(1984, 606)
+scale = Vector2(0.395, 0.395)
+texture = ExtResource("7_se0vu")
