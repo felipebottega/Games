@@ -8,7 +8,7 @@ Para inserir múltiplas linguagens no seu jogo, o approach mais comum é fazer i
   <img width="550" src="https://github.com/user-attachments/assets/ca98a28b-f6d9-44dc-8808-eeb1ec75e27e" />
 </p>
 
-Os nomes das colunas não são arbitrários, a engine reonhece a língua através de nomes específicos. Você pode ver quais deve utilizar [neste link](https://docs.godotengine.org/en/stable/tutorials/i18n/locales.html#doc-locales). 
+Os nomes das colunas não são arbitrários, a engine reconhece a língua através de nomes específicos. Você pode ver quais deve utilizar [neste link](https://docs.godotengine.org/en/stable/tutorials/i18n/locales.html#doc-locales). 
 
 > PS: Todo arquivo CSV será considerado como um arquivo de tradução de linguagem pela engine. 
 
