@@ -1,6 +1,6 @@
 # Importing translations
 
-Por enquanto vamos apenas ter uma ideia geral da funcinalidade de múltiplas linguagens no jogo, com o intuito de mostrar as opções de import. Mais para frente teremos tutoriais voltados para ver isso mais a fundo.
+Por enquanto vamos apenas ter uma ideia geral da funcionalidade de múltiplas linguagens no jogo, com o intuito de mostrar as opções de import. Mais para frente teremos tutoriais voltados para ver isso mais a fundo.
 
 Para inserir múltiplas linguagens no seu jogo, o approach mais comum é fazer isso através de um arquivo CSV. Cada índice contém um identificador único da palavra/frase da linha e cada coluna está associada a uma língua. A imagem abaixo mostra um exemplo claro da estrutura.
 
