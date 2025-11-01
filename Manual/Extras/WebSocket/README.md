@@ -73,9 +73,9 @@ Depois disso quem toma conta de tudo é o `_process`, todas as chamadas seguinte
 A função `handle_received_data` é responsável por receber e trtar a resposta do servidor. Esta resposta vem como uma string que precisa ser convertida em dicionário. A função `send_dummy_inputs` envia os inputs para o servidor. Note que eles são aleatórios pois este é um exemplo dummy, nada de fato acontece. Por fim, a função `handle_disconnection` trata a desconexão com o servidor. Ela é chamada quando o jogo é encerrado. 
 
 <p align="center">
-    <img width="500" src="https://github.com/user-attachments/assets/0e93bf77-cc26-4d88-b592-2e9e22d9cf44" />
-    <img width="550" src="https://github.com/user-attachments/assets/d7db08e4-87e5-4772-a4b5-004d5a220efc" />
-    <img width="400" src="https://github.com/user-attachments/assets/b636556d-922a-49f3-9906-7beee861a61c" />
+    <img width="560" src="https://github.com/user-attachments/assets/0e93bf77-cc26-4d88-b592-2e9e22d9cf44" />
+    <img width="580" src="https://github.com/user-attachments/assets/d7db08e4-87e5-4772-a4b5-004d5a220efc" />
+    <img width="420" src="https://github.com/user-attachments/assets/b636556d-922a-49f3-9906-7beee861a61c" />
 </p>
 
 > PS: Note que a variável *waiting_server* é fundamental para garantir que a engine só envie novos inputs quando os inputs anteriores já foram tratados. Sem essa variável de controle, a engine pode enviar múltiplos inputs enquanto as respostas ainda estão sendo calculadas, e esse acúmulo de requisições entra em uma fila que eventualmente irá estourar e matar a aplicação.
