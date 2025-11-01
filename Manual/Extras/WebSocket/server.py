@@ -1,7 +1,7 @@
-from fastapi import FastAPI, WebSocket
-import asyncio
 import json
+import asyncio
 import uvicorn
+from fastapi import FastAPI, WebSocket
 
 app = FastAPI()
 
