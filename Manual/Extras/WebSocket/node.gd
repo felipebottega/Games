@@ -1,17 +1,21 @@
 extends Node
 
-@export var websocket_url : String = "ws://127.0.0.1:8000/ws"  # URL do servidor WebSocket
-var socket : WebSocketPeer  # Instância do cliente WebSocket
-var connected : bool = false  # Flag de conexão
-var frame_count : int = 0  # Contador de frames
-var send_timer : float = 0.0  # Timer para envio periódico
+@export var websocket_url : String = "ws://127.0.0.1:8000/ws"    # url do servidor WebSocket
+var socket : WebSocketPeer    # instância do cliente WebSocket
+var connected : bool = false    # flag de conexão
+var frame_count : int = 0    # contador de frames
+var send_timer : float = 0.0    # timer para envio periódico
+var waiting_server = false    # flag de espera do servidor
 
 func _ready():
-	socket = WebSocketPeer.new()  # Cria a instância
-	connect_to_server()  # Conecta ao servidor
+	socket = WebSocketPeer.new()  # cria a instância
+	connect_to_server()  # conecta ao servidor
 
-# Conexão WebSocket
 func connect_to_server():
+	"""
+	Conexão WebSocket.
+	"""
+	
 	var err = socket.connect_to_url(websocket_url)
 	if err != OK:
 		push_error("❌ Falha ao conectar ao servidor WebSocket!")
@@ -19,7 +23,7 @@ func connect_to_server():
 	print("Tentando conectar ao servidor WebSocket...")
 
 func _process(delta):
-	socket.poll()  # Processa eventos pendentes
+	socket.poll()  # processa eventos pendentes
 
 	match socket.get_ready_state():
 		WebSocketPeer.STATE_OPEN:
@@ -35,22 +39,32 @@ func _process(delta):
 			# Envia dummy data a cada 1 segundo
 			send_timer += delta
 			if send_timer >= 1.0:
-				send_dummy_inputs()
-				send_timer = 0.0
+				if not waiting_server:
+					send_dummy_inputs()
+					send_timer = 0.0
 
 		WebSocketPeer.STATE_CLOSING, WebSocketPeer.STATE_CLOSED:
 			if connected:
 				handle_disconnection()
 
-# Processa dados recebidos
 func handle_received_data(msg: String):
+	"""
+	Processa dados recebidos do servidor.
+	"""
+	
 	var data = JSON.parse_string(msg)
 	if data:
 		for npc_data in data.get("results", []):
 			print("NPC", npc_data["npc_id"], "→ ação:", npc_data["action"])
 
-# Envia dados dummy
+	# Libera flag de espera do servidor.
+	waiting_server = false
+
 func send_dummy_inputs():
+	"""
+	Envia dados para o servidor.
+	"""
+	
 	if not connected:
 		return
 
@@ -61,11 +75,18 @@ func send_dummy_inputs():
 			"npc_id": i,
 			"inputs": [sin(frame_count * 0.1 + i), cos(frame_count * 0.1 + i)]
 		})
+		
+	send_to_server(batch)
 
+func send_to_server(batch):
+	waiting_server = true
 	var payload = {"batch": batch}
-	socket.send_text(JSON.stringify(payload))  # envia como texto, não binário
-
-# Trata desconexão
+	socket.send_text(JSON.stringify(payload))
+	
 func handle_disconnection():
+	"""
+	Trata desconexão.
+	"""
+	
 	print("⚠️ Desconectado do servidor WebSocket")
 	connected = false
