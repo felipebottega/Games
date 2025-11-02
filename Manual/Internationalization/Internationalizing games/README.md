@@ -40,4 +40,45 @@ Note que adicionamos um ícone ao node de áudio, que é um `Button`.
 
 ## Script inicial
 
+Inicialmente o script é o que está mostrado abaixo. Ele apenas altera o texto do node *TextLabel*, incluindo o valor associado à chave *KEY_TEXT* após o texto. A linguagem default é inglês. Se você checar o csv, verá que o texto associado à chave *KEY_TEXT* é a string "This is translated!". Então é assim que começa a cena, por default.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/288bfccb-26cf-4596-83f4-a36a9b5093af" />
+  <img width="500" src="https://github.com/user-attachments/assets/e642fbb3-06da-468a-8919-1ccd372cdf0b" />
+  <img width="700" src="https://github.com/user-attachments/assets/08dd7aca-0bb7-4a3b-8940-e818e2b2eb5f" />
+</p>
+
+A função `tr` é a responsável por acessar o csv e selecionar a tradução de acordo com a linguagem que está sendo utilizada no momento.
+
+## Sinais para alterar a linguagem
+
+Para cada botão, vamos criar um sinal `pressed` para alterar a linguagem. Para a inglês, por exemplo, selecione o node do botão e depois vá para *Node → BaseButton → pressed* e crie o sinal no script do node principal.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/4ebb58da-a11d-4732-b532-2e17431ef981" />
+  <img width="650" src="https://github.com/user-attachments/assets/e37c5e47-48fb-49cf-a0ea-ef22b1d2a89f" />
+</p>
+
+Seu script principal deve estar como mostrado abaixo. A função `TranslationServer.set_locale` é nativa de Godot e serve justamente para alterar a linguagem utilizada no jogo. Repit este procedimento para os outros botões, colocando a linguagem correspondente.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/592a5c03-a545-4030-a798-14efd29239ae" />
+</p>
+
+Curiosamente, após estas alterações, os textos associados às chaves *KEY_HELLO* e *KEY_PUSH* na imagem abaixo são alteradas, mas não a do texto ao lado (*KEY_TEXT*). Isto ocorre porque as duas chaves já estão imbutidas no node, enquanto que a terceira começa vazia e apenas no `_ready` um valor é inserido ali.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/8a875cb6-4284-499d-8870-34a769b33f1c" />
+  <img width="700" src="https://github.com/user-attachments/assets/394097a2-169e-4c38-89eb-28d471831fb1" />
+</p>
+
+## _notification
+
+O problema acima pode ser resolvido com a função nativa `_notification`. Basicamente é uma função que fica escutando notificações emitidas pelo jogo durante a execução. O argumento de entrada desta função é um número inteiro associado ao evento que foi notificado. Uma lista completa das notificações e seus número pode ser vista [aqui](https://docs.godotengine.org/en/stable/classes/class_node.html). No nosso caso, queremos o evento *NOTIFICATION_TRANSLATION_CHANGED*, que é associado ao número 2010. Podemos usar o número ou a própria variável *NOTIFICATION_TRANSLATION_CHANGED* nativa de Godot que representa este número. 
+
+Logo após as funções dos sinais, adicionamos a função abaixo. Ela ficaraá escutando as notificações. Quando a notificação desejada ocorrer, ela chama a função para atualizar a mensagem de acordo com a nova linguagem selecionada.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/f8dfdd34-6e3d-46fc-8069-14f6a60591fa" />
+</p>
 
