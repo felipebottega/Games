@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://8n3co3kjwlxv"]
+
+[ext_resource type="Script" uid="uid://dlsd5c5dt4xl8" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://co4bxk08xgwc" path="res://assets/speaker.png" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://h1m4vydikakj" path="res://assets/flag_uk.png" id="2_jyhfs"]
+[ext_resource type="AudioStream" uid="uid://cjq3wj2u3pnr6" path="res://assets/hello_en.wav" id="3_tbgi4"]
+
+[node name="TranslationDemo" type="Node2D"]
+script = ExtResource("1_jyhfs")
+metadata/_edit_vertical_guides_ = [260.0]
+metadata/_edit_horizontal_guides_ = [421.0]
+
+[node name="English" type="Button" parent="."]
+offset_left = 56.0
+offset_top = 50.0
+offset_right = 166.0
+offset_bottom = 81.0
+text = "ENGLISH"
+
+[node name="Spanish" type="Button" parent="."]
+offset_left = 56.0
+offset_top = 100.0
+offset_right = 166.0
+offset_bottom = 131.0
+text = "SPANISH
+"
+
+[node name="Japanese" type="Button" parent="."]
+offset_left = 56.0
+offset_top = 150.0
+offset_right = 166.0
+offset_bottom = 181.0
+text = "JAPANESE"
+
+[node name="Description" type="Label" parent="."]
+offset_left = 259.0
+offset_top = 28.0
+offset_right = 871.0
+offset_bottom = 259.0
+text = "This is a demo of how a game can be internationalized.
+Translations are created in a CSV file and then imported into Godot.
+
+Godot allows internationalized text to change automatically when the locale is
+modified. Resources can also be set internationalized alternatives and replaced
+automatically on locale change."
+
+[node name="HSeparator" type="HSeparator" parent="."]
+offset_left = 56.0
+offset_top = 279.0
+offset_right = 1109.0
+offset_bottom = 339.0
+
+[node name="HelloText" type="Label" parent="."]
+offset_left = 259.0
+offset_top = 345.0
+offset_right = 346.0
+offset_bottom = 368.0
+text = "KEY_HELLO"
+
+[node name="PlayAudio" type="Button" parent="."]
+offset_left = 260.0
+offset_top = 390.0
+offset_right = 467.0
+offset_bottom = 421.0
+text = "KEY_PUSH"
+icon = ExtResource("1_sugp2")
+
+[node name="Flag" type="Sprite2D" parent="."]
+position = Vector2(119, 378)
+texture = ExtResource("2_jyhfs")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tbgi4")
+
+[node name="TextLabel" type="Label" parent="."]
+offset_left = 518.0
+offset_top = 328.0
+offset_right = 1024.0
+offset_bottom = 421.0
+text = "This text is being translated through script:
+"
+
+[connection signal="pressed" from="English" to="." method="_on_english_pressed"]
+[connection signal="pressed" from="Spanish" to="." method="_on_spanish_pressed"]
+[connection signal="pressed" from="Japanese" to="." method="_on_japanese_pressed"]
+[connection signal="pressed" from="PlayAudio" to="." method="_on_play_audio_pressed"]

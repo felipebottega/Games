@@ -11,8 +11,21 @@ config_version=5
 [application]
 
 config/name="Internationalizing games"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_height=600
+
+[internationalization]
+
+locale/translation_remaps={
+"res://assets/flag_uk.png": PackedStringArray("res://assets/flag_spain.png:es_ES", "res://assets/flag_japan.png:ja_JP"),
+"res://assets/hello_en.wav": PackedStringArray("res://assets/hello_es.wav:es_ES", "res://assets/hello_jp.wav:ja_JP")
+}
+locale/translations=PackedStringArray("res://assets/text.en.translation", "res://assets/text.es.translation", "res://assets/text.ja.translation")
 
 [rendering]
 
