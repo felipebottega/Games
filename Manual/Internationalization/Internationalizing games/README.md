@@ -25,7 +25,7 @@ Depois do import do csv ter sido efetuado, vá em *Project Settings → Localiza
 
 ## Nodes da cena
 
-A maioria dos nodes da cena já são conhecidos: `Button`, `Label` e `AudioStreamPlayer`. As novidades são o uso do `HSeparator` e o `TextureRect`. O primeiro é simples, é apenas uma linha horizontal na cena, como podemos ver abaixo. 
+A maioria dos nodes da cena já são conhecidos: `Button`, `Label` e `AudioStreamPlayer`. A única novidade é o uso do `HSeparator`, que é apenas uma linha horizontal na cena, como podemos ver abaixo. 
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/5d174913-2a02-4fc8-8193-e7d0a3b8f61f" />
@@ -55,7 +55,7 @@ A função `tr` é a responsável por acessar o csv e selecionar a tradução de
 Para cada botão, vamos criar um sinal `pressed` para alterar a linguagem. Para a inglês, por exemplo, selecione o node do botão e depois vá para *Node → BaseButton → pressed* e crie o sinal no script do node principal.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/4ebb58da-a11d-4732-b532-2e17431ef981" />
+  <img width="200" src="https://github.com/user-attachments/assets/73fb9829-1a33-4514-b5e9-9dc5c0973a65" />
   <img width="650" src="https://github.com/user-attachments/assets/e37c5e47-48fb-49cf-a0ea-ef22b1d2a89f" />
 </p>
 
@@ -72,6 +72,12 @@ Curiosamente, após estas alterações, os textos associados às chaves *KEY_HEL
   <img width="700" src="https://github.com/user-attachments/assets/394097a2-169e-4c38-89eb-28d471831fb1" />
 </p>
 
+Também adicione um sinal de `pressed` para tocar o áudio.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/462153e6-e592-407c-9bd1-a18e212d0988" />
+</p>
+
 ## _notification
 
 O problema acima pode ser resolvido com a função nativa `_notification`. Basicamente é uma função que fica escutando notificações emitidas pelo jogo durante a execução. O argumento de entrada desta função é um número inteiro associado ao evento que foi notificado. Uma lista completa das notificações e seus número pode ser vista [aqui](https://docs.godotengine.org/en/stable/classes/class_node.html). No nosso caso, queremos o evento *NOTIFICATION_TRANSLATION_CHANGED*, que é associado ao número 2010. Podemos usar o número ou a própria variável *NOTIFICATION_TRANSLATION_CHANGED* nativa de Godot que representa este número. 
@@ -82,3 +88,25 @@ Logo após as funções dos sinais, adicionamos a função abaixo. Ela ficaraá 
   <img width="450" src="https://github.com/user-attachments/assets/f8dfdd34-6e3d-46fc-8069-14f6a60591fa" />
 </p>
 
+## Assets associados a linguagens
+
+Podemos ver que, para textos, tudo já está meio que engatilhado na engine. Para assets, como as bandeiras e áudios, o tratamento é diferente. Primeiramente, vá em *Project Settings → Localization → Remaps*. No quadro de cima (*Resources*), coloque os assets da linguagem default. Neste caso é inglês.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/2f473c9f-51b6-4c1b-81c0-981acff4604d" />
+</p>
+
+Feito isso, selecione um dos assets e vá para o quadro de baixo (*Remaps by Locale*). Clique em *Add*, selecione o asset da outra linguagem e selecione a linguagem e localização de acordo. Faça isso para todos os itens.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/dca97d95-3363-441a-b1d2-7bc75e67ad34" />
+</p>
+
+Segue abaixo como devem estar as configurações para as bandeiras e áudios.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/64d8bd41-f878-4363-be36-c4b4b03d31d9" />
+  <img width="800" src="https://github.com/user-attachments/assets/e5367482-dcc6-4168-bc3f-c23ac056c734" />
+</p>
+
+Lembre-se que o áudio é um `AudioStreamPlayer` que inicia com o áudio em inglês automaticamente. Esse remapeamento que fizemos altera este arquivo assim que a linguagem é altera através do `TranslationServer.set_locale` ao pressionar um dos botões de trocar de linguagem. De maneira análoga, a figura da bandeira também é remapeada.
