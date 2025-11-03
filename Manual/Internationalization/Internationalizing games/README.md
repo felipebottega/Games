@@ -110,3 +110,5 @@ Segue abaixo como devem estar as configurações para as bandeiras e áudios.
 </p>
 
 Lembre-se que o áudio é um `AudioStreamPlayer` que inicia com o áudio em inglês automaticamente. Esse remapeamento que fizemos altera este arquivo assim que a linguagem é altera através do `TranslationServer.set_locale` ao pressionar um dos botões de trocar de linguagem. De maneira análoga, a figura da bandeira também é remapeada.
+
+> PS: Os caracteres japoneses não renderizam no HTML. Deve ter um modo de resolver isso mas não me preocupei para esse exemplo. Outra questão é o remap dos áudios no HTML. Por alguma razão o HTML fica travado no primeiro áudio que é tocado.
