@@ -48,7 +48,7 @@ Se habilitado, versões menores da textura serão geradas na importação. Por e
 
 A desvantagem dos mipmaps é que eles aumentam o uso de memória em cerca de $33\%$. É recomendável habilitar os mipmaps em 3D. No entanto, em 2D, isso só deve ser habilitado se o seu projeto se beneficiar visivelmente da ativação dos mipmaps. Se a câmera nunca diminuir o zoom significativamente, não haverá benefício em habilitar mipmaps, mas o uso de memória aumentará.
 
-> PS: Habilitar mipmaps pode fazer com que as texturas pareçam mais desfocadas, mas você pode optar por torná-las mais nítidas (ao custo de alguma granulação) definindo *Project → Project Settings → Rendering → Textures → Default Filters → Texture Mipmap Bias* para um valor negativo. 
+> PS: Habilitar mipmaps pode fazer com que as texturas pareçam mais desfocadas, mas você pode optar por torná-las mais nítidas (ao custo de alguma granulação) definindo *Project → Project Settings → General → Rendering → Textures → Default Filters → Texture Mipmap Bias* para um valor negativo. 
 
 ### Roughness
 

@@ -260,7 +260,7 @@ Para implementar a lógica do vento, criamos um `Timer` que muda a força horizo
 
 ## Controles
 
-Nesse jogo eu tentei uma coisa nova, que foi colocar os inputs para reconhecerem gamepads (controles de game, como o do XBox para PC). Não é difícil, basta ir em *Project Settings → Input Map*, escolher a ação que quer e clicar no + à direita (*Add Event*). Isso vai abrir a tela de escutar o comando, e aí é só pressionar o botão correspondente no gamepad. Para relembrar mais em detalhe como configurar, veja [esse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs). 
+Nesse jogo eu tentei uma coisa nova, que foi colocar os inputs para reconhecerem gamepads (controles de game, como o do XBox para PC). Não é difícil, basta ir em *Project → Project Settings → Input Map*, escolher a ação que quer e clicar no + à direita (*Add Event*). Isso vai abrir a tela de escutar o comando, e aí é só pressionar o botão correspondente no gamepad. Para relembrar mais em detalhe como configurar, veja [esse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs). 
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/7833155e-a5cd-41ae-918e-1263a5ecbfd0" />
@@ -288,7 +288,7 @@ Crie uma cena com um único node `AudioStreamPlayer` e configure como mostrado a
   <img width="250" src="https://github.com/user-attachments/assets/043d3b88-9b29-4d9d-a925-b9c16c23280f" />
 </p>
 
-Depois de configurada a cena, precisamos habilitar o autoload para ela. Vá em *Project Settings → Globals*, clique no ícone de pasta para buscar arquivo, selecione a cena *music.tscn* e clique em *+Add*. Isso é o suficiente para termos ela carregando automaticamente no início do jogo e rodando independentemente de qualquer coisa. 
+Depois de configurada a cena, precisamos habilitar o autoload para ela. Vá em *Project → Project Settings → Globals*, clique no ícone de pasta para buscar arquivo, selecione a cena *music.tscn* e clique em *+Add*. Isso é o suficiente para termos ela carregando automaticamente no início do jogo e rodando independentemente de qualquer coisa. 
 
 <p align="center">
   <img width="1200" src="https://github.com/user-attachments/assets/3ea72da1-ac55-423b-8863-5d3e99cd30be" />

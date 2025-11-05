@@ -4,7 +4,7 @@ Uma coisa que eu sempre tive vontade de ter foi um aplicativo para visualizar de
 
 ## Boot Splash 
 
-Boot Splash (ou Boot Splash Screen) é uma tela de carregamento exibida durante a inicialização de um sistema operacional ou de um programa, geralmente antes da interface gráfica principal ser carregada. Na Godot o default é aparecer o logo da Godot e o nome "Godot Engine". É possível customizar isso e colocar o que você quiser, basta ir em *Project Settings → Application → Boot Splash*. Ativando as opções avançadas você consegue controlar o tempo mínimo de exibição. Para este projeto, eu gerei um logo baseado no símbolo da integral de uma função, $\int f(x)\ dx$ e deixei para ficar na tela por pelo menos 1 segundo ($1000$ ms).
+Boot Splash (ou Boot Splash Screen) é uma tela de carregamento exibida durante a inicialização de um sistema operacional ou de um programa, geralmente antes da interface gráfica principal ser carregada. Na Godot o default é aparecer o logo da Godot e o nome "Godot Engine". É possível customizar isso e colocar o que você quiser, basta ir em *Project → Project Settings → General → Application → Boot Splash*. Ativando as opções avançadas você consegue controlar o tempo mínimo de exibição. Para este projeto, eu gerei um logo baseado no símbolo da integral de uma função, $\int f(x)\ dx$ e deixei para ficar na tela por pelo menos 1 segundo ($1000$ ms).
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/f72916be-d551-401b-8bf7-1ce61501a358" />

@@ -6,7 +6,7 @@ A Godot possui a funcionalidade da gravar uma gameplay sua. Para isso, clique no
   <img width="350" src="https://github.com/user-attachments/assets/b673deaf-d3bc-4c58-a27a-72ad687d0728" />
 </p>
 
-Após isso, basta executar o jogo. Quando você fechar, o vídeo será salvo. Para que tudo funcione como esperado, é necessário configurar o caminho para o video. Vá em *Project Settings → Editor → Movie Writer → Movie File* e preencha o caminho (relativo) até o arquivo, incluindo o nome do arquivo, que deve ser da extensão *avi*. 
+Após isso, basta executar o jogo. Quando você fechar, o vídeo será salvo. Para que tudo funcione como esperado, é necessário configurar o caminho para o video. Vá em *Project → Project Settings → General → Editor → Movie Writer → Movie File* e preencha o caminho (relativo) até o arquivo, incluindo o nome do arquivo, que deve ser da extensão *avi*. 
 
 ## Customizações na criação de vídeo
 

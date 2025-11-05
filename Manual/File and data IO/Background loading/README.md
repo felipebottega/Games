@@ -107,7 +107,7 @@ A cena do jogo possui 4 objetos com partículas: *Fireworks, Sparkles, Smoke, Ba
   <img width="190" src="https://github.com/user-attachments/assets/a5f3dba2-032a-4ce0-948e-8913c94d8770" />
 </p>
 
-Primeiro coloque todos os arquivos destas cenas/objetos na pasta *autoload* do projeto. Depois sá em *Project Settings → Globals* e adicione cada um delas como global. Para adicionar, vá no ícone de pasta e selecione o arquivo, e depois clique em *Add* para ele entrar na lista. Ele será referenciado nos scripts através do nome na colune *Name* (é editável). 
+Primeiro coloque todos os arquivos destas cenas/objetos na pasta *autoload* do projeto. Depois sá em *Project → Project Settings → Globals* e adicione cada um delas como global. Para adicionar, vá no ícone de pasta e selecione o arquivo, e depois clique em *Add* para ele entrar na lista. Ele será referenciado nos scripts através do nome na colune *Name* (é editável). 
 
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/57c7c994-1908-4c4b-b472-c48f4bc0a5d8" />
