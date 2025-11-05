@@ -42,7 +42,17 @@ print("{0} health is {1}".format([name, health]))
 Output: Integral health is 1234
 ```
 
-Também é possível fazer isso através de um dicionário, como `"{player_name} health is {player_health}".format({player_name=name, player_health=health})`. 
+Também é possível fazer isso através de um dicionário, como mostrado abaixo.
+
+```
+var name = "Integral"
+var health = 1234
+
+print("{player_name} health is {player_health}".format({player_name=name, player_health=health}))
+
+---------------------------------------
+Output: Integral health is 1234
+```
 
 ## res:// e user://
 
