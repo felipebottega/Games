@@ -17,7 +17,7 @@ Ao import o arquivo csv com as traduções, a engine deve criar automaticamente 
   <img width="200" src="https://github.com/user-attachments/assets/1cc49f8c-c2fe-4a8e-964d-6bd5c2a3a182" />
 </p>
 
-Depois do import do csv ter sido efetuado, vá em *Project Settings → Localization → Translations* e importe todos os arquivos de extensão *translation*. 
+Depois do import do csv ter sido efetuado, vá em *Project Settings → General → Localization → Translations* e importe todos os arquivos de extensão *translation*. 
 
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/0d3d306e-d925-450d-ac7b-3af008a2678f" />
@@ -90,7 +90,7 @@ Logo após as funções dos sinais, adicionamos a função abaixo. Ela ficaraá 
 
 ## Assets associados a linguagens
 
-Podemos ver que, para textos, tudo já está meio que engatilhado na engine. Para assets, como as bandeiras e áudios, o tratamento é diferente. Primeiramente, vá em *Project Settings → Localization → Remaps*. No quadro de cima (*Resources*), coloque os assets da linguagem default. Neste caso é inglês.
+Podemos ver que, para textos, tudo já está meio que engatilhado na engine. Para assets, como as bandeiras e áudios, o tratamento é diferente. Primeiramente, vá em *Project Settings → General → Localization → Remaps*. No quadro de cima (*Resources*), coloque os assets da linguagem default. Neste caso é inglês.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/2f473c9f-51b6-4c1b-81c0-981acff4604d" />
@@ -112,3 +112,20 @@ Segue abaixo como devem estar as configurações para as bandeiras e áudios.
 Lembre-se que o áudio é um `AudioStreamPlayer` que inicia com o áudio em inglês automaticamente. Esse remapeamento que fizemos altera este arquivo assim que a linguagem é altera através do `TranslationServer.set_locale` ao pressionar um dos botões de trocar de linguagem. De maneira análoga, a figura da bandeira também é remapeada.
 
 > PS: Os caracteres japoneses não renderizam no HTML. Deve ter um modo de resolver isso mas não me preocupei para esse exemplo. Outra questão é o remap dos áudios no HTML. Por alguma razão o HTML fica travado no primeiro áudio que é tocado.
+
+## Outras funcionalidades
+
+  1. O comando `OS.get_locale_language()` sempre retorna a localidade de onde o jogador está. Isto pode ser útil para fazer com que o jogo já inicie com a linguagem local do jogador automaticamente.
+
+  2. No [tutorial de file paths](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects) nós vimos como usar strings formatadas através de dicionários. Isso é bastante conveniente para tradutores já que tudo é referenciado por keywords. O código abaixo funciona perfeitamente com o csv mostrado logo depois. A engine primeiro usa a chave `{character} picked up the {weapon}` e a linguagem para buscar a string correspondente. Como essa string ainda é ums string formatada, a engine busca novamente no csv as traduções para as chaves `{character}` e `{weapon}`.
+
+<p align="center">
+  <img width="650" src="https://github.com/user-attachments/assets/4663f113-b3a0-4486-85f4-135bb6afffc3" />
+  <img width="750" src="https://github.com/user-attachments/assets/da09c306-e0dd-4729-8a5f-e7f05b3ffc1e" />
+</p>
+
+> PS: Ao atualizar o csv, é necessário apagar os arquivos importados para a engine reimportar e depois repetir os passos da seção "Assets" para incluir os arquivos *translate* no projeto (exclua os antigos).
+
+  3. O *break iterator data* é um conjunto de regras e dicionários linguísticos usados pela ICU (International Components for Unicode) para determinar onde uma palavra ou linha pode ser quebrada corretamente. Isso é importante porque nem todas as línguas usam espaços entre palavras, por exemplo o japonês e o chinês. Para incluí-lo, vá em *Project Settings → General → Internationalization → Locale → Include Text Server Data*. Isso é necessário para exportar o jogo, pois durante a edição ele já fica habilitado. 
+
+Os temas de contexto, pluralização, texto bidirecional, espelhamento, texto BiDi foram explicitamente evitados pois são muito específicos e de pouca aplicação.
