@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://2mpmkyvbq76v"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 82.0
+offset_top = 267.0
+offset_right = 492.0
+offset_bottom = 413.0
+text = "When creating a game, the process of localization usually starts when development has finished.
+
+This means that translations aren't available during development for testing whether the project is internationalized properly."
+alignment = 0
