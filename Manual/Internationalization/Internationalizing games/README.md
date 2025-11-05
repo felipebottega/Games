@@ -126,6 +126,8 @@ Lembre-se que o áudio é um `AudioStreamPlayer` que inicia com o áudio em ingl
 
 > PS: Ao atualizar o csv, é necessário apagar os arquivos importados para a engine reimportar e depois repetir os passos da seção "Assets" para incluir os arquivos *translate* no projeto (exclua os antigos).
 
-  3. O *break iterator data* é um conjunto de regras e dicionários linguísticos usados pela ICU (International Components for Unicode) para determinar onde uma palavra ou linha pode ser quebrada corretamente. Isso é importante porque nem todas as línguas usam espaços entre palavras, por exemplo o japonês e o chinês. Para incluí-lo, vá em *Project Settings → General → Internationalization → Locale → Include Text Server Data*. Isso é necessário para exportar o jogo, pois durante a edição ele já fica habilitado. 
+  3. O *break iterator data* é um conjunto de regras e dicionários linguísticos usados pela ICU (International Components for Unicode) para determinar onde uma palavra ou linha pode ser quebrada corretamente. Isso é importante porque nem todas as línguas usam espaços entre palavras, por exemplo o japonês e o chinês. Para incluí-lo, vá em *Project Settings → General → Internationalization → Locale → Include Text Server Data*. Isso é necessário para exportar o jogo, pois durante a edição ele já fica habilitado.
+  
+  4. Para testar o jogo em outra linguagem, você pode alterar a linguagem inicial indo em *Project Settings → General → Internationalization → Locale → Test* e colocando a sigla da linguagem desejada. Não se esqueça de deixar este campo em vazio após os testes.
 
 Os temas de contexto, pluralização, texto bidirecional, espelhamento, texto BiDi foram explicitamente evitados pois são muito específicos e de pouca aplicação.
