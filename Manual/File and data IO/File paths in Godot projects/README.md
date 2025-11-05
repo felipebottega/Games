@@ -42,6 +42,8 @@ print("{0} health is {1}".format([name, health]))
 Output: Integral health is 1234
 ```
 
+Também é possível fazer isso através de um dicionário, como `"{player_name} health is {player_health}".format({player_name=name, player_health=health})`. 
+
 ## res:// e user://
 
 De maneira simples e direta, `res://` é a raíz dos arquivos do projeto e `user://` é a raíz dos arquivos dos jogador em relação ao projeto. Esperamos que em `user://` sejam armazenadas coisas como saves, configuração do jogo, entre outros. Em desktop, o `user://` se encontra em uma pasta específica, a depender do sistema operacional.
