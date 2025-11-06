@@ -411,7 +411,7 @@ sources/2 = SubResource("TileSetAtlasSource_say14")
 sources/0 = SubResource("TileSetAtlasSource_sipmi")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sipmi"]
-size = Vector2(121.5, 46.25)
+size = Vector2(114, 46.25)
 
 [node name="Tower" type="Node2D"]
 
@@ -434,15 +434,15 @@ tile_set = SubResource("TileSet_40rka")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(782, 115.5)
+position = Vector2(778.5, 115.5)
 shape = SubResource("RectangleShape2D_sipmi")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1351.5, -270.75)
+position = Vector2(1347, -270.75)
 shape = SubResource("RectangleShape2D_sipmi")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1408.75, -1024.88)
+position = Vector2(1405, -1024.88)
 shape = SubResource("RectangleShape2D_sipmi")
 
 [node name="Arrow1" type="Sprite2D" parent="."]

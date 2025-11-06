@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://vtwwr1dhp155"]
+[gd_scene load_steps=17 format=4 uid="uid://vtwwr1dhp155"]
 
 [ext_resource type="Texture2D" uid="uid://bfb68yur5681j" path="res://assets/graphics/environment/fort_of_illusion_files/all-props.png" id="1_573g3"]
 [ext_resource type="Texture2D" uid="uid://cfn10c33i2jsc" path="res://assets/graphics/environment/fort_of_illusion_files/front.png" id="2_ycjrx"]
@@ -312,6 +312,9 @@ tile_size = Vector2i(15, 15)
 sources/1 = SubResource("TileSetAtlasSource_0pxfe")
 sources/2 = SubResource("TileSetAtlasSource_0rdu0")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtd21"]
+size = Vector2(387, 48)
+
 [node name="Bridge" type="Node2D"]
 
 [node name="TileMapLayerBack" type="TileMapLayer" parent="."]
@@ -393,3 +396,13 @@ texture = ExtResource("7_se0vu")
 position = Vector2(1984, 606)
 scale = Vector2(0.395, 0.395)
 texture = ExtResource("7_se0vu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1785.5, 445)
+shape = SubResource("RectangleShape2D_qtd21")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6165, 449)
+shape = SubResource("RectangleShape2D_qtd21")

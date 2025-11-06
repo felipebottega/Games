@@ -248,9 +248,9 @@ sources/3 = SubResource("TileSetAtlasSource_winis")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vr11k"]
 particle_flag_disable_z = true
-emission_shape = 1
-emission_sphere_radius = 100.0
-gravity = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(90, 1, 1)
+gravity = Vector3(0, -800, 0)
 scale_max = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vr11k"]
@@ -341,11 +341,12 @@ texture = ExtResource("5_852dt")
 position = Vector2(-2379, 765)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="AccelerationArea"]
-position = Vector2(-19, 0)
+position = Vector2(6, 69)
+amount = 20
 process_material = SubResource("ParticleProcessMaterial_vr11k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AccelerationArea"]
-position = Vector2(-18.5, 346.5)
+position = Vector2(9.5, 346.5)
 shape = SubResource("RectangleShape2D_vr11k")
 
 [node name="FireLight" type="Node2D" parent="."]
