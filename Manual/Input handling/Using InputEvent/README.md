@@ -54,4 +54,40 @@ O `InputEventJoypadButton` é um tipo de evento de input que representa o ato de
   <img width="410" src="https://github.com/user-attachments/assets/1f52aa74-ded0-412e-af79-ea3c4a9480dc" />
 </p>
 
+## Pipeline dos eventos de input
 
+Quando um é enviado pelo jogador, ele passa por várias camadas da engine. Cada camada tem os seus propósitos e prioridade (recebem o input antes das outras). Além disso, é possível trabalhar o sinal de input em uma camada e cancelar a sua propagação para as próximas camadas. A Godot usa essas camadas para organizar a lógica de como os eventos são tratados (a questão de latência não é relevante).
+
+A figura abaixo (do manual oficial) ilustra a disposição das camadas, de cima para baixo. No que diz respeito ao desenvolvimento, apenas a camada *Input Event* em diante é possível de se manipular. As camadas anteriores a essa basicamente lidam com todo o caminho entre o usuário e a entrada do sinal na engine. Uma vez que o sinal foi capturado e teve um tratamento preliminar para virar um `InputEvent`, aí sim entra o dev.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/d69efe51-8e03-4b35-81dc-633c0fb93c4f" />
+</p>
+
+### Input Event
+
+Todo `InputEvent` primeiro é passado para os nodes que implementaram o método nativo `_input(event)`. Todos os códigos dos exemplos acima utilizaram este método. Esta camada é utilizada para interceptação global. Pode ser utilizada para debugar ou detecção geral de pressionar teclas. Se quiser que o input não propague para as camadas seguintes, você pode usar o comando `get_viewport().set_input_as_handled()`. Abaixo, segue um exemplo de código atuando nesta camada.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/288ffaca-76e0-4e38-98d1-534462c0934b" />
+</p>
+
+### GUI Event
+
+Após a camada *Input Event*, temos a camada da GUI ("Graphical User Interface"). Esta é a camada da interface visual: botões, menus, painéis, etc. A classe responsável por lidar com isso é a `Control`, mas ela será abordada melhor em outro momento. O input é passado para os nodes que implementaram o método nativo `_gui_input(event)`. Abaixo, segue um exemplo de código em um `Button`.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/faf18850-9c60-408b-9066-10d89b979d51" />
+</p>
+
+Repare como está a nossa árvore de nodes até agora. Só temos os 2 nodes mencionados acima e o node raíz. Se deixarmos os scripts do jeito que estão acima, o botão não vai reagir ao clique pois a primeira camada "consumiu" o evento com o `get_viewport().set_input_as_handled()`. Se você quiser ver o clique funcionando no botão, deve comentar este comando, aí as duas camadas vão reagir ao clique do mouse.
+
+<img width="234" height="122" alt="image" src="https://github.com/user-attachments/assets/31c22056-ea0a-4691-a899-0f00ab1153b4" />
+
+### Shortcut Input Event
+
+Esta camada é específica para atalhos de teclado ou gamepad. Na minha opinião ela é desnecessária, pois basta colocar estes comandos na camada *Unhandled Key Input Event*, logo a seguir.
+
+### Unhandled Key Input Event
+
+Esta camada é específica para eventos de teclado que ainda não fora consumidos pelas camadas anteriores. O input é passado para os nodes que implementaram o método nativo `_unhandled_key_input(event)`.
