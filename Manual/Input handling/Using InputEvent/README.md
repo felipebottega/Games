@@ -99,7 +99,7 @@ Esta camada é específica para atalhos de teclado ou joystick. Na minha opiniã
 Esta camada é específica para eventos de teclado que ainda não fora consumidos pelas camadas anteriores. O input é passado para os nodes que implementaram o método nativo `_unhandled_key_input(event)`. Abaixo, segue um exemplo de código atuando nesta camada.
 
 <p align="center">
-  <img width="310" src="https://github.com/user-attachments/assets/ef2c1c91-3991-4baa-855a-17f4107b32d9" />
+  <img width="390" src="https://github.com/user-attachments/assets/ef2c1c91-3991-4baa-855a-17f4107b32d9" />
 </p>
 
 ### Unhandled Input Event
@@ -107,7 +107,7 @@ Esta camada é específica para eventos de teclado que ainda não fora consumido
 Se o evento ainda não foi consumido por nenhuma das camadas anteriores, ele chega nessa camada genérica. Aqui qualquer tipo de input é tratado: teclado, mouse, joystick, etc. O input é passado para os nodes que implementaram o método nativo `_unhandled_input(event)`. Abaixo, segue um exemplo de código atuando nesta camada.
 
 <p align="center">
-  <img width="310" src="https://github.com/user-attachments/assets/d97dd2bf-fa3b-4454-b815-ad6040f78aaf" />
+  <img width="360" src="https://github.com/user-attachments/assets/d97dd2bf-fa3b-4454-b815-ad6040f78aaf" />
 </p>
 
 ### Physycs Picking Event
@@ -115,7 +115,7 @@ Se o evento ainda não foi consumido por nenhuma das camadas anteriores, ele che
 Se o evento de input ainda não foi tratado, a engine pode efetuar o *picking*, que é a detecção de colisão com clique do mouse. Isso é útil quando você quer eu um objeto físico responda ao input.  O input é passado para os nodes que implementaram o método nativo `_input_event(event)` e que ativaram a propriedade *Pickable*. Você pode ativar esta propriedade pelo *Inspector*.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/ce052cff-187d-4445-bac8-5a6a9bff4b76" />
+  <img width="200" src="https://github.com/user-attachments/assets/ce052cff-187d-4445-bac8-5a6a9bff4b76" />
 </p>
 
 Abaixo, segue um exemplo de código atuando nesta camada. Note ativamos a propriedade *Pickable* por código. Esse approach é interessante quando queremos ativar e desativar este comportamento dinamicamente durante o jogo. 
