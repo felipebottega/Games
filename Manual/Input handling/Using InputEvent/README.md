@@ -69,25 +69,57 @@ A figura abaixo (do manual oficial) ilustra a disposição das camadas, de cima 
 Todo `InputEvent` primeiro é passado para os nodes que implementaram o método nativo `_input(event)`. Todos os códigos dos exemplos acima utilizaram este método. Esta camada é utilizada para interceptação global. Pode ser utilizada para debugar ou detecção geral de pressionar teclas. Se quiser que o input não propague para as camadas seguintes, você pode usar o comando `get_viewport().set_input_as_handled()`. Abaixo, segue um exemplo de código atuando nesta camada.
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/288ffaca-76e0-4e38-98d1-534462c0934b" />
+  <img width="610" src="https://github.com/user-attachments/assets/288ffaca-76e0-4e38-98d1-534462c0934b" />
 </p>
+
+> PS: O comando `get_viewport().set_input_as_handled()` pode ser utilizado em qualquer camada para consumir o evento, assim ele não segue adiante para os próximas camadas.
 
 ### GUI Event
 
 Após a camada *Input Event*, temos a camada da GUI ("Graphical User Interface"). Esta é a camada da interface visual: botões, menus, painéis, etc. A classe responsável por lidar com isso é a `Control`, mas ela será abordada melhor em outro momento. O input é passado para os nodes que implementaram o método nativo `_gui_input(event)`. Abaixo, segue um exemplo de código em um `Button`.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/faf18850-9c60-408b-9066-10d89b979d51" />
+  <img width="310" src="https://github.com/user-attachments/assets/faf18850-9c60-408b-9066-10d89b979d51" />
 </p>
 
 Repare como está a nossa árvore de nodes até agora. Só temos os 2 nodes mencionados acima e o node raíz. Se deixarmos os scripts do jeito que estão acima, o botão não vai reagir ao clique pois a primeira camada "consumiu" o evento com o `get_viewport().set_input_as_handled()`. Se você quiser ver o clique funcionando no botão, deve comentar este comando, aí as duas camadas vão reagir ao clique do mouse.
 
-<img width="234" height="122" alt="image" src="https://github.com/user-attachments/assets/31c22056-ea0a-4691-a899-0f00ab1153b4" />
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/31c22056-ea0a-4691-a899-0f00ab1153b4" />
+</p>
+
+> PS: Por default, a GUI sempre consome os inputs. Há alguma maneiras de liberar a propagação entre nodes GUI, mas ainda assim é limitado. Se você pretende usar o input para interagir na GUI e em outras camadas, é melhor algum dos métodos seguintes para atuar na GUI.
 
 ### Shortcut Input Event
 
-Esta camada é específica para atalhos de teclado ou gamepad. Na minha opinião ela é desnecessária, pois basta colocar estes comandos na camada *Unhandled Key Input Event*, logo a seguir.
+Esta camada é específica para atalhos de teclado ou joystick. Na minha opinião ela é desnecessária, pois basta colocar estes comandos em alguma das duas camadas a seguir.
 
 ### Unhandled Key Input Event
 
-Esta camada é específica para eventos de teclado que ainda não fora consumidos pelas camadas anteriores. O input é passado para os nodes que implementaram o método nativo `_unhandled_key_input(event)`.
+Esta camada é específica para eventos de teclado que ainda não fora consumidos pelas camadas anteriores. O input é passado para os nodes que implementaram o método nativo `_unhandled_key_input(event)`. Abaixo, segue um exemplo de código atuando nesta camada.
+
+<p align="center">
+  <img width="310" src="https://github.com/user-attachments/assets/ef2c1c91-3991-4baa-855a-17f4107b32d9" />
+</p>
+
+### Unhandled Input Event
+
+Se o evento ainda não foi consumido por nenhuma das camadas anteriores, ele chega nessa camada genérica. Aqui qualquer tipo de input é tratado: teclado, mouse, joystick, etc. O input é passado para os nodes que implementaram o método nativo `_unhandled_input(event)`. Abaixo, segue um exemplo de código atuando nesta camada.
+
+<p align="center">
+  <img width="310" src="https://github.com/user-attachments/assets/d97dd2bf-fa3b-4454-b815-ad6040f78aaf" />
+</p>
+
+### Physycs Picking Event
+
+Se o evento de input ainda não foi tratado, a engine pode efetuar o *picking*, que é a detecção de colisão com clique do mouse. Isso é útil quando você quer eu um objeto físico responda ao input.  O input é passado para os nodes que implementaram o método nativo `_input_event(event)` e que ativaram a propriedade *Pickable*. Você pode ativar esta propriedade pelo *Inspector*.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/ce052cff-187d-4445-bac8-5a6a9bff4b76" />
+</p>
+
+Abaixo, segue um exemplo de código atuando nesta camada. Note ativamos a propriedade *Pickable* por código. Esse approach é interessante quando queremos ativar e desativar este comportamento dinamicamente durante o jogo. 
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/0fdb9f97-ba6c-49ae-9602-1c035a5e81fd" />
+</p>
