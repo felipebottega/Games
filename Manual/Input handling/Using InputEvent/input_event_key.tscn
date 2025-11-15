@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://rep88yq6r71r"]
+
+[ext_resource type="Script" uid="uid://cnuoy015llhon" path="res://input_event_key.gd" id="1_tvnde"]
+
+[node name="InputEventKey" type="Node"]
+script = ExtResource("1_tvnde")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3lj8elk47j5j"]
+
+[ext_resource type="Script" uid="uid://v2hbvslkqbqc" path="res://input_event_joypad_button.gd" id="1_hyjwg"]
+
+[node name="InputEventJoypadButton" type="Node"]
+script = ExtResource("1_hyjwg")

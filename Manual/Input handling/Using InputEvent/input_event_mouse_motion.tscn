@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://e6mhfrkbstvl"]
+
+[ext_resource type="Script" uid="uid://hm6uykka4xf" path="res://input_event_mouse_motion.gd" id="1_x7oq0"]
+
+[node name="InputEventMouseMotion" type="Node"]
+script = ExtResource("1_x7oq0")
