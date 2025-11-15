@@ -136,6 +136,11 @@ Os *input actions* (*ações de input*) são um agrupamento de `InputEvent` sob 
 
 Já vimos como criar estes agrupamentos nos tutoriais [Using TileMaps - Game](https://github.com/felipebottega/Games/blob/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game/README.md), [2D movement overview](https://github.com/felipebottega/Games/blob/gh-pages/Manual/2D/2D%20movement%20overview/README.md#clicar-e-mover) e [Movements 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs), então não vou repetir como funciona.
 
-Qualquer um destes eventos criados possui os mesmos métodos que o `InputEvent`, como o `is_action()`, `is_pressed()` e `is_echo()`.
+Para lidar com *ações de input*, usamos classe `Input`. Esta classe possui bastante coisa para ver na [sua documentação](https://docs.godotengine.org/en/stable/classes/class_input.html). Neste tutorial, iremos apenas passar pelos métodos que foram utilizados até o momento.
+
+  - **Input.is_action_pressed:**
+  - **Input.is_action_just_pressed:**
+  - **Input.get_vector:**
+  - **Input.get_axis:**
 
 ⚠️ **Atenção:** O usual é utilizar as *ações de input* para os comandos da gameplay, que são tratados de maneira "contínua", enquanto que os *eventos de input* são para inputs específicos do jogo. Por isso, os *eventos de input* ficam nas funções descritas anteriormente e as *ações de input* ficam no `_process` ou `_physics_process`.
