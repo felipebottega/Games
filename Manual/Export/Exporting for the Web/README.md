@@ -19,3 +19,5 @@ Tudo que temos para falar sobre exportar jogos para a Web pode ser colocado em u
 7. Browsers só tocam áudios do jogo após o usuário interagir. Por conta disso, deixe um botão para o usuário clicar para começar o jogo. Caso contrário, você corre o risco de ter a sua abertura ou menu rodando totalmente no silêncio.
 8. Fique atento aos *addons* que usa, pois nem todos funcionam em jogos Web (o perigo é que as mensagens de erro podem não ajudar a detectar que o problema é o addon).
 9. Depois de ter exportado seu jogo como HTML5 (com o nome *index.html*), você pode ir na pasta do jogo, abrir o *cmd* e executar o comando `python -m http.server`. Esse comando roda o seu jogo em um servidor local através da porta $8000$. Assim você pode testá-lo pelo endereço *http://127.0.0.1:8000/*.
+
+> PS: Se quiser especificar a porta, use o comando `python -m http.server {porta}`.
