@@ -138,4 +138,4 @@ Já vimos como criar estes agrupamentos nos tutoriais [Using TileMaps - Game](ht
 
 Qualquer um destes eventos criados possui os mesmos métodos que o `InputEvent`, como o `is_action()`, `is_pressed()` e `is_echo()`.
 
-⚠️ **Atenção:** O usual é utilizar as *ações de input* para os comandos da gamplay, que são tratados de maneira "contínua", enquanto que os *eventos de input* são para inputs específicos do jogo. Por isso, os *eventos de input* ficam nas funções descritas anteriormente e as *ações de input* ficam no `_process` ou `_physics_process`.
+⚠️ **Atenção:** O usual é utilizar as *ações de input* para os comandos da gameplay, que são tratados de maneira "contínua", enquanto que os *eventos de input* são para inputs específicos do jogo. Por isso, os *eventos de input* ficam nas funções descritas anteriormente e as *ações de input* ficam no `_process` ou `_physics_process`.
