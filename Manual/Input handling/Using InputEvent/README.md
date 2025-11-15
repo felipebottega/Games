@@ -149,4 +149,4 @@ Abaixo segue um código minimal com aplicação dos métodos descritos acima.
   <img width="550" src="https://github.com/user-attachments/assets/435b784f-0c38-4cad-8d12-11b35e998a04" />
 </p>
 
-⚠️ **Atenção:** O usual é utilizar as *ações de input* para os comandos da gameplay, que são tratados de maneira "contínua", enquanto que os *eventos de input* são para inputs específicos do jogo. Por isso, os *eventos de input* ficam nas funções descritas anteriormente e as *ações de input* ficam no `_process` ou `_physics_process`.
+⚠️ **Atenção:** O usual é utilizar as *ações de input* para os comandos da gameplay, que são tratados de maneira "contínua", enquanto que os *eventos de input* são para inputs específicos do jogo. Por isso, os *eventos de input* ficam nas funções descritas anteriormente e as *ações de input* ficam no `_process` ou `_physics_process`. Você pode considerar que as *ações de input* são executadas em paralelo aos *eventos de input*, por isso aquela hierarquia de camadas não se aplica aqui.
