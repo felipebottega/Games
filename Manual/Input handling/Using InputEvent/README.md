@@ -125,3 +125,15 @@ Abaixo, segue um exemplo de código atuando nesta camada. Note ativamos a propri
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/0fdb9f97-ba6c-49ae-9602-1c035a5e81fd" />
 </p>
+
+## Input actions
+
+Os *input actions* (*ações de input*) são um agrupamento de `InputEvent` sob um mesmo título (por exemplo, o input default "ui_left" agrupa tanto a entrada do joystick quanto a tecla de seta esquerda do teclado). Os principais benefícios deste approach são:
+
+ 1. Permitir que o mesmo código funcione em diferentes dispositivos com diferentes entradas (por exemplo, teclado no PC, joystick no console).
+ 2. Permitir que a entrada seja reconfigurada em tempo de execução.
+ 3. Permitir que ações sejam acionadas programaticamente em tempo de execução.
+
+Já vimos como criar estes agrupamentos nos tutoriais [Using TileMaps - Game](https://github.com/felipebottega/Games/blob/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game/README.md), [2D movement overview](https://github.com/felipebottega/Games/blob/gh-pages/Manual/2D/2D%20movement%20overview/README.md#clicar-e-mover) e [Movements 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs), então não vou repetir como funciona.
+
+Qualquer um destes eventos criados possui os mesmos métodos que o `InputEvent`, como o `is_action()`, `is_pressed()` e `is_echo()`.
