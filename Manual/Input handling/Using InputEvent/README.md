@@ -138,9 +138,15 @@ Já vimos como criar estes agrupamentos nos tutoriais [Using TileMaps - Game](ht
 
 Para lidar com *ações de input*, usamos classe `Input`. Esta classe possui bastante coisa para ver na [sua documentação](https://docs.godotengine.org/en/stable/classes/class_input.html). Neste tutorial, iremos apenas passar pelos métodos que foram utilizados até o momento.
 
-  - **Input.is_action_pressed:**
-  - **Input.is_action_just_pressed:**
-  - **Input.get_vector:**
-  - **Input.get_axis:**
+  - **Input.is_action_pressed:** A entrada desta função é a string com o nome da ação de input. Retorna True se você está pressionando o input, caso contrário, retorna False.
+  - **Input.is_action_just_pressed:** A entrada desta função é a string com o nome da ação de input. Retorna True apenas na primeira vez que você está pressionando o input. A diferença entre esta chamada e a anterior é que se você chamar ambas em um `_process`, a anterior vai retornar True a cada frame, enquanto que esta só retornará True no primeiro frame.
+  - **Input.get_vector:** A entrada desta função são 4 strings com os nomes respectivos para $x$ negativo, $x$ positivo, $y$ negativo e $y$ positivo (a ordem importa). Ela retorna um vetor 2D com a direção pressionada (teclado ou joystick). 
+  - **Input.get_axis:** A entrada desta função são 2 strings, a primeira para uma direção negativa e a segunda para uma direção positiva. Ela retorna $-1$ quando o primeiro input é pressionado e $1$ quando o segundo é pressionado.
+
+Abaixo segue um código minimal com aplicação dos métodos descritos acima.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/435b784f-0c38-4cad-8d12-11b35e998a04" />
+</p>
 
 ⚠️ **Atenção:** O usual é utilizar as *ações de input* para os comandos da gameplay, que são tratados de maneira "contínua", enquanto que os *eventos de input* são para inputs específicos do jogo. Por isso, os *eventos de input* ficam nas funções descritas anteriormente e as *ações de input* ficam no `_process` ou `_physics_process`.
