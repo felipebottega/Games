@@ -47,6 +47,10 @@ O script deve ser criado sobre o `Node2D` e na cena inicial deste tutorial. Os p
 
 O atributo `transform` é interpretado em Godot como a matriz $2 \times 3$ dada por $\left[ e_1, e_2, v_o \right]$. Assim como temos a posição local dos objetos (em relação ao pai), também temos a posição global deles, que são as coordenadas em relação ao mundo real. O primeiro se chama *Item Coordinates* (ou *CanvasItem Coordinates*) e o segundo se chama *Canvas Coordinates* (ou *World Coordinates*). Temos também o *Viewport Coordinates*, que são as coordenadas da viewport (a tela que o jogador enxerga). Vale a penaa checar [esta explicação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items) para lembrar a diferença destes últimos dois sistemas. Por fim, vale notar que o *Viewport Coordinates* é um sistema de coordenadas dentro da engine, para edição. Quando o jogo de fato vai para a tela do jogador, podemos ter diferentes resoluções. Aí entra o último sistema de coordenadas, que é o *Screen Coordinates* (ou *Pixel Coordinates*). É recomendado nunca se trabalhar com este último sistema de coordenadas diretamente.
 
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/858f2685-18c5-4fe6-879c-97000889e6a9" />
+</p>
+
 Por estarmos no contexto de álgebra linear, sabemos que existem matrizes de conversão de coordenadas. A matriz que converte as coordenadas locais em globais é dada por `get_global_transform()`, e a matriz que converte coordenadas globais em locais é dada por `get_global_transform().affine_inverse()`. Obviamente, temos que `get_global_transform().affine_inverse()` = `get_global_transform()`$^{-1}$.
 
 O script abaixo mostra todas as informações discutidas aqui. Ao executarmos o script na cena *World*, o vetor $v_o$ se descolou para $(44, 112)$, que é a translação que de fato fizemos com o `Node2D` nesta cena. Daí temos que <p align="center">`get_global_transform()` $\cdot [(1, 0),\ (0, 1),\ (485, 243)] = [(1, 0),\ (0, 1),\ (529, 355)]$.</p> 
