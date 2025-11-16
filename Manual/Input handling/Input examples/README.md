@@ -26,7 +26,7 @@ Este tutorial consiste apenas de um pequeno conjunto de dicas sobre inputs. List
   <img width="570" src="https://github.com/user-attachments/assets/3d0b16bc-4938-4a65-9ac7-54f7899bcf5b" />
 </p>
 
-  5. O link ( @GlobalScope_MouseButton)[https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-mousebutton] contém diversas constantes de identificação de botões de mouse. Note que o scroll (wheel) do mouse também é considerado um botão do mouse. Um exemplo simples de aplicação é dado abaixo.
+  5. O link [@GlobalScope_MouseButton](https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-mousebutton) contém diversas constantes de identificação de botões de mouse. Note que o scroll (wheel) do mouse também é considerado um botão do mouse. Um exemplo simples de aplicação é dado abaixo.
 
 <p align="center">
   <img width="580" src="https://github.com/user-attachments/assets/f3e9decc-e32a-4826-a3cd-fc725d43f9e8" />
