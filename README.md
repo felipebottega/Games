@@ -165,7 +165,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items
 ">  Viewport e Canvas items
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport.canvas_transform
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewportcanvas_transform
 ">  Viewport.canvas_transform
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#canvaslayers
@@ -696,7 +696,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#preload-e-load-em-loops
 ">  preload e load em loops
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#get_tree().change_scene_to_file()-e-get_tree().change_scene_to_packed()
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#get_tree()change_scene_to_file()-e-get_tree()change_scene_to_packed()
 ">  get_tree().change_scene_to_file() e get_tree().change_scene_to_packed()
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#resourceloader
