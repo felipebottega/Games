@@ -381,6 +381,20 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a> </li>
 <li> Manual\Audio\Audio buses: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses">  Testando o som do seu audio bus
  </a> </li>
+<li> Manual\Audio\Audio streams: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20streams">  AudioStreamPlayer2D
+ </a> </li>
+<li> Manual\Audio\Audio streams: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20streams">  Propriedades do AudioStreamPlayer2D
+ </a> </li>
+<li> Manual\Export\Exporting for Windows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20Windows">  Changing the executable icon
+ </a> </li>
+<li> Manual\Export\Exporting for Windows: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20Windows">  Copiando cenas entre projetos e problemas com uid
+ </a> </li>
+<li> Manual\Export\Exporting packs, patches, and mods: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20packs,%20patches,%20and%20mods">  Exportando o executável sem gerar o PCK
+ </a> </li>
+<li> Manual\Export\Exporting projects: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20projects">  Básico de exportação
+ </a> </li>
+<li> Manual\Export\Exporting projects: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20projects">  Configuration files 
+ </a> </li>
 <li> Manual\Extras\Audio Server: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server">  Atributos do Audio Server
  </a> </li>
 <li> Manual\Extras\Audio Server: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server">  Métodos do Audio Server
@@ -410,5 +424,111 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D"> # Smoothing
  </a> </li>
 <li> Manual\Extras\Camera2D: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D">  Zoom via script
+ </a> </li>
+<li> Manual\Extras\WebSocket: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/WebSocket">  Preparando o servidor backend em Python
+ </a> </li>
+<li> Manual\Extras\WebSocket: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/WebSocket">  Preparando o frontend na engine
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  preload
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  load
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  preload e load em loops
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  get_tree().change_scene_to_file() e get_tree().change_scene_to_packed()
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  ResourceLoader
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  Tabela comparativa dos tipos de carregamento
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  Testes
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">  Método esperto de pré-carregamento 
+ </a> </li>
+<li> Manual\File and data IO\Background loading: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading"> # Adicionando cenas no Autoload
+ </a> </li>
+<li> Manual\File and data IO\File paths in Godot projects: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects">  Principais métodos de caminhos
+ </a> </li>
+<li> Manual\File and data IO\File paths in Godot projects: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects">  Strings contendo variáveis
+ </a> </li>
+<li> Manual\File and data IO\File paths in Godot projects: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects">  res:// e user://
+ </a> </li>
+<li> Manual\File and data IO\File paths in Godot projects: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects">  Varredura pelos arquivos
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Cenário inicial
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Personagem
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Paralaxe
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Segundo cenário
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Background geral
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Terceiro cenário
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Último cenário
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Queda no abismo
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games"> # Problemas ao inserir novas animações no AnimatedSprite2D
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games"> # Animação nova
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games"> # Transição para o cenário inicial
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  NPCs e checkpoints
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Save game
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Load game
+ </a> </li>
+<li> Manual\File and data IO\Saving games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games">  Final do jogo
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent">  Tipos de eventos de input
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # InputEvent
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # InputEventKey
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # InputEventMouseButton
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # InputEventMouseMotion
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # InputEventJoypadMotion
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # InputEventJoypadButton
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent">  Pipeline dos eventos de input
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # Input Event
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # GUI Event
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # Shortcut Input Event
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # Unhandled Key Input Event
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # Unhandled Input Event
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent"> # Physycs Picking Event
+ </a> </li>
+<li> Manual\Input handling\Using InputEvent: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent">  Input actions
+ </a> </li>
+<li> Manual\Internationalization\Internationalizing games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games">  Assets 
+ </a> </li>
+<li> Manual\Internationalization\Internationalizing games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games">  Nodes da cena
+ </a> </li>
+<li> Manual\Internationalization\Internationalizing games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games">  Script inicial
+ </a> </li>
+<li> Manual\Internationalization\Internationalizing games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games">  Sinais para alterar a linguagem
+ </a> </li>
+<li> Manual\Internationalization\Internationalizing games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games">  _notification
+ </a> </li>
+<li> Manual\Internationalization\Internationalizing games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games">  Assets associados a linguagens
+ </a> </li>
+<li> Manual\Internationalization\Internationalizing games: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games">  Outras funcionalidades
+ </a> </li>
+<li> Manual\Internationalization\Pseudolocalization: <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Pseudolocalization">  Habilitando a pseudolocalização
  </a> </li>
 </ul>
