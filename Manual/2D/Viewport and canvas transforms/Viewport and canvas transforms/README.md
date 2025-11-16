@@ -51,7 +51,9 @@ O atributo `transform` é interpretado em Godot como a matriz $2 \times 3$ dada 
   <img width="800" src="https://github.com/user-attachments/assets/858f2685-18c5-4fe6-879c-97000889e6a9" />
 </p>
 
-Por estarmos no contexto de álgebra linear, sabemos que existem matrizes de conversão de coordenadas. A matriz que converte as coordenadas locais em globais é dada por `get_global_transform()`, e a matriz que converte coordenadas globais em locais é dada por `get_global_transform().affine_inverse()`. Obviamente, temos que `get_global_transform().affine_inverse()` = `get_global_transform()`$^{-1}$.
+Por estarmos no contexto de álgebra linear, sabemos que existem matrizes de conversão de coordenadas. A matriz que converte as coordenadas locais em globais é dada por `get_global_transform()`, e a matriz que converte coordenadas globais em locais é dada por `get_global_transform().affine_inverse()`. Obviamente, temos que `get_global_transform().affine_inverse()` = `get_global_transform()`$^{-1}$. A matriz que converte as coordenadas locais nas coordenadas da viewport é dada por `get_global_transform_with_canvas()`.
+
+> Dica: Um bom exemplo que deixa claro a diferença entre os sistemas de coordenadas é o de um `CharacterBody2D` com uma `Camera2D` e um objeto voador - um`Sprite2D` - seguindo o personagem. Ao se locomover pelo cenário, a coordenada local deste objeto não muda pois ele sempre está fixo em relação ao pai, que é o `CharacterBody2D`. A coordenada global muda, que é a posição do objeto no mundo se alterando enquanto o personagem se locomove pelo mundo. A coordenada da viewport só se altera caso o objeto mude de posição em relação à câmera, pois a câmera enquadra exatamente a viewport do jogo. Se a câmera atingir um limite de tela, por exemplo.
 
 O script abaixo mostra todas as informações discutidas aqui. Ao executarmos o script na cena *World*, o vetor $v_o$ se descolou para $(44, 112)$, que é a translação que de fato fizemos com o `Node2D` nesta cena. Daí temos que <p align="center">`get_global_transform()` $\cdot [(1, 0),\ (0, 1),\ (485, 243)] = [(1, 0),\ (0, 1),\ (529, 355)]$.</p> 
 
