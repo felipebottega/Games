@@ -773,6 +773,27 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#final-do-jogo
 ">  Final do jogo
  </a><br>
+<li> <b>Manual\Input handling\Controllers, gamepads, and joysticks</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#supporting-universal-input
+">  Supporting universal input
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#dead-zone
+">  Dead zone
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#jogo-teste-de-aceleração
+">  Jogo teste de aceleração
+ </a><br>
+<li> <b>Manual\Input handling\Customizing the mouse cursor</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#pelo-project-settings
+">  Pelo Project Settings
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#por-código
+">  Por código
+ </a><br>
+<li> <b>Manual\Input handling\Mouse and input coordinates</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Mouse%20and%20input%20coordinates#mouse-e-coordenadas-da-viewport
+">  Mouse e coordenadas da viewport
+ </a><br>
 <li> <b>Manual\Input handling\Using InputEvent</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent#tipos-de-eventos-de-input
 ">  Tipos de eventos de input
