@@ -19,7 +19,7 @@ Abaixo, segue um pequeno guia de quando usar cada chamada de input. Vimos um pou
 
 Controles com direcional analógico possuem intensidade e por isso devem ser trabalhados com a função `Input.get_action_strength`. Algumas vezes eles podem sofrer do fenômeno chamado de "drifting", em que o analógico envia sinais de intensidade muitos fracos mesmo sem ninguém tocar neles. Isso pode causar leves movimentos contínuos e indesejados no jogo. Para evitar que isso aconteça, é comum se aplicar uma *dead zone*, que é um intervalo de valores onde a intensidade do analógico é considerada zero automaticamente. 
 
-> PS: A função `Input.get_vector` possui o parâmetro **deadzone*. Se você determinar que *deadzone* $=0.5$, por exemplo, então qualquer input com intensidade menor que $0.5$ é considerado como tendo intensidade $0.0$ automaticamente. 
+> PS: A função `Input.get_vector` possui o parâmetro *deadzone*. Se você determinar que *deadzone* $=0.5$, por exemplo, então qualquer input com intensidade menor que $0.5$ é considerado como tendo intensidade $0.0$ automaticamente. 
 
 Por default, todas as *ações de input* da Godot possuem deadzone igual a $0.5$. Você pode alterar isso para cada input no Project Settings.
 
