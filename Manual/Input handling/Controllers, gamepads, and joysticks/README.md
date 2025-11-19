@@ -13,4 +13,4 @@ Abaixo, segue um pequeno guia de quando usar cada chamada de input. Vimos um pou
   - **Input.get_action_strength:** Este é útil para inputs que tem percepção de intensidade, como controle analógico. O argumento de entrada é o nome da ação de input, e ele retorna um valor entre $0$ e $1$, indicando a intensidade do input.
   - **Input.is_action_pressed:** Para inputs digitais/booleanas não-analógicos (apenas valores "pressionado" ou "não pressionado"), como botões de controle, botões de mouse ou teclas de teclado. As intensidades são apenas $0$ ou $1$.
 
-> PS: No caso do `Input.is_action_pressed`, já vimos que ele percebe quando o input continua sendo pressionado em um `InputEvent`, mas isso n~çao vale para joysticks/gamepads. Nesses casos é mais aconselhável usar o *ação de input* em um `_process`.
+> PS: No caso do `Input.is_action_pressed`, já vimos que ele percebe quando o input continua sendo pressionado em um `InputEvent`, mas isso não vale para joysticks/gamepads. Nesses casos é mais aconselhável usar o *ação de input* em um `_process`.
