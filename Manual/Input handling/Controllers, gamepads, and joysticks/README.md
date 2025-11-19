@@ -14,3 +14,15 @@ Abaixo, segue um pequeno guia de quando usar cada chamada de input. Vimos um pou
   - **Input.is_action_pressed:** Para inputs digitais/booleanas não-analógicos (apenas valores "pressionado" ou "não pressionado"), como botões de controle, botões de mouse ou teclas de teclado. As intensidades são apenas $0$ ou $1$.
 
 > PS: No caso do `Input.is_action_pressed`, já vimos que ele percebe quando o input continua sendo pressionado em um `InputEvent`, mas isso não vale para joysticks/gamepads. Nesses casos é mais aconselhável usar uma ação de input em um `_process`.
+
+## Dead zone
+
+Controles com direcional analógico possuem intensidade e por isso devem ser trabalhados com a função `Input.get_action_strength`. Algumas vezes eles podem sofrer do fenômeno chamado de "drifting", em que o analógico envia sinais de intensidade muitos fracos mesmo sem ninguém tocar neles. Isso pode causar leves movimentos contínuos e indesejados no jogo. Para evitar que isso aconteça, é comum se aplicar uma *dead zone*, que é um intervalo de valores onde a intensidade do analógico é considerada zero automaticamente. 
+
+> PS: A função `Input.get_vector` possui o parâmetro **deadzone*. Se você determinar que *deadzone* $=0.5$, por exemplo, então qualquer input com intensidade menor que $0.5$ é considerado como tendo intensidade $0.0$ automaticamente. 
+
+Por default, todas as *ações de input* da Godot possuem deadzone igual a $0.5$. Você pode alterar isso para cada input no Project Settings.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/bc630f2d-27e5-4a52-a9d9-fdda4227634f" />
+</p>
