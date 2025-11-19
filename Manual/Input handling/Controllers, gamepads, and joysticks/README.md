@@ -29,3 +29,17 @@ Por default, todas as *ações de input* da Godot possuem deadzone igual a $0.5$
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/bc630f2d-27e5-4a52-a9d9-fdda4227634f" />
 </p>
+
+## Jogo teste de aceleração
+
+Para testar o conhecimento adquirido aqui, fiz um pequeno "jogo", que é basicamente um sprite que pode se mover pela tela. A ideia é movê-lo com um controle analógico que possua um botão analógico para controlar a aceleração. Para isso, vá em *Project → Project Settings → Input Map* e crie uma ação de input nova.
+
+<p align="center">
+  <img width="830" src="https://github.com/user-attachments/assets/2f057ceb-e1a1-4e50-82c8-1820d7e937aa" />
+</p>
+
+O sprite possui uma velocidade máxima de $500$ pixels/segundo. A aceleração se dá pelo botão novo que configuramos. Note que o sprite fica imóvel mesmo que você pressione os direcionais. Para mover é necessário usar o botão de aceleração, e ele será sensível à intensidade aplicada. 
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/a08a9c31-04d5-4063-ac34-41562ecb8408" />
+</p>
