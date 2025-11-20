@@ -12,4 +12,20 @@ Um exemplo simples, porém importante, é o de mover um ponto em direção a out
   <img width="300" src="https://github.com/user-attachments/assets/e09615b2-b4aa-4027-9e47-a455f1b918ee" />
 </p>
 
-Dado um vetor $A$ em Godot, o método `A.normalized()` retorna a versão normalizada deste vetor, isto é, o vetor com a mesma direção e sentido mas magnitude igual a $1$. Dados dois vetores $A$ e $B$, o método `A.dot(B)` retorna o produto escalar entre eles. Dados dois vetores $A$ e $B$ de 3 dimensões, o método `A.cross(B)` retorna o produto vetorial entre eles.
+Dado um vetor $A$ em Godot, o método `A.normalized()` retorna a versão normalizada deste vetor, isto é, o vetor com a mesma direção e sentido mas magnitude igual a $1$. O método `A.length()` retorna a o comprimento (norma Euclideana) do vetor. Dados dois vetores $A$ e $B$, o método `A.dot(B)` retorna o produto escalar entre eles. Dados dois vetores $A$ e $B$ de 3 dimensões, o método `A.cross(B)` retorna o produto vetorial entre eles.
+
+A Godot apresenta alguns vetores especiais nativos:
+
+  - `Vector2.DOWN` $=(0, 1)$
+  - `Vector2.UP` $=(0, -1)$
+  - `Vector2.RIGHT` $=(1, 0)$
+  - `Vector2.LEFT` $=(-1, 0)$
+  - `Vector2.ONE` $=(1, 1)$
+  - `Vector2.ZERO` $=(0, 0)$
+  - `Vector2.INF` $=(inf, inf)$
+
+## Funções matemáticas
+
+A Godot já tem implementadas algumas funções matemáticas básicas, de escopo global. Algumas delas são `cos, sin, tan, min, max, log, exp, floor, ceil, sqrt, abs`. Para ver a listagem geral, acesse [este link](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html). O uso destas funções é bem direto, então não vou me aprofundar nisto.
+
+## Interpolação
