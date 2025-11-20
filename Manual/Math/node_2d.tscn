@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bghq5fw2k8vcf"]
+
+[ext_resource type="Script" uid="uid://cuyptw56nrn0h" path="res://node_2d.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dx4a8m37vclm" path="res://icon.svg" id="2_0e48y"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wtcfe")
+
+[node name="A" type="Sprite2D" parent="."]
+texture = ExtResource("2_0e48y")
+
+[node name="B" type="Sprite2D" parent="."]
+texture = ExtResource("2_0e48y")
+
+[node name="LabelLinear" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 17.0
+offset_right = 120.0
+offset_bottom = 40.0
+
+[node name="C" type="Sprite2D" parent="."]
+texture = ExtResource("2_0e48y")
+
+[node name="D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0e48y")
+
+[node name="LabelSmooth" type="Label" parent="."]
+offset_left = 514.0
+offset_top = 15.0
+offset_right = 554.0
+offset_bottom = 38.0
