@@ -29,3 +29,13 @@ A Godot apresenta alguns vetores especiais nativos:
 A Godot já tem implementadas algumas funções matemáticas básicas, de escopo global. Algumas delas são `cos, sin, tan, min, max, log, exp, floor, ceil, sqrt, abs`. Para ver a listagem geral, acesse [este link](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html). O uso destas funções é bem direto, então não vou me aprofundar nisto.
 
 ## Interpolação
+
+Dados dois vetores $A$ e $B$, e um escalar $t \in [0, 1]$ o método `A.lerp(B, t)` retorna a interpolação linear $(1-t) \cdot A + t \cdot B$. Nós já vimos [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features) que é possível movimentar objetos no jogo manipulando parâmetros com animação. Em alguns momentos pode ser mais prático fazer isto com código. 
+
+O exemplo abaixo mostra uma aplicação da interpolação linear entre vetores. Note que podemos manipular o parâmetro $t$ antes de entrar na função para que a interpolação fique mais suave (e menos linear).
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/e0252442-ed5a-4b4e-a163-80190007a25e" />
+</p>
+
+## Geração de números aleatórios
