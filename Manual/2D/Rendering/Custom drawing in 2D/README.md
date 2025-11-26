@@ -12,7 +12,7 @@ Os desenhos ficam no espaço de coordenadas do *Canvas Item* (https://github.com
 
 Para desenhar na tela, existem duas chamadas de função básicas. A primeira função é a `_draw`. Ela é chamada apenas uma vez no script e é responsável por determinar o que será desenhado, as instruções. Quando a cena inicia, ela é chamada automaticamente e executa os desenhos na tela. A função `_queue_draw` pode ser chamada diversas vezes, ela é responsável por forçar a `_draw` a ser executada novamente caso seja necessário. 
 
-Todas as instruções de desenho estão na `_draw`, as instruções não mudam. Existem várias maneiras de atualizar o desenho chamando a `_queue_draw` e tendo a mesma `_draw` de base. Uma ideia, por exmeplo, é que se desenhe um conjunto de pontos na tela a partir de uma lista. Nesse caso basta alterar a lista e chamar a `queue_draw` para alterar o desenho. 
+Todas as instruções de desenho estão na `_draw`, as instruções não mudam. Existem várias maneiras de atualizar o desenho chamando a `_queue_draw` e tendo a mesma `_draw` de base. Uma ideia, por exemplo, é que se desenhe um conjunto de pontos na tela a partir de uma lista. Nesse caso basta alterar a lista e chamar a `queue_draw` para alterar o desenho. 
 
 ## draw_polygon
 
