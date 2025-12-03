@@ -6,9 +6,10 @@ var screen_size
 var t = 0
 
 func _ready() -> void:
-	screen_size = get_viewport().size
+	screen_size = get_viewport().get_visible_rect().size
 
 func _physics_process(delta: float) -> void:
+	screen_size = get_viewport().get_visible_rect().size
 	t += delta * speed
 	position.x = screen_size.x/2 + radius * sin(t)
 	position.y =  screen_size.y/2 + radius * cos(t)
