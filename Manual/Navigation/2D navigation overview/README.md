@@ -43,11 +43,18 @@ Vamos esclarecer o que fazem os atributos e métodos utilizados do `NavigationAg
   - **NavigationAgent2D.target_position:** A posição do target a ser perseguido. É importante ressaltar que esta posição será usada no próximo frame, não no frame corrente. Ao alterar a posição do target, no próximo frame será calculada uma nova rota até este novo ponto.
   - **NavigationAgent2D.get_next_path_position():** Retorna o próximo ponto da rota do NPC. Caso ele ainda esteja a caminho deste ponto, ele se mantém repetido entre os frames, a menos que a rota seja alterada.
 
-Abaixo temos uma amostra de como está o nosso jogo até o momento.
+Abaixo temos uma amostra de como está o nosso jogo até o momento. Note que só é possível visualizar a região de navegação indo em *Debug → Visible Navigation*. Normalmente ela fica invisível durante o jogo de verdade.
 
 https://github.com/user-attachments/assets/5b98946a-8c7e-49cf-a937-5c5e842b1294
 
+## Visualizando a rota de navegação
 
+Pelo que foi exposto acima, está claro que a cada frame existe um rota calculada entre o NPC e o target. Porém, esta rota não é visível na engine, é apenas numérico. É possível ativar essa visualização indo em *Inspector → Debug* e ativando a propriedade *Enabled* do `NavigationAgent2D`. Logo abaixo desta propriedade há outras para customizar a aparência do caminho.
 
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/75c9751b-cd7e-4bfb-bdc9-85ca6a10377f" />
+</p>
 
+O resultado final está no video abaixo. 
 
+https://github.com/user-attachments/assets/b02d99cf-1ee9-4717-b581-1f5ecd73a648
