@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://c43x1ylr6g62k"]
+
+[ext_resource type="Script" uid="uid://dpur8osbr1qht" path="res://npc.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://byhyi3jutp5kx" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://c8f2inwi0qqrp" path="res://target.gd" id="3_0hol4"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0e48y"]
+vertices = PackedVector2Array(211, 163.391, 339, 45.7734, 339, 326, 211, 488, 671, 65, 671, 488, 477.609, 450.648, 530, 326, 530, 65, 415.352, 352.281, 356.172, 461, 471.906, 461)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(7, 8, 4), PackedInt32Array(7, 6, 9), PackedInt32Array(2, 7, 9), PackedInt32Array(2, 9, 10, 3), PackedInt32Array(5, 3, 10, 11), PackedInt32Array(5, 11, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(201, 159, 201, 498, 681, 498, 681, 55, 520, 55, 520, 316, 349, 316, 349, 23), PackedVector2Array(466, 451, 373, 451, 416, 372)])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epypp"]
+radius = 53.0094
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_0e48y")
+
+[node name="NPC" type="CharacterBody2D" parent="."]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_epypp")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+shape = SubResource("CircleShape2D_epypp")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPC"]
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.797925, 0.309955, 0.651697, 1)
+debug_path_custom_point_size = 12.0
+debug_path_custom_line_width = 3.0
+
+[node name="Target" type="Sprite2D" parent="."]
+modulate = Color(1, 0.0784314, 0.0784314, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wtcfe")
+script = ExtResource("3_0hol4")
+radius = 300.0

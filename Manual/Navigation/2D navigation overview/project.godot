@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="2D navigation overview"
+run/main_scene="uid://c43x1ylr6g62k"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=900
+window/stretch/mode="viewport"
 
 [rendering]
 
