@@ -8,7 +8,7 @@ Neste tutorial, vamos nos concentrar no `NavigationServer2D`, pois as funcionali
 
 Sempre que um node de navegação é criado, o `NavigationServer2D` cria um objeto interno correspondente. A ligação é feita através de um RID (*Resource ID*), que é um número único que identifica o objeto dentro do servidor. Você pode interpretar o RID como um "ID do banco de dados" dos objetos dentro do servidor (backend) e o node como o frontend.
 
-Nodes possuem métodos como `get_rid()` para expor o RID do objeto. Por exemplo, se você tiver um node `NavigationRegion2D` chamado *navregion* na sua cena, você pode usar o método `$navregion.get_rid()` para obter o RID deste objeto no `NavigationServer2D`.
+Nodes possuem métodos como `get_rid()` para expor o RID do objeto. Por exemplo, se você tiver um node `NavigationRegion2D` chamado *NavRegion* na sua cena, você pode usar o método `$NavRegion.get_rid()` para obter o RID deste objeto no `NavigationServer2D`.
 
 ## call_deferred()
 
