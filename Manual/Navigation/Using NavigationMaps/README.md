@@ -6,4 +6,4 @@ Diferentes `NavigationMap` são completamente isolados uns dos outros, mas as re
 
 ## Default navigation maps
 
-Por default, já existe um `NavigationMap` onde estão as regiões e agentes criados. VocÊ pode obter a RID deste mapa default com o comando `get_world_2d().get_navigation_map()`. Caso queira criar outro `NavigationMap`, utilize o comando `var new_navigation_map: RID = NavigationServer2D.map_create()` para criar o novo mapa e depois `NavigationServer2D.map_set_active(new_navigation_map, true)` para ativar este mapa. 
+Por default, já existe um `NavigationMap` onde estão as regiões e agentes criados. Você pode obter a RID deste mapa default com o comando `get_world_2d().get_navigation_map()`. Caso queira criar outro `NavigationMap`, utilize o comando `var new_navigation_map: RID = NavigationServer2D.map_create()` para criar o novo mapa e depois `NavigationServer2D.map_set_active(new_navigation_map, true)` para ativar este mapa. 
