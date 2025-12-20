@@ -16,4 +16,12 @@ O *baking* pode ser visto como uma compilação dos parâmetros da malha de nave
   <img width="400" src="https://github.com/user-attachments/assets/359340b7-7fe9-4b03-892e-a90d22a795e1" />
 </p>
 
+Clique novamente na aba do `NavigationPolygon` e as opções deste recurso vão aparecer no *Inspector*. Ao alterar estes parâmetros, as mudanças só terão efeito após você fazer um *baking* (botão *Bake NavigationPolygon*, acima da área de desenho) no objeto. Depois disso, você pode alterar o desenho da região à vontade, ela sempre vai respeitar os novos parâmetros definidos.
+
+<p align="center">
+  <img width="400" alt="image" src="https://github.com/user-attachments/assets/ab5da789-1c93-40fe-a9cc-90c562bdd4f8" />
+  <img width="400" alt="image" src="https://github.com/user-attachments/assets/110b372e-9078-467b-91aa-c12b47fa2988" />
+</p>
+
+
 
