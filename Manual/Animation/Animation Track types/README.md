@@ -20,7 +20,7 @@ Na timeline do track *call method*, dê o segundo clique do mouse em algum insta
   <img width="900" src="https://github.com/user-attachments/assets/26c8fbe4-b44b-437e-b8e3-f59a60f061e6" />
 </p>
 
-Para este exemplo, vamos utilizar o método `rotate`. Insira uma keyframe nesta track e vá para o Inspector. Você deve editar o que está em *Args*, que são os parâmetros passados para a função. 
+Para este exemplo, vamos utilizar o método `rotate`. Insira uma keyframe nesta track e vá para o *Inspector*. Você deve editar o que está em *Args*, que são os parâmetros passados para a função. 
 
 ⚠️ **Atenção:** É importante ter em mente que a animação com *call method* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
 
@@ -53,7 +53,7 @@ Para inserir sons na sua animação, é necessário que sua cena tenha um node `
   <img width="300" src="https://github.com/user-attachments/assets/da0669a6-d865-4b97-b10a-5cd0f9e5031f" />
 </p>
 
-Depois disso comece a inserir as keyframes de audio nos instantes que você quiser. Para cada keyframe, no Inspector você pode arrastar o arquivo de áudio normalmente como faria no `AudioStreamPlayer`. Note que o arquivo pode ser diferente em cada keyframe.
+Depois disso comece a inserir as keyframes de audio nos instantes que você quiser. Para cada keyframe, no *Inspector* você pode arrastar o arquivo de áudio normalmente como faria no `AudioStreamPlayer`. Note que o arquivo pode ser diferente em cada keyframe.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/f4830fb0-3724-4167-afae-273239ed5bbe" />
@@ -74,7 +74,7 @@ O *Animation Playback Track* permite sequenciar as animações de outros nodes d
   <img width="650" src="https://github.com/user-attachments/assets/3c7e05de-713c-4627-8e1d-e9246534e8c6" />
 </p>
 
-Dê o clique direito na timeline para inserir uma keyframe no instante onde você que comece a outra animação. Depois disso clique no keyframe e vá para o Inspector para selecionar qual animação você quer tocar. Nesse exemplo nós chamamos a outra animação de "normal", e é ela que selecionaremos.
+Dê o clique direito na timeline para inserir uma keyframe no instante onde você que comece a outra animação. Depois disso clique no keyframe e vá para o *Inspector* para selecionar qual animação você quer tocar. Nesse exemplo nós chamamos a outra animação de "normal", e é ela que selecionaremos.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/6c6d8f2e-1540-4b42-ac54-02fc4a56607e" />

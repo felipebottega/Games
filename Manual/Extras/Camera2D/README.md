@@ -112,7 +112,7 @@ Saber limitar o que a câmera enxerga é o básico para se ter um jogo que não 
 
 ### Drag
 
-Para começar, ative as opções *Draw Limits* e *Draw Drag Margin* no Inspector.
+Para começar, ative as opções *Draw Limits* e *Draw Drag Margin* no *Inspector*.
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/63ae4680-086a-466b-aaaa-5a850356087d" />
@@ -127,7 +127,7 @@ Para ativar o drag vertical ou horizontal, devemos marcar as opções *Drag → 
 
 ### Smoothing
 
-Temos as opções *Position Smoothing* e *Rotation Smoothing* no Inspector. Por default elas vem desativadas. Quando você ativa a *Position Smoothing*, a câmera não acompanha o boneco automaticamente. Ela vai atrás dele com um pouco de atraso, parando suavemente. O mesmo vale para a *Rotation Smoothing*, mas em vez de mudar de posição é em relação a rotação. 
+Temos as opções *Position Smoothing* e *Rotation Smoothing* no *Inspector*. Por default elas vem desativadas. Quando você ativa a *Position Smoothing*, a câmera não acompanha o boneco automaticamente. Ela vai atrás dele com um pouco de atraso, parando suavemente. O mesmo vale para a *Rotation Smoothing*, mas em vez de mudar de posição é em relação a rotação. 
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/2024a1cb-fe1f-41e6-b15b-c8f1c10157f8" />

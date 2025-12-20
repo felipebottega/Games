@@ -37,13 +37,13 @@ Dê o segundo clique do mouse sobre a linha vertical azul no track (essa linha m
   <img width="325" src="https://github.com/user-attachments/assets/c7ce6f08-fb89-4716-8a54-d02ae3ddb4a5" />
 </p>
 
-Agora clique na bolinha e olhe para o Inspector. Estas são as configurações das propriedades do `position` do `Sprite2D` naquele instante marcado. Estamos dizendo à engine que queremos o sprite na origem no instante inicial.
+Agora clique na bolinha e olhe para o *Inspector*. Estas são as configurações das propriedades do `position` do `Sprite2D` naquele instante marcado. Estamos dizendo à engine que queremos o sprite na origem no instante inicial.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/9097e2e8-9439-4684-915e-85f4403d0405" />
 </p>
 
- Agora repita o procedimento para colocar o sprite na posição $(100, 100)$ no instante $1.0$ (em segundos). Se você fez tudo certo, o editor deve estar como mostrado abaixo. Note que não é necessário inserir a bolinha na posição perfeita, pois você pode editar o instante dela no Inspector caso ele fique um pouco deslocada do momento que você queria. Depois disso você já pode dar o play e ver a sua animação acontecer. 
+ Agora repita o procedimento para colocar o sprite na posição $(100, 100)$ no instante $1.0$ (em segundos). Se você fez tudo certo, o editor deve estar como mostrado abaixo. Note que não é necessário inserir a bolinha na posição perfeita, pois você pode editar o instante dela no *Inspector* caso ele fique um pouco deslocada do momento que você queria. Depois disso você já pode dar o play e ver a sua animação acontecer. 
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/09ec1e7e-edbc-4bb5-856d-5b09ba0a3447" />
@@ -147,7 +147,7 @@ Você pode clicar com o segundo clique do mouse na parte da marcação de tempo 
   <img width="500" src="https://github.com/user-attachments/assets/3f933dac-6a2c-425c-8fcd-c07b754208da" />
 </p>
 
-Depois de decidir o nome e a cor do marcador, dê ok. Ele ficará destacado na Timeline com a cor que você escolheu. Ao clicar nele, suas configurações aparecem no Inspector.
+Depois de decidir o nome e a cor do marcador, dê ok. Ele ficará destacado na Timeline com a cor que você escolheu. Ao clicar nele, suas configurações aparecem no *Inspector*.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/fbb637b3-afea-4a13-88f6-7d2df5497114" />
@@ -163,7 +163,7 @@ Marcadores são úteis como ferramentas de edição, quando você quer se concen
 
 ## Keyframes for other properties
 
-Uma maneira de inserir keyframes é indo direto no Inspector do node que tem a propriedade que se quer editar e clicar na chave que aparece ao lado da propriedade. O painel deve animação deve estar aberto, com a marcação do Timeline no instante em que você quer inserir a keyframe. Quando você clica no ícone da chave, ele insere automaticamente o valor naquele instante, no track da propriedade correspondente. Lembre que foi este o método utilizado para inserir sprites na animação vista num [tutorial passado](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animationplayer).
+Uma maneira de inserir keyframes é indo direto no *Inspector* do node que tem a propriedade que se quer editar e clicar na chave que aparece ao lado da propriedade. O painel deve animação deve estar aberto, com a marcação do Timeline no instante em que você quer inserir a keyframe. Quando você clica no ícone da chave, ele insere automaticamente o valor naquele instante, no track da propriedade correspondente. Lembre que foi este o método utilizado para inserir sprites na animação vista num [tutorial passado](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animationplayer).
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/b439c746-7aca-4239-ae31-bbd69002ff7c" />
@@ -181,13 +181,13 @@ A ideia basicamente é selecionar um destes botões, alterar o sprite com a tran
 
 https://github.com/user-attachments/assets/404d1a19-bf9e-4dfc-b2ed-6b03264d5a59
 
-Vamos também aplicar uma rotação na espada, para simular um balanço. Dessa vez usaremos o método ensinado inicialmente. Vamos em *Add Track → Property Track → Sprite2D → Node2D/rotation*. Inserimos o primeiro keyframe no instante zero e sem nenhuma rotação. Depois acrescentamos keyframes nos mesmos instantes onde foram inseridos os keyframes das posições, intercalando entre $45^\circ$ e $-45^\circ$. Note que no Inspector nós temos a curva *Easing* para editar. Ela define o quanto da rotação será aplicado a cada instante. Nesta curva, em particular, adiamos a rotação para ser mais aplicada no fim da animação. Tem como se conseguir diversos efeitos com essa curva. 
+Vamos também aplicar uma rotação na espada, para simular um balanço. Dessa vez usaremos o método ensinado inicialmente. Vamos em *Add Track → Property Track → Sprite2D → Node2D/rotation*. Inserimos o primeiro keyframe no instante zero e sem nenhuma rotação. Depois acrescentamos keyframes nos mesmos instantes onde foram inseridos os keyframes das posições, intercalando entre $45^\circ$ e $-45^\circ$. Note que no *Inspector* nós temos a curva *Easing* para editar. Ela define o quanto da rotação será aplicado a cada instante. Nesta curva, em particular, adiamos a rotação para ser mais aplicada no fim da animação. Tem como se conseguir diversos efeitos com essa curva. 
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/5daed26d-1a38-4ec7-9a03-6d2dae7e1c44" />
 </p>
 
-> PS: A curva *Easing* não depende do método de animação escolhido. Ou seja, podemos ir no Inspector da posição e editar suas curvas também se quisermos.
+> PS: A curva *Easing* não depende do método de animação escolhido. Ou seja, podemos ir no *Inspector* da posição e editar suas curvas também se quisermos.
 
 Enquanto se vai editando, é sempre interessante usar o Onion Skinning para ver se os frames anteriores (vermelho) e posteriores (verde) estão próximos do que você deseja. Note que colocamos a velocidade da animação para $0.5$ segundos por frame (abaixo, na figura). Essa lentidão no FPS ajuda a enxergar frames mais distantes no Onion Skinning.
 

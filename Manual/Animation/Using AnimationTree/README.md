@@ -87,7 +87,7 @@ Para adicionar um ponto de animação, use o botões 2 ou 3, clique no espaço e
   <img width="850" src="https://github.com/user-attachments/assets/72f6c556-9ac3-4558-87c0-0e03fcd66bbe" />
 </p>
 
-> PS: Com o botão 3 selecionado, você pode clicar nos pontos de animação e editar suas propriedades pelo Inspector.
+> PS: Com o botão 3 selecionado, você pode clicar nos pontos de animação e editar suas propriedades pelo *Inspector*.
 
 Mostramos abaixo como é a dinâmica da animação conforme mudamos de posição o *blending point*. Vale destacar que com animações discretas como essa o *Blend Mode* tem que ser discreto. No caso contínuo a a nimação simplesmente desaparece, pois não é possível mesclar esses tipo de animação, ela não muda continuamente.
 

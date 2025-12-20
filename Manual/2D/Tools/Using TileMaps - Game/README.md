@@ -144,13 +144,13 @@ Vamos aproveitar a oportunidade e relembrar o que aprendemos de paralaxe. Usarem
 
 Depois que tiver ajustado corretamente essa camada de nuvens, basta repetir os passos para as outras camadas e adicionar a cena no *Level*. Como elas são background, devem estar acima dos outros nodes na árvore (exceto a raíz).
 
-Assim como utilizamos duas camadas de plantas para dar uma sensação de profundidade, utilizaremos duas camdas de nuvens. Além da sensação de profundidade na cena, também vai mostrar que o cenário se passa num local muito alto (que é a minha intenção). Crie uma nova cena, chamaremos ela de *CloudsFront*. Deixe um `Node2D` como raíz e faça ctrl+C ctrl+V no node de paralaxe *Clouds-3* da cena anterior. Isto vai copiar este objeto de uma cena para a outra. Inverta a escala da eixo $x$ para fazer um flip horizontal na nuvem e deixe tudo menor e posicionado na base da viewport. Feito isso, vá para o Inspector da paralaxe e ajuste o *Repeat Size* do eixo $x$ até ter um encaixe perfeito, aumente o *Repeat Times* para 3 e aumenta a velocidade horizontal dela. Com isso nós teremos um nave à frente do plano, e como fizemos uma inversão dela pelo eixo $x$, ela não vai ficar parecerndo uma cópia miniatura da nuvem de fundo. Isso dará mais autenticidade aos elementos do jogo.
+Assim como utilizamos duas camadas de plantas para dar uma sensação de profundidade, utilizaremos duas camdas de nuvens. Além da sensação de profundidade na cena, também vai mostrar que o cenário se passa num local muito alto (que é a minha intenção). Crie uma nova cena, chamaremos ela de *CloudsFront*. Deixe um `Node2D` como raíz e faça ctrl+C ctrl+V no node de paralaxe *Clouds-3* da cena anterior. Isto vai copiar este objeto de uma cena para a outra. Inverta a escala da eixo $x$ para fazer um flip horizontal na nuvem e deixe tudo menor e posicionado na base da viewport. Feito isso, vá para o *Inspector* da paralaxe e ajuste o *Repeat Size* do eixo $x$ até ter um encaixe perfeito, aumente o *Repeat Times* para 3 e aumenta a velocidade horizontal dela. Com isso nós teremos um nave à frente do plano, e como fizemos uma inversão dela pelo eixo $x$, ela não vai ficar parecerndo uma cópia miniatura da nuvem de fundo. Isso dará mais autenticidade aos elementos do jogo.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/667e2c81-a614-48d0-9739-9f301684b8f6" />
 </p>
 
-Para finalizar, vá no Inspector do sprite da nuvem frontal e acesse a propriedade `Modulate` para alterar um pouco a cor e dar um nível de transparência para a nuvem. 
+Para finalizar, vá no *Inspector* do sprite da nuvem frontal e acesse a propriedade `Modulate` para alterar um pouco a cor e dar um nível de transparência para a nuvem. 
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/2da13abf-7308-45c4-9732-d3cea204916b" />

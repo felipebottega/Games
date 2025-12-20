@@ -6,7 +6,7 @@ Vamos falar sobre sistemas de coordenadas neste tutorial. Começamos inicializan
   <img src="https://github.com/user-attachments/assets/41c58729-46fe-497f-981d-99dfbf2ec4c2" width="600">
 </p>
 
-Se você for no Inspector agora e abrir a aba *Transform* de ambos, as posições deles devem ser $(0, 0)$. A figura abaixo mostra isso, o `Node2D` à esquerda e o `Sprite2D` à direita.
+Se você for no *Inspector* agora e abrir a aba *Transform* de ambos, as posições deles devem ser $(0, 0)$. A figura abaixo mostra isso, o `Node2D` à esquerda e o `Sprite2D` à direita.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/26904547-7b24-4582-acbc-a255593bb572" width="150">
@@ -97,7 +97,7 @@ E como que fica a situação se colocarmos o `Node2D` no *World* e rotacioná-lo
 
 Por mais que a rotação do `Node2D` tenha acrescentado um pouco mais de rotação ao sprite em relação à tela, o ângulo do sprite ainda é de $45^\circ$, pois este é o ângulo em relação ao pai. 
 
-Acredito que não seja necessário levar o `Node2D` para o *World* para checar que este comportamento irá se repetir lá. Inclusive, o experimento da translação poderia ter sido feito na cena do `Node2D`. Se ele for transladado da origem, a posição do sprite continuará a mesma (no `transform` e no Inspector), pois ela sempre é em relação ao node pai. Apenas fizemos aquela mudança de cena para efeito didático, pois é o que vai acontecer mais vezes na prática.
+Acredito que não seja necessário levar o `Node2D` para o *World* para checar que este comportamento irá se repetir lá. Inclusive, o experimento da translação poderia ter sido feito na cena do `Node2D`. Se ele for transladado da origem, a posição do sprite continuará a mesma (no `transform` e no *Inspector*), pois ela sempre é em relação ao node pai. Apenas fizemos aquela mudança de cena para efeito didático, pois é o que vai acontecer mais vezes na prática.
 
 Vale ressaltar que quaisquer outros efeitos de mudar escala e distorção seguem a mesma lógica, isto é, os valores mostrados são os valores em relação ao node pai. Além disso, ressaltamos também que as transformações de converter coordenadas são aplicáveis em tudo o que discutimos até aqui, não apenas translações.
 

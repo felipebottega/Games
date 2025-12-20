@@ -21,7 +21,7 @@ Dentro do `_physics_process` o programa faz as verificações de contagem e velo
 
 > PS: É necessário subtrair 2 da contagem pois ele também está contando os dois corpos estáticos côncavos. Por esse mesmo motivo é necessário usar o `if body is RigidBody2D` na hora de calcular a velocidade, pois os corpos estáticos estão na lista e não possuem velocidade. Isso daria num erro ao executar.
 
-O que fizemos foi adicionar um `Sprite2D` à cena principal e desmarcar o parâmetro *Visible* (está no Inspector, à direita na figura), que por default vem marcado. Assim o sprite começa invisível e apenas se torna visível quando o sinal do `ganhou` é emitido. Note que no script da cena principal está a função que é ativada com o sinal. 
+O que fizemos foi adicionar um `Sprite2D` à cena principal e desmarcar o parâmetro *Visible* (está no *Inspector*, à direita na figura), que por default vem marcado. Assim o sprite começa invisível e apenas se torna visível quando o sinal do `ganhou` é emitido. Note que no script da cena principal está a função que é ativada com o sinal. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/2a0131ee-d9ac-49bb-9cbe-01912afee9fd" width="950">
@@ -29,7 +29,7 @@ O que fizemos foi adicionar um `Sprite2D` à cena principal e desmarcar o parâm
 
 ## Música de background
 
-Para deixar o jogo com cara de finalizado, ele ganhou uma música de background. Adicionamos o node `AudioStreamPlayer` à cena principal e colocamos um mp3 na pasta do projeto, chamado *John Cage in a landscape.mp3*. Você deve arrastar o ícone do arquivo de *FileSystem* para *Stream* na aba Inspector. Depois disso, clique na setinha ao lado e marque a opção *Make Unique*. Eu ainda não sei o motivo, mas isso é necessário para marcar a opção *Loop*, que faz a música se repetir quando acabar. Por fim, marque a opção *Autoplay*, que faz a música começar a tocar assim que a cena é carregada. 
+Para deixar o jogo com cara de finalizado, ele ganhou uma música de background. Adicionamos o node `AudioStreamPlayer` à cena principal e colocamos um mp3 na pasta do projeto, chamado *John Cage in a landscape.mp3*. Você deve arrastar o ícone do arquivo de *FileSystem* para *Stream* na aba *Inspector*. Depois disso, clique na setinha ao lado e marque a opção *Make Unique*. Eu ainda não sei o motivo, mas isso é necessário para marcar a opção *Loop*, que faz a música se repetir quando acabar. Por fim, marque a opção *Autoplay*, que faz a música começar a tocar assim que a cena é carregada. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/6b6cad30-7422-495e-acb7-c2392cd9e777" width="200">
