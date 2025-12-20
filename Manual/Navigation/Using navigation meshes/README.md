@@ -52,5 +52,18 @@ Clique novamente na aba do `NavigationPolygon` e as opções deste recurso vão 
 
 <p align="center">
   <img width="180" alt="image" src="https://github.com/user-attachments/assets/1fdabf69-cfbb-4137-9571-31171b1c1156" />
-  <img width="600" alt="image" src="https://github.com/user-attachments/assets/0fba0705-4a57-4ac4-87b4-6006f7983156" />
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/d1b2a3d4-15fe-4364-8f3a-6343c745630a" />
+</p>
+
+  - **Cells/Cell Size:** Este parâmetro define o tamanho da grade de rasterização e deve corresponder ao tamanho do mapa de navegação. Até o momento eu não vi ele fazer nenhuma diferença. Recomendar deixar no default e não tocar mais.
+  - **Cells/Border Size, Filters:** Para falar do *Border Size* temos que falar das propriedades do *Filters* também. Por default, a engine sempre determina um retângulo oculto que fica envolta da região de navegação. Esse retângulo sempre é calculado automaticamente quando os atributos de *Filters/Baking Rect* estão zerados. A coordenada $(x, y)$ determina o vértice superior esquerda do retângulo, enquanto que os parâmetros *w, h* determinam a largura e a altura, respectivamente. Na figura abaixo, alteramos um pouco estes valores, daí o retângulo fica visível. Note que nem toda a região de navegação foi calculado após o baking por causa do retângulo definido.
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/69e73db4-8cbe-4723-8298-e93e65d95f10" />
+</p>
+
+  O parâmetro *Border Size* determina uma margem a partir do retângulo principal. Isto afeta o baking, podendo gerar regiões de navegações mais limitadas. Veremos mais adiante como isso pode ser útil.
+
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/ea90a88c-0f1f-4465-9d40-16693ccd3db0" />
 </p>
