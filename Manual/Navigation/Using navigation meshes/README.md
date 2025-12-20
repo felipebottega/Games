@@ -67,3 +67,11 @@ Clique novamente na aba do `NavigationPolygon` e as opções deste recurso vão 
 <p align="center">
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/ea90a88c-0f1f-4465-9d40-16693ccd3db0" />
 </p>
+
+  - **Agents/Radius:** É a borda que existe para cada objeto de geometria inserido na região de navegação. A figura abaixo deixa claro como funciona.
+
+<p align="center">
+  <img width="314" alt="image" src="https://github.com/user-attachments/assets/81d78d82-636a-4eab-8914-e8de34227ad7" />
+  <img width="335" alt="image" src="https://github.com/user-attachments/assets/81e9b1d2-19ae-4933-80a9-4c8e597c94b6" />
+  <img width="344" alt="image" src="https://github.com/user-attachments/assets/82ea49e0-3cfd-4586-8a05-1de590d83c0a" />
+</p>
