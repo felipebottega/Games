@@ -12,7 +12,7 @@ O comando `NavigationServer2D.map_get_path(map, from, to, optimize, navigation_l
   - **optimize:** Variável booleana. Se for *true*, usa um algoritmo otimizado de afunilamento ao gerar o caminho. Este é o default do `NavigationAgent2D`. Se for *false*, o caminho sempre passará pelo meio das arestas dos polígonos, sem tentar otimizar nada.
   - **navigation_layers:** É uma bitmask para as regiões de navegação que podem atuar no caminho. Veremos mais sobre isso no próximo tutorial.
 
-> PS: O comando para espaços 3D é totalmente análogo, basta trocar "2D' por "3D" no nome da função.
+> PS: O comando para espaços 3D é totalmente análogo, basta trocar "2D" por "3D" no nome da função.
 
 ## PackedVector2Array 
 
