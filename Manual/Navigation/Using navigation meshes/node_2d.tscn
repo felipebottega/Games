@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq8siunhgjw23"]
+
+[ext_resource type="Texture2D" uid="uid://buf2nktgvmb1b" path="res://icon.svg" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://cw6bi0ypqchfg" path="res://npc.gd" id="2_epypp"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_q6r6c"]
+vertices = PackedVector2Array(505.977, 434.117, 513.953, 270.898, 570.406, 207.141, 684.211, 361.039, 506.117, 505, 829.977, 279.039, 972.094, 234.117, 797.648, 505, 684.172, 55, 758.711, 186.742, 443.359, 311.773, 367.063, 432.43, 663.063, 55, 575.508, 196.328, 205.383, 186.992, 470.961, 215.82, 382.531, 294.727, 367.063, 505, 130, 505, 378.422, 237.18)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 6, 7, 4), PackedInt32Array(8, 6, 5, 9), PackedInt32Array(10, 1, 0, 11), PackedInt32Array(12, 8, 9, 13, 14), PackedInt32Array(14, 13, 2, 15), PackedInt32Array(16, 10, 11), PackedInt32Array(17, 18, 14, 11), PackedInt32Array(16, 11, 14, 19), PackedInt32Array(2, 1, 15), PackedInt32Array(14, 15, 19)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(197, 179, 101, 584, 740, 613, 986, 231, 679, 40), PackedVector2Array(754, 197, 815, 276, 687, 348, 582, 206)])
+source_geometry_mode = 2
+source_geometry_group_name = &"group"
+border_size = 50.0
+baking_rect = Rect2(5, 5, 1200, 550)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
+size = Vector2(123, 123)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_q6r6c")
+
+[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" groups=["group"]]
+polygon = PackedVector2Array(389, 245, 392, 287, 442, 301, 499, 268, 467, 227)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["group"]]
+position = Vector2(437, 502)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_0e48y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(0.150802, -0.880259)
+scale = Vector2(6.09396, 6.14442)
+polygon = PackedVector2Array(-9.86132, -9.53261, -9.86132, 9.03954, 9.69697, 9.03954, 9.65696, -9.2962)
+
+[node name="NPC" type="CharacterBody2D" parent="."]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_epypp")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+texture = ExtResource("1_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_kdubu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPC"]
+debug_enabled = true
+debug_use_custom = true
+
+[node name="Target" type="Sprite2D" parent="."]
+modulate = Color(1, 0.0392157, 0.0588235, 1)
+position = Vector2(513, 604)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0e48y")

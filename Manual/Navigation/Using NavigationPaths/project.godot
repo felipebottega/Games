@@ -10,9 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Using navigation meshes"
-run/main_scene="uid://dq8siunhgjw23"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/name="Using NavigationPaths"
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [rendering]
