@@ -23,3 +23,15 @@ Em relação aos parâmetros, vamos apenas alterar o raio do agente, assim haver
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/f16ff5b0-f0ff-4d26-bf97-1ae36165d081" />
 </p>
+
+### NPC 
+
+Assim como foi anteriormente, o NPC (agente que vai requisitar e percorrer o caminho) será apenas um `CharacterBody2D` com o sprite do logo da Godot. A diferença é que agora não usamos o `NavigationAgent2D`, pois todo caminho será requisitado diretamente do servidor. Desta vez o target será um sprite estático, para simplificar.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/f19253c3-3872-45d4-975a-d5f01d8fadff" />
+</p>
+
+> PS: É recomendado usar *Motion Mode = Floating* no NPC (como mostrado na imagem), assim ele desliza mais facilmente pelos obstáculos.
+
+### 
