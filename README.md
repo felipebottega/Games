@@ -790,6 +790,10 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#por-código
 ">  Por código
  </a><br>
+<li> <b>Manual\Input handling\Handling quit requests</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Handling%20quit%20requests#lidando-com-notificação-para-sair-do-jogo
+">  Lidando com notificação para sair do jogo
+ </a><br>
 <li> <b>Manual\Input handling\Mouse and input coordinates</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Mouse%20and%20input%20coordinates#mouse-e-coordenadas-da-viewport
 ">  Mouse e coordenadas da viewport
@@ -865,5 +869,67 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 <li> <b>Manual\Internationalization\Pseudolocalization</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Pseudolocalization#habilitando-a-pseudolocalização
 ">  Habilitando a pseudolocalização
+ </a><br>
+<li> <b>Manual\Math\Math</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#vetores
+">  Vetores
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#funções-matemáticas
+">  Funções matemáticas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#interpolação
+">  Interpolação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#geração-de-números-aleatórios
+">  Geração de números aleatórios
+ </a><br>
+<li> <b>Manual\Navigation\2D navigation overview</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#navigationregion2d
+">  NavigationRegion2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#navigationagent2d
+">  NavigationAgent2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#visualizando-a-rota-de-navegação
+">  Visualizando a rota de navegação
+ </a><br>
+<li> <b>Manual\Navigation\Using navigation meshes</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20navigation%20meshes#colisão-e-navigation-mesh
+">  Colisão e navigation mesh
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20navigation%20meshes#baking
+">  Baking
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationMaps</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationMaps#default-navigation-maps
+">  Default navigation maps
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationPathQueryObjects</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#navigationpathqueryparameters2d
+">  NavigationPathQueryParameters2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#navigationpathqueryresult2d
+">  NavigationPathQueryResult2D
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationPaths</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path
+">  map_get_path
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#packedvector2array-
+">  PackedVector2Array 
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationRegions</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationRegions#navigationregion-e-global_transform-
+">  NavigationRegion e global_transform 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationRegions#criando-navigationregion-por-código
+">  Criando NavigationRegion por código
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationServer</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#rids
+">  RIDs
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#call_deferred()
+">  call_deferred()
  </a><br>
 </ul>
