@@ -9,3 +9,17 @@ Vimos no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-page
 ## NavigationPathQueryResult2D
 
 `NavigationPathQueryResult2D` é um objeto feito especificamente para receber as saídas da query de uma requisição de caminho no servidor de navegação. Você pode criar uma instância deste objeto com um comando como `var query_result = NavigationPathQueryResult2D.new()`.
+
+## Exemplo prático do NavigationPathQuery
+
+Os dois objetos acima sempre são usados em parceria: um define os inputs e o outro recebe os outputs. Em vez de simplesmente descrever item por item, vamos mostrar na prática como estes objetos são utilizados.
+
+### NavigationRegion
+
+Começamos criando um node raíz do tipo `Node2D` contendo um node `NavigationRegion2D` que chamaremos de *RegionA*. Depois vá em *Inspector → Navigation Polygon → New Navigation Polygon*. Agora desenhe a região de navegação na tela, mas faremos de modo que ela não ocupe muito espaço, pois iremos incluir mais coisas na tela depois. Este procedimento todo foi visto em detalhe [no primeiro tutorial de navegação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#navigationregion2d).
+
+Em relação aos parâmetros, vamos apenas alterar o raio do agente, assim haverá mais espaço para o agente navegar. Não se esqueça que após alterar algum parâmetro da região é necessário aplicar o *Bake NavigationPolygon*.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/f16ff5b0-f0ff-4d26-bf97-1ae36165d081" />
+</p>
