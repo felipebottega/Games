@@ -34,4 +34,12 @@ Assim como foi anteriormente, o NPC (agente que vai requisitar e percorrer o cam
 
 > PS: É recomendado usar *Motion Mode = Floating* no NPC (como mostrado na imagem), assim ele desliza mais facilmente pelos obstáculos.
 
-### 
+### Executando queries
+
+Toda a parte de código ficará em um script único no NPC. A primeira coisa que queremos é a função geral de executar as queries. Ela recebe o objeto de parâmetros e de outputs e retorna um `PackedVector2Array`. Internamente, ela consulta o RID do mapa de navegação e verifica se já passou da iteração zero. Após o mapa ser carregado pela primeira vez, ele sei da iteração zero e vai para 1. Depois disso vai incrementando a cada alteração. Depois disso ele envia os objetos para o servidor e armazena os resultados no objeto `NavigationPathQueryResult2D`. Esta função é bem genérica e direta. 
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/7ee1bbad-32de-4a02-bf12-9b30153795d7" />
+</p>
+
+
