@@ -67,3 +67,9 @@ Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir
   <img width="305" src="https://github.com/user-attachments/assets/54d6673c-7bf9-4c6d-bcd0-4c8fab201c10" />
   <img width="310" src="https://github.com/user-attachments/assets/e5c7567e-5a72-48e3-a106-3bb33d6a1145" />
 </p>
+
+  - **path_return_max_length:** A engine calcula o caminho e retorna só um pedaço dele, com o comprimento estabelecido por este parâmetro, em pixels. O valor $0$ (default) faz o caminho completo ser retornado.
+  - **path_return_max_radius:** A engine calcula o caminho e retorna só um pedaço dele, dentro do raio (ao redor do início do caminho) estabelecido este parâmetro, em pixels. O valor $0$ (default) faz o caminho completo ser retornado.
+  - **path_search_max_distance:** Distância máxima, em pixels, que a engine usa para determinar até qual polígono o caminho será calculado. Nos dois parâmetros anteriores, o caminho completo era calculado mas apenas um pedaço dele era retornado. Com este parâmetro a engine pode calcular caminhos efetivamente menores. O valor $0$ (default) faz o caminho completo ser retornado.
+  - **path_search_max_polygons:** Número máximo de polígonos permitidos para serem usados no cálculo do caminho. Assim como `path_search_max_distance`, este parâmetro pode calcular caminhos efetivamente menores. Esta variável deve ser um número inteiro. O valor $0$ (default) faz o caminho completo ser retornado. 
+  - 
