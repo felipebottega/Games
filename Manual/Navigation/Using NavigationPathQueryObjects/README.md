@@ -51,6 +51,14 @@ Ao executar a requisição acima, não customizamos nenhum parâmetro, a única 
 
 Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir no código.
 
-  - **Pathfinding Algorithm:** Há apenas um algoritmo para calcular o caminho, que é o *Astar* (A*). Apesar de não ter o que modificar, incluímos este parâmetro no tutorial pois pode ser que outros entrem futuramente. Na Godot este parâmetro é dado pela constante `NavigationPathQueryParameters2D.PATHFINDING_ALGORITHM_ASTAR`.
-  - **Path Postprocessing:** Vimos um pouco deste parâmetro [nest tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path). Ele aplica um pós-processamento sobre o caminho calculado. Pode ser um algoritmo otimizado de afunilamento (default), um algoritmo que faz o caminho sempre passar pelo meio das arestas dos polígonos, ou nenhum pós-processamento. As constantes associadas a estas escolhas são `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_CORRIDORFUNNEL`, `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED` e `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_NONE`.
+  - **pathfinding_algorithm:** Há apenas um algoritmo para calcular o caminho, que é o *Astar* (A*). Apesar de não ter o que modificar, incluímos este parâmetro no tutorial pois pode ser que outros entrem futuramente. Na Godot este parâmetro é dado pela constante `NavigationPathQueryParameters2D.PATHFINDING_ALGORITHM_ASTAR`.
+  - **path_postprocessing:** Vimos um pouco deste parâmetro [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path). Ele aplica um pós-processamento sobre o caminho calculado. Pode ser um algoritmo otimizado de afunilamento (default), um algoritmo que faz o caminho sempre passar pelo meio das arestas dos polígonos, ou nenhum pós-processamento. As constantes associadas a estas escolhas são `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_CORRIDORFUNNEL`, `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED` e `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_NONE`.
+  - **simplify_path:** Este parâmetro realiza cálculos adicionais para tentar simplificar o caminho, isto é, deixá-lo com menos pontos. O exemplo abaixo mostra duas versões de um mesmo caminho. Na esquerda temos o default, sem simplificação, e na direita o caminho com simplificação.
 
+<p align="center">
+  <img width="310" src="https://github.com/user-attachments/assets/8aecd11f-e444-4055-818c-685b4d627492" />
+  <img width="310" src="https://github.com/user-attachments/assets/7b06a599-85f4-4495-8c14-54df82d35801" />
+</p>
+
+  - **simplify_epsilon:** Caso `simplify_path` seja *true*, este segundo parâmetro controla o nível da simplificação. Quanto maior, mais intensa é a simplificação.
+  - 
