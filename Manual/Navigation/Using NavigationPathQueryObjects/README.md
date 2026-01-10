@@ -60,5 +60,10 @@ Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir
   <img width="310" src="https://github.com/user-attachments/assets/7b06a599-85f4-4495-8c14-54df82d35801" />
 </p>
 
-  - **simplify_epsilon:** Caso `simplify_path` seja *true*, este segundo parâmetro controla o nível da simplificação. Quanto maior, mais intensa é a simplificação.
-  - 
+  - **simplify_epsilon:** Caso `simplify_path` seja *true*, este segundo parâmetro controla o nível da simplificação. Quanto maior, mais intensa é a simplificação. Abaixo mostramos o que acontece quando a simplificação está ativada, com `simplify_epsilon` igual a $0$, $1$ e $40$, respectivamente (esquerda para a direita).
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/ab6bb0b2-88f8-4cb7-b5e4-2b3ba12f7333" />
+  <img width="305" src="https://github.com/user-attachments/assets/54d6673c-7bf9-4c6d-bcd0-4c8fab201c10" />
+  <img width="310" src="https://github.com/user-attachments/assets/e5c7567e-5a72-48e3-a106-3bb33d6a1145" />
+</p>
