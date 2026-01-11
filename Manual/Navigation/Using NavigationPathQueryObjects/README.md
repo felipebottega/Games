@@ -118,7 +118,7 @@ Ao fazer `navigation_layers` = 8 = 1000, estamos ativando apenas o quarto bit, o
 A parte inicial do código foi ampliada e ficou assim:
 
 <p align="center">
-  <img width="470" src="https://github.com/user-attachments/assets/7481de34-f7a2-4257-935a-fdb67d791bf0" />
+  <img width="470" src="https://github.com/user-attachments/assets/fb5def6b-fc78-4637-916f-d81c4974fc3c" />
   <img width="530" src="https://github.com/user-attachments/assets/17093d25-8d2f-4ea3-bbe7-5d9350805b1a" />
 </p>
 
