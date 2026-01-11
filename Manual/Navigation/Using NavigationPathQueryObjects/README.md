@@ -121,3 +121,14 @@ A parte inicial do código foi ampliada e ficou assim:
    <img width="470" src="https://github.com/user-attachments/assets/157ad58e-2427-499e-a1aa-9d5875a7dbc1" />
    <img width="530" src="https://github.com/user-attachments/assets/17093d25-8d2f-4ea3-bbe7-5d9350805b1a" />
 </p>
+
+### Line2D
+
+Além das ferramentas de desenho vistas em um [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D), a Godot possui um node específico apenas para o desenho de linhas, é o node `Line2D`. Inserimos ele na árvore de nodes ates do NPC, para que o NPC fique por cima da cima. Também alteramos a cor e a grossura da linha no *Inspector*. Também criamos uma função de plot para atualizar as linhas e desenhar pontos de acordo com o caminho calculado. A função `plot_path` é chamada dentro do `_physics_process` logo após a `follow_path`.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/ce9b87d4-667a-45bb-81c3-5c0f3843e115" />
+  <img width="350" src="https://github.com/user-attachments/assets/7542857d-4151-4844-906e-9e4c8d924ca0" />
+  <img width="400" src="https://github.com/user-attachments/assets/5df9335b-de68-4afb-acf1-283eabe01b13" />
+</p>
+
