@@ -78,4 +78,6 @@ Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir
   <img width="250" height="464" alt="image" src="https://github.com/user-attachments/assets/7323aa1b-072b-4582-b9f6-7527c10e0d49" />
 </p>
 
+Considere as duas regiões mostradas abaixo, onde a da esquerda está na região 1 e a da direita está na região 2.
+
 > PS: É importante saber que, internamente, a engine registra "101" como "0...0101", completando com zeros à esquerda de acordo com o número de camadas.
