@@ -158,3 +158,8 @@ Deve-se ter cuidado com os metadados. Ao mudar o que quer receber de metadados, 
   <img width="600" src="https://github.com/user-attachments/assets/2c6968a8-fad2-443a-a814-fbd0566749e5" />
 </p>
 
+Para habilitar a seleção interativa de regiões, usamos o node `ItemList`. Ele ainda não foi visto nos tutoriais passados, mas por enquanto basta saber que se você segurar o *SHIFT*, pode selecionar múltiplas regiões ao mesmo tempo no jogo. A lista `regions_orig`, até então sem uso, entra agora em ação para auxiliar. O objeto `ItemList` faz seleção de strings, não de RIDs. Para implementar a lógica, apenas mapeamos em `regions_orig` quem é a primeira região (*RegionA*) e segunda região (*RegionB*). O seletor nos diz se selecionamos o primeiro ou segundo item, daí é só questão de redefinir o `$NPC.included_regions` ou `$NPC.excluded_regions` de acordo.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/fd1d926a-d387-4cc7-a774-0b725a863443" />
+</p>
