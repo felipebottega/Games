@@ -118,13 +118,15 @@ Ao fazer `navigation_layers` = 8 = 1000, estamos ativando apenas o quarto bit, o
 A parte inicial do código foi ampliada e ficou assim:
 
 <p align="center">
-   <img width="470" src="https://github.com/user-attachments/assets/157ad58e-2427-499e-a1aa-9d5875a7dbc1" />
-   <img width="530" src="https://github.com/user-attachments/assets/17093d25-8d2f-4ea3-bbe7-5d9350805b1a" />
+  <img width="470" src="https://github.com/user-attachments/assets/7481de34-f7a2-4257-935a-fdb67d791bf0" />
+  <img width="530" src="https://github.com/user-attachments/assets/17093d25-8d2f-4ea3-bbe7-5d9350805b1a" />
 </p>
+
+> PS: Note que é necessário usar o `await get_tree().process_frame` (ou alguma solução equivalente) pois a navegação não é carregada logo no primeiro frame. Se não fizéssemos isso, as listas ficariam vazias. Outra coisa importante notar é que inserimos todas as regiões em ambas as listas, isso significa que as regiões serão consideradas excluídas e o NPC não vai sair do lugar. Iremos resolver isso em breve, quando formos falar de HUD.
 
 ### Line2D
 
-Além das ferramentas de desenho vistas em um [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D), a Godot possui um node específico apenas para o desenho de linhas, é o node `Line2D`. Inserimos ele na árvore de nodes ates do NPC, para que o NPC fique por cima da cima. Também alteramos a cor e a grossura da linha no *Inspector*. Também criamos uma função de plot para atualizar as linhas e desenhar pontos de acordo com o caminho calculado. A função `plot_path` é chamada dentro do `_physics_process` logo após a `follow_path`.
+Além das ferramentas de desenho vistas em um [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D), a Godot possui um node específico apenas para o desenho de linhas, é o node `Line2D`. Inserimos ele na árvore de nodes ates do NPC, para que o NPC fique por cima da cima. Também alteramos a cor e a grossura da linha no *Inspector*. Também criamos uma função de plot para atualizar as linhas e desenhar pontos de acordo com o caminho calculado. A função `plot_path` é chamada dentro do `_physics_process` logo após a `follow_path`. Com isso, agora é possível visualizar o caminho que o NPC fará. 
 
 <p align="center">
   <img width="180" src="https://github.com/user-attachments/assets/ce9b87d4-667a-45bb-81c3-5c0f3843e115" />
@@ -132,5 +134,16 @@ Além das ferramentas de desenho vistas em um [tutorial anterior](https://github
   <img width="300" src="https://github.com/user-attachments/assets/5df9335b-de68-4afb-acf1-283eabe01b13" />
 </p>
 
-Com isso, agora é possível editar os parâmetros no *Inspector* e visualizar o caminho que o NPC fará.
+> PS: Note que foi necessário usar a função nativa `to_local` no ponto a ser desenhado. Acontece que o ponto dado pelo servidor sempre é global, mas o ponto a ser desenhado é em coordenadas locais, pois o script está dentro do NPC (se a coordenada global do ponto no caminho é $P$ e a posição do NPC é $Q$, o ponto vai ficar em $P + Q$, não em $P$, como gostaríamos). Essa função converte coordenadas globais em locais, e assim o ponto fica no local correto.
 
+### Movimento por input
+
+Queremos poder analisar com calma o caminho que o NPC vai percorrer. Para isso, vamos controlar a sua velocidade a partir de input do teclado. Ele vai andar quando a tecla D for pressionada, e vai ficar parado quando a tecla for solta. Usaremos o conhecimento do [tutorial de inputs](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent#inputeventkey) nesta parte. A função abaixo faz o serviço.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/fd725471-4ca9-48d9-a0e5-3f3c79556c1b" />
+</p>
+
+### HUD
+
+Teremos um heads-uo-display na cena para poder manipular os parâmetros e ver em tempo real como eles afetam o caminho calculado. Vamos separar os sinais em um script no node raíz da cena, apenas para deixar o projeto mais organizado.
