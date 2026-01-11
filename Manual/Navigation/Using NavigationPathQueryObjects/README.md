@@ -77,3 +77,5 @@ Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir
 <p align="center">
   <img width="250" height="464" alt="image" src="https://github.com/user-attachments/assets/7323aa1b-072b-4582-b9f6-7527c10e0d49" />
 </p>
+
+> PS: É importante saber que, internamente, a engine registra "101" como "0...0101", completando com zeros à esquerda de acordo com o número de camadas.
