@@ -80,4 +80,25 @@ Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir
 
 Considere as duas regiões mostradas abaixo, onde a da esquerda está na região 1 e a da direita está na região 2.
 
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/5c3d7c3e-7b36-420f-8115-dd368c6bab53" />
+</p>
+
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/05ea9932-ece9-45fa-a81d-15ad041aaf43" />
+  <img width="290" src="https://github.com/user-attachments/assets/10170de3-b2a4-4e48-836f-732be55ee543" />
+</p>
+
+Ao fazer `navigation_layers` = 1, estamos dizendo ao servidor que queremos um caminho que considere apenas as regiões na camada 1. É exatamente isso o que ele fez.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/738e22e9-a763-4e91-a1d7-4e04ad7b6591" />
+</p>
+
+Ao fazer `navigation_layers` = 2 = 10, estamos dizendo ao servidor que queremos um caminho que considere apenas as regiões na camada 2. Daí obtemos o caminho mostrado abaixo.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/915eaccb-00a7-4caf-9b5b-ac30abe978c1" />
+</p>
+
 > PS: É importante saber que, internamente, a engine registra "101" como "0...0101", completando com zeros à esquerda de acordo com o número de camadas.
