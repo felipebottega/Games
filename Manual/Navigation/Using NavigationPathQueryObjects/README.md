@@ -103,10 +103,16 @@ Ao fazer `navigation_layers` = 8 = 1000, estamos ativando apenas o quarto bit, o
 
 > PS: É importante saber que, internamente, a engine registra "101" como "0...0101", completando com zeros à esquerda de acordo com o número de camadas.
 
-  - **path_metadata_flags:** Conjunto de metadados que vem junto com o caminho. Você pode decidir receber apenas alguns metadados ou até nenhum. Esta parâmetro é controlado pelas opções descritas abaixo.
+  - **included_regions:** Lista/array com todos os RIDs das regiões que devem ser incluídas nos cálculos de caminho. As regiões fora dessa lista são excluídas no cálculo automaticamente. Por default essa lista é vazia, e isso significa que todas as regiões são incluídas.
+  - **excluded_regions:** Lista/array com todos os RIDs das regiões que devem ser excluídas nos cálculos de caminho. As regiões fora dessa lista são incluídas no cálculo automaticamente. Por default essa lista é vazia, e isso significa que nenhuma região é excluída. Se tiver um RID na `included_regions` e `excluded_regions`, ele é considerado excluído.
+  - 
+> PS: Usar `included_regions` e `excluded_regions` pode ser uma maneira mais prática que `navigation_layers` de considerar e descondiderar regiões. Vai depender de cada caso.
+> 
+- **path_metadata_flags:** Conjunto de metadados que vem junto com o caminho. Você pode decidir receber apenas alguns metadados ou até nenhum. Esta parâmetro é controlado pelas opções descritas abaixo.
       - `PathMetadataFlags PATH_METADATA_INCLUDE_NONE` = 0: Não inclui nenhum metadado adicional sobre o caminho retornado.
       - `PathMetadataFlags PATH_METADATA_INCLUDE_TYPES` = 1: Inclui o tipo de navegação (região ou link) pela qual cada ponto do caminho passa.
       - `PathMetadataFlags PATH_METADATA_INCLUDE_RIDS` = 2: Inclui os RIDs das regiões e dos links pelos quais cada ponto do caminho passa.
       - `PathMetadataFlags PATH_METADATA_INCLUDE_OWNERS` = 4: Inclui os ObjectIDs dos objetos que gerenciam as regiões e os links pelos quais cada ponto do caminho passa.
       - `PathMetadataFlags PATH_METADATA_INCLUDE_ALL` = 7: Inclui todos os metadados disponíveis sobre o caminho retornado.
-  - **included_regions:**
+
+
