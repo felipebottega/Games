@@ -95,10 +95,18 @@ Ao fazer `navigation_layers` = 1, estamos dizendo ao servidor que queremos um ca
   <img width="600" src="https://github.com/user-attachments/assets/738e22e9-a763-4e91-a1d7-4e04ad7b6591" />
 </p>
 
-Ao fazer `navigation_layers` = 8 = 1000, estamos ativando apenas o quarto bit, ou seja, apenas a quarta camada ed navegação será considerada. Daí temos o caminho abaixo.
+Ao fazer `navigation_layers` = 8 = 1000, estamos ativando apenas o quarto bit, ou seja, apenas a quarta camada de navegação será considerada. Daí temos o caminho abaixo.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/915eaccb-00a7-4caf-9b5b-ac30abe978c1" />
 </p>
 
 > PS: É importante saber que, internamente, a engine registra "101" como "0...0101", completando com zeros à esquerda de acordo com o número de camadas.
+
+  - **path_metadata_flags:** Conjunto de metadados que vem junto com o caminho. Você pode decidir receber apenas alguns metadados ou até nenhum. Esta parâmetro é controlado pelas opções descritas abaixo.
+      - `PathMetadataFlags PATH_METADATA_INCLUDE_NONE` = 0: Não inclui nenhum metadado adicional sobre o caminho retornado.
+      - `PathMetadataFlags PATH_METADATA_INCLUDE_TYPES` = 1: Inclui o tipo de navegação (região ou link) pela qual cada ponto do caminho passa.
+      - `PathMetadataFlags PATH_METADATA_INCLUDE_RIDS` = 2: Inclui os RIDs das regiões e dos links pelos quais cada ponto do caminho passa.
+      - `PathMetadataFlags PATH_METADATA_INCLUDE_OWNERS` = 4: Inclui os ObjectIDs dos objetos que gerenciam as regiões e os links pelos quais cada ponto do caminho passa.
+      - `PathMetadataFlags PATH_METADATA_INCLUDE_ALL` = 7: Inclui todos os metadados disponíveis sobre o caminho retornado.
+  - **included_regions:**
