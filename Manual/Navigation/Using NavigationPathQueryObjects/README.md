@@ -146,4 +146,15 @@ Queremos poder analisar com calma o caminho que o NPC vai percorrer. Para isso, 
 
 ### HUD
 
-Teremos um heads-uo-display na cena para poder manipular os parâmetros e ver em tempo real como eles afetam o caminho calculado. Vamos separar os sinais em um script no node raíz da cena, apenas para deixar o projeto mais organizado.
+Teremos um heads-up-display na cena para poder manipular os parâmetros e ver em tempo real como eles afetam o caminho calculado. Vamos separar os sinais em um script no node raíz da cena, apenas para deixar o projeto mais organizado. A maioria segue a mesma lógica: existe um objeto interativo na tela onde o usuário pode alterar valores, daí isso ativa um sinal e o valor alterado é repassado para o servidor, onde o caminho é atualizado. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/9c1bf83c-be64-4567-8c34-16f2d4784f43" />
+</p>
+
+Deve-se ter cuidado com os metadados. Ao mudar o que quer receber de metadados, isso não é refletido no caminho automaticamente, o resultado fica dentro da variável `query_result` que você definiu. Se você colocar para atualizar o resultados dos metadados assim que o sinal é recebido, nada pode mudar ou pode até ficar vazio (pois o servidor apaga esta variável temporariamente antes de sobrescrevê-la). Portanto, o melhor a se fazer é atualizar os resultados dos metadados por fora.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/2c6968a8-fad2-443a-a814-fbd0566749e5" />
+</p>
+
