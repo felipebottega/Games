@@ -118,8 +118,8 @@ Ao fazer `navigation_layers` = 8 = 1000, estamos ativando apenas o quarto bit, o
 A parte inicial do código foi ampliada e ficou assim:
 
 <p align="center">
-  <img width="470" src="https://github.com/user-attachments/assets/fb5def6b-fc78-4637-916f-d81c4974fc3c" />
-  <img width="530" src="https://github.com/user-attachments/assets/17093d25-8d2f-4ea3-bbe7-5d9350805b1a" />
+  <img width="650" src="https://github.com/user-attachments/assets/fb5def6b-fc78-4637-916f-d81c4974fc3c" />
+  <img width="750" src="https://github.com/user-attachments/assets/17093d25-8d2f-4ea3-bbe7-5d9350805b1a" />
 </p>
 
 > PS: Note que é necessário usar o `await get_tree().process_frame` (ou alguma solução equivalente) pois a navegação não é carregada logo no primeiro frame. Se não fizéssemos isso, as listas ficariam vazias. Outra coisa importante notar é que inserimos todas as regiões em ambas as listas, isso significa que as regiões serão consideradas excluídas e o NPC não vai sair do lugar. Iremos resolver isso em breve, quando formos falar de HUD.
@@ -161,5 +161,5 @@ Deve-se ter cuidado com os metadados. Ao mudar o que quer receber de metadados, 
 Para habilitar a seleção interativa de regiões, usamos o node `ItemList`. Ele ainda não foi visto nos tutoriais passados, mas por enquanto basta saber que se você segurar o *SHIFT*, pode selecionar múltiplas regiões ao mesmo tempo no jogo. A lista `regions_orig`, até então sem uso, entra agora em ação para auxiliar. O objeto `ItemList` faz seleção de strings, não de RIDs. Para implementar a lógica, apenas mapeamos em `regions_orig` quem é a primeira região (*RegionA*) e segunda região (*RegionB*). O seletor nos diz se selecionamos o primeiro ou segundo item, daí é só questão de redefinir o `$NPC.included_regions` ou `$NPC.excluded_regions` de acordo.
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/fd1d926a-d387-4cc7-a774-0b725a863443" />
+  <img width="550" src="https://github.com/user-attachments/assets/fd1d926a-d387-4cc7-a774-0b725a863443" />
 </p>
