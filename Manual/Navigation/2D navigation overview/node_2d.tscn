@@ -28,7 +28,6 @@ texture = ExtResource("1_wtcfe")
 shape = SubResource("CircleShape2D_epypp")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPC"]
-path_max_distance = 472.0
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(0.797925, 0.309955, 0.651697, 1)
