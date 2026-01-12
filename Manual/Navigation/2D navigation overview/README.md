@@ -42,6 +42,7 @@ Vamos esclarecer o que fazem os atributos e métodos utilizados do `NavigationAg
   - **NavigationAgent2D.target_desired_distance:** Semelhante ao anterior, mas é relativo ao target. Inclusive, quando o NPC alcança o target, o atributo `NavigationAgent2D.is_navigation_finished()` (não utilizado neste exemplo) muda de *False* para *True*. Esta mudança de estado algo pode ser o trigger para alguma coisa no jogo.
   - **NavigationAgent2D.target_position:** A posição do target a ser perseguido. É importante ressaltar que esta posição será usada no próximo frame, não no frame corrente. Ao alterar a posição do target, no próximo frame será calculada uma nova rota até este novo ponto.
   - **NavigationAgent2D.get_next_path_position():** Retorna o próximo ponto da rota do NPC. Caso ele ainda esteja a caminho deste ponto, ele se mantém repetido entre os frames, a menos que a rota seja alterada.
+  - **NavigationAgent2D.path_max_distance:** Diz o máximo de distância (em pixels) que o agente pode estar afastado caminho. Enquanto o agente se move, às vezes ele se desvia do caminho ideal, para evitar colisões com outros objetos ou agentes. Se o agente acabar mais longe do que esse valor, o sistema entende que o caminho não faz mais sentido e recalcula uma nova rota.
 
 Abaixo temos uma amostra de como está o nosso jogo até o momento. Note que só é possível visualizar a região de navegação indo em *Debug → Visible Navigation*. Normalmente ela fica invisível durante o jogo de verdade.
 
