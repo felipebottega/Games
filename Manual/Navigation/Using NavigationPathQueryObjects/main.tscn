@@ -1,0 +1,256 @@
+[gd_scene load_steps=9 format=3 uid="uid://34nxudb6uls2"]
+
+[ext_resource type="Script" uid="uid://bev8yvyscdh22" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://c4qn1c1rths1g" path="res://npc.gd" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dn71jcw3ijh6w" path="res://bg.png" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://blcbwdpq6ekta" path="res://icon.svg" id="3_lquwl"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0hol4"]
+vertices = PackedVector2Array(722.39844, 481.28125, 780, 336, 780, 628, 688.4219, 572.9297, 486.4297, 628, 685.7969, 573.0703, 679.35156, 451.6797, 719.97656, 479.5, 661.46875, 524.4219, 678.28906, 453.9922, 568.6719, 455.0078, 592.8203, 539.53125, 508.70313, 501.67188, 525.71094, 592.5703, 387.78125, 336, 506.78906, 503.21094, 629.1406, 392.0625, 567.6406, 452.52344)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(6, 1, 7, 8, 9), PackedInt32Array(1, 0, 7), PackedInt32Array(10, 9, 8, 11, 12), PackedInt32Array(11, 8, 5, 4, 13), PackedInt32Array(13, 4, 14, 15), PackedInt32Array(1, 6, 16), PackedInt32Array(14, 1, 16), PackedInt32Array(15, 14, 16, 17, 12), PackedInt32Array(12, 17, 10)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(385, 334, 782, 334, 782, 630, 485, 630), PackedVector2Array(629, 395, 570, 453, 677, 452), PackedVector2Array(589, 540, 509, 504, 527, 589), PackedVector2Array(664, 525, 687, 571, 720, 482)])
+agent_radius = 2.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0e48y"]
+vertices = PackedVector2Array(1025.3281, 601.72656, 1113.0391, 626.28125, 763.89844, 570.46094, 819.0078, 564.72656, 1113.9609, 366.89063, 970.1094, 420.46875, 928.46094, 382.72656, 815.6875, 552.5078, 763.0625, 495.2422)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 1, 0, 5), PackedInt32Array(6, 4, 5), PackedInt32Array(7, 3, 2, 8), PackedInt32Array(7, 8, 6, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(925, 373, 753, 490, 754, 579, 1123, 638, 1124, 356), PackedVector2Array(965, 438, 1011, 589, 827, 556)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
+size = Vector2(122, 122)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
+radius = 58.0
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_h2yge")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(754, 478)
+texture = ExtResource("2_lquwl")
+
+[node name="RegionA" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_0hol4")
+
+[node name="RegionB" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_0e48y")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 3.0
+default_color = Color(1, 0.10980392, 1, 1)
+
+[node name="NPC" type="CharacterBody2D" parent="."]
+position = Vector2(375, 326)
+scale = Vector2(0.5, 0.5)
+motion_mode = 1
+script = ExtResource("2_1bvp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+texture = ExtResource("3_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+shape = SubResource("RectangleShape2D_q6r6c")
+
+[node name="Area2D" type="Area2D" parent="NPC"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Area2D"]
+shape = SubResource("CircleShape2D_1bvp3")
+
+[node name="Target" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0.03137255, 1)
+position = Vector2(1080, 591)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_lquwl")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="LegendLabel" type="Label" parent="HUD"]
+offset_left = 379.0
+offset_top = 118.0
+offset_right = 419.0
+offset_bottom = 149.0
+theme_override_font_sizes/font_size = 12
+
+[node name="SimplifyPath" type="Button" parent="HUD"]
+offset_left = 39.0
+offset_top = 498.0
+offset_right = 190.0
+offset_bottom = 529.0
+text = "SimplifyPath: false"
+
+[node name="NavigationLayersLabel" type="Label" parent="HUD"]
+offset_left = 39.0
+offset_top = 336.0
+offset_right = 196.0
+offset_bottom = 359.0
+text = "Navigation Layers: 1"
+
+[node name="NavigationLayersSlider" type="HSlider" parent="HUD"]
+offset_left = 38.377686
+offset_top = 360.19678
+offset_right = 190.0
+offset_bottom = 376.19678
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+
+[node name="PostprocessingMode" type="OptionButton" parent="HUD"]
+offset_left = 39.0
+offset_top = 447.0
+offset_right = 217.0
+offset_bottom = 478.0
+selected = 0
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "CORRIDORFUNNEL"
+popup/item_0/id = 0
+popup/item_1/text = "EDGECENTERED"
+popup/item_1/id = 1
+popup/item_2/text = "NONE"
+popup/item_2/id = 2
+
+[node name="PathFindingAlgorithm" type="Label" parent="HUD"]
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 305.0
+offset_bottom = 31.0
+text = "Path Finding Algorithm: A* (Astar) "
+
+[node name="SimplifyEpsilonLabel" type="Label" parent="HUD"]
+offset_left = 40.0
+offset_top = 277.0
+offset_right = 193.0
+offset_bottom = 300.0
+text = "Simplify Epsilon: 0.0"
+
+[node name="SimplifyEpsilonSlider" type="HSlider" parent="HUD"]
+offset_left = 40.0
+offset_top = 301.0
+offset_right = 189.0
+offset_bottom = 317.0
+max_value = 50.0
+step = 0.1
+
+[node name="MetaData" type="OptionButton" parent="HUD"]
+offset_left = 39.0
+offset_top = 394.0
+offset_right = 356.0
+offset_bottom = 425.0
+selected = 0
+item_count = 5
+popup/item_0/text = "PATH_METADATA_INCLUDE_NONE"
+popup/item_0/id = 0
+popup/item_1/text = "PATH_METADATA_INCLUDE_TYPES"
+popup/item_1/id = 1
+popup/item_2/text = "PATH_METADATA_INCLUDE_RIDS"
+popup/item_2/id = 2
+popup/item_3/text = "PATH_METADATA_INCLUDE_OWNERS"
+popup/item_3/id = 4
+popup/item_4/text = "PATH_METADATA_INCLUDE_ALL"
+popup/item_4/id = 7
+
+[node name="MaxLengthLabel" type="Label" parent="HUD"]
+offset_left = 39.0
+offset_top = 220.0
+offset_right = 130.0
+offset_bottom = 243.0
+text = "Max Length"
+
+[node name="MaxLengthSlider" type="HSlider" parent="HUD"]
+offset_left = 40.0
+offset_top = 244.0
+offset_right = 189.0
+offset_bottom = 260.0
+max_value = 1280.0
+
+[node name="MaxRadiusLabel" type="Label" parent="HUD"]
+offset_left = 39.0
+offset_top = 162.0
+offset_right = 128.0
+offset_bottom = 185.0
+text = "Max Radius"
+
+[node name="MaxRadiusSlider" type="HSlider" parent="HUD"]
+offset_left = 40.0
+offset_top = 186.0
+offset_right = 187.0
+offset_bottom = 202.0
+max_value = 1280.0
+
+[node name="MaxDistanceLabel" type="Label" parent="HUD"]
+offset_left = 39.0
+offset_top = 102.0
+offset_right = 143.0
+offset_bottom = 125.0
+text = "Max Distance"
+
+[node name="MaxDistanceSlider" type="HSlider" parent="HUD"]
+offset_left = 39.0
+offset_top = 126.0
+offset_right = 188.0
+offset_bottom = 142.0
+max_value = 1280.0
+
+[node name="MaxPolygonsLabel" type="Label" parent="HUD"]
+offset_left = 40.0
+offset_top = 44.0
+offset_right = 147.0
+offset_bottom = 67.0
+text = "Max Polygons"
+
+[node name="MaxPolygonsSlider" type="HSlider" parent="HUD"]
+offset_left = 39.0
+offset_top = 68.0
+offset_right = 188.0
+offset_bottom = 84.0
+max_value = 64.0
+
+[node name="IncludeExcludedLabel" type="Label" parent="HUD"]
+offset_left = 376.0
+offset_top = 8.0
+offset_right = 821.0
+offset_bottom = 31.0
+text = "Included Regions                                   Excluded Regions        "
+
+[node name="IncludedRegions" type="ItemList" parent="HUD"]
+offset_left = 375.0
+offset_top = 36.0
+offset_right = 595.0
+offset_bottom = 100.0
+select_mode = 1
+item_count = 2
+item_0/text = "RegionA"
+item_1/text = "RegionB"
+
+[node name="ExcludedRegions" type="ItemList" parent="HUD"]
+offset_left = 653.0
+offset_top = 36.0
+offset_right = 873.0
+offset_bottom = 102.0
+select_mode = 1
+item_count = 2
+item_0/text = "RegionA"
+item_1/text = "RegionB"
+
+[node name="Reset" type="Button" parent="HUD"]
+modulate = Color(0.11764706, 0.9019608, 1, 1)
+offset_left = 39.0
+offset_top = 559.0
+offset_right = 252.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 50
+text = "RESET"
+
+[connection signal="input_event" from="NPC/Area2D" to="NPC" method="_on_area_2d_input_event"]
+[connection signal="pressed" from="HUD/SimplifyPath" to="." method="_on_simplify_path_pressed"]
+[connection signal="value_changed" from="HUD/NavigationLayersSlider" to="." method="_on_navigation_layers_slider_value_changed"]
+[connection signal="item_selected" from="HUD/PostprocessingMode" to="." method="_on_postprocessing_mode_item_selected"]
+[connection signal="value_changed" from="HUD/SimplifyEpsilonSlider" to="." method="_on_simplify_epsilon_slider_value_changed"]
+[connection signal="item_selected" from="HUD/MetaData" to="." method="_on_meta_data_item_selected"]
+[connection signal="value_changed" from="HUD/MaxLengthSlider" to="." method="_on_max_length_slider_value_changed"]
+[connection signal="value_changed" from="HUD/MaxRadiusSlider" to="." method="_on_max_radius_slider_value_changed"]
+[connection signal="value_changed" from="HUD/MaxDistanceSlider" to="." method="_on_max_distance_slider_value_changed"]
+[connection signal="value_changed" from="HUD/MaxPolygonsSlider" to="." method="_on_max_polygons_slider_value_changed"]
+[connection signal="multi_selected" from="HUD/IncludedRegions" to="." method="_on_included_regions_multi_selected"]
+[connection signal="multi_selected" from="HUD/ExcludedRegions" to="." method="_on_excluded_regions_multi_selected"]
+[connection signal="pressed" from="HUD/Reset" to="." method="_on_reset_pressed"]
