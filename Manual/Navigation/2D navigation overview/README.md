@@ -33,7 +33,7 @@ Uma vez que temos a região navegável pelo NPC, precisamos do NPC em si. Ele po
 Antes mesmo de pensar no script, vamos adicionar o target à cena. No fim das contas, o NPC vai perseguir o target, então faz mais sentido que ele seja adicionado primeiro. Para o nosso exemplo, target será apenas um `Sprite2D` se movendo de maneira circular pela tela. Feito isso, adicionamos o script abaixo ao NPC.
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/bbfb042d-f556-457c-9d7d-8cded2576e5c" />
+  <img width="600" src="https://github.com/user-attachments/assets/7ea31bc2-169d-4855-a889-82672a8d6dd9" />
 </p>
 
 Vamos esclarecer o que fazem os atributos e métodos utilizados do `NavigationAgent2D`.
