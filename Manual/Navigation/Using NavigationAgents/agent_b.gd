@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: float = 1000.0
+var speed: float = 100.0
 
 func _ready():
 	$NavigationAgent2D.path_desired_distance = 4.0
