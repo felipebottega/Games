@@ -45,7 +45,15 @@ Para usar a evitação, é necessário criar o sinal de `velocity_computed`, com
 
 Colocamos abaixo o script normal à esquerda, onde o agente se move normalmente pelo caminho. Na direta, temos o caminho com a evitação implementada. 
 
-<p align="center">
-  <img width="490" src="https://github.com/user-attachments/assets/125a37f0-c4e0-4978-af12-7f983927d00a" />
-  <img width="510" src="https://github.com/user-attachments/assets/3e0f2e4a-ea48-40d1-a803-58c91cf880f7" />
-</p>
+<table align="center">
+  <tr>
+    <td valign="top">
+      <img width="475" src="https://github.com/user-attachments/assets/125a37f0-c4e0-4978-af12-7f983927d00a" />
+    </td>
+    <td valign="top">
+      <img width="525" src="https://github.com/user-attachments/assets/3e0f2e4a-ea48-40d1-a803-58c91cf880f7" />
+    </td>
+  </tr>
+</table>
+
+
