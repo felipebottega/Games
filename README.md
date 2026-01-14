@@ -900,6 +900,16 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20navigation%20meshes#baking
 ">  Baking
  </a><br>
+<li> <b>Manual\Navigation\Using NavigationAgents</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#navigationagent-avoidance
+">  NavigationAgent Avoidance
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#velocity-$\neq$-speed
+">  velocity $\neq$ speed
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#script-para-evitação/avoidance
+">  Script para evitação/avoidance
+ </a><br>
 <li> <b>Manual\Navigation\Using NavigationMaps</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationMaps#default-navigation-maps
 ">  Default navigation maps
@@ -910,6 +920,30 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#navigationpathqueryresult2d
 ">  NavigationPathQueryResult2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#exemplo-prático-do-navigationpathquery
+">  Exemplo prático do NavigationPathQuery
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#navigationregion
+">  NavigationRegion
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#npc-
+">  NPC 
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#executando-queries
+">  Executando queries
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#parâmetros-para-o-caminho
+">  Parâmetros para o caminho
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#line2d
+">  Line2D
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#movimento-por-input
+">  Movimento por input
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#hud
+">  HUD
  </a><br>
 <li> <b>Manual\Navigation\Using NavigationPaths</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path
