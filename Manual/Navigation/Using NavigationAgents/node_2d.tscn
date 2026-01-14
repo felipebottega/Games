@@ -1,0 +1,233 @@
+[gd_scene load_steps=7 format=3 uid="uid://dupfpqllt777o"]
+
+[ext_resource type="Script" uid="uid://dituiphtjtggk" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://d0tgofqn4a5be" path="res://icon.svg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://clusattcrk7me" path="res://agent_b.gd" id="3_epypp"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_epypp"]
+vertices = PackedVector2Array(848.02344, 615, 277, 615, 277, 12, 848.97656, 12)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(859, 2, 858, 625, 267, 625, 267, 2)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
+size = Vector2(115, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
+size = Vector2(113, 114)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_epypp")
+metadata/_edit_vertical_guides_ = [516.0, 710.0]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_epypp")
+
+[node name="AgentsToAvoid" type="Node2D" parent="."]
+
+[node name="AgentA" type="CharacterBody2D" parent="AgentsToAvoid"]
+modulate = Color(1, 0.0431373, 0, 1)
+position = Vector2(437, 261)
+scale = Vector2(0.4, 0.4)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="AgentsToAvoid/AgentA"]
+avoidance_enabled = true
+radius = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentsToAvoid/AgentA"]
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentsToAvoid/AgentA"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_q6r6c")
+
+[node name="AgentA2" type="CharacterBody2D" parent="AgentsToAvoid"]
+modulate = Color(1, 0.0431373, 0, 1)
+position = Vector2(565, 333)
+scale = Vector2(0.4, 0.4)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="AgentsToAvoid/AgentA2"]
+avoidance_enabled = true
+radius = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentsToAvoid/AgentA2"]
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentsToAvoid/AgentA2"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_q6r6c")
+
+[node name="AgentA3" type="CharacterBody2D" parent="AgentsToAvoid"]
+modulate = Color(1, 0.0431373, 0, 1)
+position = Vector2(522, 132)
+scale = Vector2(0.4, 0.4)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="AgentsToAvoid/AgentA3"]
+avoidance_enabled = true
+radius = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentsToAvoid/AgentA3"]
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentsToAvoid/AgentA3"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_q6r6c")
+
+[node name="AgentA4" type="CharacterBody2D" parent="AgentsToAvoid"]
+modulate = Color(1, 0.0431373, 0, 1)
+position = Vector2(459, 450.99997)
+scale = Vector2(0.4, 0.4)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="AgentsToAvoid/AgentA4"]
+avoidance_enabled = true
+radius = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentsToAvoid/AgentA4"]
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentsToAvoid/AgentA4"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_q6r6c")
+
+[node name="AgentMain" type="CharacterBody2D" parent="."]
+modulate = Color(0.12549, 1, 0.12549, 1)
+position = Vector2(532, 572)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("3_epypp")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="AgentMain"]
+avoidance_enabled = true
+debug_enabled = true
+debug_path_custom_point_size = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentMain"]
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentMain"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_kdubu")
+
+[node name="Target" type="Sprite2D" parent="."]
+position = Vector2(503, 25.000008)
+scale = Vector2(0.257813, 0.273438)
+texture = ExtResource("2_epypp")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="RadiusLabel" type="Label" parent="HUD"]
+offset_left = 348.0
+offset_top = 631.0
+offset_right = 411.0
+offset_bottom = 654.0
+text = "Radius"
+
+[node name="RadiusValue" type="Label" parent="HUD"]
+offset_left = 715.0
+offset_top = 631.0
+offset_right = 755.0
+offset_bottom = 654.0
+text = "30"
+
+[node name="RadiusHSlider" type="HSlider" parent="HUD"]
+offset_left = 516.0
+offset_top = 635.0
+offset_right = 709.0
+offset_bottom = 654.0
+min_value = 30.0
+value = 30.0
+
+[node name="NeighborDistanceLabel" type="Label" parent="HUD"]
+offset_left = 348.0
+offset_top = 666.0
+offset_right = 500.0
+offset_bottom = 689.0
+text = "Neighbor Distance"
+
+[node name="NeighborDistanceValue" type="Label" parent="HUD"]
+offset_left = 715.0
+offset_top = 666.0
+offset_right = 755.0
+offset_bottom = 689.0
+text = "500"
+
+[node name="NeighborDistanceHSlider" type="HSlider" parent="HUD"]
+offset_left = 516.0
+offset_top = 670.0
+offset_right = 709.0
+offset_bottom = 689.0
+min_value = 1.0
+max_value = 1000.0
+value = 100.0
+
+[node name="MaxNeighborsLabel" type="Label" parent="HUD"]
+offset_left = 348.0
+offset_top = 707.0
+offset_right = 500.0
+offset_bottom = 730.0
+text = "MaxNeighbors"
+
+[node name="MaxNeighborValue" type="Label" parent="HUD"]
+offset_left = 715.0
+offset_top = 707.0
+offset_right = 755.0
+offset_bottom = 730.0
+text = "10
+"
+
+[node name="MaxNeighborsHSlider" type="HSlider" parent="HUD"]
+offset_left = 516.0
+offset_top = 710.0
+offset_right = 709.0
+offset_bottom = 729.0
+min_value = 1.0
+value = 10.0
+
+[node name="TimeHorizonAgentsLabel" type="Label" parent="HUD"]
+offset_left = 348.0
+offset_top = 747.0
+offset_right = 509.0
+offset_bottom = 770.0
+text = "Time Horizon Agents"
+
+[node name="TimeHorizonAgentsValue" type="Label" parent="HUD"]
+offset_left = 715.0
+offset_top = 747.0
+offset_right = 755.0
+offset_bottom = 770.0
+text = "1"
+
+[node name="TimeHorizonAgentsHSlider" type="HSlider" parent="HUD"]
+offset_left = 516.0
+offset_top = 751.0
+offset_right = 709.0
+offset_bottom = 767.0
+max_value = 60.0
+
+[node name="MaxSpeedLabel" type="Label" parent="HUD"]
+offset_left = 348.0
+offset_top = 784.0
+offset_right = 509.0
+offset_bottom = 807.0
+text = "Max Speed"
+
+[node name="MaxSpeedValue" type="Label" parent="HUD"]
+offset_left = 715.0
+offset_top = 782.0
+offset_right = 755.0
+offset_bottom = 805.0
+text = "100"
+
+[node name="MaxSpeedHSlider" type="HSlider" parent="HUD"]
+offset_left = 516.0
+offset_top = 789.0
+offset_right = 709.0
+offset_bottom = 805.0
+min_value = 1.0
+max_value = 1000.0
+value = 100.0
+
+[connection signal="velocity_computed" from="AgentMain/NavigationAgent2D" to="AgentMain" method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="value_changed" from="HUD/RadiusHSlider" to="." method="_on_radius_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/NeighborDistanceHSlider" to="." method="_on_neighbor_distance_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/MaxNeighborsHSlider" to="." method="_on_max_neighbors_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/TimeHorizonAgentsHSlider" to="." method="_on_time_horizon_agents_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/MaxSpeedHSlider" to="." method="_on_max_speed_h_slider_value_changed"]

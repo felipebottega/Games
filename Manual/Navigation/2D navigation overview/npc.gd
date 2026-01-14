@@ -1,15 +1,13 @@
 extends CharacterBody2D
 
 var speed: float = 100.0
-var count = 0
-var path = [Vector2.ZERO, Vector2.ZERO]
 
 func _ready():
 	$NavigationAgent2D.path_desired_distance = 4.0
 	$NavigationAgent2D.target_desired_distance = 4.0
 	$NavigationAgent2D.target_position = $"../Target".position
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	$NavigationAgent2D.target_position = $"../Target".position
 	
 	var current_agent_position: Vector2 = global_position
