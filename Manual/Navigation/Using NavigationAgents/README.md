@@ -43,7 +43,7 @@ Para usar a evitação, é necessário criar o sinal de `velocity_computed`, com
   <img width="350" src="https://github.com/user-attachments/assets/ffd13854-3f36-4cbd-bcd6-d1d5107e675c" />
 </p>
 
-Colocamos abaixo o script normal à esquerda, onde o agente se move normalmente pelo caminho. Na direta, temos o caminho com a evitação implementada. 
+Colocamos abaixo o script normal à esquerda, onde o agente se move normalmente pelo caminho. Na direta, temos o caminho com a evitação implementada. No script normal, a nova direção calculada é passada diretamente para o vetor `velocity` do `CharacterBody2D`. No outro script, esse script é passado para o `$NavigationAgent2D.velocity`, Isso não altera em nada o `CharacterBody2D`, serve apenas para ativar o sinal e fazer o servidor calcular um novo vetor com as evitações. Aí sim, dentro da função do sinal, o vetor seguro é passado para o `CharacterBody2D`.
 
 <table align="center">
   <tr>
