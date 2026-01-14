@@ -56,4 +56,8 @@ Colocamos abaixo o script normal à esquerda, onde o agente se move normalmente 
   </tr>
 </table>
 
+Você pode testar o efeito dos parâmetros [neste simulador]() que eu implementei. O vídeo abaixo mostra o efeito de se alterar o raio do agente. Enquanto o da esquerda estava com um raio pequeno e ficou esbarrando em tudo, o da direita manteve um certo distanciamento dos outros agentes. Graças a esse pequeno ajuste que ele conseguiu alcançar o target.
+
+https://github.com/user-attachments/assets/15c74583-a0b8-4206-b859-f894b0f8fa6e
+
 
