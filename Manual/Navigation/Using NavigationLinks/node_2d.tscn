@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://cahncg741bh3n"]
+
+[ext_resource type="Script" uid="uid://dsxc0y4ifw22r" path="res://character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://c4wnqvfs7wvwl" path="res://bg.png" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://ch4jhpjc8asxh" path="res://icon.svg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://8hmxmvufgoi8" path="res://target.gd" id="3_epypp"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0hol4"]
+vertices = PackedVector2Array(363.20313, 215.88281, 393, 126, 490.70313, 394, 325.3672, 355.7422, 64.47656, 394, 177.42969, 276.6875, 185.45313, 126, 178.64844, 263.46875, 354.6328, 207.67188)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4), PackedInt32Array(5, 3, 4), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(1, 0, 8), PackedInt32Array(6, 1, 8, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(179, 116, 400, 116, 505, 404, 49, 404), PackedVector2Array(352, 219, 188, 271, 319, 341)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_q6r6c"]
+vertices = PackedVector2Array(724.96094, 469.07813, 896.0781, 161.75781, 909.40625, 382.09375, 1106.1797, 470.95313, 921.59375, 386.64063, 1111.5078, 192.96094)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4), PackedInt32Array(3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(904, 127, 708, 479, 1116, 481, 1122, 168, 919, 375)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
+size = Vector2(53, 54)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(580, 280)
+scale = Vector2(1.212, 1.212)
+texture = ExtResource("1_0hol4")
+
+[node name="RegionA" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_0hol4")
+
+[node name="RegionB" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_q6r6c")
+
+[node name="NavigationLink2D_AB" type="NavigationLink2D" parent="."]
+start_position = Vector2(400, 299)
+end_position = Vector2(865, 324)
+
+[node name="NavigationLink2D_BA" type="NavigationLink2D" parent="."]
+position = Vector2(6, -22)
+bidirectional = false
+start_position = Vector2(767, 436)
+end_position = Vector2(436, 399)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(219, 153)
+script = ExtResource("1_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_kdubu")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.45814165, 0.45814165)
+texture = ExtResource("2_epypp")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D"]
+path_desired_distance = 0.1
+target_desired_distance = 0.1
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0.09019608, 0.039215688, 1)
+debug_path_custom_point_size = 10.0
+debug_path_custom_line_width = 3.0
+
+[node name="Target" type="Sprite2D" parent="."]
+modulate = Color(0.7137255, 0.25490198, 1, 1)
+position = Vector2(1100, 507)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_epypp")
+script = ExtResource("3_epypp")
+
+[connection signal="link_reached" from="CharacterBody2D/NavigationAgent2D" to="CharacterBody2D" method="_on_navigation_agent_2d_link_reached"]
