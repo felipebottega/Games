@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Using NavigationAgents"
-run/main_scene="uid://b2odrbnxi07k6"
+run/main_scene="uid://ds16b5kc8hfm4"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -24,3 +24,4 @@ window/stretch/mode="viewport"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.9736143, 0.5422164, 0.6666916, 1)

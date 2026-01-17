@@ -1,15 +1,22 @@
 extends CharacterBody2D
 
-var speed: float = 100.0
+
+var speed: float = 0.0
+
 
 func _ready():
+	await get_tree().process_frame
 	$NavigationAgent2D.path_desired_distance = 4.0
 	$NavigationAgent2D.target_desired_distance = 4.0
-	$NavigationAgent2D.target_position = $"../Target".global_position
+	
+	if global_position.x < 100:
+		$NavigationAgent2D.target_position = Vector2(1000, global_position.y)
+		modulate = Color(0.1, 0.1, 0.6, 1)
+		$NavigationAgent2D.debug_path_custom_color = Color(0.2, 0.2, 0.5, 1)
+	else:
+		$NavigationAgent2D.target_position = Vector2(150, global_position.y)
 
 func _physics_process(_delta):
-	$NavigationAgent2D.target_position = $"../Target".global_position
-	
 	var current_agent_position: Vector2 = global_position
 	var next_path_position: Vector2 = $NavigationAgent2D.get_next_path_position()
 		
