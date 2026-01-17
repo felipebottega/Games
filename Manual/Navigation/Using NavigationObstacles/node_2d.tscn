@@ -1,0 +1,135 @@
+[gd_scene load_steps=7 format=3 uid="uid://dupfpqllt777o"]
+
+[ext_resource type="Script" uid="uid://dituiphtjtggk" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://d0tgofqn4a5be" path="res://icon.svg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://clusattcrk7me" path="res://agent.gd" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://wavttuabgrk5" path="res://bg.png" id="4_0hol4"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_epypp"]
+vertices = PackedVector2Array(596.6797, 184.02344, 650.6328, 175.03125, 603.34375, 271.90625, 520.35156, 222, 516.28906, 206.82031, 648, 362, 848.02344, 615, 523.9531, 472.1797, 529.35156, 452, 562, 362, 523.9531, 431.8203, 686.3672, 104.72656, 848.97656, 12, 648, 306.0625, 562, 310.67188, 509.1797, 417.04688, 490, 252.35156, 505.1797, 248.28906, 516.28906, 237.17969, 525.2578, 118.07031, 569.96875, 135.95313, 505.1797, 195.71094, 490, 191.64844, 277, 12, 541.2578, 51.40625, 634.0781, 57.1875, 590.5, 55.007813, 590.4922, 55.007813, 474.8203, 195.71094, 463.71094, 206.82031, 277, 615, 459.64844, 222, 463.71094, 237.17969, 474.8203, 248.28906, 448.64844, 452, 454.04688, 431.8203, 509.1797, 486.95313, 489, 492.35156, 468.8203, 486.95313, 454.04688, 472.1797, 468.8203, 417.04688, 489, 411.64844)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(9, 8, 10), PackedInt32Array(11, 12, 6, 5, 13, 1), PackedInt32Array(1, 13, 2), PackedInt32Array(14, 9, 10, 15, 16, 17), PackedInt32Array(18, 3, 2, 14), PackedInt32Array(17, 18, 14), PackedInt32Array(19, 20, 0, 4, 21), PackedInt32Array(19, 21, 22, 23, 24), PackedInt32Array(12, 11, 25), PackedInt32Array(23, 12, 25, 26), PackedInt32Array(23, 26, 27, 24), PackedInt32Array(23, 22, 28), PackedInt32Array(23, 28, 29), PackedInt32Array(30, 23, 29, 31), PackedInt32Array(30, 31, 32), PackedInt32Array(30, 32, 33), PackedInt32Array(34, 30, 33, 16, 35), PackedInt32Array(36, 7, 6), PackedInt32Array(36, 6, 30, 37), PackedInt32Array(38, 37, 30), PackedInt32Array(39, 38, 30), PackedInt32Array(34, 39, 30), PackedInt32Array(40, 35, 16), PackedInt32Array(41, 40, 16), PackedInt32Array(15, 41, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(859, 2, 858, 625, 267, 625, 267, 2)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
+size = Vector2(113, 114)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_epypp")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-249, 5.5000305)
+navigation_polygon = SubResource("NavigationPolygon_epypp")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(489, 452)
+radius = 30.0
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(589, 337)
+vertices = PackedVector2Array(-17, -22, 15, -52, 49, -26, 49, 15, -17, 15)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(490, 222)
+radius = 20.0
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(572, 101)
+vertices = PackedVector2Array(-35, 11, 5, 27, 30, 72, 72, 65, 102, 6, 58, -34, 18, -36, -23, -39)
+affect_navigation_mesh = true
+
+[node name="AgentMain" type="CharacterBody2D" parent="."]
+modulate = Color(0.12549, 1, 0.12549, 1)
+position = Vector2(320.00003, 577.50006)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("3_epypp")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="AgentMain"]
+avoidance_enabled = true
+debug_enabled = true
+debug_path_custom_point_size = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentMain"]
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentMain"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_kdubu")
+
+[node name="Target" type="Sprite2D" parent="."]
+position = Vector2(298, 21.500032)
+scale = Vector2(0.257813, 0.273438)
+texture = ExtResource("2_epypp")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="RadiusLabel" type="Label" parent="HUD"]
+offset_left = 144.0
+offset_top = 636.5
+offset_right = 207.0
+offset_bottom = 659.5
+text = "Radius"
+metadata/_edit_use_anchors_ = true
+
+[node name="RadiusValue" type="Label" parent="HUD"]
+offset_left = 524.0
+offset_top = 636.5
+offset_right = 564.0
+offset_bottom = 659.5
+text = "10"
+metadata/_edit_use_anchors_ = true
+
+[node name="RadiusHSlider" type="HSlider" parent="HUD"]
+offset_left = 326.0
+offset_top = 640.5
+offset_right = 519.0
+offset_bottom = 659.5
+min_value = 10.0
+max_value = 500.0
+value = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeHorizonObstaclesLabel" type="Label" parent="HUD"]
+offset_left = 144.0
+offset_top = 667.5
+offset_right = 319.0
+offset_bottom = 690.5
+text = "Time Horizon Obstacle"
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeHorizonObstaclesValue" type="Label" parent="HUD"]
+offset_left = 524.0
+offset_top = 667.5
+offset_right = 564.0
+offset_bottom = 690.5
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeHorizonObstaclesHSlider" type="HSlider" parent="HUD"]
+offset_left = 326.0
+offset_top = 671.5
+offset_right = 519.0
+offset_bottom = 687.5
+max_value = 60.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="Button" parent="HUD"]
+modulate = Color(0.14509805, 1, 1, 1)
+offset_left = 248.0
+offset_top = 733.5
+offset_right = 405.0
+offset_bottom = 810.5
+theme_override_font_sizes/font_size = 50
+text = "START"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(257, 285)
+texture = ExtResource("4_0hol4")
+
+[connection signal="velocity_computed" from="AgentMain/NavigationAgent2D" to="AgentMain" method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="value_changed" from="HUD/RadiusHSlider" to="." method="_on_radius_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/TimeHorizonObstaclesHSlider" to="." method="_on_time_horizon_obstacles_h_slider_value_changed"]
+[connection signal="pressed" from="HUD/Start" to="." method="_on_start_pressed"]
