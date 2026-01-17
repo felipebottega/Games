@@ -18,10 +18,26 @@ O agente foi programado para ir atrás do target. Com o link desativado, ele vai
 
 Para criar um `NavigationLink2D` funcional, primeiro coloque este node da cena e posicione o seu ponto inicial e final nas regiões. É importante que a propriedade *Enabled* esteja ativada. 
 
-<p align=center">
+<p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/86d4eae0-a714-40e6-856c-03b20a1bd0ff" />
   <img width="300" src="https://github.com/user-attachments/assets/5c209abf-74e9-4766-b3c3-8026a695457b" />
 </p>
 
 > PS: A propriedade *Bidirectional* determina se é possível o agente atravessar o link nas duas direções ou apenas em uma.
 
+Isso ainda não será o suficiente para o agente percorrer o caminho do link. É necessário definir como ele vai percorrer esse caminho, e isso deve ser feito pelo desenvolvedor. A Godot não tem rotinas prontas para percorrer estes links. 
+
+Primeiramente, é necessário que o servidor saiba que o ponto inicial do link foi atingido. Isto é feito através de um sinal emitido pelo agente. A partir deste sinal, decidimos no código o que o agente irá fazer. Existem várias possibilidades e cada uma pode ser implementada de diversas maneiras diferentes. Vou apresentar uma possibilidade simples aqui. Neste exemplo, a função do sinal extrai as posições inicial e final do link e altera uma flag que comunica ao programa que o agente deve se começar a travessia pelo link agora.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/51f34bc8-fa04-47ad-98eb-99fa86bbd16b" />
+  <img width="650" src="https://github.com/user-attachments/assets/173d270e-b2ca-4177-854b-695338b032a8" />
+</p>
+
+O trecho no final da função abaixo é a função normal do agente (já a vimos anteriormente). Quando a flag de travessia está ativada, implementamos um movimento normal de `CharacterBody2D` indo até o ponto final do link. Ou seja, o agente vai se mover em linha reta até o ponto final.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/6b055f36-79cc-416a-b69e-586a27b7f229" />
+</p>
+
+⚠️ É preciso ter uma certa atenção com a propriedade *Path Desired Distance*. Para relembrar, esta propriedade define a distância (em pixels) para a engine considerar que o agente já atingiu o próximo ponto da sequência. Caso ele esteja se movendo muito rápido e esta propriedade tenha um valor muito baixo, o agente pode ultrapassar o ponto inicial do link. Se isso acontecer, o agente pode ficar oscilando entre este ponto e o anterior, sem conseguir avançar e sem conseguir ativar o sinal. Assim, ele ficará preso. 
