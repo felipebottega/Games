@@ -1,15 +1,15 @@
 extends CharacterBody2D
 
 
-var speed: float = 100.0
+var speed: float = 500.0
 var traversing: bool = false
 var link_entry: Vector2 = Vector2.ZERO
 var link_exit: Vector2 = Vector2.ZERO
 
 
 func _ready():
-	$NavigationAgent2D.path_desired_distance = 10
-	$NavigationAgent2D.target_desired_distance = 10
+	$NavigationAgent2D.path_desired_distance = 1
+	$NavigationAgent2D.target_desired_distance = 0.1
 	$NavigationAgent2D.target_position = $"../Target".position
 
 func _physics_process(delta):
@@ -37,6 +37,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_navigation_agent_2d_link_reached(details: Dictionary) -> void:
+	print('chegou')
 	# Obter posições de entrada/saída do link.
 	link_entry = details.get("link_entry_position", details.get("position", global_position))
 	link_exit  = details.get("link_exit_position",  details.get("position", global_position))

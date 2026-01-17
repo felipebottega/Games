@@ -54,8 +54,6 @@ scale = Vector2(0.45814165, 0.45814165)
 texture = ExtResource("2_epypp")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D"]
-path_desired_distance = 0.1
-target_desired_distance = 0.1
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0.09019608, 0.039215688, 1)
