@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://bx1w3las2uatw"]
+
+[ext_resource type="Texture2D" uid="uid://ddshh876v66do" path="res://bg1.png" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://d0mx0u62tcho8" path="res://bg2.png" id="2_epypp"]
+[ext_resource type="Script" uid="uid://dmeyids2xk2xg" path="res://agent.gd" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://bg1njj8er8t45" path="res://region_b.gd" id="3_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://dv0nrcrmhpmv6" path="res://icon.svg" id="4_q6r6c"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_y32ns"]
+vertices = PackedVector2Array(402, 419.6875, 89.78906, 410.4297, 193.67969, 160, 402, 160)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(187, 150, 412, 150, 412, 430, 75, 420)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_wtcfe"]
+vertices = PackedVector2Array(903.78125, 398.95313, 505, 398.02344, 505, 170, 758.5, 170)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(495, 160, 764, 160, 922, 409, 495, 408)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RegionA" type="Sprite2D" parent="."]
+position = Vector2(169.99997, 126.999985)
+scale = Vector2(0.91, 0.91)
+texture = ExtResource("1_0e48y")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="RegionA"]
+position = Vector2(-262.63733, -308.7912)
+scale = Vector2(1.098901, 1.098901)
+navigation_polygon = SubResource("NavigationPolygon_y32ns")
+
+[node name="RegionB" type="Sprite2D" parent="."]
+position = Vector2(536, 156)
+scale = Vector2(0.91, 0.91)
+texture = ExtResource("2_epypp")
+script = ExtResource("3_q6r6c")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="RegionB"]
+position = Vector2(-776.923, -320.8791)
+scale = Vector2(1.098901, 1.098901)
+navigation_polygon = SubResource("NavigationPolygon_wtcfe")
+
+[node name="Agent" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("3_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Agent"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_q6r6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agent"]
+shape = SubResource("RectangleShape2D_kdubu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Agent"]
+debug_enabled = true
