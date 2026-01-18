@@ -32,7 +32,7 @@ Por default, todas as *ações de input* da Godot possuem deadzone igual a $0.5$
 
 ## Jogo teste de aceleração
 
-Para testar o conhecimento adquirido aqui, fiz um pequeno "jogo", que é basicamente um sprite que pode se mover pela tela. A ideia é movê-lo com um controle analógico que possua um botão analógico para controlar a aceleração. Para isso, vá em *Project → Project Settings → Input Map* e crie uma ação de input nova.
+Para testar o conhecimento adquirido aqui, fiz um pequeno "jogo", que é basicamente um sprite que pode se mover pela tela. A ideia é movê-lo com um controle analógico que possua um botão analógico para controlar a aceleração. Para isso, vá em *Project → Project Settings → Input Map* e crie uma ação de input nova. Para testar este jogo você deve baixar o projeto e rodar na engine. A versão web não respondeu aos inputs.
 
 <p align="center">
   <img width="830" src="https://github.com/user-attachments/assets/2f057ceb-e1a1-4e50-82c8-1820d7e937aa" />
