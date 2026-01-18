@@ -31,7 +31,7 @@ scale = Vector2(1.098901, 1.098901)
 navigation_polygon = SubResource("NavigationPolygon_y32ns")
 
 [node name="RegionB" type="Sprite2D" parent="."]
-position = Vector2(536, 156)
+position = Vector2(545, 156)
 scale = Vector2(0.91, 0.91)
 texture = ExtResource("2_epypp")
 script = ExtResource("3_q6r6c")
