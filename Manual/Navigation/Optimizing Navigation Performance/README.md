@@ -1,6 +1,6 @@
 # Optimizing Navigation Performance
 
-Listamos abaixo algumas para otimizar a performance da navegação no jogo.
+Listamos abaixo algumas para otimizar a performance da navegação no jogo. Seguindo estas dicas você já evita os gargalos mais comuns e impactantes de navegação.
 
 1. Prefira usar shapes simples e retas em vez de shapes complexas (muitas arestas) e arredondadas.
 2. Fazer bake é bastante custoso, então prefira fazer isso em thread de background. Vimos como fazer isso [nesse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading).
