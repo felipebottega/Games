@@ -893,6 +893,23 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#visualizando-a-rota-de-navegação
 ">  Visualizando a rota de navegação
  </a><br>
+<li> <b>Manual\Navigation\Connecting navigation meshes</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes#mescla-de-duas-malhas-de-navegação
+">  Mescla de duas malhas de navegação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes#conexão-de-duas-malhas-de-navegação
+">  Conexão de duas malhas de navegação
+ </a><br>
+<li> <b>Manual\Navigation\Navigation debug tools</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#habilitando-debug-de-navegação
+">  Habilitando debug de navegação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#navigation-debug-settings
+">  Navigation debug settings
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#debug-performance
+">  Debug performance
+ </a><br>
 <li> <b>Manual\Navigation\Using navigation meshes</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20navigation%20meshes#colisão-e-navigation-mesh
 ">  Colisão e navigation mesh
