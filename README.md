@@ -910,6 +910,10 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#debug-performance
 ">  Debug performance
  </a><br>
+<li> <b>Manual\Navigation\Optimizing Navigation Performance</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Optimizing%20Navigation%20Performance#lista-de-dicas-para-otimização-de-performance-da-navegação
+">  Lista de dicas para otimização de performance da navegação
+ </a><br>
 <li> <b>Manual\Navigation\Using navigation meshes</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20navigation%20meshes#colisão-e-navigation-mesh
 ">  Colisão e navigation mesh
