@@ -910,9 +910,27 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#script-para-evitação/avoidance
 ">  Script para evitação/avoidance
  </a><br>
+<li> <b>Manual\Navigation\Using NavigationLayers</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLayers#set_navigation_layer_value()-e-get_navigation_layer_value()
+">  set_navigation_layer_value() e get_navigation_layer_value()
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationLinks</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLinks#configurando-o-navigationlink
+">  Configurando o NavigationLink
+ </a><br>
 <li> <b>Manual\Navigation\Using NavigationMaps</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationMaps#default-navigation-maps
 ">  Default navigation maps
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationObstacles</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#navigationobstacle-percebido-pelo-mapa
+">  NavigationObstacle percebido pelo mapa
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#navigationobstacle-percebido-pelos-agentes
+">  NavigationObstacle percebido pelos agentes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#raio-do-navigationobstacle
+">  Raio do NavigationObstacle
  </a><br>
 <li> <b>Manual\Navigation\Using NavigationPathQueryObjects</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#navigationpathqueryparameters2d
