@@ -1,5 +1,7 @@
 # Optimizing Navigation Performance
 
+## Lista de dicas para otimização de performance da navegação
+
 Listamos abaixo algumas para otimizar a performance da navegação no jogo. Seguindo estas dicas você já evita os gargalos mais comuns e impactantes de navegação.
 
 1. Prefira usar shapes simples e retas em vez de shapes complexas (muitas arestas) e arredondadas.
