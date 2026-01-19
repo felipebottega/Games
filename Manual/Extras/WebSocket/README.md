@@ -4,7 +4,7 @@
 
 ## Preparando o servidor backend em Python
 
-Abaixo, temos um script minimal para rodar um servidor utilizando a biblioteca *fastapi* de Python. Ele é executado localmente na porta $8000$ e fica aguardando algum processo externo se comunicar com esta porta através de um tipo de POST. Quando esta comunicação ocorre, o servidor converte a mensagem recebida para um json. Neste exemplo, o json deve contar as chaves "npc_id" e "inputs". A função `process_npc` processa os inputs de cada NPC, resultando em uma lista de dicionários, um por NPC. Então a função `send_text` envia os resultados de volta para a engine.
+Abaixo, temos um script minimal para rodar um servidor utilizando a biblioteca *fastapi* de Python. Ele é executado localmente na porta $8000$ e fica aguardando algum processo externo se comunicar com esta porta através de um tipo de POST. Quando esta comunicação ocorre, o servidor converte a mensagem recebida para um json. Neste exemplo, o json deve contar as chaves "npc_id" e "inputs". A função `process_npc` processa os inputs de cada NPC, resultando em uma lista de dicionários, um por NPC. Então o método `websocket.send_text()` envia os resultados de volta para a engine.
 
 ```
 import json
