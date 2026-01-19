@@ -79,3 +79,41 @@ A função `handle_received_data` é responsável por receber e tratar a respost
 </p>
 
 > PS: Note que a variável *waiting_server* é fundamental para garantir que a engine só envie novos inputs quando os inputs anteriores já foram tratados. Sem essa variável de controle, a engine pode enviar múltiplos inputs enquanto as respostas ainda estão sendo calculadas, e esse acúmulo de requisições entra em uma fila que eventualmente irá estourar e matar a aplicação.
+
+## Servidor remoto
+
+Como podemos ver, o script Python está rodando localmente, na mesma máquina que a Godot. Caso fosse rodar esse script Python remotamente, em uma máquina EC2, como deveria ser implementada a comunicação? 
+
+1. **Endereço: IP público ou domínio:**  
+O endereço muda de `ws://127.0.0.1:8000/ws` para algo como `ws://<IP_PUBLICO>:8000/ws` ou `wss://api.mygame.com/ws`. Na Godot, basta trocar a URL: `@export var websocket_url = "wss://api.mygame.com/ws"`.
+
+2. **EC2: liberar porta:**  
+No *Security Group* da EC2, liberar a porta usada pelo servidor (ex: `8000` ou `443`), protocolo `TCP`, com origem `0.0.0.0/0` (teste) ou IPs específicos (produção).
+
+3. **Bind correto do Uvicorn:**  
+O servidor precisa escutar todas as interfaces: `uvicorn.run(app, host="0.0.0.0", port=8000)`.
+
+4. **WS vs WSS:**  
+Local pode usar `ws://`. Em produção, o recomendado é `wss://`, que exige TLS válido.
+
+5. **Certificado TLS:**  
+Para `wss://`, é necessário um certificado confiável (ex: Let’s Encrypt). Sem isso, a conexão falha no cliente.
+
+6. **Proxy reverso (opcional, mas comum):**  
+Usar Nginx para terminar TLS na porta `443` e repassar o WebSocket para o FastAPI (ex: `localhost:8000`).
+
+7. **DNS:**  
+Se usar domínio, o DNS deve apontar para o IP público da EC2 antes de emitir o certificado.
+
+8. **Latência e quedas:**  
+Em remoto há atraso e desconexões. O cliente precisa tratar `STATE_CLOSED` e reconectar.
+
+9. **Timeout e fluxo:**  
+Definir o que fazer se o servidor demorar ou não responder (retry, descartar, fallback).
+
+10. **Ambiente da EC2:**  
+Garantir que Python, dependências e o processo (systemd, screen, docker, etc.) mantenham o servidor rodando.
+
+> PS: Em um jogo distribuído (ex: Steam), o usuário final **não deve nunca** lidar com certificados TLS. Toda a configuração de TLS (`wss://`) é responsabilidade exclusiva do servidor (domínio válido + certificado de CA confiável, como Let's Encrypt). Se o cliente Godot exigir configuração manual de certificados, isso indica ambiente de desenvolvimento.
+
+
