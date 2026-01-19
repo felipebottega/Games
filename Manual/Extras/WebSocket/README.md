@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 ## Preparando o frontend na engine
 
-Iremos criar a conexão numa cena do tipo `Node`. A primeira coisa necessária é estabelecer a conexão, faremos isso já é feito na função `_ready`. Importante ressaltar que o script deve estar executando antes do jogo ser executado.
+Iremos criar a conexão numa cena do tipo `Node`. A primeira coisa necessária é estabelecer a conexão, faremos isso na função `_ready`. Importante ressaltar que o script deve estar executando antes do jogo ser executado.
 
 <p align="center">
     <img width="650" src="https://github.com/user-attachments/assets/7a9ac1c8-35fa-4043-a8ef-092cce5970e4" />
