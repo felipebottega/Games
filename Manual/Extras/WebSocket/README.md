@@ -70,7 +70,7 @@ Depois disso quem toma conta de tudo é o `_process`, todas as chamadas seguinte
     <img width="520" src="https://github.com/user-attachments/assets/827aecaa-8d18-4270-a659-11430feddabf" />
 </p>
 
-A função `handle_received_data` é responsável por receber e trtar a resposta do servidor. Esta resposta vem como uma string que precisa ser convertida em dicionário. A função `send_dummy_inputs` envia os inputs para o servidor. Note que eles são aleatórios pois este é um exemplo dummy, nada de fato acontece. Por fim, a função `handle_disconnection` trata a desconexão com o servidor. Ela é chamada quando o jogo é encerrado. 
+A função `handle_received_data` é responsável por receber e tratar a resposta do servidor. Esta resposta vem como uma string que precisa ser convertida em dicionário. A função `send_dummy_inputs` envia os inputs para o servidor. Note que eles são aleatórios pois este é um exemplo dummy, nada de fato acontece. Por fim, a função `handle_disconnection` trata a desconexão com o servidor. Ela é chamada quando o jogo é encerrado. 
 
 <p align="center">
     <img width="560" src="https://github.com/user-attachments/assets/0e93bf77-cc26-4d88-b592-2e9e22d9cf44" />
