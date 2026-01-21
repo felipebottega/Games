@@ -23,6 +23,14 @@ Iremos ver neste tutorial como interagir diretamente com os servidores, pulando 
 
 Já tivemos uma introdução ao conceito de RID (*Resource ID*) no [contexto de navegação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#rids). Vamos rever este conceito agora novamente, mas de maneira genérica.
 
-Antes de falar de RID, é importante entender o que é um *Resource* (*Recurso*) em Godot. Um Resource é a classe base para dados em Godot, ou seja, objetos que contêm informação (texturas, meshes, scripts, animações, tabelas de dados, etc.), mas que não têm comportamento de cena (não são nodes). Resources apenas guardam dados, podem ser salvos em arquivo *.tres* texto ou *.res* binário, podem conter outros Resources, e além disso, também é possível criar Resources customizados (script com `extends Resource`) e editá-los no *Inspector* (muito útil para dados configuráveis, como tabelas, itens, entre outros).
+Antes de falar de RID, é importante entender o que é um *Resource* (*Recurso*) em Godot. Um Resource é a classe base para dados em Godot, ou seja, objetos que contêm informação (texturas, meshes, scripts, animações, tabelas de dados, etc.), mas que não têm comportamento de cena (não são nodes). Resources apenas guardam dados. Resources podem conter outros Resources, podem ser salvos em arquivo *.tres* texto ou *.res* binário e, além disso, também é possível criar Resources customizados (script com `extends Resource`) e editá-los no *Inspector* (muito útil para dados configuráveis, como tabelas, itens, entre outros).
 
-> PS: Você pode armazenas dados usando arrays, dicionários ou classes, mas Resource é uma estrutura mais robusta e feita para "conversar bem" com a engine. Resource é uma estrutura de dados cuja identidade, persistência, compartilhamento e dependências são gerenciados automaticamente pela engine, fora do escopo do script.
+> PS: Você pode armazenar dados usando arrays, dicionários ou classes, mas Resource é uma estrutura mais robusta e feita para "conversar bem" com a engine. Resource é uma estrutura de dados cuja identidade, persistência, compartilhamento e dependências são gerenciados automaticamente pela engine, fora do escopo do script.
+
+Um RID, como o nome indica, é um identificador de um Resource. Quase todo node e objeto da Godot possui um RID em tempo de excecução. Os servidores necessitam do RID para poder acessar o objeto com o qual se deseja trabalhar. Este é o principal propósito do RID: passar a referência do objeto para o servidor.
+
+> PS: Só faz sentido armazenar o RID se o objeto ao qual ele referencia também está sendo armazenado. Se um objeto é criado apenas dentro de uma função ou dentro do servidor, o seu RID só aponta para este objeto enquanto ele está em uso. No momento em que se sai do escopo e o objeto deixa de existir, o RID não tem mais uso.
+
+## Exemplo 1: criando um sprite
+
+
