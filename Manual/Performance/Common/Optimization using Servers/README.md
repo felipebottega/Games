@@ -8,14 +8,13 @@ Todo o sistema de nodes e cenas da Godot na verdade é opcional, pois por trás 
 
 Iremos ver neste tutorial como interagir diretamente com os servidores, pulando totalmente qualquer necessidade de criar nodes ou cenas. Começamos listando os servidores que a Godot possui.
 
-  - [**RenderingServer:**](https://docs.godotengine.org/en/stable/classes/class_renderingserver.html) API de baixo nível para tudo que é visível (criacao de meshes, cenas de render, etc.). Útil para contornar o sistema de Nodes quando você precisa de muito desempenho.
-  - **DisplayServer:** Gerencia janelas, monitores e tudo relacionado à apresentação/gestão de display (separado do OS).
-  - **PhysicsServer3D:** física 3D de baixo nível: espaços, corpos, formas, juntas, consultas de colisão.
-  - **PhysicsServer2D:** equivalente 2D da PhysicsServer3D (espaços 2D, shapes, corpos, queries).
-  - **AudioServer:** servidor de áudio de baixo nível: criação e reprodução de samples/voices, roteamento básico.
-  - **NavigationServer3D:** navegação/pathfinding 3D: mapas, regiões, agentes, cálculo de rotas/evitação.
-  - **NavigationServer2D:** navegação/pathfinding 2D (mesma ideia do 3D, adaptado a 2D).
-  - **XRServer:** servidor central para AR/VR (descoberta de interfaces, trackers, HMD/controllers etc.).
-  - **TranslationServer:** gerenciamento central de traduções/localização.
-  - **TextServer:** backend para fontes e renderização/medição de texto (HarfBuzz/ICU implementations).
-  - **CameraServer:** gerencia câmeras físicas/feeds (webcams / câmeras do dispositivo), usado por módulos XR.
+  - [**RenderingServer:**](https://docs.godotengine.org/en/stable/classes/class_renderingserver.html) Gerencia tudo que é visível (criacao de malhas, cenas de render, sprites, entre outros). 
+  - [**DisplayServer:**](https://docs.godotengine.org/en/stable/classes/class_displayserver.html) Gerencia janelas, monitores e tudo relacionado à apresentação/gestão de display (separado do OS).
+  - [**PhysicsServer3D:**](https://docs.godotengine.org/en/stable/classes/class_physicsserver3d.html) Física 3D de baixo nível.
+  - [**PhysicsServer2D:**](https://docs.godotengine.org/en/stable/classes/class_physicsserver2d.html) Equivalente 2D do `PhysicsServer3D`.
+  - [**AudioServer:**](https://docs.godotengine.org/en/stable/classes/class_audioserver.html) Servidor de áudio de baixo nível, gerencia a criação e reprodução de samples/voices, roteamento básico, entre outros.
+  - [**NavigationServer3D:**](https://docs.godotengine.org/en/stable/classes/class_navigationserver3d.html) Navegação/pathfinding 3D: mapas, regiões, agentes, cálculo de rotas/evitação.
+  - [**NavigationServer2D:**](https://docs.godotengine.org/en/stable/classes/class_navigationserver2d.html) Navegação/pathfinding 2D (mesma ideia do 3D, adaptado a 2D).
+  - [**XRServer:**](https://docs.godotengine.org/en/stable/classes/class_xrserver.html) Servidor central para AR/VR.
+  - [**TranslationServer:**](https://docs.godotengine.org/en/stable/classes/class_translationserver.html) Gerenciamento central de traduções/localização.
+  - [**TextServer:**](https://docs.godotengine.org/en/stable/classes/class_textserver.html) Servidor para fontes e renderização/medição de texto.
