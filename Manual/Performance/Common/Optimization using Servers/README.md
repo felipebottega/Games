@@ -33,4 +33,13 @@ Um RID, como o nome indica, é um identificador de um Resource. Quase todo node 
 
 ## Exemplo 1: criando um sprite
 
+Criamos uma cena com um `Node2D` com um script e nada mais. Este script sozinho vai acessar o `RenderingServer` para carregar e manipular um sprite na tela. Colocamos o script completo abaixo. Vamos explicar o que cada chamada dele faz.
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/bd640d3c-0617-46f9-8ae5-6cddd5e392df" />
+</p>
+
+  - **RenderingServer.canvas_item_create():** Cria uma instância do `CanvasItem` (agora pode ser um bom momento para relembrar [este node](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items)) e retorna o seu RID. É importante lembrar que o objeto em si está no servidor, então nós não manipulamos o objeto diretamente no script. Tudo que fazemos é chamar alguma função do servidor e passar o RID deste objeto para ser manipulado por esta função. Essa dinâmica vale para todos os servidores.
+  - **RenderingServer.canvas_item_set_parent(item, parent):** OS dois argumentos *item* e *parent* são RIDs referenciando dois objetos `CanvasItem` distintos. Esta função faz com que o objeto associado a *parent* passe a ser o pai do objeto associado a *item*. Por conta disse, *item* ira herdar o *transform*, *modulation* e *visibility* do pai. Ou seja, se o pai for deformado, ter cor alterada pela modulação ou ficar oculto, o filho também fica. 
+
 
