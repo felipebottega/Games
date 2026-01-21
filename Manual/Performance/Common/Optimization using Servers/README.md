@@ -44,5 +44,5 @@ Criamos uma cena com um `Node2D` com um script e nada mais. Este script sozinho 
   - **RenderingServer.canvas_item_add_texture_rect(item: RID, rect: Rect2, texture: RID):** Desenha um retângulo texturizado 2D no `CanvasItem` apontado por *item*, utilizando a textura referenciada por *texture* e as dimensões definidas por *rect*.
   - **RenderingServer.canvas_item_set_transform(item: RID, transform: Transform2D):** Aplica as transformações de *transform* sobre o `CanvasItem` apontado por *item*. 
 
-
+> PS: `CanvasItem` não é um objeto desenhado, é um contêiner de comandos de desenho. Servers não criam coisas visuais, eles descrevem o que o render deve fazer.
 
