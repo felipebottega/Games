@@ -1,6 +1,6 @@
 # Optimization using Servers
 
-Godot é uma engine ótima para rápido e fácil desenvolvimento, com o seu sistema de nodes e cenas. Porém, toda essa facilidade possui os seus trade-offs: mais camadas de complexidade, mais uso de memória, menos performance, não tem como paralelizar com threads, entre outros. Isso por si só não é um grande problema, pois a Godot é otimizada e funcionará bem na maioria dos casos. Ainda assim, em situações extremas o approach normal da engine pode sofrer.
+Godot é uma engine ótima para rápido e fácil desenvolvimento, com o seu sistema de nodes e cenas. Porém, toda essa facilidade possui os seus contras: mais camadas de complexidade, mais uso de memória, menos performance, não tem como paralelizar com threads, entre outros. Isso por si só não é um grande problema, pois a Godot é otimizada e funcionará bem na maioria dos casos. Ainda assim, em situações extremas o approach normal da engine pode sofrer.
 
 ## Servidores
 
@@ -18,3 +18,9 @@ Iremos ver neste tutorial como interagir diretamente com os servidores, pulando 
   - [**XRServer:**](https://docs.godotengine.org/en/stable/classes/class_xrserver.html) Servidor central para AR/VR.
   - [**TranslationServer:**](https://docs.godotengine.org/en/stable/classes/class_translationserver.html) Gerenciamento central de traduções/localização.
   - [**TextServer:**](https://docs.godotengine.org/en/stable/classes/class_textserver.html) Servidor para fontes e renderização/medição de texto.
+
+## RIDs
+
+Já tivemos uma introdução ao conceito de RID (*Resource ID*) no [contexto de navegação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#rids). Vamos rever este conceito agora novamente, mas de maneira genérica.
+
+Antes de falar de RID, é importante entender o que é um *Resource* (*Recurso*) em Godot. Um Resource é a classe-base para dados em Godot, ou seja, objetos que contêm informação (texturas, meshes, scripts, animações, tabelas de dados, etc.), mas que não têm comportamento de cena (não são nodes). Resources apenas guardam dados, podem ser salvos em arquivo *.tres* texto ou *.res* binário, podem conter outros Resources, e além disso, também é possível criar Resources customizados (script com `extends Resource`) e editá-los no *Inspector* (muito útil para dados configuráveis, como tabelas, itens, entre outros).
