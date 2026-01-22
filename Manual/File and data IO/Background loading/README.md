@@ -23,7 +23,7 @@ Funciona parecido com a `preload`, mas carrega dinamicamente, no momento em que 
 
 ## preload e load em loops
 
-Se por alguma razão você quer instanciar um objeto várias vezes, o ideal é carregá-lo com `preload` e `load` fora do loop e apenas criar instâncias dele no loop. Caso você (sem querer) coloque o `preload` em um loop, ele mantém o objeto carregado em cache, então não executa o `preload` mais que uma vez. Porém, o mesmo não acontece com o `load`. Colocar o `load` dentro de um loop vai fazer com que ele seja reexecutado diversas vezes. Isso não é indicado pois vai causar problemas de performance no jogo.
+Se por alguma razão você quer instanciar um objeto várias vezes, o ideal é carregá-lo com `preload` ou com o `load` fora do loop e depois criar instâncias dele no loop. Caso você (sem querer) coloque o `preload` em um loop, ele mantém o objeto carregado em cache, então não executa o `preload` mais que uma vez. Porém, o mesmo não acontece com o `load`. Colocar o `load` dentro de um loop vai fazer com que ele seja reexecutado diversas vezes. Isso não é indicado pois vai causar problemas de performance no jogo.
 
 ## get_tree().change_scene_to_file() e get_tree().change_scene_to_packed()
 

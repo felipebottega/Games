@@ -45,7 +45,7 @@ Clique novamente na aba do `NavigationPolygon` e as opções deste recurso vão 
 
   - **Geometry/Source Geometry Mode:** Não é obrigatório que os nodes a serem incluídos no cálculo da geometria sejam filhos do node de navegação. Caso você queira incluir nodes de fora, basta criar um grupo para eles. As opções são:
     - *Root Node Children:* É a opção default. Apenas os nodes filhos são considerados no cálculo da geometria.
-    - *Group With Children:* Inclui todos os nodes que estão no grupo, assim como os filhos dos nodes no grupo, e os filhos dos filhos etc (faz-se uma busca recursiva).
+    - *Group With Children:* Inclui todos os nodes que estão no grupo, assim como os filhos dos nodes no grupo, e os filhos dos filhos, (faz-se uma busca recursiva).
     - *Group Explicit:* Inclui todos os nodes que estão no grupo.
   - **Geometry/Source Geometry Group Name:** É o nome do grupo a ser considerado, caso alguma escolha de grupo seja feita em *Source Geometry Mode*.
   Abaixo, a condinuação do exemplo anterior, mas agora incluindo na geometria um `StaticBody2D` que não é filho do `NavigationRegion2D`.
