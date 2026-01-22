@@ -31,7 +31,7 @@ Um RID, como o nome indica, é um identificador de um Resource. Quase todo node 
 
 > PS: Só faz sentido armazenar o RID se o objeto ao qual ele referencia também está sendo armazenado. Se um objeto é criado apenas dentro de uma função ou dentro do servidor, o seu RID só aponta para este objeto enquanto ele está em uso. No momento em que se sai do escopo e o objeto deixa de existir, o RID não tem mais uso.
 
-## Exemplo 1: criando um sprite
+## Exemplo: criando um sprite
 
 Criamos uma cena com um `Node2D` com um script e nada mais. Este script sozinho vai acessar o `RenderingServer` para carregar e manipular um sprite na tela. Colocamos o script completo abaixo. Vamos explicar o que cada chamada dele faz.
 
