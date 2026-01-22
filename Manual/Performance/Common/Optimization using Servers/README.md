@@ -19,6 +19,8 @@ Iremos ver neste tutorial como interagir diretamente com os servidores, pulando 
   - [**TranslationServer:**](https://docs.godotengine.org/en/stable/classes/class_translationserver.html) Gerenciamento central de traduções/localização.
   - [**TextServer:**](https://docs.godotengine.org/en/stable/classes/class_textserver.html) Servidor para fontes e renderização/medição de texto.
 
+⚠️ Ao trabalhar com servidores, evite ao máximo requisições de dados contido neles. Apenas use as funções normais, que normalmente criam ou fazem algo mas não retornam nada. Os servidores trabalham de maneira assíncrona e em paralelo, e requisições por dados travam eles momentaneamente. Esses travas tem um impacto grande na performance, por isso é algo que deve ocorrer raramente ou nunca.
+
 ## RIDs
 
 Já tivemos uma introdução ao conceito de RID (*Resource ID*) no [contexto de navegação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#rids). Vamos rever este conceito agora novamente, mas de maneira genérica.
