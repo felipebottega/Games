@@ -1,6 +1,6 @@
 # CPU optimization
 
-Este tutorial é apenas uma pequena lista de ferramentas e dicas para monitoramente e otimização dos processos do lado da CPU.
+Este tutorial é apenas uma pequena lista de ferramentas e dicas para monitoramento e otimização dos processos do lado da CPU.
 
 ## Profiler 
 
