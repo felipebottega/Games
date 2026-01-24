@@ -30,4 +30,12 @@ Executar uma única thread tem utilidade. Se o teu jogo tiver algum processament
   <img width="430" src="https://github.com/user-attachments/assets/f812ef55-4401-4592-9a63-dd9498bc34f6" />
 </p>
 
+Na maioria dos casos, os jogo precisam apenas de uma thread extra para tirar coisa pesada da main thread. Alguns exemplos clássicos são: gerar mapa procedural, carregar e processar dados, pathfinding pesado, compressão/parsing. Isso já evita stutter e travadas.
+
 ## Criando múltiplas threads
+
+É possível trabalhar com múltiplas threads usando as chamadas vistas até aqui, mas não é indicado (mais frágil e suscetível a erros). O modo indicado na Godot para se trabalhar com múltiplas threads é através do `WorkerThreadPool`. Mostramos um exemplo prático abaixo.
+
+<p align="center">
+  <img width="620" src="https://github.com/user-attachments/assets/0101d76a-de7b-4960-8f34-5974e15d3a28" />
+</p>
