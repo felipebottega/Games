@@ -1,0 +1,1 @@
+# Reducing stutter from shader (pipeline) compilations
