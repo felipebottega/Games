@@ -37,5 +37,5 @@ Na maioria dos casos, os jogo precisam apenas de uma thread extra para tirar coi
 É possível trabalhar com múltiplas threads usando as chamadas vistas até aqui, mas não é indicado (mais frágil e suscetível a erros). O modo indicado na Godot para se trabalhar com múltiplas threads é através do `WorkerThreadPool`. Mostramos um exemplo prático abaixo.
 
 <p align="center">
-  <img width="620" src="https://github.com/user-attachments/assets/0101d76a-de7b-4960-8f34-5974e15d3a28" />
+  <img width="650" src="https://github.com/user-attachments/assets/0101d76a-de7b-4960-8f34-5974e15d3a28" />
 </p>
