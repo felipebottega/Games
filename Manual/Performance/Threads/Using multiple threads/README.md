@@ -12,6 +12,10 @@ Antes de falar de threads, devemos introduzir o método `bind`, pois ele será n
 
 É importante notar que os argumentos em `bind` sempre vem após os argumentos que você usará em `f.bind`. Por exemplo, se fosse definida a função `f.bind(1, 2)`, internamente a engine esperaria apenas um argumento para ela, que seria $x$, com $y = 1$ e $z = 2$ fixados. Também é possível criar uma função com o `bind` usando todos os argumentos da função. Deste modo, a função será simplesmente uma constante.
 
+## _exit_tree
+
+A função nativa `_exit_tree()` é chamada automaticamente pela Godot quando um node está prestes a sair da SceneTree (remoção, troca de cena, fechar o jogo, etc.). Ela é usada para limpeza final (parar threads, liberar recursos, etc.). 
+
 ## Criando uma thread
 
 Abaixo segue um exemplo minimal do uso de threads em um script Godot. Um thread é criada, depois é chamada para executar uma função que contém um argumento fixadop com `bind`, e por fim a thread é finalizada após a sua execução.
@@ -39,3 +43,15 @@ Na maioria dos casos, os jogo precisam apenas de uma thread extra para tirar coi
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/0101d76a-de7b-4960-8f34-5974e15d3a28" />
 </p>
+
+## Mutex
+
+Quando diversas threads estão acessando os mesmos dados, podemos ter comportamentos inesperados e erros. É importante que as threads acessem os mesmo dados de forma sequencial, isto é, uma thread de cada vez. Neste caso há perda de paralelismo, mas acessos simultâneos aos mesmos dados é algo que é bastante problemático. A Godot possui a classe *Mutex* (também chamados de *semáforos binários*) para organizar melhor estes acessos. A ideia é simples: quando uma thread for acessar um dado que outras threads vão acessar, ela "trava" este dado momentaneamente. A thread pode liber o dado assim que terminar de trabalhar com ele. 
+
+O script abaixo mostra um exemplo simples de uso. A função `_ready` chama a thread e continua a execução. Logo depois ela trava a variável `counter` e faz um incremento nela. Isso é necessário pois a thread também vai acessar esta variável. Não é certo quem vai acessar primeiro a variável, se é a main thread ou a thread criada. Mas ambas travam a variável assim que o código chega nela. Desta maneira, é garantido que uma thread vai esperar a outra liberar a variável. Assim o resultado final será `counter = 2`.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/4fc2da54-13b5-4160-9035-2250517d6867" />
+</p>
+
+⚠️ Atenção: Neste exemplo em particular a chamada `thread.wait_to_finish()` foi feito dentro do `_ready`. Nunca faça isso em produção! Esta chamada trava tudo até as threads finalizarem as suas execuções. O único motivo de termos colocado este chamada na `_ready` é porque o print não aparece quando a `_exit_tree` é chamada.
