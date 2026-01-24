@@ -22,8 +22,8 @@ A Godot oferece um monitoramento que mostra quantas pipelines são compiladas e 
 
 Abaixo, detalhamos o que cada item do monitoramento significa.
 
-  - **Canvas:** Compilação acontece quando um nó 2D é desenhado pela primeira vez. A Godot ainda não pré-compila elementos 2D, então isso pode causar stutter na primeira aparição do nó.
+  - **Canvas:** Compilação acontece quando um node 2D é desenhado pela primeira vez. A Godot ainda não pré-compila elementos 2D, então isso pode causar stutter na primeira aparição do node.
   - **Mesh:** Compilação acontece ao carregar uma malha 3D e identificar pipelines precompiláveis a partir de suas propriedades. Carregar malhas em tempo de jogo pode gerar stutter, mas o impacto pode ser reduzido se o carregamento for feito em uma thread de fundo. Modificadores via overrides de material não são compilados nessa etapa.
-  - **Surface:** Compilação ocorre quando um frame vai ser desenhado e objetos 3D foram instanciados pela primeira vez na cena — pode incluir nós não visíveis. O stutter aparece apenas no primeiro frame em que o nó é adicionado, e costuma não ser perceptível se acontecer logo após uma tela de carregamento.
+  - **Surface:** Compilação ocorre quando um frame vai ser desenhado e objetos 3D foram instanciados pela primeira vez na cena — pode incluir nodes não visíveis. O stutter aparece apenas no primeiro frame em que o node é adicionado, e costuma não ser perceptível se acontecer logo após uma tela de carregamento.
   - **Draw:** Compilação sob demanda quando um objeto 3D precisa ser desenhado e o ubershader não foi pré-compilado. Isso causa stutter durante o gameplay e é equivalente ao comportamento anterior ao Godot 4.4. Se você observar compilações aqui, reporte no repositório da Godot com um projeto mínimo que reproduza o problema, pois isso não deveria ocorrer com o sistema de Ubershader.
   - **Specialization:** Compilação feita em background durante o gameplay para otimizar o frame rate. Não causa stutter, mas muitas especializações por frame podem reduzir o desempenho geral.
