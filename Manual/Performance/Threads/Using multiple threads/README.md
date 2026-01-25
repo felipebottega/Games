@@ -60,7 +60,7 @@ O script abaixo mostra um exemplo simples de uso. A função `_ready` chama a th
 
 *Semáforos* basicamente são comandos que mandam a thread ficar em espera (semáforo vermelho) até ser enviado um sinal dizendo que pode continuar a execução (semáforo verde). Este sinal sempre vem de fora, nunca da própria thread. 
 
-Abaixo temos um exemplo simples onde a thread fica esperando a thread main enviar o sinal. A main envia este sinal quando o usuárui pressiona o *ui_accept* (tecla de espaço em teclado). O comando de espera é o `semaphore.wait()` e o comando de execução é o `semaphore.post()`. Importante esclarecer que o `semaphore.wait()` de fato trava a thread naquela linha de código. O while ali não é para checar se o sinal foi enviado, ele é para repetir a execução toda do início após a thread executar a tarefa. 
+Abaixo temos um exemplo simples onde a thread fica esperando a thread main enviar o sinal. A main envia este sinal quando o usuário pressiona o *ui_accept* (tecla de espaço em teclado). O comando de espera é o `semaphore.wait()` e o comando de execução é o `semaphore.post()`. Importante esclarecer que o `semaphore.wait()` de fato trava a thread naquela linha de código. O while ali não fica girando e checando toda hora se chegou algum sinal. Ele é para repetir a execução toda do início após a thread executar a tarefa. 
 
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/e6d27c41-6ccf-480a-b270-830807ab2c9f" />
