@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c35s85dtyw8we"]
+
+[ext_resource type="Script" uid="uid://bhu6xg5rxnl2r" path="res://mutex.gd" id="1_c5dh2"]
+
+[node name="Mutex" type="Node"]
+script = ExtResource("1_c5dh2")

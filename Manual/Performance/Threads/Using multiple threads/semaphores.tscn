@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1o4eqiowwhuv"]
+
+[ext_resource type="Script" uid="uid://bvhn44mna6x22" path="res://semaphores.gd" id="1_0e52j"]
+
+[node name="Semaphores" type="Node"]
+script = ExtResource("1_0e52j")
