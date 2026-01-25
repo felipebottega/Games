@@ -51,7 +51,17 @@ Quando diversas threads estão acessando os mesmos dados, podemos ter comportame
 O script abaixo mostra um exemplo simples de uso. A função `_ready` chama a thread e continua a execução. Logo depois ela trava a variável `counter` e faz um incremento nela. Isso é necessário pois a thread também vai acessar esta variável. Não é certo quem vai acessar primeiro a variável, se é a main thread ou a thread criada. Mas ambas travam a variável assim que o código chega nela. Desta maneira, é garantido que uma thread vai esperar a outra liberar a variável. Assim o resultado final será `counter = 2`.
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/4fc2da54-13b5-4160-9035-2250517d6867" />
+  <img width="380" src="https://github.com/user-attachments/assets/4fc2da54-13b5-4160-9035-2250517d6867" />
 </p>
 
 ⚠️ Atenção: Neste exemplo em particular a chamada `thread.wait_to_finish()` foi feito dentro do `_ready`. Nunca faça isso em produção! Esta chamada trava tudo até as threads finalizarem as suas execuções. O único motivo de termos colocado este chamada na `_ready` é porque o print não aparece quando a `_exit_tree` é chamada.
+
+## Semáforos
+
+*Semáforos* basicamente são comandos que mandam a thread ficar em espera (semáforo vermelho) até ser enviado um sinal dizendo que pode continuar a execução (semáforo verde). Este sinal sempre vem de fora, nunca da própria thread. 
+
+Abaixo temos um exemplo simples onde a thread fica esperando a thread main enviar o sinal. A main envia este sinal quando o usuárui pressiona o *ui_accept* (tecla de espaço em teclado). O comando de espera é o `semaphore.wait()` e o comando de execução é o `semaphore.post()`. Importante esclarecer que o `semaphore.wait()` de fato trava a thread naquela linha de código. O while ali não é para checar se o sinal foi enviado, ele é para repetir a execução toda do início após a thread executar a tarefa. 
+
+<p align="center">
+  <img width="650" src="https://github.com/user-attachments/assets/e6d27c41-6ccf-480a-b270-830807ab2c9f" />
+</p>
