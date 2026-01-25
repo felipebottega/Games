@@ -65,3 +65,9 @@ Abaixo temos um exemplo simples onde a thread fica esperando a thread main envia
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/e6d27c41-6ccf-480a-b270-830807ab2c9f" />
 </p>
+
+Para finalizar, colocamos abaixo uma pequena tabela com um resumo do que cada ferramenta faz. Pode ser útil quando você quer lembrar rapidamente de algo.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/a92585c4-8b71-4571-ba58-65f27c38b650" />
+</p>
