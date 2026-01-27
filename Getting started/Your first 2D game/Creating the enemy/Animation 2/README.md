@@ -36,7 +36,7 @@ Aproveite para já colocar a shape de colisão no boneco.
 
 ## RigidBody2D vs CharacterBody2D vs Node2D
 
-Se você não quer usar a física, e quer controle total sobre a posição, o tipo de node ideal é `Node2D`, trabalha apenas com o visual. O `CharacterBody2D` permite colisão mas te deixa com algum controle. O `RigidBody2D` só deve ser usado se você quer que o movimento obedeça as leis da física, como gravidade, colisões, impulsos etc. Um resumo geral é dado na tabela abaixo.
+Se você não quer usar física e quer controle total sobre a posição, o tipo de node ideal é `Node2D`, trabalha apenas com o visual. O `CharacterBody2D` permite colisão mas te deixa com algum controle. O `RigidBody2D` só deve ser usado se você quer que o movimento obedeça as leis da física, como gravidade, colisões, impulsos etc. Um resumo geral é dado na tabela abaixo.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/355f04a9-ad66-4cc8-a113-694a3ae10d6c" width="800">
