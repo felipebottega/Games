@@ -20,3 +20,9 @@ Em alguns projetos anteriores, se tivéssemos que criar diversas paredes em um c
 > PS: Apesar do `CollisionShape2D` ser o modo mais prático de atribuir uma shape para um corpo físico, também é possível utilizar o `CollisionPolygon2D`
 
 ## Mudança de escala e física
+
+Quando quiser alterar o tamanho ou formato de uma shape de colisão, nunca faça isso alterando o *Scale* do *Inspector* (destacado em vermelho na imagem abaixo). De preferência aos marcadores em torno da shape no próprio editor (destacado em verde na imagem abaixo). A engine física não lida bem com mudanças de escala, o que pode acarretar em comportamentos inesperados ou erros. Alterar a escala por código também deve ser evitado, pois é equivalente a alterar pelo *Inspector*.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/237a6ef0-61b3-4cda-b3d9-edef8c9e6f01" />
+</p>
