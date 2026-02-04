@@ -8,13 +8,6 @@ Para trocar a engine física do seu projeto, basta ir em *Project → Project Se
 Caso você queira uma engine física externa, deve baixá-la e colocar a pasta dessa engine dentro da pasta **addons* no seu projeto. Importante notar que não pode ser qualquer engine física, mas sim uma feita especificamente para a Godot. Abaixo, mostramos um conteúdo típico da pasta de uma engine física. Neste exemplo, foi usada a engine [Godot Rapier Physics](https://godot.rapier.rs/). Depois que a engine foi inserida dentro do seu projeto, ela deverá aparecer na lista de engines.
 
 <p align="center">
-  <tr>
-    <td valign="top">
-      <img width="200" src="https://github.com/user-attachments/assets/ecb08492-b95e-496d-b446-219f7484b73e" />
-    </td>
-    <td valign="top">
-      <img width="700" src="https://github.com/user-attachments/assets/fa81a124-a03f-4168-be67-6de4c50f9131" />
-    </td>
-  </tr>
+  <img width="200" src="https://github.com/user-attachments/assets/9ebfb125-b438-4bdc-add1-79852cced898" />
+  <img width="700" src="https://github.com/user-attachments/assets/fa81a124-a03f-4168-be67-6de4c50f9131" />
 </p>
-
