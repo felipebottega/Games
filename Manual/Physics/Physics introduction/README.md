@@ -33,4 +33,17 @@ A engine física da Godot roda a uma taxa constante de 60 iterações por segund
 
 > PS: Para exemplificar porque a física não pode depender de física, imagine que a gravidade fosse executada no processamento normal e dependesse de FPS. Em um computador fraco, o boneco iria cair em câmera lenta (FPS baixo), enquanto que num computador potente ele poderia cair absurdamente rápido (FPS alto). Como a gravidade atua num processamento de taxa constante, o boneco pode "teleportar" de um ponto a outro se estiver rodando num computador fraco. Esse "teleporte" serve para compensar a lentidão da máquina mas mantendo o boneco caindo de acordo com tempo "real" que deveria cair. Em outras palavras, se é esperado que ele leve $t$ segundos para cair no chão, esse é o tempo que ele vai levar, não importa a máquina nem o FPS.
 
-Use o `_physics_process` para qualquer processo do jogo que você precise que seja executado de maneira mais controlada e sem depender de FPS. Caso contrário, use o `_process`. Essas duas funções nativas da Godot recebem o parâmetro `delta`. Este valor equivale a quanto tempo se passou desde a última iteração. No caso do `_process` este será o tempo que levou entre o último frame e o atual. No caso do `_physics_process` esse valor é constante, sendo igual a $\frac{1}{60} = 0.0166 \ldots$.
+Use o `_physics_process` para qualquer processo do jogo que você precise que seja executado de maneira mais controlada e sem depender de FPS. Caso contrário, use o `_process`. Essas duas funções nativas da Godot recebem o parâmetro `delta`. Este valor equivale a quanto tempo se passou desde a última iteração. No caso do `_process` este será o tempo que levou entre o último frame e o atual. No caso do `_physics_process`esse valor é constante, sendo igual a $\frac{1}{60} = 0.0166 \ldots$.
+
+## Collision layers e masks
+
+Já vimos o suficiente deste asunto [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#defini%C3%A7%C3%A3o-de-layer-e-mask), mas vamos dar uma recapitulada assim mesmo.
+
+Todo objeto que possui colisão, também possui *Collision Layers* e *Collision Masks*, um total de 32 para cada. 
+
+  - **Layer:** Se um objeto tem a layer X marcado, isso significa que ele pertence a uma certa camada X. Outros objetos que buscarem colisão nesta camada vão encontrar este objeto.
+  - **Mask:** Se um objeto tem a mask X marcada, isso significa que ele é capaz de detectar objetos na camada X (isto é, objetos que tem a layer X marcada).
+
+Pense nas layers como sendo as camadas em que o objeto está presente e masks como sendo as camadas com as quais camadas ele quer colidir. A colisão é registrada do ponto de vista do corpo ou outro objeto ativo (que está buscando a colisão). É possível adicionar o objeto a múltiplas layers ou masks.
+
+> Corner case: Suponha um RigidBody que não está em nenhuma layer e mask=1, e um StaticBody que está na layer 1 mas nenhuma mask. Neste caso, o RigidBody busca ativamente por corpos na layer 1 e vai encontrar o StaticBody, de modo que haverá colisão se eles se encontrarem. Agora suponha o contrário, o RigidBody na layer 1 sem nenhuma mask, e um StaticBody sem nenhuma layer mas com mask=1. Neste caso não haverá colisão pois o StaticBody não faz nada ativamente. Aliás, adicionar masks em corpos estáticos não tem efeito algum por eles serem passivos.
