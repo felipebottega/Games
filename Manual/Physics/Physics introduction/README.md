@@ -47,3 +47,10 @@ Todo objeto que possui colisão, também possui *Collision Layers* e *Collision 
 Pense nas layers como sendo as camadas em que o objeto está presente e masks como sendo as camadas com as quais camadas ele quer colidir. A colisão é registrada do ponto de vista do corpo ou outro objeto ativo (que está buscando a colisão). É possível adicionar o objeto a múltiplas layers ou masks.
 
 > Corner case: Suponha um RigidBody que não está em nenhuma layer e mask=1, e um StaticBody que está na layer 1 mas nenhuma mask. Neste caso, o RigidBody busca ativamente por corpos na layer 1 e vai encontrar o StaticBody, de modo que haverá colisão se eles se encontrarem. Agora suponha o contrário, o RigidBody na layer 1 sem nenhuma mask, e um StaticBody sem nenhuma layer mas com mask=1. Neste caso não haverá colisão pois o StaticBody não faz nada ativamente. Aliás, adicionar masks em corpos estáticos não tem efeito algum por eles serem passivos.
+
+É possível editar os nomes das layers/masks indo em *Project → Project Settings → General → Layers Names → 2D Physics*. Isso altera os nomes das layers e masks ao mesmo tempo.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/93020d1f-37cd-478f-95e2-724f5a1d2aaf" />
+  <img width="350" src="https://github.com/user-attachments/assets/9a926d19-5b01-4701-8d82-111c768a3b10" />
+</p>
