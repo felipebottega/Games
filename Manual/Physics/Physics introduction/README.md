@@ -21,8 +21,16 @@ Em alguns projetos anteriores, se tivéssemos que criar diversas paredes em um c
 
 ## Mudança de escala e física
 
-Quando quiser alterar o tamanho ou formato de uma shape de colisão, nunca faça isso alterando o *Scale* do *Inspector* (destacado em vermelho na imagem abaixo). De preferência aos marcadores em torno da shape no próprio editor (destacado em verde na imagem abaixo). A engine física não lida bem com mudanças de escala, o que pode acarretar em comportamentos inesperados ou erros. Alterar a escala por código também deve ser evitado, pois é equivalente a alterar pelo *Inspector*.
+Quando quiser alterar o tamanho ou formato de uma shape de colisão, nunca faça isso alterando o *Scale* do *Inspector* (destacado em vermelho na imagem abaixo). Dê preferência aos marcadores em torno da shape no próprio editor (destacado em verde na imagem abaixo). A engine física não lida bem com mudanças de escala, o que pode acarretar em comportamentos inesperados ou erros. Alterar a escala por código também deve ser evitado, pois é equivalente a alterar pelo *Inspector*.
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/237a6ef0-61b3-4cda-b3d9-edef8c9e6f01" />
 </p>
+
+## Physics process
+
+A engine física da Godot roda a uma taxa constante de 60 iterações por segundo (60 Hz). Isso é diferente de 60 FPS, pois não há nenhum frame a ser renderizado, apenas cálculos de física ocorrendo no servidor/backend. A Godot possui dois tipos de processamento, o de física que já mencionamos, e o processamento "normal" (em inglês é chamado de *idle processing*). Este segundo é o que de fato é executado em cada frame, e não possui taxa constante. Tudo que depende de FPS cai nesse tipo de processamento e pode ter variação de velocidade. Como não se espera que processos físicos variem de velocidade por conta de mais ou menos FPS, ele possuem essa taxa constante.
+
+> PS: Para exemplificar porque a física não pode depender de física, imagine que a gravidade fosse executada no processamento normal e dependesse de FPS. Em um computador fraco, o boneco iria cair em câmera lenta (FPS baixo), enquanto que num computador potente ele poderia cair absurdamente rápido (FPS alto). Como a gravidade atua num processamento de taxa constante, o boneco pode "teleportar" de um ponto a outro se estiver rodando num computador fraco. Esse "teleporte" serve para compensar a lentidão da máquina mas mantendo o boneco caindo de acordo com tempo "real" que deveria cair. Em outras palavras, se é esperado que ele leve $t$ segundos para cair no chão, esse é o tempo que ele vai levar, não importa a máquina nem o FPS.
+
+Use o `_physics_process` para qualquer processo do jogo que você precise que seja executado de maneira mais controlada e sem depender de FPS. Caso contrário, use o `_process`. Essas duas funções nativas da Godot recebem o parâmetro `delta`. Este valor equivale a quanto tempo se passou desde a última iteração. No caso do `_process` este será o tempo que levou entre o último frame e o atual. No caso do `_physics_process` esse valor é constante, sendo igual a $\frac{1}{60} = 0.0166 \ldots$.
