@@ -54,3 +54,5 @@ Pense nas layers como sendo as camadas em que o objeto está presente e masks co
   <img width="600" src="https://github.com/user-attachments/assets/93020d1f-37cd-478f-95e2-724f5a1d2aaf" />
   <img width="350" src="https://github.com/user-attachments/assets/9a926d19-5b01-4701-8d82-111c768a3b10" />
 </p>
+
+Neste [tutorial de navegação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#par%C3%A2metros-para-o-caminho), falamos um pouco sobre a codificação para referenciar as layers e masks (propriedade *navigation_layers*). Isso é útil quando se quer manipular estes valores por código.
