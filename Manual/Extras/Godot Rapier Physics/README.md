@@ -72,7 +72,7 @@ O comportamento do fluído não é único. Há diversos efeitos que você pode c
   <img width="250" src="https://github.com/user-attachments/assets/68d9e991-6d7d-4edb-96e9-82b9709012ad" />
 </p>
 
-Para adicionar algum efito, vá em  *Inspector → Effects* e clique para adicionar um elemento. Daí clique onde está escrito *empty* e uma lista enorme de opções vai aparecer. Para este exemplo, selecione a opção *FluidEffect2DSurfaceTensionAKINCI*.
+Para adicionar algum efeito, vá em  *Inspector → Effects* e clique para adicionar um elemento. Daí clique onde está escrito *empty* e uma lista enorme de opções vai aparecer. Para este exemplo, selecione a opção *FluidEffect2DSurfaceTensionAKINCI*.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/fbb8a992-2f45-4295-9033-40d8b22f0d34" />
@@ -83,3 +83,5 @@ Para alterar os parâmetros deste efeito, clique no próprio nome do efeito no *
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/7a826805-8443-48c7-8690-88acb0483664" />
 </p>
+
+⚠️ **Atenção:** Caso você queira editar o efeitos por código, tenha em mente que eles só passam a existir depois de adicionados. Ou você adiciona pelo *Inspector* ou adiciona por código. Mas se não adicionar, não adianata tentar buscar depois por um efeito que não existe.
