@@ -81,5 +81,5 @@ Para adicionar algum efito, vá em  *Inspector → Effects* e clique para adicio
 Para alterar os parâmetros deste efeito, clique no próprio nome do efeito no *Inspector*, isso vai abrir uma caixa com os parâmetros. Ali você pode editar e testar os valores para este efeito. É possível combinar diversos efeitos ao mesmo tempo, basta adicionar outros e ir editando. Além disso, vale a pena testar outros valores de densidade (logo abaixo do *Debug Draw*) juntamente com os efeitos. Recomendo ler o [tutorial oficial](https://godot.rapier.rs/docs/tutorial/create-a-fluid) para ver os exemplos.  
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/7a826805-8443-48c7-8690-88acb0483664" />
+  <img width="550" src="https://github.com/user-attachments/assets/7a826805-8443-48c7-8690-88acb0483664" />
 </p>
