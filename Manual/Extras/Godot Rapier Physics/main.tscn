@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://cipq8qtu25b7f"]
+
+[ext_resource type="Script" uid="uid://bas3iw47y4tar" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0.11764706, 1, 0.20392157, 1)
+offset_left = 417.0
+offset_top = 480.0
+offset_right = 723.0
+offset_bottom = 625.0
+theme_override_font_sizes/font_size = 100
+text = "START"
+
+[node name="CircleRadiusLabel" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 60.0
+offset_right = 429.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 30
+text = "Circle Radius"
+
+[node name="CircleRadiusLineEdit" type="LineEdit" parent="."]
+offset_left = 470.0
+offset_top = 66.0
+offset_right = 706.0
+offset_bottom = 97.0
+text = "10"
+
+[node name="FluidTensionCoefficientLabel" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 116.0
+offset_right = 429.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 30
+text = "Fluid Tension Coefficient"
+
+[node name="FluidTensionCoefficientLineEdit" type="LineEdit" parent="."]
+offset_left = 470.0
+offset_top = 122.0
+offset_right = 706.0
+offset_bottom = 153.0
+text = "200"
+
+[node name="FluidEffect2DViscosityArtificialLabel" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 175.0
+offset_right = 429.0
+offset_bottom = 217.0
+theme_override_font_sizes/font_size = 30
+text = "Fluid Viscosity Coefficient"
+
+[node name="FluidEffect2DViscosityArtificialLineEdit" type="LineEdit" parent="."]
+offset_left = 470.0
+offset_top = 182.0
+offset_right = 706.0
+offset_bottom = 213.0
+text = "50"
+
+[node name="DensityLabel" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 231.0
+offset_right = 441.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 30
+text = "Density"
+
+[node name="DensityLineEdit" type="LineEdit" parent="."]
+offset_left = 470.0
+offset_top = 240.0
+offset_right = 706.0
+offset_bottom = 271.0
+text = "1000"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

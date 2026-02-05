@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://qtxpf1nd4k5j"]
+
+[ext_resource type="Script" uid="uid://c14bn8tev2f6u" path="res://fluid_simulation.gd" id="1_up2y5"]
+[ext_resource type="Script" uid="uid://b57yltpxpdgat" path="res://fluid_2d.gd" id="2_4mbi7"]
+[ext_resource type="Texture2D" uid="uid://dnvo4rmdid7c2" path="res://floor.png" id="2_y6dff"]
+
+[sub_resource type="FluidEffect2DSurfaceTensionAKINCI" id="FluidEffect2DSurfaceTensionAKINCI_y6dff"]
+fluid_tension_coefficient = 200.0
+
+[sub_resource type="FluidEffect2DViscosityArtificial" id="FluidEffect2DViscosityArtificial_4mbi7"]
+fluid_viscosity_coefficient = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mbi7"]
+size = Vector2(775, 382)
+
+[node name="FluidSimulation" type="Node2D"]
+script = ExtResource("1_up2y5")
+
+[node name="Fluid2D" type="Fluid2D" parent="."]
+debug_draw = true
+density = 1000.0
+effects = Array[Resource]([SubResource("FluidEffect2DSurfaceTensionAKINCI_y6dff"), SubResource("FluidEffect2DViscosityArtificial_4mbi7")])
+points = PackedVector2Array(0, 0)
+position = Vector2(562, -94)
+script = ExtResource("2_4mbi7")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(571.5, 651.0821)
+scale = Vector2(2.1954672, 6.733965)
+texture = ExtResource("2_y6dff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(571.5, 650)
+shape = SubResource("RectangleShape2D_4mbi7")
+
+[node name="Restart" type="Button" parent="."]
+modulate = Color(0.12156863, 1, 0.1254902, 1)
+offset_left = 353.0
+offset_top = 496.0
+offset_right = 779.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 100
+text = "RESTART"
+
+[connection signal="pressed" from="Restart" to="." method="_on_button_pressed"]

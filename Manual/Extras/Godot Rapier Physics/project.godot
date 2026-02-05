@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="Godot Rapier Physics"
+run/main_scene="uid://cipq8qtu25b7f"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[physics]
+
+2d/physics_engine="Rapier2D"
+rapier/fluid/fluid_particle_radius_2d=8.0
 
 [rendering]
 
