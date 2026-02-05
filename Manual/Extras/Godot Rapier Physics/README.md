@@ -65,3 +65,21 @@ https://github.com/user-attachments/assets/b76e84b3-90f5-4388-8478-a6c4a2272d22
 https://github.com/user-attachments/assets/6b89b0fd-1871-4d3c-b889-873370b096fb
 
 ## Efeitos
+
+O comportamento do fluído não é único. Há diversos efeitos que você pode configurar. 
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/68d9e991-6d7d-4edb-96e9-82b9709012ad" />
+</p>
+
+Para adicionar algum efito, vá em  *Inspector → Effects* e clique para adicionar um elemento. Daí clique onde está escrito *empty* e uma lista enorme de opções vai aparecer. Para este exemplo, selecione a opção *FluidEffect2DSurfaceTensionAKINCI*.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/fbb8a992-2f45-4295-9033-40d8b22f0d34" />
+</p>
+
+Para alterar os parâmetros deste efeito, clique no próprio nome do efeito no *Inspector*, isso vai abrir uma caixa com os parâmetros. Ali você pode editar e testar os valores para este efeito. É possível combinar diversos efeitos ao mesmo tempo, basta adicionar outros e ir editando. Além disso, vale a pena testar outros valores de densidade (logo abaixo do *Debug Draw*) juntamente com os efeitos. Recomendo ler o [tutorial oficial](https://godot.rapier.rs/docs/tutorial/create-a-fluid) para ver os exemplos.  
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/7a826805-8443-48c7-8690-88acb0483664" />
+</p>
