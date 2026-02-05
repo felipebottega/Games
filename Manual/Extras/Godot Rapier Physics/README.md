@@ -54,5 +54,10 @@ Comece adicionando um script ao node `Fluid2D`. Depois coloque o node mais no ce
   </tr>  
 </table>
 
+https://github.com/user-attachments/assets/881308e9-9556-46df-a52a-500cb4bd8486
 
+## Tamanho das partículas
 
+Como você deve ter notado, as partículas são grandes. Deixar o raio um pouco maior já estoura o limite da tela e nem tem tantas partículas ainda. É possível diminuir o tamanho delas. Para isso, ative o modo avançado do *Project Settings* e vá em *Project → Project Settings → General → Physics → Rapier → Fluid → Fluid Particle Radius 2D*. 
+
+https://github.com/user-attachments/assets/b76e84b3-90f5-4388-8478-a6c4a2272d22
