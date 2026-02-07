@@ -62,7 +62,7 @@ Neste [tutorial de navegação](https://github.com/felipebottega/Games/tree/gh-p
 Todos os principais objetos físicos herdam de `CollisionObject2D`, então é relevante saber um pouco dessa classe. 
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/b15bbd05-84c8-4815-a2be-de161a086111" />
+  <img width="900" src="https://github.com/user-attachments/assets/b15bbd05-84c8-4815-a2be-de161a086111" />
 </p>
 
 `CollisionObject2D` é a classe base abstrata para objetos físicos 2D. Uma instância de `CollisionObject2D` pode conter qualquer número de objetos `Shape2D` para colisões. Também colocamos abaixo a estrutura desta última classe para referência.
@@ -77,6 +77,9 @@ No próprio *Inspector*, podemos ver que as layers e masks de colisão são atri
   <img width="300" src="https://github.com/user-attachments/assets/90ef9f85-d3a4-4c86-9cfc-1abcd0730521" />
 </p>
 
-  - **Disable Mode:** 
-  - **Collision/Priority:**
-  - **Input/Pickable:** 
+  - **Disable Mode:** Todos os objetos que herdam da classe `Node`, possuem o atributo `process_mode`, que controla se aquele node deve ser pausado ou não (apenas o node, o não o jogo). A propriedade *Disable Mode* determina como a física do node deve reagir no caso de uma pausa. Há três possibilidades:
+    - **Remove:** Remove toda a física da cena e para qualquer simulação que estava em andamento.
+    - **Make Static:** Faz com que todos os objetos físicos sejam estáticos.
+    - **Keep Active:** A física continua rodando normalmente.
+  - **Collision/Priority:** A prioridade utilizada ao se resolver penetrações entre objetos durante colisões. Prioridades mais altas impedem mais estas penetrações.
+  - **Input/Pickable:** Faz o objeto físico detectar eventos de mouse (cliques, passar o ponteiro pela área de colisão, etc.). Isso apenas ativa a detecção. Se quiser que algo aconteça, é necessário fazer um script para isso. 
