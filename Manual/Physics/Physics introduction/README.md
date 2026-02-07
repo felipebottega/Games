@@ -13,7 +13,7 @@ Tanto o `StaticBody2D` quanto o `RigidBody2D` possuem a capacidade de terem suas
 
 Os nodes `Area2D` e `CharacterBody2D` não possuem *Physics material* por serem "menos físicos" que os dois nodes mencionados acima. O `Area2D` serve apenas para detectar colisão, mas não reage fisicamente a essas colisões (você pode interpretá-lo como um sensor simplesmente). O `CharacterBody2D` já responde mais a física, mas não tanto assim, pois ele também deve responder aos inputs do jogador, então ele é mais meio termo.
 
-## Shapes de colisão
+## Diversas shapes de colisão por objeto
 
 Em alguns projetos anteriores, se tivéssemos que criar diversas paredes em um cenário (por exemplo), criaríamos um `StaticBody2D` por parede, cada um contendo um `CollisionShape2D`. Este approach no estilo "cada objeto é um node" teve como objetivo a didática. Uma outra maneira de abordar este exemplo seria criar um único `StaticBody2D` e colocar todas as shapes de colisão neste único node. Esta solução é mais simples e ideal para objetos que pertencem ao mesmo "pacote". Pode-se fazer isso para o `RigidBody2D` também, mas é necessário ter mais precaução neste caso. No caso de haver diversas shapes de colisão em um único `RigidBody2D`, cada shape é considerada como uma "parte" do corpo. Se um `RigidBody2D` com diversas partes cai no chão, por exemplo, ele pode quicar, e o modo como o corpo reage dependerá do centro de massa em relação a essas shapes.
 
@@ -56,3 +56,27 @@ Pense nas layers como sendo as camadas em que o objeto está presente e masks co
 </p>
 
 Neste [tutorial de navegação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#par%C3%A2metros-para-o-caminho), falamos um pouco sobre a codificação para referenciar as layers e masks (propriedade *navigation_layers*). Isso é útil quando se quer manipular estes valores por código.
+
+## CollisionObject2D
+
+Todos os principais objetos físicos herdam de `CollisionObject2D`, então é relevante saber um pouco dessa classe. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/b15bbd05-84c8-4815-a2be-de161a086111" />
+</p>
+
+`CollisionObject2D` é a classe base abstrata para objetos físicos 2D. Uma instância de `CollisionObject2D` pode conter qualquer número de objetos `Shape2D` para colisões. Também colocamos abaixo a estrutura desta última classe para referência.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/c4643a71-4cba-4453-a01b-8e4888113e4f" />
+</p>
+
+No próprio *Inspector*, podemos ver que as layers e masks de colisão são atributos do `CollisionObject2D`. Agora vamos ver sobre as outras propriedades que estão ali.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/90ef9f85-d3a4-4c86-9cfc-1abcd0730521" />
+</p>
+
+  - **Disable Mode:** 
+  - **Collision/Priority:**
+  - **Input/Pickable:** 
