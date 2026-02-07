@@ -82,4 +82,8 @@ No próprio *Inspector*, podemos ver que as layers e masks de colisão são atri
     - **Make Static:** Faz com que todos os objetos físicos sejam estáticos.
     - **Keep Active:** A física continua rodando normalmente.
   - **Collision/Priority:** A prioridade utilizada ao se resolver penetrações entre objetos durante colisões. Prioridades mais altas impedem mais estas penetrações.
-  - **Input/Pickable:** Faz o objeto físico detectar eventos de mouse (cliques, passar o ponteiro pela área de colisão, etc.). Isso apenas ativa a detecção. Se quiser que algo aconteça, é necessário fazer um script para isso. 
+  - **Input/Pickable:** Faz o objeto físico detectar eventos de mouse (cliques, passar o ponteiro pela área de colisão, etc.). Isso apenas ativa a detecção. Se quiser que algo aconteça, é necessário fazer um script para isso. Na figura abaixo temos um exemplo onde a propriedade foi ativada e o node correspondente tem um trecho no script que faz o objeto alterar a cor quando o usuário clica no objeto.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/064b735f-db55-492e-86c4-f8dac5eaaee6" />
+</p>
