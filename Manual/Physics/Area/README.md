@@ -1,6 +1,6 @@
-# Area2D
+# Area
 
-O node `Area2D` fornece detecção e influência. Ele pode detectar quando objetos passam na área e pode emitir sinais quando corpos entram ou saem. O `Area2D` também pode ser usado para sobrescrever propriedades físicas (como gravidade) em uma área definida. 
+O node `Area2D` (`Area3D`) fornece detecção e influência. Ele pode detectar quando objetos passam na área e pode emitir sinais quando corpos entram ou saem. O `Area2D` também pode ser usado para sobrescrever propriedades físicas (como gravidade) em uma área definida. 
 
 ## Propriedades
 

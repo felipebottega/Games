@@ -1,6 +1,6 @@
-# StaticBody2D
+# StaticBody
 
-`StaticBody2D` é um corpo que não é movido pela engine física. Ele participa da detecção de colisões, mas não se move em resposta a elas. São frequentemente usados ​​para objetos que fazem parte do ambiente ou que não precisam ter nenhum comportamento dinâmico.
+`StaticBody2D` (`StaticBody3D`) é um corpo que não é movido pela engine física. Ele participa da detecção de colisões, mas não se move em resposta a elas. São frequentemente usados ​​para objetos que fazem parte do ambiente ou que não precisam ter nenhum comportamento dinâmico.
 
 ## Propriedades
 
