@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj4tb1bch1tii"]
+
+[ext_resource type="Script" uid="uid://0dwnroj0vbja" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://s3ujtpeje8e2" path="res://Bouncy Platform Medium.png" id="1_wtcfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
+size = Vector2(185, 311)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtcfe"]
+size = Vector2(618.5, 558.5)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0e48y")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(104, 477)
+gravity_space_override = 3
+gravity_point_unit_distance = 2.792
+gravity_point_center = Vector2(0, -1)
+gravity_direction = Vector2(0, -1)
+gravity = 800.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+modulate = Color(1, 1, 1, 0.36078432)
+position = Vector2(1.0000012, 0.49999237)
+scale = Vector2(0.9117647, 5.4561405)
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_y32ns")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(353, 478)
+gravity_point_center = Vector2(0, -1)
+gravity_direction = Vector2(0, -1)
+linear_damp_space_override = 3
+linear_damp = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+modulate = Color(1, 1, 1, 0.36078432)
+position = Vector2(1.168251e-05, -0.50003004)
+scale = Vector2(0.9019609, 5.456139)
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("RectangleShape2D_y32ns")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(813, 355)
+gravity_space_override = 3
+gravity_point = true
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = 1500.0
+angular_damp = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D3"]
+modulate = Color(1, 1, 1, 0.36078432)
+position = Vector2(-1.5258789e-05, 1.4999847)
+scale = Vector2(3.0196075, 9.8771925)
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+shape = SubResource("RectangleShape2D_wtcfe")

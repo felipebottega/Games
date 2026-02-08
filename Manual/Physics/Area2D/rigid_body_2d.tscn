@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg6iarig6oint"]
+
+[ext_resource type="Texture2D" uid="uid://bkyesojsydnrl" path="res://ballBlue_10.png" id="1_wltir"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jiowd"]
+radius = 11.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_wltir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jiowd")
