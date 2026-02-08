@@ -1,7 +1,9 @@
 # Integral Games
 Enquanto eu estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui tutoriais e jogos para referência futura. Dentro de cada pasta deste repositório há um readme com o tutorial respectivo a um item do manual da Godot. 
 
-Este repositório não é um manual de referência, mas sim um sequência de tutoriais feitos para serem seguidos em ordem. Muitos hábitos ruins e códigos ineficientes estarão presentes nos primeiros tutoriais propositalmente. A ideia é que o leitor melhore suas habilidades aos poucos. Portanto, o foco é no aprendizado gradual, o que significa sacrificar um pouco do tecnicamente correto em favor da didática. Ao longo do aprendizado, todos os maus hábitos e ineficiências serão eventualmente corrigidos.
+Este repositório não é um manual de referência, mas sim um sequência de tutoriais feitos para serem seguidos em ordem. Muitos hábitos ruins e códigos ineficientes estarão presentes nos primeiros tutoriais propositalmente. A ideia é que o leitor melhore suas habilidades aos poucos. Portanto, o foco é no aprendizado gradual, o que significa sacrificar um pouco do tecnicamente correto em favor da didática. Ao longo do aprendizado, todos os maus hábitos e ineficiências serão eventualmente corrigidos. 
+
+Alguns tutoriais contém listas de atributos ou métodos referente ao tópico em questão. Nenhuma destas listas tem o propósito de ser completa. Geralmente eu coloco ali o que aparece no *Inspector* e o que acho relevante aprender numa primeira leitura. Porém, é importante sempre estar consultando a documentação oficial para conhecer mais da engine.
 
 Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
 
