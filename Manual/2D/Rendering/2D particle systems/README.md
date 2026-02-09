@@ -37,7 +37,7 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Proces
   <img src="https://github.com/user-attachments/assets/eb6b6d22-85e7-4392-b393-dc5fb056c7fb" width="700">
 </p>
 
-- **Spawn/Position/Emission Shape Scale e Spawn/Position/Emission Shape:** Primeiro você deve escolher e configurar uma opção para o *Emission Shape* e depois definir o ajuste de escala com o *Emission Shape Scale*. O *Emission Shape* define os pontos de ondeas partículas serão emitidas. Por default elas são emitidas a partir de um único ponto, mas podem ser emitidas a partir de pontos dentro de uma esfera, retângulo, anel, entre outros. Vale a pela explorar as possibilidades.
+- **Spawn/Position/Emission Shape Scale e Spawn/Position/Emission Shape:** Primeiro você deve escolher e configurar uma opção para o *Emission Shape* e depois definir o ajuste de escala com o *Emission Shape Scale*. O *Emission Shape* define os pontos de onde as partículas serão emitidas. Por default elas são emitidas a partir de um único ponto, mas podem ser emitidas a partir de pontos dentro de uma esfera, retângulo, anel, entre outros. Vale a pela explorar as possibilidades.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b2c71453-7726-499a-9ee8-cde425502f02" width="800">
