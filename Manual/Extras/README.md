@@ -1,1 +1,1 @@
-Os tópicos abordados são os que eu considerei relevantes mas não estão no manual oficial.
+Os tópicos abordados aqui são aqueles que eu considerei relevantes mas não estão no manual oficial.
