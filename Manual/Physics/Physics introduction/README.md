@@ -7,7 +7,6 @@ Já fizemos diversas aplicações de física em tutoriais anteriores, mas agora 
 Tanto o `StaticBody2D` quanto o `RigidBody2D` possuem a capacidade de terem suas propriedades físicas configuradas através do *Physics material*, que fica no *Inspector*. 
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/a4f793da-ea48-4be7-9301-65b35c8ec567" />
   <img width="350" src="https://github.com/user-attachments/assets/a53e9a17-fc05-4460-8405-0660768d271f" />
 </p>
 
