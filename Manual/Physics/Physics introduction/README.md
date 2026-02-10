@@ -4,12 +4,17 @@ Já fizemos diversas aplicações de física em tutoriais anteriores, mas agora 
 
 ## Physics material
 
-Tanto o `StaticBody2D` quanto o `RigidBody2D` possuem a capacidade de terem suas propriedades físicas configuradas através do *Physics material*, que fica no *Inspector*. Não vou detalhar como cada um funciona, aconselho a testar na prática.
+Tanto o `StaticBody2D` quanto o `RigidBody2D` possuem a capacidade de terem suas propriedades físicas configuradas através do *Physics material*, que fica no *Inspector*. 
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/a4f793da-ea48-4be7-9301-65b35c8ec567" />
   <img width="350" src="https://github.com/user-attachments/assets/a53e9a17-fc05-4460-8405-0660768d271f" />
 </p>
+
+  - **Friction:** Como o nome indica, esse parâmetro define o nível de fricção de um corpo.
+  - **Rough:** Quando há colisão entre dois objetos, a fricção deve ser levada em conta. Por default, o engine sempre escolhe a menor fricção para aplicar entre os objetos. Caso apenas um deles esteja com a *rough* habilitada, a fricção deste objeto será utilizada na colisão. Caso ambas estejam com a *rough* habilitada, a maior fricção entre eles será utilizada.
+  - **Bounce:** Nível do quanto um objeto pode quicar ao colidor com outros objetos.
+  - **Absorbent:** Por default essa opção vem desabilitada, o que significa que o *bounce* dele é adicionado ao objeto que está colidindo. Quando a opção está desabilitada, ele passa a subtrair, diminuindo a ação de quicar.
 
 Os nodes `Area2D` e `CharacterBody2D` não possuem *Physics material* por serem "menos físicos" que os dois nodes mencionados acima. O `Area2D` serve apenas para detectar colisão, mas não reage fisicamente a essas colisões (você pode interpretá-lo como um sensor simplesmente). O `CharacterBody2D` já responde mais a física, mas não tanto assim, pois ele também deve responder aos inputs do jogador, então ele é mais meio termo.
 
