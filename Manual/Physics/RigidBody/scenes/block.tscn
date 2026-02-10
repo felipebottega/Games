@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://x1g6u8dklh8u"]
+
+[ext_resource type="Script" uid="uid://dx7aiqbyced77" path="res://scripts/block.gd" id="1_im0tn"]
+[ext_resource type="Texture2D" uid="uid://dv2rhmv0yuvci" path="res://assets/block.png" id="2_xfwl5"]
+[ext_resource type="AudioStream" uid="uid://cxtov1v5rnyy6" path="res://assets/impact_small.wav" id="3_5d32t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qncar"]
+size = Vector2(72, 72)
+
+[node name="Block" type="RigidBody2D"]
+mass = 100.0
+gravity_scale = 0.2
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_im0tn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28.000002, 27.999996)
+scale = Vector2(0.15754923, 0.15754923)
+texture = ExtResource("2_xfwl5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, 28)
+shape = SubResource("RectangleShape2D_qncar")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5d32t")
+volume_db = -20.0
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://p3sxp2nnaxre"]
+
+[ext_resource type="Texture2D" uid="uid://b5i6k7sd0eyfn" path="res://assets/back.png" id="1_ymxry"]
+[ext_resource type="Script" uid="uid://bmmlvjj16y4sf" path="res://scripts/back.gd" id="2_ep5l4"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Back" type="Button" parent="."]
+offset_left = 570.0
+offset_top = 641.0
+offset_right = 706.0
+offset_bottom = 708.0
+icon = ExtResource("1_ymxry")
+script = ExtResource("2_ep5l4")
+
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

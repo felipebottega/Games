@@ -11,8 +11,19 @@ config_version=5
 [application]
 
 config/name="RigidBody"
+run/main_scene="uid://btrh4fxfie70n"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+
+[physics]
+
+common/physics_ticks_per_second=120
 
 [rendering]
 

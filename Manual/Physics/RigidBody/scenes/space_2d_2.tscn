@@ -1,0 +1,246 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbcn1e8d0lfr8"]
+
+[ext_resource type="Script" uid="uid://brk3b04g51a6f" path="res://scripts/space_2d_2.gd" id="1_qhgh2"]
+[ext_resource type="Texture2D" uid="uid://dv2rhmv0yuvci" path="res://assets/block.png" id="2_4qaud"]
+[ext_resource type="Script" uid="uid://cn0idxwreajo" path="res://scripts/camera_2d.gd" id="3_2s7k8"]
+[ext_resource type="PackedScene" uid="uid://p3sxp2nnaxre" path="res://scenes/back.tscn" id="4_o4o2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idp2u"]
+size = Vector2(744, 96)
+
+[node name="Space2D2" type="Node2D"]
+script = ExtResource("1_qhgh2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(360, 707)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0.13725491, 0.36862746, 1, 1)
+position = Vector2(1.5258789e-05, 0)
+scale = Vector2(1.6280087, 0.21225391)
+texture = ExtResource("2_4qaud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_idp2u")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(360, 360)
+script = ExtResource("3_2s7k8")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="GravityLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_right = 102.0
+offset_bottom = 23.0
+text = "Gravity = 1.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="GravityHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 22.0
+offset_right = 132.0
+offset_bottom = 38.0
+min_value = -15.0
+max_value = 15.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LinearVelocityXLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 55.0
+offset_right = 102.0
+offset_bottom = 78.0
+text = "Linear Velocity.x = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="LinearVelocityXHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 77.0
+offset_right = 132.0
+offset_bottom = 93.0
+min_value = -100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LinearVelocityYLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 112.0
+offset_right = 173.0
+offset_bottom = 135.0
+text = "Linear Velocity.y = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="LinearVelocityYHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 135.0
+offset_right = 132.0
+offset_bottom = 151.0
+min_value = -100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DampLinearVelocityLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 171.0
+offset_right = 173.0
+offset_bottom = 194.0
+text = "Damp Linear Velocity = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="DampLinearVelocityHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 193.0
+offset_right = 132.0
+offset_bottom = 209.0
+min_value = -1.0
+max_value = 20.0
+step = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="AngularVelocityLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 226.0
+offset_right = 173.0
+offset_bottom = 249.0
+text = "Angular Velocity = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="AngularVelocityHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 249.0
+offset_right = 132.0
+offset_bottom = 265.0
+min_value = -100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DampAngularVelocityLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 284.0
+offset_right = 222.0
+offset_bottom = 307.0
+text = "Damp Angular Velocity = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="DampAngularVelocityHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 306.0
+offset_right = 132.0
+offset_bottom = 322.0
+min_value = -1.0
+max_value = 20.0
+step = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="ForceXLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 345.0
+offset_right = 222.0
+offset_bottom = 368.0
+text = "Force.x = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="ForceXHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 368.0
+offset_right = 132.0
+offset_bottom = 384.0
+min_value = -1000.0
+max_value = 1000.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ForceYLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 405.0
+offset_right = 222.0
+offset_bottom = 428.0
+text = "Force.y = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="ForceYHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 428.0
+offset_right = 132.0
+offset_bottom = 444.0
+min_value = -1000.0
+max_value = 1000.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TorqueLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 461.0
+offset_right = 222.0
+offset_bottom = 484.0
+text = "Torque = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="TorqueHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 484.0
+offset_right = 132.0
+offset_bottom = 500.0
+min_value = -100000.0
+max_value = 100000.0
+step = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterOfMassXLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 524.0
+offset_right = 222.0
+offset_bottom = 547.0
+text = "Center of Mass.x = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterOfMassXLabelHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 548.0
+offset_right = 132.0
+offset_bottom = 564.0
+min_value = -100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterOfMassYLabel" type="Label" parent="HUD"]
+offset_left = 6.0
+offset_top = 586.0
+offset_right = 222.0
+offset_bottom = 609.0
+text = "Center of Mass.y = 0.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterOfMassYLabelHSlider" type="HSlider" parent="HUD"]
+offset_left = 5.0
+offset_top = 611.0
+offset_right = 132.0
+offset_bottom = 627.0
+min_value = -100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Play" type="Button" parent="HUD"]
+modulate = Color(0.8666667, 0.50980395, 0.09411765, 1)
+offset_left = 554.0
+offset_top = 37.0
+offset_right = 601.0
+offset_bottom = 68.0
+text = "PLAY"
+
+[node name="Restart" type="Button" parent="HUD"]
+modulate = Color(1, 1, 0.24313726, 1)
+offset_left = 626.0
+offset_top = 37.0
+offset_right = 701.0
+offset_bottom = 68.0
+text = "RESTART"
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_o4o2h")]
+
+[connection signal="value_changed" from="HUD/GravityHSlider" to="." method="_on_gravity_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/LinearVelocityXHSlider" to="." method="_on_linear_velocity_xh_slider_value_changed"]
+[connection signal="value_changed" from="HUD/LinearVelocityYHSlider" to="." method="_on_linear_velocity_yh_slider_value_changed"]
+[connection signal="value_changed" from="HUD/DampLinearVelocityHSlider" to="." method="_on_damp_linear_velocity_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/AngularVelocityHSlider" to="." method="_on_angular_velocity_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/DampAngularVelocityHSlider" to="." method="_on_damp_angular_velocity_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/ForceXHSlider" to="." method="_on_force_xh_slider_value_changed"]
+[connection signal="value_changed" from="HUD/ForceYHSlider" to="." method="_on_force_yh_slider_value_changed"]
+[connection signal="value_changed" from="HUD/TorqueHSlider" to="." method="_on_torque_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/CenterOfMassXLabelHSlider" to="." method="_on_center_of_mass_x_label_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/CenterOfMassYLabelHSlider" to="." method="_on_center_of_mass_y_label_h_slider_value_changed"]
+[connection signal="pressed" from="HUD/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HUD/Restart" to="." method="_on_reset_pressed"]

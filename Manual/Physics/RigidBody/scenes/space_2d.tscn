@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1q8it3td1bhi"]
+
+[ext_resource type="Script" uid="uid://j3lkbxftllye" path="res://scripts/space_2d.gd" id="1_nhv7m"]
+[ext_resource type="Script" uid="uid://cn0idxwreajo" path="res://scripts/camera_2d.gd" id="2_pr7xc"]
+[ext_resource type="Texture2D" uid="uid://dv2rhmv0yuvci" path="res://assets/block.png" id="2_u0sxd"]
+[ext_resource type="PackedScene" uid="uid://p3sxp2nnaxre" path="res://scenes/back.tscn" id="4_ufxto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhv7m"]
+size = Vector2(2744, 95)
+
+[node name="Space2D" type="Node2D"]
+script = ExtResource("1_nhv7m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(363, 745)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_nhv7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0.25670013, 0.2685047, 0.24489553, 1)
+position = Vector2(-6.1035156e-05, 248.50006)
+scale = Vector2(6.026258, 1.2932166)
+texture = ExtResource("2_u0sxd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(360, 77)
+script = ExtResource("2_pr7xc")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="SizeLabel" type="Label" parent="HUD"]
+offset_left = 14.0
+offset_top = 27.0
+offset_right = 54.0
+offset_bottom = 50.0
+text = "Size = 10.0"
+
+[node name="SizeHSlider" type="HSlider" parent="HUD"]
+offset_left = 14.0
+offset_top = 52.0
+offset_right = 184.0
+offset_bottom = 68.0
+min_value = 10.0
+max_value = 200.0
+value = 10.0
+
+[node name="MassLabel" type="Label" parent="HUD"]
+offset_left = 14.0
+offset_top = 103.0
+offset_right = 54.0
+offset_bottom = 126.0
+text = "Mass = 1.0 kg"
+
+[node name="MassHSlider" type="HSlider" parent="HUD"]
+offset_left = 15.0
+offset_top = 128.0
+offset_right = 183.0
+offset_bottom = 144.0
+min_value = 1.0
+max_value = 10000.0
+value = 1.0
+exp_edit = true
+
+[node name="Restart" type="Button" parent="HUD"]
+modulate = Color(0.90588236, 0.21568628, 0.105882354, 1)
+offset_left = 55.0
+offset_top = 186.0
+offset_right = 130.0
+offset_bottom = 217.0
+text = "RESTART"
+
+[node name="Back" parent="." instance=ExtResource("4_ufxto")]
+offset_left = 846.0
+offset_top = 574.0
+offset_right = 1054.0
+offset_bottom = 675.0
+
+[connection signal="value_changed" from="HUD/SizeHSlider" to="." method="_on_size_h_slider_value_changed"]
+[connection signal="value_changed" from="HUD/MassHSlider" to="." method="_on_mass_h_slider_value_changed"]
+[connection signal="pressed" from="HUD/Restart" to="." method="_on_restart_pressed"]
