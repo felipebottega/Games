@@ -1,11 +1,5 @@
 # Integral Games
-Enquanto eu estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui tutoriais e jogos para referência futura. Dentro de cada pasta deste repositório há um readme com o tutorial respectivo a um item do manual da Godot. 
-
-Este repositório não é um manual de referência, mas sim um sequência de tutoriais feitos para serem seguidos em ordem. Muitos hábitos ruins e códigos ineficientes estarão presentes nos primeiros tutoriais propositalmente. A ideia é que o leitor melhore suas habilidades aos poucos. Portanto, o foco é no aprendizado gradual, o que significa sacrificar um pouco do tecnicamente correto em favor da didática. Ao longo do aprendizado, todos os maus hábitos e ineficiências serão eventualmente corrigidos. 
-
-Alguns tutoriais contém listas de atributos ou métodos referente ao tópico em questão. Nenhuma destas listas tem o propósito de ser completa. Geralmente eu coloco ali o que aparece no *Inspector* e o que acho relevante aprender numa primeira leitura. Porém, é importante sempre estar consultando a documentação oficial para conhecer mais da engine.
-
-Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
+Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os jogos que considero interessantes para mostrar a outras pessoas. Dentro de cada pasta deste repositório há um readme detalhando sobre o que é o jogo e explicando alguns detalhes técnicos que considero relevantes. Este repositório não contém os projetos em Godot, mas apenas os arquivos necessários para jogar. Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
 
 <h2>Conteúdo </h2>
 
@@ -563,7 +557,7 @@ Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](h
 ">  Edit
  </a><br>
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#compress/mode-
-">    Compress/Mode 
+">  Compress/Mode 
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#opções-de-import-do-ogg-vorbis-e-mp3
 ">  Opções de import do Ogg Vorbis e MP3
@@ -685,12 +679,25 @@ Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](h
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#zoom-via-script
 ">  Zoom via script
  </a><br>
-<li> <b>Manual\Extras\WebSocket</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/WebSocket#preparando-o-servidor-backend-em-python
-">  Preparando o servidor backend em Python
+<li> <b>Manual\Extras\Godot Rapier Physics</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#criando-uma-partícula-de-fluído-com-rapier
+">  Criando uma partícula de fluído com Rapier
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/WebSocket#preparando-o-frontend-na-engine
-">  Preparando o frontend na engine
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#criando-várias-partículas-de-fluído-com-rapier
+">  Criando várias partículas de fluído com Rapier
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#tamanho-das-partículas
+">  Tamanho das partículas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#efeitos
+">  Efeitos
+ </a><br>
+<li> <b>Manual\Extras\Snap</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Snap#grid-snap
+">  Grid snap
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Snap#outros-tipos-de-snap
+">  Outros tipos de snap
  </a><br>
 <li> <b>Manual\File and data IO\Background loading</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#preload
@@ -1010,5 +1017,132 @@ Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](h
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#call_deferred()
 ">  call_deferred()
+ </a><br>
+<li> <b>Manual\Networking\Using WebSockets</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets#preparando-o-servidor-backend-em-python
+">  Preparando o servidor backend em Python
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets#preparando-o-frontend-na-engine
+">  Preparando o frontend na engine
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets#servidor-remoto
+">  Servidor remoto
+ </a><br>
+<li> <b>Manual\Performance\Common\General optimization tips</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#a-natureza-da-lentidão
+">  A natureza da lentidão
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#dicas-gerais
+">  Dicas gerais
+ </a><br>
+<li> <b>Manual\Performance\Common\Optimization using Servers</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#servidores
+">  Servidores
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#rids
+">  RIDs
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#exemplo:-criando-um-sprite
+">  Exemplo: criando um sprite
+ </a><br>
+<li> <b>Manual\Performance\CPU\CPU optimization</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#profiler-
+">  Profiler 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#árvore-de-cena
+">  Árvore de cena
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#física
+">  Física
+ </a><br>
+<li> <b>Manual\Performance\GPU\GPU optimization</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/GPU%20optimization#reduzir-draw-calls---batching
+">  Reduzir draw calls - batching
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/GPU%20optimization#texture-atlas
+">  Texture Atlas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/GPU%20optimization#overdraw-e-transparência
+">  Overdraw e transparência
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/GPU%20optimization#bake-de-iluminação
+">  Bake de iluminação
+ </a><br>
+<li> <b>Manual\Performance\GPU\Reducing stutter from shader (pipeline) compilations</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations#monitoramento-do-pipeline
+">  Monitoramento do pipeline
+ </a><br>
+<li> <b>Manual\Performance\Threads\Thread-safe APIs</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs#o-que-não-pode-fazer-com-threads
+">  O que não pode fazer com threads
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs#o-que-pode-fazer-com-threads
+">  O que pode fazer com threads
+ </a><br>
+<li> <b>Manual\Performance\Threads\Using multiple threads</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#método-bind
+">  Método bind
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#_exit_tree
+">  _exit_tree
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#criando-uma-thread
+">  Criando uma thread
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#criando-múltiplas-threads
+">  Criando múltiplas threads
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#mutex
+">  Mutex
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#semáforos
+">  Semáforos
+ </a><br>
+<li> <b>Manual\Physics\Area</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Area#propriedades
+">  Propriedades
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Area#métodos
+">  Métodos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Area#sinais
+">  Sinais
+ </a><br>
+<li> <b>Manual\Physics\Physics engines</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20engines#alterando-a-engine-física
+">  Alterando a engine física
+ </a><br>
+<li> <b>Manual\Physics\Physics introduction</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-material
+">  Physics material
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#diversas-shapes-de-colisão-por-objeto
+">  Diversas shapes de colisão por objeto
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#mudança-de-escala-e-física
+">  Mudança de escala e física
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-process
+">  Physics process
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#collision-layers-e-masks
+">  Collision layers e masks
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#collisionobject2d
+">  CollisionObject2D
+ </a><br>
+<li> <b>Manual\Physics\RigidBody</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#propriedades
+">  Propriedades
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#sinais
+">  Sinais
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#_integrate_forces
+">  _integrate_forces
+ </a><br>
+<li> <b>Manual\Physics\StaticBody</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/StaticBody#propriedades
+">  Propriedades
  </a><br>
 </ul>
