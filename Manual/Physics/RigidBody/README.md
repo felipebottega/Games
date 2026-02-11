@@ -44,3 +44,5 @@ Se quiser ver sobre as propriedades do *Physics Material*, visite o tutorial de 
 Se precisar alterar alguma das propriedades relacionadas à física, você deve usar a função nativa `_integrate_forces` em vez de `_physics_process`. Ela sempre é chamada antes das aplicações de forças, mas a propriedade *Custom Integrator* permite desativar estas aplicações de forças. Assim, você pode realizar aplicações de forças de maneira totalmente personalizada para um corpo.
 
 Neste tutorial nós não falaremos sobre os métodos de aplicação de força em um corpo, mas você pode encontrar todos [neste link](https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html#class-rigidbody2d-private-method-integrate-forces).
+
+## Simulador
