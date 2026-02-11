@@ -78,6 +78,7 @@ stream = SubResource("AudioStreamMP3_h2yge")
 volume_db = -15.0
 pitch_scale = 0.75
 autoplay = true
+playback_type = 1
 
 [node name="Label" type="Label" parent="."]
 offset_left = 8.0
