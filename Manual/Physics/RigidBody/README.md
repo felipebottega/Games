@@ -14,7 +14,25 @@ Se quiser ver sobre as propriedades do *Physics Material*, visite o tutorial de 
   - **Deactivation/Can Sleep:** Quando esta opção está habilitada (default), o corpo é capaz de entrar em modo *sleep*. Caso contrário, ele nunca entra neste estado.
   - **Deactivation/Lock Rotation:** Quando esta opção está habilitada, o corpo não é capaz de rotacionar. AS forças diferentes de rotação ainda se aplicam normalmente.
   - **Deactivation/Freeze:** É um estado mais extremo que o *sleep*, pois nem a gravidade nem colisões mais afetam o corpo. Ele é quase inteiramente ignorado pela engine física, basicamente virou um `StaticBody` e só funciona como obstáculo de colisão para outros corpos.
-
-> PS: Se você for criar um `RigidBody` que estará sempre no modo *freeze*, prefira criar um `StaticBody`. É mais simples.
-
   - **Deactivation/Freeze Mode:** Um corpo pode entrar no modo *freeze* de duas maneiras diferentes. O primeiro é o modo *static*. Caso você precise mover o objeto neste modo, ele não vai colidir com os outros corpos enquanto se move. O segundo é o modo *kinematic*, cuja única diferença é que ele pode se colidir com outros corpos enquanto se move. É importante ressaltar que este movimento não é por aplicação de forças, mas sim algo forçado, pois o corpo não reage mais a forças.
+
+  > PS: Se você for criar um `RigidBody` que estará sempre no modo *freeze*, prefira criar um `StaticBody`. É mais simples.
+
+  - **Solver/Custom Integrator:** Quando esta opção está ativada, a engine física para de calcular todo tipo de força que pode gerar movimentos no corpo (gravidade, damping, etc.). A única coisa que a engine ainda faz é calcular colisões, mas a própria força da colisão não gera mais movimento. Ao ativar esta opção, você está dizendo à engine que a partir de agora você mesmo vai dar conta dos cálculos de força. O único modo de fazer algo é através da função `_integrate_forces()` (veremos mais sobre ela adiante).
+  - **Solver/Continuous CD:** Esta propriedade se chama *Continuous Collision Detection*. Ela determina o método de detecção de colisão da engine. Por default vem desligada, isso significa que a detecção é simplesmente verificar se há sobreposição/penetração entre corpos e ajustar isso, uma vez por frame físico. O ponto fraco deste approach é que ele pode "não enxergar" colisões quando os objetos estão se movendo muito rapidamente. Os outros dois métodos de detgecção de colisão são o *cast ray* e o *cast shape*. Ambos são capazes de prever quando um corpo vai colidir com outro, então conseguem já antecipar mesmo que os corpos estejam se movendo muito rápido. O método *cast ray* é mais pesado que o default mas é mais leve que o *cast shape*. Porém, o *cast shape* é o mais preciso de todos.
+  - **Solver/Contact Monitor:** Por default, nenhum `RigidBody` reporta informação de colisão, eles apenas reagem à ela. Caso você queira tabalhar com sinais de colisão, é necessário ativar essa propriedade. Ao ativar, a propriedade *Max Contacts Reported* vai aparecer logo abaixo. Essa propriedade representa o número máximo de colisões reportadas por este corpo a cada frame físico.
+
+  > PS: A primeira vez que vimos a propriedade de *Contact Monitor* foi no nosso [primeiro tutorial de animação ](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201#tomando-dano). Naquele tempo eu fazia o personagem do jogo usando `RigidBody2D`.
+
+  - **Linear/Velocity:** Define a velocidade linear do corpo. Como já foi mencionado, o indicado é mover corpos rígidos através da aplicação de forças. Use esta propriedade apenas quando realmente for necessário.
+  - **Linear/Damp:** O damping/amortecimento causa uma resistência aos movimentos do corpo. Este parâmetro controla a intensidade deste amortecimento.
+  - **Linear/Damp Mode:** Existem os modos *Combine* e *Replace*. No primeiro, o damping deste corpo é adicionado ao damp de uma área que aplique damping linear no corpo. No segundo, o damping do corpo é o que sempre será utilizado.
+  - **Angular/Velocity, Damp, Damp mode:** Todas as propriedades daqui são análogas às três anteriores, mas para rotação.
+  - **Constant Forces/Force:** Você define um vetor e a engine aplica uma força sobre o corpo constantemente, na direção do vetor.
+  - **Constant Forces/Torque:** Você define uma força rotacional e a engine aplica uma força de rotação sobre o corpo constantemente. 
+
+
+
+
+
+## _integrate_forces
