@@ -41,8 +41,8 @@ Já vimos o suficiente deste asunto [aqui](https://github.com/felipebottega/Game
 
 Todo objeto que possui colisão, também possui *Collision Layers* e *Collision Masks*, um total de 32 para cada. 
 
-  - **Layer:** Se um objeto tem a layer X marcado, isso significa que ele pertence a uma certa camada X. Outros objetos que buscarem colisão nesta camada vão encontrar este objeto.
-  - **Mask:** Se um objeto tem a mask X marcada, isso significa que ele é capaz de detectar objetos na camada X (isto é, objetos que tem a layer X marcada).
+- **Layer:** Se um objeto tem a layer X marcado, isso significa que ele pertence a uma certa camada X. Outros objetos que buscarem colisão nesta camada vão encontrar este objeto.
+- **Mask:** Se um objeto tem a mask X marcada, isso significa que ele é capaz de detectar objetos na camada X (isto é, objetos que tem a layer X marcada).
 
 Pense nas layers como sendo as camadas em que o objeto está presente e masks como sendo as camadas com as quais camadas ele quer colidir. A colisão é registrada do ponto de vista do corpo ou outro objeto ativo (que está buscando a colisão). É possível adicionar o objeto a múltiplas layers ou masks.
 
@@ -77,12 +77,12 @@ No próprio *Inspector*, podemos ver que as layers e masks de colisão são atri
   <img width="300" src="https://github.com/user-attachments/assets/90ef9f85-d3a4-4c86-9cfc-1abcd0730521" />
 </p>
 
-  - **Disable Mode:** Todos os objetos que herdam da classe `Node`, possuem o atributo `process_mode`, que controla se aquele node deve ser pausado ou não (apenas o node, o não o jogo). A propriedade *Disable Mode* determina como a física do node deve reagir no caso de uma pausa. Há três possibilidades:
-    - **Remove:** Remove toda a física da cena e para qualquer simulação que estava em andamento.
-    - **Make Static:** Faz com que todos os objetos físicos sejam estáticos.
-    - **Keep Active:** A física continua rodando normalmente.
-  - **Collision/Priority:** A prioridade utilizada ao se resolver penetrações entre objetos durante colisões. Prioridades mais altas impedem mais estas penetrações.
-  - **Input/Pickable:** Faz o objeto físico detectar eventos de mouse (cliques, passar o ponteiro pela área de colisão, etc.). Isso apenas ativa a detecção. Se quiser que algo aconteça, é necessário fazer um script para isso. Na figura abaixo temos um exemplo onde a propriedade foi ativada e o node correspondente tem um trecho no script que faz o objeto alterar a cor quando o usuário clica no objeto.
+- **Disable Mode:** Todos os objetos que herdam da classe `Node`, possuem o atributo `process_mode`, que controla se aquele node deve ser pausado ou não (apenas o node, o não o jogo). A propriedade *Disable Mode* determina como a física do node deve reagir no caso de uma pausa. Há três possibilidades:
+  - **Remove:** Remove toda a física da cena e para qualquer simulação que estava em andamento.
+  - **Make Static:** Faz com que todos os objetos físicos sejam estáticos.
+  - **Keep Active:** A física continua rodando normalmente.
+- **Collision/Priority:** A prioridade utilizada ao se resolver penetrações entre objetos durante colisões. Prioridades mais altas impedem mais estas penetrações.
+- **Input/Pickable:** Faz o objeto físico detectar eventos de mouse (cliques, passar o ponteiro pela área de colisão, etc.). Isso apenas ativa a detecção. Se quiser que algo aconteça, é necessário fazer um script para isso. Na figura abaixo temos um exemplo onde a propriedade foi ativada e o node correspondente tem um trecho no script que faz o objeto alterar a cor quando o usuário clica no objeto.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/064b735f-db55-492e-86c4-f8dac5eaaee6" />

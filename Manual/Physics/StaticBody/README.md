@@ -6,5 +6,5 @@
 
 Como já vimos [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-material), o `StaticBody2D` pode ter seu tipo de material alterado no *Physics material*. Além disso, ele também possui algumas propriedades editáveis no *Inspector*.
 
-  - **Constant Linear Velocity:** Aplica uma velocidade direcional no corpo que está sobre o objeto.
-  - **Constant Angular velocity:** Aplica um velocidade angular no corpo que está sobre o objeto.
+- **Constant Linear Velocity:** Aplica uma velocidade direcional no corpo que está sobre o objeto.
+- **Constant Angular velocity:** Aplica um velocidade angular no corpo que está sobre o objeto.

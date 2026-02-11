@@ -114,11 +114,8 @@ Todas as propriedades mostradas na figura dizem respeito ao TileSet. Vamos dar u
 </p>
 
 - **Tile Shape:** Até agora só vimos tiles quadrados, mas eles podem ter outros formatos que atendem a outros tipos de layouts de jogos.
-
 - **Tile Layout:** Um segundo nível de layout. Depende da escolha da opção acima.
-
 - **Tile Offset Axis:** Se o layout acima estará orientado pelo eixo $x$ ou $y$. Tem que testar para decidir se vai usar.
-
 - **Tile Size:** Essa nós já vimos anteriormente, são as dimensões do tile na tilesheet, em pixels.
 
 ### Aba Setup
@@ -130,17 +127,11 @@ Todas as propriedades mostradas na figura dizem respeito ao atlas selecionado. V
 </p>
 
 - **ID:** Identificador único do atlas. É preferível não mudar e deixar a engine fazer a ordenação automática.
-
-- **Name:** O nome do atlas. O usuário pode escolher o nome que quiser para identificar pelo nome o atlas.
-  
-- **Texture:** O arquivo do tilesheet.
-  
+- **Name:** O nome do atlas. O usuário pode escolher o nome que quiser para identificar pelo nome o atlas.  
+- **Texture:** O arquivo do tilesheet.  
 - **Margins:** Desloca toda a divisão quadricular do atlas no eixo $x$ ou $y$. É útil quando ele vem originalmente com margens. 
-
 - **Separation:** Cria um vão entre os tiles, deixando uma camada de transparência entre eles.
-
 - **Texture Region Size:** Tamanho dos tiles no atlas. Em geral este valor será igual ao que você definiu com *Tile Size* (visto acima), mas você pode querer alterar aqui. O *Tile Size* define o atlas, enquanto que este pode ser visto como uma deformação posterior do atlas.
-
 - **Use Texture Padding:** Adiciona um pixel de transparência ao redor de cada tile. Isto ajuda a prevenir o efeito de "texture bleeding", que é quando alguns pixels do tile podem "vazar" para os tiles vizinhos. Isto não acontecerá para tiles fixos vindo de um TileSet bem configurado, mas podem surgir artefatos quando há efeitos de luz, deformação, colisão, entre outros.
 
 Quando estiver mexendo com *Margins, Separation* e *Texture Region Size*, lguns tiles podem desaparecer. Para garantir que isso não aconteça, selecione a opção *Create Tiles in Non-Transparent Texture Regions* mostrada abaixo.

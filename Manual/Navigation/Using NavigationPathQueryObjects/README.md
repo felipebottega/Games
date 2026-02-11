@@ -51,16 +51,16 @@ Ao executar a requisição acima, não customizamos nenhum parâmetro, a única 
 
 Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir no código.
 
-  - **pathfinding_algorithm:** Há apenas um algoritmo para calcular o caminho, que é o *Astar* (A*). Apesar de não ter o que modificar, incluímos este parâmetro no tutorial pois pode ser que outros entrem futuramente. Na Godot este parâmetro é dado pela constante `NavigationPathQueryParameters2D.PATHFINDING_ALGORITHM_ASTAR`.
-  - **path_postprocessing:** Vimos um pouco deste parâmetro [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path). Ele aplica um pós-processamento sobre o caminho calculado. Pode ser um algoritmo otimizado de afunilamento (default), um algoritmo que faz o caminho sempre passar pelo meio das arestas dos polígonos, ou nenhum pós-processamento. As constantes associadas a estas escolhas são `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_CORRIDORFUNNEL`, `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED` e `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_NONE`.
-  - **simplify_path:** Este parâmetro realiza cálculos adicionais para tentar simplificar o caminho, isto é, deixá-lo com menos pontos. O exemplo abaixo mostra duas versões de um mesmo caminho. Na esquerda temos o default, sem simplificação, e na direita o caminho com simplificação.
+- **pathfinding_algorithm:** Há apenas um algoritmo para calcular o caminho, que é o *Astar* (A*). Apesar de não ter o que modificar, incluímos este parâmetro no tutorial pois pode ser que outros entrem futuramente. Na Godot este parâmetro é dado pela constante `NavigationPathQueryParameters2D.PATHFINDING_ALGORITHM_ASTAR`.
+- **path_postprocessing:** Vimos um pouco deste parâmetro [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path). Ele aplica um pós-processamento sobre o caminho calculado. Pode ser um algoritmo otimizado de afunilamento (default), um algoritmo que faz o caminho sempre passar pelo meio das arestas dos polígonos, ou nenhum pós-processamento. As constantes associadas a estas escolhas são `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_CORRIDORFUNNEL`, `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED` e `NavigationPathQueryParameters2D.PATH_POSTPROCESSING_NONE`.
+- **simplify_path:** Este parâmetro realiza cálculos adicionais para tentar simplificar o caminho, isto é, deixá-lo com menos pontos. O exemplo abaixo mostra duas versões de um mesmo caminho. Na esquerda temos o default, sem simplificação, e na direita o caminho com simplificação.
 
 <p align="center">
   <img width="310" src="https://github.com/user-attachments/assets/8aecd11f-e444-4055-818c-685b4d627492" />
   <img width="310" src="https://github.com/user-attachments/assets/7b06a599-85f4-4495-8c14-54df82d35801" />
 </p>
 
-  - **simplify_epsilon:** Caso `simplify_path` seja *true*, este segundo parâmetro controla o nível da simplificação. Quanto maior, mais intensa é a simplificação. Abaixo mostramos o que acontece quando a simplificação está ativada, com `simplify_epsilon` igual a $0$, $1$ e $40$, respectivamente (esquerda para a direita).
+- **simplify_epsilon:** Caso `simplify_path` seja *true*, este segundo parâmetro controla o nível da simplificação. Quanto maior, mais intensa é a simplificação. Abaixo mostramos o que acontece quando a simplificação está ativada, com `simplify_epsilon` igual a $0$, $1$ e $40$, respectivamente (esquerda para a direita).
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/ab6bb0b2-88f8-4cb7-b5e4-2b3ba12f7333" />
@@ -68,11 +68,11 @@ Vamos acrescentar um parâmetro por vez, explicando como funciona e como inserir
   <img width="310" src="https://github.com/user-attachments/assets/e5c7567e-5a72-48e3-a106-3bb33d6a1145" />
 </p>
 
-  - **path_return_max_length:** A engine calcula o caminho e retorna só um pedaço dele, com o comprimento estabelecido por este parâmetro, em pixels. O valor $0$ (default) faz o caminho completo ser retornado.
-  - **path_return_max_radius:** A engine calcula o caminho e retorna só um pedaço dele, dentro do raio (ao redor do início do caminho) estabelecido este parâmetro, em pixels. O valor $0$ (default) faz o caminho completo ser retornado.
-  - **path_search_max_distance:** Distância máxima, em pixels, que a engine usa para determinar até qual polígono o caminho será calculado. Nos dois parâmetros anteriores, o caminho completo era calculado mas apenas um pedaço dele era retornado. Com este parâmetro a engine pode calcular caminhos efetivamente menores. O valor $0$ (default) faz o caminho completo ser retornado.
-  - **path_search_max_polygons:** Número máximo de polígonos permitidos para serem usados no cálculo do caminho. Assim como `path_search_max_distance`, este parâmetro pode calcular caminhos efetivamente menores. Esta variável deve ser um número inteiro. O valor $0$ (default) faz o caminho completo ser retornado. 
-  - **navigation_layers:** É um valor inteiro usado como bitmask que diz ao servidor quais camadas (layers) de navegação devem ser consideradas ao gerar um caminho. Por exemplo, o valor $5 = 101$ significa que é para considerar as camadas 1 e 3 e desconsiderar a camada 2. No *Inspector*, a propriedade *Navigation Layers* mostra em quais camadas o `NavigationRegion2D` pertence. 
+- **path_return_max_length:** A engine calcula o caminho e retorna só um pedaço dele, com o comprimento estabelecido por este parâmetro, em pixels. O valor $0$ (default) faz o caminho completo ser retornado.
+- **path_return_max_radius:** A engine calcula o caminho e retorna só um pedaço dele, dentro do raio (ao redor do início do caminho) estabelecido este parâmetro, em pixels. O valor $0$ (default) faz o caminho completo ser retornado.
+- **path_search_max_distance:** Distância máxima, em pixels, que a engine usa para determinar até qual polígono o caminho será calculado. Nos dois parâmetros anteriores, o caminho completo era calculado mas apenas um pedaço dele era retornado. Com este parâmetro a engine pode calcular caminhos efetivamente menores. O valor $0$ (default) faz o caminho completo ser retornado.
+- **path_search_max_polygons:** Número máximo de polígonos permitidos para serem usados no cálculo do caminho. Assim como `path_search_max_distance`, este parâmetro pode calcular caminhos efetivamente menores. Esta variável deve ser um número inteiro. O valor $0$ (default) faz o caminho completo ser retornado. 
+- **navigation_layers:** É um valor inteiro usado como bitmask que diz ao servidor quais camadas (layers) de navegação devem ser consideradas ao gerar um caminho. Por exemplo, o valor $5 = 101$ significa que é para considerar as camadas 1 e 3 e desconsiderar a camada 2. No *Inspector*, a propriedade *Navigation Layers* mostra em quais camadas o `NavigationRegion2D` pertence. 
 
 <p align="center">
   <img width="250" height="464" alt="image" src="https://github.com/user-attachments/assets/7323aa1b-072b-4582-b9f6-7527c10e0d49" />
@@ -103,8 +103,8 @@ Ao fazer `navigation_layers` = 8 = 1000, estamos ativando apenas o quarto bit, o
 
 > PS: É importante saber que, internamente, a engine registra "101" como "0...0101", completando com zeros à esquerda de acordo com o número de camadas.
 
-  - **included_regions:** Lista/array com todos os RIDs das regiões que devem ser incluídas nos cálculos de caminho. As regiões fora dessa lista são excluídas no cálculo automaticamente. Por default essa lista é vazia, e isso significa que todas as regiões são incluídas.
-  - **excluded_regions:** Lista/array com todos os RIDs das regiões que devem ser excluídas nos cálculos de caminho. As regiões fora dessa lista são incluídas no cálculo automaticamente. Por default essa lista é vazia, e isso significa que nenhuma região é excluída. Se tiver um RID na `included_regions` e `excluded_regions`, ele é considerado excluído.
+- **included_regions:** Lista/array com todos os RIDs das regiões que devem ser incluídas nos cálculos de caminho. As regiões fora dessa lista são excluídas no cálculo automaticamente. Por default essa lista é vazia, e isso significa que todas as regiões são incluídas.
+- **excluded_regions:** Lista/array com todos os RIDs das regiões que devem ser excluídas nos cálculos de caminho. As regiões fora dessa lista são incluídas no cálculo automaticamente. Por default essa lista é vazia, e isso significa que nenhuma região é excluída. Se tiver um RID na `included_regions` e `excluded_regions`, ele é considerado excluído.
     
 > PS: Usar `included_regions` e `excluded_regions` pode ser uma maneira mais prática que `navigation_layers` de considerar e descondiderar regiões. Vai depender de cada caso.
 

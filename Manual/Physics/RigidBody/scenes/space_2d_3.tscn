@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://oeafmvtx6fef"]
+
+[ext_resource type="Script" uid="uid://d2mhc1dr4osa4" path="res://scripts/space_2d_3.gd" id="1_1sn1x"]
+[ext_resource type="Texture2D" uid="uid://dv2rhmv0yuvci" path="res://assets/block.png" id="2_o3ila"]
+[ext_resource type="PackedScene" uid="uid://p3sxp2nnaxre" path="res://scenes/back.tscn" id="4_21odk"]
+[ext_resource type="AudioStream" uid="uid://cxtov1v5rnyy6" path="res://assets/impact_small.wav" id="4_d6l46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3ila"]
+size = Vector2(25, 734)
+
+[node name="Space2D3" type="Node2D"]
+script = ExtResource("1_1sn1x")
+metadata/_edit_horizontal_guides_ = [60.0]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(628, 360)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.05470459, 1.6083151)
+texture = ExtResource("2_o3ila")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_o3ila")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_d6l46")
+volume_db = -20.0
+max_polyphony = 10
+
+[node name="SpeedLabel" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 115.0
+offset_bottom = 40.0
+text = "Speed = 1000"
+
+[node name="SpeedHSlider" type="HSlider" parent="."]
+offset_left = 21.0
+offset_top = 48.0
+offset_right = 118.0
+offset_bottom = 64.0
+min_value = 1000.0
+max_value = 10000.0
+value = 1000.0
+
+[node name="ContinuousLabel" type="Label" parent="."]
+offset_left = 211.0
+offset_top = 17.0
+offset_right = 449.0
+offset_bottom = 40.0
+text = "Continuous Collision Detection"
+
+[node name="ContinuousCheckBox" type="CheckBox" parent="."]
+offset_left = 318.0
+offset_top = 42.0
+offset_right = 342.0
+offset_bottom = 66.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_21odk")]
+
+[connection signal="value_changed" from="SpeedHSlider" to="." method="_on_speed_h_slider_value_changed"]
+[connection signal="toggled" from="ContinuousCheckBox" to="." method="_on_continuous_check_box_toggled"]

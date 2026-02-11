@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cxtov1v5rnyy6" path="res://assets/impact_small.wav" id="3_vxi7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qncar"]
-size = Vector2(320, 72)
+size = Vector2(319, 72)
 
 [node name="Block2" type="RigidBody2D"]
 contact_monitor = true

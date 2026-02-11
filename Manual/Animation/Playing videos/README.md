@@ -19,12 +19,12 @@ Quando adicionar o vídeo, vai aparecer um retângulo laranja na tela do editor.
 
 ## Propriedades do VideoStreamPlayer
 
-  - **Audio Track:** É o número da track onde está o áudio do vídeo. O default é ser em zero mesmo, mas pode ser que um vídeo tenha múltiplas tracks e você precise alterar.
-  - **Volume dB:** Volume do vídeo. O default zero seria um volume normal.
-  - **Autoplay:** Se estiver habilitado, o vídeo começar a tocar automaticamente assim que a cena se inicia.
-  - **Paused:** Se estiver habilitado, o vídeo é pausado.
-  - **Expand:** Se estiver habilitado, o vídeo pode se deformado conforme você deforma o retângulo com o shape do vídeo no editor.
-  - **Loop:** Se estiver habilitado, o vídeo fica repetindo em loop.
+- **Audio Track:** É o número da track onde está o áudio do vídeo. O default é ser em zero mesmo, mas pode ser que um vídeo tenha múltiplas tracks e você precise alterar.
+- **Volume dB:** Volume do vídeo. O default zero seria um volume normal.
+- **Autoplay:** Se estiver habilitado, o vídeo começar a tocar automaticamente assim que a cena se inicia.
+- **Paused:** Se estiver habilitado, o vídeo é pausado.
+- **Expand:** Se estiver habilitado, o vídeo pode se deformado conforme você deforma o retângulo com o shape do vídeo no editor.
+- **Loop:** Se estiver habilitado, o vídeo fica repetindo em loop.
 
 As outras propriedades eu não sei o que fazem, mas não são muito importantes neste estágio de aprendizado.
 

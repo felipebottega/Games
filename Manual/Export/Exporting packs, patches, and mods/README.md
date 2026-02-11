@@ -2,9 +2,9 @@
 
 Primeiro vamos estabelecer algumas definições.
 
-  - **Conteúdo para Download:** Capacidade de adicionar recursos e conteúdo ao jogo.
-  - **Patches:** Capacidade de corrigir um bug presente em um produto lançado.
-  - **Mods:** Permitem que outras pessoas criem conteúdo para o jogo.
+- **Conteúdo para Download:** Capacidade de adicionar recursos e conteúdo ao jogo.
+- **Patches:** Capacidade de corrigir um bug presente em um produto lançado.
+- **Mods:** Permitem que outras pessoas criem conteúdo para o jogo.
 
 É possível utilizar os arquivos PCK para lidar com conteúdos extras como assets, cenas, scripts, entro outros. Porém, o caminho mais simples é só criar uma versão nova do jogo e colocar por cima da anterior. Inclusive, isso é o que muitos estúdios fazem. É direto e simples. Portanto, vamos evitar qualquer coisa com PCK no momento. 
 

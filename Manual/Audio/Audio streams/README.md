@@ -14,13 +14,13 @@ Para iniciar um node `AudioStreamPlayer2D`, o processo é o mesmo do `AudioStrea
 
 ## Propriedades do AudioStreamPlayer2D
 
-  - **Volume dB:** É o volume base do som.
-  - **Pitch Scale:** Distorção de *pitch* aplicada no som. Basicamente muda a tonalidade. Pode-se usar isso para simular o [efeito Doppler](https://en.wikipedia.org/wiki/Doppler_effect).
-  - **Playing:** Toca o áudio na hora da edição. Bom para fazer testes.
-  - **Autoplay:** O áudio toca automaticamente assim que o node entra na cena.
-  - **Max Distance:** A distância máxima (em pixels) que o áudio pode ser ouvido.
-  - **Attenuation:** Curva de atenuação do volume. Se deixar o default o volume aumenta linearmente conforme nos aproximamos da fonte de som.
-  - **Max Polyphony:** Número máximo de áudios que o node pode tocar ao mesmo tempo. Caso ultrapasse esse valor, ele começa a cancelar áudios antigos para a entrada dos novos.
-  - **Panning Strength:** Quanto mais alto, mais a diferença entre som esquerdo e direito é realçado.
-  - **Bus:** Canal de áudio por onde o som vai sair.
-  - **Playback Type:** Como já observado [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), quando esta propriedade está em *Stream*, é possível ter os efeitos de áudio rodando em HTML5.
+- **Volume dB:** É o volume base do som.
+- **Pitch Scale:** Distorção de *pitch* aplicada no som. Basicamente muda a tonalidade. Pode-se usar isso para simular o [efeito Doppler](https://en.wikipedia.org/wiki/Doppler_effect).
+- **Playing:** Toca o áudio na hora da edição. Bom para fazer testes.
+- **Autoplay:** O áudio toca automaticamente assim que o node entra na cena.
+- **Max Distance:** A distância máxima (em pixels) que o áudio pode ser ouvido.
+- **Attenuation:** Curva de atenuação do volume. Se deixar o default o volume aumenta linearmente conforme nos aproximamos da fonte de som.
+- **Max Polyphony:** Número máximo de áudios que o node pode tocar ao mesmo tempo. Caso ultrapasse esse valor, ele começa a cancelar áudios antigos para a entrada dos novos.
+- **Panning Strength:** Quanto mais alto, mais a diferença entre som esquerdo e direito é realçado.
+- **Bus:** Canal de áudio por onde o som vai sair.
+- **Playback Type:** Como já observado [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), quando esta propriedade está em *Stream*, é possível ter os efeitos de áudio rodando em HTML5.

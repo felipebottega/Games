@@ -20,14 +20,14 @@ Ao habilitar a evitação, o servidor de navegação cria um círculo em torno d
 
 Abaixo segue a descrição das propriedade associadas a evitação entre agentes.
 
-  - **Radius:** É o raio do círculo que fica em torno do agente (em pixels). Você pode considerar este círculo como um shape de colisão para agentes de navegação.
-  - **Neighbor Distance:** É o raio de busca do agente, em pixels. Para ele saber se há outros agentes com evitação habilitada, ele deve fazer essa busca a cada frame físico. Reduzir este raio melhora a performance, mas pode fazer com que o agente só detecte outros agentes muito em cima da hora.
-  - **Max Neighbors:** Ao fazer a busca por outros agentes com evitação, você pode limitar o número de agentes encontrados para decidir que não é necessário mais buscar nada.
-  - **Time Horizon Agents:** Para evitar outros agentes, é necessário saber não apenas a posição deles agora, mas a posição futura, pois eles podem estar se movendo também. Essa variável controla quantos segundos à frente o agente projeta o movimento dos outros agentes. Desta maneira, ele vai em uma direção que evita qualquer colisão futura. Valores muitos altos podem deixar o agente lento demais, uma vez que ele será extremamente cauteloso a cada frame.
-  - **Time Horizon Obstacles:** Semelhante ao anterior, mas para agentes estáticos, os nodes `NavigationObstacles`. Iremos ver mais sobre este node no próximo tutorial.
-  - **Max speed:** Velocidade máxima permitida para o agente se mover enquanto a evitação está habilitada.
-  - **Avoidance Layers/Mask:** Funciona demaneira análoga às camadas físicas de colisão, só que restrito aos agentes com evitação. Se quiser dar uma relembrada no assunto, consulte [este tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks).
-  - **Avoidance Priority:** Valor entre $0$ e $1$ que diz ao servidor o quanto aquele agente é prioritário na evitação. Em outras palavras, quanto maior o valor, mais os outros agentes vão priorizar evitar este agente. Valores baixos significam que este agente não precisa ser tão evitado assim, é menos relevante.
+- **Radius:** É o raio do círculo que fica em torno do agente (em pixels). Você pode considerar este círculo como um shape de colisão para agentes de navegação.
+- **Neighbor Distance:** É o raio de busca do agente, em pixels. Para ele saber se há outros agentes com evitação habilitada, ele deve fazer essa busca a cada frame físico. Reduzir este raio melhora a performance, mas pode fazer com que o agente só detecte outros agentes muito em cima da hora.
+- **Max Neighbors:** Ao fazer a busca por outros agentes com evitação, você pode limitar o número de agentes encontrados para decidir que não é necessário mais buscar nada.
+- **Time Horizon Agents:** Para evitar outros agentes, é necessário saber não apenas a posição deles agora, mas a posição futura, pois eles podem estar se movendo também. Essa variável controla quantos segundos à frente o agente projeta o movimento dos outros agentes. Desta maneira, ele vai em uma direção que evita qualquer colisão futura. Valores muitos altos podem deixar o agente lento demais, uma vez que ele será extremamente cauteloso a cada frame.
+- **Time Horizon Obstacles:** Semelhante ao anterior, mas para agentes estáticos, os nodes `NavigationObstacles`. Iremos ver mais sobre este node no próximo tutorial.
+- **Max speed:** Velocidade máxima permitida para o agente se mover enquanto a evitação está habilitada.
+- **Avoidance Layers/Mask:** Funciona demaneira análoga às camadas físicas de colisão, só que restrito aos agentes com evitação. Se quiser dar uma relembrada no assunto, consulte [este tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks).
+- **Avoidance Priority:** Valor entre $0$ e $1$ que diz ao servidor o quanto aquele agente é prioritário na evitação. Em outras palavras, quanto maior o valor, mais os outros agentes vão priorizar evitar este agente. Valores baixos significam que este agente não precisa ser tão evitado assim, é menos relevante.
 
 ## velocity $\neq$ speed
 

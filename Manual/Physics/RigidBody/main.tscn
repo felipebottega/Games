@@ -66,12 +66,16 @@ offset_left = 478.0
 offset_top = 148.0
 offset_right = 704.0
 offset_bottom = 549.0
+tooltip_text = "Neste simulador você só precisa 
+clicar e segurar para disparar. Altere
+a velocidade dos disparos e teste o 
+parâmetro de detecção contínua."
 theme_override_font_sizes/font_size = 22
 text = "Continuous Collision"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMP3_h2yge")
-volume_db = -80.0
+volume_db = -15.0
 pitch_scale = 0.75
 autoplay = true
 
@@ -85,3 +89,4 @@ text = "Credits - Music: Alexandr Zhelanov, https://soundcloud.com/alexandr-zhel
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

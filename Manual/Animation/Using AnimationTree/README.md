@@ -137,16 +137,16 @@ Note que com esta configuração nenhuma animação é tocada quando você execu
 
 O exemplo acima mostra que o tipo de transição importa para o fluxo do *State Machine*. Vamos explicar os 3 tipos de transições que existem em Godot.
 
-  - **Immediate:** Muda para o próximo estágio imediatamente. Ocorre um pequeno blend entre o fim da animação atual e o início da seguinte.
-  - **Sync:** Também muda para o próximo estágio imediatamente, mas continua a animação nova a partir da posição exata onde a anterior estava, mantendo a continuidade temporal.
-  - **At End:** Espera a animação atual encerrar antes de ir para a seguinte.
+- **Immediate:** Muda para o próximo estágio imediatamente. Ocorre um pequeno blend entre o fim da animação atual e o início da seguinte.
+- **Sync:** Também muda para o próximo estágio imediatamente, mas continua a animação nova a partir da posição exata onde a anterior estava, mantendo a continuidade temporal.
+- **At End:** Espera a animação atual encerrar antes de ir para a seguinte.
 
 ⚠️ Atenção: Se a animação estiver configurada para ficar em loop, a transição *At End* vai fazer com que aquele estágio toque para sempre, sem ir para o seguinte.
 
 No painel de edição, no topo direito, você pode notar que há duas opções de *Play Mode*. Você vai querer usar isso quando chamar algum node para tocar via código. A descrição delas está abaixo.
 
-  - **Travel:** Segue o caminho de transições definido no *State Machine* (respeita blends).
-  - **Immediate:** Troca instantânea, pulando o grafo e começando direto o novo estado.
+- **Travel:** Segue o caminho de transições definido no *State Machine* (respeita blends).
+- **Immediate:** Troca instantânea, pulando o grafo e começando direto o novo estado.
 
 Tantos os nodes quanto as transições possuem propriedades para serem modificadas no *Inspector*. Vamos começar descrevendo as propriedades dos nodes.
 
@@ -154,10 +154,10 @@ Tantos os nodes quanto as transições possuem propriedades para serem modificad
   <img width="350" src="https://github.com/user-attachments/assets/02f1b39a-8662-4bab-bbe1-7f7e4c98caba" />
 </p>
 
-  - **Animation:** Modifica a animação que você quer tocar naquele node.
-  - **Play Mode:** Determina se você quer tocar a animação na ordem default ou ao contrário.
-  - **Advance on Start:** Se estiver habilitado, pula o primeiro frame ao exibir a animação.
-  - **Use Custom Timeline:** Se estiver habilitado, logo abaixo se abre um pequeno painel para edições temporais sobre a animação.
+- **Animation:** Modifica a animação que você quer tocar naquele node.
+- **Play Mode:** Determina se você quer tocar a animação na ordem default ou ao contrário.
+- **Advance on Start:** Se estiver habilitado, pula o primeiro frame ao exibir a animação.
+- **Use Custom Timeline:** Se estiver habilitado, logo abaixo se abre um pequeno painel para edições temporais sobre a animação.
 
 Agora vamos ver as propriedades das transições.
 
@@ -165,10 +165,10 @@ Agora vamos ver as propriedades das transições.
   <img width="380" src="https://github.com/user-attachments/assets/9efa5a47-0596-440c-9625-d62cae9a877a" />
 </p>
 
-  - **Xfade Time:** Tempo que uma animação pode continuar tocando mesmo após a próxima já ter começado.
-  - **Xfade Curve:** Você pode definir a curva de peso do fade-out animnação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
-  - **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
-  - **Switch Mode:** É o tipo de transição, que é escolhido ao se criar a conexão. As opções são *Immediate, Sync* e *At End*, como já vimos acima.
+- **Xfade Time:** Tempo que uma animação pode continuar tocando mesmo após a próxima já ter começado.
+- **Xfade Curve:** Você pode definir a curva de peso do fade-out animnação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
+- **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
+- **Switch Mode:** É o tipo de transição, que é escolhido ao se criar a conexão. As opções são *Immediate, Sync* e *At End*, como já vimos acima.
 
 ⚠️ Atenção: Conforme você vai criando mais `AnimatedTree` na cena, sempre volte para o `AnimationPlayer` e deixe na posição RESET. É comum as animações do `AnimatedTree` ficarem tocando na tela, e isso pode levar a conflitos de animação que podem deixar toda a engine bugada.
 
@@ -223,8 +223,8 @@ Você pode clicar em *Add Node* ou dar o segundo clique do mouse no espaço no p
 
 Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um pequeno exemplo de aplicação.
 
-  - **Animation:** É o node mais simples de todos, ele simplesmente toca uma animação.
-  - **OneShot:** Toca uma animação uma única vez caso seja requisitado (via código). A estrutura e o código estão mostrados abaixo. Como a requisição foi feita logo na entrada da cena, e engine primeiro vai tocar a animação *idle* e logo depois a *run*, que ficará em loop. Para que a *idle* não fique presa no loop, você pode ativar a opção *Break Loop at End* no *Inspector* do *One Shot*.
+- **Animation:** É o node mais simples de todos, ele simplesmente toca uma animação.
+- **OneShot:** Toca uma animação uma única vez caso seja requisitado (via código). A estrutura e o código estão mostrados abaixo. Como a requisição foi feita logo na entrada da cena, e engine primeiro vai tocar a animação *idle* e logo depois a *run*, que ficará em loop. Para que a *idle* não fique presa no loop, você pode ativar a opção *Break Loop at End* no *Inspector* do *One Shot*.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/e0c5d32e-b7c3-4839-aa0d-a61f22fe65eb" />
@@ -234,16 +234,16 @@ Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um peq
 
 > PS: Note que há diversas outras propriedades para explorar no *Inspector* do *One Shot*. Vale a pena gastar um tempo explorando as propriedades dos nodes do *Blend Tree*.
 
-  - **Add2:**  Soma duas animações, obtendo uma nova no processo. Somar animações é diferente do blend, pois o blend faz transição onde toca cada umas das animações parcialmente. De fato elas são somadas no blend, mas de maneira ponderada no tempo, omitindo uma animação enquanto a outra ganha mais peso (é uma interpolação do tipo $\alpha A + \beta B$, como já foi observado antes). O *Add2* sempre toca a animação "in" como é originalmente (ver figura abaixo), e adiciona a outra conforme o parâmetro de peso definido no node.
+- **Add2:**  Soma duas animações, obtendo uma nova no processo. Somar animações é diferente do blend, pois o blend faz transição onde toca cada umas das animações parcialmente. De fato elas são somadas no blend, mas de maneira ponderada no tempo, omitindo uma animação enquanto a outra ganha mais peso (é uma interpolação do tipo $\alpha A + \beta B$, como já foi observado antes). O *Add2* sempre toca a animação "in" como é originalmente (ver figura abaixo), e adiciona a outra conforme o parâmetro de peso definido no node.
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/397b994c-4f4f-4a1f-948e-11988c7471a3" />
 </p>
 
-  - **Add3:** Análogo ao *Add2*, mas com 3 animações e uma delas entra subtraíndo em vez de adicionar.
-  - **Blend2, Blend3:** Segue a mesma lógica do *Add2, Add3*, mas fazendo blend em vez de adicionar as animações.
-  - **Sub2:** Semelhante ao *Add2*, mas a segunda animação entra subtraindo em vez de adicionar. No *Add2* e *Add3* dá para colocar valores negativos no parâmetro, que tem o  mesmo efeito de subtrair. Então não sei se o *Sub2* tem tanta utilidade assim.
-  - **TimeSeek:** Este node causa um delay na animação conectada à ele. O valor default $-1$ significa que ele não faz nada. A ativação deste node é feita por código, ele executa a requisição uma única vez e volta ao default $-1$ (semelhante ao *OneShot* que é executado uma única vez via código também). Abaixo mostramos como ele deve ser estruturado. Este node serve para "buscar" (seek) a um ponto específico no tempo de uma animação. Ele permite que você comece a animação a partir de um determinado instante.
+- **Add3:** Análogo ao *Add2*, mas com 3 animações e uma delas entra subtraíndo em vez de adicionar.
+- **Blend2, Blend3:** Segue a mesma lógica do *Add2, Add3*, mas fazendo blend em vez de adicionar as animações.
+- **Sub2:** Semelhante ao *Add2*, mas a segunda animação entra subtraindo em vez de adicionar. No *Add2* e *Add3* dá para colocar valores negativos no parâmetro, que tem o  mesmo efeito de subtrair. Então não sei se o *Sub2* tem tanta utilidade assim.
+- **TimeSeek:** Este node causa um delay na animação conectada à ele. O valor default $-1$ significa que ele não faz nada. A ativação deste node é feita por código, ele executa a requisição uma única vez e volta ao default $-1$ (semelhante ao *OneShot* que é executado uma única vez via código também). Abaixo mostramos como ele deve ser estruturado. Este node serve para "buscar" (seek) a um ponto específico no tempo de uma animação. Ele permite que você comece a animação a partir de um determinado instante.
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/a3fd4257-31aa-4d98-9fe3-1af948e143c0" />
@@ -255,14 +255,14 @@ Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um peq
   <img width="350" src="https://github.com/user-attachments/assets/3da4e97d-b282-4ba2-b62e-872872701b81" />
 </p>
 
-  - **TimeScale:** Basta adicionar esse node após uma animação e escolher uma valor para acelerar ou desacelerar a animação.
+- **TimeScale:** Basta adicionar esse node após uma animação e escolher uma valor para acelerar ou desacelerar a animação.
 
 <p align="center">
   <img width="470" src="https://github.com/user-attachments/assets/92c487bd-bc7b-4824-8b55-30e1dac22c18" />
 </p>
 
-  - **Transition/BlendTree:** O *Transition* é um modo muito simlpes de *State Machine*. Como o próprio *State Machine* é um node acessível pelo `AnimationNodeBlendTree`, vou desconsiderar este node. O *BlendTree* é o próprio node pai destes todos, de modo que inserir um outro dentro dele significa ter uma estrutura recursiva. Além de muito complexo isso deve matar a performance. Por isso este também será desconsiderado.
-  - **BlendSpace1D/BlendSpace2D/StateMachine:** São instâncias das modalidades de mesmo nome vistas anteriormente. Com isto, podemos ver que o `AnimationNodeBlendTree` é capaz de encapsular tudo que vimos de `AnimationTree` em uma única estrutura.
+- **Transition/BlendTree:** O *Transition* é um modo muito simlpes de *State Machine*. Como o próprio *State Machine* é um node acessível pelo `AnimationNodeBlendTree`, vou desconsiderar este node. O *BlendTree* é o próprio node pai destes todos, de modo que inserir um outro dentro dele significa ter uma estrutura recursiva. Além de muito complexo isso deve matar a performance. Por isso este também será desconsiderado.
+- **BlendSpace1D/BlendSpace2D/StateMachine:** São instâncias das modalidades de mesmo nome vistas anteriormente. Com isto, podemos ver que o `AnimationNodeBlendTree` é capaz de encapsular tudo que vimos de `AnimationTree` em uma única estrutura.
 
 ## Exemplo prático
 

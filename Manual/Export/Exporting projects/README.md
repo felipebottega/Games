@@ -20,9 +20,9 @@ Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algu
 
 Antes mesmo de tentar exportar o seu jogo, é bom saber que tipo de exportação você quer fazer. Existem três alternativas.
 
-  - **Export All:** Exporta o jogo para todas as plataformas selecionadas de uma vez.
-  - **Export Project:** Exporta o jogo para uma plataforma selecionada.
-  - **Export PCK/ZIP:** Exporta os recursos do jogo como um arquivo PCK ou ZIP. Não é jogável.
+- **Export All:** Exporta o jogo para todas as plataformas selecionadas de uma vez.
+- **Export Project:** Exporta o jogo para uma plataforma selecionada.
+- **Export PCK/ZIP:** Exporta os recursos do jogo como um arquivo PCK ou ZIP. Não é jogável.
 
 Cada plataforma possui seus próprios parâmetros a serem customizados antes da exportação. O que vem por default na Godot muito provavelmente já está correto e você só vai querer alterar parâmetros mais superficiais, como ícones, metadados e o destino para onde exportar. 
 
@@ -43,8 +43,8 @@ Eu recomendo usar apenas a opção *Export Project* e exportar para uma platafor
 
 A configuração de exportação é armazenada em dois arquivos, ambos encontrados no diretório do projeto:
 
-  - **export_presets.cfg:** Este arquivo contém a grande maioria da configuração de exportação e pode ser submetido com segurança ao controle de versão. Não há nada aqui que você normalmente precisaria manter em segredo.
-  - **.godot/export_credentials.cfg:** Este arquivo contém opções de exportação consideradas confidenciais, como senhas e chaves de criptografia. Geralmente, ele não deve ser submetido ao controle de versão nem compartilhado com terceiros, a menos que você saiba exatamente o que está fazendo.
+- **export_presets.cfg:** Este arquivo contém a grande maioria da configuração de exportação e pode ser submetido com segurança ao controle de versão. Não há nada aqui que você normalmente precisaria manter em segredo.
+- **.godot/export_credentials.cfg:** Este arquivo contém opções de exportação consideradas confidenciais, como senhas e chaves de criptografia. Geralmente, ele não deve ser submetido ao controle de versão nem compartilhado com terceiros, a menos que você saiba exatamente o que está fazendo.
 
 Como o arquivo de credenciais geralmente é mantido fora dos sistemas de controle de versão, algumas opções de exportação estarão ausentes se você clonar o projeto para uma nova máquina. A maneira mais fácil de lidar com isso é copiar o arquivo manualmente do local antigo para o novo.
 

@@ -40,9 +40,9 @@ A função `draw_polyline` desenha segmentos de reta interconetados a partir de 
 ## draw_circle
 
 Desenhar os olhos é fácil, basta desenhar círculos. Na função `draw_circle` os parâmetros abaixo são: *centro do círculo, raio do círculo, cor do círculo*. Há ainda os seguintes parâmetros:
- - **filled:** Para preencher ou não o interior do círculo.
- - **width:** Espessura do círculo.
- - **antialised:** Se aplica ou não o antialised.
+- **filled:** Para preencher ou não o interior do círculo.
+- **width:** Espessura do círculo.
+- **antialised:** Se aplica ou não o antialised.
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/385cb908-1cb2-4a67-8678-6f9d4569f853" />

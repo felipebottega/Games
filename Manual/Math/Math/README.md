@@ -42,9 +42,9 @@ O exemplo abaixo mostra uma aplicação da interpolação linear entre vetores. 
 
 A Godot oferece muitas funções para gerar números aleatórios. Vamos listar as principais aqui. Caso queira ver as outras, acesse [este link](https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html).
 
-  - **randi():** Retorna um número inteiro aleatório pela distribuição uniforme entre 0 e $2^{32} - 1$.
-  - **randi_range(a, b):** Retorna um inteiro aleatório pela distribuição uniforme entre *a* e *b*. 
-  - **randf():** Retorna um float aleatório pela distribuição uniforme entre $0$ e $1$.
-  - **randfn(mean, deviation):** Retorna um float aleatório pela distribuição normal com média *mean* e desvio padrão *deviation*.
-  - **randf_range(a, b):** Retorna um float aleatório pela distribuição uniforme entre *a* e *b*.
-  - **pick_random():** Dado um array *arr*, o método `arr.pick_random()` retorna um elemento aleatório deste array.
+- **randi():** Retorna um número inteiro aleatório pela distribuição uniforme entre 0 e $2^{32} - 1$.
+- **randi_range(a, b):** Retorna um inteiro aleatório pela distribuição uniforme entre *a* e *b*. 
+- **randf():** Retorna um float aleatório pela distribuição uniforme entre $0$ e $1$.
+- **randfn(mean, deviation):** Retorna um float aleatório pela distribuição normal com média *mean* e desvio padrão *deviation*.
+- **randf_range(a, b):** Retorna um float aleatório pela distribuição uniforme entre *a* e *b*.
+- **pick_random():** Dado um array *arr*, o método `arr.pick_random()` retorna um elemento aleatório deste array.

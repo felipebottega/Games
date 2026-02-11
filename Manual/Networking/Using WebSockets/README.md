@@ -33,7 +33,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 action = process_npc(inputs)  # Processa os inputs e determina a ação
                 results.append({"npc_id": npc_id, "action": action})  # Adiciona o resultado à lista
 
-            response = json.dumps({"results": results})  # Cria a resposta com os resultados
+            response = json.damps({"results": results})  # Cria a resposta com os resultados
             await websocket.send_text(response)  # Envia a resposta ao cliente
 
     except Exception as e:
