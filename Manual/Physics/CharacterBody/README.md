@@ -24,14 +24,15 @@ A partir daqui vale a pena separar as propriedades entre *Grounded* e *Floating*
 
 > PS: É importante estar atento a qndo uma "parede inclinada" não é um chão inclinado, pois o personagem pode pular a partir de chão inclinado, mas não a partir de parede inclinada. Caso o ângulo *Max Angle* não seja muito alto (o default é $45^\circ$), você pode se confundir visualmente e começar a caçar o bug para resolver o problema do seu personagem não estar conseguindo pular no chão inclinado. Mas como não é um chão (é parede), você pode facilmente perder horas tentando debugar isso.
 
-- **Moving Platform/On Leave:** 
-
 ## Propriedades Floating
+
+- **Wall Min Slide Angle:** Ângulo mínimo que o corpo pode deslizar ao encontrar uma parede. O valor default é $15^\circ$.
 
 ## Propriedades Grounded e Floating
 
 Vamos ver agora as propriedades em comum à ambos os modos *Grounded* e *Floating*.
 
--**Moving Platform/On Leave:** Controla como deve ser a dinâmica de velocidade quando o corpo sai de uma plataforma. Veremos mais sobre isso no tutorial de `AnimatableBody2D`.
--**Moving Platform/Floor Layers:** Camadas de colisão que o corpo irá detectar como plataforma móvel.
-**Moving:**
+- **Moving Platform/On Leave:** Controla como deve ser a dinâmica de velocidade quando o corpo sai de uma plataforma. Veremos mais sobre isso no tutorial de `AnimatableBody2D`.
+- **Moving Platform/Floor Layers:** Camadas de colisão para chão que o corpo irá detectar como plataforma móvel.
+- **Moving Platform/Wall Layers:**  Camadas de colisão para parede que o corpo irá detectar como plataforma móvel.
+- **Collision/Safe Margin:** Valor, em pixels, para determinar quando houve colisão na chamada do `move_and_slide`. Por exemplo, se este valor for de 2 pixels, o corpo vai considerar que houve collisão quando estiver a 2 pixels de outro corpo com colisão. O default é de $0.08$ pixels.
