@@ -8,3 +8,7 @@ Os dois prinicpais métodos do `CharacterBody2D` são o `move_and_collide` e o `
 
 ## Propriedades
 
+- **Motion Mode:** Define o modo de movimentação para o `move_and_slide`. Os modos são *Grounded* e *Floating*. O modo *Grounded* é para jogos do tipo *side-scrolling* (jogos onde você anda para a direita ou esquerda, como jogos de plataforma). Neste modo as noções de chão, parede e teto existem. Você pode usar os métodos `is_on_floor`, `is_on_wall()` e `is_on_ceiling()` para detectar se o corpo está em contato com algum destes. O modo "Floating" é para jogos *top-down* (jogos com visão de cima para baixo, como os RPGs clássicos). Neste modo tudo é "parede" e os métodos mostrados anteriormente não se aplicam. O método que você pode usar para detectar colisão com paredes é o `on_wall`.
+- **Up Direction:** Vetor que define o que é "para cima" para o `move_and_slide` no modo *Grounded*. É a partir deste vetor que os métodos `is_on_floor`, `is_on_wall()` e `is_on_ceiling()` são capazes de reportar onde o corpo se encontra.
+- **Slide on Ceiling:** Se estiver habilitada, o corpo desliza pela teto quando o corpo pula e colide no teto. Caso contrário, o corpo para assim que colide com o teto e cai na vertical. Essa propriedade é apenas para o `move_and_slide`. Nos meus testes não fez nenhuma diferença esta propriedade estar habilitada ou não.
+- **Floor/Stop on Slope:** 
