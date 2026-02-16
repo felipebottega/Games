@@ -12,7 +12,7 @@ Os dois principais modos de movimentação do `CharacterBody2D` são o `move_and
 
 A partir daqui vale a pena separar as propriedades entre *Grounded* e *Floating*, pois elas possuem poucas coisas em comum.
 
-## Propriedades Grounded
+### Propriedades Grounded
 
 - **Up Direction:** Vetor que define o que é "para cima" para o `move_and_slide` no modo *Grounded*. É a partir deste vetor que os métodos `is_on_floor`, `is_on_wall()` e `is_on_ceiling()` são capazes de reportar onde o corpo se encontra.
 - **Slide on Ceiling:** Se estiver habilitada, o corpo desliza pela teto quando o corpo pula e colide no teto. Caso contrário, o corpo para assim que colide com o teto e cai na vertical. Essa propriedade é apenas para o `move_and_slide` no modo *Grounded*. Nos meus testes não fez nenhuma diferença esta propriedade estar habilitada ou não.
@@ -24,11 +24,11 @@ A partir daqui vale a pena separar as propriedades entre *Grounded* e *Floating*
 
 > PS: É importante estar atento a qndo uma "parede inclinada" não é um chão inclinado, pois o personagem pode pular a partir de chão inclinado, mas não a partir de parede inclinada. Caso o ângulo *Max Angle* não seja muito alto (o default é $45^\circ$), você pode se confundir visualmente e começar a caçar o bug para resolver o problema do seu personagem não estar conseguindo pular no chão inclinado. Mas como não é um chão (é parede), você pode facilmente perder horas tentando debugar isso.
 
-## Propriedades Floating
+### Propriedades Floating
 
 - **Wall Min Slide Angle:** Ângulo mínimo que o corpo pode deslizar ao encontrar uma parede. O valor default é $15^\circ$.
 
-## Propriedades Grounded e Floating
+### Propriedades Grounded e Floating
 
 Vamos ver agora as propriedades em comum à ambos os modos *Grounded* e *Floating*.
 
