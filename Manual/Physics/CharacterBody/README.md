@@ -44,7 +44,9 @@ Vamos ver agora as propriedades em comum à ambos os modos *Grounded* e *Floatin
   
   > PS: Também existem as versões `is_on_floor_only`, `is_on_wall_only`, `is_on_ceiling_only`. Por exemplo, Estes o método `is_on_floor_only` retorna *true* quando a colisão detectada é unicamente no chão e mais em nenhum outro lugar. O método `is_on_floor` pode retornar *true* se houver uma colisão com o chão, não importando se há diversas colisões com vários corpos ou até parede.
   
-- **get_floor_normal:** Retorna o vetor normal ao último ponto de colisão do corpo quando ele está no chão. Só é aplicável para o `move_and_slide`.
-- **get_wall_normal:** Retorna o vetor normal ao último ponto de colisão corpo quando ele está na parede. Só é aplicável para o `move_and_slide`.
+- **get_floor_normal:** Retorna o vetor normal ao ponto de colisão do corpo quando ele está no chão. Só é aplicável para o `move_and_slide`.
+- **get_wall_normal:** Retorna o vetor normal ao ponto de colisão corpo quando ele está na parede. Só é aplicável para o `move_and_slide`.
 - **get_position_delta:** Retorna um vetor que representa a variação do movimento desde a última chamada do `move_and_slide`. Este vetor é o delta da posição do corpo. É bastante útil para saber a direção do movimento do corpo naquele instante.
-- **move_and_slide:** 
+-  **get_slide_collision_count:** Retorna o número de colisões que ocorreram na última chamada do `move_and_slide`.
+-  **get_slide_collision(i):** Retorna informações sobre a $i$-ésima colisão na última chamada do `move_and_slide`.
+- **move_and_slide:** Método que move o corpo baseado na sua velocidade. Esse método deve rodar dentro de um `_physics_process`, pois usa o *delta* da física para cálculos internos. Se tiver colisão com outro corpo, vai deslizar sobre o corpo, vai alterar a velocidade, e também vai afetar o outro corpo com a colisão, se for um corpo físico. Retorna *true* se houve colisão naquel frame físico, caso conitrári retorna *false*.
