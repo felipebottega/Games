@@ -92,7 +92,7 @@ Para o `move_and_collide`, temos uma cena que demonstra algumas funcionalidades 
 No caso do `move_and_collide`, é necessário aplicar o *delta* nas iterações físicas, como podemos ver no código abaixo. O método `move_and_collide` sempre recebe um vetor como argumento. Este vetor determina a direção e rapidez do movimento.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/495ee774-3fbd-456f-976b-ce22674d185e" />
+  <img width="380" src="https://github.com/user-attachments/assets/495ee774-3fbd-456f-976b-ce22674d185e" />
 </p>
 
-Quando houver colisão, a condicional `if collision` será satisfeita, então uma nova direção é calculada, sendo exatamente a direção da reflexão da colisão. É o método `bounce` que calcula esta nova direção, mas ela só será usada no próximo frame. Pode acontecer (quase sempre) que, dada a velocidade do projétil, ele ainda tenha "pixels sobrando" naquele frame, antes da colisão. Se você não mandar ele se mover novamente, ele ficará "grudado" no ponto de colisão até o próximo frame. Isso é perecptível. Por isso que é necessário aplicar o O método `move_and_collide` mais uma vez no mesmo frame físico, sendo essa segunda vez com o vetor determinado por `get_remainder`. 
+Quando houver colisão, a condicional `if collision` será satisfeita, então uma nova direção é calculada, sendo exatamente a direção da reflexão da colisão. É o método `bounce` que calcula esta nova direção, mas ela só será usada no próximo frame. Pode acontecer (quase sempre) que, dada a velocidade do projétil, ele ainda tenha "pixels sobrando" naquele frame, antes da colisão. Se você não mandar ele se mover novamente, ele ficará "grudado" no ponto de colisão até o próximo frame. Isso é perceptível. Por isso que é necessário aplicar o método `move_and_collide` mais uma vez no mesmo frame físico.
