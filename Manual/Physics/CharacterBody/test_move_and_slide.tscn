@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://bibol564kk3fb"]
+
+[ext_resource type="Script" uid="uid://c8lhwbpvy5er4" path="res://test_move_and_slide.gd" id="1_8edov"]
+[ext_resource type="Texture2D" uid="uid://b4xh450cx3kfe" path="res://icon.svg" id="2_qhpi2"]
+[ext_resource type="Texture2D" uid="uid://dnj3eq441ayhi" path="res://texture.png" id="3_qhpi2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8edov"]
+size = Vector2(115, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy3c5"]
+size = Vector2(1176, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhpi2"]
+size = Vector2(68, 1367.5)
+
+[node name="TestMoveAndSlide" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(854, 70)
+scale = Vector2(0.5, 0.5)
+floor_stop_on_slope = false
+floor_snap_length = 100.0
+script = ExtResource("1_8edov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_8edov")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_qhpi2")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+position = Vector2(-9, -220)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(584, 785)
+shape = SubResource("RectangleShape2D_xy3c5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/CollisionShape2D"]
+modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
+position = Vector2(-2.0000153, 3.0000076)
+scale = Vector2(1.3564014, 0.8075118)
+texture = ExtResource("3_qhpi2")
+
+[node name="Label" type="Label" parent="Walls/CollisionShape2D"]
+offset_left = -5.0
+offset_top = -38.0
+offset_right = 41.0
+offset_bottom = -15.0
+text = "CHÃO"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(965.99994, 544.99994)
+rotation = 1.9198622
+shape = SubResource("RectangleShape2D_xy3c5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/CollisionShape2D2"]
+modulate = Color(0.31061712, 0.31061712, 0.3106171, 1)
+position = Vector2(0, -0.32946777)
+scale = Vector2(1.0000001, 0.78870195)
+texture = ExtResource("3_qhpi2")
+
+[node name="Label" type="Label" parent="Walls/CollisionShape2D2"]
+offset_left = 10.944641
+offset_top = 30.07019
+offset_right = 71.94464
+offset_bottom = 154.1814
+rotation = -1.5789646
+text = "PAREDE"
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(92.00003, 540.99994)
+rotation = 3.882191
+shape = SubResource("RectangleShape2D_xy3c5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/CollisionShape2D3"]
+modulate = Color(0.30323282, 0.30323282, 0.30323282, 1)
+position = Vector2(-82.677185, -1.2002659)
+scale = Vector2(1.1907203, 0.78649884)
+texture = ExtResource("3_qhpi2")
+
+[node name="Label" type="Label" parent="Walls/CollisionShape2D3"]
+offset_left = 12.318224
+offset_top = -69.521706
+offset_right = 151.31822
+offset_bottom = -46.521706
+rotation = 1.5677352
+text = "CHÃO INCLINADO"
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-24, 403.5)
+shape = SubResource("RectangleShape2D_qhpi2")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls"]
+position = Vector2(596, 184)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_qhpi2")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 566.0
+offset_right = 54.0
+offset_bottom = 597.0
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="CharacterBody2D" method="_on_button_pressed"]

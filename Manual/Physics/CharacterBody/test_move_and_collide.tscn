@@ -1,0 +1,561 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwn2sxcxavf4f"]
+
+[ext_resource type="Script" uid="uid://42io0xd0rqps" path="res://test_move_and_collide.gd" id="1_khngc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khngc"]
+size = Vector2(63, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhiyj"]
+size = Vector2(8, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awqg3"]
+size = Vector2(16, 608)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6sf5"]
+size = Vector2(24, 1096)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aptx7"]
+size = Vector2(8, 544)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iacuj"]
+size = Vector2(7.9999924, 1095)
+
+[node name="TestMoveAndCollide" type="Node2D"]
+script = ExtResource("1_khngc")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1024, 528)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+modulate = Color(0.27058825, 1, 0.1254902, 1)
+position = Vector2(32.5, 21.5)
+shape = SubResource("RectangleShape2D_khngc")
+
+[node name="Maze" type="StaticBody2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze"]
+position = Vector2(4, 31)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="Maze"]
+position = Vector2(64, 223)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="Maze"]
+position = Vector2(192, 223)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="Maze"]
+position = Vector2(320, 223)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="Maze"]
+position = Vector2(320, 279)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="Maze"]
+position = Vector2(320, 343)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="Maze"]
+position = Vector2(320, 407)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="Maze"]
+position = Vector2(128, 351)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="Maze"]
+position = Vector2(192, 351)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="Maze"]
+position = Vector2(192, 415)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="Maze"]
+position = Vector2(128, 479)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D64" type="CollisionShape2D" parent="Maze"]
+position = Vector2(256, 543)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D65" type="CollisionShape2D" parent="Maze"]
+position = Vector2(384, 479)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D66" type="CollisionShape2D" parent="Maze"]
+position = Vector2(384, 543)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D67" type="CollisionShape2D" parent="Maze"]
+position = Vector2(256, 287)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D68" type="CollisionShape2D" parent="Maze"]
+position = Vector2(320, 31)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D69" type="CollisionShape2D" parent="Maze"]
+position = Vector2(384, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D70" type="CollisionShape2D" parent="Maze"]
+position = Vector2(448, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D71" type="CollisionShape2D" parent="Maze"]
+position = Vector2(448, 31)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D72" type="CollisionShape2D" parent="Maze"]
+position = Vector2(448, 287)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D73" type="CollisionShape2D" parent="Maze"]
+position = Vector2(448, 351)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D74" type="CollisionShape2D" parent="Maze"]
+position = Vector2(448, 415)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D75" type="CollisionShape2D" parent="Maze"]
+position = Vector2(448, 543)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D76" type="CollisionShape2D" parent="Maze"]
+position = Vector2(576, 543)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D77" type="CollisionShape2D" parent="Maze"]
+position = Vector2(768, 543)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D78" type="CollisionShape2D" parent="Maze"]
+position = Vector2(704, 479)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D79" type="CollisionShape2D" parent="Maze"]
+position = Vector2(704, 415)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D80" type="CollisionShape2D" parent="Maze"]
+position = Vector2(640, 415)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D81" type="CollisionShape2D" parent="Maze"]
+position = Vector2(512, 351)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D82" type="CollisionShape2D" parent="Maze"]
+position = Vector2(512, 223)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D83" type="CollisionShape2D" parent="Maze"]
+position = Vector2(512, 39)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D84" type="CollisionShape2D" parent="Maze"]
+position = Vector2(640, 95)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D85" type="CollisionShape2D" parent="Maze"]
+position = Vector2(576, 95)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D86" type="CollisionShape2D" parent="Maze"]
+position = Vector2(640, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D87" type="CollisionShape2D" parent="Maze"]
+position = Vector2(640, 223)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D88" type="CollisionShape2D" parent="Maze"]
+position = Vector2(640, 279)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D89" type="CollisionShape2D" parent="Maze"]
+position = Vector2(576, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D90" type="CollisionShape2D" parent="Maze"]
+position = Vector2(576, 287)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D91" type="CollisionShape2D" parent="Maze"]
+position = Vector2(576, 351)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D92" type="CollisionShape2D" parent="Maze"]
+position = Vector2(704, 287)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D93" type="CollisionShape2D" parent="Maze"]
+position = Vector2(768, 223)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D94" type="CollisionShape2D" parent="Maze"]
+position = Vector2(704, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D95" type="CollisionShape2D" parent="Maze"]
+position = Vector2(704, 31)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D96" type="CollisionShape2D" parent="Maze"]
+position = Vector2(960, 93)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D97" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1024, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D98" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1024, 31)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D99" type="CollisionShape2D" parent="Maze"]
+position = Vector2(832, 91)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D100" type="CollisionShape2D" parent="Maze"]
+position = Vector2(832, 151)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D101" type="CollisionShape2D" parent="Maze"]
+position = Vector2(832, 214)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D103" type="CollisionShape2D" parent="Maze"]
+position = Vector2(960, 223)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D104" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1024, 351)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D105" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1024, 543)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D106" type="CollisionShape2D" parent="Maze"]
+position = Vector2(960, 412)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D107" type="CollisionShape2D" parent="Maze"]
+position = Vector2(960, 476)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D108" type="CollisionShape2D" parent="Maze"]
+position = Vector2(764, 415)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D109" type="CollisionShape2D" parent="Maze"]
+position = Vector2(832, 479)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D110" type="CollisionShape2D" parent="Maze"]
+position = Vector2(832, 415)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D111" type="CollisionShape2D" parent="Maze"]
+position = Vector2(896, 215)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D112" type="CollisionShape2D" parent="Maze"]
+position = Vector2(896, 151)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D113" type="CollisionShape2D" parent="Maze"]
+position = Vector2(896, 95)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D114" type="CollisionShape2D" parent="Maze"]
+position = Vector2(896, 39)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D115" type="CollisionShape2D" parent="Maze"]
+position = Vector2(512, 415)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D116" type="CollisionShape2D" parent="Maze"]
+position = Vector2(512, 479)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D117" type="CollisionShape2D" parent="Maze"]
+position = Vector2(320, 471)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D118" type="CollisionShape2D" parent="Maze"]
+position = Vector2(256, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D119" type="CollisionShape2D" parent="Maze"]
+position = Vector2(128, 287)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D120" type="CollisionShape2D" parent="Maze"]
+position = Vector2(256, 351)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D121" type="CollisionShape2D" parent="Maze"]
+position = Vector2(960, 287)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Maze"]
+position = Vector2(128, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Maze"]
+position = Vector2(192, 159)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Maze"]
+position = Vector2(192, 95)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Maze"]
+position = Vector2(224, 127)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Maze"]
+position = Vector2(288, 63)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Maze"]
+position = Vector2(416, 63)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Maze"]
+position = Vector2(352, 191)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Maze"]
+position = Vector2(480, 127)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Maze"]
+position = Vector2(480, 191)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Maze"]
+position = Vector2(544, 127)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Maze"]
+position = Vector2(672, 127)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Maze"]
+position = Vector2(736, 191)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="Maze"]
+position = Vector2(992, 191)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="Maze"]
+position = Vector2(992, 255)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1056, 319)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="Maze"]
+position = Vector2(800, 319)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="Maze"]
+position = Vector2(864, 319)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Maze"]
+position = Vector2(928, 447)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="Maze"]
+position = Vector2(672, 383)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Maze"]
+position = Vector2(736, 383)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Maze"]
+position = Vector2(608, 383)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Maze"]
+position = Vector2(608, 511)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="Maze"]
+position = Vector2(736, 511)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1056, 447)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="Maze"]
+position = Vector2(992, 383)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Maze"]
+position = Vector2(864, 511)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1056, 191)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Maze"]
+position = Vector2(800, 63)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Maze"]
+position = Vector2(736, 63)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Maze"]
+position = Vector2(992, 63)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Maze"]
+position = Vector2(1096, 303)
+shape = SubResource("RectangleShape2D_awqg3")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Maze"]
+position = Vector2(352, 255)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Maze"]
+position = Vector2(288, 255)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Maze"]
+position = Vector2(160, 319)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Maze"]
+position = Vector2(96, 319)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Maze"]
+position = Vector2(40, 319)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Maze"]
+position = Vector2(40, 383)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Maze"]
+position = Vector2(40, 511)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Maze"]
+position = Vector2(96, 447)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Maze"]
+position = Vector2(224, 447)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Maze"]
+position = Vector2(352, 383)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Maze"]
+position = Vector2(160, 511)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Maze"]
+position = Vector2(224, 511)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Maze"]
+position = Vector2(548, 587)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g6sf5")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Maze"]
+position = Vector2(128, 31)
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Maze"]
+position = Vector2(96, 127)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Maze"]
+position = Vector2(160, 191)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Maze"]
+position = Vector2(160, 191)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Maze"]
+position = Vector2(4, 335)
+shape = SubResource("RectangleShape2D_aptx7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Maze"]
+position = Vector2(548.5, 3.0000038)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_iacuj")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 536.0
+offset_right = 66.0
+offset_bottom = 567.0
+text = "BACK"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
