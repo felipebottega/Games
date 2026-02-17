@@ -83,8 +83,16 @@ No caso de estar subindo, mantemos a velocidade do input normalmente. Veja abaix
   <img width="300" src="https://github.com/user-attachments/assets/1a1dccbf-69c6-42e2-85b8-1ebeef45e934" />
 </p>
 
-Para o `move_and_collide`, 
+Para o `move_and_collide`, temos uma cena que demonstra algumas funcionalidades básicas deste método.
 
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/a93824df-dc9d-4ad7-8144-49554d666b68" />
 </p>
+
+No caso do `move_and_collide`, é necessário aplicar o *delta* nas iterações físicas, como podemos ver no código abaixo. O método `move_and_collide` sempre recebe um vetor como argumento. Este vetor determina a direção e rapidez do movimento.
+
+<p align="center">
+  <img width="420" src="https://github.com/user-attachments/assets/495ee774-3fbd-456f-976b-ce22674d185e" />
+</p>
+
+Quando houver colisão, a condicional `if collision` será satisfeita, então uma nova direção é calculada, sendo exatamente a direção da reflexão da colisão. É o método `bounce` que calcula esta nova direção, mas ela só será usada no próximo frame. Pode acontecer (quase sempre) que, dada a velocidade do projétil, ele ainda tenha "pixels sobrando" naquele frame, antes da colisão. Se você não mandar ele se mover novamente, ele ficará "grudado" no ponto de colisão até o próximo frame. Isso é perecptível. Por isso que é necessário aplicar o O método `move_and_collide` mais uma vez no mesmo frame físico, sendo essa segunda vez com o vetor determinado por `get_remainder`. 
