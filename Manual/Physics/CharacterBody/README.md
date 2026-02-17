@@ -53,10 +53,38 @@ Vamos ver agora as propriedades em comum à ambos os modos *Grounded* e *Floatin
 
 ## move_and_collide
 
-O método `move_and_collide` costuma ser usado no `CharacterBody2D`, mas na verdade ele é um màtodo do `PhysicsBody2D`, que é a classe abstrata pai do `CharacterBody2D`, `RigidBody2D` e `StaticBody2D`. Este método é utilizada para disparar um corpo em uma direção e parar assim que colide com algum outro corpo. Após esta colisão, o método retorna informação sobre a colisão. Diferentemente do `move_and_slide`, este método não possui nenhuma continuação natural após a colisão, é necessário implementar um código para ter uma resposta à colisão.
+O método `move_and_collide` costuma ser usado no `CharacterBody2D`, mas na verdade ele é um método do `PhysicsBody2D`, que é a classe abstrata pai do `CharacterBody2D`, `RigidBody2D` e `StaticBody2D`. Este método é utilizada para disparar um corpo em uma direção e parar assim que colide com algum outro corpo. Após esta colisão, o método retorna informação sobre a colisão. Diferentemente do `move_and_slide`, este método não possui nenhuma continuação natural após a colisão, é necessário implementar um código para ter uma resposta à colisão.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/8af7852e-6b9c-4e81-9208-1f9c1bd0f03a" />
 </p>
 
-Em teoria o `move_and_collide` pode fazer tudo que o `move_and_slide`, mas requer mais código. O `move_and_slide` já vem com muita coisa implementada internamente, com o objetivo de ser mais conveniente para personagens em jogos. 
+Em teoria o `move_and_collide` pode fazer tudo que o `move_and_slide`, mas requer mais código. O `move_and_slide` já vem com muita coisa implementada internamente, com o objetivo de ser mais conveniente para personagens em jogos. Normalmente o `move_and_collide` é utilizado para projéteis, testar colisões, etc.
+
+## Exemplo
+
+Implementei um pequeno "jogo" para exemplificar algumas coisas do `move_and_collide` e do `move_and_slide`. 
+
+Para o `move_and_slide`, temos uma cena que mostra a diferença entre parede e chão inclinado, além de uma solução para deslizamento no chão. 
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/1214b844-fa7a-4762-be3c-abfd1a5cd9e7" />
+</p>
+
+Destacamos abaixo apenas o trecho de código que lida com chão inclinado. Lembre que um `CharacterBody` considera que um chão é inclinado enquanto seu ângulo for menor que *floor_max_angle*. Para saber que o personagem está sobre um chão inclinado, devemos ter as duas condicionais `is_on_floor()` e `get_floor_normal() != Vector2(0, -1)` retornando *true*. Após isso, verificamos se `get_position_delta().y < 0`. Caso seja *true*, o personagem está se deslocando para cima sobre o chão inclinado, caso contrário ele estará se deslocando para baixo sobre o chão inclinado. 
+
+<p align="center">
+  <img width="420" src="https://github.com/user-attachments/assets/9277f3e8-b93e-4a08-bf02-39f540fd8725" />
+</p>
+
+No caso de estar subindo, mantemos a velocidade do input normalmente. Veja abaixo que a propriedade *constant Speed* está desativada. Isso significa que o personagem vai deslizar para baixo aos poucos no chão inclinado, então essa velocidade do input não é total. No entanto, vale notar que a velocidade default do deslizamento é muito fraca, por isso que temos uma outra lógica quando a direção é para baixo. Se o input for de subir (condição `direction and direction * get_position_delta().x < 0`) enquanto o personagem estiver descendo, simplesmente fazemos o que já era feito antes, usar a velocidade e o input. Se o input for para descer, o jogo aplica uma velocidade para baixo que depende da inclinação, mas ignora totalmente o input (só a gravidade age sobre o personagem).
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/1a1dccbf-69c6-42e2-85b8-1ebeef45e934" />
+</p>
+
+Para o `move_and_collide`, 
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/a93824df-dc9d-4ad7-8144-49554d666b68" />
+</p>
