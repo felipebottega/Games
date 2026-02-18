@@ -8,7 +8,7 @@ Este raio de fato funciona como um raio físico no sentido da detecção, isto �
 
 ## Criando um ray-casting
 
-O node deste raio se chama `RayCast2D`. Basta adicioná-lo na sua cena e posicioná-lo onde quiser no espaço 2D. Feito isso, vá no *Inspector* e escolha o ponto final do raio através do *Target Position*. Este ponto não é global, ele é relativo à origem do `RayCast2D`.
+O node deste raio se chama `RayCast2D` (`RayCast3D`). Basta adicioná-lo na sua cena e posicioná-lo onde quiser no espaço 2D. Feito isso, vá no *Inspector* e escolha o ponto final do raio através do *Target Position*. Este ponto não é global, ele é relativo à origem do `RayCast2D`.
 
 <p align="center">
   <img width="180" src="https://github.com/user-attachments/assets/fdf4c8de-ee7f-4b71-ae27-73ce1a985b2d" />
