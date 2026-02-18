@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cdgx3o4vecbt5" path="res://node_2d.gd" id="1_wtcfe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_epypp"]
-radius = 150.0
+radius = 80.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
 size = Vector2(17.5, 15.1875)
