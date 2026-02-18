@@ -4,6 +4,8 @@
 
 Este raio de fato funciona como um raio físico no sentido da detecção, isto é, ele vai detectar a primeira colisão e parar ali. Por mais que existam outros objetos atrás do primeiro objeto detectado, é como se este objeto estivesse bloqueando o raio.
 
+> PS: Caos vá usar o `RayCast2D` em loop, use ele dentro do `_physics_process`.
+
 ## Criando um ray-casting
 
 O node deste raio se chama `RayCast2D`. Basta adicioná-lo na sua cena e posicioná-lo onde quiser no espaço 2D. Feito isso, vá no *Inspector* e escolha o ponto final do raio através do *Target Position*. Este ponto não é global, ele é relativo à origem do `RayCast2D`.
@@ -28,3 +30,14 @@ Apenas com isso o seu raio de detecção já está pronto para uso. Para obter a
 
 ## Métodos
 
+- **get_collision_point:** Retorna o ponto onde ocorreu a colisão entre o raio e o corpo. É esperado que este ponto sempre esteja na borda do corpo, onde é o primeiro contato entre o raio e o corpo. Essa medição pode ficar levemente incorreta se o raio estiver muito rápido.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/44ff44e4-5523-40d0-93d2-e3b0f021f2df" />
+</p>
+
+- **get_collider:** Retorna o (primeiro) objeto que colidiu com o raio.
+- **is_colliding:** Retorna *true* se ocorreu alguma colisão, caso contrário retorna *false*.
+- **force_raycast_update:** Por default, o `RayCast2D` reporta a colisão no frame físico seguinte. Caso precise desta notificação no mesmo frame em que ocorreu a colisão, use este método.
+
+Existem outros métodos úteis, como exclusão de certos nodes na detecção, extrair RID do corpo que colidiu, extrair vetor normal, etc. Recomendo ver a [documentação oficial](https://docs.godotengine.org/en/stable/classes/class_raycast2d.html#class-raycast2d) caso precise de alguma outra coisa.
