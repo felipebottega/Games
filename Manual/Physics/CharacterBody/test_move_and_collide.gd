@@ -5,9 +5,19 @@ extends Node2D
 @export var bullet_count: int = 100
 
 var BulletScene := preload("res://bullet.tscn")
+var texture := preload("res://texture.png")
 
 
 func _ready():
+	for child in $Maze.get_children():
+		if child is CollisionShape2D:
+			var sprite = Sprite2D.new()
+			sprite.texture = texture
+			sprite.position = child.position
+			sprite.rotation = child.rotation - PI/2
+			sprite.scale = Vector2(0.074, 0.037)
+			$Maze.add_child(sprite)
+	
 	for i in range(bullet_count):
 		var bullet = BulletScene.instantiate()
 		bullet.position = Vector2(10, 10) + Vector2(i * 2, i * 2)

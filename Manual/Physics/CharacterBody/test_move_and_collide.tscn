@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwn2sxcxavf4f"]
+[gd_scene load_steps=9 format=3 uid="uid://cwn2sxcxavf4f"]
 
 [ext_resource type="Script" uid="uid://42io0xd0rqps" path="res://test_move_and_collide.gd" id="1_khngc"]
+[ext_resource type="Texture2D" uid="uid://dnj3eq441ayhi" path="res://texture.png" id="2_lhiyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khngc"]
 size = Vector2(63, 53)
@@ -37,6 +38,28 @@ position = Vector2(0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze"]
 position = Vector2(4, 31)
 shape = SubResource("RectangleShape2D_lhiyj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Maze/CollisionShape2D"]
+position = Vector2(-1.4743545, 269.58087)
+rotation = 1.5707964
+scale = Vector2(0.6954422, 0.05094723)
+texture = ExtResource("2_lhiyj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Maze/CollisionShape2D"]
+position = Vector2(1091.8696, 270)
+rotation = 1.5707964
+scale = Vector2(0.6954422, 0.077064715)
+texture = ExtResource("2_lhiyj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Maze/CollisionShape2D"]
+position = Vector2(539.99994, 555.89636)
+scale = Vector2(1.2549019, 0.11364954)
+texture = ExtResource("2_lhiyj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Maze/CollisionShape2D"]
+position = Vector2(548, -32)
+scale = Vector2(1.2733563, 0.077064715)
+texture = ExtResource("2_lhiyj")
 
 [node name="CollisionShape2D54" type="CollisionShape2D" parent="Maze"]
 position = Vector2(64, 223)
