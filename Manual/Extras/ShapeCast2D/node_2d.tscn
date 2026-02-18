@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://yqixi66gnspt"]
+
+[ext_resource type="Script" uid="uid://cdgx3o4vecbt5" path="res://node_2d.gd" id="1_wtcfe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epypp"]
+radius = 150.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(17.5, 15.1875)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtcfe"]
+radius = 23.021729
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wtcfe")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="."]
+position = Vector2(645, 218)
+shape = SubResource("CircleShape2D_epypp")
+target_position = Vector2(-400, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(415, 178)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(414, 278)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 5.0
+default_color = Color(1, 0.14509805, 0.039215688, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 441.0
+offset_right = 60.0
+offset_bottom = 464.0
