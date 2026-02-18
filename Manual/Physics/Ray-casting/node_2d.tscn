@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfr4b3rm55u4i"]
+
+[ext_resource type="Script" uid="uid://cuxwg643kqy4j" path="res://node_2d.gd" id="1_wtcfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
+size = Vector2(92, 624)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtcfe"]
+radius = 79.22752
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wtcfe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(870, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(37, 324)
+shape = SubResource("RectangleShape2D_y32ns")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(267, 305)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(513, 318)
+target_position = Vector2(-400, 0)
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0
+default_color = Color(1, 0.1254902, 0.06666667, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 37.0
+offset_top = 534.0
+offset_right = 77.0
+offset_bottom = 557.0
