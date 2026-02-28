@@ -24,4 +24,12 @@ Um processo que já fizemos diversas vezes foi o de adicionar um `CollisionShape
   <img width="350" src="https://github.com/user-attachments/assets/95d77b2a-0fd5-4413-947b-92f8d9f8ec2d" />
 </p>
 
-- **RectangleShape2D:** Shape retangular
+As shapes `RectangleShape2D`, `CircleShape2D` e `CapsuleShape2D` são bem simples de usar e já foram vistas antes, então vou pular. Vamos dar uma maior atenção para as shapes não vistas ainda.
+
+- **SegmentShape2D:** Esta shape é basicamente um segmento de reta com colisão. Basta selecioná-lo e então pode começar a manipular o seu início e fim no painel. A propriedade *One Way Collision* é usada quando você quer que apenas um dos lados tenha colisão.  
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/c52b8167-fb9b-42c8-8de1-e2e27f4fb599" />
+</p>
+
+- **SeparationRayShape2D:** 
