@@ -21,11 +21,11 @@ Os nodes `Area2D` e `CharacterBody2D` não possuem *Physics material* por serem 
 
 Em alguns projetos anteriores, se tivéssemos que criar diversas paredes em um cenário (por exemplo), criaríamos um `StaticBody2D` por parede, cada um contendo um `CollisionShape2D`. Este approach no estilo "cada objeto é um node" teve como objetivo a didática. Uma outra maneira de abordar este exemplo seria criar um único `StaticBody2D` e colocar todas as shapes de colisão neste único node. Esta solução é mais simples e ideal para objetos que pertencem ao mesmo "pacote". Pode-se fazer isso para o `RigidBody2D` também, mas é necessário ter mais precaução neste caso. No caso de haver diversas shapes de colisão em um único `RigidBody2D`, cada shape é considerada como uma "parte" do corpo. Se um `RigidBody2D` com diversas partes cai no chão, por exemplo, ele pode quicar, e o modo como o corpo reage dependerá do centro de massa em relação a essas shapes.
 
-> PS: Apesar do `CollisionShape2D` ser o modo mais prático de atribuir uma shape para um corpo físico, também é possível utilizar o `CollisionPolygon2D`
+> PS: Apesar do `CollisionShape2D` ser o modo mais prático de atribuir um shape para um corpo físico, também é possível utilizar o `CollisionPolygon2D`
 
 ## Mudança de escala e física
 
-Quando quiser alterar o tamanho ou formato de uma shape de colisão, nunca faça isso alterando o *Scale* do *Inspector* (destacado em vermelho na imagem abaixo). Dê preferência aos marcadores em torno da shape no próprio editor (destacado em verde na imagem abaixo). A engine física não lida bem com mudanças de escala, o que pode acarretar em comportamentos inesperados ou erros. Alterar a escala por código também deve ser evitado, pois é equivalente a alterar pelo *Inspector*.
+Quando quiser alterar o tamanho ou formato de um shape de colisão, nunca faça isso alterando o *Scale* do *Inspector* (destacado em vermelho na imagem abaixo). Dê preferência aos marcadores em torno do shape no próprio editor (destacado em verde na imagem abaixo). A engine física não lida bem com mudanças de escala, o que pode acarretar em comportamentos inesperados ou erros. Alterar a escala por código também deve ser evitado, pois é equivalente a alterar pelo *Inspector*.
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/237a6ef0-61b3-4cda-b3d9-edef8c9e6f01" />

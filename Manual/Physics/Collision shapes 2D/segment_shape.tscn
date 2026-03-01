@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bne4iyc8eao6j"]
+
+[ext_resource type="PackedScene" uid="uid://7bij5wcreju8" path="res://ball.tscn" id="1_hv3jr"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1nrgj"]
+b = Vector2(743, 247)
+
+[node name="SegmentShape" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(234, 291)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_1nrgj")
+one_way_collision = true
+
+[node name="Ball" parent="." instance=ExtResource("1_hv3jr")]
+position = Vector2(434, 141)

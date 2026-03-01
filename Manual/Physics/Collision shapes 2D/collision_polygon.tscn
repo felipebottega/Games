@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://8h144olssh4n"]
+
+[ext_resource type="PackedScene" uid="uid://7bij5wcreju8" path="res://ball.tscn" id="1_ygykw"]
+
+[node name="CollisionPolygon" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(620, 459)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-286, -67, -76, 96, 340, 54, 362, -307, -24, -5)
+
+[node name="Ball" parent="." instance=ExtResource("1_ygykw")]
+position = Vector2(726, 41)

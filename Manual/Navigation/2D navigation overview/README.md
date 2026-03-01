@@ -4,7 +4,7 @@ Este é o nosso primeiro tutorial sobre o tópico de navegação. Para deixar cl
 
 ## NavigationRegion2D
 
-Começamos criando uma cena com um `Node2D` como raíz e um `NavigationRegion2D` como filho. A região de navegação é a região onde a engine é permitida a buscar uma rota entre o NPC e o target que ele está perseguindo.  Note que o node vai emitir um alerta, pois ele não possui uma shape ainda e isso é necessário.
+Começamos criando uma cena com um `Node2D` como raíz e um `NavigationRegion2D` como filho. A região de navegação é a região onde a engine é permitida a buscar uma rota entre o NPC e o target que ele está perseguindo.  Note que o node vai emitir um alerta, pois ele não possui um shape ainda e isso é necessário.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/3e72156b-4c0e-41d2-bafd-b59c5de1b29c" />

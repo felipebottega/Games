@@ -32,7 +32,7 @@ Crie três tipos de animação e arraste os respectivos sprites de *FileSystem* 
     <img src="https://github.com/user-attachments/assets/f221ad2b-5a7b-49e0-add1-d580b4e7a6db" width="700">
 </p>
 
-Aproveite para já colocar a shape de colisão no boneco.
+Aproveite para já colocar o shape de colisão no boneco.
 
 ## RigidBody2D vs CharacterBody2D vs Node2D
 
