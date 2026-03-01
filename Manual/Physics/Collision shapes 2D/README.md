@@ -35,8 +35,12 @@ As shapes `RectangleShape2D`, `CircleShape2D` e `CapsuleShape2D` são bem simple
 - **SeparationRayShape2D:** O `SeparationRayShape2D` é aquela "setinha" abaixo da colisão de cápsula na figura abaixo. Essa seta pode ser movida e esticada à vontade. Ela serve como um "repulsor" de outros objetos de colisão. Isso é ideal para dinâmicas tipo subir escadas (neste caso o `SeparationRayShape2D` é filho de um `CharacterBody2D`).
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/0f66dde4-9c74-42d7-9676-c747f7621256" />
-  <img width="500" src="https://github.com/user-attachments/assets/fa6fb0cd-1351-47e3-8c0d-eba3f356f723" />
+  <img width="200" src="https://github.com/user-attachments/assets/0e2d5c8a-b747-4e0b-b48f-91b1a997c17c" />
 </p>
 
-- **WorldBoundaryShape2D:** 
+- **WorldBoundaryShape2D:** É basicamente um chão reto infinito. A seta indica a direção "para cima", a normal ao chão. É possível rotacional e mover este objeto como qualquer outro. Também tem um método para alterar o vetor normal, caso precise.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/c3ff9db3-247a-4fdd-9f30-86aa5d4baec2" />
+</p>
+
