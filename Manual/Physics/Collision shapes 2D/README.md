@@ -44,3 +44,20 @@ As shapes `RectangleShape2D`, `CircleShape2D` e `CapsuleShape2D` são bem simple
   <img width="800" src="https://github.com/user-attachments/assets/c3ff9db3-247a-4fdd-9f30-86aa5d4baec2" />
 </p>
 
+## CollisionPolygon2D Sibling
+
+Já vimos em duas circunstâncias ([aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction) e [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Meshes)) o uso das opções especiais do `Sprite2D` na tela 2D de edição. Agora veremos como criar um shape poligonal de colisão a partir de um sprite.
+
+Crie um Sprite2D e vá na opção escrita Sprite2D acima da tela. Selecione a opção *Create CollisionPolygon2D Sibling*.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/9b4b6286-518c-49ac-8739-a030bcb700ad" />
+  <img width="500" src="https://github.com/user-attachments/assets/75880764-019e-4b2d-b74b-d46b9ec4d06e" />
+  <img width="200" src="https://github.com/user-attachments/assets/6502e0a7-3530-40c8-8baa-9954582186bb" />
+</p>
+
+Segue abaixo uma breve descrição dos parâmetros:
+
+- **Simplification:** Parâmetro associado à quantidade de pontos para identificar o shape da imagem. Quanto maior é este parâmetro, menos pontos são utlizados e mais simplificado o shape.
+- **Shrink:** Encolhe o shape em alguns pixels em relação a imagem. É útil quando você não quer cobrir literalmente tudo que está a vista.
+- **Grow:** Faz o contrário do shrink, aumenta o shape em alguns pixels. É útil quando o sprite possui buracos e você não quer que eles sejam levados em conta, por exemplo.
