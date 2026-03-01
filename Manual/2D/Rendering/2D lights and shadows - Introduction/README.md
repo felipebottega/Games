@@ -2,11 +2,11 @@
 
 O principal node para a aplicação de luzes é o `PointLight2D`. Todos os outros nodes e técnicas são para melhorias extras.  Para apresentar este node, iremos recriar a cena do Castlevania vista no [Animation 1](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201).
 
-Após copiar as pastas daquela cena para o projeto atual, precisamos ajustar as configurações do projeto, como mostrado abaixo. Para manter as coisas mais organizadas, scriamos também a pasta *scripts* para colocar os sripts lá.
+Após copiar as pastas daquela cena para o projeto atual, precisamos ajustar as configurações do projeto, como mostrado abaixo. Para manter as coisas mais organizadas, criamos também a pasta *scripts* para colocar os sripts lá.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e81844e7-06d7-4b07-b4f5-2439c2b6c676" width="500">
-  <img src="https://github.com/user-attachments/assets/99f751aa-0145-49ec-bc5b-d15b1e6b7801" width="500">
+  <img src="https://github.com/user-attachments/assets/e81844e7-06d7-4b07-b4f5-2439c2b6c676" width="800">
+  <img src="https://github.com/user-attachments/assets/99f751aa-0145-49ec-bc5b-d15b1e6b7801" width="800">
 </p>
 
 Além dos sprites anteriores, também incluímos um sprite para o fundo, outro de blocos flutuantes e uma pilastra. O fundo e a pilastra são `Sprite2D`, enquanto que o bloco é um `StaticBody2D`. Cada um tem a sua própria cena. No bloco, colocamos fricção igual a zero. Se a fricção fosse positiva, o boneco poderia "grudar" momentaneamente na lateral dela e pular dali, o que seria um bug indesejável.
