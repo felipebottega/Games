@@ -82,7 +82,7 @@ Não se preocupe se você não conseguir configurar perfeito agora, depois é po
   <img src="https://github.com/user-attachments/assets/b00480cd-bbf6-4d02-b196-513e0926b9e5" width="600">
 </p>
 
-Depois de fazer isso, crie uma shape de sombra para o pilar também. O último (e mais importante) passo é você voltar ao `PointLight2D` e deixar o sombreamento habilitado, caso contrário nada disso terá efeito.
+Depois de fazer isso, crie um shape de sombra para o pilar também. O último (e mais importante) passo é você voltar ao `PointLight2D` e deixar o sombreamento habilitado, caso contrário nada disso terá efeito.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fa64e81b-1963-49d9-b151-24d04d93dd5d" width="200">
