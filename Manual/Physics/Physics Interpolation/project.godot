@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="Physics Interpolation"
+run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=700
+window/stretch/mode="viewport"
+
+[physics]
+
+common/physics_ticks_per_second=4
 
 [rendering]
 
