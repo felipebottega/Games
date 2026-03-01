@@ -72,7 +72,7 @@ A janela mostrada abaixo irá se abrir. O objetivo desta janela é criar um shap
 
 Segue abaixo uma breve descrição dos parâmetros:
 
-- **Simplification:** Quantidade de pontos para identificar o shape da imagem. Quanto maior é este parâmetro, mais ele vai simplificar o shape.
+- **Simplification:** Parâmetro associado à quantidade de pontos para identificar o shape da imagem. Quanto maior é este parâmetro, menos pontos são utlizados e mais simplificado o shape.
 - **Shrink:** Encolhe o shape em alguns pixels em relação a imagem. É útil quando você não quer cobrir literalmente tudo que está a vista.
 - **Grow:** Faz o contrário do *shrink*, aumenta o shape em alguns pixels. É útil quando o sprite possui buracos e você não quer que eles sejam levados em conta, por exemplo.
 
