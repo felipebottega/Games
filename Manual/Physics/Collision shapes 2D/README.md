@@ -10,7 +10,7 @@ Para qualquer corpo físico, você pode associar uma (ou várias) shape de colis
 
 ## Mudança de escala e física
 
-Já vimos isso [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#mudan%C3%A7a-de-escala-e-f%C3%ADsica), mas vale a pena reforçar. Quando quiser alterar o tamanho ou formato de uma shape de colisão, nunca faça isso alterando o Scale do Inspector (destacado em vermelho na imagem abaixo). Dê preferência aos marcadores em torno da shape no próprio editor (destacado em verde na imagem abaixo). A engine física não lida bem com mudanças de escala, o que pode acarretar em comportamentos inesperados ou erros. Alterar a escala por código também deve ser evitado, pois é equivalente a alterar pelo Inspector.
+Já vimos isso [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#mudan%C3%A7a-de-escala-e-f%C3%ADsica), mas vale a pena reforçar. Quando quiser alterar o tamanho ou formato de uma shape de colisão, nunca faça isso alterando o *Scale* do *Inspector* (destacado em vermelho na imagem abaixo). Dê preferência aos marcadores em torno da shape no próprio editor (destacado em verde na imagem abaixo). A engine física não lida bem com mudanças de escala, o que pode acarretar em comportamentos inesperados ou erros. Alterar a escala por código também deve ser evitado, pois é equivalente a alterar pelo *Inspector*.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/5edd07f8-da33-4acb-8379-d2739cc6e02c" />
