@@ -35,4 +35,4 @@ Para evitar isso, você deve verificar se há situações em seu projeto que pos
 
 ## A simulação física é instável quando se está longe da origem do mundo
 
-Isso é causado por erros de precisão de ponto flutuante, que se tornam mais pronunciados à medida que a simulação física ocorre mais longe da origem do mundo (coordenada $(0, 0)$). Esse problema também afeta a renderização, resultando em movimentos instáveis ​​da câmera quando se está longe da origem do mundo.
+Isso é causado por erros de precisão de ponto flutuante, que se tornam mais pronunciados à medida que a simulação física ocorre mais longe da origem do mundo (coordenada $(0, 0)$ ). Esse problema também afeta a renderização, resultando em movimentos instáveis ​​da câmera quando se está longe da origem do mundo.
