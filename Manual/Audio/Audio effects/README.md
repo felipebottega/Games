@@ -2,6 +2,8 @@
 
 Quando você clica no *Add Effect* no audio bus, muitas opções de efeito aparecem. O recomendado é testar na prática e buscar conhecer mais sobre o efeito conforme a necessidade surgir. No entanto, vamos deixar uma descrição geral de cada efeito aqui, apenas para referência. Para cada efeito, sempre se atento ao *Inspector*, pois lá teremos vários parâmetros para ajustar.
 
+## Lista dos efeitos áudio
+
 - **Amplify:** Amplifica alterações no volume do sinal.
 - **BandLimitFilter e BandPass:** Estes são filtros que bloqueiam frequências em torno do ponto de corte. O *BandPass* pode ser usado para simular o som passando por uma linha telefônica antiga ou um megafone. O *BandPass* pode simular o som de um pedal de guitarra wah-wah, como a guitarra em Voodoo Child (Slight Return), de Jimi Hendrix.
 - **Capture:** O efeito *Capture* copia os quadros de áudio audio bus em que se encontra para um buffer interno. Isso pode ser usado para capturar dados do microfone ou transmitir áudio pela rede em tempo real.
