@@ -166,7 +166,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#-implementando-o-shake-para-o-tabuleiro-de-galton
 ">   Implementando o shake para o tabuleiro de Galton
  </a><br>
-<br><li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
+<li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites
 ">  Sprites de sprites
  </a><br>
