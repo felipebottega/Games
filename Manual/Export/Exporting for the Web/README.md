@@ -1,6 +1,8 @@
 # Exporting for the Web
 
-Tudo que temos para falar sobre exportar jogos para a Web pode ser colocado em uma lista de observações. 
+Tudo que temos para falar sobre exportar jogos para a Web pode ser colocado em uma lista de observações, que funciona como uma lista de dicas.
+
+## Lista de dicas para exportar jogos para a web
 
 1. Quando for exportar para Web, prefira salvar usando o nome *index.html*, pois na maioria das vezes os servidores vão buscar este arquivo para rodar o jogo.
 2. Se você for criar um jogo e quer que ele possa ser jogado na Web, prefira o modo *Compatibility*.
