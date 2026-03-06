@@ -57,7 +57,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203#música-de-background
 ">  Música de background
  </a><br>
-<li> <b>Getting started\Your first 2D game\Coding the player\Animation 1</b> </li>
+<br><li> <b>Getting started\Your first 2D game\Coding the player\Animation 1</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201#testando
 ">  Testando
  </a><br>
@@ -153,7 +153,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer
 ">  Sobre o CanvasLayer
  </a><br>
-<li> <b>Manual\2D\Canvas layers\Galton Board 4</b> </li>
+<br><li> <b>Manual\2D\Canvas layers\Galton Board 4</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items
 ">  Viewport e Canvas items
  </a><br>
@@ -166,7 +166,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#-implementando-o-shake-para-o-tabuleiro-de-galton
 ">   Implementando o shake para o tabuleiro de Galton
  </a><br>
-<li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
+<br><li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites
 ">  Sprites de sprites
  </a><br>
@@ -473,7 +473,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#extra---export-de-jogo-sem-modo-debug
 ">  Extra - Export de jogo sem modo DEBUG
  </a><br>
-<li> <b>Manual\Animation\Introduction to the animation features</b> </li>
+<br><li> <b>Manual\Animation\Introduction to the animation features</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features#animando-propriedades
 ">  Animando propriedades
  </a><br>
@@ -547,7 +547,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Creating%20movies#customizações-na-criação-de-vídeo
 ">  Customizações na criação de vídeo
  </a><br>
-<li> <b>Manual\Assets pipeline\Import process</b> </li>
+<br><li> <b>Manual\Assets pipeline\Import process</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Import%20process#alterando-os-parâmetros-dos-imports
 ">  Alterando os parâmetros dos imports
  </a><br>
@@ -605,7 +605,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20translations#opções-de-import
 ">  Opções de import
  </a><br>
-<li> <b>Manual\Audio\Audio buses</b> </li>
+<br><li> <b>Manual\Audio\Audio buses</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses#escala-de-decibel-
 ">  Escala de decibel 
  </a><br>
@@ -626,7 +626,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20streams#propriedades-do-audiostreamplayer2d
 ">  Propriedades do AudioStreamPlayer2D
  </a><br>
-<li> <b>Manual\Export\Exporting projects</b> </li>
+<br><li> <b>Manual\Export\Exporting projects</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20projects#básico-de-exportação
 ">  Básico de exportação
  </a><br>
@@ -648,7 +648,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20the%20Web#lista-de-dicas-para-exportar-jogos-para-a-web
 ">  Lista de dicas para exportar jogos para a web
  </a><br>
-<li> <b>Manual\File and data IO\Background loading</b> </li>
+<br><li> <b>Manual\File and data IO\Background loading</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#preload
 ">  preload
  </a><br>
@@ -735,7 +735,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#final-do-jogo
 ">  Final do jogo
  </a><br>
-<li> <b>Manual\Internationalization\Internationalizing games</b> </li>
+<br><li> <b>Manual\Internationalization\Internationalizing games</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#assets-
 ">  Assets 
  </a><br>
@@ -761,7 +761,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Pseudolocalization#habilitando-a-pseudolocalização
 ">  Habilitando a pseudolocalização
  </a><br>
-<li> <b>Manual\Input handling\Using InputEvent</b> </li>
+<br><li> <b>Manual\Input handling\Using InputEvent</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent#tipos-de-eventos-de-input
 ">  Tipos de eventos de input
  </a><br>
@@ -836,7 +836,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Handling%20quit%20requests#lidando-com-notificação-para-sair-do-jogo
 ">  Lidando com notificação para sair do jogo
  </a><br>
-<li> <b>Manual\Math\Math</b> </li>
+<br><li> <b>Manual\Math\Math</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#vetores
 ">  Vetores
  </a><br>
@@ -849,7 +849,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#geração-de-números-aleatórios
 ">  Geração de números aleatórios
  </a><br>
-<li> <b>Manual\Navigation\2D navigation overview</b> </li>
+<br><li> <b>Manual\Navigation\2D navigation overview</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#navigationregion2d
 ">  NavigationRegion2D
  </a><br>
@@ -971,7 +971,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Optimizing%20Navigation%20Performance#lista-de-dicas-para-otimização-de-performance-da-navegação
 ">  Lista de dicas para otimização de performance da navegação
  </a><br>
-<li> <b>Manual\Networking\Using WebSockets</b> </li>
+<br><li> <b>Manual\Networking\Using WebSockets</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets#preparando-o-servidor-backend-em-python
 ">  Preparando o servidor backend em Python
  </a><br>
@@ -981,7 +981,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets#servidor-remoto
 ">  Servidor remoto
  </a><br>
-<li> <b>Manual\Performance\Common\General optimization tips</b> </li>
+<br><li> <b>Manual\Performance\Common\General optimization tips</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#a-natureza-da-lentidão
 ">  A natureza da lentidão
  </a><br>
@@ -1051,7 +1051,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs#o-que-pode-fazer-com-threads
 ">  O que pode fazer com threads
  </a><br>
-<li> <b>Manual\Physics\Physics introduction</b> </li>
+<br><li> <b>Manual\Physics\Physics introduction</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-material
 ">  Physics material
  </a><br>
@@ -1166,11 +1166,11 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Troubleshooting%20physics%20issues#a-simulação-física-é-instável-quando-se-está-longe-da-origem-do-mundo
 ">  A simulação física é instável quando se está longe da origem do mundo
  </a><br>
-<li> <b>Manual\Platform-specific</b> </li>
+<br><li> <b>Manual\Platform-specific</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Platform-specific#alerta
 ">  Alerta
  </a><br>
-<li> <b>Manual\Extras\Audio Server</b> </li>
+<br><li> <b>Manual\Extras\Audio Server</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#atributos-do-audio-server
 ">  Atributos do Audio Server
  </a><br>
