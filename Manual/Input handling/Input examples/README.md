@@ -2,6 +2,8 @@
 
 Este tutorial consiste apenas de um pequeno conjunto de dicas sobre inputs. Listamos abaixo as que considerei mais relevantes.
 
+## Lista de dicas sobre o uso de inputs
+
   1. Todo evento possui o método `as_text()` que printa na tela algumas informações básicas do input detectado (ex. tecla pressionada, posição do mouse).
 
 <p align="center">
