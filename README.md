@@ -3,22 +3,22 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 
 <h2>Conteúdo </h2>
 
-<br><li> <b>Getting started\Step by step\Creating instances\Galton Board 1</b> </li>
+<li> <b>Getting started\Step by step\Creating instances\Galton Board 1</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201#version-1
 ">  Version 1
  </a><br>
-<br><li> <b>Getting started\Step by step\Creating your first script\Movements 1</b> </li>
+<li> <b>Getting started\Step by step\Creating your first script\Movements 1</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20your%20first%20script/Movements%201#primeiro-estudo-de-movimentos
 ">  Primeiro estudo de movimentos
  </a><br>
-<br><li> <b>Getting started\Step by step\Listening to player input\Movements 2</b> </li>
+<li> <b>Getting started\Step by step\Listening to player input\Movements 2</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#posicionamento-inicial-dos-sprites
 ">  Posicionamento inicial dos sprites
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs
 ">  Inputs
  </a><br>
-<br><li> <b>Getting started\Step by step\Using signals\Signals 1</b> </li>
+<li> <b>Getting started\Step by step\Using signals\Signals 1</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201#trabalhando-apenas-com-shapes-de-colisão
 ">  Trabalhando apenas com shapes de colisão
  </a><br>
@@ -37,7 +37,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201#restart
 ">  Restart
  </a><br>
-<br><li> <b>Getting started\Step by step\Using signals\Signals 2</b> </li>
+<li> <b>Getting started\Step by step\Using signals\Signals 2</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#timer
 ">  Timer
  </a><br>
@@ -50,21 +50,21 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#_init-vs-_ready
 ">  _init vs _ready
  </a><br>
-<br><li> <b>Getting started\Step by step\Using signals\Signals 3</b> </li>
+<li> <b>Getting started\Step by step\Using signals\Signals 3</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203#criando-o-seu-próprio-sinal
 ">  Criando o seu próprio sinal
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203#música-de-background
 ">  Música de background
  </a><br>
-<br><li> <b>Getting started\Your first 2D game\Coding the player\Animation 1</b> </li>
+<li> <b>Getting started\Your first 2D game\Coding the player\Animation 1</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201#testando
 ">  Testando
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201#tomando-dano
 ">  Tomando dano
  </a><br>
-<br><li> <b>Getting started\Your first 2D game\Creating the enemy\Add Child</b> </li>
+<li> <b>Getting started\Your first 2D game\Creating the enemy\Add Child</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#position-vs-global_position-em-path2d
 ">  position vs global_position em Path2D
  </a><br>
@@ -77,7 +77,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#movimentando-os-mobs
 ">  Movimentando os mobs
  </a><br>
-<br><li> <b>Getting started\Your first 2D game\Creating the enemy\Animation 2</b> </li>
+<li> <b>Getting started\Your first 2D game\Creating the enemy\Animation 2</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Animation%202#arrays
 ">  Arrays
  </a><br>
@@ -93,7 +93,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Animation%202#visibleonscreennotifier2d
 ">  VisibleOnScreenNotifier2D
  </a><br>
-<br><li> <b>Getting started\Your first 2D game\Creating the enemy\Layers e Masks</b> </li>
+<li> <b>Getting started\Your first 2D game\Creating the enemy\Layers e Masks</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#editable-child-e-make-local
 ">  Editable Child e Make Local
  </a><br>
@@ -103,7 +103,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#exemplo
 ">  Exemplo
  </a><br>
-<br><li> <b>Getting started\Your first 2D game\Creating the enemy\Path2D</b> </li>
+<li> <b>Getting started\Your first 2D game\Creating the enemy\Path2D</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D#manuseando-o-path2d
 ">  Manuseando o Path2D
  </a><br>
@@ -113,7 +113,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D#variações-do-mesmo-objeto
 ">  Variações do mesmo objeto
  </a><br>
-<br><li> <b>Getting started\Your first 2D game\Heads up display\Galton Board 2</b> </li>
+<li> <b>Getting started\Your first 2D game\Heads up display\Galton Board 2</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#organização-de-um-projeto
 ">  Organização de um projeto
  </a><br>
@@ -153,23 +153,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer
 ">  Sobre o CanvasLayer
  </a><br>
-<br><li> <b>Manual\2D\2D movement overview</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#todos-os-vetores-do-transform-são-em-coordenadas-locais
-">  Todos os vetores do transform são em coordenadas locais
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#8-way-movement
-">  8-way movement
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#rotação-e-movimento-("asteroids-style")
-">  Rotação e movimento ("Asteroids-style")
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#rotação-e-movimento-com-mouse
-">  Rotação e movimento com mouse
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#clicar-e-mover
-">  Clicar e mover
- </a><br>
-<br><li> <b>Manual\2D\Canvas layers\Galton Board 4</b> </li>
+<li> <b>Manual\2D\Canvas layers\Galton Board 4</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items
 ">  Viewport e Canvas items
  </a><br>
@@ -182,14 +166,33 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#-implementando-o-shake-para-o-tabuleiro-de-galton
 ">   Implementando o shake para o tabuleiro de Galton
  </a><br>
-<br><li> <b>Manual\2D\Rendering\2D antialiasing</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20antialiasing#antialiasing-no-projeto
-">  Antialiasing no projeto
+<li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites
+">  Sprites de sprites
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20antialiasing#antialiasing-como-propriedades
-">  Antialiasing como propriedades
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#rastro-de-sprites
+">  Rastro de sprites
  </a><br>
-<br><li> <b>Manual\2D\Rendering\2D lights and shadows - Introduction</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#menu-principal
+">  Menu principal
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#hud-de-sliders
+">  HUD de sliders
+ </a><br>
+<li> <b>Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#sistema-de-coordenadas-locais
+">  Sistema de coordenadas locais
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#atributo-transform
+">  Atributo transform
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#rotações
+">  Rotações
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#movimento-após-rotação
+">  Movimento após rotação
+ </a><br>
+<li> <b>Manual\2D\Rendering\2D lights and shadows - Introduction</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction#pointlight2d
 ">  PointLight2D
  </a><br>
@@ -202,7 +205,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction#propriedades-da-sombra
 ">  Propriedades da sombra
  </a><br>
-<br><li> <b>Manual\2D\Rendering\2D lights and shadows - Normal Maps</b> </li>
+<li> <b>Manual\2D\Rendering\2D lights and shadows - Normal Maps</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps#normal-map-na-prática
 ">  Normal map na prática
  </a><br>
@@ -212,11 +215,107 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Normal%20Maps#criando-normal-maps
 ">  Criando normal maps
  </a><br>
-<br><li> <b>Manual\2D\Rendering\2D Meshes</b> </li>
+<li> <b>Manual\2D\Rendering\2D Meshes</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Meshes#adicionando-mesh-ao-sprite
 ">  Adicionando mesh ao sprite
  </a><br>
-<br><li> <b>Manual\2D\Rendering\2D Parallax</b> </li>
+<li> <b>Manual\2D\Rendering\2D sprite animation</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animatedsprite2d-com-imagens-individuais
+">  AnimatedSprite2D com imagens individuais
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animatedsprite2d-com-sprite-sheet
+">  AnimatedSprite2D com sprite sheet
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#customizações-do-animatedsprite2d
+">  Customizações do AnimatedSprite2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animationplayer
+">  AnimationPlayer
+ </a><br>
+<li> <b>Manual\2D\Rendering\2D particle systems</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#propriedades-do-gpuparticles2d
+">  Propriedades do GPUParticles2D
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#propriedades-básicas-do-gpuparticles2d
+">  Propriedades básicas do GPUParticles2D
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#propriedades-avançadas-do-gpuparticles2d
+">  Propriedades avançadas do GPUParticles2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#texturas-em-gpuparticles2d
+">  Texturas em GPUParticles2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#animação-de-flipbook-em-gpuparticles2d
+">  Animação de flipbook em GPUParticles2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#exemplos-de-gpuparticles2d
+">  Exemplos de GPUParticles2D
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#fogos-de-artifício
+">  Fogos de artifício
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#fagulhas
+">  Fagulhas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#fumaça
+">  Fumaça
+ </a><br>
+<li> <b>Manual\2D\Rendering\ParticleProcessMaterial 2D Usage</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage#mais-propriedades-do-particle-process-material
+">  Mais propriedades do Particle Process Material
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage#load-emission-mask
+">  Load Emission Mask
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage#experimento-com-velocidade-radial
+">  Experimento com velocidade radial
+ </a><br>
+<li> <b>Manual\2D\Rendering\2D antialiasing</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20antialiasing#antialiasing-no-projeto
+">  Antialiasing no projeto
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20antialiasing#antialiasing-como-propriedades
+">  Antialiasing como propriedades
+ </a><br>
+<li> <b>Manual\2D\Rendering\Custom drawing in 2D</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#_draw-vs-_queue_draw
+">  _draw vs _queue_draw
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_polygon
+">  draw_polygon
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_polyline
+">  draw_polyline
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_circle
+">  draw_circle
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_line
+">  draw_line
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_string
+">  draw_string
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#mostrar-o-desenho-no-editor
+">  Mostrar o desenho no editor
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#animação
+">  Animação
+ </a><br>
+<li> <b>Manual\2D\Rendering\Custom drawing in 2D - Complex Numbers</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#boot-splash-
+">  Boot Splash 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#script-externo
+">  Script externo
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#botões-globais
+">  Botões globais
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#desenhando-retas-e-círculos
+">  Desenhando retas e círculos
+ </a><br>
+<li> <b>Manual\2D\Rendering\2D Parallax</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#o-quadriculado-do-editor-é-8x8-pixels
 ">  O quadriculado do editor é 8x8 pixels
  </a><br>
@@ -247,96 +346,23 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#paralaxe-com-movimento-de-câmera
 ">  Paralaxe com movimento de câmera
  </a><br>
-<br><li> <b>Manual\2D\Rendering\2D particle systems</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#propriedades-do-gpuparticles2d
-">  Propriedades do GPUParticles2D
+<li> <b>Manual\2D\2D movement overview</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#todos-os-vetores-do-transform-são-em-coordenadas-locais
+">  Todos os vetores do transform são em coordenadas locais
  </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#propriedades-básicas-do-gpuparticles2d
-">  Propriedades básicas do GPUParticles2D
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#8-way-movement
+">  8-way movement
  </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#propriedades-avançadas-do-gpuparticles2d
-">  Propriedades avançadas do GPUParticles2D
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#rotação-e-movimento-(asteroids-style)
+">  Rotação e movimento (Asteroids-style)
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#texturas-em-gpuparticles2d
-">  Texturas em GPUParticles2D
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#rotação-e-movimento-com-mouse
+">  Rotação e movimento com mouse
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#animação-de-flipbook-em-gpuparticles2d
-">  Animação de flipbook em GPUParticles2D
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#clicar-e-mover
+">  Clicar e mover
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#exemplos-de-gpuparticles2d
-">  Exemplos de GPUParticles2D
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#fogos-de-artifício
-">  Fogos de artifício
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#fagulhas
-">  Fagulhas
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems#fumaça
-">  Fumaça
- </a><br>
-<br><li> <b>Manual\2D\Rendering\2D sprite animation</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animatedsprite2d-com-imagens-individuais
-">  AnimatedSprite2D com imagens individuais
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animatedsprite2d-com-sprite-sheet
-">  AnimatedSprite2D com sprite sheet
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#customizações-do-animatedsprite2d
-">  Customizações do AnimatedSprite2D
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation#animationplayer
-">  AnimationPlayer
- </a><br>
-<br><li> <b>Manual\2D\Rendering\Custom drawing in 2D</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#_draw-vs-_queue_draw
-">  _draw vs _queue_draw
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_polygon
-">  draw_polygon
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_polyline
-">  draw_polyline
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_circle
-">  draw_circle
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_line
-">  draw_line
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#draw_string
-">  draw_string
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#mostrar-o-desenho-no-editor
-">  Mostrar o desenho no editor
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D#animação
-">  Animação
- </a><br>
-<br><li> <b>Manual\2D\Rendering\Custom drawing in 2D - Complex Numbers</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#boot-splash-
-">  Boot Splash 
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#script-externo
-">  Script externo
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#botões-globais
-">  Botões globais
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers#desenhando-retas-e-círculos
-">  Desenhando retas e círculos
- </a><br>
-<br><li> <b>Manual\2D\Rendering\ParticleProcessMaterial 2D Usage</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage#mais-propriedades-do-particle-process-material
-">  Mais propriedades do Particle Process Material
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage#load-emission-mask
-">  Load Emission Mask
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage#experimento-com-velocidade-radial
-">  Experimento com velocidade radial
- </a><br>
-<br><li> <b>Manual\2D\Tools\TerrainSets</b> </li>
+<li> <b>Manual\2D\Tools\TerrainSets</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets#criando-um-terrain-set
 ">  Criando um Terrain Set
  </a><br>
@@ -358,7 +384,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets#templates
 ">  Templates
  </a><br>
-<br><li> <b>Manual\2D\Tools\Using TileMaps</b> </li>
+<li> <b>Manual\2D\Tools\Using TileMaps</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#definições-básicas-
 ">  Definições básicas 
  </a><br>
@@ -404,7 +430,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#tiles-alternativos
 ">  Tiles alternativos
  </a><br>
-<br><li> <b>Manual\2D\Tools\Using TileMaps - Game</b> </li>
+<li> <b>Manual\2D\Tools\Using TileMaps - Game</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#organização-de-um-projeto
 ">  Organização de um projeto
  </a><br>
@@ -447,47 +473,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#extra---export-de-jogo-sem-modo-debug
 ">  Extra - Export de jogo sem modo DEBUG
  </a><br>
-<br><li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites
-">  Sprites de sprites
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#rastro-de-sprites
-">  Rastro de sprites
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#menu-principal
-">  Menu principal
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#hud-de-sliders
-">  HUD de sliders
- </a><br>
-<br><li> <b>Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#sistema-de-coordenadas-locais
-">  Sistema de coordenadas locais
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#atributo-transform
-">  Atributo transform
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#rotações
-">  Rotações
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#movimento-após-rotação
-">  Movimento após rotação
- </a><br>
-<br><li> <b>Manual\Animation\Animation Track types</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types#call-method-track
-">  Call Method Track
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types#audio-playback-track
-">  Audio Playback Track
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types#animation-playback-track
-">  Animation Playback Track
- </a><br>
-<br><li> <b>Manual\Animation\Creating movies</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Creating%20movies#customizações-na-criação-de-vídeo
-">  Customizações na criação de vídeo
- </a><br>
-<br><li> <b>Manual\Animation\Introduction to the animation features</b> </li>
+<li> <b>Manual\Animation\Introduction to the animation features</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features#animando-propriedades
 ">  Animando propriedades
  </a><br>
@@ -509,17 +495,17 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features#exemplo-prático
 ">  Exemplo prático
  </a><br>
-<br><li> <b>Manual\Animation\Playing videos</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos#primeiros-passos-com-o-videostreamplayer
-">  Primeiros passos com o VideoStreamPlayer
+<li> <b>Manual\Animation\Animation Track types</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types#call-method-track
+">  Call Method Track
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos#propriedades-do-videostreamplayer
-">  Propriedades do VideoStreamPlayer
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types#audio-playback-track
+">  Audio Playback Track
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos#encoding-dos-vídeos
-">  Encoding dos vídeos
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types#animation-playback-track
+">  Animation Playback Track
  </a><br>
-<br><li> <b>Manual\Animation\Using AnimationTree</b> </li>
+<li> <b>Manual\Animation\Using AnimationTree</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree#animationplayer-com-diversas-spritesheets
 ">  AnimationPlayer com diversas spritesheets
  </a><br>
@@ -547,36 +533,25 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree#exemplo-prático
 ">  Exemplo prático
  </a><br>
-<br><li> <b>Manual\Assets pipeline\Import process</b> </li>
+<li> <b>Manual\Animation\Playing videos</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos#primeiros-passos-com-o-videostreamplayer
+">  Primeiros passos com o VideoStreamPlayer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos#propriedades-do-videostreamplayer
+">  Propriedades do VideoStreamPlayer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos#encoding-dos-vídeos
+">  Encoding dos vídeos
+ </a><br>
+<li> <b>Manual\Animation\Creating movies</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Creating%20movies#customizações-na-criação-de-vídeo
+">  Customizações na criação de vídeo
+ </a><br>
+<li> <b>Manual\Assets pipeline\Import process</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Import%20process#alterando-os-parâmetros-dos-imports
 ">  Alterando os parâmetros dos imports
  </a><br>
-<br><li> <b>Manual\Assets pipeline\Importing audio samples</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#formatos-de-áudio-suportados
-">  Formatos de áudio suportados
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#opções-de-import-do-wav
-">  Opções de import do WAV
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#force
-">  Force
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#edit
-">  Edit
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#compress/mode-
-">  Compress/Mode 
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#opções-de-import-do-ogg-vorbis-e-mp3
-">  Opções de import do Ogg Vorbis e MP3
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#configurações-avançadas-de-importação-(wav)
-">  Configurações avançadas de importação (WAV)
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#configurações-avançadas-de-importação-(ogg-vorbis-ou-mp3)
-">  Configurações avançadas de importação (Ogg Vorbis ou MP3)
- </a><br>
-<br><li> <b>Manual\Assets pipeline\Importing images</b> </li>
+<li> <b>Manual\Assets pipeline\Importing images</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images#alterando-o-tipo
 ">  Alterando o tipo
  </a><br>
@@ -601,11 +576,36 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images#detect-3d-
 ">  Detect 3D 
  </a><br>
-<br><li> <b>Manual\Assets pipeline\Importing translations</b> </li>
+<li> <b>Manual\Assets pipeline\Importing audio samples</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#formatos-de-áudio-suportados
+">  Formatos de áudio suportados
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#opções-de-import-do-wav
+">  Opções de import do WAV
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#force
+">  Force
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#edit
+">  Edit
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#compress/mode-
+">  Compress/Mode 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#opções-de-import-do-ogg-vorbis-e-mp3
+">  Opções de import do Ogg Vorbis e MP3
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#configurações-avançadas-de-importação-(wav)
+">  Configurações avançadas de importação (WAV)
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples#configurações-avançadas-de-importação-(ogg-vorbis-ou-mp3)
+">  Configurações avançadas de importação (Ogg Vorbis ou MP3)
+ </a><br>
+<li> <b>Manual\Assets pipeline\Importing translations</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20translations#opções-de-import
 ">  Opções de import
  </a><br>
-<br><li> <b>Manual\Audio\Audio buses</b> </li>
+<li> <b>Manual\Audio\Audio buses</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses#escala-de-decibel-
 ">  Escala de decibel 
  </a><br>
@@ -615,114 +615,40 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses#testando-o-som-do-seu-audio-bus
 ">  Testando o som do seu audio bus
  </a><br>
-<br><li> <b>Manual\Audio\Audio effects</b> </li>
+<li> <b>Manual\Audio\Audio effects</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20effects#lista-dos-efeitos-áudio
 ">  Lista dos efeitos áudio
  </a><br>
-<br><li> <b>Manual\Audio\Audio streams</b> </li>
+<li> <b>Manual\Audio\Audio streams</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20streams#audiostreamplayer2d
 ">  AudioStreamPlayer2D
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20streams#propriedades-do-audiostreamplayer2d
 ">  Propriedades do AudioStreamPlayer2D
  </a><br>
-<br><li> <b>Manual\Export\Exporting for the Web</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20the%20Web#lista-de-dicas-para-exportar-jogos-para-a-web
-">  Lista de dicas para exportar jogos para a web
- </a><br>
-<br><li> <b>Manual\Export\Exporting for Windows</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20Windows#changing-the-executable-icon
-">  Changing the executable icon
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20Windows#copiando-cenas-entre-projetos-e-problemas-com-uid
-">  Copiando cenas entre projetos e problemas com uid
- </a><br>
-<br><li> <b>Manual\Export\Exporting packs, patches, and mods</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20packs,%20patches,%20and%20mods#exportando-o-executável-sem-gerar-o-pck
-">  Exportando o executável sem gerar o PCK
- </a><br>
-<br><li> <b>Manual\Export\Exporting projects</b> </li>
+<li> <b>Manual\Export\Exporting projects</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20projects#básico-de-exportação
 ">  Básico de exportação
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20projects#configuration-files-
 ">  Configuration files 
  </a><br>
-<br><li> <b>Manual\Extras\Audio Server</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#atributos-do-audio-server
-">  Atributos do Audio Server
+<li> <b>Manual\Export\Exporting packs, patches, and mods</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20packs,%20patches,%20and%20mods#exportando-o-executável-sem-gerar-o-pck
+">  Exportando o executável sem gerar o PCK
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#métodos-do-audio-server
-">  Métodos do Audio Server
+<li> <b>Manual\Export\Exporting for Windows</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20Windows#changing-the-executable-icon
+">  Changing the executable icon
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-áudio-por-código
-">  Adicionando efeitos de áudio por código
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20Windows#copiando-cenas-entre-projetos-e-problemas-com-uid
+">  Copiando cenas entre projetos e problemas com uid
  </a><br>
-<br><li> <b>Manual\Extras\Camera2D</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#montando-a-cena-para-o-uso-da-camera2d
-">  Montando a cena para o uso da Camera2D
+<li> <b>Manual\Export\Exporting for the Web</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20the%20Web#lista-de-dicas-para-exportar-jogos-para-a-web
+">  Lista de dicas para exportar jogos para a web
  </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#método-1-para-lidar-com-tiles-de-tamanhos-diferentes-do-tileset
-">  Método 1 para lidar com tiles de tamanhos diferentes do TileSet
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#método-2-para-lidar-com-tiles-de-tamanhos-diferentes-do-tileset
-">  Método 2 para lidar com tiles de tamanhos diferentes do TileSet
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#método-3-para-lidar-com-tiles-de-tamanhos-diferentes-do-tileset
-">  Método 3 para lidar com tiles de tamanhos diferentes do TileSet
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#player-com-movimento-de-*clicar-e-mover*
-">  Player com movimento de *clicar e mover*
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#super-básico-de-camera2d
-">  Super básico de Camera2D
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#básico-de-camera2d
-">  Básico de Camera2D
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#intermediário-de-camera2d
-">  Intermediário de Camera2D
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#avançado-de-camera2d
-">  Avançado de Camera2D
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#drag
-">  Drag
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#smoothing
-">  Smoothing
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#zoom-via-script
-">  Zoom via script
- </a><br>
-<br><li> <b>Manual\Extras\Godot Rapier Physics</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#criando-uma-partícula-de-fluído-com-rapier
-">  Criando uma partícula de fluído com Rapier
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#criando-várias-partículas-de-fluído-com-rapier
-">  Criando várias partículas de fluído com Rapier
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#tamanho-das-partículas
-">  Tamanho das partículas
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#efeitos
-">  Efeitos
- </a><br>
-<br><li> <b>Manual\Extras\ShapeCast2D</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/ShapeCast2D#criando-um-shapecast2d
-">  Criando um ShapeCast2D
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/ShapeCast2D#múltiplas-detecções
-">  Múltiplas detecções
- </a><br>
-<br><li> <b>Manual\Extras\Snap</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Snap#grid-snap
-">  Grid snap
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Snap#outros-tipos-de-snap
-">  Outros tipos de snap
- </a><br>
-<br><li> <b>Manual\File and data IO\Background loading</b> </li>
+<li> <b>Manual\File and data IO\Background loading</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#preload
 ">  preload
  </a><br>
@@ -750,7 +676,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#adicionando-cenas-no-autoload
 ">  Adicionando cenas no Autoload
  </a><br>
-<br><li> <b>Manual\File and data IO\File paths in Godot projects</b> </li>
+<li> <b>Manual\File and data IO\File paths in Godot projects</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects#principais-métodos-de-caminhos
 ">  Principais métodos de caminhos
  </a><br>
@@ -763,7 +689,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects#varredura-pelos-arquivos
 ">  Varredura pelos arquivos
  </a><br>
-<br><li> <b>Manual\File and data IO\Saving games</b> </li>
+<li> <b>Manual\File and data IO\Saving games</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#cenário-inicial
 ">  Cenário inicial
  </a><br>
@@ -809,36 +735,33 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#final-do-jogo
 ">  Final do jogo
  </a><br>
-<br><li> <b>Manual\Input handling\Controllers, gamepads, and joysticks</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#supporting-universal-input
-">  Supporting universal input
+<li> <b>Manual\Internationalization\Internationalizing games</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#assets-
+">  Assets 
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#dead-zone
-">  Dead zone
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#nodes-da-cena
+">  Nodes da cena
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#jogo-teste-de-aceleração
-">  Jogo teste de aceleração
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#script-inicial
+">  Script inicial
  </a><br>
-<br><li> <b>Manual\Input handling\Customizing the mouse cursor</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#pelo-project-settings
-">  Pelo Project Settings
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#sinais-para-alterar-a-linguagem
+">  Sinais para alterar a linguagem
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#por-código
-">  Por código
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#_notification
+">  _notification
  </a><br>
-<br><li> <b>Manual\Input handling\Handling quit requests</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Handling%20quit%20requests#lidando-com-notificação-para-sair-do-jogo
-">  Lidando com notificação para sair do jogo
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#assets-associados-a-linguagens
+">  Assets associados a linguagens
  </a><br>
-<br><li> <b>Manual\Input handling\Input examples</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Input%20examples#lista-de-dicas-sobre-o-uso-de-inputs
-">  Lista de dicas sobre o uso de inputs
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#outras-funcionalidades
+">  Outras funcionalidades
  </a><br>
-<br><li> <b>Manual\Input handling\Mouse and input coordinates</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Mouse%20and%20input%20coordinates#mouse-e-coordenadas-da-viewport
-">  Mouse e coordenadas da viewport
+<li> <b>Manual\Internationalization\Pseudolocalization</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Pseudolocalization#habilitando-a-pseudolocalização
+">  Habilitando a pseudolocalização
  </a><br>
-<br><li> <b>Manual\Input handling\Using InputEvent</b> </li>
+<li> <b>Manual\Input handling\Using InputEvent</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent#tipos-de-eventos-de-input
 ">  Tipos de eventos de input
  </a><br>
@@ -884,33 +807,36 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent#input-actions
 ">  Input actions
  </a><br>
-<br><li> <b>Manual\Internationalization\Internationalizing games</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#assets-
-">  Assets 
+<li> <b>Manual\Input handling\Input examples</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Input%20examples#lista-de-dicas-sobre-o-uso-de-inputs
+">  Lista de dicas sobre o uso de inputs
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#nodes-da-cena
-">  Nodes da cena
+<li> <b>Manual\Input handling\Mouse and input coordinates</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Mouse%20and%20input%20coordinates#mouse-e-coordenadas-da-viewport
+">  Mouse e coordenadas da viewport
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#script-inicial
-">  Script inicial
+<li> <b>Manual\Input handling\Customizing the mouse cursor</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#pelo-project-settings
+">  Pelo Project Settings
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#sinais-para-alterar-a-linguagem
-">  Sinais para alterar a linguagem
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#por-código
+">  Por código
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#_notification
-">  _notification
+<li> <b>Manual\Input handling\Controllers, gamepads, and joysticks</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#supporting-universal-input
+">  Supporting universal input
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#assets-associados-a-linguagens
-">  Assets associados a linguagens
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#dead-zone
+">  Dead zone
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#outras-funcionalidades
-">  Outras funcionalidades
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Controllers,%20gamepads,%20and%20joysticks#jogo-teste-de-aceleração
+">  Jogo teste de aceleração
  </a><br>
-<br><li> <b>Manual\Internationalization\Pseudolocalization</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Pseudolocalization#habilitando-a-pseudolocalização
-">  Habilitando a pseudolocalização
+<li> <b>Manual\Input handling\Handling quit requests</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Handling%20quit%20requests#lidando-com-notificação-para-sair-do-jogo
+">  Lidando com notificação para sair do jogo
  </a><br>
-<br><li> <b>Manual\Math\Math</b> </li>
+<li> <b>Manual\Math\Math</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#vetores
 ">  Vetores
  </a><br>
@@ -923,7 +849,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Math/Math#geração-de-números-aleatórios
 ">  Geração de números aleatórios
  </a><br>
-<br><li> <b>Manual\Navigation\2D navigation overview</b> </li>
+<li> <b>Manual\Navigation\2D navigation overview</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#navigationregion2d
 ">  NavigationRegion2D
  </a><br>
@@ -933,67 +859,39 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#visualizando-a-rota-de-navegação
 ">  Visualizando a rota de navegação
  </a><br>
-<br><li> <b>Manual\Navigation\Connecting navigation meshes</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes#mescla-de-duas-malhas-de-navegação
-">  Mescla de duas malhas de navegação
+<li> <b>Manual\Navigation\Using NavigationServer</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#rids
+">  RIDs
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes#conexão-de-duas-malhas-de-navegação
-">  Conexão de duas malhas de navegação
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#call_deferred()
+">  call_deferred()
  </a><br>
-<br><li> <b>Manual\Navigation\Navigation debug tools</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#habilitando-debug-de-navegação
-">  Habilitando debug de navegação
+<li> <b>Manual\Navigation\Using NavigationMaps</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationMaps#default-navigation-maps
+">  Default navigation maps
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#navigation-debug-settings
-">  Navigation debug settings
+<li> <b>Manual\Navigation\Using NavigationRegions</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationRegions#navigationregion-e-global_transform-
+">  NavigationRegion e global_transform 
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#debug-performance
-">  Debug performance
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationRegions#criando-navigationregion-por-código
+">  Criando NavigationRegion por código
  </a><br>
-<br><li> <b>Manual\Navigation\Optimizing Navigation Performance</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Optimizing%20Navigation%20Performance#lista-de-dicas-para-otimização-de-performance-da-navegação
-">  Lista de dicas para otimização de performance da navegação
- </a><br>
-<br><li> <b>Manual\Navigation\Using navigation meshes</b> </li>
+<li> <b>Manual\Navigation\Using navigation meshes</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20navigation%20meshes#colisão-e-navigation-mesh
 ">  Colisão e navigation mesh
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20navigation%20meshes#baking
 ">  Baking
  </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationAgents</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#navigationagent-avoidance
-">  NavigationAgent Avoidance
+<li> <b>Manual\Navigation\Using NavigationPaths</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path
+">  map_get_path
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#velocity-$\neq$-speed
-">  velocity $\neq$ speed
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#packedvector2array-
+">  PackedVector2Array 
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#script-para-evitação/avoidance
-">  Script para evitação/avoidance
- </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationLayers</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLayers#set_navigation_layer_value()-e-get_navigation_layer_value()
-">  set_navigation_layer_value() e get_navigation_layer_value()
- </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationLinks</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLinks#configurando-o-navigationlink
-">  Configurando o NavigationLink
- </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationMaps</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationMaps#default-navigation-maps
-">  Default navigation maps
- </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationObstacles</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#navigationobstacle-percebido-pelo-mapa
-">  NavigationObstacle percebido pelo mapa
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#navigationobstacle-percebido-pelos-agentes
-">  NavigationObstacle percebido pelos agentes
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#raio-do-navigationobstacle
-">  Raio do NavigationObstacle
- </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationPathQueryObjects</b> </li>
+<li> <b>Manual\Navigation\Using NavigationPathQueryObjects</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#navigationpathqueryparameters2d
 ">  NavigationPathQueryParameters2D
  </a><br>
@@ -1024,28 +922,56 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#hud
 ">  HUD
  </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationPaths</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#map_get_path
-">  map_get_path
+<li> <b>Manual\Navigation\Using NavigationAgents</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#navigationagent-avoidance
+">  NavigationAgent Avoidance
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPaths#packedvector2array-
-">  PackedVector2Array 
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#velocity-$\neq$-speed
+">  velocity $\neq$ speed
  </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationRegions</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationRegions#navigationregion-e-global_transform-
-">  NavigationRegion e global_transform 
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents#script-para-evitação/avoidance
+">  Script para evitação/avoidance
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationRegions#criando-navigationregion-por-código
-">  Criando NavigationRegion por código
+<li> <b>Manual\Navigation\Using NavigationObstacles</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#navigationobstacle-percebido-pelo-mapa
+">  NavigationObstacle percebido pelo mapa
  </a><br>
-<br><li> <b>Manual\Navigation\Using NavigationServer</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#rids
-">  RIDs
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#navigationobstacle-percebido-pelos-agentes
+">  NavigationObstacle percebido pelos agentes
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationServer#call_deferred()
-">  call_deferred()
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles#raio-do-navigationobstacle
+">  Raio do NavigationObstacle
  </a><br>
-<br><li> <b>Manual\Networking\Using WebSockets</b> </li>
+<li> <b>Manual\Navigation\Using NavigationLinks</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLinks#configurando-o-navigationlink
+">  Configurando o NavigationLink
+ </a><br>
+<li> <b>Manual\Navigation\Using NavigationLayers</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLayers#set_navigation_layer_value()-e-get_navigation_layer_value()
+">  set_navigation_layer_value() e get_navigation_layer_value()
+ </a><br>
+<li> <b>Manual\Navigation\Navigation debug tools</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#habilitando-debug-de-navegação
+">  Habilitando debug de navegação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#navigation-debug-settings
+">  Navigation debug settings
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools#debug-performance
+">  Debug performance
+ </a><br>
+<li> <b>Manual\Navigation\Connecting navigation meshes</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes#mescla-de-duas-malhas-de-navegação
+">  Mescla de duas malhas de navegação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes#conexão-de-duas-malhas-de-navegação
+">  Conexão de duas malhas de navegação
+ </a><br>
+<li> <b>Manual\Navigation\Optimizing Navigation Performance</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Optimizing%20Navigation%20Performance#lista-de-dicas-para-otimização-de-performance-da-navegação
+">  Lista de dicas para otimização de performance da navegação
+ </a><br>
+<li> <b>Manual\Networking\Using WebSockets</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets#preparando-o-servidor-backend-em-python
 ">  Preparando o servidor backend em Python
  </a><br>
@@ -1055,14 +981,14 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets#servidor-remoto
 ">  Servidor remoto
  </a><br>
-<br><li> <b>Manual\Performance\Common\General optimization tips</b> </li>
+<li> <b>Manual\Performance\Common\General optimization tips</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#a-natureza-da-lentidão
 ">  A natureza da lentidão
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#dicas-gerais
 ">  Dicas gerais
  </a><br>
-<br><li> <b>Manual\Performance\Common\Optimization using Servers</b> </li>
+<li> <b>Manual\Performance\Common\Optimization using Servers</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#servidores
 ">  Servidores
  </a><br>
@@ -1072,7 +998,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#exemplo:-criando-um-sprite
 ">  Exemplo: criando um sprite
  </a><br>
-<br><li> <b>Manual\Performance\CPU\CPU optimization</b> </li>
+<li> <b>Manual\Performance\CPU\CPU optimization</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#profiler-
 ">  Profiler 
  </a><br>
@@ -1082,7 +1008,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#física
 ">  Física
  </a><br>
-<br><li> <b>Manual\Performance\GPU\GPU optimization</b> </li>
+<li> <b>Manual\Performance\GPU\GPU optimization</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/GPU%20optimization#reduzir-draw-calls---batching
 ">  Reduzir draw calls - batching
  </a><br>
@@ -1095,18 +1021,11 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/GPU%20optimization#bake-de-iluminação
 ">  Bake de iluminação
  </a><br>
-<br><li> <b>Manual\Performance\GPU\Reducing stutter from shader (pipeline) compilations</b> </li>
+<li> <b>Manual\Performance\GPU\Reducing stutter from shader (pipeline) compilations</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations#monitoramento-do-pipeline
 ">  Monitoramento do pipeline
  </a><br>
-<br><li> <b>Manual\Performance\Threads\Thread-safe APIs</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs#o-que-não-pode-fazer-com-threads
-">  O que não pode fazer com threads
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs#o-que-pode-fazer-com-threads
-">  O que pode fazer com threads
- </a><br>
-<br><li> <b>Manual\Performance\Threads\Using multiple threads</b> </li>
+<li> <b>Manual\Performance\Threads\Using multiple threads</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#método-bind
 ">  Método bind
  </a><br>
@@ -1125,7 +1044,51 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#semáforos
 ">  Semáforos
  </a><br>
-<br><li> <b>Manual\Physics\Area</b> </li>
+<li> <b>Manual\Performance\Threads\Thread-safe APIs</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs#o-que-não-pode-fazer-com-threads
+">  O que não pode fazer com threads
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs#o-que-pode-fazer-com-threads
+">  O que pode fazer com threads
+ </a><br>
+<li> <b>Manual\Physics\Physics introduction</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-material
+">  Physics material
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#diversas-shapes-de-colisão-por-objeto
+">  Diversas shapes de colisão por objeto
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#mudança-de-escala-e-física
+">  Mudança de escala e física
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-process
+">  Physics process
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#collision-layers-e-masks
+">  Collision layers e masks
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#collisionobject2d
+">  CollisionObject2D
+ </a><br>
+<li> <b>Manual\Physics\Physics engines</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20engines#alterando-a-engine-física
+">  Alterando a engine física
+ </a><br>
+<li> <b>Manual\Physics\StaticBody</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/StaticBody#propriedades
+">  Propriedades
+ </a><br>
+<li> <b>Manual\Physics\RigidBody</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#propriedades
+">  Propriedades
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#sinais
+">  Sinais
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#_integrate_forces
+">  _integrate_forces
+ </a><br>
+<li> <b>Manual\Physics\Area</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Area#propriedades
 ">  Propriedades
  </a><br>
@@ -1135,7 +1098,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Area#sinais
 ">  Sinais
  </a><br>
-<br><li> <b>Manual\Physics\CharacterBody</b> </li>
+<li> <b>Manual\Physics\CharacterBody</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/CharacterBody#propriedades
 ">  Propriedades
  </a><br>
@@ -1157,44 +1120,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/CharacterBody#exemplo
 ">  Exemplo
  </a><br>
-<br><li> <b>Manual\Physics\Collision shapes 2D</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Collision%20shapes%202D#mudança-de-escala-e-física
-">  Mudança de escala e física
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Collision%20shapes%202D#shapes-de-colisão-primitivas
-">  Shapes de colisão primitivas
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Collision%20shapes%202D#collisionpolygon2d-sibling
-">  CollisionPolygon2D Sibling
- </a><br>
-<br><li> <b>Manual\Physics\Physics engines</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20engines#alterando-a-engine-física
-">  Alterando a engine física
- </a><br>
-<br><li> <b>Manual\Physics\Physics Interpolation</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20Interpolation#interpolação-linear
-">  Interpolação linear
- </a><br>
-<br><li> <b>Manual\Physics\Physics introduction</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-material
-">  Physics material
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#diversas-shapes-de-colisão-por-objeto
-">  Diversas shapes de colisão por objeto
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#mudança-de-escala-e-física
-">  Mudança de escala e física
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-process
-">  Physics process
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#collision-layers-e-masks
-">  Collision layers e masks
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#collisionobject2d
-">  CollisionObject2D
- </a><br>
-<br><li> <b>Manual\Physics\Ray-casting</b> </li>
+<li> <b>Manual\Physics\Ray-casting</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Ray-casting#criando-um-ray-casting
 ">  Criando um ray-casting
  </a><br>
@@ -1204,21 +1130,21 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Ray-casting#métodos
 ">  Métodos
  </a><br>
-<br><li> <b>Manual\Physics\RigidBody</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#propriedades
-">  Propriedades
+<li> <b>Manual\Physics\Collision shapes 2D</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Collision%20shapes%202D#mudança-de-escala-e-física
+">  Mudança de escala e física
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#sinais
-">  Sinais
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Collision%20shapes%202D#shapes-de-colisão-primitivas
+">  Shapes de colisão primitivas
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/RigidBody#_integrate_forces
-">  _integrate_forces
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Collision%20shapes%202D#collisionpolygon2d-sibling
+">  CollisionPolygon2D Sibling
  </a><br>
-<br><li> <b>Manual\Physics\StaticBody</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/StaticBody#propriedades
-">  Propriedades
+<li> <b>Manual\Physics\Physics Interpolation</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20Interpolation#interpolação-linear
+">  Interpolação linear
  </a><br>
-<br><li> <b>Manual\Physics\Troubleshooting physics issues</b> </li>
+<li> <b>Manual\Physics\Troubleshooting physics issues</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Troubleshooting%20physics%20issues#objetos-passando-através-de-outros-em-alta-velocidade
 ">  Objetos passando através de outros em alta velocidade
  </a><br>
@@ -1240,8 +1166,82 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Troubleshooting%20physics%20issues#a-simulação-física-é-instável-quando-se-está-longe-da-origem-do-mundo
 ">  A simulação física é instável quando se está longe da origem do mundo
  </a><br>
-<br><li> <b>Manual\Platform-specific</b> </li>
+<li> <b>Manual\Platform-specific</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Platform-specific#alerta
 ">  Alerta
+ </a><br>
+<li> <b>Manual\Extras\Audio Server</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#atributos-do-audio-server
+">  Atributos do Audio Server
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#métodos-do-audio-server
+">  Métodos do Audio Server
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-áudio-por-código
+">  Adicionando efeitos de áudio por código
+ </a><br>
+<li> <b>Manual\Extras\Camera2D</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#montando-a-cena-para-o-uso-da-camera2d
+">  Montando a cena para o uso da Camera2D
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#método-1-para-lidar-com-tiles-de-tamanhos-diferentes-do-tileset
+">  Método 1 para lidar com tiles de tamanhos diferentes do TileSet
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#método-2-para-lidar-com-tiles-de-tamanhos-diferentes-do-tileset
+">  Método 2 para lidar com tiles de tamanhos diferentes do TileSet
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#método-3-para-lidar-com-tiles-de-tamanhos-diferentes-do-tileset
+">  Método 3 para lidar com tiles de tamanhos diferentes do TileSet
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#player-com-movimento-de-*clicar-e-mover*
+">  Player com movimento de *clicar e mover*
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#super-básico-de-camera2d
+">  Super básico de Camera2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#básico-de-camera2d
+">  Básico de Camera2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#intermediário-de-camera2d
+">  Intermediário de Camera2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#avançado-de-camera2d
+">  Avançado de Camera2D
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#drag
+">  Drag
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#smoothing
+">  Smoothing
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#zoom-via-script
+">  Zoom via script
+ </a><br>
+<li> <b>Manual\Extras\Godot Rapier Physics</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#criando-uma-partícula-de-fluído-com-rapier
+">  Criando uma partícula de fluído com Rapier
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#criando-várias-partículas-de-fluído-com-rapier
+">  Criando várias partículas de fluído com Rapier
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#tamanho-das-partículas
+">  Tamanho das partículas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics#efeitos
+">  Efeitos
+ </a><br>
+<li> <b>Manual\Extras\ShapeCast2D</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/ShapeCast2D#criando-um-shapecast2d
+">  Criando um ShapeCast2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/ShapeCast2D#múltiplas-detecções
+">  Múltiplas detecções
+ </a><br>
+<li> <b>Manual\Extras\Snap</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Snap#grid-snap
+">  Grid snap
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Snap#outros-tipos-de-snap
+">  Outros tipos de snap
  </a><br>
 </ul>
