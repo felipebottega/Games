@@ -38,7 +38,7 @@ Agora vamos explicar as principais componentes deste script:
 
 > PS: Note que usamos `_physics_process` em vez de `_process`. Isto é importante pois `_process` pode rodar mais rápido ou mais lento de acordo com o FPS. Não queremos que a velocidade do boneco dependa de FPS.
 
-## Rotação e movimento ("Asteroids-style")
+## Rotação e movimento (Asteroids-style)
 
 Neste tipo de movimentação, você usa os botões esquerda-direita para rotacionar o boneco, e cima-baixo para ir para frente ou para trás. O nome "Asteroids-style" é porque essa é a movimentação clássica dos jogos de arcade estilo Asteroids. O script dele segue abaixo.
 
