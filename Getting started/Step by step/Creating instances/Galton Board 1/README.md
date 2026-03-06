@@ -1,4 +1,6 @@
-# Galton Board - version 1
+# Galton Board 
+
+## Version 1
 
 Minha primeira tentativa fazer um [tabuleiro de Galton](https://pt.wikipedia.org/wiki/Tabuleiro_de_Galton) em Godot. A implementação deste "jogo" usa apenas conceitos básicos de corpos rígidos e física. 
 
