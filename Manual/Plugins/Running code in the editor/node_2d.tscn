@@ -6,7 +6,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.999)
 position = Vector2(553, 317)
-rotation = 1393.603
+rotation = 459.03812
 texture = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
