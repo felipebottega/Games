@@ -1,6 +1,6 @@
 # Editor plugins
 
-Um "plugin" é basicamente um conjunto de nodes e scripts que servem a um propósito específico na engine. A implementação deles geralmente fica por trás dos panos, geralmente o usuário não manipula diretamente estes nodes e scripts. O [tutorial  oficial de plugins] fala sobre o uso e criação de plugins. No meu caso, só tenho interesso em usar plugins, por isso só vou falar disso. Você pode ver como é a criação de plugins indo no tutorial oficial. 
+Um plugin é uma extensão do editor da Godot, geralmente implementada com scripts (EditorPlugin) e podendo usar cenas e recursos para construir suas ferramentas. Na Godot, muitos plugins literalmente são só uma cena .tscn carregada no editor. Um plugin sempre vem acompanhado de um arquivo `plugin.cfg`. O [tutorial  oficial de plugins](https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html) fala sobre o uso e criação de plugins. No meu caso, só tenho interesso em usar plugins, por isso só vou falar disso. Você pode ver como é a criação de plugins indo no tutorial oficial. 
 
 ## Encontrando plugins
 
