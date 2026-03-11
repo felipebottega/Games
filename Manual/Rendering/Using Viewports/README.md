@@ -32,8 +32,7 @@ Por conter uma textura, o `SubViewport` precisa de algum tipo de "container" na 
 Agora vá no *Inspector* e selecione a textura *ViewportTexture* para o seu sprite container. Vai abrir uma janela com as opções disponíveis. Escolha o subviewport que você acabou de criar e dê ok.
 
 <p align="center">
-  <img width="280" src="https://github.com/user-attachments/assets/aec8cf86-6969-46ec-85c7-f60be69c2a6c" />
-  <img width="250" src="https://github.com/user-attachments/assets/6be794ac-daf4-4d95-be85-f0d423497598" />
+  <img width="700" src="https://github.com/user-attachments/assets/9eee5816-cb5b-4d21-9eb6-2ff5f184ba6f" />
 </p>
 
 Agora você já pode executar o jogo que ele vai renderizar a textura do subviewport sobre o sprite container, na posição onde ele está.
