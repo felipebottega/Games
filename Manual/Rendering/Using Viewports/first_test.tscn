@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnif3or6xqd0u"]
+
+[ext_resource type="Texture2D" uid="uid://kj80qq3xs82p" path="res://small_big_girl_v2.png" id="1_i50e0"]
+[ext_resource type="Script" uid="uid://cq7ltks2y71jn" path="res://first_test.gd" id="1_l6o6u"]
+
+[node name="FirstTest" type="Node2D"]
+script = ExtResource("1_l6o6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i50e0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport"]
+modulate = Color(0.050980393, 1, 0.08235294, 1)
+texture = ExtResource("1_i50e0")
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(541, 0)

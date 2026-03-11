@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://4uv7kojpds8m"]
+
+[ext_resource type="Texture2D" uid="uid://cw30nt4nfpqbi" path="res://01087-20260309040121-3545568839-LCM-lametta_v2012-3-60.png" id="1_ee4on"]
+
+[node name="SecondScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_ee4on")
