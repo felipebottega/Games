@@ -43,17 +43,18 @@ Agora você já pode executar o jogo que ele vai renderizar a textura do subview
 
 ## Transparent BG
 
-O container foi colocado um pouco mais para o centro da tela e foi criado um script que desloca o sprite dentro do `SubViewport` horizontalmente. Abaixo temos o resultado disso.
-
-
-
-O sprite azul está mais ao fundo do `SubViewport` apenas porque ele vem primeiro na árvore de nodes. Além disso, podemos notar que o sprite dentro do container é "cortado" após um certo ponto. Isto ocorre porque ele foi além dos limites do subviewport. Neste exemplo, o subviewport está parado, é apenas o sprite dentro dele que está se movendo, então ele escapa da "tela" onde está inserido e é cortado.
+O container foi colocado um pouco mais para o centro da tela e foi criado um script que desloca o sprite dentro do `SubViewport` horizontalmente. O sprite azul está mais ao fundo do `SubViewport` apenas porque ele vem primeiro na árvore de nodes. Além disso, podemos notar que o sprite dentro do container é "cortado" após um certo ponto. Isto ocorre porque ele foi além dos limites do subviewport. Neste exemplo, o subviewport está parado, é apenas o sprite dentro dele que está se movendo, então ele escapa da "tela" onde está inserido e é cortado.
 
 https://github.com/user-attachments/assets/5246e7f9-7d3d-466b-b9fd-81a52dfb8437
 
 No subviewport apenas temos o sprite vermelho se movendo, não há nenhum background renderizado. Isso significa que o sprite azul está sendo sobreposto por algo que em teoria é transparente. Você pode desfazer esse comportamento habilitando a opção *Transparent BG* em *Inspector → Viewport → Transparent BG*. O efeito dessa opção está mostrado abaixo.
 
 https://github.com/user-attachments/assets/312c8998-f158-4ef9-bc07-918533bf2942
+
+## Captura
+
+
+
 
 ## Input
 
