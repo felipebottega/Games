@@ -53,8 +53,19 @@ https://github.com/user-attachments/assets/312c8998-f158-4ef9-bc07-918533bf2942
 
 ## Captura
 
+O método `get_viewport().get_texture().get_image()` permite fazer uma captura de tela e armazenar o resultado como uma textura. Você pode usar este método tanto no viewport raíz como em um subviewport.
 
+Na cena de exemplo, adicionamos um botão que contém dois sprites. O primeiro é aquele quadrado verde, que serve apenas de background, nada demais. O segundo é um `Sprite2D` vazio, chamado *Capture*. Ele está ali para ser a textura da captura de tela do subviewport.
 
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/b32042cc-5977-4851-be96-eccfec607a5e" />
+</p>
+
+Quando o botão é pressionado, o scrpit abaixo (que está no node raíz da cena) é ativado, e isso faz uma captura do subviewport e joga o resultado para o sprite. Você pode apertar o botão várias vezes seguidas e ver como ele de fato captura o instante do que está acontecendo no subviewport.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/69fc8144-471d-4649-be55-e35e09e8e47a" />
+</p>
 
 ## Input
 
