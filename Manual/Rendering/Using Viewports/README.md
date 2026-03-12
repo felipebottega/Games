@@ -69,4 +69,16 @@ Quando o botão é pressionado, o scrpit abaixo (que está no node raíz da cena
 
 ## Input
 
-Como mencionado anteriormente, `SubViewport` não é apenas uma "tela dentro da tela". Pense nele como um "jogo dentro do jogo". Assim como o `Viewport` raíz é o responsável por receber inputs, o `SubViewport` também recebe inputs. Por default, não recebe inputs automaticamente. Você deve habilitar isso indo em *Inspector →*
+Como mencionado anteriormente, `SubViewport` não é apenas uma "tela dentro da tela". Pense nele como um "jogo dentro do jogo". Assim como o `Viewport` raíz é o responsável por receber inputs, o `SubViewport` também pode receber inputs. Por default, não recebe inputs automaticamente. A única maneira dele receber inputs é quando é filho do node `SubViewportContainer`. Este node foi feito especificamente para conter nodes `SubViewport` e garantir as suas funcionalidades. Caso o seu interesse seja apenas na textura do `SubViewport`, já comentamos que existem várias opções. Caso queria mais funcionalidades, use o `SubViewportContainer`.
+
+Vamos criar um segundo exemplo agora. Desta vez, o container não ser mais um `Sprtite2D`, mas sim o `SubViewportContainer`. Faça como mostrado abaixo. ao colocar o `SubViewport` dentro de um `SubViewportContainer`, a textura já é renderizada automaticamente na cena.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/8e13e67b-69d9-43ea-be78-575a43b215c8" />
+</p>
+
+Ao script do `Sprite2D`, adicionamos uma função que aumenta ou diminui a escala do sprite conforme clicamos com o mouse. Note que estamos utilizando o mesmo script de antes. Esta função de input não tem efeito nenhum no primeiro exemplo pois o `SubViewport` não está dentro de um `SubViewportContainer`.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/a2073c58-7562-45ff-99f2-e3e31a3e4477" />
+</p>
