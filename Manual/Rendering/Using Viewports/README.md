@@ -133,4 +133,10 @@ Não queremos que a visualização do subViewport seja do tamanho da tela inteir
 
 > PS: Dado o tamanho $(x, y)$ do subviewport, sempre colocamos a câmera na posição $(-x, -y)$ de modo a tê-la centralizada na tela do subviewport. 
  
+O script abaixo deve ser adicionado ao `SubViewportContainer`. Assim, sempre que movemos o mouse, o container se move e a câmera move junto, de modo a revelar o conteúdo do subviewport naquela exata posição.
 
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/e7770ed6-6b82-48e9-a60f-5e52e5dfe6de" />
+</p>
+
+> PS: Provavelmente a tela do subviewport terá um efeito "trêmulo" ao movimentar o mouse. Isto acontece porque a renderização é feita em subpixels. Para remover este efeito indesejado, vá em *Inspector → Viewport* e habilite a opção *Snap 2D Transforms to Pixel*.
