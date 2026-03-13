@@ -23,13 +23,13 @@ Na cena principal, também colocamos barreiras laterais invisíveis para que o j
 
 ## PointLight2D
 
-Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação. Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco na árvore de nodes, pois assim pé do boneco não é coberto pelos blocos quando ele está em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore de nods, coloque-a depois dos blocos e antes do Trevor.
+Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação. Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco na árvore de nodes, pois assim pé do boneco não é coberto pelos blocos quando ele está em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore de nodes, coloque-a depois dos blocos e antes do Trevor.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c905f6fa-3b7b-4ef5-a608-5dc69478f6f1" width="400">
 </p>
 
-Volta na cena da tocha e acrescente o node `PointLight2D` como filho. Apenas isso não basta para a luz surgir, você deve adicionar uma textura para ela, um sprite que irá ditar o formato da luz. Nesse caso nós utilizamos uma esfera em gradiente, que decai aos poucos. Você já pode voltar à cena Main e constatar que o efeito de luz já está funcionando.
+Volte na cena da tocha e acrescente o node `PointLight2D` como filho. Apenas isso não basta para a luz surgir, você deve adicionar uma textura para ela, um sprite que irá ditar o formato da luz. Nesse caso nós utilizamos uma esfera em gradiente, que decai aos poucos. Você já pode voltar à cena Main e constatar que o efeito de luz já está funcionando.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2010d08f-2fcd-4e0d-943c-824d69405541" width="200">
@@ -43,7 +43,7 @@ Apesar da tocha de fato estar emitindo luz, provavelmente não está satisfatór
 - **Texture Scale:** O tamanho do alcance da luz.
 - **Color:** A cor da luz.
 - **Energy**: A instensidade da luz.
-- **Blend Mode:** Algoritmos da iluminação. O `Add`(default) é a iluminação o normal, os outros dois é testar e ver onde encaixa.
+- **Blend Mode:** Algoritmos da iluminação. O `Add`(default) é a iluminação o normal, os outros dois é melhor testar e ver em que situação cada um se encaixa.
 
 Mesmo que você diminua o alcance de intensidade da luz, ainda vai achar que a iluminação da tocha é irrelevante para cena. Isso não é culpa da iluminação. O que acontece é que geralmente os sprites são claros. Então você precisa escurecê-los um pouco para que o efeito de luz tenha algum impacto. Isso é possível com o comando `modulate = Color(x, y, z)` no script da Main. O `modulate` é um atributo nativo de todos os filhos do `Node2D` e serve para alterar a cor do sprite. Vimos ele [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites). Como ele será aplicado no node pai, o escurecimento será para a cena inteira, que é o que queremos mesmo.
 
