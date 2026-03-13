@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 1024.0
+offset_bottom = 900.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1024, 900)
+render_target_update_mode = 4
+
+[node name="Example1" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 939.0
+offset_right = 234.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 40
+text = "Example 1"
+
+[node name="Example2" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 939.0
+offset_right = 615.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 40
+text = "Example 2"
+
+[node name="Example3" type="Button" parent="."]
+offset_left = 792.0
+offset_top = 939.0
+offset_right = 998.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 40
+text = "Example 3"
+
+[connection signal="pressed" from="Example1" to="." method="_on_example_1_pressed"]
+[connection signal="pressed" from="Example2" to="." method="_on_example_2_pressed"]
+[connection signal="pressed" from="Example3" to="." method="_on_example_3_pressed"]
