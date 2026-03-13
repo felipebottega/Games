@@ -10,6 +10,8 @@ O node `SubViewport` serve para criar e manipular telas extras no jogo. Pense ne
   - Múltiplas câmeras funcionando na mesma cena
   - Reflexo de espelho
   - Visualização de câmeras de monitoramento
+  - Visualização "raio-x"
+  - Minimapas
 
 ## Exemplo inicial
 
@@ -112,3 +114,15 @@ Por exemplo, se `size = Vector2i(1920, 1080)` e `size_2d_override  = Vector2i(64
 - UI com escala uniforme
 - Pixel-art com escala controlada
 - Renderizar em alta resolução enquanto mantém layout 2D estável.
+
+## Efeito "raio-x" com a câmera
+
+Mostramos acima um exemplo em que a câmera se move perseguindo um sprite dentro do subviewport. Porém, note que a tela do subviewport não tem relação nenhuma com a tela principal. Faremos um último exemplo agora, aplicando a ideia de efeito "raio-x" com a câmera. Este "raio-x" não é literalmente o raio-x tradicional, mas sim a ideia de passar a câmera do subviewport sobre a imagem da tela principal e obter uma visualização diferente do mesmo objeto (assim como seria em um raio-x).
+
+Começamos criando os nodes da cena. É semelhante ao exemplo anterior, só temos mais sprites dentro do subviewport. Iremos alternar a visibilidade entre eles para mostrar um de cada vez sobre a imagem "base" que está na tela principal (viewport raíz). A propriedade *size* do subviewport foi definida para ter as mesmas dimensões que o viewport principal (definido em *Project → Project Settings → Display → Window → Size*). Como todos os sprites são variações do sprite base e queremos sobreposição perfeita, todos devem ser posicionados na exata mesma posição. 
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/c6354198-908a-4131-9c8b-2d480c5dfe54" />
+  <img width="250" src="https://github.com/user-attachments/assets/261e7f45-d011-4116-9e17-55badef01029" />
+  <img width="250" src="https://github.com/user-attachments/assets/efd069ff-b443-42ca-83d7-f0793b4b250d" />
+</p>
