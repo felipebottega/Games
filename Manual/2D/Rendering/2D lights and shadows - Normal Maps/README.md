@@ -53,8 +53,8 @@ Como normal maps são figuras PNG, você pode simplesmente desenhar um na mão, 
 
 Abaixo segue um resumo dos itens básicos do programa para gerar seus normal maps.
 
-1. Importe o arquivo do sprite que você quer usar como base para gerar um normal map.
-2. Exporte o normal map para um PNG, é o ultimo botão que você vai utilizar após configurar seu normal map.
+1. Importa o arquivo do sprite que você quer usar como base para gerar um normal map.
+2. Exporta o normal map para um PNG, é o ultimo botão que você vai utilizar após configurar seu normal map.
 3. Parâmetros de altura e suavidade do seu normal map. Esses são os dois principais parâmetros que você deve ajustar na configuração do normal map.
 4. Visualização que você quer na tela principal (a que contém a figura no centro do programa). *Texture* mostra a figura original, *Normal Map* mostra o normal map associado e *Preview* mostra a figura original e uma fonte de luz interativa na tela para você testar. Só essas três opções são necessárias.
 5. Se você está no modo *Preview* de visualização, essas opções mudam os parâmetros da luz. Isso não afeta o normal map, apenas mostra como ele reage a diferentes tipos de luz.
