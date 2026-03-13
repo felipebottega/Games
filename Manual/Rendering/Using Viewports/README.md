@@ -122,7 +122,7 @@ Mostramos acima um exemplo em que a câmera se move perseguindo um sprite dentro
 Começamos criando os nodes da cena. É semelhante ao exemplo anterior, só temos mais sprites dentro do subviewport. Iremos alternar a visibilidade entre eles para mostrar um de cada vez sobre a imagem "base" que está na tela principal (viewport raíz). A propriedade *size* do subviewport foi definida para ter as dimensões que a gente quer para o quadro de visualização. Como todos os sprites são variações do sprite base e queremos sobreposição perfeita, todos devem ser posicionados na exata mesma posição. 
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/1e3b6198-e376-4403-8302-c61270dd790f" />
+  <img width="900" src="https://github.com/user-attachments/assets/40354d0e-9abf-4c72-95c8-b6d4d58f4ee6" />
 </p>
 
 Não queremos que a visualização do subViewport seja do tamanho da tela inteira, por isso optamos por $250 \times 250$. A ideia é que ele funcione como um mini visor retangular que nos permite ver outro aspecto da imagem enquanto passamos o visor sobre a imagem base (em outros contextos ele poderia ser uma lupa, uma câmera infra-vermelho, etc.). Devemos adicionar um node de câmera dentro do `SubViewport` e deixá-la posicionada na coordenada $(-250, -250)$. Com isso, temos o efeito desejado mostrado abaixo. O quadro do subviewport tem o papel de mostrar em alta resolução uma parte da imagem base (que é pixelada).
