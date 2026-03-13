@@ -61,7 +61,7 @@ Na cena de exemplo, adicionamos um botão que contém dois sprites. O primeiro �
   <img width="500" src="https://github.com/user-attachments/assets/b32042cc-5977-4851-be96-eccfec607a5e" />
 </p>
 
-Quando o botão é pressionado, o scrpit abaixo (que está no node raíz da cena) é ativado, e isso faz uma captura do subviewport e joga o resultado para o sprite. Você pode apertar o botão várias vezes seguidas e ver como ele de fato captura o instante do que está acontecendo no subviewport.
+Quando o botão é pressionado, o script abaixo (que está no node raíz da cena) é ativado, e isso faz uma captura do subviewport e joga o resultado para o sprite. Você pode apertar o botão várias vezes seguidas e ver como ele de fato captura o instante do que está acontecendo no subviewport.
 
 <p align="center">
   <img width="450" src="https://github.com/user-attachments/assets/69fc8144-471d-4649-be55-e35e09e8e47a" />
@@ -82,3 +82,20 @@ Ao script do `Sprite2D`, adicionamos uma função que aumenta ou diminui a escal
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/a2073c58-7562-45ff-99f2-e3e31a3e4477" />
 </p>
+
+## Câmeras
+
+Sempre que você adiciona câmeras na cena, ela vai mostrar o conteúdo do primeiro viewport acima dela na árvore de nodes. 
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/12aad556-b245-495f-8cc5-a3b619059f5b" />
+</p>
+
+> PS: Só pode haver uma câmera ativa por (sub)viewport. Caso você tenha múltiplas câmeras, é possível escolher qual ficará ativa com o comand `camera.make_current()`, em que `camera` a variável do node da câmera.
+
+Para deixar este exemplo mais interessante, colocamos um background estático no subviewport e fizemos o sprite se mover de uma manei mais interessante. Enquanto ele se move, a câmera do subviewport acompanha o movimento.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/cbd75fd0-dc52-4ddc-b868-4cf4a9dc8294" />
+</p>
+
