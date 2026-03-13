@@ -119,10 +119,18 @@ Por exemplo, se `size = Vector2i(1920, 1080)` e `size_2d_override  = Vector2i(64
 
 Mostramos acima um exemplo em que a câmera se move perseguindo um sprite dentro do subviewport. Porém, note que a tela do subviewport não tem relação nenhuma com a tela principal. Faremos um último exemplo agora, aplicando a ideia de efeito "raio-x" com a câmera. Este "raio-x" não é literalmente o raio-x tradicional, mas sim a ideia de passar a câmera do subviewport sobre a imagem da tela principal e obter uma visualização diferente do mesmo objeto (assim como seria em um raio-x).
 
-Começamos criando os nodes da cena. É semelhante ao exemplo anterior, só temos mais sprites dentro do subviewport. Iremos alternar a visibilidade entre eles para mostrar um de cada vez sobre a imagem "base" que está na tela principal (viewport raíz). A propriedade *size* do subviewport foi definida para ter as mesmas dimensões que o viewport principal (definido em *Project → Project Settings → Display → Window → Size*). Como todos os sprites são variações do sprite base e queremos sobreposição perfeita, todos devem ser posicionados na exata mesma posição. 
+Começamos criando os nodes da cena. É semelhante ao exemplo anterior, só temos mais sprites dentro do subviewport. Iremos alternar a visibilidade entre eles para mostrar um de cada vez sobre a imagem "base" que está na tela principal (viewport raíz). A propriedade *size* do subviewport foi definida para ter as dimensões que a gente quer para o quadro de visualização. Como todos os sprites são variações do sprite base e queremos sobreposição perfeita, todos devem ser posicionados na exata mesma posição. 
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/c6354198-908a-4131-9c8b-2d480c5dfe54" />
-  <img width="250" src="https://github.com/user-attachments/assets/261e7f45-d011-4116-9e17-55badef01029" />
-  <img width="250" src="https://github.com/user-attachments/assets/efd069ff-b443-42ca-83d7-f0793b4b250d" />
+  <img width="900" src="https://github.com/user-attachments/assets/1e3b6198-e376-4403-8302-c61270dd790f" />
 </p>
+
+Não queremos que a visualização do subViewport seja do tamanho da tela inteira, por isso optamos por $250 \times 250$. A ideia é que ele funcione como um mini visor retangular que nos permite ver outro aspecto da imagem enquanto passamos o visor sobre a imagem base (em outros contextos ele poderia ser uma lupa, uma câmera infra-vermelho, etc.). Devemos adicionar um node de câmera dentro do `SubViewport` e deixá-la posicionada na coordenada $(-250, -250)$. Com isso, temos o efeito desejado mostrado abaixo. O quadro do subviewport tem o papel de mostrar em alta resolução uma parte da imagem base (que é pixelada).
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/084879f2-f84e-49f5-b78b-cddf5e034b14" />
+</p>
+
+> PS: Dado o tamanho $(x, y)$ do subviewport, sempre colocamos a câmera na posição $(-x, -y)$ de modo a tê-la centralizada na tela do subviewport. 
+ 
+
