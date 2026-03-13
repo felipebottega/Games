@@ -23,7 +23,7 @@ Começamos criando uma cena com um `Node2D` contendo um `Sprite2D` (poderia ser 
    <img src="https://github.com/user-attachments/assets/b3bed145-6252-4128-9ce8-09054affcf03" width="270">
 </p>
 
-A aba *Diffuse* é para a figura do sprite normal, e a aba *NormalMap* é para a figura do normal map do sprite. A figura do normal map (até onde eu sei) é um PNG. Arraste as suas duas figuras para suas respectivas abas.
+A aba *Diffuse* é para a figura do sprite normal, e a aba *NormalMap* é para a figura do normal map do sprite. A figura do normal map é um PNG. Arraste as suas duas figuras para suas respectivas abas.
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/a4d0530a-6b8d-4ab9-b638-bd0146bc5200" width="270">
@@ -53,11 +53,11 @@ Como normal maps são figuras PNG, você pode simplesmente desenhar um na mão, 
 
 Abaixo segue um resumo dos itens básicos do programa para gerar seus normal maps.
 
-1. Importa o arquivo do sprite que você quer usar como base para gerar um normal map.
-2. Exporta o normal map para um PNG, é o ultimo botão que você vai utilizar após configurar seu normal map.
+1. Importe o arquivo do sprite que você quer usar como base para gerar um normal map.
+2. Exporte o normal map para um PNG, é o ultimo botão que você vai utilizar após configurar seu normal map.
 3. Parâmetros de altura e suavidade do seu normal map. Esses são os dois principais parâmetros que você deve ajustar na configuração do normal map.
 4. Visualização que você quer na tela principal (a que contém a figura no centro do programa). *Texture* mostra a figura original, *Normal Map* mostra o normal map associado e *Preview* mostra a figura original e uma fonte de luz interativa na tela para você testar. Só essas três opções são necessárias.
-5. Se vocÊ está no modo *Preview* de visualização, essas opções mudam os parâmetros da luz. Isso não afeta o normal map, apenas mostra como ele reage a diferentes tipos de luz.
+5. Se você está no modo *Preview* de visualização, essas opções mudam os parâmetros da luz. Isso não afeta o normal map, apenas mostra como ele reage a diferentes tipos de luz.
 6. Menu com os arquivos que você abriu até o momento. É possível abrir vários e inclusive testá-los em conjunto.
 
 ![image](https://github.com/user-attachments/assets/4c83e9f1-d0c5-4c84-b9cb-84c827566565)
