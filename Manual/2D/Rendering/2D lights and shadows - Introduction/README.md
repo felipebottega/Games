@@ -17,15 +17,13 @@ Além dos sprites anteriores, também incluímos um sprite para o fundo, outro d
 
 Na cena principal, também colocamos barreiras laterais invisíveis para que o jogador não saia da tela. Faça essas paredes invisíveis como `StaticBody2D` sem textura e fricção igual a zero. Abaixo temos uma visão geral de como está o projeto até o momento.
 
-## PointLight2D
-
-Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação.
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d0d6efb5-0519-426f-b46b-2d060fdfbbdd" width="700">
 </p>
 
-Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco pois eles não cobrem o seu pé quando ele ele estpa em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore de nods, coloque-a depois dos blocos e antes do Trevor.
+## PointLight2D
+
+Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação. Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco pois eles não cobrem o seu pé quando ele ele estpa em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore de nods, coloque-a depois dos blocos e antes do Trevor.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c905f6fa-3b7b-4ef5-a608-5dc69478f6f1" width="400">
