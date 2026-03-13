@@ -103,6 +103,12 @@ Para deixar este exemplo mais interessante, colocamos um background estático no
 
 Em *Inspector → SubViewport*, temos algumas propriedades que merecem uma atenção especial.
 
-- **SubViewport/Size:**
-- **SubViewport/Size 2D Override:**
-- **SubViewport/Size 2D Override Stretch:**
+- **SubViewport/Size:** Define o tamanho da tela do `SubViewport`. Caso ele seja filho de um `SubViewportContainer` e este esteja com a propriedade *stretch* habilitada, então é o tamanho dele que é usado.
+- **SubViewport/Size 2D Override:** Funciona como o "tamanho lógico 2D" usado para o sistema 2D. Se qualquer componente for 0, o override é desabilitado. 
+- **SubViewport/Size 2D Override Stretch:** Se for habilitada, este propriedade faz com que esse tamanho lógico 2D também seja usado no stretch. É como se o *size* fosse colocado para o tamanho definido pelo *Size 2D Override*.
+
+Por exemplo, se `size = Vector2i(1920, 1080)` e `size_2d_override  = Vector2i(640, 360)`, os nodes 2D (CanvasItems, controles, Camera2D, etc.) são posicionados/medidos como se a área fosse $640  \times 360$, mas o conteúdo é renderizado para a textura de $1920 \times 1080$. Isto é útil para: 
+
+- UI com escala uniforme
+- Pixel-art com escala controlada
+- Renderizar em alta resolução enquanto mantém layout 2D estável.
