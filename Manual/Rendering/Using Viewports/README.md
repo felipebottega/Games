@@ -2,7 +2,7 @@
 
 No [tabuleiro de Galton 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items) vimos que "canvas" representa todo o espaço 2D disponível na engine e "viewport" representa a tela visível do jogo. A noção de viewport não é apenas conceitual, existe o node `Viewport` na engine.
 
-O node `SubViewport` serve para criar e manipular telas extras no jogo. Pense nestas telas como áreas retangulares que podem ter texturas, podem receber inputs, áudio, etc. Elas funcionam como se fossem telas independentes que podem fazer tudo que um viewport comum faz. Algumas aplicações de `SubViewport` são:
+O node `SubViewport` serve para criar e manipular telas extras no jogo. Pense nestas telas como áreas retangulares que podem ter texturas (também chamadas de "render target" neste contexto), podem receber inputs, áudio, etc. Elas funcionam como se fossem telas independentes que podem fazer tudo que um viewport comum faz. Algumas aplicações de `SubViewport` são:
   
   - Renderizar objetos 3D em um jogo 2D
   - Renderizar objetos 2D em um jogo 3D
@@ -91,7 +91,7 @@ Sempre que você adiciona câmeras na cena, ela vai mostrar o conteúdo do prime
   <img width="200" src="https://github.com/user-attachments/assets/12aad556-b245-495f-8cc5-a3b619059f5b" />
 </p>
 
-> PS: Só pode haver uma câmera ativa por (sub)viewport. Caso você tenha múltiplas câmeras, é possível escolher qual ficará ativa com o comand `camera.make_current()`, em que `camera` a variável do node da câmera.
+> PS: Só pode haver uma câmera ativa por (sub)viewport. Caso você tenha múltiplas câmeras, é possível escolher qual ficará ativa com o comando `camera.make_current()`, em que `camera` a variável do node da câmera.
 
 Para deixar este exemplo mais interessante, colocamos um background estático no subviewport e fizemos o sprite se mover de uma manei mais interessante. Enquanto ele se move, a câmera do subviewport acompanha o movimento.
 
@@ -99,3 +99,10 @@ Para deixar este exemplo mais interessante, colocamos um background estático no
   <img width="600" src="https://github.com/user-attachments/assets/cbd75fd0-dc52-4ddc-b868-4cf4a9dc8294" />
 </p>
 
+## Size e stretch
+
+Em *Inspector → SubViewport*, temos algumas propriedades que merecem uma atenção especial.
+
+- **SubViewport/Size:**
+- **SubViewport/Size 2D Override:**
+- **SubViewport/Size 2D Override Stretch:**
