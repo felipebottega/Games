@@ -1,0 +1,201 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlen7c75vtq"]
+
+[ext_resource type="Script" uid="uid://48j0fpraonyv" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cjrw2eqlfmo6" path="res://test.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://f0t5mecim5nv" path="res://bg.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cyxgfw4ydkpnr" path="res://img4.png" id="4_1bvp3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_h2yge")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(636.99994, 511)
+scale = Vector2(3.698, 2.144)
+texture = ExtResource("2_h2yge")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(89, 37)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89.999985, 58.5)
+scale = Vector2(0.17578122, 0.17)
+texture = ExtResource("4_1bvp3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StretchMode" type="OptionButton" parent="CanvasLayer"]
+offset_left = 2.0000122
+offset_top = 84.00001
+offset_right = 135.00002
+offset_bottom = 115.00001
+selected = 1
+item_count = 3
+popup/item_0/text = "disabled"
+popup/item_0/id = 0
+popup/item_1/text = "canvas items"
+popup/item_1/id = 1
+popup/item_2/text = "viewport"
+popup/item_2/id = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/StretchMode"]
+modulate = Color(0, 0, 0.05882353, 1)
+layout_mode = 0
+offset_top = -24.047592
+offset_right = 112.99999
+offset_bottom = 22.952408
+theme_override_font_sizes/font_size = 15
+text = "Stretch Mode
+"
+
+[node name="BaseResolution" type="OptionButton" parent="CanvasLayer"]
+offset_left = 120.0
+offset_top = 120.00001
+offset_right = 225.0
+offset_bottom = 151.0
+selected = 0
+item_count = 6
+popup/item_0/text = "180x180"
+popup/item_0/id = 0
+popup/item_1/text = "360x360"
+popup/item_1/id = 1
+popup/item_2/text = "720x720"
+popup/item_2/id = 2
+popup/item_3/text = "360x720"
+popup/item_3/id = 3
+popup/item_4/text = "720x360"
+popup/item_4/id = 4
+popup/item_5/text = "1440x720"
+popup/item_5/id = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/BaseResolution"]
+modulate = Color(0, 0, 0.05882353, 1)
+layout_mode = 0
+offset_top = -22.083313
+offset_right = 112.99999
+offset_bottom = 22.916687
+theme_override_font_sizes/font_size = 15
+text = "Base"
+
+[node name="ScreenResolution" type="OptionButton" parent="CanvasLayer"]
+offset_left = 2.0
+offset_top = 121.00001
+offset_right = 107.0
+offset_bottom = 152.0
+selected = 5
+item_count = 6
+popup/item_0/text = "180x180"
+popup/item_0/id = 1
+popup/item_1/text = "360x360"
+popup/item_1/id = 2
+popup/item_2/text = "720x720"
+popup/item_2/id = 3
+popup/item_3/text = "360x720"
+popup/item_3/id = 5
+popup/item_4/text = "720x360"
+popup/item_4/id = 6
+popup/item_5/text = "1440x720"
+popup/item_5/id = 7
+
+[node name="Label" type="Label" parent="CanvasLayer/ScreenResolution"]
+modulate = Color(0, 0, 0.05882353, 1)
+layout_mode = 0
+offset_top = -22.083313
+offset_right = 112.99999
+offset_bottom = 22.916687
+theme_override_font_sizes/font_size = 15
+text = "Screen"
+
+[node name="Aspect" type="OptionButton" parent="CanvasLayer"]
+offset_left = 120.0
+offset_top = 159.00002
+offset_right = 243.0
+offset_bottom = 190.00002
+selected = 1
+item_count = 5
+popup/item_0/text = "ignore"
+popup/item_0/id = 0
+popup/item_1/text = "keep"
+popup/item_1/id = 1
+popup/item_2/text = "keep width"
+popup/item_2/id = 2
+popup/item_3/text = "keep height"
+popup/item_3/id = 3
+popup/item_4/text = "expand"
+popup/item_4/id = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Aspect"]
+modulate = Color(0, 0, 0.05882353, 1)
+layout_mode = 0
+offset_top = -24.047592
+offset_right = 112.99999
+offset_bottom = 22.952408
+theme_override_font_sizes/font_size = 15
+text = "Aspect
+"
+
+[node name="WindowMode" type="OptionButton" parent="CanvasLayer"]
+offset_left = 2.0000026
+offset_top = 159.00002
+offset_right = 125.0
+offset_bottom = 190.00002
+selected = 2
+item_count = 5
+popup/item_0/text = "windowed"
+popup/item_0/id = 0
+popup/item_1/text = "minimized"
+popup/item_1/id = 1
+popup/item_2/text = "maximized"
+popup/item_2/id = 2
+popup/item_3/text = "fullscreen"
+popup/item_3/id = 3
+popup/item_4/text = "e-fullscreen"
+popup/item_4/id = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/WindowMode"]
+modulate = Color(0, 0, 0.05882353, 1)
+layout_mode = 0
+offset_top = -22.083313
+offset_right = 112.99999
+offset_bottom = 22.916687
+theme_override_font_sizes/font_size = 15
+text = "Window Mode"
+
+[node name="ScaleMode" type="OptionButton" parent="CanvasLayer"]
+offset_left = 2.0
+offset_top = 201.0
+offset_right = 135.0
+offset_bottom = 232.0
+selected = 0
+item_count = 2
+popup/item_0/text = "fractional"
+popup/item_0/id = 0
+popup/item_1/text = "integer"
+popup/item_1/id = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/ScaleMode"]
+modulate = Color(0, 0, 0.05882353, 1)
+layout_mode = 0
+offset_top = -24.047592
+offset_right = 112.99999
+offset_bottom = 22.952408
+theme_override_font_sizes/font_size = 15
+text = "Scale Mode
+"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+modulate = Color(0.972549, 0.09019608, 0.039215688, 1)
+offset_left = 155.0
+offset_top = 216.0
+offset_right = 172.0
+offset_bottom = 232.0
+
+[connection signal="item_selected" from="CanvasLayer/StretchMode" to="." method="_on_stretch_mode_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/BaseResolution" to="." method="_on_base_resolution_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/ScreenResolution" to="." method="_on_screen_resolution_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/Aspect" to="." method="_on_aspect_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/WindowMode" to="." method="_on_window_mode_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/ScaleMode" to="." method="_on_scale_mode_item_selected"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
