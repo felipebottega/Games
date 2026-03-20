@@ -83,11 +83,11 @@ Na questão de movimento, também há diferenças entre o modo canvas items. O i
 
 Este parâmetro determina como o jogo é deformado para se encaixar no formato da tela mostra. Só tem efeito se o stretch mode não for *disabled*. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_aspect = i`, em que $i$ é um inteiro entre $0$ e $4$. Cada valor está associado a uma constante da engine também.
   
-  CONTENT_SCALE_ASPECT_IGNORE = 0
-  CONTENT_SCALE_ASPECT_KEEP = 1
-  CONTENT_SCALE_ASPECT_KEEP_WIDTH = 2
-  CONTENT_SCALE_ASPECT_KEEP_HEIGHT = 3
-  CONTENT_SCALE_ASPECT_EXPAND = 4
+    CONTENT_SCALE_ASPECT_IGNORE = 0
+    CONTENT_SCALE_ASPECT_KEEP = 1
+    CONTENT_SCALE_ASPECT_KEEP_WIDTH = 2
+    CONTENT_SCALE_ASPECT_KEEP_HEIGHT = 3
+    CONTENT_SCALE_ASPECT_EXPAND = 4
 
 - **Ignore:** Neste caso, o jogo vai deformar de modo a se encaixar perfeitamente na tela disponível. Se a tela não mantiver as proporções de largura e altura da resolução base, o jogo pode deformar de maneira desagradável. Na figura abaixo, a resolução base e a tela não tem as mesmas proporções, mas o aspect *ignore* ignora isso (como o próprio nome diz) e simplesmente faz a deformação necessária para o jogo ocupar a tela inteira.
 
@@ -123,8 +123,8 @@ Este parâmetro determina como o jogo é deformado para se encaixar no formato d
 
 Ao fazer o esticamento do jogo, o fator aplicado nas dimensões pode variar continuamente (modo *fractional*) ou variar nos inteiros (modo *integer*). O modo inteiro pode fazer mais sentido em pixel-art, pois mudanças fracionárias podem introduzir artefatos nos pixels. A escolha deste parâmetro também afeta como o parâmetro *scale* (ver abaixo) é alterado. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_stretch = i`, em que $i$ é um inteiro entre $0$ e $2$. Cada valor está associado a uma constante da engine também.
 
-  CONTENT_SCALE_STRETCH_FRACTIONAL = 0
-  CONTENT_SCALE_STRETCH_INTEGER = 1
+    CONTENT_SCALE_STRETCH_FRACTIONAL = 0
+    CONTENT_SCALE_STRETCH_INTEGER = 1
 
 ## Scale
 
