@@ -61,7 +61,7 @@ Note que no caso da tela cheia, tivemos um fundo branco que passou a ser cinza d
 
 - **Canvas Items:** Neste modo, o jogo primeiro é renderizado na sua resolução base. Se houver algum esticamento, ele simplesmente vai ampliar o jogo já renderizado. Se o seu jogo está em $640 \times 480$ e você coloca ele para rodar em tela cheia em um monitor de $1920 \times 1080$, ele vai renderizar em $640 \times 480$ e depois ampliar $1920 \times 1080$ sem aplicar nenhum algoritmo extra. Isso pode resultar em pixels grandes. Este modo é ideal quando você quer fidelidade à pixel-art do jogo.
 
-- **Viewport:** Neste modo, o jojo é renderizado na resolução target. Se houver algum esticamente, ele vai considerar a resolução ampliada e renderizar nesta dimensão. Se o seu jogo está em $640 \times 480$ e você coloca ele para rodar em tela cheia em um monitor de $1920 \times 1080$, ele vai renderizar em $1920 \times 1080$, o que pode envolver aplicar nenhum algoritmo extra de up-sampling, por exemplo. É possível inrtroduzir artefatos na pixel-art com este modo, mas ele garante mais qualidade geral para dimensões maiores que a resolução base.
+- **Viewport:** Neste modo, o jojo é renderizado na resolução target. Se houver algum esticamento, ele vai considerar a resolução ampliada e renderizar nesta dimensão. Se o seu jogo está em $640 \times 480$ e você coloca ele para rodar em tela cheia em um monitor de $1920 \times 1080$, ele vai renderizar em $1920 \times 1080$, o que pode envolver aplicar nenhum algoritmo extra de up-sampling, por exemplo. É possível inrtroduzir artefatos na pixel-art com este modo, mas ele garante mais qualidade geral para dimensões maiores que a resolução base.
 
 Na figura abaixo nós podemos ver claramente a diferença entre o modo canvas items e viewport. Para começar a análise, é importante mencionar que a resolução base é $180 \times 180$. O jogo está rodando em $1920 \times 720$, então a resolução está sendo aumentada em relação a original. Entre as duas imagens, a única diferença é o stretch mode, sendo canvas items na esquerda e viewport na direita. Toda a UI (*user interface*) é afetada por essa escolha, como podemos ver claramente. 
 
@@ -79,9 +79,15 @@ Apesar de não ser evidente, o quadriculado e logo da Godot também sofreram alt
 
 Na questão de movimento, também há diferenças entre o modo canvas items. O impulso inicial é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels com o up-scaling, enquanto que o viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo.
 
-## Aspect/Ignore
+## Aspect
 
-Este parâmetro determina como o jogo é deformado para se encaixar no formato da tela mostra. Só tem efeito se o stretch mode não for *disabled*.
+Este parâmetro determina como o jogo é deformado para se encaixar no formato da tela mostra. Só tem efeito se o stretch mode não for *disabled*. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_aspect = i`, em que $i$ é um inteiro entre $0$ e $4$. Cada valor está associado a uma constante da engine também.
+  
+  CONTENT_SCALE_ASPECT_IGNORE = 0
+  CONTENT_SCALE_ASPECT_KEEP = 1
+  CONTENT_SCALE_ASPECT_KEEP_WIDTH = 2
+  CONTENT_SCALE_ASPECT_KEEP_HEIGHT = 3
+  CONTENT_SCALE_ASPECT_EXPAND = 4
 
 - **Ignore:** Neste caso, o jogo vai deformar de modo a se encaixar perfeitamente na tela disponível. Se a tela não mantiver as proporções de largura e altura da resolução base, o jogo pode deformar de maneira desagradável. Na figura abaixo, a resolução base e a tela não tem as mesmas proporções, mas o aspect *ignore* ignora isso (como o próprio nome diz) e simplesmente faz a deformação necessária para o jogo ocupar a tela inteira.
 
@@ -113,3 +119,13 @@ Este parâmetro determina como o jogo é deformado para se encaixar no formato d
   <img width="600" src="https://github.com/user-attachments/assets/bdf3cd6c-1e07-4e2c-ad08-9ae07a0071a9" />
 </p>
 
+## Scale Mode
+
+Ao fazer o esticamento do jogo, o fator aplicado nas dimensões pode variar continuamente (modo *fractional*) ou variar nos inteiros (modo *integer*). O modo inteiro pode fazer mais sentido em pixel-art, pois mudanças fracionárias podem introduzir artefatos nos pixels. A escolha deste parâmetro também afeta como o parâmetro *scale* (ver abaixo) é alterado. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_stretch = i`, em que $i$ é um inteiro entre $0$ e $2$. Cada valor está associado a uma constante da engine também.
+
+  CONTENT_SCALE_STRETCH_FRACTIONAL = 0
+  CONTENT_SCALE_STRETCH_INTEGER = 1
+
+## Scale
+
+Esse parâmetro aplica um fator de esticamento extra no jogo. Todos os parâmetros mostrados acimas em conjunto já manipulam o esticamento como você quiser, mas este último parâmetro pode ser interessante para deixar o usuário apliocar um pouco mais ou menos de esticamento. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_factor = value = x`, em que $x$ é um float. 
