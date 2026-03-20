@@ -77,10 +77,39 @@ Apesar de não ser evidente, o quadriculado e logo da Godot também sofreram alt
 
 > PS: Você pode fazer um jogo inteiro utilizando assets de resolução alta em um viewport de resolução base mais baixa, de modo a ter duas opções de resolução no seu jogo. A figura acima indica isso. Porém, isso não é prático, pois é limitado a duas resoluções apenas. Para ter múltiplas resoluções, o indicado é usar o modo windowed e escolher alguma resolução dentre as várias opções (ou simplesmente esticar a janela, pois a engine ajusta a resolução automaticamente neste caso). Se você quiser múltiplas escolhas de resolução em fullscreen, é melhor usar subviewport. Veremos como fazer isso no próximo tutorial.
 
-Na questão de movimento, também há diferenças entre o modo canvas items e o viewport. olhando os vídeos abaixo, o impulso é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels para o up-scaling, enquanto que o viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo.
+Na questão de movimento, também há diferenças entre o modo canvas items. O impulso inicial é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels com o up-scaling, enquanto que o viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo.
 
 ## Aspect/Ignore
 
-Este parâmetro determina como a figura deforma e o que a tela mostra ao esticar. Só tem efeito se o stretch mode não for *disabled*.
+Este parâmetro determina como o jogo é deformado para se encaixar no formato da tela mostra. Só tem efeito se o stretch mode não for *disabled*.
 
-- **Ignore:** 
+- **Ignore:** Neste caso, o jogo vai deformar de modo a se encaixar perfeitamente na tela disponível. Se a tela não mantiver as proporções de largura e altura da resolução base, o jogo pode deformar de maneira desagradável. Na figura abaixo, a resolução base e a tela não tem as mesmas proporções, mas o aspect *ignore* ignora isso (como o próprio nome diz) e simplesmente faz a deformação necessária para o jogo ocupar a tela inteira.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/a2016300-afb9-48fe-91a5-e31ebe9ad89a" />
+</p>
+
+- **Keep:** Estica o jogo, mas mantém as proporções originais da resolução base. O que não puder ser preenchido, fica com um fundo preto.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/4d301636-9d92-4215-8712-7e2eb846c434" />
+</p>
+
+- **Keep Width:** Estica o jogo ao máximo que dá, limitado à largura. Em outras palavras, quando a engine estica até esse limite da largura, ela tem que parar o esticamento pois esticar mais iria desfazer as proporções originais da resolução base. Se tiver mais espaço sobrando para a altura preencher a tela, não haverá esticamento, mas será revelado o restanto do viewport até preencher a tela nesta direção.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/b631f724-a131-4892-a192-708ac8f0db32" />
+</p>
+
+- **Keep Height:** Semelhante ao *keep width*, mas em relação à altura. Na figura abaixo, note que o limite da altura foi atingido e, em vez de continuar o esticamento para a largura, a engine revelou mais do viewport nesta direção. É assim que o keep width/height funcionam, vão até onde dá em uma direção e continuam na outra revelando mais do viewport.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/b677b51f-11b2-428b-b3bc-c58cb31e5c6f" />
+</p>
+
+- **Expand:** Basicamente é *keep width + keep height*. A engine mantém as proporções originais da resolução base e apenas revela mais do viewport nas duas direções até ocupar a tela toda.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/bdf3cd6c-1e07-4e2c-ad08-9ae07a0071a9" />
+</p>
+
