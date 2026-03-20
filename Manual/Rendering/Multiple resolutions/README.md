@@ -128,4 +128,4 @@ Ao fazer o esticamento do jogo, o fator aplicado nas dimensões pode variar cont
 
 ## Scale
 
-Esse parâmetro aplica um fator de esticamento extra no jogo. Todos os parâmetros mostrados acimas em conjunto já manipulam o esticamento como você quiser, mas este último parâmetro pode ser interessante para deixar o usuário apliocar um pouco mais ou menos de esticamento. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_factor = value = x`, em que $x$ é um float. 
+Esse parâmetro aplica um fator de esticamento extra no jogo. Todos os parâmetros mostrados acimas em conjunto já manipulam o esticamento como você quiser, mas este último parâmetro pode ser interessante para deixar o usuário apliocar um pouco mais ou menos de esticamento. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_factor = x`, em que $x$ é um float. 
