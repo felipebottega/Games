@@ -4,14 +4,11 @@ extends Node2D
 var sprite
 
 
-#region ready
 func _ready() -> void:
 	sprite = $Sprite2D
 	sprite.visible = true
 	hud_adjust()
-#endregion 
 
-#region input
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_UP:
@@ -22,9 +19,7 @@ func _input(event: InputEvent) -> void:
 			sprite.position.x -= .2
 		elif event.keycode == KEY_RIGHT:
 			sprite.position.x += .2
-#endregion
 
-#region signals
 func hud_adjust():
 	await get_tree().process_frame
 	var vsize = get_viewport_rect().size
@@ -109,4 +104,3 @@ func _on_button_pressed() -> void:
 		sprite.visible = true
 		
 	hud_adjust()
-#endregion
