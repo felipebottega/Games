@@ -77,7 +77,9 @@ Apesar de não ser evidente, o quadriculado e logo da Godot também sofreram alt
 
 > PS: Você pode fazer um jogo inteiro utilizando assets de resolução alta em um viewport de resolução base mais baixa, de modo a ter duas opções de resolução no seu jogo. A figura acima indica isso. Porém, isso não é prático, pois é limitado a duas resoluções apenas. Para ter múltiplas resoluções, o indicado é usar o modo windowed e escolher alguma resolução dentre as várias opções (ou simplesmente esticar a janela, pois a engine ajusta a resolução automaticamente neste caso). Se você quiser múltiplas escolhas de resolução em fullscreen, é melhor usar subviewport. Veremos como fazer isso no próximo tutorial.
 
-Na questão de movimento, também há diferenças entre o modo canvas items. O impulso inicial é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels com o up-scaling, enquanto que o viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo.
+Na questão de movimento, também há diferenças entre o modo canvas items. O impulso inicial é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels com o up-scaling, enquanto que o viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo. 
+
+Você pode testar estes efeitos no [jogo associado a este projeto](https://felipebottega.github.io/Games/Manual/Rendering/Multiple%20resolutions/html/), os direcionais movem a figura. Porém, como ele foi exportado para web, não é possível testar todas as funcionalidades discutidas aqui. Caso queira testar tudo, é melhor baixar o projeto e executar na própria engine.
 
 ## Aspect
 
