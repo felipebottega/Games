@@ -17,3 +17,14 @@ Cada animal possui sua própria cena, que é um `CharacterBody2D`. O template ge
 </p>
 
 > PS: Não coloquei a colisão dentro do `Node2D` para receber o mesmo flip porque não é recomendado mudar escala de [objetos físicos](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#mudan%C3%A7a-de-escala-e-f%C3%ADsica).
+
+## Navegação
+
+O único animal que possui uma estrutura é a ovelha, pois esta precisa de um sistema de navegação. Sendo assim, ela possui um node `NavigationAgent2D`. O script associado é bem semelhante aos que vimos nos tutoriais de navegação de [agentes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents) e [links](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLinks). Recomendo dar uma revisada.
+
+<p align="center">
+  <img width="190" src="https://github.com/user-attachments/assets/29dc25ba-3149-4229-9fb7-1b991208a686" />
+  <img width="310" src="https://github.com/user-attachments/assets/393d2ab2-872e-4e4b-9330-c006a0bd63a2" />
+  <img width="500" src="https://github.com/user-attachments/assets/3ec4d4eb-5762-4a32-a0ab-62cd10884bed" />
+  <img width="500" src="https://github.com/user-attachments/assets/28f8a4ca-fb83-4b99-834c-0afe7a1c5aaf" />
+</p>
