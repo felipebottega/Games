@@ -27,7 +27,7 @@ Para criar um `NavigationLink2D` funcional, primeiro coloque este node da cena e
 
 Isso ainda não será o suficiente para o agente percorrer o caminho do link. É necessário definir como ele vai percorrer esse caminho, e isso deve ser feito pelo desenvolvedor. A Godot não tem rotinas prontas para percorrer estes links. 
 
-Primeiramente, é necessário que o servidor saiba que o ponto inicial do link foi atingido. Isto é feito através de um sinal emitido pelo agente. A partir deste sinal, decidimos no código o que o agente irá fazer. Existem várias possibilidades e cada uma pode ser implementada de diversas maneiras diferentes. Vou apresentar uma possibilidade simples aqui. Neste exemplo, a função do sinal extrai as posições inicial e final do link e altera uma flag que comunica ao programa que o agente deve se começar a travessia pelo link agora.
+Primeiramente, é necessário que o servidor saiba que o ponto inicial do link foi atingido. Isto é feito através de um sinal emitido pelo agente. A partir deste sinal, decidimos no código o que o agente irá fazer. Existem várias possibilidades e cada uma pode ser implementada de diversas maneiras diferentes. Vou apresentar uma possibilidade simples aqui. Neste exemplo, a função do sinal extrai as posições inicial e final do link e altera uma flag que comunica ao programa que o agente deve começar a travessia pelo link agora.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/51f34bc8-fa04-47ad-98eb-99fa86bbd16b" />
