@@ -28,3 +28,26 @@ O único animal que possui uma estrutura é a ovelha, pois esta precisa de um si
   <img width="500" src="https://github.com/user-attachments/assets/3ec4d4eb-5762-4a32-a0ab-62cd10884bed" />
   <img width="500" src="https://github.com/user-attachments/assets/28f8a4ca-fb83-4b99-834c-0afe7a1c5aaf" />
 </p>
+
+## Subviewport
+
+Agora vamos criar o visor que consegue identificar as ovelhas falsas. Vamos seguir o mesmo procedimento feito no terceiro exemplo do [tutorial de subviewport](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#efeito-raio-x-com-a-c%C3%A2mera). Neste caso o "raio-X" servirá para separar ovelhas verdadeiras de falsas. 
+
+Começamos criando um retângulo no GIMP. Este retângulo tem uma borda e um interior com cor e transparência. Seria possível ter o mesmo efeito usando as ferramentas da engine, mas achei mais prático fazer isso pelo GIMP. Podemos ver na figura abaixo o retângulo no GIMP à esquerda e o efeito desejado em prática na direita.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/11bda2c9-7579-4263-a5fa-5a7e7e5debde" />
+  <img width="300" src="https://github.com/user-attachments/assets/784e00c9-70d9-42c3-a11a-e0e009b701bc" />
+</p>
+
+O container do subviewport foi colocado ao fim da cena do level. O script segue a mesma ideia do script do tutorial mencionado acima. O desafio foi implementar a lógica de uma ovelha vermelha espelhando o comportamento da ovelha original da cena. Os códigos abaixo contém tudo que foi necessário para atingir este resultado.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/f4ffcea7-4aa6-4aa5-96ce-e0e4662d8ea4" />
+  <img width="400" src="https://github.com/user-attachments/assets/8af90b8c-2ce3-4f27-b1d0-3eadb3a26250" />
+  <img width="400" src="https://github.com/user-attachments/assets/5f0868f4-9ec4-44bb-826f-78d1443f40d8" />
+  <img width="500" src="https://github.com/user-attachments/assets/981e305a-5619-4ada-95d6-4254af2984c4" />
+  <img width="500" src="https://github.com/user-attachments/assets/6b7ff079-2ab7-4d8f-9596-fe43033b62bc" />
+</p>
+
+> PS: No Godot, `set_meta`, `get_meta` e `has_meta` são uma forma de você anexar dados arbitrários a qualquer node, sem precisar declarar variáveis no script. Considere como um dicionário escondido dentro do node. No nosso caso, usamos `mirror.set_meta("target_node", instance)`. Isso pode ser lido como "Essa ovelha aqui é um espelho, e o original dela é esse *instance*". Depois, no script, usamos `var target = get_meta("target_node")`. Ou seja, se tem *target_node*, é espelho, caso contrário é uma ovelha normal. Essa lógica poderia ser feita com uma variável booleana, mas aí o trabalho seria muito mais manual e propenso a erros.
