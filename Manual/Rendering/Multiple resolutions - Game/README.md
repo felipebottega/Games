@@ -51,3 +51,5 @@ O container do subviewport foi colocado ao fim da cena do level. O script segue 
 </p>
 
 > PS: No Godot, `set_meta`, `get_meta` e `has_meta` são uma forma de você anexar dados arbitrários a qualquer node, sem precisar declarar variáveis no script. Considere como um dicionário escondido dentro do node. No nosso caso, usamos `mirror.set_meta("target_node", instance)`. Isso pode ser lido como "Essa ovelha aqui é um espelho, e o original dela é esse *instance*". Depois, no script, usamos `var target = get_meta("target_node")`. Ou seja, se tem *target_node*, é espelho, caso contrário é uma ovelha normal. Essa lógica poderia ser feita com uma variável booleana, mas aí o trabalho seria muito mais manual e propenso a erros.
+
+⚠️ Atenção: Duplicar nodes, como fizemos aqui, não é a maneira mais eficiente de se resolver o desafio deste jogo. Isso foi feito pois ficou mais direto o uso de subviewport dessa maneira, e a ideia era usar subviewport como exemplo de aplicação.
