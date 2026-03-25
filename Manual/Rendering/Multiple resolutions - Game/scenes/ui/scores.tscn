@@ -1,79 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnovfxrhfeetx"]
+[gd_scene load_steps=13 format=3 uid="uid://bnovfxrhfeetx"]
 
 [ext_resource type="Script" uid="uid://bifb1hyd1pugv" path="res://scripts/ui/scores.gd" id="1_7grln"]
 [ext_resource type="Texture2D" uid="uid://di046pk5rlu4y" path="res://assets/graphics/ui/board.png" id="2_mrl46"]
 [ext_resource type="FontFile" uid="uid://btnt8qwddeemd" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_8evrt"]
+[ext_resource type="FontFile" uid="uid://byjdr5hxshxft" path="res://assets/fonts/NotoEmoji-VariableFont_wght.ttf" id="3_ewlgj"]
 [ext_resource type="Texture2D" uid="uid://1hibmxirr2jl" path="res://assets/graphics/ui/stamp_approved.png" id="4_s3lfw"]
 [ext_resource type="Texture2D" uid="uid://xlsh4oke6r03" path="res://assets/graphics/ui/stamp_failed.png" id="5_ewlgj"]
 [ext_resource type="AudioStream" uid="uid://dbog5tc30uckx" path="res://assets/audio/sfx/approved.mp3" id="6_fjeyd"]
 [ext_resource type="AudioStream" uid="uid://373jqp7us34i" path="res://assets/audio/sfx/failed.mp3" id="7_fhfn0"]
-
-[sub_resource type="Animation" id="Animation_rg46w"]
-resource_name = "approved"
-length = 7.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Approved:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Approved:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 1.2, 2.6, 3.3666666, 4.7666664, 5.5666666, 6.966666),
-"transitions": PackedFloat32Array(5.4641595, 0.22531238, 1, 0.22531238, 1, 0.22531238, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "audio"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("6_fjeyd")
-}],
-"times": PackedFloat32Array(0.5)
-}
-tracks/2/use_blend = true
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Approved:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1500, 800)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Approved:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.5, 0.5)]
-}
 
 [sub_resource type="Animation" id="Animation_qp764"]
 length = 0.001
@@ -174,6 +108,73 @@ tracks/7/keys = {
 "values": [Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_rg46w"]
+resource_name = "approved"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Approved:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Approved:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.2, 2.6, 3.3666666, 4.7666664, 5.5666666, 6.966666),
+"transitions": PackedFloat32Array(5.4641595, 0.22531238, 1, 0.22531238, 1, 0.22531238, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_fjeyd")
+}],
+"times": PackedFloat32Array(0.5)
+}
+tracks/2/use_blend = true
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Approved:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1500, 800)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Approved:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
 [sub_resource type="Animation" id="Animation_ojdfy"]
 resource_name = "failed"
 length = 7.0
@@ -260,7 +261,7 @@ texture = ExtResource("2_mrl46")
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0.0022057225, 0.002299913, 0.06208703, 1)
-theme_override_fonts/font = ExtResource("3_8evrt")
+theme_override_fonts/font = ExtResource("3_ewlgj")
 theme_override_font_sizes/font_size = 70
 text = "Capturados: 
 
