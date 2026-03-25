@@ -10,19 +10,26 @@ config_version=5
 
 [application]
 
-config/name="Multiple resolutions"
-run/main_scene="uid://dlen7c75vtq"
+config/name="Multiple resolutions - Game"
+run/main_scene="uid://rn5k6o5y6ilt"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*res://autoload/game_state.gd"
+
 [display]
 
-window/size/viewport_width=180
-window/size/viewport_height=180
-window/size/mode=2
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=4
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://oqj4t2qd06mc"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

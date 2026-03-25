@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://ch6w057mklqk"]
+
+[ext_resource type="Script" uid="uid://nbm6vsd6cv7u" path="res://scripts/characters/horse.gd" id="1_46ivy"]
+[ext_resource type="Texture2D" uid="uid://tp08sh0fgp5g" path="res://assets/graphics/characters/horse.png" id="1_gjixc"]
+[ext_resource type="Texture2D" uid="uid://bd1acnlx4mpbs" path="res://assets/graphics/environment/shadow.png" id="1_rb3we"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rb3we"]
+atlas = ExtResource("1_gjixc")
+region = Rect2(58, 1, 350, 248)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46ivy"]
+atlas = ExtResource("1_gjixc")
+region = Rect2(1108, 1, 350, 248)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wd1qk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rb3we")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46ivy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb3we"]
+size = Vector2(219, 143)
+
+[node name="Horse" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_46ivy")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(10.499987, 108)
+scale = Vector2(1.4511718, 0.3046875)
+texture = ExtResource("1_rb3we")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_wd1qk")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.5666288
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_rb3we")

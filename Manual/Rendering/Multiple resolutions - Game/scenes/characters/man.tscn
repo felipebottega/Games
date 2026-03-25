@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt2xqjpp6doci"]
+
+[ext_resource type="Texture2D" uid="uid://c7sgw7njccawr" path="res://assets/graphics/characters/man.png" id="1_b6rvh"]
+[ext_resource type="Texture2D" uid="uid://bd1acnlx4mpbs" path="res://assets/graphics/environment/shadow.png" id="1_sh04m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh04m"]
+atlas = ExtResource("1_b6rvh")
+region = Rect2(65, 22, 344, 322)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe7yw"]
+atlas = ExtResource("1_b6rvh")
+region = Rect2(1097, 22, 344, 322)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ltdq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh04m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xe7yw")
+}],
+"loop": true,
+"name": &"play",
+"speed": 4.0
+}]
+
+[node name="Man" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(26.500017, 140.5)
+scale = Vector2(1.3105469, 0.3105469)
+texture = ExtResource("1_sh04m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4ltdq")
+animation = &"play"
+autoplay = "play"
+frame_progress = 0.35778064

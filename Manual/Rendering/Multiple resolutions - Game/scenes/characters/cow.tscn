@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://8v5t5dcj53km"]
+
+[ext_resource type="Script" uid="uid://d232iegcpbpxk" path="res://scripts/characters/cow.gd" id="1_tkm6w"]
+[ext_resource type="Texture2D" uid="uid://bd1acnlx4mpbs" path="res://assets/graphics/environment/shadow.png" id="1_y67nu"]
+[ext_resource type="Texture2D" uid="uid://bglmtccqr6gfl" path="res://assets/graphics/characters/cow.png" id="1_yaibl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y67nu"]
+atlas = ExtResource("1_yaibl")
+region = Rect2(28, 0, 364, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkm6w"]
+atlas = ExtResource("1_yaibl")
+region = Rect2(392, 0, 364, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n01cx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y67nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkm6w")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y67nu"]
+size = Vector2(226.5, 115)
+
+[node name="Cow" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_tkm6w")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(22.999977, 106)
+scale = Vector2(1.5273438, 0.41015625)
+texture = ExtResource("1_y67nu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_n01cx")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.8401703
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23.25, 15.5)
+shape = SubResource("RectangleShape2D_y67nu")

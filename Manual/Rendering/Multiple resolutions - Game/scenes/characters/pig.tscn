@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfre0sfkmvbnj"]
+
+[ext_resource type="Texture2D" uid="uid://ba1s6bdxrsf57" path="res://assets/graphics/characters/pig.png" id="1_8ajs1"]
+[ext_resource type="Texture2D" uid="uid://bd1acnlx4mpbs" path="res://assets/graphics/environment/shadow.png" id="1_dxn0v"]
+[ext_resource type="Script" uid="uid://d232iegcpbpxk" path="res://scripts/characters/cow.gd" id="1_xk45r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxn0v"]
+atlas = ExtResource("1_8ajs1")
+region = Rect2(45, 0, 342, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk45r"]
+atlas = ExtResource("1_8ajs1")
+region = Rect2(1071, 0, 342, 274)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wy6h0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxn0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk45r")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxn0v"]
+size = Vector2(213, 86)
+
+[node name="Pig" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_xk45r")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(38.000042, 94)
+scale = Vector2(1.3320313, 0.28124997)
+texture = ExtResource("1_dxn0v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_wy6h0")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.5208643
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(38.5, 38)
+shape = SubResource("RectangleShape2D_dxn0v")

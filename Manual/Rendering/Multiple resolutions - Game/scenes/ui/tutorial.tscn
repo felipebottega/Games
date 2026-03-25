@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c67hqwhthom6o"]
+
+[ext_resource type="Texture2D" uid="uid://o1df5mlllv8l" path="res://assets/graphics/ui/tutorial.png" id="1_k8r76"]
+[ext_resource type="Script" uid="uid://cgkypwi33sltp" path="res://scripts/ui/tutorial.gd" id="1_xlqdv"]
+[ext_resource type="FontFile" uid="uid://btnt8qwddeemd" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_6e533"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xlqdv"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_xlqdv")
+metadata/_edit_horizontal_guides_ = [1009.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("ViewportTexture_xlqdv")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1920, 1080)
+size_2d_override = Vector2i(1920, 1080)
+size_2d_override_stretch = true
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport"]
+position = Vector2(960, 540)
+texture = ExtResource("1_k8r76")
+
+[node name="Continue" type="Label" parent="."]
+offset_left = 1511.0
+offset_top = 977.0
+offset_right = 1958.0
+offset_bottom = 1029.0
+theme_override_fonts/font = ExtResource("3_6e533")
+theme_override_font_sizes/font_size = 26
+text = "Clique para começar"

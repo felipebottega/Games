@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://cg2engqw5t0cc"]
+
+[ext_resource type="Texture2D" uid="uid://cdaogch1neo8j" path="res://assets/graphics/characters/sheep.png" id="1_adgig"]
+[ext_resource type="Texture2D" uid="uid://bd1acnlx4mpbs" path="res://assets/graphics/environment/shadow.png" id="1_htqfo"]
+[ext_resource type="Script" uid="uid://dwnh6yek4wib4" path="res://scripts/characters/sheep.gd" id="1_tvjqo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htqfo"]
+atlas = ExtResource("1_adgig")
+region = Rect2(28, 0, 346, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvjqo"]
+atlas = ExtResource("1_adgig")
+region = Rect2(374, 0, 346, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vp1pl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htqfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvjqo")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htqfo"]
+size = Vector2(97, 71)
+
+[node name="Sheep" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 4
+collision_mask = 5
+motion_mode = 1
+script = ExtResource("1_tvjqo")
+speed_variance = 2.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(51.5, 115.5)
+scale = Vector2(1.3847656, 0.27929688)
+texture = ExtResource("1_htqfo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_vp1pl")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.09242401
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_htqfo")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 30.0
+neighbor_distance = 100.0
+max_neighbors = 5
+time_horizon_agents = 10.0
+max_speed = 200.0
+debug_path_custom_color = Color(1, 0.33890283, 1, 1)
+
+[connection signal="link_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_link_reached"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]

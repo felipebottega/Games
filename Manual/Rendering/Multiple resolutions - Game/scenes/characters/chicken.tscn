@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlaxc37y146lc"]
+
+[ext_resource type="Texture2D" uid="uid://bd1acnlx4mpbs" path="res://assets/graphics/environment/shadow.png" id="1_45guq"]
+[ext_resource type="Texture2D" uid="uid://hy1as8282cs3" path="res://assets/graphics/characters/chicken.png" id="1_nxyq4"]
+[ext_resource type="Script" uid="uid://4l6bmvmaa8ot" path="res://scripts/characters/chicken.gd" id="1_yh4hm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45guq"]
+atlas = ExtResource("1_nxyq4")
+region = Rect2(28, 0, 334, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yh4hm"]
+atlas = ExtResource("1_nxyq4")
+region = Rect2(362, 0, 334, 341)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qkxpq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45guq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yh4hm")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45guq"]
+size = Vector2(154, 180)
+
+[node name="Chicken" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_yh4hm")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(52.5, 106.5)
+scale = Vector2(1.0644531, 0.33789063)
+texture = ExtResource("1_45guq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_qkxpq")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.60725754
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(38, -16)
+shape = SubResource("RectangleShape2D_45guq")

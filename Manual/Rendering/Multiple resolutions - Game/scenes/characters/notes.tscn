@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://biiceeevbaw24"]
+
+[ext_resource type="Texture2D" uid="uid://dbge2jpyd1cfd" path="res://assets/graphics/characters/notes.png" id="1_cp0uy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyyp8"]
+atlas = ExtResource("1_cp0uy")
+region = Rect2(0, 0, 376, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj8cc"]
+atlas = ExtResource("1_cp0uy")
+region = Rect2(376, 0, 376, 315)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u2us2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyyp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dj8cc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Notes" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u2us2")
+autoplay = "default"
+frame_progress = 0.12273224

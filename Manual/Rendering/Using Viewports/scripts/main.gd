@@ -14,7 +14,7 @@ func _on_example_3_pressed() -> void:
 	free_scene()
 	load_scene("third_example")
 
-func free_scene():	
+func free_scene():
 	for child in subviewport.get_children():
 		child.queue_free()
 		
