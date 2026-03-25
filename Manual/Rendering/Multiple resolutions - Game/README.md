@@ -53,3 +53,33 @@ O container do subviewport foi colocado ao fim da cena do level. O script segue 
 > PS: No Godot, `set_meta`, `get_meta` e `has_meta` são uma forma de você anexar dados arbitrários a qualquer node, sem precisar declarar variáveis no script. Considere como um dicionário escondido dentro do node. No nosso caso, usamos `mirror.set_meta("target_node", instance)`. Isso pode ser lido como "Essa ovelha aqui é um espelho, e o original dela é esse *instance*". Depois, no script, usamos `var target = get_meta("target_node")`. Ou seja, se tem *target_node*, é espelho, caso contrário é uma ovelha normal. Essa lógica poderia ser feita com uma variável booleana, mas aí o trabalho seria muito mais manual e propenso a erros.
 
 ⚠️ Atenção: Duplicar nodes, como fizemos aqui, não é a maneira mais eficiente de se resolver esta questão da ovelha do subviewport. Isso foi feito pois ficou mais direto o uso de subviewport dessa maneira, e a ideia era usar subviewport como exemplo de aplicação.
+
+## Resolução
+
+Para finalizar, vamos abordar o principal objetivo deste jogo, que é a inclusão de opções de resolução. A configuração inicial do jogo é de $1920 \times 1080$, com tela cheia, modo *canvas_items* e *aspect* como *expand* (veja o [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions) para saber o que essas propriedades fazem).
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/ed23f5eb-580d-4896-97c9-24d557a37b5d" />
+</p>
+
+A árvore da cena Main segue a estrutura mostrada abaixo. Para implementar a resolução, devemos criar um `TextureRect`. Logo após isso, vá em *Inspector → Texture → Transform → Size* e coloque o `TextureRect` na resolução base do viewport, $1920 \times 1080$. Feito isso, vá em *Inspector → Texture → ViewportTexture* e selecionar o node `SubViewport`. Este node deve conter todas as texturas que irão sofrer o processo de mudança de resolução. Note que deixamos o HUD de fora disso, mas é opcional.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/6c363a82-0dee-4409-aa12-572a56a6f48d" />
+  <img width="300" src="https://github.com/user-attachments/assets/cbaedb03-dc4a-49d1-8832-e45414ed212f" />
+  <img width="250" src="https://github.com/user-attachments/assets/9f32604a-1545-4a22-b11b-d88221200fa2" />
+</p>
+
+> PS: É importante arrumar o *size* do `TextureRect` antes de tudo, senão você vai ter problemas para entender o que está acontecendo depois. Se adicionar o `SubViewport` ao `TextureRect` sem fazer essa etapa, ele vai apreencher o *size* automaticamente com os valores corretos, mas internamente a engine vai entender que é para diminiuir a imagem em vez de alterar a sua resolução.
+
+O projeto recebeu um script global, chamado *game_state.gd* (primeira imagem abaixo à esquerda). Ele apenas armazena algumas variáveis globais do jogo. Note que o jogo começa com a resolução baixa de $240 \times 135$, isto é apenas para fazer o jogador ter que ir nas configurações e trocar (o que é o propósito de todo este projeto, basicamente). Os dois trechos de script mostrados à direita são da cena Main. Um mostrando a inicialização do jogo com a resolução global. O outro mostrando como as alterações de configuração emitem sinais que alteram a resolução e modo de visualização.  
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/688f38fa-2a18-44f3-876a-f4cd8d26a593" />
+  <img width="400" src="https://github.com/user-attachments/assets/01d1a3bc-23db-452f-8f61-ebfcabba633d" />
+  <img width="690" height="234" alt="image" src="https://github.com/user-attachments/assets/5ac1060e-66e6-44b3-82a9-b9c8b1bffb22" />
+</p>
+
+A função `DisplayServer.window_set_mode()` é geral do projeto, então não importa em qual cena ela é alterada, vai alterar e vai se manter pelo jogo inteiro. O mesmo não vale para a resolução. Precisamos replicar a estrutura de `TextureRect` e `SubViewport` em todas as cenas que são afetadas pela mudança de resolução. Provavelmente deve ser mais interessante rodar o jogo inteiro numa única cena Main com essa estrutura, mas por enquanto estamos no esquema de troca de cenas ainda. Para um jogo pequeno como este, não tem problema.
+
+Acesse [este link]() para conferir como ficou o jogo!
