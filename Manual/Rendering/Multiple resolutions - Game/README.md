@@ -80,6 +80,12 @@ O projeto recebeu um script global, chamado *game_state.gd* (primeira imagem aba
   <img width="540" src="https://github.com/user-attachments/assets/5ac1060e-66e6-44b3-82a9-b9c8b1bffb22" />
 </p>
 
+O `SubViewport` deve estar configurado com a resolução máxima e a propriedade *Size 2D Override* ativada e também na resolução máxima. Recomendo dar uma relembrada [nesta propriedade](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#size-e-stretch) para entender o que ela faz.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/bfe2245b-737f-447a-93bf-cffcd8e02fe7" />
+</p>
+
 A função `DisplayServer.window_set_mode()` é geral do projeto, então não importa em qual cena ela é alterada, vai alterar e vai se manter pelo jogo inteiro. O mesmo não vale para a resolução. Precisamos replicar a estrutura de `TextureRect` e `SubViewport` em todas as cenas que são afetadas pela mudança de resolução. Provavelmente deve ser mais interessante rodar o jogo inteiro numa única cena Main com essa estrutura, mas por enquanto estamos no esquema de troca de cenas ainda. Para um jogo pequeno como este, não tem problema.
 
 Acesse [este link]() para conferir como ficou o jogo!
