@@ -75,9 +75,9 @@ A árvore da cena Main segue a estrutura mostrada abaixo. Para implementar a res
 O projeto recebeu um script global, chamado *game_state.gd* (primeira imagem abaixo à esquerda). Ele apenas armazena algumas variáveis globais do jogo. Note que o jogo começa com a resolução baixa de $240 \times 135$, isto é apenas para fazer o jogador ter que ir nas configurações e trocar (o que é o propósito de todo este projeto, basicamente). Os dois trechos de script mostrados à direita são da cena Main. Um mostrando a inicialização do jogo com a resolução global. O outro mostrando como as alterações de configuração emitem sinais que alteram a resolução e modo de visualização.  
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/688f38fa-2a18-44f3-876a-f4cd8d26a593" />
-  <img width="400" src="https://github.com/user-attachments/assets/01d1a3bc-23db-452f-8f61-ebfcabba633d" />
-  <img width="690" height="234" alt="image" src="https://github.com/user-attachments/assets/5ac1060e-66e6-44b3-82a9-b9c8b1bffb22" />
+  <img width="210" src="https://github.com/user-attachments/assets/688f38fa-2a18-44f3-876a-f4cd8d26a593" />
+  <img width="520" src="https://github.com/user-attachments/assets/01d1a3bc-23db-452f-8f61-ebfcabba633d" />
+  <img width="540" src="https://github.com/user-attachments/assets/5ac1060e-66e6-44b3-82a9-b9c8b1bffb22" />
 </p>
 
 A função `DisplayServer.window_set_mode()` é geral do projeto, então não importa em qual cena ela é alterada, vai alterar e vai se manter pelo jogo inteiro. O mesmo não vale para a resolução. Precisamos replicar a estrutura de `TextureRect` e `SubViewport` em todas as cenas que são afetadas pela mudança de resolução. Provavelmente deve ser mais interessante rodar o jogo inteiro numa única cena Main com essa estrutura, mas por enquanto estamos no esquema de troca de cenas ainda. Para um jogo pequeno como este, não tem problema.
