@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bnovfxrhfeetx"]
+[gd_scene load_steps=12 format=3 uid="uid://bnovfxrhfeetx"]
 
 [ext_resource type="Script" uid="uid://bifb1hyd1pugv" path="res://scripts/ui/scores.gd" id="1_7grln"]
 [ext_resource type="Texture2D" uid="uid://di046pk5rlu4y" path="res://assets/graphics/ui/board.png" id="2_mrl46"]
 [ext_resource type="FontFile" uid="uid://btnt8qwddeemd" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_8evrt"]
-[ext_resource type="FontFile" uid="uid://2pk27od6jf4e" path="res://assets/fonts/NotoEmoji-Regular.ttf" id="3_ewlgj"]
 [ext_resource type="Texture2D" uid="uid://1hibmxirr2jl" path="res://assets/graphics/ui/stamp_approved.png" id="4_s3lfw"]
 [ext_resource type="Texture2D" uid="uid://xlsh4oke6r03" path="res://assets/graphics/ui/stamp_failed.png" id="5_ewlgj"]
 [ext_resource type="AudioStream" uid="uid://dbog5tc30uckx" path="res://assets/audio/sfx/approved.mp3" id="6_fjeyd"]
@@ -261,7 +260,7 @@ texture = ExtResource("2_mrl46")
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0.0022057225, 0.002299913, 0.06208703, 1)
-theme_override_fonts/font = ExtResource("3_ewlgj")
+theme_override_fonts/font = ExtResource("3_8evrt")
 theme_override_font_sizes/font_size = 70
 text = "Capturados: 
 
