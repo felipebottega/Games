@@ -1,0 +1,1 @@
+# Fixing jitter, stutter and input lag
