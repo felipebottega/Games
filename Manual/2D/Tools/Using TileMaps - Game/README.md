@@ -31,7 +31,7 @@ res://
 │   └── system/                 # Cenas de controle geral (loader, pausas, cenas utilitárias, carregamento)
 │
 ├── scripts/                    # Scripts alinhados com as cenas
-│   ├── game/                   # Scripts gerais do gameplay
+│   ├── game/                   # Scripts gerais de gameplay
 │   │   ├── levels/             # Scripts para fases e mapas
 │   │   ├── objects/            # Lógica de objetos do jogo
 │   │   └── items/              # Lógica de itens coletáveis
