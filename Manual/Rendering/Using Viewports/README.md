@@ -103,9 +103,9 @@ Para deixar este exemplo mais interessante, colocamos um background estático no
 
 ## World
 
-Em Godot, o `World2D` (`World3D`) é o "ambiente de simulação" ligado a um viewport, ele reúne o que faz aquele conteúdo existir e funcionar ali, como renderização/canvas, física e áudio espacial. Já o viewport é a "tela" em si, a superfície onde o jogo é projetado. Se dois viewports usam o mesmo `World2D`, eles enxergam a mesma física/canvas desse mundo. Se usam mundos diferentes, cada um fica isolado. Em 2D, cada viewport já vem com seu próprio `World2D` por default, mas em 3D o default é todos usarem o mesmo `World3D`. Importante ressaltar que é possível alterar este comportamento nos dois casos.
+Em Godot, o `World2D` (`World3D`) é o "ambiente de simulação" ligado a um viewport, ele reúne o que faz aquele conteúdo existir e funcionar ali, como renderização/canvas, física e áudio espacial. Já o viewport é a "tela" em si, a superfície onde o jogo é projetado. Se dois viewports usam o mesmo `World2D`, eles enxergam a mesma física/canvas desse mundo. Se usam mundos diferentes, cada um fica isolado. Em 2D, cada viewport já vem com seu próprio `World2D` por default, mas em 3D o default é todos usarem o mesmo `World3D`. É possível alterar este comportamento nos dois casos.
 
-Por exemplo, você pode ter várias câmeras olhando para o mesmo mundo, cada uma com uma "interpretação visual" diferente. Se dois viewports compartilham o mesmo `World2D`, eles estão enxergando os mesmos nodes (`Node2D`, `PhysicsBody2D`, etc.), a mesma simulação de física, o mesmo estado do jogo. A única coisa que muda é como esse mundo é renderizado, ou seja, a câmera e os efeitos.
+Um exemplo de aplicação: Você pode ter várias câmeras olhando para o mesmo mundo, cada uma com uma "interpretação visual" diferente. Se dois viewports compartilham o mesmo `World2D`, eles estão enxergando os mesmos nodes (`Node2D`, `PhysicsBody2D`, etc.), a mesma simulação de física, o mesmo estado do jogo. A única coisa que muda é como esse mundo é renderizado, ou seja, a câmera e os efeitos.
 
 ## Size e stretch
 
