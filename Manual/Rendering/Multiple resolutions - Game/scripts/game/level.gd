@@ -144,7 +144,7 @@ func _show_scores():
 	for i in wolves_captured:
 		if i > 1 and i % 12 == 0:
 			instance.get_node("Label").text += "\n"
-		instance.get_node("Label").text += "🐺"
+		instance.get_node("Label").text += "X"
 		play_sound("res://assets/audio/sfx/sfx100v2_footstep_wood_03.mp3")
 		await get_tree().create_timer(0.1).timeout
 		
@@ -153,7 +153,7 @@ func _show_scores():
 	for i in wolves_escaped:
 		if i > 1 and i % 12 == 0:
 			instance.get_node("Label").text += "\n"
-		instance.get_node("Label").text += "🐺"
+		instance.get_node("Label").text += "X"
 		play_sound("res://assets/audio/sfx/sfx100v2_footstep_wood_03.mp3")
 		await get_tree().create_timer(0.1).timeout
 		
