@@ -1,5 +1,7 @@
 # Integral Games
-Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os jogos que considero interessantes para mostrar a outras pessoas. Dentro de cada pasta deste repositório há um readme detalhando sobre o que é o jogo e explicando alguns detalhes técnicos que considero relevantes. Este repositório não contém os projetos em Godot, mas apenas os arquivos necessários para jogar. Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
+Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os tutoriais e jogos de estudo que considero relevantes. Dentro de cada pasta deste repositório há um readme com o conteúdo do tutorial. Se houver um projeto em Godot na pasta, o tutorial usa este projeto como referência. Eu segui os conteúdos do *Getting Started* e do *Manual* da documentação oficial, reescrevendo tudo de um modo mais claro para mim, mas acredito que também será útil para outros. Alguns tópicos foram pulados, seja porque eu não gostei ou porque não achei útil.
+
+Todos os jogos que eu desenvolvi durante estes estudos podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
 
 <h2>Conteúdo </h2>
 
