@@ -14,7 +14,7 @@ A primeira ferramenta fundamental para qualquer desenvolvedor que queira melhora
 
 Nodes são muito poderosos, mas cada um tem um custo de performance. Funções como `_process` e `_physics_process` percorrem toda a árvore de cena, e isso pode virar um gargalo quando há muitos nodes. Normalmente é mais eficiente ter menos nodes com mais responsabilidade cada um. 
 
-Em alguns casos, remover um node da árvore de cena traz mais ganho de performance do que apenas escondê-lo ou pausá-lo, já que nodes fora da árvore não são processados e podem ser removidos e recolocados depois sem serem destruídos. Um detalhe importante é que não é necessário deletar um node para parar seu processamento, ele pode ser removido com `remove_child` e adicionado novamente depois com `add_child`.
+Em alguns casos, remover um node da árvore de cena traz mais ganho de performance do que apenas escondê-lo ou pausá-lo, já que nodes fora da árvore não são processados e podem ser removidos e recolocados de volta depois. Um detalhe importante é que não é necessário deletar um node para parar seu processamento, ele pode ser removido com `remove_child` e adicionado novamente depois com `add_child`.
 
 Para cenários mais extremos, é possível até evitar a SceneTree e usar diretamente as Server APIs para obter melhor desempenho.
 
