@@ -416,3 +416,41 @@ var fruit = "apple" if x == 2\
          	 else "banana" if x == 0\
              else "orange"
 ```
+
+### while e for
+
+O `while` também é simples e bastante conhecido, então não vou falar nada a respeito. O `for` possui algumas particularidades, acredito que o resumo abaixo seja o suficiente para mostrar como funcionam a maioria dos casos.
+
+```python
+for x in [5, 7, 11]:
+	statement # Loop executa 3 vezes com 'x' sendo 5, depois 7 e por fim 11.
+
+var names = ["John", "Marta", "Samantha", "Jimmy"]
+for name: String in names: # Variável do loop tipada.
+	print(name) # Imprime o conteúdo de 'name'.
+
+var dict = {"a": 0, "b": 1, "c": 2}
+for i in dict:
+	print(dict[i]) # Imprime 0, depois 1 e depois 2.
+
+for i in range(3):
+	statement # Similar a [0, 1, 2], mas sem alocar um array.
+
+for i in range(1, 3):
+	statement # Similar a [1, 2], mas sem alocar um array.
+
+for i in range(2, 8, 2):
+	statement # Similar a [2, 4, 6], mas sem alocar um array.
+
+for i in range(8, 2, -2):
+	statement # Similar a [8, 6, 4], mas sem alocar um array.
+
+for c in "Hello":
+	print(c) # Itera por todos os caracteres de uma string, imprime cada letra em uma nova linha.
+
+for i in 3:
+	statement # Similar a range(3).
+
+for i in 2.2:
+	statement # Similar a range(ceil(2.2)).
+```
