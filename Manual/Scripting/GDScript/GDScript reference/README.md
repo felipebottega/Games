@@ -130,7 +130,7 @@ Uma região de código é um tipo de comentário especial também, mas nesse cas
  <img width="300" src="https://github.com/user-attachments/assets/419f7e84-0125-42cb-b535-4fd96655fc82" />
 </p>
 
-Também é possível acrescentar uma descrição na linha do `#region`, muito útil para saber do que trata a região de código sem ter que abrí-la.
+Também é possível acrescentar uma descrição na linha do `#region`, muito útil para saber do que trata a região de código sem ter que abri-la.
 
 <p align="center">
  <img width="450" src="https://github.com/user-attachments/assets/7de42708-9685-45eb-adb8-f073a11c3cc9" />
@@ -206,7 +206,7 @@ var b = 1 + \
 | `PackedVector3Array`  | Array de `Vector3`. |
 | `PackedVector4Array`  | Array de `Vector4`. |
 | `PackedColorArray`    | Array de `Color`. |
-| `Dictionary`          | Estrutura chave → valor com chaves únicas. Suporta múltiplos tipos como chave. Pode usar sintaxe estilo JSON ou estilo Lua. <br><br>**Exemplo:**<br>`var d = {"key": 1, 2: "value"}`<br>`d["new"] = 10`<br>`d.key = 5`<br><br>**Obs:** `d.test` ≠ `d[test]` |
+| `Dictionary`          | Estrutura chave → valor com chaves únicas. Suporta múltiplos tipos como chave. Pode usar sintaxe estilo JSON ou estilo Lua. <br><br>**Exemplo:**<br>`var d = {"key": 1, 2: "value"}`<br>`d["new"] = 10`<br>`d.key = 5` |
 | `Dictionary[Key, Value]` | Dicionário tipado que valida tipos de chave e valor. Mais seguro e com suporte do analisador estático. <br><br>**Exemplo:**<br>`var d: Dictionary[String, int]`<br><br>**Limitação:** não suporta tipos aninhados (`Dictionary[String, Dictionary[...]]`). |
 
 **Observações:**
@@ -217,3 +217,29 @@ var b = 1 + \
   - `assign()` copia o conteúdo (não a referência).
   - Acesso com `[]` funciona também para propriedades de `Object`, mas pode gerar erro se não existir (`get()`/`set()` são mais seguros).
   - Métodos como `front()` e `back()` ainda retornam `Variant`, mesmo em arrays tipados.
+
+### Sinais
+
+Um sinal é uma mensagem que pode ser emitida por um objeto para aqueles que desejam ouvi-la. O tipo `signal` também pode ser usado para passar o emissor adiante. Isso significa que um signal não é só algo que você declara e conecta. Ele também é um tipo de valor, assim como `int`, `String`, etc. Ou seja, você pode guardar um sinal em uma variável.
+
+### Callable
+
+Obter um método/função como variável retorna um `callable`. Por exemplo, `var x = $Sprite2D.rotate` definirá o valor de `x` como um `callable`. Mais tarde, você pode chamá-la usando o comando `x.call(PI)`, por exemplo.
+
+## Variáveis
+
+Variáveis ​​podem existir como membros de classe ou locais de funções. Elas são criadas com a palavra-chave `var` e podem, opcionalmente, receber um valor na inicialização.
+
+```python
+var a    # neste caso, o tipo da variável será 'null' por default
+var b = 5
+var c = 3.8
+var d = b + c
+```
+
+Variáveis ​​podem, opcionalmente, ter uma especificação de tipo. Quando um tipo é especificado, a variável será forçada a ter sempre esse mesmo tipo, e tentar atribuir um valor incompatível resultará em um erro. Os tipos são especificados na declaração da variável usando um símbolo de dois pontos (:) após o nome da variável, seguido pelo tipo.
+
+```python
+var a: int
+var b: int = 5
+```
