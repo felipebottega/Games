@@ -269,8 +269,33 @@ Neste exemplo, a variável `max_id` é uma variável estática da classe. Isso s
 
 *Casting* é o ato de trocar o tipo de uma variável no código. Se for necessário forçar um valor a ser de um determinado tipo, você pode usar o operador de conversão `as`. A conversão entre tipos de objeto resulta no mesmo objeto se o valor for do mesmo tipo ou de um subtipo do tipo de conversão. 
 
-Por exemplo, suponha que você declarou uma variável desta maneira: `var my_node2D: Node2D`. Mais tarde, você alterar o tipo desta variável com o comando `my_node2D = $Sprite2D as Node2D`. Isso funciona porque `$Sprite2D` é um subtipo do tipo `Node2D`. 
+Por exemplo, suponha que você declarou uma variável desta maneira: `var my_node2D: Node2D`. Depois disso, o comando `my_node2D = $Sprite2D as Node2D` funciona porque `$Sprite2D` é um subtipo do tipo `Node2D`. 
 
 No caso de tipo básicos, a engine sempre vai tentar converter mesmo que não seja subtipo. Por exemplo, declarar `var my_int: int` e depois fazer `my_int = "123" as int`. Porém, algo como `my_int = Vector2() as int` não tem como funcionar.
 
 ## Constantes
+
+Constantes são valores declarados que não podem ser alterados depois. Os exemplo abaixo mostram claramente como se declarar constantes.
+
+```python
+const A = 5
+const A2: int = 5
+const B = Vector2(20, 20)
+const C = 10 + 20 
+const D = Vector2(20, 30).x 
+const E = [1, 2, 3, 4][0]
+const F = sin(20) 
+```
+
+> PS: Declarações como `const G = x + 20` são inválidas, a menos que `x` também seja uma constante.
+
+Enums são basicamente uma abreviação para constantes e são bastante úteis se você quiser atribuir números inteiros consecutivos a alguma constante. Por exemplo, `enum {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}` define um `enum`, em que cada variável é um `int`, começando em $0$ e seguindo sequencialmente. Essa definição é equivalente à mostrada abaixo.
+
+```python
+const TILE_BRICK = 0
+const TILE_FLOOR = 1
+const TILE_SPIKE = 2
+const TILE_TELEPORT = 3
+```
+
+## Funções
