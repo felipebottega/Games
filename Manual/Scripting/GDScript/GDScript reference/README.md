@@ -70,3 +70,8 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | true_expr if cond else false_expr | If/else ternário. |
 | x as Node | Conversão de tipo (cast). |
 | x = y / x += y / x -= y / x *= y / x /= y / x **= y / x %= y / x &= y / x \|= y / x ^= y / x <<= y / x >>= y | Atribuição. Não é possível usar operadores de atribuição dentro de uma expressão. |
+
+O comportamento de alguns operadores pode ser diferente do que você espera:
+ - No operador `/`, se ambos os forem do tipo `int`, então será realizada divisão inteira em vez de fracionária. Por exemplo, `5 / 2 == 2`, e não `2.5`. Se isso não for desejado, use pelo menos um literal `float (x / 2.0)` ou faça um cast `float(x) / y`.
+ - O operador `%` está disponível apenas para `int`. Para float, use a função `fmod()`.
+ - Os operadores `==` e `!=` às vezes permitem comparar valores de tipos diferentes (por exemplo, `1 == 1.0` é true), mas em outros casos isso pode causar erro em tempo de execução. Se você não tiver certeza sobre os tipos dos elementos, pode usar a função `is_same()` (mas note que ela é mais rigorosa quanto a tipos e referências). Para comparar float, use as funções `is_equal_approx()` e `is_zero_approx()`.
