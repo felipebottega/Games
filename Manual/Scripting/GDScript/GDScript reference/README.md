@@ -87,3 +87,5 @@ Esta anotação permite que uma variável apareça no *Inspector* da Godot, para
 ### @onready
 
 Inicializa uma variável só depois que o node estiver pronto na cena. Ou seja, caso ela dependa de algo que dependa do corregamento da cena, não vai quebrar a execução.
+
+> PS: Não é obrigatório implementar a função `_ready()` quando se usa a anotação `@onready`.
