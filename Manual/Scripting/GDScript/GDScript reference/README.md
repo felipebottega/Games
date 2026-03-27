@@ -150,3 +150,70 @@ var b = 1 + \
 10 + \
 4
 ```
+
+## Tipos
+
+### Básicos
+
+| Tipo        | Descrição |
+|-------------|----------|
+| `null`      | Tipo vazio que não contém informação e não pode receber outro valor. Apenas tipos que herdam de `Object` podem ser nulos ("nullable"). Tipos `Variant` devem sempre ter um valor válido. |
+| `bool`      | Tipo booleano que armazena apenas `true` ou `false`. |
+| `int`       | Número inteiro (positivo ou negativo). Armazenado como 64 bits. |
+| `float`     | Número real com casas decimais. Armazenado como 64 bits. Algumas estruturas reduzem a precisão para 32 bits (ex: `Vector2`, `Vector3`). |
+| `String`    | Sequência de caracteres em formato Unicode. |
+| `StringName`| String imutável com instância única por nome. Mais lenta para criar, mas muito rápida para comparação (ideal para chaves de dicionário). |
+| `NodePath`  | Caminho pré-processado para um node ou propriedade. Pode ser convertido de/para `String` e facilita interações com a árvore de nodes. |
+
+### Vetores
+
+| Tipo           | Descrição |
+|----------------|----------|
+| `Vector2`      | Vetor 2D com campos `x` e `y`. Também pode ser acessado como array. |
+| `Vector2i`     | Igual ao `Vector2`, mas com componentes inteiros. Útil para grids 2D. |
+| `Rect2`        | Retângulo 2D com `position` e `size`. Possui também `end` (`position + size`). |
+| `Vector3`      | Vetor 3D com campos `x`, `y` e `z`. Também pode ser acessado como array. |
+| `Vector3i`     | Igual ao `Vector3`, mas com componentes inteiros. Útil para grids 3D. |
+| `Transform2D`  | Matriz 3×2 usada para transformações em 2D. |
+| `Plane`        | Plano 3D normalizado com vetor normal e distância escalar. |
+| `Quaternion`   | Tipo usado para representar rotação 3D. Ideal para interpolação de rotações. |
+| `AABB`         | Caixa 3D alinhada aos eixos, com `position` e `size`. Possui `end` (`position + size`). |
+| `Basis`        | Matriz 3×3 usada para rotação e escala em 3D. Contém vetores `x`, `y` e `z`. |
+| `Transform3D`  | Transformação 3D com `basis` (`Basis`) e `origin` (`Vector3`). |
+
+### Tipos próprios da engine
+
+| Tipo     | Descrição |
+|----------|----------|
+| `Color`  | Tipo de cor com campos `r`, `g`, `b` e `a`. Também pode ser acessado como `h`, `s` e `v` (matiz, saturação e valor). |
+| `RID`    | Resource ID. Usado pelos servidores da engine para referenciar dados internos. |
+| `Object` | Classe base para tudo que não é um tipo embutido (built-in). |
+
+### Tipos de containers
+
+| Tipo                  | Descrição |
+|-----------------------|----------|
+| `Array`               | Lista dinâmica de elementos de qualquer tipo (inclusive outros arrays/dictionaries). Indexado a partir de `0` e aceita índices negativos (`-1` = último). Passado por referência. <br><br>**Exemplo:**<br>`var arr = [1, 2, 3]`<br>`arr[-1] # 3`<br>`arr.append(4)` |
+| `Array[Type]`         | Array tipado que garante o tipo dos elementos em tempo de execução e análise estática. Mais seguro e geralmente mais performático que `Array` puro. Não suporta tipos aninhados (`Array[Array[int]]`). <br><br>**Exemplo:**<br>`var a: Array[int]`<br>`var b: Array[Node]`<br><br>**Importante:** não é possível atribuir diretamente arrays de tipos diferentes (mesmo com herança). Use `assign()` para copiar:<br>`b.assign(a)` |
+| `PackedArray`         | Arrays otimizados para performance e uso de memória. Mais rápidos para iterar/modificar e mais compactos, mas com menos métodos (ex: não tem `map`). Ideais para grandes volumes de dados. |
+| `PackedByteArray`     | Array de bytes (`0–255`). |
+| `PackedInt32Array`    | Array de inteiros de 32 bits. |
+| `PackedInt64Array`    | Array de inteiros de 64 bits. |
+| `PackedFloat32Array`  | Array de floats de 32 bits. |
+| `PackedFloat64Array`  | Array de floats de 64 bits. |
+| `PackedStringArray`   | Array de `String`. |
+| `PackedVector2Array`  | Array de `Vector2`. |
+| `PackedVector3Array`  | Array de `Vector3`. |
+| `PackedVector4Array`  | Array de `Vector4`. |
+| `PackedColorArray`    | Array de `Color`. |
+| `Dictionary`          | Estrutura chave → valor com chaves únicas. Suporta múltiplos tipos como chave. Pode usar sintaxe estilo JSON ou estilo Lua. <br><br>**Exemplo:**<br>`var d = {"key": 1, 2: "value"}`<br>`d["new"] = 10`<br>`d.key = 5`<br><br>**Obs:** `d.test` ≠ `d[test]` |
+| `Dictionary[Key, Value]` | Dicionário tipado que valida tipos de chave e valor. Mais seguro e com suporte do analisador estático. <br><br>**Exemplo:**<br>`var d: Dictionary[String, int]`<br><br>**Limitação:** não suporta tipos aninhados (`Dictionary[String, Dictionary[...]]`). |
+
+**Observações:**
+  - `Array` e `Dictionary` são **passados por referência**.
+  - Prefira `Array[Type]` e `Dictionary[Key, Value]` para mais segurança e clareza.
+  - `PackedArray` vale a pena quando há **muitos elementos** (performance/memória).
+  - Arrays não tipados (`Array`) são mais flexíveis, mas menos seguros.
+  - `assign()` copia o conteúdo (não a referência).
+  - Acesso com `[]` funciona também para propriedades de `Object`, mas pode gerar erro se não existir (`get()`/`set()` são mais seguros).
+  - Métodos como `front()` e `back()` ainda retornam `Variant`, mesmo em arrays tipados.
