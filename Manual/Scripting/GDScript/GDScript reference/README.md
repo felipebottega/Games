@@ -120,3 +120,19 @@ No caso de fazer isso para uma variável com a anotação `@export`, a descriç�
  <img width="330" src="https://github.com/user-attachments/assets/be2e7a5c-17f8-4b0d-8b7b-c35c935f0f02" />
  <img width="650" src="https://github.com/user-attachments/assets/fb4f2d02-feff-42c5-b208-511176307c7a" />
 </p>
+
+## Regiões de código
+
+Uma região de código é um tipo de comentário especial também, mas nesse caso é necessário inserir dois comentários: um para dizer onde começa a região e o outro para dizer onde termina. Você coloca `#region` logo antes do trecho do código de interesse e coloca `#endregion` logo após o trecho. Abaixo temos um exemplo de como isso é feito. O interessante deste método é que você pode colapsar a região inteira ao clicar na setinha ao lado do `#region`. Isso é bastante útil para organizar visualmente código grandes.
+
+<p align="center">
+ <img width="200" src="https://github.com/user-attachments/assets/723a6f8f-6cec-4ea5-8774-c818a948999c" />
+ <img width="300" src="https://github.com/user-attachments/assets/419f7e84-0125-42cb-b535-4fd96655fc82" />
+</p>
+
+Também é possível acrescentar uma descrição na linha do `#region`, muito útil para saber do que trata a região de código sem ter que abrí-la.
+
+<p align="center">
+ <img width="450" src="https://github.com/user-attachments/assets/7de42708-9685-45eb-adb8-f073a11c3cc9" />
+ <img width="500" src="https://github.com/user-attachments/assets/54459858-71d1-4d58-b8a1-228be851165e" />
+</p>
