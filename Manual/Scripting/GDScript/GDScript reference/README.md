@@ -92,3 +92,31 @@ Inicializa uma variável só depois que o node estiver pronto na cena. Ou seja, 
 
 ## Comentários
 
+Comentários normais começam com `#`, que nem em Python. Para a maioria das situações isso é o suficiente, mas a Godot fornece muitos outros tipos de comentários especiais. Veremos todos eles agora.
+
+As palavras da figura abaixo são especiais em comentários. A engine, automaticamente, vai colorir estas palavras para dar destaque.
+
+<p align="center">
+ <img width="400" src="https://github.com/user-attachments/assets/c321f511-1e68-44c4-8c51-ef9939b3af7e" />
+</p>
+
+O uso de `##` faz com que o comentário tenha caráter de documentação, e vai aparecer como tooltip em outros lugares. Por exemplo, ao colocar este comentário especial sobre uma variável de uma script e depois utilizar esta variável em outro lugar (pode ser no mesmo script ou em outro), você poderá passar o mouse por cima e visualizar a descrição dela.
+
+<p align="center">
+ <img width="400" src="https://github.com/user-attachments/assets/c073a701-1344-4a8f-b920-093e8a74ecc9" />
+ <img width="600" src="https://github.com/user-attachments/assets/a784a91e-ad9f-4b80-8e33-23e2bee7e1de" />
+</p>
+
+Isso também pode ser feito para funções.
+
+<p align="center">
+ <img width="200" src="https://github.com/user-attachments/assets/30eff345-cbdb-4721-bc1e-4cb8e651627f" />
+ <img width="630" src="https://github.com/user-attachments/assets/d7ee59cd-0098-4531-bbcb-7edc6ef821eb" />
+</p>
+
+No caso de fazer isso para uma variável com a anotação `@export`, a descrição também aparece no *Inspector*.
+
+<p align="center">
+ <img width="330" src="https://github.com/user-attachments/assets/be2e7a5c-17f8-4b0d-8b7b-c35c935f0f02" />
+ <img width="650" src="https://github.com/user-attachments/assets/fb4f2d02-feff-42c5-b208-511176307c7a" />
+</p>
