@@ -358,7 +358,7 @@ func _ready():
 
 O `self` serve para referenciar a instância atual que está sendo usada no script. Existem algumas aplicações para isso, vou citar uma aqui.
 
-ocê define uma variável global no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e aengine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse alerta é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável global `x`, que é igual a 1.
+ocê define uma variável global no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e a engine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse alerta é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável global `x`, que é igual a 1.
 
 ```python
 var x = 1
@@ -382,3 +382,37 @@ func update(x):
 
 ### if/else/elif
 
+Estes três são bastante conhecidos em linguagem de programação, não acho que é necessário explicar nada neste caso. Menos comum é o if ternário, esse merece alguma explicação. Você pode definir uma variável a parte de um if-else comum como o mostrado abaixo.
+
+```python
+if x > 10:
+    var y = true
+else:
+    var y = false
+```
+
+Com o if-ternário você consegue o mesmo resultado em uma única linha.
+
+```python
+var y = true if x > 10 else false
+```
+
+É possível lidar com múltiplas condicionais com essa sintaxe.
+
+```python
+var fruit = "apple" if x == 2 else "pear" if x == 1	else "banana" if x == 0	else "orange"
+```
+
+Se preferir, você quebrar cada condição em uma linha, usando parênteses ou o `\`. Os dois modos abaixo são equivalentes ao que acabamos de ver.
+
+```python
+var fruit = ("apple" if x == 2
+              else "pear" if x == 1
+              else "banana" if x == 0
+              else "orange"
+             )
+var fruit = "apple" if x == 2\
+             else "pear" if x == 1\
+         	 else "banana" if x == 0\
+             else "orange"
+```
