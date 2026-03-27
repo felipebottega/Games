@@ -279,7 +279,7 @@ Constantes são valores declarados que não podem ser alterados depois. Os exemp
 
 ```python
 const A = 5
-const A2: int = 5
+const AA: int = 5
 const B = Vector2(20, 20)
 const C = 10 + 20 
 const D = Vector2(20, 30).x 
@@ -299,3 +299,60 @@ const TILE_TELEPORT = 3
 ```
 
 ## Funções
+
+A definição de funções é bastante semelhante a Python. A maior diferença é o uso de `func` em vez de `def` para inicializar a função. Assim como no Python, o `return` não é obrigatório (ma caso não tenha, fica implícito que a função retorna `null`). 
+
+Você pode incluir parâmetros opcionais na função, basta que eles sejam atribuídos a algum valor logo na definição da função. O exemplo abaixo ilustra isso. O parâmetro `a_required` é obrigatório passar para a função, mas `b_optional` e `c_optional` são opcionais.
+
+```python
+func my_function(a_required, b_optional=10, c_optional=42):
+	pass
+```
+
+Você também pode definir o tipo da entrada que a função espera.
+
+```python
+func my_function(a: int, b: String):
+	pass
+```
+
+É possível definir o tipo da saída, para isso deve-se utilizar a seta `->`, apontando para o tipo de variável da saída. Caso o tipo seja diferente de `void`, é obrigatório usar o `return` com a saída sempre do tipo esperado.
+
+```python
+func my_int_function() -> int:
+	return 0
+```
+
+Se você referenciar uma função sem as entradas, isso automaticamente gera um `callable`. O exemplo abaixo deve printar a sequência 1, 2, 3, 4 assim que o jogo é executado.
+
+```python
+func _ready() -> void:
+	var my_array = [0, 1, 2, 3]
+
+	for i in my_array:
+		print(map(i, add1))
+		
+func add1(value: int) -> int:
+	return value + 1;
+
+func map(item: int, function: Callable) -> int:
+	var result = function.call(item)
+	return result
+```
+
+Funções também podem ter um número arbitrário de elementos (neste caso ela é chamada de "variadic function"). Coloque `...args` (em geral, `...{qualquer_nome}` funciona) como último elemento da sua função. Desta maneira, ela vai ler os parâmetros comuns de entrada e colocar todo o restante no array `args`. O exemplo abaixo deixa claro como isso funciona.
+
+```python
+func my_func(a, b = 0, ...args):
+	prints(a, b, args)
+
+func _ready():
+	my_func(1)             # 1 0 []
+	my_func(1, 2)          # 1 2 []
+	my_func(1, 2, 3)       # 1 2 [3]
+	my_func(1, 2, 3, 4)    # 1 2 [3, 4]
+	my_func(1, 2, 3, 4, 5) # 1 2 [3, 4, 5]
+```
+
+## Declarações e controle de fluxo
+
