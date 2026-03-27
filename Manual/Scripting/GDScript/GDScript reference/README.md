@@ -104,7 +104,7 @@ O uso de `##` faz com que o comentário tenha caráter de documentação, e vai 
 
 <p align="center">
  <img width="400" src="https://github.com/user-attachments/assets/c073a701-1344-4a8f-b920-093e8a74ecc9" />
- <img width="600" src="https://github.com/user-attachments/assets/a784a91e-ad9f-4b80-8e33-23e2bee7e1de" />
+ <img width="580" src="https://github.com/user-attachments/assets/a784a91e-ad9f-4b80-8e33-23e2bee7e1de" />
 </p>
 
 Isso também pode ser feito para funções.
@@ -136,3 +136,17 @@ Também é possível acrescentar uma descrição na linha do `#region`, muito ú
  <img width="450" src="https://github.com/user-attachments/assets/7de42708-9685-45eb-adb8-f073a11c3cc9" />
  <img width="500" src="https://github.com/user-attachments/assets/54459858-71d1-4d58-b8a1-228be851165e" />
 </p>
+
+## Continuação de linhas
+
+Quando uma linha de código é muito extensa, pode ser interessante introduzir uma quebra de linha. A Godot usa a barra backslash `\` para este fim. Os exemplos abaixo são válidos e devem ser o suficiente para demonstrar como isso funciona.
+
+```python
+var a = 1 + \
+2
+
+var b = 1 + \
+4 + \
+10 + \
+4
+```
