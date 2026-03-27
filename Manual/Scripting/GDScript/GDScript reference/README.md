@@ -231,7 +231,7 @@ Obter um método/função como variável retorna um `callable`. Por exemplo, `va
 Variáveis ​​podem existir como membros de classe ou locais de funções. Elas são criadas com a palavra-chave `var` e podem, opcionalmente, receber um valor na inicialização.
 
 ```python
-var a    # neste caso, o tipo da variável será 'null' por default
+var a    # sem especificar nada, o tipo da variável será 'null' por default
 var b = 5
 var c = 3.8
 var d = b + c
@@ -243,3 +243,34 @@ Variáveis ​​podem, opcionalmente, ter uma especificação de tipo. Quando u
 var a: int
 var b: int = 5
 ```
+
+### Variáveis estáticas
+
+Variáveis de uma classe podem ser declaradas como *estáticas*. Isso é simples, como mostra o exemplo abaixo.
+
+```python
+# person.gd
+class_name Person
+
+static var max_id = 0
+
+var id
+var name
+
+func _init(p_name):
+	   max_id += 1
+	   id = max_id
+	   name = p_name
+```
+
+Neste exemplo, a variável `max_id` é uma variável estática da classe. Isso significa que ela pertence à classe e não à instâncias da classe. Ou seja, esta mesma variável é compartilhada entre todas as instâncias da classe. Se ela for alterada, todas as instâncias "saberão" disso.
+
+### Casting
+
+*Casting* é o ato de trocar o tipo de uma variável no código. Se for necessário forçar um valor a ser de um determinado tipo, você pode usar o operador de conversão `as`. A conversão entre tipos de objeto resulta no mesmo objeto se o valor for do mesmo tipo ou de um subtipo do tipo de conversão. 
+
+Por exemplo, suponha que você declarou uma variável desta maneira: `var my_node2D: Node2D`. Mais tarde, você alterar o tipo desta variável com o comando `my_node2D = $Sprite2D as Node2D`. Isso funciona porque `$Sprite2D` é um subtipo do tipo `Node2D`. 
+
+No caso de tipo básicos, a engine sempre vai tentar converter mesmo que não seja subtipo. Por exemplo, declarar `var my_int: int` e depois fazer `my_int = "123" as int`. Porém, algo como `my_int = Vector2() as int` não tem como funcionar.
+
+## Constantes
