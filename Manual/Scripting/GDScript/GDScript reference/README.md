@@ -354,5 +354,31 @@ func _ready():
 	my_func(1, 2, 3, 4, 5) # 1 2 [3, 4, 5]
 ```
 
-## Declarações e controle de fluxo
+## self
+
+O `self` serve para referenciar a instância atual que está sendo usada no script. Existem algumas aplicações para isso, vou citar uma aqui.
+
+ocê define uma variável global no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e aengine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse alerta é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável global `x`, que é igual a 1.
+
+```python
+var x = 1
+
+func update(x):
+    x = x + 5
+    return x
+```
+
+Caso você queira que a variável global seja usada dentro da função, deve usar o `self`. A nova função abaixo sempre apra alterar a variável global.
+
+```python
+var x = 1
+
+func update(x):
+    self.x = x + 5
+    return self.x
+```
+
+## Controle de fluxo
+
+### if/else/elif
 
