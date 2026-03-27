@@ -6,7 +6,7 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 
 *Keywords* são palavras reservadas da linguagem. Elas não podem ser declaradas como variáveis (ou funções, classes, etc.) novas. Devem ser utilizadas com o propósito original delas. 
 
-| Palavra-chave | Descrição |
+| Keyword | Descrição |
 |--------------|-----------|
 | if           | Veja if/else/elif. |
 | elif         | Veja if/else/elif. |
@@ -42,3 +42,31 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | TAU          | Constante TAU. |
 | INF          | Constante de infinito. Usada para comparações e como resultado de cálculos. |
 | NAN          | Constante NAN (não é um número). Usada como resultado impossível de cálculos. |
+
+## Operadores
+
+| Operador | Descrição |
+|----------|-----------|
+| ( ) | Parênteses não são exatamente um operador, mas permitem definir explicitamente a precedência de uma operação. |
+| x[index] | Acesso por índice. |
+| x.attribute | Referência a atributo. |
+| foo() | Chamada de função. |
+| await x | Aguarda sinais ou co-rotinas. |
+| x is Node / x is not Node | Verificação de tipo. Veja também a função is_instance_of(). |
+| x ** y | Potência. Multiplica x por ele mesmo y vezes, similar à função pow(). |
+| ~x | NOT bit a bit. |
+| +x / -x | Identidade / Negação. |
+| x * y / x / y / x % y | Multiplicação / Divisão / Resto. O operador % também é usado para formatação de strings. |
+| x + y / x - y | Adição (ou concatenação) / Subtração. |
+| x << y / x >> y | Deslocamento de bits. |
+| x & y | AND bit a bit. |
+| x ^ y | XOR bit a bit. |
+| x \| y | OR bit a bit. |
+| x == y / x != y / x < y / x > y / x <= y / x >= y | Comparação. |
+| x in y / x not in y | Verificação de pertencimento. |
+| not x / !x | NOT booleano e seu alias não recomendado. |
+| x and y / x && y | AND booleano e seu alias não recomendado. |
+| x or y / x \|\| y | OR booleano e seu alias não recomendado. |
+| true_expr if cond else false_expr | If/else ternário. |
+| x as Node | Conversão de tipo (cast). |
+| x = y / x += y / x -= y / x *= y / x /= y / x **= y / x %= y / x &= y / x \|= y / x ^= y / x <<= y / x >>= y | Atribuição. Não é possível usar operadores de atribuição dentro de uma expressão. |
