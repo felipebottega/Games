@@ -75,3 +75,15 @@ O comportamento de alguns operadores pode ser diferente do que você espera:
  - No operador `/`, se ambos os forem do tipo `int`, então será realizada divisão inteira em vez de fracionária. Por exemplo, `5 / 2 == 2`, e não `2.5`. Se isso não for desejado, use pelo menos um literal `float (x / 2.0)` ou faça um cast `float(x) / y`.
  - O operador `%` está disponível apenas para `int`. Para float, use a função `fmod()`.
  - Os operadores `==` e `!=` às vezes permitem comparar valores de tipos diferentes (por exemplo, `1 == 1.0` é true), mas em outros casos isso pode causar erro em tempo de execução. Se você não tiver certeza sobre os tipos dos elementos, pode usar a função `is_same()` (mas note que ela é mais rigorosa quanto a tipos e referências). Para comparar float, use as funções `is_equal_approx()` e `is_zero_approx()`.
+
+## Anotações
+
+Anotações são marcações especiais no GDScript que começam com `@` e servem para modificar o comportamento do código ou dizer algo ao editor/compilador. São instruções extras que dizem à engine como tratar partes do seu script.
+
+### @export
+
+Esta anotação permite que uma variável apareça no *Inspector* da Godot, para você editar sem mexer no código.
+
+### @onready
+
+Inicializa uma variável só depois que o node estiver pronto na cena. Ou seja, caso ela dependa de algo que dependa do corregamento da cena, não vai quebrar a execução.
