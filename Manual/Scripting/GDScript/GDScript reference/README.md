@@ -52,24 +52,24 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | x.attribute | Referência a atributo. |
 | foo() | Chamada de função. |
 | await x | Aguarda sinais ou co-rotinas. |
-| x is Node / x is not Node | Verificação de tipo. Veja também a função is_instance_of(). |
+| x is Node <br> x is not Node | Verificação de tipo. Veja também a função is_instance_of(). |
 | x ** y | Potência. Multiplica x por ele mesmo y vezes, similar à função pow(). |
 | ~x | NOT bit a bit. |
-| +x / -x | Identidade / Negação. |
-| x * y / x / y / x % y | Multiplicação / Divisão / Resto. O operador % também é usado para formatação de strings. |
-| x + y / x - y | Adição (ou concatenação) / Subtração. |
-| x << y / x >> y | Deslocamento de bits. |
+| +x <br> -x | Identidade / Negação. |
+| x * y <br> x <br> y <br> x % y | Multiplicação / Divisão / Resto. O operador % também é usado para formatação de strings. |
+| x + y <br> x - y | Adição (ou concatenação) / Subtração. |
+| x << y <br> x >> y | Deslocamento de bits. |
 | x & y | AND bit a bit. |
 | x ^ y | XOR bit a bit. |
 | x \| y | OR bit a bit. |
-| x == y / x != y / x < y / x > y / x <= y / x >= y | Comparação. |
-| x in y / x not in y | Verificação de pertencimento. |
-| not x / !x | NOT booleano e seu alias não recomendado. |
-| x and y / x && y | AND booleano e seu alias não recomendado. |
-| x or y / x \|\| y | OR booleano e seu alias não recomendado. |
+| x == y <br> x != y <br> x < y <br> x > y <br> x <= y <br> x >= y | Comparação. |
+| x in y <br> x not in y | Verificação de pertencimento. |
+| not x <br> !x | NOT booleano e seu alias não recomendado. |
+| x and y <br> x && y | AND booleano e seu alias não recomendado. |
+| x or y <br> x \|\| y | OR booleano e seu alias não recomendado. |
 | true_expr if cond else false_expr | If/else ternário. |
 | x as Node | Conversão de tipo (cast). |
-| x = y / x += y / x -= y / x *= y / x /= y / x **= y / x %= y / x &= y / x \|= y / x ^= y / x <<= y / x >>= y | Atribuição. Não é possível usar operadores de atribuição dentro de uma expressão. |
+| x = y <br> x += y <br> x -= y <br> x *= y <br> x /= y <br> x **= y <br> x %= y <br> x &= y <br> x \|= y <br> x ^= y <br> x <<= y <br> x >>= y | Atribuição. Não é possível usar operadores de atribuição dentro de uma expressão. |
 
 O comportamento de alguns operadores pode ser diferente do que você espera:
  - No operador `/`, se ambos os forem do tipo `int`, então será realizada divisão inteira em vez de fracionária. Por exemplo, `5 / 2 == 2`, e não `2.5`. Se isso não for desejado, use pelo menos um literal `float (x / 2.0)` ou faça um cast `float(x) / y`.
