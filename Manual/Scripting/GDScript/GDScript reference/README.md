@@ -454,3 +454,55 @@ for i in 3:
 for i in 2.2:
 	statement # Similar a range(ceil(2.2)).
 ```
+
+### match
+
+O `match` é como se fosse uma sequência de if-else, mas com uma sintaxe adequada para esta situação, e com muita mais potencial para lidar com casos complexos. Abaixo segue um exemplo básico de aplicação.
+
+```python
+match x:
+	1:
+		print("We are number one!")
+	2:
+		print("Two are better than one!")
+	"test":
+		print("Oh snap! It's a string!")
+```
+
+Esse código é equivalente a esse:
+
+```python
+if x == 1:
+	print("We are number one!")
+elif x == 2:
+    print("Two are better than one!")
+elif x == "test":
+	print("Oh snap! It's a string!")
+```
+
+> PS: O operador `match` é mais rigoroso em relação aos tipos do que o operador `==`. Por exemplo, $1$ não corresponderá a $1.0$. Tenha atenção com isso.
+
+Não é necessário usar uma variável no `match`, você pode usar uma expressão que resulte em algum valor.
+
+```python
+match typeof(x):
+	TYPE_FLOAT:
+		print("float")
+	TYPE_STRING:
+		print("text")
+	TYPE_ARRAY:
+		print("array")
+```
+
+Você pode usar o underline como "coringa" ("wildcard", em inglês). Esse símbolo significa que qualquer coisa vai dar match se chegar ali.
+
+```python
+match x:
+	1:
+		print("It's one!")
+	2:
+		print("It's one times two!")
+	_:
+		print("It's not 1 or 2. I don't care to be honest.")
+```
+
