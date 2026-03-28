@@ -391,13 +391,13 @@ else:
     var y = false
 ```
 
-Com o if-ternário você consegue o mesmo resultado em uma única linha.
+Com o if ternário você consegue o mesmo resultado em uma única linha.
 
 ```python
 var y = true if x > 10 else false
 ```
 
-É possível lidar com múltiplas condicionais com essa sintaxe.
+O if ternário também permite lidar com múltiplas condicionais.
 
 ```python
 var fruit = "apple" if x == 2 else "pear" if x == 1	else "banana" if x == 0	else "orange"
@@ -419,7 +419,7 @@ var fruit = "apple" if x == 2\
 
 ### while e for
 
-O `while` também é simples e bastante conhecido, então não vou falar nada a respeito. O `for` possui algumas particularidades, acredito que o resumo abaixo seja o suficiente para mostrar como funcionam a maioria dos casos.
+O `while` também é simples e bastante conhecido, então não vou falar nada a respeito. O `for` possui algumas particularidades, acredito que o resumo abaixo seja o suficiente para mostrar como ele funciona na maioria dos casos.
 
 ```python
 for x in [5, 7, 11]:
@@ -457,7 +457,7 @@ for i in 2.2:
 
 ### match
 
-O `match` é como se fosse uma sequência de if-else, mas com uma sintaxe adequada para esta situação, e com muito mais potencial para lidar com casos complexos. Abaixo segue um exemplo básico de aplicação.
+O `match` é como se fosse uma sequência de if-else a partir do valor de uma variável/expressão, mas com uma sintaxe adequada para esta situação e com muito mais potencial para lidar com casos complexos. Abaixo segue um exemplo básico de aplicação.
 
 ```python
 match x:
@@ -469,7 +469,7 @@ match x:
 		print("Oh snap! It's a string!")
 ```
 
-Esse código é equivalente a esse:
+O código acima é equivalente a esse:
 
 ```python
 if x == 1:
@@ -518,7 +518,7 @@ match x:
 		print("It's not 1 or 2, it's ", new_var)
 ```
 
-Também é possível usar arrays no `match`. Cada elemento do array é um padrão em si que precisa dar match separadamente. O comprimento do array é verificado primeiro, ele precisa ser do mesmo tamanho que o padrão, caso contrário, o padrão não corresponde. 
+Também é possível usar arrays no `match`. Cada elemento do array é um padrão em si que precisa dar match individualmente. O comprimento do array é verificado primeiro, ele precisa ser do mesmo tamanho que o padrão, caso contrário, o padrão não corresponde. 
 
 ```python
 match x:
