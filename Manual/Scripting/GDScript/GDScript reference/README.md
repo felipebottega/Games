@@ -457,7 +457,7 @@ for i in 2.2:
 
 ### match
 
-O `match` é como se fosse uma sequência de if-else, mas com uma sintaxe adequada para esta situação, e com muita mais potencial para lidar com casos complexos. Abaixo segue um exemplo básico de aplicação.
+O `match` é como se fosse uma sequência de if-else, mas com uma sintaxe adequada para esta situação, e com muito mais potencial para lidar com casos complexos. Abaixo segue um exemplo básico de aplicação.
 
 ```python
 match x:
