@@ -506,3 +506,28 @@ match x:
 		print("It's not 1 or 2. I don't care to be honest.")
 ```
 
+Você pode trocar o underline pela introdução de uma variável nova. Nesse caso, qualquer coisa var dar match também e vai atribuir o valor a essa variável. Se `x` for igual a 3 no exemplo abaixo, o match será na última condição, e a variável `new_var` será igual a 3 após a execução.
+
+```python
+match x:
+	1:
+		print("It's one!")
+	2:
+		print("It's one times two!")
+	var new_var:
+		print("It's not 1 or 2, it's ", new_var)
+```
+
+Também é possível usar arrays no `match`. Cada elemento do array é um padrão em si que precisa dar match separadamente. O comprimento do array é verificado primeiro, ele precisa ser do mesmo tamanho que o padrão, caso contrário, o padrão não corresponde. 
+
+```python
+match x:
+	[]:
+		print("Empty array")
+	[1, 3, "test", null]:
+		print("Very specific array")
+	[var start, _, "test"]:
+		print("First element is ", start, ", and the last is \"test\"")
+	[42, ..]:
+		print("Open ended array")
+```
