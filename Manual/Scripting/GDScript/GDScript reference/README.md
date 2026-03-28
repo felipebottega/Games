@@ -531,3 +531,49 @@ match x:
 	[42, ..]:
 		print("Open ended array")
 ```
+
+A lógica do `match` com dicionários é semelhante à dos arrays.
+
+```python
+match x:
+	{}:
+		print("Empty dict")
+	{"name": "Dennis"}:
+		print("The name is Dennis")
+	{"name": "Dennis", "age": var age}:
+		print("Dennis is ", age, " years old.")
+	{"name", "age"}:
+		print("Has a name and an age, but it's not Dennis :(")
+	{"key": "godotisawesome", ..}:
+		print("I only checked for one entry and ignored the rest")
+```
+
+Você também pode especificar vários padrões separados por vírgula. 
+
+```python
+match x:
+	1, 2, 3:
+		print("It's 1 - 3")
+	"Sword", "Splash potion", "Fist":
+		print("Yep, you've taken damage")
+```
+
+Uma "guarda de padrão" ("pattern guard", em inglês) é uma condição opcional que vem após a lista de padrões e permite fazer verificações adicionais antes de escolher um ramo do `match`. 
+
+```python
+match point:
+	[0, 0]:
+		print("Origin")
+	[_, 0]:
+		print("Point on X-axis")
+	[0, _]:
+		print("Point on Y-axis")
+	[var x, var y] when y == x:
+		print("Point on line y = x")
+	[var x, var y] when y == -x:
+		print("Point on line y = -x")
+	[var x, var y]:
+		print("Point (%s, %s)" % [x, y])
+```
+
+
