@@ -42,13 +42,38 @@ print("{0} health is {1}".format([name, health]))
 Output: Integral health is 1234
 ```
 
-Também é possível fazer isso através de um dicionário, como mostrado abaixo.
+Essa sintaxe permite definir o número de casas decimais para float, semelhante à f-strings e Python. Se fosse `var health = 1234.5679`, você poderia usar a sintaxe abaixo.
+
+```
+var name = "Integral"
+var health = 1234.56789
+
+print("{0} health is {1:.2f}".format([name, health]))
+
+---------------------------------------
+Output:
+Integral health is 1234.57
+```
+
+Outra maneira possível é através de um dicionário, como mostrado abaixo.
 
 ```
 var name = "Integral"
 var health = 1234
 
 print("{player_name} health is {player_health}".format({player_name=name, player_health=health}))
+
+---------------------------------------
+Output: Integral health is 1234
+```
+
+Ainda uma última maneira de obter o mesmo resultado é utilizando a sintaxe abaixo. Você precisa escpecificar o tipo da variável: `%s` → string, `%d` → inteiro, `%f` → float, `%x` → hexadecimal. Se não souber ou não quiser se incomodar com isso, used string para tudo que funciona.
+
+```
+var name = "Integral"
+var health = 1234
+
+print("%s health is %d" % [name, health])
 
 ---------------------------------------
 Output: Integral health is 1234
