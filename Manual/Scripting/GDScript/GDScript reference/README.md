@@ -600,6 +600,8 @@ match point:
 
 ## Classes
 
+### Classes sem nome
+
 Todo script de Godot é considerado como uma classe em Godot. Se nenhum nome for dado à classe representando o script, ela será uma classe sem nome. Neste caso, você deve referenciar esta classe em outros scripts usando o caminho absoluto até ela. Considere a classe abaixo de exemplo.
 
 <p align="center">
@@ -620,7 +622,9 @@ Também é possível obter o mesmo resultado utilizando as chamadas `load` e `ne
 
 > PS: Para criar uma instância de uma classe, usando o método `new`, para criar uma instância de uma cena, usamos o método `instantiate`. Para carregar uma classe (de um script) ou uma cena, ambas as funções `load` e `preload` podem ser usadas.
 
-Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. No nosso último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais, não é mais necessário usar nem `extends` nem `load`. 
+### Classes nomeadas
+
+Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. No nosso último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais, não é mais necessário usar nem `extends` nem `load`. Também é importante lembrar que classes nomeadas automaticamente podem ser encontradas pelo help do editor e passam a possuir a sua própria documentação. Isso foi explicado na seção de comentários.
 
 <p align="center">
 	<img width="330" src="https://github.com/user-attachments/assets/00305d8a-f652-4227-bfa3-ff670d83668c" />
@@ -629,3 +633,57 @@ Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome
 
 > PS: Este assunto foi brevemente abordado no projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo).
 
+### Herança de classes
+
+Existem três maneiras de se herdar de uma classe. Mostramos as três abaixo com exemplos de código.
+
+```python
+# Inherit/extend a globally available class.
+extends SomeClass
+
+# Inherit/extend a named class file.
+extends "somefile.gd"
+
+# Inherit/extend an inner class in another file.
+extends "somefile.gd".SomeInnerClass
+```
+
+Para checar se um objeto herda de uma certa classe, você pode usar a sintaxe `is` para isso. Por exemplo, se uma instância se chama `my_instance` e você quer verificar se ele herda da classe `MyClass`, o comando `my_instance is MyClass` retorna um booleano indicando se ele herda ou não desta classe. 
+
+### Construtor
+
+O construtor de classe é a função nativa `_init`, que já foi abordada [bem no início](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#_init-vs-_ready) desta série de tutoriais. Naquela época, apenas o descrevemos como uma função que inicializa variáveis básicas de scripts antes de qualquer node entrar em cena. Esta inicialização de variáveis serve para criar instâncias com parâmetros, assim como é o `__init__` de Python. 
+
+Abaixo segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Neste caso ela necessita de um construtor para ser inicializada. Este construtor exige uma variável inteira de entrada, é o parâmetro para inicializar uma instância. Quando a instância é inicializada com o comando `var my_class_instance = amazing2.new(100)`, a função `_init` é executada com este parâmetro. Isto ocorre antes de qualquer `_ready` na cena, a não ser que a instância seja criada explicitamente após o `_ready`.
+
+<p align="center">
+	<img width="300" src="https://github.com/user-attachments/assets/a7b67bc0-d234-4596-a60a-cc261d3a595b" />
+	<img width="700" src="https://github.com/user-attachments/assets/985073eb-0376-4003-b1ba-43bd6558a393" />
+</p>
+
+### Classes internas
+
+Todo arquivo de classe pode conter outras classes internas. Para criar uma, basta usar o comando `class {nome}`, em que *nome* é qualquer nome que você queira dar para a sua classe interna. No projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo) foi utilizada uma classe interna no arquivo. Abaixo temos o trecho inicial do arquivo para relembrar.
+
+```python
+class_name ComplexLib  
+
+class Complex:
+	var re: float
+	var im: float
+
+	func _init(r: float, i: float):
+		re = r
+		im = i
+
+	func add(other: Complex) -> Complex:
+		return Complex.new(re + other.re, im + other.im)
+
+	func sub(other: Complex) -> Complex:
+		return Complex.new(re - other.re, im - other.im)
+
+	func mul(other: Complex) -> Complex:
+		return Complex.new(re * other.re - im * other.im, re * other.im + im * other.re)
+```
+
+Uma instância pode ser definida com o comando `var z = ComplexLib.Complex.new(1.0, 2.0)` por exemplo. Essa instância está associada ao número complexo $z = 1 + 2 \cdot i$. Dada uma outra instância deste classe interna, associada a outro número complexo $w = u + v \cdot i$, podemos obter a multiplicação $z \cdot w$ com o comando `z.mul(w)`, em que `var w = ComplexLib.Complex.new(u, v)`.
