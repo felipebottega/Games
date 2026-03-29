@@ -340,7 +340,7 @@ func map(item: int, function: Callable) -> int:
 	return result
 ```
 
-Funções também podem ter um número arbitrário de elementos (neste caso ela é chamada de "variadic function"). Coloque `...args` (em geral, `...{qualquer_nome}` funciona) como último elemento da sua função. Desta maneira, ela vai ler os parâmetros comuns de entrada e colocar todo o restante no array `args`. O exemplo abaixo deixa claro como isso funciona.
+Funções também podem ter um número arbitrário de elementos (neste caso ela é chamada de "variadic function"). Coloque `...args` (em geral, `...{qualquer_nome}` funciona, em que *qualquer_nome* pode ser o nome que você quiser) como último elemento da sua função. Desta maneira, ela vai ler os parâmetros comuns de entrada e colocar todo o restante no array `args`. O exemplo abaixo deixa claro como isso funciona.
 
 ```python
 func my_func(a, b = 0, ...args):
@@ -593,8 +593,16 @@ Agora considere um outro script em uma cena qualquer. O script desta cena pode h
 Também é possível obter o mesmo resultado utilizando as chamadas `load` e `new` da Godot.
 
 <p align="center">
-	<img width="700" src="https://github.com/user-attachments/assets/a9dda508-eb09-4485-82c7-4a9f1edeb4d9" />
+	<img width="750" src="https://github.com/user-attachments/assets/a9dda508-eb09-4485-82c7-4a9f1edeb4d9" />
 </p>
 
 > PS: Para criar uma instância de uma classe, usando o método `new`, para criar uma instância de uma cena, usamos o método `instantiate`. Para carregar uma classe (de um script) ou uma cena, ambas as funções `load` e `preload` podem ser usadas.
 
+Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. No nosso último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais, não é mais necessário usar nem `extends` nem `load`. 
+
+<p align="center">
+	<img width="330" src="https://github.com/user-attachments/assets/00305d8a-f652-4227-bfa3-ff670d83668c" />
+	<img width="670" src="https://github.com/user-attachments/assets/73db02ee-8d38-464e-a958-9fd5c80fe3df" />
+</p>
+
+> PS: Este assunto foi brevemente abordado no projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo).
