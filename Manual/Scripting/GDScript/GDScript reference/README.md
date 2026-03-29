@@ -340,6 +340,8 @@ func map(item: int, function: Callable) -> int:
 	return result
 ```
 
+Assim como temos variáveis estáticas em classes, também existem as *funções estáticas*. Estas funções não devem estar dentro de classes internas a uma classe, pois elas servem para referenciar apenas à classe geral e suas variáveis estáticas. Deste modo, estas funções não são acessíveis por instâncias, e elas mesmas não são capazes de acessar variáveis de instâncias. Para definir uma variável estática, basta utilizar a sintaxe `static func` na declaração dela. Falaremos mais sobre este assunto na seção de classes.
+
 Funções também podem ter um número arbitrário de elementos (neste caso ela é chamada de "variadic function"). Coloque `...args` (em geral, `...{qualquer_nome}` funciona, em que *qualquer_nome* pode ser o nome que você quiser) como último elemento da sua função. Desta maneira, ela vai ler os parâmetros comuns de entrada e colocar todo o restante no array `args`. O exemplo abaixo deixa claro como isso funciona.
 
 ```python
