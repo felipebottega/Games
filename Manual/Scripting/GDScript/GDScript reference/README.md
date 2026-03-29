@@ -687,3 +687,23 @@ class Complex:
 ```
 
 Uma instância pode ser definida com o comando `var z = ComplexLib.Complex.new(1.0, 2.0)` por exemplo. Essa instância está associada ao número complexo $z = 1 + 2 \cdot i$. Dada uma outra instância deste classe interna, associada a outro número complexo $w = u + v \cdot i$, podemos obter a multiplicação $z \cdot w$ com o comando `z.mul(w)`, em que `var w = ComplexLib.Complex.new(u, v)`.
+
+## setters e getters
+
+AS keywords `set` e `get` servem para fazer algo quando a variável é acessada ou alterar algo quando o valor da variável é alterado, respectivamente. Só é possível usar estas keywords em variáveis da classe (variáveis globais), não serve para variáveis dentro de funções. 
+
+No exemplo abaixo, o `get` diz que a variável `seconds` deve ser igual a `milliseconds / 1000` sempre que `seconds` for acessada. Se alguma computação intermediária e a alterou, ela voltará "ao normal" assim que tentarem acessá-la (pode-se dizer que ela tem um vínculo com `milliseconds`). O `set` diz que `milliseconds` deve ser alterado para `milliseconds = value * 1000` sempre que o valor de `seconds` for alterado (alterado do valor anterior para o novo valor `value`).
+
+```python
+var milliseconds: int = 15000
+
+var seconds: int:
+	get:
+		return milliseconds / 1000
+	set(value):
+		milliseconds = value * 1000
+```
+
+<p align="center">
+	<img width="1100" src="https://github.com/user-attachments/assets/eac94ae4-190f-479b-b9b3-1d8ac1d54195" />
+</p>
