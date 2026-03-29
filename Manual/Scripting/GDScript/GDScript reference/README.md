@@ -576,4 +576,25 @@ match point:
 		print("Point (%s, %s)" % [x, y])
 ```
 
+## Classes
+
+Todo script de Godot é considerado como uma classe em Godot. Se nenhum nome for dado à classe representando o script, ela será uma classe sem nome. Neste caso, você deve referenciar esta classe em outros scripts usando o caminho absoluto até ela. Considere a classe abaixo de exemplo.
+
+<p align="center">
+	<img width="400" src="https://github.com/user-attachments/assets/cb2ad07d-f5fa-4070-bad3-1da533a425ed" />
+</p>
+
+Agora considere um outro script em uma cena qualquer. O script desta cena pode herdar de `my_class.gd` usando a sintaxe conhecida `extends "res://my_class.gd"`. A partir daí, todos os métodos e atributos da classe herdada estarão disponíveis no script.
+
+<p align="center">
+	<img width="700" src="https://github.com/user-attachments/assets/966ec944-7f54-456e-bcb6-b2f44155d5b3" />
+</p>
+
+Também é possível obter o mesmo resultado utilizando as chamadas `load` e `new` da Godot.
+
+<p align="center">
+	<img width="700" src="https://github.com/user-attachments/assets/a9dda508-eb09-4485-82c7-4a9f1edeb4d9" />
+</p>
+
+> PS: Para criar uma instância de uma classe, usando o método `new`, para criar uma instância de uma cena, usamos o método `instantiate`. Para carregar uma classe (de um script) ou uma cena, ambas as funções `load` e `preload` podem ser usadas.
 
