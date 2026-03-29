@@ -302,12 +302,16 @@ const TILE_TELEPORT = 3
 
 A definição de funções é bastante semelhante a Python. A maior diferença é o uso de `func` em vez de `def` para inicializar a função. Assim como no Python, o `return` não é obrigatório (ma caso não tenha, fica implícito que a função retorna `null`). 
 
+### Parâmetros opcionais
+
 Você pode incluir parâmetros opcionais na função, basta que eles sejam atribuídos a algum valor logo na definição da função. O exemplo abaixo ilustra isso. O parâmetro `a_required` é obrigatório passar para a função, mas `b_optional` e `c_optional` são opcionais.
 
 ```python
 func my_function(a_required, b_optional=10, c_optional=42):
 	pass
 ```
+
+### Definindo os tipos das entradas e saídas
 
 Você também pode definir o tipo da entrada que a função espera.
 
@@ -322,6 +326,8 @@ func my_function(a: int, b: String):
 func my_int_function() -> int:
 	return 0
 ```
+
+### Declarando um callabale a partir de uma função
 
 Se você referenciar uma função sem as entradas, isso automaticamente gera um `callable`. O exemplo abaixo deve printar a sequência 1, 2, 3, 4 assim que o jogo é executado.
 
@@ -340,9 +346,13 @@ func map(item: int, function: Callable) -> int:
 	return result
 ```
 
+### Funções estáticas
+
 Assim como temos variáveis estáticas em classes, também existem as *funções estáticas*. Estas funções não devem estar dentro de classes internas a uma classe, pois elas servem para referenciar apenas à classe geral e suas variáveis estáticas. Deste modo, estas funções não são acessíveis por instâncias, e elas mesmas não são capazes de acessar variáveis de instâncias. Para definir uma variável estática, basta utilizar a sintaxe `static func` na declaração dela. Falaremos mais sobre este assunto na seção de classes.
 
-Funções também podem ter um número arbitrário de elementos (neste caso ela é chamada de "variadic function"). Coloque `...args` (em geral, `...{qualquer_nome}` funciona, em que *qualquer_nome* pode ser o nome que você quiser) como último elemento da sua função. Desta maneira, ela vai ler os parâmetros comuns de entrada e colocar todo o restante no array `args`. O exemplo abaixo deixa claro como isso funciona.
+### Funções variádicas
+
+Funções também podem ter um número arbitrário de elementos (neste caso ela é chamada de "variadic function", ou "função variádica"). Coloque `...args` (em geral, `...{qualquer_nome}` funciona, em que *qualquer_nome* pode ser o nome que você quiser) como último elemento da sua função. Desta maneira, ela vai ler os parâmetros comuns de entrada e colocar todo o restante no array `args`. O exemplo abaixo deixa claro como isso funciona.
 
 ```python
 func my_func(a, b = 0, ...args):
