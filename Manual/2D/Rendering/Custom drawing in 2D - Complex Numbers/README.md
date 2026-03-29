@@ -1,6 +1,6 @@
 # Complex Numbers
 
-Uma coisa que eu sempre tive vontade de ter foi um aplicativo para visualizar de maneira interativa (e em tempo real) as raízes dos [polinômios de Littlewood](https://en.wikipedia.org/wiki/Littlewood_polynomial). Agora com o que sei de Godot isso é possível. O intuito deste texto não é detalhar todo o processo, mas apenas os aprendizados novos que adquiri com este projeto.
+Uma coisa que eu sempre tive vontade de ter foi um aplicativo para visualizar de maneira interativa (e em tempo real) as raízes dos [polinômios de Littlewood](https://en.wikipedia.org/wiki/Littlewood_polynomial). Agora, com o que aprendi de Godot, isso é possível. O intuito deste texto não é detalhar todo o processo, mas apenas os aprendizados novos que adquiri com este projeto.
 
 ## Boot Splash 
 
