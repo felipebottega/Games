@@ -121,6 +121,16 @@ No caso de fazer isso para uma variável com a anotação `@export`, a descriç�
  <img width="650" src="https://github.com/user-attachments/assets/fb4f2d02-feff-42c5-b208-511176307c7a" />
 </p>
 
+Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `##` logo acima ou logo abaixo da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe.
+
+<p align="center">
+	<img width="700" src="https://github.com/user-attachments/assets/b0283717-69f7-4da1-9814-a130e6a23aab" />
+</p>
+
+<p align="center">
+	<img width="700" src="https://github.com/user-attachments/assets/6c0e9aae-7a18-4dd5-800c-4507ccd30141" />
+</p>
+
 ## Regiões de código
 
 Uma região de código é um tipo de comentário especial também, mas nesse caso é necessário inserir dois comentários: um para dizer onde começa a região e o outro para dizer onde termina. Você coloca `#region` logo antes do trecho do código de interesse e coloca `#endregion` logo após o trecho. Abaixo temos um exemplo de como isso é feito. O interessante deste método é que você pode colapsar a região inteira ao clicar na setinha ao lado do `#region`. Isso é bastante útil para organizar visualmente código grandes.
@@ -618,3 +628,4 @@ Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome
 </p>
 
 > PS: Este assunto foi brevemente abordado no projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo).
+
