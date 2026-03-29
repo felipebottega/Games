@@ -705,5 +705,21 @@ var seconds: int:
 ```
 
 <p align="center">
-	<img width="1100" src="https://github.com/user-attachments/assets/eac94ae4-190f-479b-b9b3-1d8ac1d54195" />
+	<img width="900" src="https://github.com/user-attachments/assets/eac94ae4-190f-479b-b9b3-1d8ac1d54195" />
 </p>
+
+Um exemplo prático de aplicação foi visto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#setter).
+
+## Gerenciamento de memória 
+
+No Godot, existem dois tipos principais de objetos na memória.
+
+1) Objetos que o Godot limpa sozinho
+
+São os que herdam de `RefCounted`, como muitos Resource. Cada vez que alguém está usando o objeto, ele ganha um contador. Quando ninguém mais está usando, esse contador vai para zero e o Godot apaga o objeto automaticamente.
+
+2) Objetos que você precisa apagar manualmente
+
+São os que não herdam de `RefCounted`, como `Node` e `Object` (e todos os filhos destes). Esses não somem sozinhos. Você precisa mandar apagar com `free` (apaga na hora) ou com o `queue_free` (apaga no final do frame). Sempre que você apagar um node, os filhos dele também são apagados junto automaticamente.
+
+## Sinais
