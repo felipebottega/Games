@@ -825,3 +825,9 @@ func no_wait():
 func get_five():
 	return 5
 ```
+
+## Assert
+
+A keyword `assert` pode ser usada para verificar condições em build debug. Os asserts são ignorados em builds que não sejam de debig. Isso significa que a expressão passada como argumento não será avaliada em um projeto exportado para produção. Devido a isso, os asserts não devem conter expressões que tenham efeitos colaterais. 
+
+Como exemplo, o comando `assert(i == 0)` verifica se 'i' é igual a 0. Se 'i' não for igual a 0, ocorrerá um erro de assert. Opcionalmente, você passar uma mensagem de erro personalizada para ser exibida, como `assert(enemy_power < 256, "Enemy is too powerful!")`.
