@@ -35,7 +35,7 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | `var`          | Define uma variável. Veja Variáveis. |
 | `breakpoint`   | Auxiliar do editor para pontos de parada (debug). Diferente dos breakpoints criados clicando na margem, este é armazenado no script, tornando-o persistente entre máquinas com controle de versão. |
 | `preload`      | Pré-carrega uma classe ou variável. Veja Classes como recursos. |
-| `await`        | Aguarda um sinal ou uma corrotina terminar. Veja Aguardando sinais ou co-rotinas. |
+| `await`        | Aguarda um sinal ou uma corrotina terminar. Veja Aguardando sinais ou corrotinas. |
 | `assert`       | Verifica uma condição e registra erro se falhar. Ignorado em builds não-debug. Veja assert. |
 | `void`         | Usado para indicar que uma função não retorna valor. |
 | `PI`           | Constante PI. |
@@ -51,7 +51,7 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | `x[index]` | Acesso por índice. |
 | `x.attribute` | Referência a atributo. |
 | `foo()` | Chamada de função. |
-| `await x` | Aguarda sinais ou co-rotinas. |
+| `await x` | Aguarda sinais ou corrotinas. |
 | `x is Node` <br> `x is not Node` | Verificação de tipo. Veja também a função is_instance_of(). |
 | `x ** y` | Potência. Multiplica x por ele mesmo y vezes, similar à função pow(). |
 | `~x` | NOT bit a bit. |
@@ -714,7 +714,7 @@ Um exemplo prático de aplicação foi visto [neste tutorial](https://github.com
 
 No Godot, existem dois tipos principais de objetos na memória.
 
-1) Objetos que o Godot limpa sozinho
+1) Objetos que a Godot limpa sozinho
 
 São os que herdam de `RefCounted`, como muitos Resource. Cada vez que alguém está usando o objeto, ele ganha um contador. Quando ninguém mais está usando, esse contador vai para zero e o Godot apaga o objeto automaticamente.
 
@@ -722,4 +722,106 @@ São os que herdam de `RefCounted`, como muitos Resource. Cada vez que alguém e
 
 São os que não herdam de `RefCounted`, como `Node` e `Object` (e todos os filhos destes). Esses não somem sozinhos. Você precisa mandar apagar com `free` (apaga na hora) ou com o `queue_free` (apaga no final do frame). Sempre que você apagar um node, os filhos dele também são apagados junto automaticamente.
 
+> PS: Alguns filhos do `Object` também são filhos do `RefCounted`, nestes caso é a Godot que limpa sozinha.
+
 ## Sinais
+
+Os sinais são uma ferramenta para emitir mensagens de um objeto às quais outros objetos podem reagir. Para criar sinais personalizados via código, use a keyword `signal`. Toda a parte prática de sinais já foi vista na série de tutoriais [daqui](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals). Vale a pena dar uma revisitada.
+
+### Exemplo prático de sinais
+
+Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador em nossa árvore de cena. Em nosso script `character.gd`, definimos um sinal `health_changed` e o emitimos com `Signal.emit()`, e de um node `Game` mais acima em nossa árvore de cena, o conectamos à barra de vida usando o método `Signal.connect()`. 
+
+```python
+# character.gd
+
+signal health_changed
+
+func take_damage(amount):
+	var old_health = health
+	health -= amount
+
+	health_changed.emit(old_health, health)
+```
+
+```python
+# lifebar.gd
+
+func _on_Character_health_changed(old_value, new_value):
+	if old_value > new_value:
+		progress_bar.modulate = Color.RED
+	else:
+		progress_bar.modulate = Color.GREEN
+
+	progress_bar.animate(old_value, new_value)
+```
+
+No node `Game`, obtemos os nodes `Character` e `Lifebar`, e então conectamos o personagem, que emite o sinal, ao receptor, que neste caso é o node `Lifebar`. Isso permite que `Lifebar` reaja às mudanças sem precisar estar vinculada ao node `Character`.
+
+```python
+# game.gd
+
+func _ready():
+	var character_node = get_node('Character')
+	var lifebar_node = get_node('UserInterface/Lifebar')
+
+	character_node.health_changed.connect(lifebar_node._on_Character_health_changed)
+```
+
+> PS: A estrutura da criação de um sinal por código é sempre essa: `Node.metodo_do_sinal.connect(funcao_que_vai reagir_ao_sinal)`.  
+
+É possível escrever os nomes dos argumentos opcionais entre parênteses após a definição do sinal. Esses argumentos aparecem *Inspector*. No entanto, você ainda pode emitir qualquer número de argumentos ao emitir sinais, cabe a você emitir os valores corretos.
+
+```python
+# Defining a signal that forwards two arguments.
+signal health_changed(old_value, new_value)
+```
+
+<p align="center">
+	<img width="350" src="https://github.com/user-attachments/assets/0ab07cca-830a-4353-a1dd-993a1b77c475" />
+</p>
+
+### Aguardando sinais ou corrotinas
+
+Uma *corrotina* é basicamente uma rotina do programa que permite que a execução seja suspensa e retomada depois. A keyword `await` pode ser usada para criar corrotinas que aguardam a emissão de um sinal antes de continuar a execução.
+
+Por exemplo, para interromper a execução até que o usuário pressione um botão, você pode fazer algo como o exemplo abaixo.
+
+```python
+func wait_confirmation():
+	print("Prompting user")
+	await $Button.button_up    # Waits for the button_up signal from Button node.
+	print("User confirmed")
+	return true
+```
+
+Nesse caso, o `wait_confirmation` se torna uma corrotina, o que significa que quem a chamou também precisa aguardar. 
+
+```python
+func request_confirmation():
+	print("Will ask the user")
+	var confirmed = await wait_confirmation()
+	if confirmed:
+		print("User confirmed")
+	else:
+		print("User cancelled")
+```
+
+Se você usar o comando `var confirmed = wait_confirmation()`, vai dar em erro. Chamar corrotinas sempre exige o uso do `await`. No entando, o código abaixo funciona, pois ele não tenta receber a saída da corrotina sem o `await`. Caso a corrotina ainda esteja executando, o código abaixo simplesmente vai continuar sem esperar.
+
+```python
+func okay():
+	wait_confirmation()
+	print("This will be printed immediately, before the user press the button.")
+```
+
+Se você usar o `await` em uma função que não é uma corrotina, ele vai executar a função normalmente, como se não tivesse o `await`.
+
+```python
+func no_wait():
+	var x = await get_five()
+	print("This doesn't make this function a coroutine.")
+
+func get_five():
+	return 5
+```
