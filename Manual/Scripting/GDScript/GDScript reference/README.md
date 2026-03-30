@@ -807,7 +807,7 @@ func request_confirmation():
 		print("User cancelled")
 ```
 
-Se você usar o comando `var confirmed = wait_confirmation()`, vai dar em erro. Chamar corrotinas sempre exige o uso do `await`. No entando, o código abaixo funciona, pois ele não tenta receber a saída da corrotina sem o `await`. Caso a corrotina ainda esteja executando, o código abaixo simplesmente vai continuar sem esperar.
+Se você usar o comando `var confirmed = wait_confirmation()`, vai dar em erro. Chamar corrotinas sempre exige o uso do `await`. No entando, o código abaixo funciona, pois ele não tenta receber a saída da corrotina. Caso a corrotina ainda esteja executando, o código abaixo simplesmente vai continuar sem esperar.
 
 ```python
 func okay():
