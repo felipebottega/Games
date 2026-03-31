@@ -3,6 +3,13 @@ class_name BigMath
 const BASE: int = 10000
 const BASE_DIGITS: int = 4
 
+# Quantas casas decimais a divisão deve gerar.
+var division_precision: int = 500
+
+# -1 = não limita a saída.
+# 0 ou mais = corta o resultado final para essa quantidade de casas.
+var max_output_decimals: int = -1
+
 
 class NumberParts:
 	var sign: int = 1
@@ -15,18 +22,7 @@ class NumberParts:
 		scale = _scale
 
 
-# Quantas casas decimais a divisão deve gerar.
-var division_precision: int = 500
-
-# -1 = não limita a saída.
-# 0 ou mais = corta o resultado final para essa quantidade de casas.
-var max_output_decimals: int = -1
-
-
-# ------------------------
-# API pública
-# ------------------------
-
+#region API pública
 func add(a: String, b: String, limit_decimals: int = -1) -> String:
 	var pa: NumberParts = _parse_number(a)
 	var pb: NumberParts = _parse_number(b)
@@ -69,7 +65,6 @@ func subtract(a: String, b: String, limit_decimals: int = -1) -> String:
 	pb.sign *= -1
 	return add(a, _format_number(pb.sign, pb.digits, pb.scale), limit_decimals)
 
-
 func multiply(a: String, b: String, limit_decimals: int = -1) -> String:
 	var pa: NumberParts = _parse_number(a)
 	var pb: NumberParts = _parse_number(b)
@@ -85,7 +80,6 @@ func multiply(a: String, b: String, limit_decimals: int = -1) -> String:
 	var result_scale: int = pa.scale + pb.scale
 
 	return _apply_output_policy(_format_number(result_sign, result_digits, result_scale), limit_decimals)
-
 
 func divide(a: String, b: String, limit_decimals: int = -1) -> String:
 	var pa: NumberParts = _parse_number(a)
@@ -124,12 +118,10 @@ func divide(a: String, b: String, limit_decimals: int = -1) -> String:
 
 	return _apply_output_policy(formatted, limit_decimals)
 
-
 func compare(a: String, b: String) -> int:
 	var pa: NumberParts = _parse_number(a)
 	var pb: NumberParts = _parse_number(b)
 	return _compare_parsed(pa, pb)
-	
 
 func square(a: String, limit_decimals: int = -1) -> String:
 	var p: NumberParts = _parse_number(a)
@@ -146,14 +138,12 @@ func square(a: String, limit_decimals: int = -1) -> String:
 		limit_decimals
 	)
 
-
 func _scaled_digits_blocks_fast(p: NumberParts, target_scale: int) -> PackedInt64Array:
 	var blocks: PackedInt64Array = _digits_string_to_block_array(p.digits)
 	var extra: int = target_scale - p.scale
 	if extra <= 0:
 		return blocks
 	return _scale_block_array_by_decimal_digits(blocks, extra)
-
 
 func _scale_block_array_by_decimal_digits(a: PackedInt64Array, extra_digits: int) -> PackedInt64Array:
 	if extra_digits <= 0 or _is_zero_blocks(a):
@@ -171,7 +161,6 @@ func _scale_block_array_by_decimal_digits(a: PackedInt64Array, extra_digits: int
 		result = _append_zero_blocks(result, block_shift)
 
 	return result
-
 
 func _multiply_block_array_by_decimal_power(a: PackedInt64Array, digits: int) -> PackedInt64Array:
 	var factor: int = 1
@@ -193,7 +182,6 @@ func _multiply_block_array_by_decimal_power(a: PackedInt64Array, digits: int) ->
 	result[0] = carry
 	return _trim_leading_zeros_blocks(result)
 
-
 func _append_zero_blocks(a: PackedInt64Array, count: int) -> PackedInt64Array:
 	if count <= 0 or _is_zero_blocks(a):
 		return a
@@ -205,7 +193,6 @@ func _append_zero_blocks(a: PackedInt64Array, count: int) -> PackedInt64Array:
 		result[i] = a[i]
 
 	return result
-
 
 func _square_block_array_fast(a: PackedInt64Array) -> PackedInt64Array:
 	a = _trim_leading_zeros_blocks(a)
@@ -244,12 +231,9 @@ func _square_block_array_fast(a: PackedInt64Array) -> PackedInt64Array:
 		result = expanded
 
 	return _trim_leading_zeros_blocks(result)
-	
+#endregion
 
-# ------------------------
-# Parsing / formatação
-# ------------------------
-
+#region Parsing / formatação
 func _parse_number(text: String) -> NumberParts:
 	text = text.strip_edges()
 
@@ -286,7 +270,6 @@ func _parse_number(text: String) -> NumberParts:
 
 	return NumberParts.new(sign, digits, dec_part.length())
 
-
 func _format_number(sign: int, digits: String, scale: int) -> String:
 	digits = _strip_leading_zeros(digits)
 	if digits == "" or digits == "0":
@@ -313,7 +296,6 @@ func _format_number(sign: int, digits: String, scale: int) -> String:
 
 	return out
 
-
 func _apply_output_policy(text: String, limit_decimals: int = -1) -> String:
 	text = _normalize_text(text)
 
@@ -335,7 +317,6 @@ func _apply_output_policy(text: String, limit_decimals: int = -1) -> String:
 		return _normalize_text(int_part)
 
 	return _normalize_text(int_part + "." + dec_part)
-
 
 func _normalize_text(text: String) -> String:
 	text = text.strip_edges()
@@ -365,12 +346,9 @@ func _normalize_text(text: String) -> String:
 		text = "0"
 
 	return sign_prefix + text if text != "0" else "0"
+#endregion
 
-
-# ------------------------
-# Comparação
-# ------------------------
-
+#region Comparação
 func _compare_parsed(a: NumberParts, b: NumberParts) -> int:
 	if a.sign != b.sign:
 		return 1 if a.sign > b.sign else -1
@@ -381,13 +359,11 @@ func _compare_parsed(a: NumberParts, b: NumberParts) -> int:
 
 	return cmp
 
-
 func _compare_abs(a: NumberParts, b: NumberParts) -> int:
 	var common_scale: int = maxi(a.scale, b.scale)
 	var ad: PackedInt64Array = _scaled_digits_blocks(a, common_scale)
 	var bd: PackedInt64Array = _scaled_digits_blocks(b, common_scale)
 	return _compare_block_arrays(ad, bd)
-
 
 func _compare_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> int:
 	a = _trim_leading_zeros_blocks(a)
@@ -405,12 +381,9 @@ func _compare_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> int:
 			return -1
 
 	return 0
+#endregion
 
-
-# ------------------------
-# Aritmética com blocos
-# ------------------------
-
+#region Aritmética com blocos
 func _add_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> PackedInt64Array:
 	var ia: int = a.size() - 1
 	var ib: int = b.size() - 1
@@ -435,7 +408,6 @@ func _add_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> PackedInt64A
 		k -= 1
 
 	return _trim_leading_zeros_blocks(result)
-
 
 func _subtract_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> PackedInt64Array:
 	# Assume a >= b
@@ -462,7 +434,6 @@ func _subtract_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> PackedI
 		ib -= 1
 
 	return _trim_leading_zeros_blocks(result)
-
 
 func _multiply_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> PackedInt64Array:
 	a = _trim_leading_zeros_blocks(a)
@@ -499,7 +470,6 @@ func _multiply_block_arrays(a: PackedInt64Array, b: PackedInt64Array) -> PackedI
 
 	return _trim_leading_zeros_blocks(result)
 
-
 func _multiply_block_array_by_small_digit(a: PackedInt64Array, digit: int) -> PackedInt64Array:
 	if digit == 0:
 		return _make_zero_blocks()
@@ -517,7 +487,6 @@ func _multiply_block_array_by_small_digit(a: PackedInt64Array, digit: int) -> Pa
 
 	result[0] = carry
 	return _trim_leading_zeros_blocks(result)
-
 
 func _divide_block_arrays(dividend: PackedInt64Array, divisor: PackedInt64Array) -> PackedInt64Array:
 	dividend = _trim_leading_zeros_blocks(dividend)
@@ -565,7 +534,6 @@ func _divide_block_arrays(dividend: PackedInt64Array, divisor: PackedInt64Array)
 
 	return _trim_leading_zeros_blocks(quotient)
 
-
 func _estimate_qdigit(remainder: PackedInt64Array, divisor: PackedInt64Array) -> int:
 	var r0: int = remainder[0]
 	var r1: int = 0
@@ -583,12 +551,9 @@ func _estimate_qdigit(remainder: PackedInt64Array, divisor: PackedInt64Array) ->
 		return BASE - 1
 
 	return estimate
+#endregion
 
-
-# ------------------------
-# Conversão entre string e blocos
-# ------------------------
-
+#region Conversão entre string e blocos
 func _digits_string_to_block_array(text: String) -> PackedInt64Array:
 	text = _strip_leading_zeros(text)
 	if text == "0":
@@ -619,7 +584,6 @@ func _digits_string_to_block_array(text: String) -> PackedInt64Array:
 
 	return arr
 
-
 func _block_array_to_digits_string(arr: PackedInt64Array) -> String:
 	arr = _trim_leading_zeros_blocks(arr)
 	if _is_zero_blocks(arr):
@@ -636,18 +600,14 @@ func _block_array_to_digits_string(arr: PackedInt64Array) -> String:
 
 	return out
 
-
 func _scaled_digits_blocks(p: NumberParts, target_scale: int) -> PackedInt64Array:
 	var extra: int = target_scale - p.scale
 	if extra > 0:
 		return _digits_string_to_block_array(p.digits + "0".repeat(extra))
 	return _digits_string_to_block_array(p.digits)
+#endregion
 
-
-# ------------------------
-# Utilitários de blocos
-# ------------------------
-
+#region Utilitários de blocos
 func _compare_int_strings(a: String, b: String) -> int:
 	a = _strip_leading_zeros(a)
 	b = _strip_leading_zeros(b)
@@ -663,7 +623,6 @@ func _compare_int_strings(a: String, b: String) -> int:
 		return -1
 
 	return 0
-
 
 func _trim_leading_zeros_blocks(arr: PackedInt64Array) -> PackedInt64Array:
 	if arr.size() <= 1:
@@ -684,17 +643,14 @@ func _trim_leading_zeros_blocks(arr: PackedInt64Array) -> PackedInt64Array:
 
 	return out
 
-
 func _is_zero_blocks(arr: PackedInt64Array) -> bool:
 	return arr.size() == 1 and arr[0] == 0
-
 
 func _make_zero_blocks() -> PackedInt64Array:
 	var arr: PackedInt64Array = PackedInt64Array()
 	arr.resize(1)
 	arr[0] = 0
 	return arr
-
 
 func _append_block(arr: PackedInt64Array, block: int) -> PackedInt64Array:
 	if _is_zero_blocks(arr):
@@ -707,12 +663,9 @@ func _append_block(arr: PackedInt64Array, block: int) -> PackedInt64Array:
 	arr.resize(old_size + 1)
 	arr[old_size] = block
 	return arr
+#endregion
 
-
-# ------------------------
-# Strings auxiliares
-# ------------------------
-
+#region Strings auxiliares
 func _strip_leading_zeros(text: String) -> String:
 	if text.is_empty():
 		return "0"
@@ -727,7 +680,6 @@ func _strip_leading_zeros(text: String) -> String:
 
 	return text.substr(i)
 
-
 func _strip_trailing_zeros(text: String) -> String:
 	if text.is_empty():
 		return ""
@@ -741,8 +693,8 @@ func _strip_trailing_zeros(text: String) -> String:
 
 	return text.substr(0, i + 1)
 
-
 func _repeat_char(ch: String, count: int) -> String:
 	if count <= 0:
 		return ""
 	return ch.repeat(count)
+#endregion

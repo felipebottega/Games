@@ -1,13 +1,40 @@
 extends Node2D
 
 
-var answer
-var symbol = '+'
-var number1 = '0'
-var number2 = '0'
-var number1_new = '0'
-var number2_new = '0'
-var symbol_new = '+'
+var answer = '0'
+
+var symbol = '+':
+	set(value):
+		symbol = value
+		var bm = BigMath.new()
+		answer = (bm.add(number1, number2) if '+' in value
+				  else bm.subtract(number1, number2) if '-' in value
+				  else bm.multiply(number1, number2) if '*' in value
+				  else bm.divide(number1, number2) if '/' in value
+				  else "none"
+				)
+				
+var number1 = '0':
+	set(value):
+		number1 = value
+		var bm = BigMath.new()
+		answer = (bm.add(value, number2) if '+' in symbol
+				  else bm.subtract(value, number2) if '-' in symbol
+				  else bm.multiply(value, number2) if '*' in symbol
+				  else bm.divide(value, number2) if '/' in symbol
+				  else "none"
+				)
+
+var number2 = '0':
+	set(value):
+		number2 = value
+		var bm = BigMath.new()
+		answer = (bm.add(number1, value) if '+' in symbol
+				  else bm.subtract(number1, value) if '-' in symbol
+				  else bm.multiply(number1, value) if '*' in symbol
+				  else bm.divide(number1, value) if '/' in symbol
+				  else "none"
+				)
 
 
 func _ready() -> void:
@@ -88,29 +115,15 @@ func compare_strings(a: String, b: String) -> String:
 	return result
 	
 func _process(_delta: float) -> void:
-	number1_new = $TextEdit.text
-	number2_new = $TextEdit2.text
-	symbol_new = $OptionButton.text
+	# Só atualiza quando houver alguma mudança.
+	if $TextEdit.text != number1:
+		number1 = $TextEdit.text
 	
-	if number1_new != number1 or number2_new != number2 or symbol_new != symbol:
-		number1 = number1_new
-		number2 = number2_new
-		symbol = symbol_new
-	
-		if '+' in symbol:
-			var bm = BigMath.new()
-			answer = bm.add(number1, number2)
-		elif '-' in symbol:
-			var bm = BigMath.new()
-			answer = bm.subtract(number1, number2)
-		elif '*' in symbol:
-			var bm = BigMath.new()
-			answer = bm.multiply(number1, number2)
-		elif '/' in symbol:
-			var bm = BigMath.new()
-			answer = bm.divide(number1, number2)
-			
-		print([number1, symbol, number2, answer])
-			
-		if answer != null:
-			$TextEdit3.text = str(answer)
+	if $TextEdit2.text != number2:
+		number2 = $TextEdit2.text
+		
+	if $OptionButton.text != symbol:
+		symbol = $OptionButton.text
+		
+	if $TextEdit3.text != answer:
+		$TextEdit3.text = answer
