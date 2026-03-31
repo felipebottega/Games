@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dawaqoyd8a0kj"]
+
+[ext_resource type="Script" uid="uid://pbm35ilbarxb" path="res://load_my_class_2.gd" id="1_uc435"]
+
+[node name="LoadMyClass2" type="Node2D"]
+script = ExtResource("1_uc435")

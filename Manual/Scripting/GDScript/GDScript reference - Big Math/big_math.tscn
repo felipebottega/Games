@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdevi2bf0wclm"]
+
+[ext_resource type="Script" uid="uid://bthk0fx8eo2wr" path="res://big_math.gd" id="1_xub7c"]
+
+[node name="BigMath" type="Node"]
+script = ExtResource("1_xub7c")
