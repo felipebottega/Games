@@ -1,13 +1,21 @@
-extends Node
+extends Node2D
 
 
-@export var width = 320
-@export var height = 240
+var answer
+var symbol = '+'
+var number1 = '0'
+var number2 = '0'
+var number1_new = '0'
+var number2_new = '0'
+var symbol_new = '+'
 
 
 func _ready() -> void:
 	var sep = "==================================================================================\n"
+	
+	# Carrega a classe.
 	var bm = BigMath.new()
+	
 	# Quantas casas decimais a divisão deve gerar.
 	bm.division_precision = 515
 
@@ -57,19 +65,6 @@ func _ready() -> void:
 	print(u)
 	print(compare_strings(bb, u))
 	print(sep)
-	
-	var tmp
-	
-	var start = Time.get_ticks_usec()
-	for i in width:
-		for j in height:
-			tmp = bm.square(b)
-			tmp = bm.add(tmp, b)
-	var end = Time.get_ticks_usec()
-	
-	var elapsed_sec = (end - start) / 1_000_000.0
-	print("Tempo: ", elapsed_sec, " s")
-	get_tree().quit()
 
 func compare_strings(a: String, b: String) -> String:
 	var min_len: int = min(a.length(), b.length())
@@ -91,3 +86,31 @@ func compare_strings(a: String, b: String) -> String:
 		result += " (" + remainder + ")"
 
 	return result
+	
+func _process(_delta: float) -> void:
+	number1_new = $TextEdit.text
+	number2_new = $TextEdit2.text
+	symbol_new = $OptionButton.text
+	
+	if number1_new != number1 or number2_new != number2 or symbol_new != symbol:
+		number1 = number1_new
+		number2 = number2_new
+		symbol = symbol_new
+	
+		if '+' in symbol:
+			var bm = BigMath.new()
+			answer = bm.add(number1, number2)
+		elif '-' in symbol:
+			var bm = BigMath.new()
+			answer = bm.subtract(number1, number2)
+		elif '*' in symbol:
+			var bm = BigMath.new()
+			answer = bm.multiply(number1, number2)
+		elif '/' in symbol:
+			var bm = BigMath.new()
+			answer = bm.divide(number1, number2)
+			
+		print([number1, symbol, number2, answer])
+			
+		if answer != null:
+			$TextEdit3.text = str(answer)

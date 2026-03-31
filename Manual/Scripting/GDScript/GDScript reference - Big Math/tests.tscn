@@ -2,5 +2,56 @@
 
 [ext_resource type="Script" uid="uid://c7r0qw2ut50j3" path="res://tests.gd" id="1_4j8f0"]
 
-[node name="Tests" type="Node"]
+[node name="Tests" type="Node2D"]
 script = ExtResource("1_4j8f0")
+metadata/_edit_horizontal_guides_ = [629.0]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 50.0
+offset_top = 82.0
+offset_right = 329.0
+offset_bottom = 629.0
+text = "0"
+wrap_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 450.0
+offset_top = 82.0
+offset_right = 729.0
+offset_bottom = 629.0
+text = "0"
+wrap_mode = 1
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+offset_left = 850.0
+offset_top = 82.0
+offset_right = 1129.0
+offset_bottom = 629.0
+text = "0"
+wrap_mode = 1
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 361.0
+offset_top = 110.0
+offset_right = 419.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 4
+popup/item_0/text = "+"
+popup/item_0/id = 0
+popup/item_1/text = "-"
+popup/item_1/id = 1
+popup/item_2/text = "*"
+popup/item_2/id = 2
+popup/item_3/text = "/"
+popup/item_3/id = 3
+
+[node name="Label" type="Label" parent="."]
+offset_left = 767.0
+offset_top = 101.0
+offset_right = 807.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 28
+text = "="
+horizontal_alignment = 1
