@@ -1,7 +1,5 @@
 # Integral Games
-Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os tutoriais e jogos de estudo que considero relevantes. Dentro de cada pasta deste repositório há um readme com o conteúdo do tutorial. Se houver um projeto em Godot na pasta, o tutorial usa este projeto como referência. Eu segui os conteúdos do *Getting Started* e do *Manual* da documentação oficial, reescrevendo tudo de um modo mais claro para mim, mas acredito que também será útil para outros. Alguns tópicos foram pulados, seja porque eu não gostei ou porque não achei útil.
-
-Todos os jogos que eu desenvolvi durante estes estudos podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
+Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os jogos que considero interessantes para mostrar a outras pessoas. Dentro de cada pasta deste repositório há um readme detalhando sobre o que é o jogo e explicando alguns detalhes técnicos que considero relevantes. Este repositório não contém os projetos em Godot, mas apenas os arquivos necessários para jogar. Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
 
 <h2>Conteúdo </h2>
 
@@ -1171,6 +1169,63 @@ Todos os jogos que eu desenvolvi durante estes estudos podem ser acessados na [m
 <br><li> <b>Manual\Platform-specific</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Platform-specific#alerta
 ">  Alerta
+ </a><br>
+<br><li> <b>Manual\Plugins\Editor plugins</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Editor%20plugins#encontrando-plugins
+">  Encontrando plugins
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Editor%20plugins#instalando-plugins
+">  Instalando plugins
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Editor%20plugins#habilitando-o-plugin
+">  Habilitando o plugin
+ </a><br>
+<li> <b>Manual\Plugins\Running code in the editor</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#@tool
+">  @tool
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#engineis_editor_hint()
+">  Engine.is_editor_hint()
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#setter
+">  setter
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#editorscript
+">  EditorScript
+ </a><br>
+<li> <b>Manual\Rendering\Overview of renderers</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#escolhendo-o-renderizador
+">  Escolhendo o renderizador
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#trocando-de-renderizador-
+">  Trocando de renderizador 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#tabelas-comparativas
+">  Tabelas comparativas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#comparação-geral
+">  Comparação geral
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#luzes-e-sombras
+">  Luzes e sombras
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#iluminação-global
+">  Iluminação global
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#ambiente-e-pós-processamento
+">  Ambiente e pós-processamento
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#anti-aliasing
+">  Anti-aliasing
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#recursos-do-standardmaterial
+">  Recursos do StandardMaterial
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#recursos-de-shader
+">  Recursos de shader
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#outros-recursos
+">  Outros recursos
  </a><br>
 <br><li> <b>Manual\Extras\Audio Server</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#atributos-do-audio-server
