@@ -29,7 +29,7 @@ O interessante de utilizar estes exports é que você pode ir no *Inspector* e l
 Também possível que os parâmetros do export variem com sliders ou passos incrementais.
 
 - **@export_range(-20, 20) var i:** Gera um slider de inteiros no *Inspector*, indo de $-20$ a $20$.
-- **@export_range(-10, 20, 0.2) var j:** Gera um slider de floats, indo de $-20$ a 20$, com incrementos de $0.2$. 
+- **@export_range(-10, 20, 0.2) var j:** Gera um slider de floats, indo de $-20$ a $20$, com incrementos de $0.2$. 
 - **@export_range(0, 100000, 0.01, "exp") var exponential:** Gera um slider de floats no *Inspector*, variando em escala exponencial.
 - **@export_range(0, 1000, 0.01, "hide_slider") var no_slider:** Omite o slider, de modo que você deve digitar o valor.
 - **@export_range(0, 100, 1, "suffix:meters") var m:** Gera um slider com label.
@@ -40,3 +40,14 @@ Também possível que os parâmetros do export variem com sliders ou passos incr
 </p>
 
 > PS: Se você especificar o tipo `int` (ex. `@export_range(-20, 20) var i: int`), o parâmetro passa a usar setinha de incrementos em vez de slider.
+
+## Cores
+
+O export de cores é normal, basta indicar o tipo `color`. Com isso, a paleta de cores fica disponível no *Inspector*. Caso não queira que o *alpha* seja customizável, você pode usar `@export_color_no_alpha`.
+
+## Nodes
+
+O export de nodes também é normal, basta indicar o tipo de node que quer. Com isso, é possível adicionar nodes da cena no *Inspector* (apenas aceita nodes da cena). Vale notar também que o parâmetro só aceita nodes que sejam do tipo especificado ou filhos deste. Por exemplo, `@export var node: Node` aceita qualquer node da cena, enquanto que `@export var some_button: Button` só vai aceitar node do tipo `Button` ou filhos deste (não é filho na árvore de nodes, mas filho como estrutura de classe).
+
+## Resources
+
