@@ -55,6 +55,22 @@ O export de nodes também é normal, basta indicar o tipo de node que quer. Com 
 
 ## Resources
 
-Com o export `@export var resource: Resource`, você pode arrastar e soltar um arquivo de recurso do *FileSystem* para o campo correspondente no *Inspector*. No entanto, abrir o menu dropdown desta propriedade do *Inspector* pode resultar em uma lista extremamente longa de classes que podem ser criadas (já que o tipo *Resource* é qualquer recurso). É possível ser mais específico com comandos tipo `@export var resource: AnimationNode`, por exemplo.
+Com o export `@export var resource: Resource`, você pode arrastar e soltar um arquivo de recurso do *FileSystem* para o campo correspondente no *Inspector*. No entanto, abrir o menu dropdown desta propriedade do *Inspector* pode resultar em uma lista extremamente longa de classes que podem ser criadas (já que o tipo *Resource* é qualquer recurso). É possível ser mais específico com o tipo de recurso a ser utilizado. Por exemplo você pode usar `@export var resource: AnimationNode` para ser mais específico.
 
-## 
+## Enums
+
+Você utiliza a anotação `@export_enum` para exportar um `Enum` para o *Inspector*. Por exemplo, o comando `@export_enum("WARRIOR", "MAGICIAN", "THIEF") var character_class = "THIEF"` cria o respectivo `Enum`, em que `WARRIOR = 0`, `MAGICIAN = 1`, `THIEF = 2`. O parâmetro que receberá estes valores é o `character_class`, que será inicializado como `THIEF`, pois colocamos o igual ao fim do comando do export.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/47a36103-f899-4598-8933-adb5f70c6f30" />
+</p>
+
+> PS: Colocar a anotação igual a algum valor na sua declaração (fizemos acima) fará com que aquele seja o valor inicial no *Inspector*. Porém, tem que tomar cuidado pois às vezes ele altera o modo de intratividade no *Inspector*. Só testando para saber.
+
+## Arrays
+
+É possível exportar arrays, mas devem ser valores constantes. Por exemplo `@export var a = [1, 2, 3]` funciona, mas não `@export var a = [1, 2, x]`, mesmo que `x` tenha um valor  definido. No entando, você pode não inserir nenhum valor no caso. Neste caso ele será inicializado como `null`. Por exemplo, `@export var b: Array[int]` funciona. Você também definir o tipo de array a ser exportado, por exemplo, `@export var c: Array[int] = [1, 2, 3]` e `@export var d: Array[PackedScene]` funcionam. Por fim, você também pode exportar [`PackedArray`](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#tipos-de-containers), mas ele deve ser inicializado vazio, por exemplo, `@export var e = PackedVector3Array()`.
+
+<p align="center">
+  <img width="1000" src="https://github.com/user-attachments/assets/e008eb7a-ab10-485e-aefa-6d0ff4200017" />
+</p>
