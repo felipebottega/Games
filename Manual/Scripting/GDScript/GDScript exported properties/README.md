@@ -24,3 +24,19 @@ O interessante de utilizar estes exports é que você pode ir no *Inspector* e l
   <img width="440" src="https://github.com/user-attachments/assets/a3c3edd5-fdf7-429f-b8cc-3885650fee33" />
 </p>
 
+## Ranges
+
+Também possível que os parâmetros do export variem com sliders ou passos incrementais.
+
+- **@export_range(-20, 20) var i:** Gera um slider de inteiros no *Inspector*, indo de $-20$ a $20$.
+- **@export_range(-10, 20, 0.2) var j:** Gera um slider de floats, indo de $-20$ a 20$, com incrementos de $0.2$. 
+- **@export_range(0, 100000, 0.01, "exp") var exponential:** Gera um slider de floats no *Inspector*, variando em escala exponencial.
+- **@export_range(0, 1000, 0.01, "hide_slider") var no_slider:** Omite o slider, de modo que você deve digitar o valor.
+- **@export_range(0, 100, 1, "suffix:meters") var m:** Gera um slider com label.
+- **@export_range(0, 360, 0.1, "radians_as_degrees") var angle:** Gera um slider com label de grau $^\circ$, específico para ângulos.
+
+<p align="center">
+  <img width="1324" height="218" alt="image" src="https://github.com/user-attachments/assets/e0f42511-0a05-462b-8839-5e836128e588" />
+</p>
+
+> PS: Se você especificar o tipo `int` (ex. `@export_range(-20, 20) var i: int`), o parâmetro passa a usar setinha de incrementos em vez de slider.
