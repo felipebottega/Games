@@ -36,7 +36,7 @@ Também possível que os parâmetros do export variem com sliders ou passos incr
 - **@export_range(0, 360, 0.1, "radians_as_degrees") var angle:** Gera um slider com label de grau $^\circ$, específico para ângulos.
 
 <p align="center">
-  <img width="1324" height="218" alt="image" src="https://github.com/user-attachments/assets/e0f42511-0a05-462b-8839-5e836128e588" />
+  <img width="1100" src="https://github.com/user-attachments/assets/e0f42511-0a05-462b-8839-5e836128e588" />
 </p>
 
 > PS: Se você especificar o tipo `int` (ex. `@export_range(-20, 20) var i: int`), o parâmetro passa a usar setinha de incrementos em vez de slider.
@@ -49,5 +49,12 @@ O export de cores é normal, basta indicar o tipo `color`. Com isso, a paleta de
 
 O export de nodes também é normal, basta indicar o tipo de node que quer. Com isso, é possível adicionar nodes da cena no *Inspector* (apenas aceita nodes da cena). Vale notar também que o parâmetro só aceita nodes que sejam do tipo especificado ou filhos deste. Por exemplo, `@export var node: Node` aceita qualquer node da cena, enquanto que `@export var some_button: Button` só vai aceitar node do tipo `Button` ou filhos deste (não é filho na árvore de nodes, mas filho como estrutura de classe).
 
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/e3dcf2d1-99ee-4b69-a298-c6efcca37950" />
+</p>
+
 ## Resources
 
+Com o export `@export var resource: Resource`, você pode arrastar e soltar um arquivo de recurso do *FileSystem* para o campo correspondente no *Inspector*. No entanto, abrir o menu dropdown desta propriedade do *Inspector* pode resultar em uma lista extremamente longa de classes que podem ser criadas (já que o tipo *Resource* é qualquer recurso). É possível ser mais específico com comandos tipo `@export var resource: AnimationNode`, por exemplo.
+
+## 
