@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="GDScript exported properties"
+run/main_scene="uid://gvwsw8gkbl3m"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=300
+window/size/viewport_height=300
+window/stretch/mode="canvas_items"
 
 [rendering]
 

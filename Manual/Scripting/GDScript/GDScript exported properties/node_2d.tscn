@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://gvwsw8gkbl3m"]
+
+[ext_resource type="Script" uid="uid://b1xjn35kq6hmv" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://78gw03t6r1le" path="res://icon.svg" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("mynode", "some_button")]
+script = ExtResource("1_0e48y")
+path = "uid://78gw03t6r1le"
+folder = "res://folder"
+abs_path = "D:/Computacao/Godot/to_git/Manual/Scripting/GDScript/GDScript exported properties/icon.svg"
+abs_folder = "D:/Computacao/Godot/to_git/Manual/Scripting/GDScript/GDScript exported properties/folder"
+k = 10
+exponential = 0.47
+m = 0.0
+mynode = NodePath("Sprite2D")
+some_button = NodePath("Button")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(150, 150)
+texture = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
