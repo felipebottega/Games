@@ -254,6 +254,13 @@ var a: int
 var b: int = 5
 ```
 
+Definir os tipos das variáveis deixa o teu código mais robusto e ajuda a própria engine a detectar erros mais facilmente. Outra vantagem de variáveis tipadas é que o editor é capaz de usar o autocomplete nelas. 
+
+<p align="center">
+	<img width="150" src="https://github.com/user-attachments/assets/47b2e766-c5f4-4902-9603-59449669bbab" />
+	<img width="410" src="https://github.com/user-attachments/assets/d6eb8c72-c2ca-495e-9796-d7e25401d45f" />
+</p>
+
 ### Variáveis estáticas
 
 Variáveis de uma classe podem ser declaradas como *estáticas*. Isso é simples, como mostra o exemplo abaixo.
