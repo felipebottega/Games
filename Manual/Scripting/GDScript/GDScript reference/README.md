@@ -121,14 +121,14 @@ No caso de fazer isso para uma variável com a anotação `@export`, a descriç�
  <img width="650" src="https://github.com/user-attachments/assets/fb4f2d02-feff-42c5-b208-511176307c7a" />
 </p>
 
-Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `##` logo acima ou logo abaixo da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe.
+Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `##` logo acima ou logo abaixo da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe. O exemplo abaixo o básico para uma boa documentação.
 
 <p align="center">
-	<img width="700" src="https://github.com/user-attachments/assets/b0283717-69f7-4da1-9814-a130e6a23aab" />
+	<img width="600" src="https://github.com/user-attachments/assets/b961b2bc-c18b-42bf-a4a5-67b5cf9d0a75" />
 </p>
 
 <p align="center">
-	<img width="700" src="https://github.com/user-attachments/assets/6c0e9aae-7a18-4dd5-800c-4507ccd30141" />
+	<img width="600" src="https://github.com/user-attachments/assets/298db084-f650-4d9e-af1f-b9dea13d7828" />
 </p>
 
 ## Regiões de código
