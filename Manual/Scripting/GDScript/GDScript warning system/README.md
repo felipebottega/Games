@@ -22,7 +22,7 @@ Se quisermos nos livrar deste alerta (pois alerta/warning não significa que a e
   <img width="450" src="https://github.com/user-attachments/assets/7f79b3da-19a1-45f0-aef1-35c47dc6c842" />
 </p>
 
-Porém, o que eu é que você apenas clique no *Ignore* à esquerda do alerta. Com isso a anotação será inserida já com a opção correta.
+Porém, o que eu recomendo é que você apenas clique no *Ignore* à esquerda do alerta. Com isso a anotação será inserida automaticamente já com a opção correta.
 
 <p align="center">
   <img width="320" src="https://github.com/user-attachments/assets/6bbb685e-f95d-4622-984b-da4872c44f6b" />
