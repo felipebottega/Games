@@ -7,4 +7,19 @@ A Godot vem com um debugger e profiler poderosos para rastrear erros, inspeciona
   <img width="1100" src="https://github.com/user-attachments/assets/28431ac2-58bc-47ed-be5a-50091275a547" />
 </p>
 
+Entraremos mais em detalhes sobre cada painél acima nos tutoriais a seguir.
+
 > PS: Já vimos um pouco do sobre profiles no [tutorial de otimização de CPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization).
+
+## Debug menu options
+
+Vamos começar falando sobre as opções de debug do editor. Já explicamos sobre alguns de seus campos em momentos de necessidade, mas agora chegou a hora de abordar isso sistematicamente.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/9fe88d22-f570-48d4-a5da-629a2fe0e3b1" />
+</p>
+
+- **Deploy with Remote Debug:** Quando esta opção está habilitada, exportar com *one-click deploy* fará com que o executável tente se conectar ao endereço IP deste computador para que o projeto em execução possa ser debugado. Esta opção destina-se à depuração remota (normalmente com um dispositivo móvel).
+- **Small Deploy with Network Filesystem:** Essa opção acelera os testes de jogos grandes em dispositivos remotos. Quando esta opção hailitada, em vez de exportar o jogo completo, gera um executável mínimo. O editor então fornece os arquivos do projeto pela rede.
+- **Visible Collision Shapes:** Quando esta opção estiver habilitada, os shapes de colisão e os nodes de raycast (2D e 3D) ficarão visíveis no projeto em execução.
+- **Visible Paths:** Quando esta opção estiver habilitada, as curvas usadas ​​pelos nodes de caminho (`Path2D` e `PathFollow2D`, ver [este tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child) e [este](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D). ) ficarão visíveis no projeto em execução.
