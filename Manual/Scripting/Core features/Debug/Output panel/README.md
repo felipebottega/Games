@@ -52,9 +52,22 @@ A Godot oferece alguns comandos especiais para printar. O mais comum é o `print
 Agora considere o exemplo abaixo.
 
 <p align="center">
-  <img width="150" src="https://github.com/user-attachments/assets/a5e389a9-5d02-43b8-a65e-9654e09c95dd" />
-  <img width="450" src="https://github.com/user-attachments/assets/270b691f-9a19-4c49-8aa3-c7815ead8883" />
-  <img width="400" src="https://github.com/user-attachments/assets/669d590e-96da-47cf-960f-2a424f411489" />
+  <img width="220" src="https://github.com/user-attachments/assets/a5e389a9-5d02-43b8-a65e-9654e09c95dd" />
+</p>
+<p align="center">
+  <img width="560" src="https://github.com/user-attachments/assets/270b691f-9a19-4c49-8aa3-c7815ead8883" />
+  <img width="410" src="https://github.com/user-attachments/assets/669d590e-96da-47cf-960f-2a424f411489" />
 </p>
 
+Abaixo temos os outputs que saíram na aba Output.
+
+<p align="center">
+  <img width="580" src="https://github.com/user-attachments/assets/6555eef8-1351-407a-b47a-832701b28da7" />
+</p>
+
+Por fim, os output que saíram na aba *Debugger → Errors*.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/d761010c-a6d4-4bcd-bf2b-6c8eb76c124b" />
+</p>
 
