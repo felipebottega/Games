@@ -1,11 +1,27 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	@warning_ignore("unused_variable")
+	var x = 123
 
+func _process(_delta: float) -> void:
+	var x = 1
+	print(x)
+	
+	@warning_ignore_start("unused_variable")
+	var y = 2
+	var z = 3
+	@warning_ignore_restore("unused_variable")
+	
+	
+@warning_ignore_start("shadowed_variable", "unused_variable", "unused_parameter")
+var t
+	
+func _physics_process(delta: float) -> void:
+	var x = 1
+	print(x)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func foo(x, y, z):
+	var t = 2
+	print(x + y + t)
