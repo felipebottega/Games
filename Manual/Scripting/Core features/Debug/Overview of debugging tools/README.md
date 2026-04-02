@@ -29,4 +29,16 @@ Vamos começar falando sobre as opções de debug do editor. Já explicamos sobr
 - **Synchronize Scene Changes:** Quando esta opção está habilitada, quaisquer alterações feitas na cena serão replicadas no projeto em execução. Ao usar remotamente em um dispositivo, isso é mais eficiente se a opção de sistema de arquivos de rede estiver ativada.
 - **Synchronize Script Changes:** Quando esta opção está habilitada, quaisquer alterações feitas no script serão recarregadas no projeto em execução. Quando usado remotamente em um dispositivo, isso é mais eficiente com o sistema de arquivos de rede.
 - **Keep Debug Server Open:** Quando essa opção está habilitada, o servidor de debug do editor permanecerá aberto e ficará à espera de novas sessões iniciadas fora do próprio editor.
-- **Customize Run Instances...:** Isso abre uma caixa de diálogo que permite instruir o Godot a executar várias instâncias do jogo simultaneamente e especificar os argumentos da linha de comando para cada instância. Isso é especialmente útil ao criar e depurar jogos multiplayer.
+- **Customize Run Instances:** Isso abre uma caixa de diálogo que permite instruir a Godot a executar várias instâncias do jogo simultaneamente e especificar os argumentos da linha de comando para cada instância. Isso é especialmente para jogos multiplayer. Como este não é o meu foco no momento, não vou adentrar no assunto. Porém, vale ressaltar que há bastante coisa para se fazer nessa caixa de diálogo.
+
+## Script editor debug tools and options
+
+Em programação, um "breakpoint" é um ponto do código que você determina para pausar a execução. A partir daquele ponto, é possível executar as tarefas seguintes uma por vez, para entender exatamente o que está acontecendo. Esta funcionalidade permite detectar bugs e erros mais facilmente. A Godot possui duas maneiras de se inserir breakpoints no código: clicando no lado esquerdo do código para criar uma "bolinha vermelha" ou inserindo a keyword `breakpoint` no código.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/935b787c-19b7-4902-a424-ae95ba602728" />
+</p>
+
+A bolinha é mais rápida de criar e desfazer, mas ela pode sumir entre versões diferentes da engine ou mesmo em máquinas diferentes. A keyword é garantida de sempre estar lá, já que é inserida diretamente no código. Só é chato ter que ficar colocando mais linhas de código que serão removidas posteriormente.
+
+
