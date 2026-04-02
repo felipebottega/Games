@@ -52,3 +52,32 @@ Para prosseguir, você pode clicar na aba *Debug* logo acima do script e selecio
 <p align="center">
   <img width="450" src="https://github.com/user-attachments/assets/cef6a2d0-66ee-4cdd-b2c8-1c3be0213cf2" />
 </p>
+
+## Debug project settings
+
+No *Project Settings* há diversas configurações de Debug que podem ser interessantes de alterar dependo do projeto e do desenvolvedor. Para acessar, vá em *Project → Project Settings → General → Debug* (é necessário ativar as opções avançadas). Segue abaixo uma breve descrição de cada campo. 
+
+- **Settings:** Estas são algumas configurações gerais, como imprimir o FPS atual no painel de output, a quantidade máxima de funções durante a criação de perfil e outras.
+- **File Logging:** Estas configurações permitem registrar os logs do console e mensagens de erro em arquivos.
+- **GDScript:** Estas configurações permitem ativar/desativar alertas específicos do GDScript. Você também pode desativar os avisos completamente. Consulte o tutorial [GDScript warning system](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system) para obter mais informações.
+- **Shader Language:** Estas configurações permitem ativar/desativar alertas específicos do shaders. Você também pode desativar os avisos completamente.
+- **Canvas Items:** Estas configurações são para debug de redraw de itens da tela.
+- **Shapes:** Você pode ajustar a cor de formas que aparecem apenas para fins de debug, como formas de colisão e navegação.
+
+### Opções avançadas do Project Settings
+
+Em várias partes do tutorial foi dito que era necessário ativar as opções avançadas, como feito logo acima. Para esclarecer, esta opção está à direita na janela do *Project → Project Settings → General*, como indicado na imagem abaixo.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/b99a332b-6d9a-4eb7-aeca-94f0334c071c" />
+</p>
+
+Vou deixar aqui como referência as abas que tem diferente entre o modo normal de avançado.
+
+<p align="center">
+  <img width="150" src="https://github.com/user-attachments/assets/baf62b32-3618-495a-89ab-f847b4ca451a" />
+  <img width="160" src="https://github.com/user-attachments/assets/59aa7c8b-b179-4e47-a4f5-3e44e523dec4" />
+</p>
+
+## Remote in scene dock
+
