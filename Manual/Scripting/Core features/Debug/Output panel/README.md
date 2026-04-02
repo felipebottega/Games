@@ -71,3 +71,4 @@ Por fim, os output que saíram na aba *Debugger → Errors*.
   <img width="550" src="https://github.com/user-attachments/assets/d761010c-a6d4-4bcd-bf2b-6c8eb76c124b" />
 </p>
 
+> PS: Note que os prints do comando `print_stack()` começaram pelo node mais na base da árvore, depois indo para o topo. A ordem de montagem de uma cena sempre vai de baixo para cima na árvore.
