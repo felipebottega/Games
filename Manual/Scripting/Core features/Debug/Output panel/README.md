@@ -1,6 +1,6 @@
 # Output panel
 
-Como prometido anteiormente, agora vamos falar sobre o painel de output do editor.
+Como prometido anteriormente, agora vamos falar sobre o painel de output do editor.
 
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/72977b5d-9e43-41d6-aa7e-27f62a4ce9f5" />
@@ -36,3 +36,25 @@ Sempre que você quiser limpar todos os prints do output, basta clicar no ícone
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/a83ca072-3bfa-4283-808f-063c26775927" />
 </p>
+
+## Printando mensagens
+
+A Godot oferece alguns comandos especiais para printar. O mais comum é o `print()`, que já usamos diversas vezes nos códigos. Segue abaixo a lista de alguns prints interessantes, e depois um exemplo para visualizar.
+
+- **print():** Printa uma mensagem normalmente.
+- **print_rich():** Semelhante a `print()`, mas permite o uso de [BBCode](https://www.bbcode.org/reference.php) para formatar o texto.
+- **push_error():** Printa uma mensagem de erro. A mensagem é exibida na aba *Debugger → Errors*.
+- **push_warning():** Printa uma mensagem de aviso. A mensagem exibida na aba *Debugger → Errors*.
+- **print_stack():** Printa a *stack trace* a partir da localização atual. Suportado apenas quando executado a partir do editor ou quando o projeto é exportado em modo de debug.
+- **print_tree():** Printa a SceneTree relativa ao node atual.
+- **print_tree_pretty():** Semelhante ao `print_tree()`, mas com caracteres Unicode para uma aparência mais semelhante a uma árvore.
+
+Agora considere o exemplo abaixo.
+
+<p align="center">
+  <img width="150" src="https://github.com/user-attachments/assets/a5e389a9-5d02-43b8-a65e-9654e09c95dd" />
+  <img width="450" src="https://github.com/user-attachments/assets/270b691f-9a19-4c49-8aa3-c7815ead8883" />
+  <img width="400" src="https://github.com/user-attachments/assets/669d590e-96da-47cf-960f-2a424f411489" />
+</p>
+
+
