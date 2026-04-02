@@ -13,17 +13,31 @@ Caso não seja interessante alterar o sistema de alertas para o projeto inteiro,
 Abaxo temos um exemplo de uma situação que ativa um alerta. Temos uma variável declarada que não foi utilizada para nada. 
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/36123ac2-03cf-4724-b2ae-b58ede414563" />
+  <img width="800" src="https://github.com/user-attachments/assets/36123ac2-03cf-4724-b2ae-b58ede414563" />
 </p>
 
 Se quisermos nos livrar deste alerta (pois alerta/warning não significa que a execução vai quebrar), podemos usar a anotação `@warning_ignore()`. Esta anotação precisa de um argumento de entrada para funcionar. Ao escrever os parênteses as opções já vão aparecer na tela. 
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/7f79b3da-19a1-45f0-aef1-35c47dc6c842" />
+  <img width="450" src="https://github.com/user-attachments/assets/7f79b3da-19a1-45f0-aef1-35c47dc6c842" />
 </p>
 
 Porém, o que eu é que você apenas clique no *Ignore* à esquerda do alerta. Com isso a anotação será inserida já com a opção correta.
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/6bbb685e-f95d-4622-984b-da4872c44f6b" />
+  <img width="320" src="https://github.com/user-attachments/assets/6bbb685e-f95d-4622-984b-da4872c44f6b" />
 </p>
+
+Também é possível delimitar blocos em que certos alertas não são emitidos, usando as anotações `@warning_ignore_start()` e `@warning_ignore_restore()`, como mostrado no exemplo abaixo. Repare que o editor está reclamando apenas da variável `delta` não utilizada.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/f31345f2-273e-473f-a711-7ccef4dd71fb" />
+</p>
+
+Por fim, note que é possível usar estas anotações com múltiplos argumentos e não precisa fechar o `@warning_ignore_start()` (ele vale até o fim do código).
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/a8f0de2c-259f-4e36-a0d4-7d3b9e9d8d83" />
+  <img width="600" src="https://github.com/user-attachments/assets/ac9ce927-e6e4-4566-80fb-e3390fd5b5f7" />
+</p>
+
