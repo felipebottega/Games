@@ -4,6 +4,9 @@ A Godot vem com um debugger e profiler poderosos para rastrear erros, inspeciona
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/326b1c64-00f0-4872-8f06-58a8dff00064" />
+</p>
+
+<p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/28431ac2-58bc-47ed-be5a-50091275a547" />
 </p>
 
@@ -81,3 +84,10 @@ Vou deixar aqui como referência as abas que tem diferente entre o modo normal d
 
 ## Remote in scene dock
 
+Ao executar um jogo no editor, duas opções aparecem na parte superior do painel *Scene*: *Remote* e *Local*. Ao usar a opção *Remote*, você pode inspecionar ou alterar os parâmetros dos nodes do projeto em execução. A opção *Local* é o conjunto comum dos nodes que você manipula durante o desenvolvimento.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/7f1136a7-ec41-4fb6-a97b-edeb4bd1f2a4" />
+</p>
+
+Eu já usei bastante a aba *Remote* em projetos anteriores para saber se certas instâncias estavam sendo criadas ou não na cena durante a execução.
