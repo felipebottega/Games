@@ -35,7 +35,7 @@ O que eles chamam de "API da Godot" neste contexto é a documentação da API, n
     <img width="400" src="https://github.com/user-attachments/assets/fb3b95b0-57cd-4ddd-91a0-3cc2023fae8e" />
 </p>
 
-Segue abaixo a estrutura geral da documentação de uma classe.
+Segue abaixo a estrutura geral da documentação de uma classe em Godot.
 
 > # NomeDaClasse
 >
@@ -49,20 +49,14 @@ Segue abaixo a estrutura geral da documentação de uma classe.
 >
 > ## Description
 >
-> Descrição detalhada da classe.
->
-> Explique:
-> - O que a classe representa
-> - Como ela funciona
-> - Quando usar
-> - Relação com outras classes
+> Descrição detalhada da classe `NomeDaClasse`.
 >
 > ---
 >
 > ## Tutorials
 >
-> - Tutorial ou guia relacionado
-> - Exemplo de uso
+> - Tutorial ou guia relacionado à classe `NomeDaClasse`.
+> - Exemplo de uso da classe `NomeDaClasse`.
 >
 > ---
 >
@@ -97,7 +91,7 @@ Segue abaixo a estrutura geral da documentação de uma classe.
 >
 > ### `propriedade_1: int`
 >
-> Descrição detalhada.
+> Descrição detalhada da propriedade `propriedade_1`.
 >
 > **Setter:**
 > - `set_propriedade_1(valor: int)`
@@ -109,7 +103,7 @@ Segue abaixo a estrutura geral da documentação de uma classe.
 >
 > ### `propriedade_2: bool`
 >
-> Descrição detalhada.
+> Descrição detalhada da propriedade `propriedade_2`.
 >
 > ---
 >
@@ -117,19 +111,19 @@ Segue abaixo a estrutura geral da documentação de uma classe.
 >
 > ### `metodo_1() -> void`
 >
-> Descrição detalhada do método.
+> Descrição detalhada do método `metodo_1()`.
 >
 > ---
 >
 > ### `metodo_2(param: int) -> int`
 >
-> Descrição detalhada do método.
+> Descrição detalhada do método `metodo_2()`.
 >
 > **Parâmetros:**
-> - `param` (int): descrição
+> - `param` (int): descrição do parâmetro `param`.
 >
 > **Retorno:**
-> - int: descrição
+> - int: descrição do valor retornado por `metodo_2()`.
 >
 > ---
 >
@@ -137,21 +131,21 @@ Segue abaixo a estrutura geral da documentação de uma classe.
 >
 > ### `sinal_1()`
 >
-> Descrição detalhada do sinal.
+> Descrição detalhada do sinal `sinal_1()`.
 >
 > ---
 >
 > ### `sinal_2(valor: int)`
 >
-> Descrição detalhada do sinal.
+> Descrição detalhada do sinal `sinal_2()`.
 >
 > ---
 >
 > ## Notes
 >
-> - Observações importantes
-> - Comportamentos específicos
-> - Limitações
+> - Observações importantes sobre a classe `NomeDaClasse`.
+> - Comportamentos específicos da classe `NomeDaClasse`.
+> - Limitações da classe `NomeDaClasse`.
 >
 > ---
 >
@@ -161,6 +155,8 @@ Segue abaixo a estrutura geral da documentação de uma classe.
 > var obj = NomeDaClasse.new()
 > obj.metodo_1()
 > ```
+
+A documentação sempre vai seguir a estrutura mostrada acima. O que cada item desta estrutura significa está explicado logo abaixo.
 
 - **NomeDaClasse:** Este é o nome da classe (ex: `Node2D`, `Sprite2D`, `CanvasItem`, etc.). É o que você usa no código para criar ou referenciar essa classe.
 
