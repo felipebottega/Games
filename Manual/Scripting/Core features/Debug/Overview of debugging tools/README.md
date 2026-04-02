@@ -7,7 +7,7 @@ A Godot vem com um debugger e profiler poderosos para rastrear erros, inspeciona
   <img width="1100" src="https://github.com/user-attachments/assets/28431ac2-58bc-47ed-be5a-50091275a547" />
 </p>
 
-Entraremos mais em detalhes sobre cada painél acima nos tutoriais a seguir.
+Entraremos mais em detalhes sobre cada painel acima nos tutoriais a seguir.
 
 > PS: Já vimos um pouco do sobre profiles no [tutorial de otimização de CPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization).
 
@@ -41,4 +41,8 @@ Em programação, um "breakpoint" é um ponto do código que você determina par
 
 A bolinha é mais rápida de criar e desfazer, mas ela pode sumir entre versões diferentes da engine ou mesmo em máquinas diferentes. A keyword é garantida de sempre estar lá, já que é inserida diretamente no código. Só é chato ter que ficar colocando mais linhas de código que serão removidas posteriormente.
 
+Uma vez que você criou o breakpoint e executou o jogo, ele vai para na exata linha em que está o breakpoint. Inicialmente você verá algo como a tela abaixo. Terá uma setinha amarela à esquerda do script apontando para a linha do breakpoint e no painel 
 
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/d5a774aa-944f-4379-adfe-3c48de743fd8" />
+</p>
