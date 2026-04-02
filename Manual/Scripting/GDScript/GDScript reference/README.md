@@ -306,6 +306,8 @@ const F = sin(20)
 
 > PS: Declarações como `const G = x + 20` são inválidas, a menos que `x` também seja uma constante.
 
+## Enum
+
 Enums são basicamente uma abreviação para constantes e são bastante úteis se você quiser atribuir números inteiros consecutivos a alguma constante. Por exemplo, `enum {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}` define um `enum`, em que cada variável é um `int`, começando em $0$ e seguindo sequencialmente. Essa definição é equivalente à mostrada abaixo.
 
 ```python
@@ -314,6 +316,8 @@ const TILE_FLOOR = 1
 const TILE_SPIKE = 2
 const TILE_TELEPORT = 3
 ```
+
+Se você nomear um `enum`, ele será considerado um dicionário constante, em que cada chave são os nomes que você definiu. Por exemplo, você pode definir `enum Tiles {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}`. As chaves não são armazenados como constantes e o acesso aos deve ser feita com a sintaxe `Tiles.TILE_BRICK`, por exemplo.
 
 ## Funções
 
