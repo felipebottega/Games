@@ -87,6 +87,26 @@ Segue abaixo a estrutura geral da documentação de uma classe em Godot.
 >
 > ---
 >
+> ## Enumerations
+>
+> ### `NomeDoEnum`
+>
+> | Nome | Valor |
+> |------|------|
+> | `VALOR_1` | `0` |
+> | `VALOR_2` | `1` |
+>
+> ---
+>
+> ## Constants
+>
+> | Nome | Valor |
+> |------|------|
+> | `CONSTANTE_1` | `0` |
+> | `CONSTANTE_2` | `1` |
+>
+> ---
+>
 > ## Property Descriptions
 >
 > ### `propriedade_1: int`
@@ -175,6 +195,10 @@ A documentação sempre vai seguir a estrutura mostrada acima. O que cada item d
 - **Methods:** Lista das funções disponíveis na classe. São as ações que você pode executar (ex: mover, calcular, atualizar).
 
 - **Signals:** Lista dos sinais (eventos) que a classe pode emitir. Você pode conectar funções a eles para reagir a acontecimentos.
+
+- **Enumerations:** Lista conjuntos nomeados de valores relacionados.
+
+- **Constants:** Lista valores fixos definidos pela classe.
 
 - **Property Descriptions:** Explicações detalhadas de cada propriedade. Inclui comportamento, valores padrão e, às vezes, getter/setter.
 
