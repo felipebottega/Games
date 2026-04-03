@@ -263,50 +263,51 @@ Definir os tipos das variáveis deixa o teu código mais robusto e ajuda a próp
 	<img width="410" src="https://github.com/user-attachments/assets/d6eb8c72-c2ca-495e-9796-d7e25401d45f" />
 </p>
 
-Para descobrir/checar o tipo de uma variável, você pode usar a função `typeof()`. O retorno desta função será uma constante inteira. Cada valor corresponde a um tipo internamente. Abaixo temos a tabela geral de conversões. Caso você queira o nome do tipo em vez de um número, pode usar o comando `type_string(typeof())`.
+Para descobrir/checar o tipo de uma variável, você pode usar a função `typeof()`. O retorno desta função será uma constante inteira. Cada valor corresponde a um tipo internamente. Caso você queira o nome do tipo em vez de um número, pode usar o comando `type_string(typeof())`.  Segue abaixo a tabela geral de conversões.
 
-| Tipo                 | Descrição                                                |
-| -------------------- | -------------------------------------------------------- |
-| `null`               | Variável nula (sem valor).                               |
-| `bool`               | Valor booleano (`true` ou `false`).                      |
-| `int`                | Número inteiro.                                          |
-| `float`              | Número de ponto flutuante.                               |
-| `String`             | Texto.                                                   |
-| `Vector2`            | Vetor 2D com coordenadas `x` e `y`.                      |
-| `Vector2i`           | Vetor 2D com inteiros (`x`, `y`).                        |
-| `Rect2`              | Retângulo 2D com posição e tamanho.                      |
-| `Rect2i`             | Versão inteira de `Rect2`.                               |
-| `Vector3`            | Vetor 3D com `x`, `y`, `z`.                              |
-| `Vector3i`           | Vetor 3D com inteiros.                                   |
-| `Transform2D`        | Transformação 2D (posição, rotação, escala).             |
-| `Vector4`            | Vetor 4D (`x`, `y`, `z`, `w`).                           |
-| `Vector4i`           | Vetor 4D com inteiros.                                   |
-| `Plane`              | Plano matemático em 3D.                                  |
-| `Quaternion`         | Representa rotação em 3D.                                |
-| `AABB`               | Caixa delimitadora alinhada aos eixos (3D).              |
-| `Basis`              | Matriz 3x3 usada para rotação e escala em 3D.            |
-| `Transform3D`        | Transformação completa em 3D.                            |
-| `Projection`         | Matriz de projeção (usada em câmeras).                   |
-| `Color`              | Tipo de cor com canais `r`, `g`, `b` e `a`.              |
-| `StringName`         | String otimizada para comparação rápida.                 |
-| `NodePath`           | Caminho para um node na cena.                            |
-| `RID`                | Identificador interno de recurso da engine.              |
-| `Object`             | Classe base para objetos da engine.                      |
-| `Callable`           | Referência a uma função/método que pode ser chamada.     |
-| `Signal`             | Representa um sinal (eventos da Godot).                  |
-| `Dictionary`         | Estrutura chave-valor (tipo mapa).                       |
-| `Array`              | Lista de valores.                                        |
-| `PackedByteArray`    | Array otimizado de bytes.                                |
-| `PackedInt32Array`   | Array otimizado de inteiros 32-bit.                      |
-| `PackedInt64Array`   | Array otimizado de inteiros 64-bit.                      |
-| `PackedFloat32Array` | Array otimizado de floats 32-bit.                        |
-| `PackedFloat64Array` | Array otimizado de floats 64-bit.                        |
-| `PackedStringArray`  | Array otimizado de strings.                              |
-| `PackedVector2Array` | Array otimizado de `Vector2`.                            |
-| `PackedVector3Array` | Array otimizado de `Vector3`.                            |
-| `PackedColorArray`   | Array otimizado de `Color`.                              |
-| `PackedVector4Array` | Array otimizado de `Vector4`.                            |
-| `TYPE_MAX`           | Representa o tamanho do enum (não é um tipo utilizável). |
+| Constante                      | Tipo                 |
+| ------------------------------ | -------------------- |
+| TYPE_NIL = 0                   | `null`               |
+| TYPE_BOOL = 1                  | `bool`               |
+| TYPE_INT = 2                   | `int`                |
+| TYPE_FLOAT = 3                 | `float`              |
+| TYPE_STRING = 4                | `String`             |
+| TYPE_VECTOR2 = 5               | `Vector2`            |
+| TYPE_VECTOR2I = 6              | `Vector2i`           |
+| TYPE_RECT2 = 7                 | `Rect2`              |
+| TYPE_RECT2I = 8                | `Rect2i`             |
+| TYPE_VECTOR3 = 9               | `Vector3`            |
+| TYPE_VECTOR3I = 10             | `Vector3i`           |
+| TYPE_TRANSFORM2D = 11          | `Transform2D`        |
+| TYPE_VECTOR4 = 12              | `Vector4`            |
+| TYPE_VECTOR4I = 13             | `Vector4i`           |
+| TYPE_PLANE = 14                | `Plane`              |
+| TYPE_QUATERNION = 15           | `Quaternion`         |
+| TYPE_AABB = 16                 | `AABB`               |
+| TYPE_BASIS = 17                | `Basis`              |
+| TYPE_TRANSFORM3D = 18          | `Transform3D`        |
+| TYPE_PROJECTION = 19           | `Projection`         |
+| TYPE_COLOR = 20                | `Color`              |
+| TYPE_STRING_NAME = 21          | `StringName`         |
+| TYPE_NODE_PATH = 22            | `NodePath`           |
+| TYPE_RID = 23                  | `RID`                |
+| TYPE_OBJECT = 24               | `Object`             |
+| TYPE_CALLABLE = 25             | `Callable`           |
+| TYPE_SIGNAL = 26               | `Signal`             |
+| TYPE_DICTIONARY = 27           | `Dictionary`         |
+| TYPE_ARRAY = 28                | `Array`              |
+| TYPE_PACKED_BYTE_ARRAY = 29    | `PackedByteArray`    |
+| TYPE_PACKED_INT32_ARRAY = 30   | `PackedInt32Array`   |
+| TYPE_PACKED_INT64_ARRAY = 31   | `PackedInt64Array`   |
+| TYPE_PACKED_FLOAT32_ARRAY = 32 | `PackedFloat32Array` |
+| TYPE_PACKED_FLOAT64_ARRAY = 33 | `PackedFloat64Array` |
+| TYPE_PACKED_STRING_ARRAY = 34  | `PackedStringArray`  |
+| TYPE_PACKED_VECTOR2_ARRAY = 35 | `PackedVector2Array` |
+| TYPE_PACKED_VECTOR3_ARRAY = 36 | `PackedVector3Array` |
+| TYPE_PACKED_COLOR_ARRAY = 37   | `PackedColorArray`   |
+| TYPE_PACKED_VECTOR4_ARRAY = 38 | `PackedVector4Array` |
+| TYPE_MAX = 39                  | —                    |
+
 
 ### Variáveis estáticas
 
