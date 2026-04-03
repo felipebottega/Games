@@ -44,16 +44,16 @@ Em programação, um "breakpoint" é um ponto do código que você determina par
 
 A bolinha é mais rápida de criar e desfazer, mas ela pode sumir entre versões diferentes da engine ou mesmo em máquinas diferentes. A keyword é garantida de sempre estar lá, já que é inserida diretamente no código. Só é chato ter que ficar colocando mais linhas de código que serão removidas posteriormente.
 
-Uma vez que você criou o breakpoint e executou o jogo, ele vai parar exatamente na linha em que está o breakpoint. Inicialmente você verá algo como a tela abaixo. Terá uma setinha amarela à esquerda do script apontando para a linha do breakpoint e também no painel você poderá inspecionar o estado de algumas variáveis.
+Uma vez que você criou o breakpoint e executou o jogo, ele vai parar exatamente na linha em que está o breakpoint. Inicialmente você verá algo como a tela abaixo. Terá uma setinha amarela à esquerda do script apontando para a linha do breakpoint e também no painel você poderá inspecionar o estado de algumas variáveis em *Debbuger → Stack Trace*.
 
 <p align="center">
-  <img width="850" src="https://github.com/user-attachments/assets/d5a774aa-944f-4379-adfe-3c48de743fd8" />
+  <img width="1000" src="https://github.com/user-attachments/assets/d5a774aa-944f-4379-adfe-3c48de743fd8" />
 </p>
 
 Para prosseguir, você pode clicar na aba *Debug* logo acima do script e selecionar *Step Into* ou *Step Over*. A primeira prossegue para a próxima linha da execução e entra nas linhas das funções, enquanto que a segunda não entra nas funções (considera a função como uma única linha e faz a execução toda em uma passo). A opção *Continue* sai do modo de pausa e continua a execução do jogo normalmente. 
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/cef6a2d0-66ee-4cdd-b2c8-1c3be0213cf2" />
+  <img width="600" src="https://github.com/user-attachments/assets/cef6a2d0-66ee-4cdd-b2c8-1c3be0213cf2" />
 </p>
 
 ## Debug project settings
