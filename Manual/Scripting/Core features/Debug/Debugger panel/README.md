@@ -32,7 +32,7 @@ O *Profiler* é usado para ver qual código está sendo executado enquanto seu p
 
 O *Visual Profiler* pode ser usado para monitorar o que está consumindo mais tempo durante a renderização de um quadro na CPU e na GPU, respectivamente. Isso permite rastrear as fontes de possíveis gargalos na CPU e na GPU causados ​​pela renderização. No caso da CPU, ele mede apenas o tempo gasto em tarefas de renderização, como chamadas de desenho (por isso o nome "visual" profiler). Ele não inclui o tempo de CPU gasto em outras tarefas, como scripts e física. 
 
-Para usar, basta clicar no *Start* enquanto o jogo estiver em execução. Caso queira que seja iniciado automaticamente junto do jogo, habilite a opção *Autostart*. Após passado algum tempo, você pode dar *Stop* que as informações vão continuar na tela para você analisar. Na tela abaixo, o gráfico é divido em duas partes: a metade da esquerda é o gráfico da CPU e o da direita é o da GPU.
+Para usar, basta clicar no *Start* enquanto o jogo estiver em execução. Caso queira que seja iniciado automaticamente junto do jogo, habilite a opção *Autostart*. Após passado algum tempo, você pode dar *Stop* que as informações vão continuar na tela para você analisar. Na tela abaixo, o gráfico é divido em duas partes: a metade da esquerda é o gráfico da CPU e o da direita é o da GPU. Quando você clica em um frame específico, duas linhas verticais aparecem. Uma marca o frame no gráfico da CPU e outra marca o mesmo frame no gráfico da GPU.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/bf0ce21a-76ed-45df-9e6b-01f0984f20bb" />
@@ -42,4 +42,36 @@ A opção *Fit to Frame* deixa a escala do gráfico fixa, com a linha horizontal
 
 > PS: Os resultados do *Visual Profiler* podem variar bastante dependendo da resolução da viewport, que é determinada pelo tamanho da janela se o *Stretch Mode* estiver em *disabled* ou *canvas_items*. Ao comparar resultados entre diferentes execuções, certifique-se de sempre usar o mesmo tamanho de viewport.
 
-## 
+## Monitors
+
+Já falamos sobre esta aba no tópico de [monitoramento da pipeline da GPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations#monitoramento-do-pipeline). Nesta aba, temos monitores de gráficos de diversos aspectos do jogo enquanto ele está em execução, como FPS, uso de memória, quantidade de nós em uma cena e muito mais. Todos os monitores rastreiam as estatísticas automaticamente, então mesmo que um monitor não esteja aberto enquanto o jogo estiver rodando, você pode abri-lo mais tarde e ver como os valores mudaram.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/45990395-51e6-4456-bb8b-8e6603705c74" />
+</p>
+
+É possível também criar seus próprios monitores customizados. Veremos em um tutorial futuro como fazer isso.
+
+## Video RAM
+
+Esta aba mostra o uso de RAM de vídeo do jogo enquanto ele está em execução. Ela fornece uma lista de todos os recursos que utilizam RAM de vídeo, incluindo o caminho do recurso, o tipo de recurso, o formato e a quantidade de RAM de vídeo que ele está utilizando. Há também um número total de uso de RAM de vídeo no canto superior direito do painel.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/55f292d0-2eb6-48a4-b2b4-a3e5b04af7ba" />
+</p>
+
+## Misc
+
+Esta aba contém ferramentas para identificar os nodes de `Control` nos quais você está clicando em tempo de execução.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/df0ed4b5-6d18-46d5-89de-91d25838b315" />
+</p>
+
+## Network Profiler
+
+Esta aba contém uma lista de todos os nodes que se comunicam pela API multiplayer e alguns contadores sobre a quantidade de interações de rede de entrada e saída. Ele também apresenta um medidor de largura de banda que exibe o uso total de largura de banda em qualquer momento.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/c7568b5f-d8ef-4e3a-b97e-4f9eb080ab0c" />
+</p>
