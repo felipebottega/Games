@@ -30,3 +30,16 @@ O *Profiler* é usado para ver qual código está sendo executado enquanto seu p
 
 ## Visual Profiler
 
+O *Visual Profiler* pode ser usado para monitorar o que está consumindo mais tempo durante a renderização de um quadro na CPU e na GPU, respectivamente. Isso permite rastrear as fontes de possíveis gargalos na CPU e na GPU causados ​​pela renderização. No caso da CPU, ele mede apenas o tempo gasto em tarefas de renderização, como chamadas de desenho (por isso o nome "visual" profiler). Ele não inclui o tempo de CPU gasto em outras tarefas, como scripts e física. 
+
+Para usar, basta clicar no *Start* enquanto o jogo estiver em execução. Caso queira que seja iniciado automaticamente junto do jogo, habilite a opção *Autostart*. Após passado algum tempo, você pode dar *Stop* que as informações vão continuar na tela para você analisar. Na tela abaixo, o gráfico é divido em duas partes: a metade da esquerda é o gráfico da CPU e o da direita é o da GPU.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/bf0ce21a-76ed-45df-9e6b-01f0984f20bb" />
+</p>
+
+A opção *Fit to Frame* deixa a escala do gráfico fixa, com a linha horizontal em $16.67 \text{ms}$ (tempo de 1 frame em um jogo de 60 FPS) para referência. Caso haja algum spike no gráfico, isso pode atrapalhar a visualização. Desabilite essa opção para que o zoom do gráfico fique dinâmico. Isso evita este tipo de problema. 
+
+> PS: Os resultados do *Visual Profiler* podem variar bastante dependendo da resolução da viewport, que é determinada pelo tamanho da janela se o *Stretch Mode* estiver em *disabled* ou *canvas_items*. Ao comparar resultados entre diferentes execuções, certifique-se de sempre usar o mesmo tamanho de viewport.
+
+## 
