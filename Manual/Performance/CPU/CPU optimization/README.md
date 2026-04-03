@@ -7,7 +7,7 @@ Este tutorial é apenas uma pequena lista de ferramentas e dicas para monitorame
 A primeira ferramenta fundamental para qualquer desenvolvedor que queira melhorar a performance do seu projeto é um profiler. Isso não se limita a jogos, em qualquer tipo de desenvolvimento de software isso é importante. "Profiler" é um programa que monitora o seu programa enquanto ele está rodando. Mais especificamente, ele monitora o tempo que cada subrotina leva para ser executada. A Godot tem o seu próprio profiler, ele se encontra no painel de edição, em *Debbuger → Profiler*.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/9056416e-30c5-4add-83e2-a69e1e97fd62" />
+  <img width="900" src="https://github.com/user-attachments/assets/9056416e-30c5-4add-83e2-a69e1e97fd62" />
 </p>
 
 ## Árvore de cena
