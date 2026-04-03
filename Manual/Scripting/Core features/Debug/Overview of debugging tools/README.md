@@ -53,7 +53,7 @@ Uma vez que você criou o breakpoint e executou o jogo, ele vai parar exatamente
 Para prosseguir, você pode clicar na aba *Debug* logo acima do script e selecionar *Step Into* ou *Step Over*. A primeira prossegue para a próxima linha da execução e entra nas linhas das funções, enquanto que a segunda não entra nas funções (considera a função como uma única linha e faz a execução toda em uma passo). A opção *Continue* sai do modo de pausa e continua a execução do jogo normalmente. 
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/cef6a2d0-66ee-4cdd-b2c8-1c3be0213cf2" />
+  <img width="550" src="https://github.com/user-attachments/assets/cef6a2d0-66ee-4cdd-b2c8-1c3be0213cf2" />
 </p>
 
 ## Debug project settings
