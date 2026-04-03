@@ -173,7 +173,7 @@ var b = 1 + \
 | `float`     | Número real com casas decimais. Armazenado como 64 bits. Algumas estruturas reduzem a precisão para 32 bits (ex: `Vector2`, `Vector3`). |
 | `String`    | Sequência de caracteres em formato Unicode. |
 | `StringName`| String imutável com instância única por nome. Mais lenta para criar, mas muito rápida para comparação (ideal para chaves de dicionário). |
-| `NodePath`  | Caminho pré-processado para um node ou propriedade. Pode ser convertido de/para `String` e facilita interações com a árvore de nodes. |
+| `NodePath`  | Caminho pré-processado para um node ou propriedade. Pode ser convertido de/para `String` e facilita interações com a árvore de cena (SceneTree). |
 
 ### Vetores
 
@@ -391,7 +391,7 @@ func _ready():
 
 O `self` serve para referenciar a instância atual que está sendo usada no script. Existem algumas aplicações para isso, vou citar uma aqui.
 
-ocê define uma variável global no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e a engine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse alerta é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável global `x`, que é igual a 1.
+ocê define uma variável global no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e a engine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse aviso é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável global `x`, que é igual a 1.
 
 ```python
 var x = 1

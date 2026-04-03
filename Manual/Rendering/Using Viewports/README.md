@@ -45,7 +45,7 @@ Agora você já pode executar o jogo que ele vai renderizar a textura do subview
 
 ## Transparent BG
 
-O container foi colocado um pouco mais para o centro da tela e foi criado um script que desloca o sprite dentro do `SubViewport` horizontalmente. O sprite azul está mais ao fundo do `SubViewport` apenas porque ele vem primeiro na árvore de nodes. Além disso, podemos notar que o sprite dentro do container é "cortado" após um certo ponto. Isto ocorre porque ele foi além dos limites do subviewport. Neste exemplo, o subviewport está parado, é apenas o sprite dentro dele que está se movendo, então ele escapa da "tela" onde está inserido e é cortado.
+O container foi colocado um pouco mais para o centro da tela e foi criado um script que desloca o sprite dentro do `SubViewport` horizontalmente. O sprite azul está mais ao fundo do `SubViewport` apenas porque ele vem primeiro na árvore de cena (SceneTree). Além disso, podemos notar que o sprite dentro do container é "cortado" após um certo ponto. Isto ocorre porque ele foi além dos limites do subviewport. Neste exemplo, o subviewport está parado, é apenas o sprite dentro dele que está se movendo, então ele escapa da "tela" onde está inserido e é cortado.
 
 https://github.com/user-attachments/assets/5246e7f9-7d3d-466b-b9fd-81a52dfb8437
 
@@ -87,7 +87,7 @@ Ao script do `Sprite2D`, adicionamos uma função que aumenta ou diminui a escal
 
 ## Câmeras
 
-Sempre que você adiciona câmeras na cena, ela vai mostrar o conteúdo do primeiro viewport acima dela na árvore de nodes. 
+Sempre que você adiciona câmeras na cena, ela vai mostrar o conteúdo do primeiro viewport acima dela na árvore de cena (SceneTree). 
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/12aad556-b245-495f-8cc5-a3b619059f5b" />

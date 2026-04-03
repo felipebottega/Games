@@ -47,7 +47,7 @@ O export de cores é normal, basta indicar o tipo `color`. Com isso, a paleta de
 
 ## Nodes
 
-O export de nodes também é normal, basta indicar o tipo de node que quer. Com isso, é possível adicionar nodes da cena no *Inspector* (apenas aceita nodes da cena). Vale notar também que o parâmetro só aceita nodes que sejam do tipo especificado ou filhos deste. Por exemplo, `@export var node: Node` aceita qualquer node da cena, enquanto que `@export var some_button: Button` só vai aceitar node do tipo `Button` ou filhos deste (não é filho na árvore de nodes, mas filho como estrutura de classe).
+O export de nodes também é normal, basta indicar o tipo de node que quer. Com isso, é possível adicionar nodes da cena no *Inspector* (apenas aceita nodes da cena). Vale notar também que o parâmetro só aceita nodes que sejam do tipo especificado ou filhos deste. Por exemplo, `@export var node: Node` aceita qualquer node da cena, enquanto que `@export var some_button: Button` só vai aceitar node do tipo `Button` ou filhos deste (não é filho na árvore de cena (SceneTree), mas filho como estrutura de classe).
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/e3dcf2d1-99ee-4b69-a298-c6efcca37950" />

@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://ktbxosw2y742"]
+[gd_scene load_steps=4 format=3 uid="uid://ktbxosw2y742"]
 
 [ext_resource type="Script" uid="uid://bji1qnp4fempx" path="res://node.gd" id="1_sy5k4"]
+[ext_resource type="Texture2D" uid="uid://c4batc6ei6cxm" path="res://icon.svg" id="2_112p8"]
+[ext_resource type="Script" uid="uid://yu6uyh73p5ow" path="res://sprite_2d.gd" id="3_e2u21"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_sy5k4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(159, 160)
+texture = ExtResource("2_112p8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(110, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_112p8")
+script = ExtResource("3_e2u21")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 127.0
+offset_top = 289.0
+offset_right = 197.0
+offset_bottom = 312.0
+text = "Loading..."

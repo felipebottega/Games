@@ -8,7 +8,7 @@ Anteriormente, quando clicamos em *+ Add Track* no painel de animação, vimos q
 
 ## Call Method Track
 
-Este, de longe, me parece ser o tipo de track mais interessante de todos. O track do tipo *call method* permite chamar uma função em um momento especificado dentro de uma animação. Por exemplo, você pode chamar `queue_free` para excluir um nó no final de uma animação de morte. Clique em *+ Add Track* e selecione *Call Method Track*. Uma janela com a árvore de nodes vai se abrir. Escolhe o node que quer animar. Nós começamos criando uma animação de posição para a espada e depois adicionamos a track de *call method*, como mostrado abaixo.
+Este, de longe, me parece ser o tipo de track mais interessante de todos. O track do tipo *call method* permite chamar uma função em um momento especificado dentro de uma animação. Por exemplo, você pode chamar `queue_free` para excluir um nó no final de uma animação de morte. Clique em *+ Add Track* e selecione *Call Method Track*. Uma janela com a árvore de cena (SceneTree) vai se abrir. Escolhe o node que quer animar. Nós começamos criando uma animação de posição para a espada e depois adicionamos a track de *call method*, como mostrado abaixo.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/80ee2381-7ab8-4770-8b37-155344d54e6a" />

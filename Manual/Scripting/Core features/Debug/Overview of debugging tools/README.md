@@ -62,8 +62,8 @@ No *Project Settings* há diversas configurações de Debug que podem ser intere
 
 - **Settings:** Estas são algumas configurações gerais, como imprimir o FPS atual no painel de output, a quantidade máxima de funções durante a criação de perfil e outras.
 - **File Logging:** Estas configurações permitem registrar os logs do console e mensagens de erro em arquivos.
-- **GDScript:** Estas configurações permitem ativar/desativar alertas específicos do GDScript. Você também pode desativar os avisos completamente. Consulte o tutorial [GDScript warning system](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system) para obter mais informações.
-- **Shader Language:** Estas configurações permitem ativar/desativar alertas específicos do shaders. Você também pode desativar os avisos completamente.
+- **GDScript:** Estas configurações permitem ativar/desativar avisos específicos do GDScript. Você também pode desativar os avisos completamente. Consulte o tutorial [GDScript warning system](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system) para obter mais informações.
+- **Shader Language:** Estas configurações permitem ativar/desativar avisos específicos do shaders. Você também pode desativar os avisos completamente.
 - **Canvas Items:** Estas configurações são para debug de redraw de itens da tela.
 - **Shapes:** Você pode ajustar a cor de formas que aparecem apenas para fins de debug, como formas de colisão e navegação.
 

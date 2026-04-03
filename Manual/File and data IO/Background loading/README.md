@@ -69,7 +69,7 @@ Vamos comparar os métodos vistos para o caso de se querer carregar um estágio 
 
 Criamos um jogo onde a tela inicial não tem nada, mas possui um `Timer` de $3$ segundos. Assim que acaba esse tempo, o jogo muda para a cena do estágio. Este é um estágio pesado, feito para ser lento no carregamento. Ele possui 3 sistemas de partículas, sendo um com física de turbulência, 2 sprites de background, com um deles gigantesco, e pouco mais de $600$ `RigidBody2D` de bolas com textura, colisão e luz própria (`PointLight2D`). 
 
-Em todos os casos, estaremos chamando `get_tree().change_scene_to_file()` ou `get_tree().change_scene_to()` para fazer a mudança de cena. Vale ressaltar que `add_child` é usado para adicionar um elemento à sua árvore de nodes, e isso é diferente de mudança de cena, por isso este último não é indicado para este caso. Os métodos que iremos testar são os seguintes:
+Em todos os casos, estaremos chamando `get_tree().change_scene_to_file()` ou `get_tree().change_scene_to()` para fazer a mudança de cena. Vale ressaltar que `add_child` é usado para adicionar um elemento à sua árvore de cena (SceneTree), e isso é diferente de mudança de cena, por isso este último não é indicado para este caso. Os métodos que iremos testar são os seguintes:
 
 1. **Preload1:** Carrega a cena com o `preload` antes do `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
 2. **Preload2:** Carrega a cena com o `preload` no `_ ready` e chama o `get_tree().change_scene_to_packed()` quando passam os $3$ segundos.
@@ -119,7 +119,7 @@ Essa parte não é muito divertida, mas você deve abrir o arquivo `scene.tscn`,
   <img width="850" src="https://github.com/user-attachments/assets/ca3b6536-a4b3-4bb0-9458-3fb23877b094" />
 </p>
 
-Após isso, toda referência a um dos objetos acima é via autoload. É importante que você chame os objetos carregados no autoload através de script, usando os nomes deles. Por exemplo, removemos o node *SmokeBig* que tinha na árvore de nodes e fizemos sua chamada por script. Isso garante que você vai usar o objeto global. Se colocasse na árvore pelo editor, criaria uma instância nova que seria carregada na hora, criando mais lag desnecessário.
+Após isso, toda referência a um dos objetos acima é via autoload. É importante que você chame os objetos carregados no autoload através de script, usando os nomes deles. Por exemplo, removemos o node *SmokeBig* que tinha na árvore de cena (SceneTree) e fizemos sua chamada por script. Isso garante que você vai usar o objeto global. Se colocasse na árvore pelo editor, criaria uma instância nova que seria carregada na hora, criando mais lag desnecessário.
 
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/13e5d178-659b-4864-8e7d-097dcdeef80a" />
