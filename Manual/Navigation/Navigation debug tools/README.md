@@ -20,7 +20,7 @@ No *Project Settings*, habilite o modo avançado e vá em *Debug → Shapes*. Al
 
 ## Debug performance
 
-Você pode monitorar em tempo real o custo computacional dos processos de navegação. Esse monitoramento leva muita coisa em consideração, mas não leva em consideração o cálculo dos caminhos. Isso quer dizer que um pico de custo causado por muitas consultas de caminho não vai aparecer naquele monitor. O tempo gasto com essas consultas pode impactar seu jogo, mas não vai aparecer na seção *Navigation Process* do profiler.
+Você pode monitorar em tempo real o custo computacional dos processos de navegação. Esse monitoramento leva muita coisa em consideração, mas não leva em consideração o cálculo dos caminhos. Isso quer dizer que um pico de custo causado por muitas consultas de caminho não vai aparecer naquele monitor. O tempo gasto com essas consultas pode impactar seu jogo, mas não vai aparecer na seção *Navigation Process* do *Monitors*.
 
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/fe0eb177-2d56-4e28-908e-5a8be8892ed8" />
