@@ -247,6 +247,8 @@ var c = 3.8
 var d = b + c
 ```
 
+### Variáveis tipadas
+
 Variáveis ​​podem, opcionalmente, ter uma especificação de tipo. Quando um tipo é especificado, a variável será forçada a ter sempre esse mesmo tipo, e tentar atribuir um valor incompatível resultará em um erro. Os tipos são especificados na declaração da variável usando um símbolo de dois pontos (:) após o nome da variável, seguido pelo tipo.
 
 ```python
@@ -260,6 +262,51 @@ Definir os tipos das variáveis deixa o teu código mais robusto e ajuda a próp
 	<img width="150" src="https://github.com/user-attachments/assets/47b2e766-c5f4-4902-9603-59449669bbab" />
 	<img width="410" src="https://github.com/user-attachments/assets/d6eb8c72-c2ca-495e-9796-d7e25401d45f" />
 </p>
+
+Para descobrir/checar o tipo de uma variável, você pode usar a função `typeof()`. O retorno desta função será uma constante inteira. Cada valor corresponde a um tipo internamente. Abaixo temos a tabela geral de conversões. Caso você queira o nome do tipo em vez de um número, pode usar o comando `type_string(typeof())`.
+
+| Tipo                 | Descrição                                                |
+| -------------------- | -------------------------------------------------------- |
+| `null`               | Variável nula (sem valor).                               |
+| `bool`               | Valor booleano (`true` ou `false`).                      |
+| `int`                | Número inteiro.                                          |
+| `float`              | Número de ponto flutuante.                               |
+| `String`             | Texto.                                                   |
+| `Vector2`            | Vetor 2D com coordenadas `x` e `y`.                      |
+| `Vector2i`           | Vetor 2D com inteiros (`x`, `y`).                        |
+| `Rect2`              | Retângulo 2D com posição e tamanho.                      |
+| `Rect2i`             | Versão inteira de `Rect2`.                               |
+| `Vector3`            | Vetor 3D com `x`, `y`, `z`.                              |
+| `Vector3i`           | Vetor 3D com inteiros.                                   |
+| `Transform2D`        | Transformação 2D (posição, rotação, escala).             |
+| `Vector4`            | Vetor 4D (`x`, `y`, `z`, `w`).                           |
+| `Vector4i`           | Vetor 4D com inteiros.                                   |
+| `Plane`              | Plano matemático em 3D.                                  |
+| `Quaternion`         | Representa rotação em 3D.                                |
+| `AABB`               | Caixa delimitadora alinhada aos eixos (3D).              |
+| `Basis`              | Matriz 3x3 usada para rotação e escala em 3D.            |
+| `Transform3D`        | Transformação completa em 3D.                            |
+| `Projection`         | Matriz de projeção (usada em câmeras).                   |
+| `Color`              | Tipo de cor com canais `r`, `g`, `b` e `a`.              |
+| `StringName`         | String otimizada para comparação rápida.                 |
+| `NodePath`           | Caminho para um node na cena.                            |
+| `RID`                | Identificador interno de recurso da engine.              |
+| `Object`             | Classe base para objetos da engine.                      |
+| `Callable`           | Referência a uma função/método que pode ser chamada.     |
+| `Signal`             | Representa um sinal (eventos da Godot).                  |
+| `Dictionary`         | Estrutura chave-valor (tipo mapa).                       |
+| `Array`              | Lista de valores.                                        |
+| `PackedByteArray`    | Array otimizado de bytes.                                |
+| `PackedInt32Array`   | Array otimizado de inteiros 32-bit.                      |
+| `PackedInt64Array`   | Array otimizado de inteiros 64-bit.                      |
+| `PackedFloat32Array` | Array otimizado de floats 32-bit.                        |
+| `PackedFloat64Array` | Array otimizado de floats 64-bit.                        |
+| `PackedStringArray`  | Array otimizado de strings.                              |
+| `PackedVector2Array` | Array otimizado de `Vector2`.                            |
+| `PackedVector3Array` | Array otimizado de `Vector3`.                            |
+| `PackedColorArray`   | Array otimizado de `Color`.                              |
+| `PackedVector4Array` | Array otimizado de `Vector4`.                            |
+| `TYPE_MAX`           | Representa o tamanho do enum (não é um tipo utilizável). |
 
 ### Variáveis estáticas
 
