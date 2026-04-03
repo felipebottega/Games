@@ -22,6 +22,6 @@ Para cenários mais extremos, é possível até evitar a árvore de cena e usar 
 
 ## Física
 
-A física pode virar um gargalo em cenas complexas com muitos objetos. É possível melhorar a performance usando shapes de colisões mais simples, removendo ou reutilizando objetos físicos fora da área ativa e, em alguns casos, reduzindo a taxa de atualização da física. Diminuir o physics tick rate reduz o uso de CPU, mas pode causar *jitter* e aumentar o input lag, então o default costuma ser o ideal. 
+A física pode virar um gargalo em cenas complexas com muitos objetos. É possível melhorar a performance usando shapes de colisões mais simples, removendo ou reutilizando objetos físicos fora da área ativa e, em alguns casos, reduzindo a taxa de atualização da física (physics tick). Diminuir o physics tick rate reduz o uso de CPU, mas pode causar *jitter* e aumentar o input lag, então o default costuma ser o ideal. 
 
 > PS: *Jitter* é quando o movimento do jogo parece tremido, mesmo sem queda de FPS. Normalmente acontece quando a taxa de atualização da física não coincide com a taxa de frames renderizados.
