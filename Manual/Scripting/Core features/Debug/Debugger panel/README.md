@@ -26,3 +26,7 @@ Esta aba serve de complemento ao *Stack Trace*. A cada etapa do breakpoint, alé
 
 ## Profiler
 
+O *Profiler* é usado para ver qual código está sendo executado enquanto seu projeto está em uso e como isso afeta a performance. Veremos o *Profiler* em detalhes no próximo tutorial.
+
+## Visual Profiler
+
