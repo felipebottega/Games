@@ -26,7 +26,7 @@ Você pode monitorar em tempo real o custo computacional dos processos de navega
   <img width="850" src="https://github.com/user-attachments/assets/fe0eb177-2d56-4e28-908e-5a8be8892ed8" />
 </p>
 
-Apesar do cálculo de caminhos não aparecer no profiler, existem algumas estatísticas que podem ajudar a encontrar gargalos nestes cálculos, ainda que indiretamente. Por exemplo, se a quantidade de polígonos for muito alta, isto será custoso para o cálculo de caminhos. 
+Apesar do cálculo de caminhos não aparecer no *Monitors*, existem algumas estatísticas que podem ajudar a encontrar gargalos nestes cálculos, ainda que indiretamente. Por exemplo, se a quantidade de polígonos for muito alta, isto será custoso para o cálculo de caminhos. 
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/490f0f6d-e5fd-4dd7-9005-3694268b6483" />
