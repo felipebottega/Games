@@ -119,7 +119,7 @@ if (
 	pass
 ```
 
-[Anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#controle-de-fluxo), introduzimos o if ternário mas usamos uma convenção antiga de quebra escrita. Vamos colocar aqui o estilo antigo e o novo (recomendado) para referência.
+[Anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#controle-de-fluxo), introduzimos o if ternário mas usamos uma convenção antiga de escrita. Vamos colocar aqui o estilo antigo e o novo (recomendado) para referência.
 
 **Antigo**
 
@@ -150,3 +150,11 @@ var fruit = \
     else "banana" if x == 0\
     else "orange"
 ```
+
+Confesso que eu prefiro o estilo antigo, não apenas para o if ternário, mas para funções e variáveis com múltiplos também. O problema deste estilo é a falta de praticidade dele. Você tem que ficar alinhando tudo na mão. Quaçquer mudança de nome de variável e tudo tem que ser realinhando novamente. O estilo novo requer apenas um Tab e está pronto. 
+
+## Parênteses
+
+- Evite parênteses redundantes como `if (is_colliding())`. Usar `if is_colliding()` é equivalente e é mais legível.
+- Para expressões lógicas é recomendado o uso de parênteses (explícito) em vez de se valer de como a engine resolve a expressão internamente (implícito). Prefira usar `if (red and blue) or not green` em vez de `if red and blue or not green` por exemplo.
+- No caso de expressões matemáticas, a mesma recomendação acima continua valendo. Prefira usar `(2 ** 3) * 4` em vez de `2 ** 3 * 4` por exemplo.
