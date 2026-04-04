@@ -26,7 +26,7 @@ var character_dict = {
 }
 ```
 
-Note que esse exemplo dado é bastante artificial. Seria totalmente factível usar um dicionário com as chaves "Hero", "NPC", "Villan" e cada chave corresponder a um outro dicionário com os três campos descritos. Não acho que este tipo de formatação será usada muitas vezes, mas impossível não é.
+Note que esse exemplo dado é bastante artificial. Seria totalmente factível usar um dicionário com as chaves "Hero", "NPC" e "Villan", e cada chave corresponder a um outro dicionário com os três campos descritos. Não acho que este tipo de formatação será usada muitas vezes, mas impossível não é.
 
 > PS: O Tab é em relação à variável. Se ela estiver dentro de outra estrutura e for necessário dar 5 Tabs para checar ao nível dela (por exemplo), então cada elemento vai necessitar de 6 Tabs. Em muitos editores (incluindo a Godot), ao dar ENTER de uma linha para a outra, automaticamente ele já vai posicionar corretamente.
 
