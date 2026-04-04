@@ -159,9 +159,40 @@ Confesso que eu prefiro o estilo antigo, não apenas para o if ternário, mas pa
 - Para expressões lógicas é recomendado o uso de parênteses (explícito) em vez de se valer de como a engine resolve a expressão internamente (implícito). Prefira usar `if (red and blue) or not green` em vez de `if red and blue or not green` por exemplo.
 - No caso de expressões matemáticas, a mesma recomendação acima continua valendo. Prefira usar `(2 ** 3) * 4` em vez de `2 ** 3 * 4` por exemplo.
 
+## Comentários
+
+Já falamos bastante sobre comentários no [tutorial de referência](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#coment%C3%A1rios). Porém, naquele tutorial apenas falamos sobre as funcionalidades e comentário que o editor oferece, mas não sobre convenções de como fazer comentários. Vamos listar o nosso estilo aqui.
+
+- Comentários sempre são uma frase, começando com letra maiúscula e terminando com ponto final. Isso vale mesmo para o caso em que o comentário é uma única palavra.
+
+```python
+## Esta função faz algumas contas.
+func f(x, y, z):
+    # Incrementamos cada variável em uma unidade.
+    x += 1
+    y += 1
+    z += 1
+
+    # Somatório.
+    var u = x + y + z
+
+    return u
+```
+
+- Não use mais que dois `#` para iniciar um comentário. Se quiser dar destaque, use as palavras especiais de comentário (ALERT, CRITICAL, TODO, etc.) ou use letras maiúsculas ou faça uma região de código. Criar linhas com separadores visuais como `---` ou `===` também está valendo.
+- Comentários também respeitam o limite de caracteres. Se chegar ao limite, continue o comentário na próxima linha normalmente.
+- Comentários mais curtos e de menor importância podem vir logo após a linha do comando feito, com um espaço entre o comando e o comentário.
+
+```python
+# O comando abaixo é importante e merece um comentário longo numa linha separada.
+var x = f(x, y, z)  + g(x, y, z) + e(t)
+
+var w = x + w # Comentário curto pois o comando é muito simples e direto de entender.
+```
+
 ## Espaços
 
-- Sempre use espaços entre operadores, após vírgulas e após dois pontos (:) de dicionários. Aecssar elementos de arrays ou dicionário com colchetes [] não deve incluir espaçamentos.
+- Sempre use espaços entre operadores, após vírgulas e após dois pontos (:) de dicionários. Acesso a elementos de arrays ou dicionário com colchetes [] não deve incluir espaçamentos.
 
 **Bom**
 
@@ -178,9 +209,35 @@ print("foo")
 
 ```python
 position.x=5
-position.y = mpos.y+10
+position.y = target_position.y+10
 dict ["key"] = 5
-myarray = [4,5,6]
+my_array = [4,5,6]
 my_dictionary = {key:"value"}
 print ("foo")
 ```
+
+- Não use espaçamentos para alinhar valores verticalmente.
+
+**Bom**
+
+```python
+x = 100
+y = 100
+velocity = 500
+```
+
+**Ruim**
+
+```python
+x        = 100
+y        = 100
+velocity = 500
+```
+
+## Aspas
+
+Prefira sempre usar aspas duplas para strings, a menos que tenha alguma citação na string que requer aspas duplas, aí você usa aspas simples para encapsular a string. Há dois motivos principais para seguir essa convenção:
+1. É o que a maioria usa, então terá menos atrito com a comunidade.
+2. Evitar ter que usar barras invertidas dentro da string por causa de apóstrofos. Por exemplo, é preferível descrever `"Caixa d'água"` a `'Caixa d\'água'`.
+
+## Números
