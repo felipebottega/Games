@@ -36,7 +36,7 @@ var character_dict = {
 }
 ```
 
-Se for uma variável com muitos elementos, você pode aproveitar cada linha para inserir múltiplos elementos apenas quando há uma organização clara (cada linha representa algo diferente das outras).
+Você pode aproveitar cada linha para inserir múltiplos elementos apenas quando há uma organização clara (cada linha representa algo diferente das outras).
 
 ```python
 var character_dict = {
@@ -374,4 +374,8 @@ Vamos falar um pouco sobre cada um dos itens acima.
 - **remaining regular variables:** Outras variáveis da classe. Na maioria dos exemplos mostrados, foram estas as variáveis globais que declaramos.
 - **@export variables:** Variáveis que irão aparecer no *Inspector*.
 - **@onready variables:** Variáveis que serão carregadas assim que a cena for carregada.
-- **static methods/functions:** 
+- **static methods/functions:** Funções estáticas da classe. Estas funções não têm acesso a `self` nem às variáveis de instâncias, mas podem acessar variáveis estáticas. Por isso elas ficam separadas das funções normais.
+- **overridden built-in virtual methods/functions:** São funções nativas da própria Godot que você sobrescreve. A ordem sugerida acompanha o ciclo de vida do node: criação, entrada na árvore, prontidão, processamento por frame e processamento físico.
+- **overridden custom methods/functions:** São as funções que vêm de uma classe base sua, não de uma built-in da Godot. É importante separae isso porque para distinguir rapidamente o que é comportamento herdado da engine e o que é da sua própria hierarquia.
+- **remaining methods/functions:** São as funções normais da classe que não são nativas da engine e não são overrides de uma base customizada sua. Aqui entram as funções de interface e utilitárias do seu script.
+- **inner classes:** São classes declaradas dentro do próprio script. A ideia de deixá-las por último é que elas são parte da estrutura do arquivo, mas não costumam ser o foco principal.
