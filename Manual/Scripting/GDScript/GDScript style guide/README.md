@@ -20,9 +20,9 @@ Se for uma variável com muitos elementos, eu considero ok aproveitar cada linha
 
 ```python
 var character_dict = {
-    "Name": "Bob", "Age": 27, "Job": "Mechanic",
-    "Name": "Suzy", "Age": 25, "Job": "Singer",
-    "Name": "Rachel", "Age": 32, "Job": "Investor",
+    "Char1Name": "Bob", "Char1Age": 27, "Char1Job": "Mechanic",
+    "Char2Name": "Liz", "Char2Age": 25, "Char2Job": "Singer",
+    "Char3Name": "Tom", "Char3Age": 32, "Char3Job": "Investor",
 }
 ```
 
