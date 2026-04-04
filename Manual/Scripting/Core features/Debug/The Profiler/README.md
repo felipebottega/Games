@@ -40,3 +40,5 @@ Se você envolver um trecho de código com uma contagem de início e fim em micr
 <p align="center">
 	<img width="350" src="https://github.com/user-attachments/assets/ca723f19-40d2-4df7-8da3-72a6c9bd623b" />
 </p>
+
+> PS: Esta dica de usar o timer já foi dada no tutorial de [dicas de otimização](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#dicas-gerais), mas com menos detalhes que aqui.
