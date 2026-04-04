@@ -100,3 +100,53 @@ O recomendado é limitar cada linha a no máximo 100 caracteres. O próprio edit
     <img width="650" src="https://github.com/user-attachments/assets/fc59d34e-b80b-46cd-a8bb-c265d442adfb" />
 </p>
 
+## Múltiplas condicionais
+
+Se tiver um `if` com múltiplas condições para serem verificadas, é possível colocar tudo em uma linha, desde que esteja no limite de 100 caracteres.
+
+```python
+if position.x > 200 and position.x < 400 and position.y > 300 and position.y < 400:
+	pass
+```
+
+Aqui é opcional usar a convenção de quebra de linhas, seguindo a mesmo ideia das variáveis com múltiplos elementos:
+
+```python
+if (
+    position.x > 200 and position.x < 400
+    and position.y > 300 and position.y < 400
+):
+	pass
+```
+
+[Anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#controle-de-fluxo), introduzimos o if ternário mas usamos uma convenção antiga de quebra escrita. Vamos colocar aqui o estilo antigo e o novo (recomendado) para referência.
+
+**Antigo**
+
+```python
+var fruit = ("apple" if x == 2
+              else "pear" if x == 1
+              else "banana" if x == 0
+              else "orange"
+             )
+var fruit = "apple" if x == 2\
+             else "pear" if x == 1\
+         	 else "banana" if x == 0\
+             else "orange"
+```
+
+**Novo**
+
+```python
+var fruit = (
+    "apple" if x == 2
+    else "pear" if x == 1
+    else "banana" if x == 0
+    else "orange"
+)
+var fruit = \
+    "apple" if x == 2\
+    else "pear" if x == 1\
+    else "banana" if x == 0\
+    else "orange"
+```
