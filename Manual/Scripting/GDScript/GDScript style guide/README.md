@@ -241,3 +241,76 @@ Prefira sempre usar aspas duplas para strings, a menos que tenha alguma citaçã
 2. Evitar ter que usar barras invertidas dentro da string por causa de apóstrofos. Por exemplo, é preferível descrever `"Caixa d'água"` a `'Caixa d\'água'`.
 
 ## Números
+
+- Não omita zeros à esquerda da casa decimal. Por exemplo, $0.41$ em vez de $.41$.
+- Use underline em números para ajudar na leitura de números com muitos caracteres. Mas evite fazer isso para números pequenos.
+
+**Bom** 
+
+```python
+var large_number = 1_234_567_890
+var large_hex_number = 0xffff_f8f8_0000
+var large_bin_number = 0b1101_0010_1010
+var small_number = 12345
+```
+
+**Ruim**
+
+```python
+var large_number = 1234567890
+var large_hex_number = 0xfffff8f80000
+var large_bin_number = 0b110100101010
+var small_number = 12_345
+```
+
+## Convenção de nomes
+
+Siga a convenção de nomes dada pela tabela abaixo (está em total concordância com a convenção da Godot):
+
+| Type         | Convention    | Example                   |
+| ------------ | ------------- | ------------------------- |
+| File names   | snake_case    | `yaml_parser.gd`            |
+| Class names  | PascalCase    | `class_name YAMLParser`     |
+| Node names   | PascalCase    | `Camera3D, Player`          |
+| Functions    | snake_case    | `func load_level():`        |
+| Variables    | snake_case    | `var particle_effect`       |
+| Signals      | snake_case    | `signal door_opened`        |
+| Constants    | CONSTANT_CASE | `const MAX_SPEED = 200`     |
+| Enum names   | PascalCase    | `enum Element`              |
+| Enum members | CONSTANT_CASE | `{EARTH, WATER, AIR, FIRE}` |
+
+## Tipagem estática 
+
+Já falamos sobre tipagem na parte de variáveis tipadas em [outro tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#vari%C3%A1veis-tipadas). Considere esta seção como uma continuação daquela.
+
+- Ao definir uma variável tipada, use a sintaxe `var my_variable: my_type` ou `var my_variable: my_type = my_initial_value`, com estes exatos espaçamentos mostrados.
+- Ao definir funções tipadas, use a sintaxe func my_function(my_arg1: my_type1, my_arg2: my_type2) -> my_output_type:`, com estes exatos espaçamentos mostrados.
+- Evite explicitar o tipo da variável quando ele já é explícito pela própria definição.
+
+**Bom**
+
+```python
+var direction := Vector3(1, 2, 3)
+```
+
+**Ruim**
+```python
+var direction: Vector3 = Vector3(1, 2, 3)
+```
+
+> PS: No caso de ser uma função sua, em teoria não seria necessária explicitar o tipo pois a engine consegue inferir, mas para a leitura de código isso fica ruim. Qualquer pessoa que for leu o seu código terá que navegar até a função para saber qual o tipo da saída dela.
+
+- Ao usar `get_node`, prefira explicitar o tipo de node em vez de deixar para a engine inferir.
+
+**Bom**
+
+```python
+@onready var health_bar: ProgressBar = get_node("UI/LifeBar")
+```
+
+**Ruim**
+
+```python
+@onready var health_bar = get_node("UI/LifeBar")
+@onready var health_bar := get_node("UI/LifeBar")
+```
