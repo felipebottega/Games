@@ -308,6 +308,7 @@ Para descobrir/checar o tipo de uma variável, você pode usar a função `typeo
 | TYPE_PACKED_VECTOR4_ARRAY = 38 | `PackedVector4Array` |
 | TYPE_MAX = 39                  | —                    |
 
+Você pode deixar a engine inferir o tipo com operador `:=`. Deste modo, você evita ter que explicitar o tipo a todo instante e delega isso para a engine. Recomendo só fazer isso quando explicitar o tipo é redundante. Por exemplo, você pode definir `var direction: Vector3 = Vector3(1, 2, 3)`, mas isso é redundante pois o tipo do vetor definido é óbvio e a engine consegue inferir facilmente. Neste caso vale a pena utilizar `var direction := Vector3(1, 2, 3)`.
 
 ### Variáveis estáticas
 
