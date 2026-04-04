@@ -26,6 +26,8 @@ var character_dict = {
 }
 ```
 
+> PS: O Tab é em relação à variável. Se ela estiver dentro de outra estrutura e for necessário dar 5 Tabs para checar ao nível dela (por exemplo), então cada elemento vai necessitar de 6 Tabs. Em muitos editores (incluindo a Godot), ao dar ENTER de uma linha para a outra ele, automaticamente, já vai posicionar corretamente.
+
 Se for uma função, sempre preferir usar uma única linha, tanto para a definição quanto a chamada.
 
 ```python
