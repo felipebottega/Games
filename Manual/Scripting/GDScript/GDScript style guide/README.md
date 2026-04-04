@@ -6,7 +6,7 @@ Este tópico tem como propósito ser um conjunto de estilos de escrita de códig
 
 Use uma linha em branco para separar funções/métodos. Use duas linhas em branco para separar grupos de estruturas. 
 
-No exemplo abaixo, temos 3 estruturas: extends, variáveis globais e funções. Note que as variáveis globais possuem uma separação interna, sempre organizando com uma linha em branco entre as partes. A ideia geral é essa: grandes estruturas separadas por duas linhas em branco, partes internas de cada estrutura separadas por uma linha em branco.
+No exemplo abaixo, temos 3 estruturas: extends, variáveis da instância e funções. Note que as variáveis da instância possuem uma separação interna, sempre organizando com uma linha em branco entre as partes. A ideia geral é essa: grandes estruturas separadas por duas linhas em branco, partes internas de cada estrutura separadas por uma linha em branco.
 
 <p align="center">
     <img width="400" src="https://github.com/user-attachments/assets/6a15d305-7fdd-4fb5-ae1d-77d4b29c3605" />
@@ -371,7 +371,7 @@ Vamos falar um pouco sobre cada um dos itens acima.
 - **enums:** Enumeração de constantes. 
 - **constants:** Valores de constantes. 
 - **static variables:** Variáveis estáticas da classe.
-- **remaining regular variables:** Outras variáveis da classe. Na maioria dos exemplos mostrados, foram estas as variáveis globais que declaramos.
+- **remaining regular variables:** Outras variáveis da classe. Na maioria dos exemplos mostrados, foram estas as variáveis da instância que declaramos.
 - **@export variables:** Variáveis que irão aparecer no *Inspector*.
 - **@onready variables:** Variáveis que serão carregadas assim que a cena for carregada.
 - **static methods/functions:** Funções estáticas da classe. Estas funções não têm acesso a `self` nem às variáveis de instâncias, mas podem acessar variáveis estáticas. Por isso elas ficam separadas das funções normais.
