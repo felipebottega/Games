@@ -63,7 +63,7 @@ func check_item_collection():
 		# Se chegou aqui é porque o player tocou no tile da bandeira. Agora podemos fazer o score.
 		var tile = tile_data.get_tile_data(atlas_coords, 0)  # retorna o objeto do tile
 		var points = tile.get_custom_data("Points")    # acessa o atributo Points (nesse caso é 1)
-		score += points    # atualiza a variável global de score
+		score += points    # atualiza a variável de score
 		$HUD/Score.text = "SCORE = " + str(score)    # atualiza a HUD
 		$Player/AudioItem.play()    # toca o som de coletar item
 		

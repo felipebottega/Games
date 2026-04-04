@@ -11,7 +11,7 @@ Este foi o primeiro método de carregamento que vimos. Ele foi introduzido no tu
 3. `cena_instancia.position = Vector2(x, y)`    # altera atributos da cena
 4. `add_child(cena_instancia)`    # adiciona a cena dentro da cena principal, como um filho (entra na árvode de nodes)
 
-O `preload` é executado assim que script é inicializado/compilado, não dá para ficar chamando ele dinamicamente durante a execução várias vezes. É indicado para carregar recursos/cenas que são mais pesados ou que serão utilizados diversas vezes. Para otimizar a velocidade do carregamento, prefira chamar o `preload` antes mesmo da `_ready`, junto da definição das variáveis globais.
+O `preload` é executado assim que script é inicializado/compilado, não dá para ficar chamando ele dinamicamente durante a execução várias vezes. É indicado para carregar recursos/cenas que são mais pesados ou que serão utilizados diversas vezes. Para otimizar a velocidade do carregamento, prefira chamar o `preload` antes mesmo da `_ready`, junto da definição das variáveis da instância.
 
 > PS: Por causa da sua natureza de não ser um objeto a ser chamado dinamicamente em um script, é necessário que a string de input seja uma constante. O `preload` não funciona com variáveis, mesmo que sejam strings.
 
@@ -96,7 +96,7 @@ Tivemos duas fontes de lentidão: as partículas da primeira cena e as partícul
 
 ## Método esperto de pré-carregamento 
 
-Alguns devs usam uma cena de loading que já contém todas as partículas usadas no jogo, cada uma instanciada uma vez e deixada invisível, só para garantir que os shaders fiquem prontos. Ou seja, carregamos tudo logo no loading inicial do jogo e deixamos disponível como variável global, usando *autoload/singleton*. Vimos um pouco deste assunto no nosso [jogo usando tiles](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#toques-finais), onde foi necessário ter a música como cena global que ficasse tocando independentemente da cena em que estávamos. Este approach não nos faz ganhar ganhar tempo, mas coloca todo o tempo de espera para o início, antes mesmo do jogo começar. Com isso, evitamos qualquer tipo de lag ou congelamento no meio do jogo. Vamos mostrar como se faz.
+Alguns devs usam uma cena de loading que já contém todas as partículas usadas no jogo, cada uma instanciada uma vez e deixada invisível, só para garantir que os shaders fiquem prontos. Ou seja, carregamos tudo logo no loading inicial do jogo e deixamos disponível como variável da instância, usando *autoload/singleton*. Vimos um pouco deste assunto no nosso [jogo usando tiles](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#toques-finais), onde foi necessário ter a música como cena global que ficasse tocando independentemente da cena em que estávamos. Este approach não nos faz ganhar ganhar tempo, mas coloca todo o tempo de espera para o início, antes mesmo do jogo começar. Com isso, evitamos qualquer tipo de lag ou congelamento no meio do jogo. Vamos mostrar como se faz.
 
 ### Adicionando cenas no Autoload
 

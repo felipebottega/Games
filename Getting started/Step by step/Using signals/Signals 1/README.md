@@ -34,7 +34,15 @@ A lógica é simples, o método `get_overlapping_bodies` gera uma lista de todos
     <img src="https://github.com/user-attachments/assets/1ef91515-97c7-4acd-8708-5ec77c2f2d01" width="300">
 </p>
 
-A variável `force` é um vetor que foi definido globalmente no código, como mostrado abaixo. O interessante de definir usando o `@export` é que essa variável passa a ser manipulável na aba *Inspector* à direita da tela. Isso pode ser feito para qualquer variável global.
+A variável `force` é um vetor que foi definido globalmente no código, como mostrado abaixo. O interessante de definir usando o `@export` é que essa variável passa a ser manipulável na aba *Inspector* à direita da tela. Isso pode ser feito para qualquer variável definida globalmente no código.
+
+## Variável definida globalmente no código
+
+Logo acima, evitei dizer que a variável é "global", no sentido tradicional, pois isso seria errado e levaria a confusões sobre o que são variáveis globais de verdade em Godot. Na verdade, cada script é uma classe, e essas "variáveis definidas globalmente no código" são atributos da classe. Mais precisamente, são atributos de instâncias da classe. Cada vez que você associa um node a um script, uma instância da classe é criada. Caso você altere um destes atributos dentro do node, nada vai acontecer ao atributo corresponde em outro node (supondo que outro node carregou o mesmo script).
+
+Como estes atributos podem ser acessados por qualquer método e instância, eles tem este aspecto global. É importante ressaltar que scripts em Godot não equivalem a scripts em Python, talvez isso seja uma fonte de confusão, pois em Python estas variáveis seriam chamadas de "globais". 
+
+Daqui para frente, vou chamar este tipo de variável de "variável da instância". Futuramente iremos abordar este tema de maneira apropriada e entenderemos melhor a estrutura de um sript e suas componentes.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/20b951c5-7486-4f8c-bf19-4a4805a53125" width="800">

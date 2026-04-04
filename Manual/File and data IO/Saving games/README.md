@@ -151,7 +151,7 @@ Depois de passar por algumas plataformas, o jogador vai se deparar com uma área
   <img width="500" src="https://github.com/user-attachments/assets/e5bb88c9-113c-4e0b-952e-f2c7b0d69658" />
 </p>
 
-Para criar este sinal, vamos utilizar o aprendizado do [tutorial 3 de sinais](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203). Começamos criando um script no node raíz da cena. Como variável global do script, definimos `signal area`. No node `Area2D`, vamos para o *Inspector → Node → body_entered* para criar a função que se ativa quando um corpo entra na área. Dentro desta função apenas adicionamos a linha `area.emit()`. Isso vai emitir um sinal que será recebido pelo node pai do jogo (*level*) que contém essa cena do céu. É na cena pai que iremos aplicar as forças.
+Para criar este sinal, vamos utilizar o aprendizado do [tutorial 3 de sinais](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203). Começamos criando um script no node raíz da cena. Como variável da instância, definimos `signal area`. No node `Area2D`, vamos para o *Inspector → Node → body_entered* para criar a função que se ativa quando um corpo entra na área. Dentro desta função apenas adicionamos a linha `area.emit()`. Isso vai emitir um sinal que será recebido pelo node pai do jogo (*level*) que contém essa cena do céu. É na cena pai que iremos aplicar as forças.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/3da9f23f-04b6-4acf-bda8-0694e64c2ac0" />
@@ -244,7 +244,7 @@ Crie um grupo global e coloque as cenas que quer salvar no grupo. Na hora de sal
 
 Apesar do sistema de save ser igual para todos, há dois tipos de grupos para diferenciar na hora do load. Em resumo, os nodes das cenas normais são removidos e depois colocados de volta na cena, com as propriedades do load carregadas, enquanto que nodes das cenas do autoload apenas tem suas propriedades atualizadas. Não se pode remover nada de autoload e carregar depois novamente.
 
-A função geral de save percorre todos os nodes do grupo e extrai as propriedades que deverão ser salvas. Ela é independente de caminho e local de onde foi chamada. A única coisa que os nodes a serem salvos precisam é de uma função `save` retornando o dicionário das propriedades a serem salvas. É interessante chamar a função de save nos pontos de save de fato. Isso ocorre quando o jogo encontra um NPC e incrementa a variável global *state*. Abaixo segue a função geral de save.
+A função geral de save percorre todos os nodes do grupo e extrai as propriedades que deverão ser salvas. Ela é independente de caminho e local de onde foi chamada. A única coisa que os nodes a serem salvos precisam é de uma função `save` retornando o dicionário das propriedades a serem salvas. É interessante chamar a função de save nos pontos de save de fato. Isso ocorre quando o jogo encontra um NPC e incrementa a variável da instância *state*. Abaixo segue a função geral de save.
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/77053c2e-3e3f-4ec4-816e-007380aaa15d" />

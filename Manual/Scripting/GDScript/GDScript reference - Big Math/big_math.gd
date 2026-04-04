@@ -1,3 +1,4 @@
+@icon("res://icon_big_math.png")
 class_name BigMath
 
 const BASE: int = 10000
