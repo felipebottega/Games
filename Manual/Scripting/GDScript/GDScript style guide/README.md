@@ -314,3 +314,62 @@ var direction: Vector3 = Vector3(1, 2, 3)
 @onready var health_bar = get_node("UI/LifeBar")
 @onready var health_bar := get_node("UI/LifeBar")
 ```
+
+## Estrutura do código 
+
+A estrutura do código é a ordem que os blocos de código seguir no script. A sugestão oficial é a que eu vou seguir aqui, mas com as devidas simplificações e ajustes. A numeração abaixo se refere ao número do item, não a linha de fato. Também incluir as quebras de linhas entre cada bloco, de acordo com a minha convenção.
+
+```python
+01. @tool, @icon
+02. class_name
+03. extends
+04. ## documentation
+
+05. signals
+
+06. enums
+
+07. constants
+
+08. static variables
+
+09. remaining regular variables
+
+10. @export variables
+
+11. @onready variables
+
+
+13. static methods/functions
+
+
+14. overridden built-in virtual methods/functions:
+	1. _init()
+	2. _enter_tree()
+	3. _ready()
+	4. _process()
+	5. _physics_process()
+	6. remaining virtual methods/functions
+
+15. overridden custom methods/functions
+
+16. remaining methods/functions
+
+
+17. inner classes
+```
+
+Vamos falar um pouco sobre cada um dos itens acima.
+
+- **@tool, @icon:** Estas duas anotações já foram discutidas anteriormente. Nenhuma das duas é obrigatória para o projeto. Caso você pretenda usar o script no editor, a anotação `@tool` deve vir na primeira linha, e na segunda linha que vem o `@icon`.
+- **class_name:** Nome da classe, caso tenha um nome.
+- **extends:** Classe pai do qual a classe do script irá herdar. Esta linha é obrigatória.
+- **## documentation:** Documentação do script/classe.
+- **signals:** Variáveis de sinal. 
+- **enums:** Enumeração de constantes. 
+- **constants:** Valores de constantes. 
+- **static variables:** Variáveis estáticas da classe.
+- **remaining regular variables:** Outras variáveis da classe. Na maioria dos exemplos mostrados, foram estas as variáveis globais que declaramos.
+- **@export variables:** Variáveis que irão aparecer no *Inspector*.
+- **@onready variables:** Variáveis que serão carregadas assim que a cena for carregada.
+- **static methods/functions:** 
