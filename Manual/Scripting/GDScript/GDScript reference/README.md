@@ -446,7 +446,7 @@ func _ready():
 
 O `self` serve para referenciar a instância atual que está sendo usada no script. Existem algumas aplicações para isso, vou citar uma aqui.
 
-ocê define uma variável global no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e a engine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse aviso é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável global `x`, que é igual a 1.
+ocê define uma variável da instância no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e a engine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse aviso é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável da instância `x`, que é igual a 1.
 
 ```python
 var x = 1
@@ -456,7 +456,7 @@ func update(x):
     return x
 ```
 
-Caso você queira que a variável global seja usada dentro da função, deve usar o `self`. A nova função abaixo sempre apra alterar a variável global.
+Caso você queira que a variável da instância seja usada dentro da função, deve usar o `self`. A nova função abaixo sempre apra alterar a variável da instância.
 
 ```python
 var x = 1
@@ -765,7 +765,7 @@ Uma instância pode ser definida com o comando `var z = ComplexLib.Complex.new(1
 
 ## setters e getters
 
-AS keywords `set` e `get` servem para fazer algo quando a variável é acessada ou alterar algo quando o valor da variável é alterado, respectivamente. Só é possível usar estas keywords em variáveis da classe (variáveis globais), não serve para variáveis dentro de funções. 
+AS keywords `set` e `get` servem para fazer algo quando a variável é acessada ou alterar algo quando o valor da variável é alterado, respectivamente. Só é possível usar estas keywords em variáveis da instância, não serve para variáveis dentro de funções. 
 
 No exemplo abaixo, o `get` diz que a variável `seconds` deve ser igual a `milliseconds / 1000` sempre que `seconds` for acessada. Se alguma computação intermediária e a alterou, ela voltará "ao normal" assim que tentarem acessá-la (pode-se dizer que ela tem um vínculo com `milliseconds`). O `set` diz que `milliseconds` deve ser alterado para `milliseconds = value * 1000` sempre que o valor de `seconds` for alterado (alterado do valor anterior para o novo valor `value`).
 
