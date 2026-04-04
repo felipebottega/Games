@@ -6,6 +6,8 @@ Para as opções do sistema de avisos do editor, vá para *Project → Project S
   <img width="900" src="https://github.com/user-attachments/assets/69bb09c2-d35c-4c64-ad8c-6a399e3d135d" />
 </p>
 
+> PS: Depois de alterar algumas destas configurações, pode ser necessário reiniciar o editor para fazer efeito.
+
 ## Warning ignore
 
 Caso não seja interessante alterar o sistema de aviso para o projeto inteiro, você ainda pode colocar por trechos de código.
