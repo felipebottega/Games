@@ -158,3 +158,29 @@ Confesso que eu prefiro o estilo antigo, não apenas para o if ternário, mas pa
 - Evite parênteses redundantes como `if (is_colliding())`. Usar `if is_colliding()` é equivalente e é mais legível.
 - Para expressões lógicas é recomendado o uso de parênteses (explícito) em vez de se valer de como a engine resolve a expressão internamente (implícito). Prefira usar `if (red and blue) or not green` em vez de `if red and blue or not green` por exemplo.
 - No caso de expressões matemáticas, a mesma recomendação acima continua valendo. Prefira usar `(2 ** 3) * 4` em vez de `2 ** 3 * 4` por exemplo.
+
+## Espaços
+
+- Sempre use espaços entre operadores, após vírgulas e após dois pontos (:) de dicionários. Aecssar elementos de arrays ou dicionário com colchetes [] não deve incluir espaçamentos.
+
+**Bom**
+
+```python
+position.x = 5
+position.y = target_position.y + 10
+dict["key"] = 5
+my_array = [4, 5, 6]
+my_dictionary = {key: "value" }
+print("foo")
+```
+
+**Ruim**
+
+```python
+position.x=5
+position.y = mpos.y+10
+dict ["key"] = 5
+myarray = [4,5,6]
+my_dictionary = {key:"value"}
+print ("foo")
+```
