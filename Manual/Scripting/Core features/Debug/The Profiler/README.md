@@ -37,19 +37,6 @@ Você pode refinar a medição contando manualmente os ticks enquanto o código 
 
 Se você envolver um trecho de código com uma contagem de início e fim em microssegundos, a diferença entre as duas representa a quantidade de tempo que levou para executar esse trecho de código.
 
-```python
-# Measuring the time it takes for worker_function() to run
-var start = Time.get_ticks_usec()
-worker_function()
-var end = Time.get_ticks_usec()
-var worker_time = (end-start)/1000000.0
-
-# Measuring the time spent running a calculation over each element of an array
-start = Time.get_ticks_usec()
-for calc in calculations:
-	result = pow(2, calc.power) * calc.product
-end = Time.get_ticks_usec()
-var loop_time = (end-start)/1000000.0
-
-print("Worker time: %s\nLoop time: %s" % [worker_time, loop_time])
-```
+<p align="center">
+	<img width="350" src="https://github.com/user-attachments/assets/ca723f19-40d2-4df7-8da3-72a6c9bd623b" />
+</p>
