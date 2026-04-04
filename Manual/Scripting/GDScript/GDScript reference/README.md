@@ -699,6 +699,15 @@ Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome
 
 > PS: Este assunto foi brevemente abordado no projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo).
 
+### Ícone
+
+Além de poder nomear classes, também é possível associa-la a um ícone, que ficará visível no *FileSystem*. Para isso, basta inserir a anotação `@icon` no topo do script, com o caminho até o arquivo do ícone como argumento.
+
+<p align="center">
+	<img width="300" src="https://github.com/user-attachments/assets/174a07f4-d052-43b9-a79e-70f1f38edfe2" />
+	<img width="210" src="https://github.com/user-attachments/assets/61f1b11e-eb69-4e8f-a568-0f5a48639c8d" />
+</p>
+
 ### Herança de classes
 
 Existem três maneiras de se herdar de uma classe. Mostramos as três abaixo com exemplos de código.
