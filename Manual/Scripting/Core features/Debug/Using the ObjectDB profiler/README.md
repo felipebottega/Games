@@ -14,6 +14,4 @@ Uma vez que o jogo está sendo executado, vá em *Debugger → ObjectDB Profiler
   <img width="250" src="https://github.com/user-attachments/assets/541ceb42-4de0-4257-8f7b-dd6eca8a9a12" />
 </p>
 
-A cada execução você pode salvar um novo snapshot. A ideia desta aba é salvar o snapshot quando houver mudanças que você quer comparar, pois esta aba permite fazer diff do projeto em momentos distintos.
-
-## 
+A cada execução você pode salvar um novo snapshot. A ideia desta aba é salvar o snapshot quando houver mudanças que você quer comparar, pois esta aba permite fazer diff do projeto em momentos distintos. Não pretendo me aprofundar neste tópico, recomendo que teste a e explore a funcionalidade.
