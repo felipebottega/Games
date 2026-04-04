@@ -6,45 +6,27 @@
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_112p8"]
 particle_flag_disable_z = true
-gravity = Vector3(0, -5, 0)
+gravity = Vector3(0, -2, 0)
 scale_min = 0.39999998
 scale_max = 0.39999998
 turbulence_enabled = true
-turbulence_noise_strength = 19.51
-turbulence_noise_scale = 9.502
-turbulence_noise_speed_random = 0.1
-turbulence_influence_min = 0.003
-turbulence_influence_max = 0.13800001
+turbulence_noise_strength = 3.25
+turbulence_noise_scale = 9.819
+turbulence_noise_speed_random = 1.54
+turbulence_influence_min = 0.0
+turbulence_influence_max = 0.07300001
 
 [node name="Node" type="Node"]
 script = ExtResource("1_sy5k4")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-modulate = Color(0.03137255, 1, 1, 1)
-position = Vector2(160, 274)
-amount = 10000
-lifetime = 15.0
-randomness = 0.5
+modulate = Color(0.4627451, 0.4627451, 0.62352943, 1)
+position = Vector2(160, 307)
+amount = 100000
+lifetime = 45.0
 process_material = SubResource("ParticleProcessMaterial_112p8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(160, 160)
 texture = ExtResource("2_112p8")
 script = ExtResource("3_e2u21")
-
-[node name="Button" type="Button" parent="."]
-visible = false
-offset_left = 11.0
-offset_top = 260.0
-offset_right = 74.0
-offset_bottom = 291.0
-text = "Botao1"
-
-[node name="Button2" type="Button" parent="."]
-visible = false
-offset_left = 245.0
-offset_top = 260.0
-offset_right = 308.0
-offset_bottom = 291.0
-text = "Botao2"
