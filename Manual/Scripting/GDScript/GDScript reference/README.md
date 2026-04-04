@@ -308,7 +308,13 @@ Para descobrir/checar o tipo de uma variável, você pode usar a função `typeo
 | TYPE_PACKED_VECTOR4_ARRAY = 38 | `PackedVector4Array` |
 | TYPE_MAX = 39                  | —                    |
 
-Você pode deixar a engine inferir o tipo com operador `:=`. Deste modo, você evita ter que explicitar o tipo a todo instante e delega isso para a engine. Recomendo só fazer isso quando explicitar o tipo é redundante. Por exemplo, você pode definir `var direction: Vector3 = Vector3(1, 2, 3)`, mas isso é redundante pois o tipo do vetor definido é óbvio e a engine consegue inferir facilmente. Neste caso vale a pena utilizar `var direction := Vector3(1, 2, 3)`.
+Você pode deixar a engine inferir o tipo com `:=`. Deste modo, você evita ter que explicitar o tipo da variável a todo instante e delega isso para a engine. Recomendo só fazer isso quando explicitar o tipo é redundante. Por exemplo, você pode definir `var direction: Vector3 = Vector3(1, 2, 3)`, mas isso é redundante pois o tipo do vetor definido é óbvio e a engine consegue inferir facilmente. Neste caso vale a pena utilizar `var direction := Vector3(1, 2, 3)`.
+
+No exemplo anterior, se você definir `var direction = Vector3(1, 2, 3)`, sem explicitar o tipo nem pedir para a engine inferir, a variável será do tipo `Variant`. Isso basicamente significa que ela é flexível e pode ser de qualquer tipo a qualquer instante. Você ganha mais dinâmica, mas perde performance. O exemplo abaixo deixa isso claro. Sem definir um tipo para a variável, ela pode ser alterada à vontade. Porém, assim que ela possui um tipo, a engine acusa erro ao tentar atribuir um valor de outro tipo para a variável.
+
+<p align="center">
+	<img width="450" src="https://github.com/user-attachments/assets/811a6da0-c9a4-45d4-b3a6-aa79b91092c2" />
+</p>
 
 ### Variáveis estáticas
 
