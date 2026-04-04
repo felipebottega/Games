@@ -16,15 +16,17 @@ var character_dict = {
 }
 ```
 
-Se for uma variável com muitos elementos, eu considero ok aproveitar cada linha para inserir múltiplos elementos. Idealmente, fazer isso de maneira organizada.
+Se for uma variável com muitos elementos, você pode aproveitar cada linha para inserir múltiplos elementos apenas quando há uma organização clara (cada linha representa algo diferente das outras).
 
 ```python
 var character_dict = {
-    "Char1Name": "Bob", "Char1Age": 27, "Char1Job": "Mechanic",
-    "Char2Name": "Liz", "Char2Age": 25, "Char2Job": "Singer",
-    "Char3Name": "Tom", "Char3Age": 32, "Char3Job": "Investor",
+    "HeroName": "Bob", "HeroAge": 27, "HeroJob": "Mechanic",
+    "NPCName": "Liz", "NPCAge": 25, "NPCJob": "Singer",
+    "VillanName": "Tom", "VillanAge": 32, "VillanJob": "Investor",
 }
 ```
+
+Note que esse exemplo dado é bastante artificial. Seria totalmente factível usar um dicionário com as chaves "Hero", "NPC", "Villan" e cada chave corresponder a um outro dicionário com os três campos descritos. Não acho que este tipo de formatação será usada muitas vezes, mas impossível não é.
 
 > PS: O Tab é em relação à variável. Se ela estiver dentro de outra estrutura e for necessário dar 5 Tabs para checar ao nível dela (por exemplo), então cada elemento vai necessitar de 6 Tabs. Em muitos editores (incluindo a Godot), ao dar ENTER de uma linha para a outra, automaticamente ele já vai posicionar corretamente.
 
