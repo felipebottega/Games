@@ -27,4 +27,29 @@ No painel do profiler, há mais duas funcionalidades para te auxiliar: *Measure*
   <img width="140" src="https://github.com/user-attachments/assets/638c4ee1-a7ab-42a6-a96b-36330157d63b" />  
 </p>
 
-Por padrão, ele começa com a opção *Frame Time*, que lista o tempo necessário para percorrer o frame atual de cada item, em milissegundos. O *Average Time (ms)* é o tempo médio que qualquer função levou para ser chamada mais de uma vez. Se a contagem precisa de milissegundos não for importante e você quiser ver as proporções de tempo em relação ao frame, use as métricas de porcentagem. "Frame (%)" é relativa ao "Frame Time" e "Physics Time (%)" é relativa ao "Physics Time" (ambos definidos acima).
+Por padrão, ele começa com a opção *Frame Time*, que lista o tempo necessário para percorrer o frame atual de cada item, em milissegundos. O *Average Time (ms)* é o tempo médio que qualquer função levou para ser chamada mais de uma vez. Se a contagem precisa de milissegundos não for importante e você quiser ver as proporções de tempo em relação ao frame, use as métricas de porcentagem. *Frame (%)* é relativa ao *Frame Time* e *Physics Time (%)* é relativa ao *Physics Time* (ambos definidos acima).
+
+A última opção é o *Time*. A opção *Inclusive* mede o tempo que uma função levou, incluindo quaisquer chamadas de outras funções dentro dela. Com a opção *Self*, a Godot mede o tempo gasto na função sem considerar as chamadas de função que ela mesmo fez.
+
+## Medição manual com timer
+
+Você pode refinar a medição contando manualmente os ticks enquanto o código é executado com algumas funções temporárias. As duas funções fazem parte do objeto da classe `Time`. Elas são `get_ticks_msec` e `get_ticks_usec`. A primeira mede em milissegundos (mil por segundo) e a segunda mede em microssegundos (um milhão por segundo). Ambas retornam a quantidade de tempo decorrido desde que o mecanismo do jogo foi iniciado em seu respectivo intervalo de tempo.
+
+Se você envolver um trecho de código com uma contagem de início e fim em microssegundos, a diferença entre as duas representa a quantidade de tempo que levou para executar esse trecho de código.
+
+```python
+# Measuring the time it takes for worker_function() to run
+var start = Time.get_ticks_usec()
+worker_function()
+var end = Time.get_ticks_usec()
+var worker_time = (end-start)/1000000.0
+
+# Measuring the time spent running a calculation over each element of an array
+start = Time.get_ticks_usec()
+for calc in calculations:
+	result = pow(2, calc.power) * calc.product
+end = Time.get_ticks_usec()
+var loop_time = (end-start)/1000000.0
+
+print("Worker time: %s\nLoop time: %s" % [worker_time, loop_time])
+```
