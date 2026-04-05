@@ -28,4 +28,6 @@ O resultado está mostrado abaixo. É bem simples!
   <img width="800" src="https://github.com/user-attachments/assets/2f431eca-0427-405c-bb6f-d366f60ab4e6" />
 </p>
 
-> PS: O monitoramento é atualizado uma vez por segundo. Você até pode criar os valores uma vez por frame, mas será mais do que o necessário de fato.
+> PS: O monitoramento é atualizado uma vez por segundo. Você até pode criar os valores uma vez por frame, mas isso será mais do que o necessário de fato.
+
+> PS: Não é porque os dados monitorados foram instanciados na cena principal que a criação do monitoramento deve ser feita no script desta cena. Você poderia, por exemplo, ter um script global (autoload) de monitoramento e fazer a chamada por lá.
