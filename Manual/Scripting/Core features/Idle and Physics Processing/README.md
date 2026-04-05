@@ -6,6 +6,22 @@ Os jogos são executados em um loop. A cada frame, você precisa atualizar o est
 
 Existem dois tipos de processamento disponíveis (falamos um pouco desse tema [na introdução de física](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction#physics-process)):
 
-- O "idle processing" permite que você execute código que atualiza um node a cada frame, com a maior frequência possível.
-- O "physics processing" ocorre a uma taxa fixa, 60 vezes por segundo por padrão. Isso é independente da taxa de frames real do seu jogo e mantém a física funcionando sem problemas. Você deve usá-lo para qualquer coisa que envolva a engine de física.
+- O "idle processing" (processamento normal) permite que você execute código que atualiza o node (associado ao script) a cada frame, com a maior frequência possível.
+- O "physics processing" (processamento de física) ocorre a uma taxa fixa, 60 vezes por segundo por padrão. Isso é independente da taxa de frames real do seu jogo e mantém a física funcionando sem problemas. Você deve usá-lo para qualquer coisa que envolva a engine de física.
 
+## Desativando os processamentos
+
+Você pode ativar ou desativar o processamento normal com `set_process(true)` e `set_process(false)`. O método `is_processing()` serve para verificar se o processamento normal está ligado.
+
+O controle do processamento de física é análogo. Neste caso, você usará `set_physics_process(true)` e `set_physics_process(false)`. A checagem de processamento é feita com o comando `is_physics_processing()`.
+
+Mesmo que desative os dois processamentos, algumas coisas do jogo ainda continuam rodando: 
+
+- O loop principal da Godot Engine continua rodando: a engine ainda redesenha a tela a cada frame, atualiza a árvore de nós internamente e mantém o jogo “vivo”, mesmo sem chamar seus métodos de script
+- O motor de física continua ativo: corpos como `CharacterBody2D`, `RigidBody2D` etc. ainda sofrem gravidade, colisões e respostas físicas, porque isso é calculado pela engine, não pelo seu `_physics_process()`
+- Timers continuam funcionando: qualquer `Timer` na cena continua contando tempo e emitindo o sinal `timeout`, independentemente de você ter desativado processamento no script
+- Animações continuam rodando: sistemas como `AnimationPlayer`, `Tween` e partículas (`GPUParticles2D`) continuam atualizando automaticamente, pois têm seus próprios ciclos internos
+- Sistema de input continua funcionando: funções como `_input(event)` e `_unhandled_input(event)` ainda são chamadas quando o usuário pressiona teclas, clica ou interage
+- Áudio continua tocando: sons e músicas seguem sendo reproduzidos normalmente, pois o sistema de áudio é independente do `_process()`
+- Apenas `_process(delta)` e `_physics_process(delta)` param: a engine simplesmente deixa de chamar esses métodos no seu script, então qualquer lógica que você colocou neles deixa de rodar
+- Ou seja, só o seu código automático por frame para: tudo que depende desses métodos (movimento manual, cronômetros próprios, lógica de jogo) congela, mas o restante da engine continua funcionando normalmente
