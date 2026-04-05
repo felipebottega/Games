@@ -28,6 +28,9 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201#impulsos
 ">  Impulsos
  </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201#variável-definida-globalmente-no-código
+">  Variável definida globalmente no código
+ </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201#-_physics_process-vs--_process
 ">   _physics_process vs  _process
  </a><br>
@@ -1226,6 +1229,440 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a><br>
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#outros-recursos
 ">  Outros recursos
+ </a><br>
+<li> <b>Manual\Rendering\Using Viewports</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#exemplo-inicial
+">  Exemplo inicial
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#transparent-bg
+">  Transparent BG
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#captura
+">  Captura
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#input
+">  Input
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#câmeras
+">  Câmeras
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#world
+">  World
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#size-e-stretch
+">  Size e stretch
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#efeito-"raio-x"-com-a-câmera
+">  Efeito "raio-x" com a câmera
+ </a><br>
+<li> <b>Manual\Rendering\Multiple resolutions</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions#aba-game
+">  Aba Game
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions#size/mode
+">  Size/Mode
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions#stretch/mode
+">  Stretch/Mode
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions#aspect
+">  Aspect
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions#scale-mode
+">  Scale Mode
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions#scale
+">  Scale
+ </a><br>
+<li> <b>Manual\Rendering\Multiple resolutions - Game</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game#assets
+">  Assets
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game#navegação
+">  Navegação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game#subviewport
+">  Subviewport
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game#resolução
+">  Resolução
+ </a><br>
+<li> <b>Manual\Rendering\Fixing jitter, stutter and input lag</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Fixing%20jitter,%20stutter%20and%20input%20lag#diferenciando-jitter-de-stutter
+">  Diferenciando jitter de stutter
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Fixing%20jitter,%20stutter%20and%20input%20lag#resolvendo-jitter
+">  Resolvendo jitter
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Fixing%20jitter,%20stutter%20and%20input%20lag#resolvendo-stutter
+">  Resolvendo stutter
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Fixing%20jitter,%20stutter%20and%20input%20lag#input-lag
+">  Input lag
+ </a><br>
+<li> <b>Manual\Scripting\GDScript\GDScript reference</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#keywords
+">  Keywords
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#operadores
+">  Operadores
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#anotações
+">  Anotações
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#@export
+">  @export
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#@onready
+">  @onready
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#comentários
+">  Comentários
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#-faz-com-que-o-comentário-tenha-caráter-de-documentação,-e-vai-aparecer-como-tooltip-em-outros-lugares-por-exemplo,-ao-colocar-este-comentário-especial-sobre-uma-variável-de-uma-script-e-depois-utilizar-esta-variável-em-outro-lugar-(pode-ser-no-mesmo-script-ou-em-outro),-você-poderá-passar-o-mouse-por-cima-e-visualizar-a-descrição-dela
+"> O uso de `` faz com que o comentário tenha caráter de documentação, e vai aparecer como tooltip em outros lugares. Por exemplo, ao colocar este comentário especial sobre uma variável de uma script e depois utilizar esta variável em outro lugar (pode ser no mesmo script ou em outro), você poderá passar o mouse por cima e visualizar a descrição dela.
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#-logo-acima-ou-logo-abaixo-da-nomeação-da-classe-(`class_name`)-isso-vai-gerar-uma-dosctring-daquela-classe,-que-pode,-inclusive,-ser-acessada-pelo-help-do-editor-depois-que-definir-uma-documentação-(como-mostrado-abaixo),-veja-o-resultado-indo-em-*help-→-search-help*-e-digitando-o-nome-da-classe-o-exemplo-abaixo-o-básico-para-uma-boa-documentação
+"> Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `` logo acima ou logo abaixo da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe. O exemplo abaixo o básico para uma boa documentação.
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#regiões-de-código
+">  Regiões de código
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#continuação-de-linhas
+">  Continuação de linhas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#tipos
+">  Tipos
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#básicos
+">  Básicos
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#vetores
+">  Vetores
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#tipos-próprios-da-engine
+">  Tipos próprios da engine
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#tipos-de-containers
+">  Tipos de containers
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#sinais
+">  Sinais
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#callable
+">  Callable
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#variáveis
+">  Variáveis
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#variáveis-tipadas
+">  Variáveis tipadas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#variáveis-estáticas
+">  Variáveis estáticas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#casting
+">  Casting
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#constantes
+">  Constantes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#enum
+">  Enum
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#funções
+">  Funções
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#parâmetros-opcionais
+">  Parâmetros opcionais
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#definindo-os-tipos-das-entradas-e-saídas
+">  Definindo os tipos das entradas e saídas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#declarando-um-callabale-a-partir-de-uma-função
+">  Declarando um callabale a partir de uma função
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#funções-estáticas
+">  Funções estáticas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#funções-variádicas
+">  Funções variádicas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#self
+">  self
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#controle-de-fluxo
+">  Controle de fluxo
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#if/else/elif
+">  if/else/elif
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#while-e-for
+">  while e for
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#match
+">  match
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#classes
+">  Classes
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#classes-sem-nome
+">  Classes sem nome
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#classes-nomeadas
+">  Classes nomeadas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#ícone
+">  Ícone
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#herança-de-classes
+">  Herança de classes
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#construtor
+">  Construtor
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#classes-internas
+">  Classes internas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#setters-e-getters
+">  setters e getters
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#gerenciamento-de-memória-
+">  Gerenciamento de memória 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#sinais
+">  Sinais
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#exemplo-prático-de-sinais
+">  Exemplo prático de sinais
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#aguardando-sinais-ou-corrotinas
+">  Aguardando sinais ou corrotinas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#assert
+">  Assert
+ </a><br>
+<li> <b>Manual\Scripting\GDScript\GDScript reference - Big Math</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference%20-%20Big%20Math#estrutura
+">  Estrutura
+ </a><br>
+<li> <b>Manual\Scripting\GDScript\GDScript exported properties</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties#caminhos
+">  Caminhos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties#ranges
+">  Ranges
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties#cores
+">  Cores
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties#nodes
+">  Nodes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties#resources
+">  Resources
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties#enums
+">  Enums
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties#arrays
+">  Arrays
+ </a><br>
+<li> <b>Manual\Scripting\GDScript\GDScript style guide</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#linhas-em-branco
+">  Linhas em branco
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#comprimento-da-linha
+">  Comprimento da linha
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#indentação
+">  Indentação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#múltiplas-condicionais
+">  Múltiplas condicionais
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#parênteses
+">  Parênteses
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#comentários
+">  Comentários
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#esta-função-faz-algumas-contas
+">  Esta função faz algumas contas.
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#espaços
+">  Espaços
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#aspas
+">  Aspas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#números
+">  Números
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#convenção-de-nomes
+">  Convenção de nomes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#tipagem-estática-
+">  Tipagem estática 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#estrutura-do-código-
+">  Estrutura do código 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#documentation
+"> 04.  documentation
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#documentation:**-documentação-do-script/classe
+"> - ** documentation:** Documentação do script/classe.
+ </a><br>
+<li> <b>Manual\Scripting\GDScript\GDScript warning system</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system#warning-ignore
+">  Warning ignore
+ </a><br>
+<li> <b>Manual\Scripting\Core features\How to read the Godot API</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#o-que-é-api?
+">  O que é API?
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#como-ler-a-api-da-godot
+">  Como ler a API da Godot
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#description
+"> >  Description
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#tutorials
+"> >  Tutorials
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#properties
+"> >  Properties
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#methods
+"> >  Methods
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#signals
+"> >  Signals
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#enumerations
+"> >  Enumerations
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`nomedoenum`
+"> >  `NomeDoEnum`
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#constants
+"> >  Constants
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#property-descriptions
+"> >  Property Descriptions
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`propriedade_1:-int`
+"> >  `propriedade_1: int`
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`propriedade_2:-bool`
+"> >  `propriedade_2: bool`
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#method-descriptions
+"> >  Method Descriptions
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`metodo_1()-->-void`
+"> >  `metodo_1() -> void`
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`metodo_2(param:-int)-->-int`
+"> >  `metodo_2(param: int) -> int`
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#signal-descriptions
+"> >  Signal Descriptions
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`sinal_1()`
+"> >  `sinal_1()`
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`sinal_2(valor:-int)`
+"> >  `sinal_2(valor: int)`
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#notes
+"> >  Notes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#examples
+"> >  Examples
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Debug\Overview of debugging tools</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#debug-menu-options
+">  Debug menu options
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#script-editor-debug-tools-and-options
+">  Script editor debug tools and options
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#debug-project-settings
+">  Debug project settings
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#opções-avançadas-do-project-settings
+">  Opções avançadas do Project Settings
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#remote-in-scene-dock
+">  Remote in scene dock
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Debug\Output panel</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Output%20panel#tipos-de-messagens
+">  Tipos de messagens
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Output%20panel#filtros-para-as-mensagens
+">  Filtros para as mensagens
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Output%20panel#limpando-mensagens
+">  Limpando mensagens
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Output%20panel#printando-mensagens
+">  Printando mensagens
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Debug\Debugger panel</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#stack-trace
+">  Stack Trace
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#errors
+">  Errors
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#evaluator
+">  Evaluator
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#profiler
+">  Profiler
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#visual-profiler
+">  Visual Profiler
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#monitors
+">  Monitors
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#video-ram
+">  Video RAM
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#misc
+">  Misc
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel#network-profiler
+">  Network Profiler
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Debug\The Profiler</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler#métricas
+">  Métricas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler#funcinalidade-measure-e-time
+">  Funcinalidade Measure e Time
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler#medição-manual-com-timer
+">  Medição manual com timer
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Debug\Using the ObjectDB profiler</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Using%20the%20ObjectDB%20profiler#como-usar
+">  Como usar
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Debug\Custom performance monitors</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Custom%20performance%20monitors#customizando-um-dado-para-aparecer-no-monitoramento
+">  Customizando um dado para aparecer no monitoramento
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Idle and Physics Processing</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#desativando-os-processamentos
+">  Desativando os processamentos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#parâmetro-delta
+">  Parâmetro delta
  </a><br>
 <br><li> <b>Manual\Extras\Audio Server</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#atributos-do-audio-server
