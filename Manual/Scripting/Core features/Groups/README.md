@@ -42,3 +42,8 @@ Ao instanciar estas cenas na cena principal, eles herdam as configurações de g
 
 > PS: Apesar do "BlueGroup" ser um *Scene Group*, a existência dele foi reconhecida em outra cena quando ele foi instanciado nesta. A maior diferença entre este tipo de grupo e o global é justamente o fato do *Scene Group* precisar ter um node do grupo instanciado na cena para a cena reconhecer o grupo, enquanto que o global é reconhecido mesmo que nenhum node do grupo exista na cena.
 
+Se tiver outro node na cena, você pode incluí-lo em qualquer um dos grupos existentes. Basta ir na aba dos grupos e selecionar os grupos nos quais você deseja incluí-lo.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/c3842344-1f03-4694-a66b-87878e584b51" />
+</p>
