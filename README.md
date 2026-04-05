@@ -686,7 +686,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects#strings-contendo-variáveis
 ">  Strings contendo variáveis
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects#res:-e-user:
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects#res-e-user
 ">  res:// e user://
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects#varredura-pelos-arquivos
@@ -998,7 +998,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#rids
 ">  RIDs
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#exemplo:-criando-um-sprite
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#exemplo-criando-um-sprite
 ">  Exemplo: criando um sprite
  </a><br>
 <li> <b>Manual\Performance\CPU\CPU optimization</b> </li>
