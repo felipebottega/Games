@@ -52,7 +52,7 @@ https://github.com/user-attachments/assets/896611ba-b08e-429e-b4ed-b61a7ba58ea3
 
 No caso do `_physics_process()`, sabemos que a taxa de atualização é constante e equivalente a 60 FPS (assumindo a configuração default). Já para o `_process()` isso não é necessariamente verdadeiro. Se o jogo estiver rodando a 300 FPS, o `_process()` será atualizado 5 vezes mais rápido que o `_physics_process()`, então o sprite irá se mover 5 vezes mais rápido também. Não queremos isso.
 
-Para resolver este problema, devemos utilizar o `delta`. Como já vimos, a velocidade do primeiro sprite é de $120\ \texttt{pixels}/\texttt{segundo}$. O `delta` nos diz quanto tempo passou entre este frame do `_process()` e o anterior, isto é a velocidade (instantânea) de atualização dos frames. Para saber quantos pixels o segundo sprite deve avançar para acompanhar o primeiro, fazemos uma "regra de três" ("proportion" ou "cross multiplication" no inglês).
+Para resolver este problema, devemos utilizar o `delta`. Como já vimos, a velocidade do primeiro sprite é de $120\ \texttt{pixels/segundo}$. O `delta` nos diz quanto tempo passou entre este frame do `_process()` e o anterior, isto é a velocidade (instantânea) de atualização dos frames. Para saber quantos pixels o segundo sprite deve avançar para acompanhar o primeiro, fazemos uma "regra de três" ("proportion" ou "cross multiplication" no inglês).
 
 <div align="center">
 <table>
