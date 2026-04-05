@@ -19,7 +19,7 @@ A lógica do corpo é simples. O importante é que notar que ele é adicionado a
 No script da cena principal é onde as coisas mais importantes acontecem. Logo no `_ready` é feita a criação do monitoramento. O comando `Performance.add_custom_monitor("game/ball_count", get_ball_count)` diz para a engine criar o campo de monitoramento "game/ball_count", e este monitoramento usará a saída da função `get_ball_count` para colocar no gráfico. O resto do código é apenas a lógica de criação de instâncias. 
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/4f8ece0b-41ff-4ce1-996d-cd63eb8acd47" />
+  <img width="480" src="https://github.com/user-attachments/assets/4f8ece0b-41ff-4ce1-996d-cd63eb8acd47" />
 </p>
 
 O resultado está mostrado abaixo. É bem simples!
