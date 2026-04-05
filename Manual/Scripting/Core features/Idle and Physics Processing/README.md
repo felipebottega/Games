@@ -17,11 +17,11 @@ O controle do processamento de física é análogo. Neste caso, você usará `se
 
 Mesmo que desative os dois processamentos, algumas coisas do jogo ainda continuam rodando: 
 
-- O loop principal da Godot Engine continua rodando: a engine ainda redesenha a tela a cada frame, atualiza a árvore de nós internamente e mantém o jogo “vivo”, mesmo sem chamar seus métodos de script
-- O motor de física continua ativo: corpos como `CharacterBody2D`, `RigidBody2D` etc. ainda sofrem gravidade, colisões e respostas físicas, porque isso é calculado pela engine, não pelo seu `_physics_process()`
-- Timers continuam funcionando: qualquer `Timer` na cena continua contando tempo e emitindo o sinal `timeout`, independentemente de você ter desativado processamento no script
-- Animações continuam rodando: sistemas como `AnimationPlayer`, `Tween` e partículas (`GPUParticles2D`) continuam atualizando automaticamente, pois têm seus próprios ciclos internos
-- Sistema de input continua funcionando: funções como `_input(event)` e `_unhandled_input(event)` ainda são chamadas quando o usuário pressiona teclas, clica ou interage
-- Áudio continua tocando: sons e músicas seguem sendo reproduzidos normalmente, pois o sistema de áudio é independente do `_process()`
-- Apenas `_process(delta)` e `_physics_process(delta)` param: a engine simplesmente deixa de chamar esses métodos no seu script, então qualquer lógica que você colocou neles deixa de rodar
-- Ou seja, só o seu código automático por frame para: tudo que depende desses métodos (movimento manual, cronômetros próprios, lógica de jogo) congela, mas o restante da engine continua funcionando normalmente
+- O loop principal da Godot continua rodando. A engine ainda renderiza a tela a cada frame, atualiza a árvore da cena internamente e mantém o jogo "vivo", mesmo sem chamar seus métodos de script.
+- A engine de física continua ativa. Corpos como `CharacterBody2D`, `RigidBody2D` etc. ainda sofrem gravidade, colisões e respostas físicas, porque isso é calculado pela engine, não pelo seu `_physics_process()`.
+- Timers continuam funcionando: qualquer `Timer` na cena continua contando tempo e emitindo o sinal, independentemente de você ter desativado processamento no script.
+- Animações continuam rodando. Sistemas como `AnimationPlayer`, `Tween` e `GPUParticles2D` continuam atualizando automaticamente, pois têm seus próprios ciclos internos.
+- Sistema de input continua funcionando. Funções como `_input(event)` e `_unhandled_input(event)` ainda são chamadas quando o usuário pressiona teclas, clica ou interage.
+- Áudio continua tocando. Sons e músicas seguem sendo reproduzidos normalmente, pois o sistema de áudio é independente do `_process()`.
+
+> PS: Apenas `_process()` e `_physics_process()` param de funcionar. A engine simplesmente deixa de chamar esses métodos no seu script, então qualquer lógica que você colocou neles deixa de rodar.
