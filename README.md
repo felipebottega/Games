@@ -1196,7 +1196,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#editorscript
 ">  EditorScript
  </a><br>
-<li> <b>Manual\Rendering\Overview of renderers</b> </li>
+<br><li> <b>Manual\Rendering\Overview of renderers</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#escolhendo-o-renderizador
 ">  Escolhendo o renderizador
  </a><br>
@@ -1300,7 +1300,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Fixing%20jitter,%20stutter%20and%20input%20lag#input-lag
 ">  Input lag
  </a><br>
-<li> <b>Manual\Scripting\GDScript\GDScript reference</b> </li>
+<br><li> <b>Manual\Scripting\GDScript\GDScript reference</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#keywords
 ">  Keywords
  </a><br>
