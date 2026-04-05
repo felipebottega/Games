@@ -1643,8 +1643,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler#métricas
 ">  Métricas
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler#funcinalidade-measure-e-time
-">  Funcinalidade Measure e Time
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler#funcionalidade-measure-e-time
+">  Funcionalidade Measure e Time
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler#medição-manual-com-timer
 ">  Medição manual com timer
