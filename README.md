@@ -1319,12 +1319,6 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#comentários
 ">  Comentários
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#-faz-com-que-o-comentário-tenha-caráter-de-documentação,-e-vai-aparecer-como-tooltip-em-outros-lugares-por-exemplo,-ao-colocar-este-comentário-especial-sobre-uma-variável-de-uma-script-e-depois-utilizar-esta-variável-em-outro-lugar-(pode-ser-no-mesmo-script-ou-em-outro),-você-poderá-passar-o-mouse-por-cima-e-visualizar-a-descrição-dela
-"> O uso de `` faz com que o comentário tenha caráter de documentação, e vai aparecer como tooltip em outros lugares. Por exemplo, ao colocar este comentário especial sobre uma variável de uma script e depois utilizar esta variável em outro lugar (pode ser no mesmo script ou em outro), você poderá passar o mouse por cima e visualizar a descrição dela.
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#-logo-acima-ou-logo-abaixo-da-nomeação-da-classe-(`class_name`)-isso-vai-gerar-uma-dosctring-daquela-classe,-que-pode,-inclusive,-ser-acessada-pelo-help-do-editor-depois-que-definir-uma-documentação-(como-mostrado-abaixo),-veja-o-resultado-indo-em-*help-→-search-help*-e-digitando-o-nome-da-classe-o-exemplo-abaixo-o-básico-para-uma-boa-documentação
-"> Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `` logo acima ou logo abaixo da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe. O exemplo abaixo o básico para uma boa documentação.
- </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#regiões-de-código
 ">  Regiões de código
  </a><br>
@@ -1524,63 +1518,6 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#como-ler-a-api-da-godot
 ">  Como ler a API da Godot
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#description
-"> >  Description
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#tutorials
-"> >  Tutorials
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#properties
-"> >  Properties
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#methods
-"> >  Methods
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#signals
-"> >  Signals
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#enumerations
-"> >  Enumerations
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`nomedoenum`
-"> >  `NomeDoEnum`
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#constants
-"> >  Constants
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#property-descriptions
-"> >  Property Descriptions
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`propriedade_1:-int`
-"> >  `propriedade_1: int`
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`propriedade_2:-bool`
-"> >  `propriedade_2: bool`
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#method-descriptions
-"> >  Method Descriptions
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`metodo_1()-->-void`
-"> >  `metodo_1() -> void`
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`metodo_2(param:-int)-->-int`
-"> >  `metodo_2(param: int) -> int`
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#signal-descriptions
-"> >  Signal Descriptions
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`sinal_1()`
-"> >  `sinal_1()`
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#`sinal_2(valor:-int)`
-"> >  `sinal_2(valor: int)`
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#notes
-"> >  Notes
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#examples
-"> >  Examples
  </a><br>
 <li> <b>Manual\Scripting\Core features\Debug\Overview of debugging tools</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#debug-menu-options
