@@ -17,7 +17,7 @@ As principais métricas são o *Frame Time*, *Physics Frame Time*, *Process Time
 - **Process Time:** É o tempo que a Godot levou para atualizar a lógica que não seja de física, como o código que reside em `_process`.
 - **Physics Time:** É o tempo que a Godot levou para atualizar tarefas de física, como `_physics_process`.
 
-## Funcinalidade Measure e Time
+## Funcionalidade Measure e Time
 
 No painel do profiler, há mais duas funcionalidades para te auxiliar: *Measure* e *Time*.
 
