@@ -11,7 +11,7 @@ Na Godot, grupos funcionam como tags. Você pode adicionar um node a quantos gru
   <img width="700" src="https://github.com/user-attachments/assets/c6696d94-ab46-4abf-af1d-2231ccde8f5f" />
 </p>
 
-## Adicionando nodes a um grupo
+## Adicionando nodes a um grupo pelo editor
 
 Para criar um grupo novo, primeiro você deve escolher um node que fará parte dele (na Godot não existem grupos vazios). Feito isso, vá para *Inspector → Groups*, clique no sinal de "+" e dê um nome para o grupo. Ao lado do campo de nome, você deve escolher se habilita o grupo como "Global" ou não. Se for global, o nome deste grupo será reconhecido pelo projeto inteiro. Caso contrário, ele estará restrito à cena onde foi criado.
 
@@ -47,3 +47,7 @@ Se tiver outro node na cena, você pode incluí-lo em qualquer um dos grupos exi
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/c3842344-1f03-4694-a66b-87878e584b51" />
 </p>
+
+Quando um grupo é global, não é mais possível utilizar aquele nome para criar nenhum tipo de grupo. Por outro lado, se for um grupo de cena, você pode reutilizar o nome para criar outro grupo de mesmo nome em outra cena. Aqui é importante ter cuidado pois se você reutilizar o nome e criar um grupo global, o grupo de cena anterior que estava usando esse nome passará a ser global e será incluído automaticamente nesse que você acabou de criar. O recomendado é que não se repita nomes de grupos, mesmo que sejam todos grupos de cena. 
+
+## Adicionando nodes a um grupo por código
