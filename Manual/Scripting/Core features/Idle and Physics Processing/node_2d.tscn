@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://duq0st0peoqv6"]
+
+[ext_resource type="Script" uid="uid://kysjlws35b7j" path="res://node_2d.gd" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://2nxsm547wdhk" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://bsq1oq383tkug" path="res://physics_process.gd" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://ec42vr02ckl2" path="res://process.gd" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=249597684]
+script = ExtResource("1_0hol4")
+
+[node name="Process" type="Sprite2D" parent="." unique_id=2113377122]
+position = Vector2(0, 188)
+texture = ExtResource("1_wtcfe")
+script = ExtResource("2_epypp")
+
+[node name="PhysicsProcess" type="Sprite2D" parent="." unique_id=1368565863]
+position = Vector2(0, 350)
+texture = ExtResource("1_wtcfe")
+script = ExtResource("2_0e48y")
+
+[node name="Label" type="Label" parent="." unique_id=1280963394]
+offset_left = 23.0
+offset_top = 600.0
+offset_right = 63.0
+offset_bottom = 623.0
