@@ -1502,12 +1502,6 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#estrutura-do-código-
 ">  Estrutura do código 
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#documentation
-"> 04.  documentation
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#documentation:**-documentação-do-script/classe
-"> - ** documentation:** Documentação do script/classe.
- </a><br>
 <li> <b>Manual\Scripting\GDScript\GDScript warning system</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system#warning-ignore
 ">  Warning ignore
