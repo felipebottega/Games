@@ -114,7 +114,7 @@ Se o evento ainda não foi consumido por nenhuma das camadas anteriores, ele che
 
 ### Physycs Picking Event
 
-Se o evento de input ainda não foi consumido, a engine pode efetuar o *picking*, que é a detecção de colisão com cliques do mouse. Isso é útil quando você quer que um objeto físico responda ao input.  O input é passado para os nodes que implementaram o método nativo `_input_event(event)` e que ativaram a propriedade *Pickable*. Você pode ativar esta propriedade pelo *Inspector*.
+Se o evento de input ainda não foi consumido, a engine pode efetuar o *picking*, que é a detecção de colisão com cliques do mouse. Isso é útil quando você quer que um objeto físico responda ao input. O input é passado para os nodes de colisão que implementaram o método `_input_event(event)` (apenas o `CollisionObject2D` e `CollisionObject3D` e seus filhos possuem este método) e que ativaram a propriedade *Pickable*. Você pode ativar esta propriedade pelo *Inspector*.
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/ce052cff-187d-4445-bac8-5a6a9bff4b76" />
