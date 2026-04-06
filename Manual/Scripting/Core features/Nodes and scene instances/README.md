@@ -68,9 +68,9 @@ Após o passo 1, a variável `scene` é um recurso de cena compactado (`PackedSc
 
 ## Editable Children e Make Local
 
-Esse assunto já foi abordado [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#editable-child-e-make-local), bem no início dos tutoriais. Vale a pena comparar o texto anterior com o atual.
+Esse assunto já foi abordado [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#editable-child-e-make-local), bem no início dos tutoriais. Vale a pena comparar o texto anterior com este.
 
-Quando você instancia uma cena, por padrão ela fica meio "fechada", você vê o node raiz, mas não pode sair mexendo em tudo dentro dela. 
+Quando você instancia uma cena pelo editor, por padrão ela fica meio "fechada", você vê o node raiz, mas não pode sair mexendo em tudo dentro dela. 
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/0c29474d-800f-45ff-b028-829d50948e5b" />
@@ -82,7 +82,7 @@ Ao clicar com o botão direito do mouse na cena instanciada, algumas opções ap
   <img width="350" src="https://github.com/user-attachments/assets/b76a25b1-a56b-4fb3-b8f6-3192c1800790" />
 </p>
 
-Ao ativar a opção *Editable Children*, ocorrem algumas mudanças. Vovê passa a poder mexer dentro da cena instanciada, mas ainda é o mesmo template.
+Ao ativar a opção *Editable Children*, ocorrem algumas mudanças. Você passa a poder mexer dentro da cena instanciada, mas ainda é o mesmo template.
 
 - Você pode abrir a cena instanciada no editor.
 - Pode editar os nodes internos.
