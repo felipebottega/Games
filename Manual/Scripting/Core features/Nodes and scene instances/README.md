@@ -43,7 +43,7 @@ Após o passo 1, a variável `scene` é um recurso de cena compactado (`PackedSc
 
 > PS: Note que o nível mais alto é um node oculto chamado *root*. Ele é um `Viewport` global, tudo no jogo fica abaixo dele, incluindo outras cenas e autoload. Você pode acessá-lo diretamente com `get_node("/root")` ou `get_tree().root`. Evitaremos acessá-lo neste tutorial.
 
-⚠️ **Atenção:** É importante lembrar que o design/filosofia da Godot é que as cenas sejam templates independentes e reutilizáveis. A partir do momento que você começa a utilizar caminhos relativos que acessam elementos fora da cena, ela passa a ser menos flexível. 
+⚠️ **Atenção:** É importante lembrar que o design/filosofia da Godot é que as cenas sejam templates independentes e reutilizáveis. A partir do momento que você começa a utilizar caminhos relativos que acessam elementos fora da cena, ela passa a ser menos flexível/reutilizável. 
 
 ## Editable Children e Make Local
 
