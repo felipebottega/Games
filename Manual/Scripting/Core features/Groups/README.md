@@ -1,6 +1,6 @@
 # Groups
 
-Na Godot, grupos funcionam como tags. Você pode adicionar um node a quantos grupos quiser. Em seguida, no código, você pode usar a SceneTree para
+Na Godot, grupos funcionam como tags. Você pode adicionar um node a quantos grupos quiser. Em seguida, no código, você pode fazer coisas como:
 - Obter uma lista de nodes em um grupo.
 - Chamar um método em todos os nodes de um grupo.
 - Enviar uma notificação para todos os nodes de um grupo.
@@ -68,14 +68,14 @@ Abaixo temos uma aplicação deste método. Nenhum node pertencente ao grupo "Pi
 
 ## Métodos
 
-Existem métodos de grupos da classe `Node` e da SceneTree. O método `add_to_group`, por exemplo, é da classe `Node`. Estes métodos você usa no script do próprio node, são métodos que dizem respeito ao node.
+Existem métodos de grupos da classe `Node` e da `SceneTree`. O método `add_to_group`, por exemplo, é da classe `Node`. Estes métodos você usa no script do próprio node, são métodos que dizem respeito ao node.
 
 - **add_to_group(group_name):** Adiciona o node ao grupo `group_name`. Caso não exista, é criado na hora.
 - **remove_from_group(group_name):** Remove o node do grupo `group_name`. Não faz nada se o node não pertencer ao grupo.
 - **get_groups():** Retorna um array com os nomes dos grupos aos quais o node foi adicionado. Este método também pode retornar alguns nomes de grupos que começam com um underscore. Estes são usados ​​internamente pela engine. Para evitar conflitos, não use grupos com nomes começando com underscore.
 - **is_in_group(group_name):** Retorna *true* se este node tiver sido adicionado ao grupo `group_name`.
 
-Os métodos de grupo da SceneTree dizem respeito à árvore de cena. Se algum dos métodos retorna nodes ou depende de nodes de alguma maneira, estes nodes devem estar na árvore de cena que chamou o método.
+Os métodos de grupo da classe `SceneTree` dizem respeito à árvore da cena. Se algum dos métodos retorna nodes ou depende de nodes de alguma maneira, estes nodes devem estar na árvore da cena que chamou o método.
 
 - **get_tree().call_group(group_name, method_name, ...):** Chama o método `method_name` em cada node pertencente ao grupo `group_name`. Você pode passar argumentos para o método especificando-os ao final da chamada. Nodes que não podem chamar o método (seja porque o método não existe ou porque os argumentos não correspondem) são ignorados.
 - **get_tree().get_nodes_in_group(group_name):** Retorna um array contendo todos os nodes pertencentes ao grupo `group_name`, na ordem da hierarquia da cena.

@@ -28,7 +28,7 @@ Em vez de pintar por tiles, decidimos escolher alguns blocos e criar *Patterns* 
 
 ### Método 2 para lidar com tiles de tamanhos diferentes do TileSet
 
-Após isso, criamos um novo TileSet, para os objetos pequenos acima do chão (folhas e barris). É necessário que seja outro TileSet um nível abaixo da árvore de cena (SceneTree), pois queremos pintar estes tiles sem apagar os do nível acima. Poderíamos tentar repetir a ideia de cima com um tamanho bem pequeno para os tiles, mas isto acarretaria em problemas de performance. Tiles muito pequenos acarretam em um tilemap muito granular, o que é custoso computacionalmente. Vamos introduzir outro método aqui.
+Após isso, criamos um novo TileSet, para os objetos pequenos acima do chão (folhas e barris). É necessário que seja outro TileSet um nível abaixo da árvore da cena, pois queremos pintar estes tiles sem apagar os do nível acima. Poderíamos tentar repetir a ideia de cima com um tamanho bem pequeno para os tiles, mas isto acarretaria em problemas de performance. Tiles muito pequenos acarretam em um tilemap muito granular, o que é custoso computacionalmente. Vamos introduzir outro método aqui.
 
 Escolha um tamanho de TileSet que esteja próximo da maioria dos sprites que você deseja colocar. No exemplo, escolhemos $5 \times 8$. Agora adiciona um dos sprites ao TileSet, ele deve entrar cinza pois não se adequou ao formato padrão. Vá em *Setup → Texture Region Size*, coloque o tamanho da imagem e clique na imagem no atlas. Este parâmetro serve justamente para dar conta de tiles com tamanhos diferentes do tamanho padrão. Faça isso para cada uma das figuras. 
 

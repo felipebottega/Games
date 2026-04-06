@@ -23,7 +23,7 @@ Na cena principal, também colocamos barreiras laterais invisíveis para que o j
 
 ## PointLight2D
 
-Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação. Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco na árvore de cena (SceneTree), pois assim pé do boneco não é coberto pelos blocos quando ele está em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore de cena (SceneTree), coloque-a depois dos blocos e antes do Trevor.
+Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação. Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco na árvore da cena, pois assim pé do boneco não é coberto pelos blocos quando ele está em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore da cena, coloque-a depois dos blocos e antes do Trevor.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c905f6fa-3b7b-4ef5-a608-5dc69478f6f1" width="400">
