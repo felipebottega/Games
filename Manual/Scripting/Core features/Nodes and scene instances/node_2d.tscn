@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cx5a488lb680i"]
+
+[ext_resource type="Script" uid="uid://di5lto1ug40ax" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://8dp20a4yyox5" path="res://blue.tscn" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://bveh2c0lx0r68" path="res://blue.gd" id="3_epypp"]
+[ext_resource type="Script" uid="uid://rajdopupgnw" path="res://sprite_2d.gd" id="4_0hol4"]
+
+[node name="Node2D" type="Node2D" unique_id=712006129]
+script = ExtResource("1_0e48y")
+
+[node name="Blue" parent="." unique_id=2093133460 instance=ExtResource("1_wtcfe")]
+script = ExtResource("3_epypp")
+
+[node name="Sprite2D" parent="Blue" index="0" unique_id=1270483911]
+script = ExtResource("4_0hol4")
+
+[node name="Label" type="Label" parent="Blue" unique_id=484158786]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Red" parent="." unique_id=1236497734 instance=ExtResource("1_wtcfe")]
+script = ExtResource("3_epypp")
+
+[node name="Label" type="Label" parent="Red" unique_id=1066323624]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[editable path="Blue"]
+[editable path="Red"]

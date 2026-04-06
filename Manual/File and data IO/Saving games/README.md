@@ -265,7 +265,7 @@ Como mencionamos anteriormente, há dois grupos: "Save" e "SaveAutoload". O prim
   <img width="700" src="https://github.com/user-attachments/assets/a0252deb-6bd8-4c08-8c33-f17f906f2094" />
 </p>
 
-⚠️ Atenção: Não coloque a função de load game em uma cena que será atualizada com o load. Se fizer isso, vai entrar em um loop infinito. O mais adequado é colocar a função na cena *SaveLoad*, que foi feita especificamente para gerenciar estas coisas e não depende delas.
+⚠️ **Atenção:** Não coloque a função de load game em uma cena que será atualizada com o load. Se fizer isso, vai entrar em um loop infinito. O mais adequado é colocar a função na cena *SaveLoad*, que foi feita especificamente para gerenciar estas coisas e não depende delas.
 
 Para esse jogo de exemplo, o conteúdo do arquivo de savbe é bem curto.
 

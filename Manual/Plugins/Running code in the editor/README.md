@@ -59,4 +59,4 @@ Para executar o script, basta clicar nele pelo *FileSystem* e selecionar *Run*. 
   <img width="350" src="https://github.com/user-attachments/assets/531ca998-2d8b-4278-b65e-224295d429a2" />
 </p>
 
-⚠️ Atenção: As mudanças efetuadas pelo `@tool` não podem ser desfeitas. No exemplo acima, o script aplica uma rotação no sprite. Quando você fecha o editor, ele vai memorizar a rotação que o sprite tinha antes de fechar, ele não volta para a origem. É necessário ter cuidado com isso.
+⚠️ **Atenção:** As mudanças efetuadas pelo `@tool` não podem ser desfeitas. No exemplo acima, o script aplica uma rotação no sprite. Quando você fecha o editor, ele vai memorizar a rotação que o sprite tinha antes de fechar, ele não volta para a origem. É necessário ter cuidado com isso.

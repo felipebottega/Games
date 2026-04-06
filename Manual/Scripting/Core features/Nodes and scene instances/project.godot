@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Nodes and scene instances"
+run/main_scene="uid://cx5a488lb680i"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

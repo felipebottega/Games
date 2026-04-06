@@ -66,7 +66,7 @@ Note que $(529, 355) = (485+44, 243+12)$, que é justamente o que esperávamos, 
 
 De maneira informal, podemos dizer que `get_global_transform()` = `transform_pai` * `transform`. Note que o próprio `transform` já está embutido no `get_global_transform()`. Tanto esta matriz quando a `get_global_transform().affine_inverse()` apenas servem para converter a posição do objeto em diferentes coordenadas.  Os vetores $e_1$ e $e_2$ no sistema de coordenadas global são exatamente os que já estão em `get_global_transform()`. 
 
-⚠️ Atenção: Você não deve aplicar a transformação `get_global_transform()` $\cdot$ `transform` sobre o próprio `Node2D`. A matriz `transform` é uma "ponte" entre o node pai e seus filhos, ela serve apenas para converter as coordenadas dos filhos. Se você quiser mudar as coordenadas de `Node2D` para global, há duas alternativas:
+⚠️ **Atenção:** Você não deve aplicar a transformação `get_global_transform()` $\cdot$ `transform` sobre o próprio `Node2D`. A matriz `transform` é uma "ponte" entre o node pai e seus filhos, ela serve apenas para converter as coordenadas dos filhos. Se você quiser mudar as coordenadas de `Node2D` para global, há duas alternativas:
 
   1. Criar uma nova cena onde `Node2D` será um filho e aplicar a transformação a partir do pai de `Node2D`.
   2. Apenas usar a matriz `get_global_transform()` a partir de `Node2D`, pois ela é constituída justamente das coordenadas globais.

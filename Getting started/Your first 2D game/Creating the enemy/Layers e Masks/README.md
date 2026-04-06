@@ -8,7 +8,7 @@ Vamos partir do nosso próprio projeto de [criação de player](https://github.c
     <img src="https://github.com/user-attachments/assets/15da93f8-abc4-49b6-ab77-a9ea3dc78579" width="600">
 </p>
 
-## Editable Child e Make Local
+## Editable Children e Make Local
 
 Dois arquivos com duas imagens de medusas com cores diferentes foram criados, mas isso não significa que é necessário criar uma cena para cada medusa. Você pode usar a opção *Editable Child* para que uma instância da cena seja editável, mantendo a original intacta enquanto isso. Fizemos isso para usar um sprite para cada medusa.
 

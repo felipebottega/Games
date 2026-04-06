@@ -5,7 +5,7 @@ Na Godot, grupos funcionam como tags. Você pode adicionar um node a quantos gru
 - Chamar um método em todos os nodes de um grupo.
 - Enviar uma notificação para todos os nodes de um grupo.
 
-⚠️ Atenção: Esta série de tutoriais começou na Godot 4.4 e agora já está na 4.6. O painel à direta foi ligeiramente alterado. Anteriormente, para acessar os grupos, deveríamos ir na aba *Node* e depois *Groups*. Agora a aba *Groups* já está disponível diretamente.
+⚠️ **Atenção:** Esta série de tutoriais começou na Godot 4.4 e agora já está na 4.6. O painel à direta foi ligeiramente alterado. Anteriormente, para acessar os grupos, deveríamos ir na aba *Node* e depois *Groups*. Agora a aba *Groups* já está disponível diretamente.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/c6696d94-ab46-4abf-af1d-2231ccde8f5f" />

@@ -98,7 +98,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a><br>
 <li> <b>Getting started\Your first 2D game\Creating the enemy\Layers e Masks</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#editable-child-e-make-local
-">  Editable Child e Make Local
+">  Editable Children e Make Local
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#definição-de-layer-e-mask
 ">  Definição de layer e mask

@@ -54,7 +54,7 @@ O script abaixo mostra um exemplo simples de uso. A função `_ready` chama a th
   <img width="380" src="https://github.com/user-attachments/assets/4fc2da54-13b5-4160-9035-2250517d6867" />
 </p>
 
-⚠️ Atenção: Neste exemplo em particular a chamada `thread.wait_to_finish()` foi feito dentro do `_ready`. Nunca faça isso em produção! Esta chamada trava tudo até as threads finalizarem as suas execuções. O único motivo de termos colocado este chamada na `_ready` é porque o print não aparece quando a `_exit_tree` é chamada.
+⚠️ **Atenção:** Neste exemplo em particular a chamada `thread.wait_to_finish()` foi feito dentro do `_ready`. Nunca faça isso em produção! Esta chamada trava tudo até as threads finalizarem as suas execuções. O único motivo de termos colocado este chamada na `_ready` é porque o print não aparece quando a `_exit_tree` é chamada.
 
 ## Semáforos
 

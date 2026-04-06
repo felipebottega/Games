@@ -127,7 +127,7 @@ Começamos colocando a animação de *walk* entre o *Start* e o *End* e conectam
   <img width="850" src="https://github.com/user-attachments/assets/9faf3575-92e2-448f-903c-0a20e4252b33" />
 </p>
 
-⚠️ Atenção: Assim como foi com a track do tipo *call method*, a animação com *State Machine* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
+⚠️ **Atenção:** Assim como foi com a track do tipo *call method*, a animação com *State Machine* só tem efeito quando você executa a cena, ela não roda na prévia do editor.
 
 Note que com esta configuração nenhuma animação é tocada quando você executa a cena. Porém, se você deletar a transição entre a animação e o node *End*, a animação toca. Por que isto acontece? É simples, não existe nenhuma condicional imposta sobre as transições, então o fluxo segue de um node para o outro sem interrupções. Ou seja, assim que ele ia tocar a animação ele já vai para o próximo node e a animação é interrompida. Sem a última transição, o ponto final do fluxo fica na animação *walk*, por isso funciona. Se você trocar o modo de trasição para *At End*, como mostrado abaixo, aí sim a animação toca normalmente. 
 
@@ -141,7 +141,7 @@ O exemplo acima mostra que o tipo de transição importa para o fluxo do *State 
 - **Sync:** Também muda para o próximo estágio imediatamente, mas continua a animação nova a partir da posição exata onde a anterior estava, mantendo a continuidade temporal.
 - **At End:** Espera a animação atual encerrar antes de ir para a seguinte.
 
-⚠️ Atenção: Se a animação estiver configurada para ficar em loop, a transição *At End* vai fazer com que aquele estágio toque para sempre, sem ir para o seguinte.
+⚠️ **Atenção:** Se a animação estiver configurada para ficar em loop, a transição *At End* vai fazer com que aquele estágio toque para sempre, sem ir para o seguinte.
 
 No painel de edição, no topo direito, você pode notar que há duas opções de *Play Mode*. Você vai querer usar isso quando chamar algum node para tocar via código. A descrição delas está abaixo.
 
@@ -170,7 +170,7 @@ Agora vamos ver as propriedades das transições.
 - **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
 - **Switch Mode:** É o tipo de transição, que é escolhido ao se criar a conexão. As opções são *Immediate, Sync* e *At End*, como já vimos acima.
 
-⚠️ Atenção: Conforme você vai criando mais `AnimatedTree` na cena, sempre volte para o `AnimationPlayer` e deixe na posição RESET. É comum as animações do `AnimatedTree` ficarem tocando na tela, e isso pode levar a conflitos de animação que podem deixar toda a engine bugada.
+⚠️ **Atenção:** Conforme você vai criando mais `AnimatedTree` na cena, sempre volte para o `AnimationPlayer` e deixe na posição RESET. É comum as animações do `AnimatedTree` ficarem tocando na tela, e isso pode levar a conflitos de animação que podem deixar toda a engine bugada.
 
 ### Condicionamento do AnimationNodeStateMachine
 
