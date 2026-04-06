@@ -4,7 +4,7 @@ Neste tutorial, veremos como obter nodes, criar nodes, adicioná-los como filhos
 
 ## Obtendo nodes
 
-Você pode obter uma referência a um node chamando o método nativo `get_node()` (como já foi explicado [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing), um método "nativo" é um método da classe `Node`). Para que isso funcione, o node deve estar presente na árvore da cena. Portanto, este método deve ser chamado no `_ready()` ou depois. A única maneira de chamar antes seria usando a anotação `@onready` em alguma variável de instância. Como já explicamos, esta anotação faz com que a variável "espere" até chegar no `_ready` para ser definida de fato.
+Você pode obter uma referência a um node chamando o método nativo `get_node()` (como já foi explicado [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing), estamos chamando de "nativos" os métodos da classe `Node`). Para que isso funcione, o node deve estar presente na árvore da cena. Portanto, este método deve ser chamado no `_ready()` ou depois. A única maneira de chamar antes seria usando a anotação `@onready` em alguma variável de instância. Como já explicamos, esta anotação faz com que a variável "espere" até chegar no `_ready` para ser definida de fato.
 
 Suponha que a sua cena está como mostrado abaixo. Se tiver um script anexado ao node `Node2D` e for necessário acessar o node `Blue` neste script, deve-se usar o comando `get_node("Blue")`. Por default, o `get_node()` sempre busca os filhos do node que executou o script. Uma maneira alternativa de fazer essa chamada é com o comando `$Blue`. 
 
