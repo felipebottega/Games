@@ -34,6 +34,25 @@ Se você usar `get_node(".")`, estará se referindo ao mesmo node que chamou a f
 
 ⚠️ **Atenção:** É importante lembrar que o design/filosofia da Godot é que as cenas sejam templates independentes e reutilizáveis. A partir do momento que você começa a utilizar caminhos relativos que acessam elementos fora da cena, ela passa a ser menos flexível/reutilizável. 
 
+## Criando nodes
+
+Para criar um node a partir do código, deve-se utilizar o método `new()`. Primeiro escolhemos qual node queremos criar. O nome para referenciar ao node é o nome usual dele quando adicionamos nodes pelo editor. Por exemplo, ao escrever `Sprite2D` no código, estamos chamando a classe deste node (lembrando que todos os nodes na verdade são classes). Se quisermos uma instância desta classe na nossa cena, aí utilizamos o comando `Sprite2D.new()` e em seguida o `add_child()`. Por default, o novo node criado ficará no final da árvore. Todo esse processo é equivalente a adicionar um node da Godot na cena, mas em vez de ser pelo editor, é por código.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/63305c5f-56da-4c90-9bd3-4c100a6a2640" />
+</p>
+
+> PS: Falamos sobre a aba *Remote* no tutorial [Overview of debugging tools](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#remote-in-scene-dock). Ela serve para acompanhar a árvore da cena enquanto o jogo está em execução.
+
+Colocamos abaixo também os prints da classe e da instância, apenas para ficar clara a diferença.
+
+<p align="center">
+  <img width="320" src="https://github.com/user-attachments/assets/d97f7166-dfbc-470f-a33a-980900e21b93" />
+  <img width="350" src="https://github.com/user-attachments/assets/47899a0d-81ad-44da-b8ec-1f9168ce476e" />
+</p>
+
+Por fim, é bom lembrar que para remover o node da cena você pode usar `free()` ou `queue_free()`. Estes métodos foram discutido [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#cpu-optimization) e [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#gerenciamento-de-mem%C3%B3ria).
+
 ## Instanciando cenas
 
 Considere as cenas como templates a partir dos quais você pode criar várias cópias independentes no jogo. Cada cópia é chamada de uma "instância" da cena. Esse processo ocorre em dois passos:
