@@ -64,7 +64,7 @@ Considere as cenas como templates a partir dos quais você pode criar várias c�
 
 O passo 1 é feito com o comando `var scene = load("res://my_scene.tscn")` ou `var scene = preload("res://my_scene.tscn")`. A `load` carrega a cena dinamicamente durante a execução do código, enquanto que a `preload` carrega a cena uma única vez durante a compilação do código. Cada um tem suas vantagens e desvantagens. Falamos em detalhe sobre estas chamadas no tutorial [Background loading](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading).
 
-Após o passo 1, a variável `scene` é um recurso de cena compactado (`PackedScene`), não um node. Para criar o node propriamente dito, você precisa do método `PackedScene.instantiate()`. Ele retorna uma árvore de nodes que você pode usar como filho do node que fez a chamada pelo script. O comando `var instance = scene.instantiate()` cria esta árvore de nodes, e o comando `add_child(instance)` adiciona está árvore como filho do node que fez a chamada. 
+Após o passo 1, a variável `scene` é um recurso de cena compactado (`PackedScene`), não um node. Para criar o node propriamente dito, você precisa do método `PackedScene.instantiate()`. Ele retorna uma árvore de nodes que você pode usar como filho do node que fez a chamada pelo script. O comando `var instance = scene.instantiate()` cria esta árvore de nodes, e o comando `add_child(instance)` adiciona esta árvore como filho do node que fez a chamada. 
 
 ## Editable Children e Make Local
 
