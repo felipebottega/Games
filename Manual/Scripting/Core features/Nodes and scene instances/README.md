@@ -51,7 +51,7 @@ Colocamos abaixo também os prints da classe e da instância, apenas para ficar 
   <img width="350" src="https://github.com/user-attachments/assets/47899a0d-81ad-44da-b8ec-1f9168ce476e" />
 </p>
 
-Por fim, é bom lembrar que para remover o node da cena você pode usar `free()` ou `queue_free()`. Estes métodos foram discutido [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#cpu-optimization) e [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#gerenciamento-de-mem%C3%B3ria).
+Por fim, é bom lembrar que você pode usar `sprite2d.free()` ou `sprite2d.queue_free()` para remover o node da cena. Estes métodos foram discutido [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#cpu-optimization) e [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#gerenciamento-de-mem%C3%B3ria).
 
 ## Instanciando cenas
 
