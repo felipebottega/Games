@@ -51,3 +51,31 @@ Se tiver outro node na cena, você pode incluí-lo em qualquer um dos grupos exi
 Quando um grupo é global, não é mais possível utilizar aquele nome para criar nenhum tipo de grupo. Por outro lado, se for um grupo de cena, você pode reutilizar o nome para criar outro grupo de mesmo nome em outra cena. Aqui é importante ter cuidado pois se você reutilizar o nome e criar um grupo global, o grupo de cena anterior que estava usando esse nome passará a ser global e será incluído automaticamente nesse que você acabou de criar. O recomendado é que não se repita nomes de grupos, mesmo que sejam todos grupos de cena. 
 
 ## Adicionando nodes a um grupo por código
+
+Criamos uma nova cena, com o sprite rosa desta vez. Em vez de adicioná-lo a um grupo pelo editor, isso foi feito por código, como mostrado abaixo. Isso significa que, assim que o node associado ao script entra na cena, ele é adicionado ao grupo "PinkGroup".
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/6b120c3f-0f71-4583-a4ad-d233e3606492" />
+</p>
+
+A função `add_to_group` não cria grupo global nem grupo de cena no sentido do editor. Ele simplesmente adiciona o nde a um grupo com aquele nome. Se o grupo não existir ainda, ele é criado automaticamente em runtime. Se já existir um grupo global com esse nome, ele usa o mesmo nome normalmente, não há conflito (grupos não têm "namespace").
+
+## Métodos
+
+Existem métodos de grupos da classe `Node` e da SceneTree. O método `add_to_group`, por exemplo, é da classe `Node`. Estes métodos você usa no script do próprio node, são métodos que dizem respeito ao node.
+
+- **`add_to_group(group_name)`:** Adiciona o node ao grupo `group_name`. Caso não exista, é criado na hora.
+- **remove_from_group(group_name):** Remove o node do grupo `group_name`. Não faz nada se o node não pertencer ao grupo.
+- **get_groups():** Retorna um array com os nomes dos grupos aos quais o node foi adicionado. Este método também pode retornar alguns nomes de grupos que começam com um underscore. Estes são usados ​​internamente pela engine. Para evitar conflitos, não use grupos com nomes começando com underscore.
+- **is_in_group(group_name):** Retorna *true* se este node tiver sido adicionado ao grupo `group_name`.
+
+Os métodos de grupo da SceneTree dizem respeito à árvore de cena. Se algum dos métodos retorna nodes ou depende de nodes de alguma maneira, estes nodes devem estar na árvore de cena que chamou o método.
+
+- **get_tree().call_group(group_name, method_name, ...):** Chama o método `method_name` em cada node pertencente ao grupo `group_name`. Você pode passar argumentos para o método especificando-os ao final da chamada. Nodes que não podem chamar o método (seja porque o método não existe ou porque os argumentos não correspondem) são ignorados.
+- **get_tree().get_nodes_in_group(group_name):** Retorna um array contendo todos os nodes pertencentes ao grupo `group_name`, na ordem da hierarquia da cena.
+- **get_tree().get_node_count_in_group(group_name):** Retorna o número de nodes pertencentes ao grupo `group_name`. É equivalente ao comando `get_tree().get_nodes_in_group(group_name).size()`, mas esse último é menos eficiente pois cria uma array e depois faz a contagem.
+- **get_tree().has_group(group_name):** Retorna *true* se existe pelo menos um node pertencente ao grupo `group_name` na árvore.
+- **get_tree().notify_group(group_name, notification):** Envia uma notificação para todos os nodes que estão no grupo `group_name`. A notificação `notification` deve ser um inteiro.
+- **get_tree().set_group(group_name, property, value):** Altera o valor da propriedade `property` para `value` em todos os nodes pertencentes ao grupo `group_name`. Os nodes que não possuem a propriedade são ignorados.
+
+## Aba de grupos globais no Project Settings
