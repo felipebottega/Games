@@ -12,22 +12,24 @@ Suponha que a sua cena está como mostrado abaixo. Se tiver um script anexado ao
   <img width="200" src="https://github.com/user-attachments/assets/d72b1b85-1fef-4870-bbea-8fe787a4f378" />
 </p>
 
-Agora suponha que a cena está como mostrado abaixo. Para acessar o node `Sprite2D` a partir do `Node2D`, você pode usar o comando `get_node("Blue/Sprite2D")` ou `$Blue/Sprite2D`.
+Agora suponha que a cena está como mostrado abaixo. Para acessar o node `Sprite2D` a partir do `Node2D`, você pode usar o comando `get_node("Blue/Sprite2D")` ou `$Blue/Sprite2D`. Isto é, você pode utilizar caminhos relativos na árvore para acessar os nodes.
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/9032a982-d04f-44fa-a675-d9a370c8574a" />
 </p>
 
-Acabamos de ver como obter nodes para baixo na hierarquia de nodes. Também é possível obter nodes na hierarquia acima. Para explica como funciona, considere a árvore da cena abaixo. 
+Acabamos de ver como obter nodes para baixo na hierarquia de nodes. Também é possível obter nodes na hierarquia acima. Para explicar como funciona, considere a árvore da cena abaixo. 
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/c8f958d8-c243-4cb7-a542-9ac9bfd29127" />
 </p>
 
-Se você usar `get_node(".")`, estará se referindo ao mesmo node que chamou a função. Isso é equivalente a `$"."`. Note que, no caso de caminhos relativos que usam pontos, a sintaxe com `$` precisa recorrer ao uso de aspas. Para acessar o node pai, é possível usar `get_node("..")` ou `$".."` ou o método `get_parent()`. Para obter o pai do pai, é necessário usar o caminho relativo `../..`, e assim sucessivamente. Colocamos abaixo um script associado ao node `Script2D`, filho do node `Blue`. Os comandos e seus repectivos outputs devem deixar evidente como funciona essa dinâmica. A partir desse conhecimento, você pode fazer coisas mais elaboradas, como acessar o `Sprite2D`, filho do node `Red`, a partir do comando `get_node("../../Red/Sprite2D")` ou `$"../../Red/Sprite2D"`. 
+Se você usar `get_node(".")`, estará se referindo ao mesmo node que chamou o método. Isso é equivalente a `$"."`. Note que, no caso de caminhos relativos que usam pontos, a sintaxe com `$` precisa recorrer ao uso de aspas. Para acessar o node pai, é possível usar `get_node("..")` ou `$".."` ou ainda o método nativo `get_parent()`. Para obter o pai do pai, é necessário usar o caminho relativo `../..`, e assim sucessivamente. 
+
+Colocamos abaixo um script associado ao node `Script2D`, filho do node `Blue`. Os comandos e seus repectivos outputs devem deixar evidente como funciona essa dinâmica. A partir desse conhecimento, você pode fazer coisas mais elaboradas, como acessar o `Sprite2D`, filho do node `Red`, a partir do comando `get_node("../../Red/Sprite2D")` ou `$"../../Red/Sprite2D"`. 
 
 <p align="center">
-  <img width="950" src="https://github.com/user-attachments/assets/dd00549b-3e1d-478f-b8f5-3be834819392" />
+  <img width="1000" src="https://github.com/user-attachments/assets/dd00549b-3e1d-478f-b8f5-3be834819392" />
 </p> 
 
 > PS: Note que o nível mais alto é um node oculto chamado *root*. Ele é um `Viewport` global, tudo no jogo fica abaixo dele, incluindo outras cenas e autoload. Você pode acessá-lo diretamente com `get_node("/root")` ou `get_tree().root`. Evitaremos acessá-lo neste tutorial.
