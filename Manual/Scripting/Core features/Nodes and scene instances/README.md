@@ -4,6 +4,32 @@ Neste tutorial, veremos como obter nodes, criar nodes, adicioná-los como filhos
 
 ## Obtendo nodes
 
+Você pode obter uma referência a um node chamando o método nativo `get_node()` (como já foi explicado [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing), um método "nativo" é um método da classe `Node`). Para que isso funcione, o node deve estar presente na árvore da cena. Portanto, este método deve ser chamado no `_ready()` ou depois. A única maneira de chamar antes seria usando a anotação `@onready` em alguma variável de instância. Como já explicamos, esta anotação faz com que a variável "espere" até chegar no `_ready` para ser definida de fato.
+
+Suponha que a sua cena está como mostrado abaixo. Se tiver um script anexado ao node `Node2D` e for necessário acessar o node `Blue` neste script, deve-se usar o comando `get_node("Blue")`. Por default, o `get_node()` sempre busca os filhos do node que executou o script. Uma maneira alternativa de fazer essa chamada é com o comando `$Blue`. 
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/d72b1b85-1fef-4870-bbea-8fe787a4f378" />
+</p>
+
+Agora suponha que a cena está como mostrado abaixo. Para acessar o node `Sprite2D` a partir do `Node2D`, você pode usar o comando `get_node("Blue/Sprite2D")` ou `$Blue/Sprite2D`.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/9032a982-d04f-44fa-a675-d9a370c8574a" />
+</p>
+
+Até agora vimos como obter nodes filhos, filhos dos filhos, etc. Também é possível obter node na hierarquia acima. Para explica como funciona, considere a árvore da cena abaixo. 
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/c8f958d8-c243-4cb7-a542-9ac9bfd29127" />
+</p>
+
+Se você usar `get_node(".")`, estará se referindo ao mesmo node que chamou a função. Isso é equivalente a `$"."`. Note que, no caso de caminhos relativos que usam pontos, a sintaxe com `$` precisa recorrer ao uso de aspas. Para acessar o node pai, é possível usar `get_node("..")` ou `$".."` ou o método `get_parent()`. Para ir além, é necessário usar o caminho relativo `../..`, e assim sucessivamente. Colocamos um script abaixo associado do `Script2D`, filho do node `Blue`. Os comandos e seus repectivos outputs devem deixar evidente como funciona essa dinâmica.
+
+<p align="center">
+  <img width="950" src="https://github.com/user-attachments/assets/dd00549b-3e1d-478f-b8f5-3be834819392" />
+</p>
+
 ## Instanciando cenas
 
 Considere as cenas como templates a partir dos quais você pode criar várias cópias independentes no jogo. Cada cópia é chamada de uma "instância" da cena. Esse processo ocorre em dois passos:
