@@ -44,7 +44,7 @@ Para criar um node a partir do código, deve-se utilizar o método `new()`. Prim
   <img width="600" src="https://github.com/user-attachments/assets/63305c5f-56da-4c90-9bd3-4c100a6a2640" />
 </p>
 
-> PS: Um ponto de atenção aqui é o fato de estarmos chamando o `Sprite2D` de node e também as instâncias dele de node. Porém o primeiro é uma classe e o segundo é um objeto, uma instância da classe. Colocamos ambos no mesmo saco chamado "node" mas é bom ter em mente que não são o mesmo tipo de estrutura.
+> PS: Um ponto de atenção aqui é o fato de estarmos chamando o `Sprite2D` e suas instâncias de "node". Porém o primeiro é uma classe e o segundo é um objeto, uma instância da classe. Colocamos ambos no mesmo pacote chamado "node" mas é bom ter em mente que não são o mesmo tipo de estrutura.
 
 Colocamos abaixo também os prints da classe e da instância, apenas para ficar clara a diferença.
 
