@@ -39,7 +39,11 @@ Considere as cenas como templates a partir dos quais você pode criar várias c�
 
 O passo 1 é feito com o comando `var scene = load("res://my_scene.tscn")` ou `var scene = preload("res://my_scene.tscn")`. A `load` carrega a cena dinamicamente durante a execução do código, enquanto que a `preload` carrega a cena uma única vez durante a compilação do código. Cada um tem suas vantagens e desvantagens. Falamos em detalhe sobre estas chamadas no tutorial [Background loading](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading).
 
-Após o passo 1, a variável `scene` é um recurso de cena compactado (`PackedScene`), não um node. Para criar o node propriamente dito (na verdade, o node raiz da cena instanciada), você precisa do método `PackedScene.instantiate()`. Ele retorna uma árvore de nodes que você pode usar como filho do node que fez a chamada pelo script. O comando `var instance = scene.instantiate()` cria esta árvore de nodes, e o comando `add_child(instance)` adiciona está árvore como filho do node que fez a chamada.
+Após o passo 1, a variável `scene` é um recurso de cena compactado (`PackedScene`), não um node. Para criar o node propriamente dito (na verdade, o node raiz da cena instanciada), você precisa do método `PackedScene.instantiate()`. Ele retorna uma árvore de nodes que você pode usar como filho do node que fez a chamada pelo script. O comando `var instance = scene.instantiate()` cria esta árvore de nodes, e o comando `add_child(instance)` adiciona está árvore como filho do node que fez a chamada. A partir dessa noção, você pode fazer coisas mais elaboradas, como acessar o `Sprite2D` filho do node `Red` a partir do comando `get_node("../../Red/Sprite2D")` ou `$"../../Red/Sprite2D"`.  
+
+> PS: Note que o nível mais alto é um node oculto chamado *root*. Ele é um `Viewport` global, tudo no jogo fica abaixo dele, incluindo outras cenas e autoload. Você pode acessá-lo diretamente com `get_node("/root")` ou `get_tree().root`. Evitaremos acessá-lo neste tutorial.
+
+⚠️ **Atenção:** É importante lembrar que o design/filosofia da Godot é que as cenas sejam templates independentes e reutilizáveis. A partir do momento que você começa a utilizar caminhos relativos que acessam elementos fora da cena, ela passa a ser menos flexível. 
 
 ## Editable Children e Make Local
 
