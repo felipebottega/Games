@@ -22,23 +22,23 @@ Esse assunto já foi abordado [anteriormente](https://github.com/felipebottega/G
 Quando você instancia uma cena, por padrão ela fica meio "fechada", você vê o node raiz, mas não pode sair mexendo em tudo dentro dela. 
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/0c29474d-800f-45ff-b028-829d50948e5b" />
+  <img width="600" src="https://github.com/user-attachments/assets/0c29474d-800f-45ff-b028-829d50948e5b" />
 </p>
 
 Ao clicar com o botão direito do mouse na cena instanciada, algumas opções aparecem. Estamos interessados na *Editable Children* e *Make Local*.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/b76a25b1-a56b-4fb3-b8f6-3192c1800790" />
+  <img width="350" src="https://github.com/user-attachments/assets/b76a25b1-a56b-4fb3-b8f6-3192c1800790" />
 </p>
 
-Ao ativar *Editable Children*, ocorrem algumas mudanças. Vovê passa a poder mexer dentro da cena instanciada, mas ainda é o mesmo molde.
+Ao ativar a opção *Editable Children*, ocorrem algumas mudanças. Vovê passa a poder mexer dentro da cena instanciada, mas ainda é o mesmo template.
 
 - Você pode abrir a cena instanciada no editor.
 - Pode editar os nodes internos.
 - A cena continua sendo uma instância.
 - Ainda depende do arquivo original (`.tscn`).
 
-O *Make Local* é mais radical. Ao usar *Make Local*, vocÊ está dizendo que não quer mais saber do molde, agora a cena é sua e você pode fazer o que quer quiser com ela.
+O opção *Make Local* é mais radical. Ao usar *Make Local*, você está dizendo que não quer mais saber do template, agora a cena é sua e você pode fazer o que quer quiser com ela.
 
 - A instância deixa de depender da cena original.
 - Vira uma estrutura totalmente local.
@@ -47,5 +47,5 @@ O *Make Local* é mais radical. Ao usar *Make Local*, vocÊ está dizendo que n�
 Abaixo segue uma tabela com as diferenças resumidas.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/216d3732-2b8c-4711-a366-e8177cbbcd6a" />
+  <img width="600" src="https://github.com/user-attachments/assets/216d3732-2b8c-4711-a366-e8177cbbcd6a" />
 </p>
