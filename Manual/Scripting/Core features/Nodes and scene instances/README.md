@@ -38,13 +38,13 @@ Colocamos abaixo um script associado ao node `Script2D`, filho do node `Blue`. O
 
 ## Criando nodes
 
-Para criar um node a partir do código, deve-se utilizar o método `new()`. Primeiro escolhemos qual node queremos criar. O nome para referenciar ao node é o nome usual dele quando adicionamos nodes pelo editor. Por exemplo, ao escrever `Sprite2D` no código, estamos chamando a classe deste node (lembrando que todos os nodes na verdade são classes). Se quisermos uma instância desta classe na nossa cena, aí utilizamos o comando `Sprite2D.new()` e em seguida o `add_child()`. Por default, o novo node criado ficará no final da árvore. Todo esse processo é equivalente a adicionar um node da Godot na cena, mas em vez de ser pelo editor, é por código.
+Para criar um node a partir do código, deve-se utilizar o método `new()`. Primeiro escolhemos qual node queremos criar. O nome para referenciar ao node é o nome usual dele quando adicionamos nodes pelo editor. Por exemplo, ao escrever `Sprite2D` no código, estamos chamando a classe deste node (todos os nodes base da engine são classes). Se quisermos uma instância desta classe na nossa cena, aí utilizamos o comando `Sprite2D.new()` e em seguida o `add_child()`. Por default, o novo node criado ficará no final da árvore. Todo esse processo é equivalente a adicionar um node da Godot na cena, mas em vez de ser pelo editor, é por código.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/63305c5f-56da-4c90-9bd3-4c100a6a2640" />
 </p>
 
-> PS: Falamos sobre a aba *Remote* no tutorial [Overview of debugging tools](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools#remote-in-scene-dock). Ela serve para acompanhar a árvore da cena enquanto o jogo está em execução.
+> PS: Um ponto de atenção aqui é o fato de estarmos chamando o `Sprite2D` de node e também as instâncias dele de node. Porém o primeiro é uma classe e o segundo é um objeto, uma instância da classe. Colocamos ambos no mesmo saco chamado "node" mas é bom ter em mente que não são o mesmo tipo de estrutura.
 
 Colocamos abaixo também os prints da classe e da instância, apenas para ficar clara a diferença.
 
