@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://xbxfhvlhgf3y"]
+
+[ext_resource type="Texture2D" uid="uid://be7ig72mrck25" path="res://icon.svg" id="1_gxcn4"]
+
+[node name="Red" type="Node2D" unique_id=4299330 groups=["RedGroup"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=901944495]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_gxcn4")

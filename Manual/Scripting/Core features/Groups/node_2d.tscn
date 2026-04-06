@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://wt7akxyfbofv"]
+
+[ext_resource type="PackedScene" uid="uid://8dp20a4yyox5" path="res://blue.tscn" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://c3ohcsxnbl5w" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="PackedScene" uid="uid://xbxfhvlhgf3y" path="res://red.tscn" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=1211068187]
+script = ExtResource("1_epypp")
+
+[node name="Blue" parent="." unique_id=2093133460 instance=ExtResource("1_0e48y")]
+position = Vector2(161, 302)
+
+[node name="Red" parent="." unique_id=4299330 instance=ExtResource("2_epypp")]
+position = Vector2(334, 303)
+
+[node name="Label" type="Label" parent="." unique_id=331121237 groups=["BlueGroup", "RedGroup"]]
+offset_right = 40.0
+offset_bottom = 23.0
