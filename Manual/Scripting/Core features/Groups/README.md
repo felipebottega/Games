@@ -60,11 +60,17 @@ Criamos uma nova cena, com o sprite rosa desta vez. Em vez de adicioná-lo a um 
 
 A função `add_to_group` não cria grupo global nem grupo de cena no sentido do editor. Ele simplesmente adiciona o nde a um grupo com aquele nome. Se o grupo não existir ainda, ele é criado automaticamente em runtime. Se já existir um grupo global com esse nome, ele usa o mesmo nome normalmente, não há conflito (grupos não têm "namespace").
 
+Abaixo temos uma aplicação deste método. Nenhum node pertencente ao grupo "PinkGroup" estava na cena inicialmente, mas foi adicionado por código. Depois disso o programa checou cada node da árvore para ver a quais grupos cada um pertencia.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/abbb17f6-7dda-449b-8697-78d0465d4094" />
+</p>
+
 ## Métodos
 
 Existem métodos de grupos da classe `Node` e da SceneTree. O método `add_to_group`, por exemplo, é da classe `Node`. Estes métodos você usa no script do próprio node, são métodos que dizem respeito ao node.
 
-- **`add_to_group(group_name)`:** Adiciona o node ao grupo `group_name`. Caso não exista, é criado na hora.
+- **add_to_group(group_name):** Adiciona o node ao grupo `group_name`. Caso não exista, é criado na hora.
 - **remove_from_group(group_name):** Remove o node do grupo `group_name`. Não faz nada se o node não pertencer ao grupo.
 - **get_groups():** Retorna um array com os nomes dos grupos aos quais o node foi adicionado. Este método também pode retornar alguns nomes de grupos que começam com um underscore. Estes são usados ​​internamente pela engine. Para evitar conflitos, não use grupos com nomes começando com underscore.
 - **is_in_group(group_name):** Retorna *true* se este node tiver sido adicionado ao grupo `group_name`.
@@ -79,3 +85,9 @@ Os métodos de grupo da SceneTree dizem respeito à árvore de cena. Se algum do
 - **get_tree().set_group(group_name, property, value):** Altera o valor da propriedade `property` para `value` em todos os nodes pertencentes ao grupo `group_name`. Os nodes que não possuem a propriedade são ignorados.
 
 ## Aba de grupos globais no Project Settings
+
+Em *Project → Project Settings → Globals → Groups* você consegue ver de uma vez todos os grupos globais do projeto. Ali, você poderá adicionar novos grupos globais ou alterar os nomes e descrições dos grupos existentes.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/4677d510-299d-4295-9b63-27bbef0f2cb6" />
+</p>
