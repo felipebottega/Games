@@ -84,3 +84,4 @@ Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e 
 1. Input vai para todo mundo.
 2. Performance escala junto. Você está literalmente rodando dois jogos ao mesmo tempo.
 3. Ordem importa. Quem está por último na árvore geralmente desenha por cima.
+4. Um minimapa não é outra cena. É outra forma de renderizar a mesma cena. A Godot já tem uma ferramenta feita exatamente pra isso, o `SubViewport`.
