@@ -11,3 +11,15 @@ O template *Node* vem com o básico: o `extends` a partir do node associado ao s
 <p align="center">
   <img width="720" src="https://github.com/user-attachments/assets/b79b9cc3-1964-4eba-b1bd-52270ea75350" />
 </p>
+
+Pode ocorrer de, num jogo seu, você querer inicializar todos os seus `CharacterBody2D` com outro script em vez de ficar inicializando com esse default e depois ter que ficar alterando. É possível criar seus próprios scripts template. Vamos ver aqui como fazer isso.
+
+## Localização dos scripts template
+
+Na pasta do seu projeto, crie uma pasta chamada *script_templates*. Se você for criar um script template para o `CharacterBody2D`, ele deverá ser um arquivo *.gd* dentro da pasta *CharacterBody2D*. Se for um script template, deverá estar dentro da pasta *Sprite2D*, e assim por diante. É possível ter múltiplos scripts templates dentro de cada pasta.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/37ef936f-94ab-486b-bc61-2fb5e39b4a82" />
+</p>
+
+> Dica: Crie o arquivo vazio *.gdignore* dentro da pasta. Isso vai garantir que a Godot não importe estes scripts, o que é desnecessário para este caso.
