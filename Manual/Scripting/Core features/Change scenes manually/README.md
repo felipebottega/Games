@@ -50,3 +50,37 @@ Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e 
     - Use como um meio-termo: mantém a cena, mas sem custo de processamento.
 
 > PS: Na Godot, a `SceneTree` mantém uma referência para qual é a "cena atual" através do atributo `current_scene`. Quando você usa métodos prontos como o `change_scene_to_file()`, a próprio engine atualiza isso automaticamente. Mas se você estiver trocando cenas manualmente, a engine não atualiza esse campo sozinho. Ao trocar de cena manualmente, pode ser uma boa ideia definir `get_tree().current_scene = scene`, para que scripts que dependem de `SceneTree.current_scene` não parem de funcionar.
+
+## Ideias de coisas para fazer com múltiplas cenas no *root*
+
+1. Sistemas persistentes sem Autoload. Em vez de usar Autoload, você pode manter uma cena viva. Basicamente, uma cena que nunca sai do *root*.
+    - UI global  
+    - sistema de áudio  
+    - debug overlay  
+    - câmera "geral"
+
+2. Transições reais entre cenas (sem trocar cena).
+    - fade entre cenas  
+    - crossfade (duas cenas visíveis ao mesmo tempo)  
+    - transições estilo cinematic  
+
+3. Backgrounds vivos / mundos paralelos.
+    - um "mundo de fundo" (paralaxe real, não fake)  
+    - uma simulação rodando enquanto outra cena está na frente  
+    - até dois jogos ao mesmo tempo
+
+4. Overlay de gameplay
+    - pause menu que NÃO pausa o mundo (ou pausa seletivamente)  
+    - inventário renderizado como outra cena  
+    - HUD completamente desacoplado  
+
+5. Debug e ferramentas internas
+    - spawnar uma cena de debug em runtime  
+    - visualizar dados sem mexer na cena principal  
+    - inspector custom em tempo real  
+
+⚠️ **Atenção:** Tem pegadinhas importantes. Vou listar abaixo.
+
+1. Input vai para todo mundo.
+2. Performance escala junto. Você está literalmente rodando dois jogos ao mesmo tempo.
+3. Ordem importa. Quem está por último na árvore geralmente desenha por cima.
