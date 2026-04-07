@@ -34,3 +34,5 @@ O seu script template não precisa de nada especial, apenas o `extends` deve est
 </p>
 
 Agora é só escolher o seu script template e começar a trabalhar a partir dele, não tem mistério!
+
+> PS: Não é obrigatório usar `meta-name:` e `meta-description:`. Caso você não use `meta-name:`, o nome do arquivo e usado. Caso não use `meta-description:`, também entra o nome do arquivo na descrição.
