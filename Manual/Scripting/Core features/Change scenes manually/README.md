@@ -26,13 +26,15 @@ Até este momento, implementamos as mudanças de cena com o comando `get_tree().
 Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e cada uma tem um custo diferente em memória, CPU e acesso aos dados.
 
 1. **Apagar a cena**
+     - Usa ` change_scene_to_file()` ou `change_scene_to_packed()`.
     - A cena é destruída de verdade (deixa de existir na memória).
-    - Libera RAM e para todo processamento (lógica, física, input).
+    - Libera RAM e encerra todo o processamento (lógica, física, input).
     - Você perde acesso aos dados da cena.
     - Se quiser voltar depois, vai precisar carregar tudo novamente.
     - Use quando não pretende voltar para a cena tão cedo.
 
-2. **Esconder a cena**
+2. **Ocultar a cena**
+    - Usa `hide()` e `show()` ou `visible`.
     - A cena continua existindo, só fica invisível para o jogador.
     - Os dados continuam acessíveis normalmente.
     - O processamento continua rodando.
@@ -40,8 +42,9 @@ Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e 
     - Use quando quer alternar rapidamente entre cenas sem custo de recarregamento.
 
 3. **Remover da árvore (SceneTree)**
+    - Usa ` remove_child()` e `add_child()`.
     - A cena continua na memória, mas fica desconectada do sistema principal.
-    - O processamento para, porque ela não está mais na árvore.
-    - É fácil reativar depois com add_child().
+    - O processamento encerra, porque ela não está mais na árvore.
+    - É fácil reativar depois com `add_child()`.
     - Alguns dados podem ficar desatualizados, pois não recebem updates (delta, input, etc.).
     - Use como um meio-termo: mantém a cena, mas sem custo de processamento.
