@@ -70,7 +70,7 @@ Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e 
     - até dois jogos ao mesmo tempo
 
 4. Overlay de gameplay
-    - pause menu que NÃO pausa o mundo (ou pausa seletivamente)  
+    - pause menu que não pausa o mundo (ou pausa seletivamente)  
     - inventário renderizado como outra cena  
     - HUD completamente desacoplado  
 
