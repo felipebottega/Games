@@ -4,7 +4,7 @@ Este pequeno jogo teve como objetivo a aplicação de *sinais* em Godot. Apenas 
 
 ## Trabalhando apenas com shapes de colisão
 
-Antes de falar de sinais, quero falar de algumas coisas novas que aprendi, começando pelos shapes de colisão. Eu não sabia disso, mas é possível não utilizar sprites e usar apenas os shapes de colisão. Isso significa focar na mecânica e deixar o visual de lado. Com sprites ou não, você pode ir em *Debug* e selecionar a opção *Visible Collision Shapes*, com isso as shapes de colisão sempre estarão visíveis, o que é bom para debugar.
+Antes de falar de sinais, quero falar de algumas coisas novas que aprendi, começando pelos shapes de colisão. Eu não sabia disso, mas é possível não utilizar sprites e usar apenas os shapes de colisão. Isso significa focar na mecânica e deixar o visual de lado. Com sprites ou não, você pode ir em *Debug* e selecionar a opção *Visible Collision Shapes*, com isso os shapes de colisão sempre estarão visíveis, o que é bom para debugar.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/fd0ea7fe-f297-42b6-b632-3595d956a002" width="200">
