@@ -14,7 +14,7 @@ Agora vamos para a parte que interessa. Selecione o node `AnimatedSprite2D` e ab
     <img src="https://github.com/user-attachments/assets/ca0a10c6-7b4b-4f6a-a4f6-85119f5294e2" width="1200">
 </p>
 
-Começaremos pelo boneco estático, o *idle*. Troque o nome onde está escrito "default" e arraste a imagem do idle, em *FileSystem*, para o painel de animação.
+Começaremos pelo personagem estático, o *idle*. Troque o nome onde está escrito "default" e arraste a imagem do idle, em *FileSystem*, para o painel de animação.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/37526b0f-9682-4346-a548-f4791120b9cb" width="600">
@@ -32,7 +32,7 @@ Estaremos também usando uma tela menor para ficar coerente com o tamanho dos sp
     <img src="https://github.com/user-attachments/assets/af4ae282-5465-4a7f-92da-7b94c0110569" width="500">
 </p>
 
-Adicionar os sprites de animação não é o suficiente, precisamos dizer ao programa quando aquelas animações devem ocorrer. Isso é feito com um script associado ao node raíz do personagem. Repare no primeiro if abaixo. Enquanto o jogador estiver pressionando o botão de se mover para a esquerda, uma velocidade negativa no eixo $x$ é acrescentada ao boneco, o que garante que ele vai se deslocar na tela. Após isso o script chama a animação de caminhar. Isso não faz com que ela comece ainda, apenas diz ao programa que o comando `$AnimatedSprite2D.play()` deverá mostrar essa animação. Antes da animação começar, um flip horizontal é aplicado a ela, já que o boneco originalmente está olhando para a direção oposta. Depois disso o play é chamado e aí sim começa a animação. Ela vai continuar até o jogador soltar o botão de caminhar para a esquerda. Não se esqueça de ativar o *Lock Rotation* na física do personagem.
+Adicionar os sprites de animação não é o suficiente, precisamos dizer ao programa quando aquelas animações devem ocorrer. Isso é feito com um script associado ao node raíz do personagem. Repare no primeiro if abaixo. Enquanto o jogador estiver pressionando o botão de se mover para a esquerda, uma velocidade negativa no eixo $x$ é acrescentada ao personagem, o que garante que ele vai se deslocar na tela. Após isso o script chama a animação de caminhar. Isso não faz com que ela comece ainda, apenas diz ao programa que o comando `$AnimatedSprite2D.play()` deverá mostrar essa animação. Antes da animação começar, um flip horizontal é aplicado a ela, já que o personagem originalmente está olhando para a direção oposta. Depois disso o play é chamado e aí sim começa a animação. Ela vai continuar até o jogador soltar o botão de caminhar para a esquerda. Não se esqueça de ativar o *Lock Rotation* na física do personagem.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/9c7c5270-51fd-4254-bd83-21d1fd4ba49f" width="500">
@@ -69,7 +69,7 @@ Adicione a variável global `is_hurt` como falso, no início do script. Depois e
     <img src="https://github.com/user-attachments/assets/f84ddc0c-c0ec-44cd-8cc3-7a3db0539fc6" width="250">
 </p>
 
-Por fim, desmarque a opção *Animation Looping* (ao lado do 5.0 FPS), senão o boneco vai ficar em loop na animação para sempre. Por default a animação fica em loop. Isso não causa problema na movimentação pois cada input dá um stop na animação, enquanto que na animação de dano nós desabilitamos os inputs e obrigamos o jogador a esperar a animação de dano. São vários detalhes para se atentar, mas é assim mesmo que é para desenvolver jogos.
+Por fim, desmarque a opção *Animation Looping* (ao lado do 5.0 FPS), senão o personagem vai ficar em loop na animação para sempre. Por default a animação fica em loop. Isso não causa problema na movimentação pois cada input dá um stop na animação, enquanto que na animação de dano nós desabilitamos os inputs e obrigamos o jogador a esperar a animação de dano. São vários detalhes para se atentar, mas é assim mesmo que é para desenvolver jogos.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/77eea654-0054-4a91-a68a-ccbb8557199b" width="350">

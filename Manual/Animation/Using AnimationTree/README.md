@@ -66,7 +66,7 @@ Depois de adicionar o node `AnimationTree` à sua árvore da cena, é necessári
 
 Em *Inspector → Tree Root*, selecione *AnimationNodeBlendSpace1D*. Esse é o tipo de AnimationTree mais fácil de entender e manipular. Começaremos com o `AnimationPlayer` dos sprites.
 
-O painel de edição estará como mostrado abaixo. A ideia é que você pode inserir "pontos de animação" no eixo $x$ (por isso o "1D" no nome ), e cada ponto representa uma animação do `AnimationPlayer` associado. Depois de ter os pontos inseridos no espaço, você pode definir em qual posição deste espaço você quer inserir o *blending point* (ponto de mistura). Conforme este ponto muda de posição, a animação também muda. Se o *Blend Mode* for *Contiunous*, a engine tenta mesclar as animações usando ponderações de acordo com a distância a cada ponto de animação no espaço. Se o *Blend Mode* for *Discrete*, a animação que toca é a do ponto mais próximo. O modo *Capture* é igual ao discreto, mas o primeiro frame da animação é a que o boneco já estava anteriormente.
+O painel de edição estará como mostrado abaixo. A ideia é que você pode inserir "pontos de animação" no eixo $x$ (por isso o "1D" no nome ), e cada ponto representa uma animação do `AnimationPlayer` associado. Depois de ter os pontos inseridos no espaço, você pode definir em qual posição deste espaço você quer inserir o *blending point* (ponto de mistura). Conforme este ponto muda de posição, a animação também muda. Se o *Blend Mode* for *Contiunous*, a engine tenta mesclar as animações usando ponderações de acordo com a distância a cada ponto de animação no espaço. Se o *Blend Mode* for *Discrete*, a animação que toca é a do ponto mais próximo. O modo *Capture* é igual ao discreto, mas o primeiro frame da animação é a que o personagem já estava anteriormente.
 
 > PS: Essa "ponderação" que o blend usa é uma interpolação do tipo $\alpha A + \beta B$, em que $A, B$ são as animações e $\alpha + \beta = 1$. Esse modo de interpretar vale para qualquer tipo de blend que aparecer mais para frente. 
 
@@ -109,7 +109,7 @@ A lógica desse modo é totalmente análogo ao anterior, mas agora podemos ter p
   <img width="800" src="https://github.com/user-attachments/assets/e831451b-0c10-49e4-8725-28b0b3eb2f5c" />
 </p>
 
-No caso do sprite, note que no espaço 1D o boneco tinha que passar pela animação *walk* entre e *idle* e a *run*, agora ele pode ir diretamente de *idle* para *run*.
+No caso do sprite, note que no espaço 1D o personagem tinha que passar pela animação *walk* entre e *idle* e a *run*, agora ele pode ir diretamente de *idle* para *run*.
 
 ### AnimationNodeStateMachine
 

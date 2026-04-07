@@ -14,7 +14,7 @@ Em particular, usaremos o método `pick_random` para selecionar um elemento alea
 
 ## Animações
 
-Vamos relembrar rapidamente como acrescentar animações para o seu boneco. Começamos criando a estrutura principal da cena da árvore dele.
+Vamos relembrar rapidamente como acrescentar animações para o seu personagem. Começamos criando a estrutura principal da cena da árvore dele.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/127c3452-87b0-4f71-a117-eee5dbca3853" width="200">
@@ -32,7 +32,7 @@ Crie três tipos de animação e arraste os respectivos sprites de *FileSystem* 
     <img src="https://github.com/user-attachments/assets/f221ad2b-5a7b-49e0-add1-d580b4e7a6db" width="700">
 </p>
 
-Aproveite para já colocar o shape de colisão no boneco.
+Aproveite para já colocar o shape de colisão no personagem.
 
 ## RigidBody2D vs CharacterBody2D vs Node2D
 
@@ -46,13 +46,13 @@ Vale ressaltar que essa é uma tabela de recomendações, não de regras absolut
 
 ## Animações com aleatoriedade
 
-O script do boneco está mostrado abaixo. Ele começa definindo um array de fatores de velocidade e escolhe aleatoriamente um deles. Depois, define um array com os nomes das animações ("fly", "swim", "walk"), escolhe um deles aleatoriamente e dá play na animação. Na função `_process`, o boneco se locomove um pouco para frente no eixo $x$ a cada frame. 
+O script do personagem está mostrado abaixo. Ele começa definindo um array de fatores de velocidade e escolhe aleatoriamente um deles. Depois, define um array com os nomes das animações ("fly", "swim", "walk"), escolhe um deles aleatoriamente e dá play na animação. Na função `_process`, o personagem se locomove um pouco para frente no eixo $x$ a cada frame. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/c1365882-1a4a-4b0f-94db-043c10f5ee13" width="500">
 </p>
 
-> PS: Se você trocar o `CharacterBody2D` por `RigidBody2D` (e tirar a gravidade no segundo caso), vai notar que o boneco fica um pouco parado no início. Esse comportamento inesperado se deve ao que falamos anteriormente sobre forçar posição em um `RigidBody2D`. É possível, mas pode levar a comportamentos inesperados.
+> PS: Se você trocar o `CharacterBody2D` por `RigidBody2D` (e tirar a gravidade no segundo caso), vai notar que o personagem fica um pouco parado no início. Esse comportamento inesperado se deve ao que falamos anteriormente sobre forçar posição em um `RigidBody2D`. É possível, mas pode levar a comportamentos inesperados.
 
 ## VisibleOnScreenNotifier2D
 

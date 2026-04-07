@@ -2,7 +2,7 @@
 
 No tutorial de Godot para [criar inimigos](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/04.creating_the_enemy.html), pela primeira vez aparecem os conceitos novos de *Layers* e *Masks*. Acho que vale a pena dedicar um tempo apenas para cobrir este tópico.
 
-Vamos partir do nosso próprio projeto de [criação de player](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201), onde o "jogo" basicamente é a medusa do Castlevania se movendo em loop e tendo a capacidade de ativar uma animação de hit quando toca o nosso boneco (Trevor). A diferença é que agora teremos duas medusas realizando movimentos verticais.
+Vamos partir do nosso próprio projeto de [criação de player](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201), onde o "jogo" basicamente é a medusa do Castlevania se movendo em loop e tendo a capacidade de ativar uma animação de hit quando toca o nosso personagem (Trevor). A diferença é que agora teremos duas medusas realizando movimentos verticais.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/15da93f8-abc4-49b6-ab77-a9ea3dc78579" width="600">
@@ -36,5 +36,5 @@ O objetivo disso é controlar quem pode colidir com quem. Um objeto $A$ só pode
 
 ## Exemplo
 
-A medusa da esquerda está na layer 1 e com mask 2, enquanto que a verde está na layer 2 e com mask 1. O boneco está na layer 1 e com mask 3 para identificar o chão, que está na layer 3. Isso significa que o boneco não está buscando colisão com nenhum inimigo, ele quer apenas ficar em terra firme, são os inimigos que querem colidir com ele! Neste caso, apenas a medusa verde (da direita) pode colidir com ele, pois ela está buscando corpos na layer 1.
+A medusa da esquerda está na layer 1 e com mask 2, enquanto que a verde está na layer 2 e com mask 1. O personagem está na layer 1 e com mask 3 para identificar o chão, que está na layer 3. Isso significa que o personagem não está buscando colisão com nenhum inimigo, ele quer apenas ficar em terra firme, são os inimigos que querem colidir com ele! Neste caso, apenas a medusa verde (da direita) pode colidir com ele, pois ela está buscando corpos na layer 1.
 

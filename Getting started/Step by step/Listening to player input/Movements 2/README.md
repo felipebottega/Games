@@ -16,7 +16,7 @@ Como esse projeto é em 2D pixelado, recomendo repetir os passos do projeto ante
   <img src="https://github.com/user-attachments/assets/00781df1-2785-451f-9475-e3624b6b0934" width="700"/>  
 </p>
 
-Para o node `Trevor`, configuramos o seu peso, que ficou em 70 kg. A gravidade igual a 1.0 significa que estamos utilizando a gravidade da Terra. Também marcamos a opção *Lock Rotation*. Isso significa que o boneco vai ficar em pé e reto independentemente das forças que atuam sobre ele. Sem isso ele poderia rolar para frente ou para trás quando começasse a caminhar.
+Para o node `Trevor`, configuramos o seu peso, que ficou em 70 kg. A gravidade igual a 1.0 significa que estamos utilizando a gravidade da Terra. Também marcamos a opção *Lock Rotation*. Isso significa que o personagem vai ficar em pé e reto independentemente das forças que atuam sobre ele. Sem isso ele poderia rolar para frente ou para trás quando começasse a caminhar.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/6d7e357b-4ae5-4f61-b0f9-3fe7f0b09731" width="300">
@@ -54,7 +54,7 @@ Agora vá em *Add New Action* e crie um nome para o novo comando. Neste exemplo 
     <img src="https://github.com/user-attachments/assets/3d294a4c-5770-462f-9866-cf4ec851b203" width="650">
 </p>
 
-Abaixo segue o script completo do node `Trevor`, ele é pequeno mesmo. Note que `linear_velocity` é um atributo nativo do `RigidBody2D`. Usamos ele para responder aos inputs, como pode ser visto claramente. A medida é em pixels/segundo. Note a lógica usada para permitir o pulo. Além do jogador ter que pressionar o espaço, é necessário que a velocidade vertical do boneco seja quase zero. Não coloquei igual a zero para permitir ele pular mais rapidamente ao tocar no chão. Porém isso introduziu um bug de pulo infinito já que a velocidade vertical é igual a zero quando o boneco deu um pulo e está transicionando da subida para a queda. Isso não é tão grave para este exemplo, mas já mostra os tipos de desafios que podem vir pela frente.
+Abaixo segue o script completo do node `Trevor`, ele é pequeno mesmo. Note que `linear_velocity` é um atributo nativo do `RigidBody2D`. Usamos ele para responder aos inputs, como pode ser visto claramente. A medida é em pixels/segundo. Note a lógica usada para permitir o pulo. Além do jogador ter que pressionar o espaço, é necessário que a velocidade vertical do personagem seja quase zero. Não coloquei igual a zero para permitir ele pular mais rapidamente ao tocar no chão. Porém isso introduziu um bug de pulo infinito já que a velocidade vertical é igual a zero quando o personagem deu um pulo e está transicionando da subida para a queda. Isso não é tão grave para este exemplo, mas já mostra os tipos de desafios que podem vir pela frente.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/cb0e7491-3998-46f3-96a6-2cc130b92558" width="600">

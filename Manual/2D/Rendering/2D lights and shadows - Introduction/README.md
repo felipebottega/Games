@@ -9,7 +9,7 @@ Após copiar as pastas daquela cena para o projeto atual, precisamos ajustar as 
   <img src="https://github.com/user-attachments/assets/99f751aa-0145-49ec-bc5b-d15b1e6b7801" width="800">
 </p>
 
-Além dos sprites anteriores, também incluímos um sprite para o fundo, outro de blocos flutuantes e uma pilastra. O fundo e a pilastra são `Sprite2D`, enquanto que o bloco é um `StaticBody2D`. Cada um tem a sua própria cena. No bloco, colocamos fricção igual a zero. Se a fricção fosse positiva, o boneco poderia "grudar" momentaneamente na lateral dela e pular dali, o que seria um bug indesejável.
+Além dos sprites anteriores, também incluímos um sprite para o fundo, outro de blocos flutuantes e uma pilastra. O fundo e a pilastra são `Sprite2D`, enquanto que o bloco é um `StaticBody2D`. Cada um tem a sua própria cena. No bloco, colocamos fricção igual a zero. Se a fricção fosse positiva, o personagem poderia "grudar" momentaneamente na lateral dela e pular dali, o que seria um bug indesejável.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9ab87513-be51-4712-8543-f39b3f3a3b89" width="200">
@@ -23,7 +23,7 @@ Na cena principal, também colocamos barreiras laterais invisíveis para que o j
 
 ## PointLight2D
 
-Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação. Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do boneco na árvore da cena, pois assim pé do boneco não é coberto pelos blocos quando ele está em cima deles. Queremos o pilar vindo depois do boneco pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore da cena, coloque-a depois dos blocos e antes do Trevor.
+Finalmente chegou o momento de colocar alguma iluminação na cena! Primeiro vamos criar a tocha com animação. Lembre-se de que a ordem dos nodes importa. Queremos os blocos flutuantes antes do personagem na árvore da cena, pois assim pé do personagem não é coberto pelos blocos quando ele está em cima deles. Queremos o pilar vindo depois do personagem pois na cena ele passa por trás do pilar, dá um efeito bonito e a cena ganha mais tridimensionalidade. Marque a opção *Autoplay on Load* para que a animação seja executada assim que entra na cena. Feito isso, coloque-a na cena Main, acima dos blocos mais distantes. Na árvore da cena, coloque-a depois dos blocos e antes do Trevor.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c905f6fa-3b7b-4ef5-a608-5dc69478f6f1" width="400">

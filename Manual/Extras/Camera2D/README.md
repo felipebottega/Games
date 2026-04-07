@@ -49,7 +49,7 @@ Feito isso, você tem todas as ferramentas prontas para desenhar o cenário do j
 
 ### Player com movimento de *clicar e mover*
 
-A última coisa é criar o player. Utilizamos a estrutura clássica de um `CharacterBody2D` contendo a animação e colisão. Também criamos um `Sprite2D` com a sombra debaixo do boneco. Para este exemplo, utilizamos *Motion Mode* igual a *Floating*, que é o indicado para jogos top-down. Se você utilizar o script default da Godot para `CharacterBody2D`, não esqueça de remover a parte da gravidade. Na verdade, aconselho a copiar o script de *Clicar e mover* mostrado no tutorial [2D movement overview]([<p align="center">](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#clicar-e-mover).
+A última coisa é criar o player. Utilizamos a estrutura clássica de um `CharacterBody2D` contendo a animação e colisão. Também criamos um `Sprite2D` com a sombra debaixo do personagem. Para este exemplo, utilizamos *Motion Mode* igual a *Floating*, que é o indicado para jogos top-down. Se você utilizar o script default da Godot para `CharacterBody2D`, não esqueça de remover a parte da gravidade. Na verdade, aconselho a copiar o script de *Clicar e mover* mostrado no tutorial [2D movement overview]([<p align="center">](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#clicar-e-mover).
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/0e61287c-5f65-4f21-aff5-c5833547e4b0" />
@@ -58,14 +58,14 @@ A última coisa é criar o player. Utilizamos a estrutura clássica de um `Chara
 
 ## Super básico de Camera2D
 
-Como dissemos no início, basta colocar um node `Camera2D` como filho do player e ele vai segui-lo conforme ele se move na tela. O quadrado rosa indica o que a câmera enxerga, e é bom ressaltar que o tamanho deste quadrado sempre acompanha o tamanho da viewport. O boneco está no centro da câmera, como mostrado mais de perto na segunda imagem.
+Como dissemos no início, basta colocar um node `Camera2D` como filho do player e ele vai segui-lo conforme ele se move na tela. O quadrado rosa indica o que a câmera enxerga, e é bom ressaltar que o tamanho deste quadrado sempre acompanha o tamanho da viewport. O personagem está no centro da câmera, como mostrado mais de perto na segunda imagem.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/2c50495c-c86b-4f0c-9822-9ffc48098c59" />
   <img width="200" src="https://github.com/user-attachments/assets/970d6a23-fe02-4bcc-b09a-48a0e732a8de" />
 </p>
 
-Com este setup, você tem um jogo em que a câmera fica sempre centrada no boneco e o segue assim que ele se move. Abaixo, mostramos como é a cena inicial do jogo quando colocamos para rodar. 
+Com este setup, você tem um jogo em que a câmera fica sempre centrada no personagem e o segue assim que ele se move. Abaixo, mostramos como é a cena inicial do jogo quando colocamos para rodar. 
 
 ## Básico de Camera2D
 
@@ -75,7 +75,7 @@ Logo de cara já percebemos que tem algum problema. A câmera está mostrando tr
   <img width="1100" src="https://github.com/user-attachments/assets/4af1aa8b-0d0f-4a12-b4f7-612c899820b4" />
 </p>
 
-Indo na cena Main, podemos ver claramente a razão disso: o boneco começa no canto da tela, e a câmera tem um campo de visão que acaba indo além disso mesmo. Poderíamos colocar o boneco para começar mais para o centro, mas ele poderia simplesmente andar até aquele ponto novamente. Isso não resolveria o problema. Poderíamos também adicionar mais textura no cenário e criar uma parede invisível no caminho. Isso até resolveria, mas essa parede deveria fazer o boneco travar no meio da tela, nunca no canto. 
+Indo na cena Main, podemos ver claramente a razão disso: o personagem começa no canto da tela, e a câmera tem um campo de visão que acaba indo além disso mesmo. Poderíamos colocar o personagem para começar mais para o centro, mas ele poderia simplesmente andar até aquele ponto novamente. Isso não resolveria o problema. Poderíamos também adicionar mais textura no cenário e criar uma parede invisível no caminho. Isso até resolveria, mas essa parede deveria fazer o personagem travar no meio da tela, nunca no canto. 
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/8ab41b0f-a444-4bae-a162-686439dd45bb" />
@@ -102,7 +102,7 @@ Saber limitar o que a câmera enxerga é o básico para se ter um jogo que não 
 
 **Enabled:** Controla se a câmera está ativada ou não.
 
-> PS: Só para lembrar, a câmera desativada significa apenas que a tela não vai se mover junto com o boneco, ela não vai escurecer.
+> PS: Só para lembrar, a câmera desativada significa apenas que a tela não vai se mover junto com o personagem, ela não vai escurecer.
 
 **Zoom:** Como o próprio nome diz, aplica zoom-in ou zoom-out. Se você der zoom em apenas um dos eixos, a imagem vai se distorcer.
 
@@ -119,7 +119,7 @@ Para começar, ative as opções *Draw Limits* e *Draw Drag Margin* no *Inspecto
   <img width="600" src="https://github.com/user-attachments/assets/179022e1-95d5-4658-b662-6e5ca579427c" />
 </p>
 
-Já vimos sobre limites anteriormente. A opção marcada deixa evidente na tela onde estão os limites, que são as linhas amarelas. Aquele quadrado verde no meio (talvez azul?) marca os limites do *drag* que já vem por default. Esse quadrado demarca limites horizontais e verticais que servem como triger para a câmera poder se mover. Ou seja, Se o boneco for para a esquerda, a câmera só vai começar a acompanhar quando ele ultrapassar a linha vertical esquerda. Se ele resolver voltar para a direita, a câmera não vai se mover até ele ultrapassar a linha vertical direita. O mesmo raciocínio se aplica a ir para cima ou para baixo na tela. Sem o drag, a câmera fica eternamente se movimentando em resposta a qualquer mínimo movimento do jogador, e nem sempre isso é desejável.
+Já vimos sobre limites anteriormente. A opção marcada deixa evidente na tela onde estão os limites, que são as linhas amarelas. Aquele quadrado verde no meio (talvez azul?) marca os limites do *drag* que já vem por default. Esse quadrado demarca limites horizontais e verticais que servem como triger para a câmera poder se mover. Ou seja, Se o personagem for para a esquerda, a câmera só vai começar a acompanhar quando ele ultrapassar a linha vertical esquerda. Se ele resolver voltar para a direita, a câmera não vai se mover até ele ultrapassar a linha vertical direita. O mesmo raciocínio se aplica a ir para cima ou para baixo na tela. Sem o drag, a câmera fica eternamente se movimentando em resposta a qualquer mínimo movimento do jogador, e nem sempre isso é desejável.
 
 > PS: Sem o drag a câmera pode deixar de se mover também caso o jogador esta perto dos limites. Aí a câmera trava na posição do limite.
 
@@ -127,7 +127,7 @@ Para ativar o drag vertical ou horizontal, devemos marcar as opções *Drag → 
 
 ### Smoothing
 
-Temos as opções *Position Smoothing* e *Rotation Smoothing* no *Inspector*. Por default elas vem desativadas. Quando você ativa a *Position Smoothing*, a câmera não acompanha o boneco automaticamente. Ela vai atrás dele com um pouco de atraso, parando suavemente. O mesmo vale para a *Rotation Smoothing*, mas em vez de mudar de posição é em relação a rotação. 
+Temos as opções *Position Smoothing* e *Rotation Smoothing* no *Inspector*. Por default elas vem desativadas. Quando você ativa a *Position Smoothing*, a câmera não acompanha o personagem automaticamente. Ela vai atrás dele com um pouco de atraso, parando suavemente. O mesmo vale para a *Rotation Smoothing*, mas em vez de mudar de posição é em relação a rotação. 
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/2024a1cb-fe1f-41e6-b15b-c8f1c10157f8" />
