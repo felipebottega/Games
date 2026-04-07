@@ -21,4 +21,27 @@ Vale mencionar que não é apenas a visualização, tudo é executado e mostrado
 
 ## Mudança de cena
 
-Até este momento, implementamos as mudanças de cena com o comando `get_tree().change_scene_to_file()`. Isso basicamente deleta a cena atual e inicia a outra do zero. Algumas vezes é exatamente isso o que queremos, mas nem sempre. Por exemplo, o menu do jogo pode ser uma cena própria que nós não queremos carregar do zero cada vez que o jogador acessar o menu. Pior ainda, usar o `get_tree().change_scene_to_file()` no meio de uma fase significaria matar a gameplay naquele ponto só para acessar o menu. Neste caso, o menu poderia ser uma cena rodando em paralelo ao jogo mas com `visible=false`, e apenas essa variável se alternaria conforme o jogador quisesse ou não acessar o menu. Muito mais leve e mais simples do que qualquer solução envolvendo trocas reais de cena.
+Até este momento, implementamos as mudanças de cena com o comando `get_tree().change_scene_to_file()`. Isso basicamente deleta a cena atual e inicia a outra do zero. Algumas vezes é exatamente isso o que queremos, mas nem sempre. Por exemplo, o menu do jogo pode ser uma cena própria que nós não queremos carregar do zero cada vez que o jogador acessar o menu. Pior ainda, usar o `get_tree().change_scene_to_file()` no meio de uma fase significaria matar a gameplay naquele ponto só para acessar o menu. Nesta situação, o menu poderia ser uma cena rodando em paralelo ao jogo mas com `visible=false`, e apenas essa variável se alternaria conforme o jogador quisesse ou não acessar o menu. Muito mais leve e mais simples do que qualquer solução envolvendo trocas reais de cena.
+
+Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e cada uma tem um custo diferente em memória, CPU e acesso aos dados.
+
+1. **Apagar a cena**
+    - A cena é destruída de verdade (deixa de existir na memória).
+    - Libera RAM e para todo processamento (lógica, física, input).
+    - Você perde acesso aos dados da cena.
+    - Se quiser voltar depois, vai precisar carregar tudo novamente.
+    - Use quando não pretende voltar para a cena tão cedo.
+
+2. **Esconder a cena**
+    - A cena continua existindo, só fica invisível para o jogador.
+    - Os dados continuam acessíveis normalmente.
+    - O processamento continua rodando.
+    - Pode consumir mais CPU e memória se usado em excesso.
+    - Use quando quer alternar rapidamente entre cenas sem custo de recarregamento.
+
+3. **Remover da árvore (SceneTree)**
+    - A cena continua na memória, mas fica desconectada do sistema principal.
+    - O processamento para, porque ela não está mais na árvore.
+    - É fácil reativar depois com add_child().
+    - Alguns dados podem ficar desatualizados, pois não recebem updates (delta, input, etc.).
+    - Use como um meio-termo: mantém a cena, mas sem custo de processamento.
