@@ -16,3 +16,9 @@ No contexto acima, o que devemos esperar ver na tela do jogo? Como *root* é um 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/b81866a1-d65c-417e-9c72-6afe7996fe5c" />
 </p>
+
+Vale mencionar que não é apenas a visualização, tudo é executado e mostrado na tela em conjunto: animação, interatividade, input, aúdio, etc. No que diz respeito a inputs, é bom ter cuidado. Do *root*, ele vai para cada filho de maneira totalmente paralela. Se um dos filhos consumir o input totalmente, isto apenas vale para os nodes daquele filho. 
+
+## Mudança de cena
+
+Até este momento, implementamos as mudanças de cena com o comando `get_tree().change_scene_to_file()`. Isso basicamente deleta a cena atual e inicia a outra do zero. Algumas vezes é exatamente isso o que queremos, mas nem sempre. Por exemplo, o menu do jogo pode ser uma cena própria que nós não queremos carregar do zero cada vez que o jogador acessar o menu. Pior ainda, usar o `get_tree().change_scene_to_file()` no meio de uma fase significaria matar a gameplay naquele ponto só para acessar o menu. Neste caso, o menu poderia ser uma cena rodando em paralelo ao jogo mas com `visible=false`, e apenas essa variável se alternaria conforme o jogador quisesse ou não acessar o menu. Muito mais leve e mais simples do que qualquer solução envolvendo trocas reais de cena.
