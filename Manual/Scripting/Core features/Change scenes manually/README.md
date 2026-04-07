@@ -42,9 +42,11 @@ Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e 
     - Use quando quer alternar rapidamente entre cenas sem custo de recarregamento.
 
 3. **Remover da árvore (SceneTree)**
-    - Usa ` remove_child()` e `add_child()`.
+    - Usa `remove_child()` e `add_child()`.
     - A cena continua na memória, mas fica desconectada do sistema principal.
     - O processamento encerra, porque ela não está mais na árvore.
     - É fácil reativar depois com `add_child()`.
     - Alguns dados podem ficar desatualizados, pois não recebem updates (delta, input, etc.).
     - Use como um meio-termo: mantém a cena, mas sem custo de processamento.
+
+> PS: Na Godot, a `SceneTree` mantém uma referência para qual é a "cena atual" através do atributo `current_scene`. Quando você usa métodos prontos como o `change_scene_to_file()`, a próprio engine atualiza isso automaticamente. Mas se você estiver trocando cenas manualmente, a engine não atualiza esse campo sozinho. Ao trocar de cena manualmente, pode ser uma boa ideia definir `get_tree().current_scene = scene`, para que scripts que dependem de `SceneTree.current_scene` não parem de funcionar.
