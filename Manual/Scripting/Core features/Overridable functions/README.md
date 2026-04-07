@@ -8,7 +8,7 @@ Estamos falando funções/métodos da classe `Node`, que vem vazios e prontos pa
 
 - **_init:** O `_init` é chamado imediatamente quando a instância do script é criada. Esta inicialização de variáveis serve para criar instâncias com parâmetros, assim como é o `__init__` de Python. Veja mais sobre ela [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#construtor).
 - **_enter_tree:** O `_enter_tree` é chamado quando node acabou de entrar na árvore. Use quando você precisa reagir imediatamente à entrada do node. 
-- **_ready:** Filhos ainda podem não estar prontos na cena quando o `_init_` e `_enter_tree` são executados. Por outro lado, o `_ready` só é chamado quando todos os filhos já foram inicializados, então já é seguro acessar outros nodes.
+- **_ready:** Filhos ainda podem não estar prontos na cena quando o `_init_` e `_enter_tree` são executados. Por outro lado, o `_ready` só é chamado quando todos os filhos já foram inicializados, então já é seguro acessar os nodes da cena. Acessar objetos externos ainda pode dar erro, como adicionar cenas externas, recursos externos, etc. Prefira usar a chamada `call_deferred` para objetos fora da cena.
 - **_process:** Função que executa processos a cada frame.
 - **_physics_process:** Função que executa processos a cada frame físico.
 - **_input:** Primeira função que recebe inputs.

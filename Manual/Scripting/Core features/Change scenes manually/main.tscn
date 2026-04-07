@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bmxnr5bbr7hs3"]
+
+[ext_resource type="Script" uid="uid://7hyw0poujgb4" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://gigankh003qh" path="res://HD-wallpaper-beautiful-sunset-beauty-blue-sky.jpg" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=1659021391]
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=333366887]
+position = Vector2(252, -14)
+texture = ExtResource("1_ig7tw")

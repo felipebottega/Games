@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://drcl2grbt38v8"]
 
 [node name="Scene3" type="CanvasLayer" unique_id=1238905138]
+
+[node name="Label" type="Label" parent="." unique_id=1026342433]
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 286.0
+offset_bottom = 223.0
+text = "LOADING..."
+
+[node name="Button" type="Button" parent="." unique_id=1051246187]
+modulate = Color(0, 1, 1, 1)
+offset_left = 16.0
+offset_top = 31.0
+offset_right = 90.0
+offset_bottom = 62.0
+scale = Vector2(2, 2)
+text = "BUTTON"
