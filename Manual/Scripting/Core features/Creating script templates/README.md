@@ -30,7 +30,7 @@ O seu script template não precisa de nada especial, apenas o `extends` deve est
 
 <p align="center">
   <img width="440" src="https://github.com/user-attachments/assets/3a16319d-b7a0-4d48-8028-d89ce8cf595c" />
-  <img width="500" src="https://github.com/user-attachments/assets/05f71181-f812-4f14-a810-4821d7883734" />
+  <img width="500" src="https://github.com/user-attachments/assets/e943ce67-2bda-4e70-9754-804ab07249dc" />
 </p>
 
 Agora é só escolher o seu script template e começar a trabalhar a partir dele, não tem mistério!
