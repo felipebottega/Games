@@ -156,7 +156,7 @@ Anteriormente o script do HUD só tinha a função `update_num_balls`. Agora vam
   <img src="https://github.com/user-attachments/assets/a6a1f160-d74f-4015-8a9f-75ead37c561a" width="550">
 </p>
 
-Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pressionado. Este sinal faz o HUD esconder obotão de Start e emitir um [sinal customizado](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203) que chamamos de `start_game`. Note que este sinal customizado envia um float junto, isto também é possível. 
+Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pressionado. Este sinal faz o HUD esconder o botão de Start e emitir um [sinal customizado](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203) que chamamos de `start_game`. Note que este sinal customizado envia um float junto, isto também é possível. 
 
 Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são ações independentes do ambiente externo. Para conectar o sinal `start_game` à Main, precisamos ir na HUD instanciada na Main. Clique na HUD da Main e vá em Node do painel à direita, ali deve estar presente o sinal `start_game`. Clique no sinal e defina a função `new_game` na Main.  
 
