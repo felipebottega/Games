@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d4g6kj6620sei"]
 
-[ext_resource type="Script" uid="uid://b3xsmjakv8vb6" path="res://character_body_2d.gd" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://cle4ul4s3dg4m" path="res://character_body_2d.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://ditts8pr50ihc" path="res://icon.svg" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://cb2lqhhb4uocq" path="res://sprite_2d.gd" id="2_epypp"]
+[ext_resource type="Script" uid="uid://vdq04baqowpj" path="res://floor_sprite_2d.gd" id="3_epypp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y32ns"]
 
@@ -14,6 +16,7 @@ size = Vector2(653, 78)
 position = Vector2(230.50003, 14.500031)
 scale = Vector2(16.445313, 12.179688)
 texture = ExtResource("2_0e48y")
+script = ExtResource("2_epypp")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=703842690]
 position = Vector2(175, 195)
@@ -36,6 +39,7 @@ position = Vector2(318, 476)
 position = Vector2(1.1444092e-05, 12)
 scale = Vector2(5.109375, 0.8125)
 texture = ExtResource("2_0e48y")
+script = ExtResource("3_epypp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=42547882]
 shape = SubResource("RectangleShape2D_y32ns")
