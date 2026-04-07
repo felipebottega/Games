@@ -26,7 +26,7 @@ Na pasta do seu projeto, crie uma pasta chamada *script_templates*. Se você for
 
 ## Configurando o script template
 
-O seu script template não precisa de nada especial, apenas o `extends` deve estar de acordo com o node. Se você colocou um script na pasta `Sprite2D`, ele deve usar `extends Sprite2D`. Você também pode incluir comentários começando com as keywords `meta-name:` e `meta-description:`. A primeira é o nome que vai aparecer na lista de escolhas de scripts e a segunda é a descrição que vai aparecer. A figura abaixo mostram como funciona.
+O seu script template não precisa de nada especial, apenas o `extends` deve estar de acordo com o node. Se você colocou um script na pasta `Sprite2D`, ele deve usar `extends Sprite2D`. Você também pode incluir comentários começando com as keywords `meta-name:` e `meta-description:`. A primeira é o nome que vai aparecer na lista de escolhas de scripts e a segunda é a descrição que vai aparecer. 
 
 <p align="center">
   <img width="440" src="https://github.com/user-attachments/assets/3a16319d-b7a0-4d48-8028-d89ce8cf595c" />
