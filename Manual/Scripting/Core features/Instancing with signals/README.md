@@ -18,9 +18,11 @@ O node do personagem é um `Sprite2D` que pode se movimentar, rotaciona seguindo
   <img width="570" src="https://github.com/user-attachments/assets/d5314623-d460-4268-88c8-563447e4c22d" />
 </p>
 
-Quando o jogador clica no mouse, é emitido o sinal do player para o exterior através do comando `shoot.emit(rock, rotation, position)`. Ele está enviando a cena da pedra (como `PackedScene`), a rotação e a posição do player. Na cena Main, temos o script abaixo.
+Quando o jogador clica no mouse, é emitido o sinal do player para o exterior através do comando `shoot.emit(rock, rotation, position)`. Ele está enviando a cena da pedra (como `PackedScene`), a rotação e a posição do player. Abaixo, temos a cena Main. A função `_on_player_shoot` foi criada ao criar uma conexão com o sinal do player. Assim que o jogador clica, essa função é executada. Ela adiciona a cena da pedra na Main e atribui a rotação e posição do player naquele instante, mas é só isso que ela extrai do player. Depois disso a pedra segue o seu caminhos de maneira totalmente independente. No script da pedra, podemos ver que ela é inicializada com vetor velocidade $(100, 0)$, mas logo após ser inicializada a rotação dela é alterada. A partir daí a direção dela passa a ser a doração, que é a do player no momento do clique.
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/25ec0f8d-00ef-4cc0-826d-c79ace11618d" />
+  <img width="200" src="https://github.com/user-attachments/assets/8f16086d-2839-454c-b578-d9d2b1d51758" />
+  <img width="320" src="https://github.com/user-attachments/assets/0fe2fbd7-0e21-4957-92e1-721d055c68e8" />
+  <img width="480" src="https://github.com/user-attachments/assets/25ec0f8d-00ef-4cc0-826d-c79ace11618d" />
 </p>
 
