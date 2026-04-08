@@ -36,7 +36,7 @@ Note que a função `_on_timer_timeout` possui o ícone verde ao lado, indicando
 
 ## PackedScene
 
-Um `PackedScene` é uma classe que representa uma cena salva em memória e pronta para ser instanciada em tempo de execução. Quando você cria uma cena, ela é salva como um arquivo *.tscn*. Se você quiser criar cópias dessa cena no jogo (como vários inimigos iguais), você carrega o arquivo como um PackedScene, e então você pode instanciá-lo quantas vezes quiser. 
+Um `PackedScene` é uma classe que representa uma cena salva em memória e pronta para ser instanciada em tempo de execução. Quando você cria uma cena, ela é salva como um arquivo *.tscn*. Se você quiser criar cópias dessa cena no jogo (como vários inimigos iguais), você carrega o arquivo como um `PackedScene`, e então você pode instanciá-lo quantas vezes quiser. 
 
 No código abaixo, a variável `mob_scene` é como um molde da cena original. A variável `mob` é uma instância real da cena, ou seja, é um node que pode ser manipulado, movido, animado, receber sinais, etc. Porém, ele só passa a existir de fato na árvore da cena do seu jogo depois de `add_child`. Se você executar o projeto agora, verá o ícone indicando a posição do `PathFollow2D` alterando de posição assim como antes, mas a cada posição que ele passa vai deixando um mob. Note que usamos o `global_position` para pegar a posição real do `PathFollow2D`, caso contrário ele consideraria que a trajetória começa na origem.
 
