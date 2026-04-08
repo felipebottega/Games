@@ -16,7 +16,7 @@ Na imagem acima, podemos notar que, além do ícone, também é possível editar
 
 ## Copiando cenas entre projetos e problemas com uid
 
-Saindo um pouco do tópico, pois esbarrei neste problema enquanto trabalhava no tutorial. É comum que a engine reclame de uid desconhecida quando você copia diretamente uma cena de um projeto para outro. Na Godot, os arquivos *.tscn* e *.gd* têm um sistema de uids para identificar recursos. Eles não são portáveis entre projetos diferentes — cada projeto tem seu próprio mapeamento. Abaixo temos um exemplo simples de arquivo *.tscn*. 
+Vou sair um pouco do tópico agora, pois esbarrei neste problema enquanto trabalhava no tutorial e achei relevante relatar. É comum que a engine reclame de uid desconhecida quando você copia diretamente (pelo sistema operacional) uma cena de um projeto para outro. Na Godot, os arquivos *.tscn* e *.gd* têm um sistema de uids para identificar recursos. Eles não são portáveis entre projetos diferentes, cada projeto tem seu próprio mapeamento com uid. Abaixo temos um exemplo simples de arquivo *.tscn*. 
 
 ```
 [gd_scene load_steps=2 format=3 uid="uid://dqmh2chf8nud5"]
@@ -63,3 +63,12 @@ autostart = true
 
 [connection signal="timeout" from="Timer" to="Label" method="_on_timer_timeout"]
 ```
+
+A solução acima é meio gambiarra e não é escalável. Use apenas caso o projeto já esteja nesse estado e não tenha outra alternativa. 
+
+A maneira correta de transferir cenas e scripts entre projetos é indo no *FileSystem*, clicando com o botão direito do mouse ali e escolhendo a opção *Open in File Manager*. Isso vai abrir uma janela do explorador de arquivos do seu sistema operacional. Vá até onde estão os arquivos e os arraste para o *FileSystem* do seu projeto. Pode acontecer de abrir uma janela de aviso notificando que você está trazendo arquivos de fora. Isso não é problema. Apenas clique em *Reload from disk*.
+
+<p align="center">
+  <img width="320" src="https://github.com/user-attachments/assets/507ed9ad-1464-43fa-ad05-315f6494cbb1" />
+  <img width="400" src="https://github.com/user-attachments/assets/8d01d1ad-cefa-4f74-9a75-0a62efc05e56" />
+</p>
