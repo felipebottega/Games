@@ -2,7 +2,7 @@
 
 O sistema de arquivos da Godot armazena recursos no disco. Qualquer coisa, desde um script até uma cena ou uma imagem PNG, é um recurso para a engine. Você pode interagir com os arquivos pela aba *FileSystem* do editor. 
 
-É recomendado que você mova e delete arquivos sempre pelo *FileSystem*. Você pode importar recursos externos pelo explorador de arquivos do sistema operacional desde que não sejam recursos nativos da Godot (*.tscn*, *.gd*, etc.). Caso seja um recurso nativo da Godot, é recomendado importar pelo *FileSystem*, através do *Open in File Manager*. Vale a pena conferir [este tutorial](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Export/Exporting%20for%20Windows/README.md#copiando-cenas-entre-projetos-e-problemas-com-uid) para relembrar.
+É recomendado que você mova e delete arquivos sempre pelo *FileSystem*. Você pode importar recursos externos pelo explorador de arquivos do sistema operacional desde que não sejam recursos nativos da Godot (*.tscn*, *.gd*, etc.). Caso seja um recurso nativo da Godot, é recomendado importar pelo *FileSystem*, através do *Open in File Manager*. Vale a pena conferir [este tutorial](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Export/Exporting%20for%20Windows/README.md#copiando-cenas-entre-projetos-e-problemas-com-uid) para relembrar. Também é recomendado sempre usar letras minúsculas para os arquivos, pois a Godot faz essa diferenciação e o padrão dela é colocar tudo em minúsculo.
 
 ## project.godot
 
