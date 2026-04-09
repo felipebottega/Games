@@ -78,7 +78,7 @@ Não há muito o que dizer, é apenas a bola amarela bastante diminuída, como u
 
 ## Cena principal (Main)
 
-A cena principal é um node do tipo `Node2D`, pois é basicamente um conteiner de objetos 2D. Inicialmente ela apenas contém a cena `Funnel` e `Border`. Note que não é preciso fazer nenhum ajustes pois construímos essas cenas de modo que elas já entram na Main adequadas.
+A cena principal é um node do tipo `Node2D`, pois é basicamente um container de objetos 2D. Inicialmente ela apenas contém a cena `Funnel` e `Border`. Note que não é preciso fazer nenhum ajustes pois construímos essas cenas de modo que elas já entram na Main adequadas.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/02860918-af2c-43f9-92d5-2e16054f5dc7" width="700">

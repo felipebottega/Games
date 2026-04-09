@@ -10,7 +10,7 @@ Uma estrutura básica de cena que está servindo para mim é a mostrada na figur
 
 >PS: A palavra "sprite" na engine Godot se refere a imagem usada para o objeto, enquanto que em muitos outros contexto sprite é o objeto em si. Aqui eu estarei usando para ambos os casos sem muita preocupação. O contexto deve deixar claro o significado da palavra.
 
-Como esse projeto é em 2D pixelado, recomendo repetir os passos do projeto anterior em relação ao viewport e rendering. Feito isso, criamos a cena principal, que é do tipo `Node` e apenas funciona como um conteiner para os principais objetos da cena. 
+Como esse projeto é em 2D pixelado, recomendo repetir os passos do projeto anterior em relação ao viewport e rendering. Feito isso, criamos a cena principal, que é do tipo `Node` e apenas funciona como um container para os principais objetos da cena. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/00781df1-2785-451f-9475-e3624b6b0934" width="700"/>  
