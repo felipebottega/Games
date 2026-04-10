@@ -51,5 +51,15 @@ Em geral, vamos evitar alterar o *Path*. A propriedade *Name* é puramente esté
 
 https://github.com/user-attachments/assets/dd43b99a-077a-4d52-8011-1240c90e7c7e
 
+### Local to Scene
 
+Se a opção *Local to Scene* não estiver habilitada, vimos acima como é o comportamento. O compartilhamento dos recursos é absoluto. Agora vamos supor que a opção está habilitada. Você vai notar uma diferença sutil de comportamento no editor: o recurso da cena instanciada não atualiza automaticamente quando o recurso é alterado pelo objeto original, mas assim que você salva a cena do original aí os recursos de todas as instâncias atualizam junto. A princípio, parece que o *Local to Scene* só adiou o inevitável. A diferença real é notada quando você habilita o [*Editable Children*](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#editable-children-e-make-local) nas instâncias.
+
+> PS: Apesar da instância com o *Editable Children* ter recurso independente, ela ainda é filha do objeto original e compartilha algumas propriedades com ele, como transformações, cores, visibilidade, entre outros. Tenha sempre atenção para não fazer confusão com isso.
+
+Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar a colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original. Como já comentamos em outras ocasiões, para ter total independência (transformações, recursos, tudo), habilite a opção *Make Local*.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/db0bfd07-acc7-489b-9323-a80e53679f8c" />
+</p>
 
