@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://13tnn8oplggj"]
+
+[ext_resource type="Script" uid="uid://dmxfv3h1mb168" path="res://scripts/challenge_1.gd" id="1_f8mvc"]
+
+[node name="Challenge1" type="Node2D" unique_id=1932255524]
+script = ExtResource("1_f8mvc")

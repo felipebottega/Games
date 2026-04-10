@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d0ao68awy0lgd"]
+
+[ext_resource type="Texture2D" uid="uid://chqul8xwn82bi" path="res://icon.svg" id="1_5wdmw"]
+
+[node name="Obstacle2" type="StaticBody2D" unique_id=1123489449]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1825132028]
+position = Vector2(138, 110.00001)
+scale = Vector2(2, 1)
+skew = -0.7120943
+texture = ExtResource("1_5wdmw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1197962387]
+polygon = PackedVector2Array(-19, 67, 52, 153, 296, 151, 224, 68)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://brdstspwrce75"]
+
+[ext_resource type="Script" uid="uid://djkw03tlxc0uy" path="res://scripts/challenge_2.gd" id="1_w8tp4"]
+
+[node name="Challenge2" type="Node2D" unique_id=1932255524]
+script = ExtResource("1_w8tp4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1831601670]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=224862089]
+offset_left = 20.0
+offset_top = 420.0
+offset_right = 129.0
+offset_bottom = 451.0
+text = "Back to Main"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
