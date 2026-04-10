@@ -582,7 +582,7 @@ match typeof(x):
 		print("array")
 ```
 
-Você pode usar o underline como "coringa" ("wildcard", em inglês). Esse símbolo significa que qualquer coisa vai dar match se chegar ali.
+Você pode usar o underline como "coringa" ("wildcard" em inglês). Esse símbolo significa que qualquer coisa vai dar match se chegar ali.
 
 ```python
 match x:
@@ -646,7 +646,7 @@ match x:
 		print("Yep, you've taken damage")
 ```
 
-Uma "guarda de padrão" ("pattern guard", em inglês) é uma condição opcional que vem após a lista de padrões e permite fazer verificações adicionais antes de escolher um ramo do `match`. 
+Uma "guarda de padrão" ("pattern guard" em inglês) é uma condição opcional que vem após a lista de padrões e permite fazer verificações adicionais antes de escolher um ramo do `match`. 
 
 ```python
 match point:

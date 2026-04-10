@@ -1,12 +1,28 @@
 extends CharacterBody2D
 
 
-@export var speed = 50
-@export var jump_velocity = -100
+@export var speed = 100
+@export var jump_velocity = -400
+
+@export var stats: Stats
 
 
 func _ready():
-	pass
+	print("My health = ", stats.health)
+	print("My strings = ", stats.strings)
+	
+	var sprite = Sprite2D.new()
+	sprite.texture = stats.sub_resource
+	sprite.position = Vector2(0, -30)
+	sprite.scale = Vector2(0.1, 0.1)
+	add_child(sprite)
+	
+	var subresource = load("res://sprites/medusa.png") 
+	var stats2 = Stats.new(15, subresource, ["a", "b", "c"])
+	print()
+	print("My health (2) = ", stats2.health)
+	print("My sub_resource (2) = ", stats2.sub_resource)
+	print("My strings (2) = ", stats2.strings)
 
 func _physics_process(delta):
 	# Gravidade.

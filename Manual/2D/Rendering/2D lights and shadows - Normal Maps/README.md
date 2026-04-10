@@ -41,7 +41,7 @@ Poderíamos parar por aqui e isso já seria o suficiente para muitos jogos com l
    <img src="https://github.com/user-attachments/assets/af6cdd02-d96a-4a74-9fd1-b05825151d72" width="400">
 </p>
 
-Depois disso, acrescentamos os sliders (e labels para identificar) dos parâmetros que estamos interesasdos. Não esqueça de fazer o HUD ser *Editable Child* na Main, pois só assim você consegue mover seus objetos. Isso acontece porque ele reside numa outra camada, mas não vamos explorar este tópico aqui.
+Depois disso, acrescentamos os sliders (e labels para identificar) dos parâmetros que estamos interesasdos. Não esqueça de fazer o HUD ser *Editable Children* na Main, pois só assim você consegue mover seus objetos. Isso acontece porque ele reside numa outra camada, mas não vamos explorar este tópico aqui.
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/c18de11e-ef94-4949-a571-69e7c07166fa" width="1000">

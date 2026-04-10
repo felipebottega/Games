@@ -10,13 +10,13 @@ Vamos partir do nosso próprio projeto de [criação de player](https://github.c
 
 ## Editable Children e Make Local
 
-Dois arquivos com duas imagens de medusas com cores diferentes foram criados, mas isso não significa que é necessário criar uma cena para cada medusa. Você pode usar a opção *Editable Child* para que uma instância da cena seja editável, mantendo a original intacta enquanto isso. Fizemos isso para usar um sprite para cada medusa.
+Dois arquivos com duas imagens de medusas com cores diferentes foram criados, mas isso não significa que é necessário criar uma cena para cada medusa. Você pode usar a opção *Editable Children* para que uma instância da cena seja editável, mantendo a original intacta enquanto isso. Fizemos isso para usar um sprite para cada medusa.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/afb28e2e-5246-44ae-bd17-9b70c55f79c3" width="400">
 </p>
 
-Outra opção viável seria o *Make Local*, que fica logo abaixo. A diferença é que o Make Local é um pouco mais "radical", no sentido de que ele fica totalmente desligado da cena original, enquanto que o Editable Child ainda é uma instância dela. Por exemplo, se você mudar a escala da cena original, essa mudança será refletida no Editable Child mas não no Make Local.
+Outra opção viável seria o *Make Local*, que fica logo abaixo. A diferença é que o Make Local é um pouco mais "radical", no sentido de que ele fica totalmente desligado da cena original, enquanto que o Editable Children ainda é uma instância dela. Por exemplo, se você mudar a escala da cena original, essa mudança será refletida no Editable Children mas não no Make Local.
 
 ## Definição de layer e mask
 

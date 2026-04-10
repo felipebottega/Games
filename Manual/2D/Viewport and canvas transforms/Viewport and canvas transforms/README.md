@@ -23,7 +23,7 @@ Agora vamos mover apenas o node do sprite. Repare que o `Node2D` continua na ori
   <img src="https://github.com/user-attachments/assets/8eeb30c8-eaf5-47a7-8eba-394a590aad56" width="150">
 </p>
 
-Salve essa cena do jeito que está e crie uma outra cena chamada *World*, com apenas um node do tipo `Node2D`. Feito isso, coloque a cena inicial dentro da *World* e mova ela de posição. Dentro da cena *World* a nossa cena inicial foi colocada na posição $(44, 112)$, mas note que o `Sprite2D` ainda está em $(485, 243)$. Habilitamos o *Editable Child* para poder mostrar isso.
+Salve essa cena do jeito que está e crie uma outra cena chamada *World*, com apenas um node do tipo `Node2D`. Feito isso, coloque a cena inicial dentro da *World* e mova ela de posição. Dentro da cena *World* a nossa cena inicial foi colocada na posição $(44, 112)$, mas note que o `Sprite2D` ainda está em $(485, 243)$. Habilitamos o *Editable Children* para poder mostrar isso.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/25ef7b75-dced-45a4-9d28-ca02f30e9b2c" width="1100">

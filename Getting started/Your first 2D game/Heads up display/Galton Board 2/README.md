@@ -135,7 +135,7 @@ Para o estilo da fonte, vá em *Inspector → Theme Overrides → Fonts → Load
   <img src="https://github.com/user-attachments/assets/83c611d6-769f-453a-ba9f-51eac7240464" width="220">
 </p>
 
-Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + int(counter/10))` dentro do if do `_physics_process`. Para mover a caixa da label na Main você deve marcar o HUD como *Editable Child*, recomendo fazer isso. Após seguir estes passos a contagem já deve estar automática.
+Agora adicione HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 + int(counter/10))` dentro do if do `_physics_process`. Para mover a caixa da label na Main você deve marcar o HUD como *Editable Children*, recomendo fazer isso. Após seguir estes passos a contagem já deve estar automática.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/61def68c-af75-48a2-868a-268ccaf7c995" width="400">

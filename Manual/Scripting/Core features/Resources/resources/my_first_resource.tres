@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Stats" format=3 uid="uid://b5rckb5stidet"]
+
+[ext_resource type="Script" uid="uid://ditatso5x0g15" path="res://resources/stats.gd" id="1_tu3a8"]
+[ext_resource type="Texture2D" uid="uid://c51bp1w5h2vjf" path="res://icon.svg" id="2_47nil"]
+
+[resource]
+script = ExtResource("1_tu3a8")
+health = 100
+sub_resource = ExtResource("2_47nil")
+strings = PackedStringArray("abc", "def", "ghi")
+metadata/_custom_type_script = "uid://ditatso5x0g15"

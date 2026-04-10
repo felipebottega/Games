@@ -3,9 +3,18 @@
 [ext_resource type="Script" uid="uid://cfewjl21dje1l" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://b57lxbt8palyf" path="res://sprites/background.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://t710es3w6ls6" path="res://sprites/floor.png" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://caoqtsr2rygek" path="res://blocks.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://co5hc816ruqom" path="res://scenes/trevor.tscn" id="5_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(353, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+resource_local_to_scene = true
+size = Vector2(64.5, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(64.5, 16)
 
 [node name="Main" type="Node2D" unique_id=1116743401]
 script = ExtResource("1_h2yge")
@@ -25,3 +34,25 @@ texture = ExtResource("2_0xm2m")
 position = Vector2(-0.5, 145)
 scale = Vector2(1.0793201, 1)
 shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Blocks" parent="." unique_id=476753812 instance=ExtResource("4_1bvp3")]
+position = Vector2(120, 113)
+
+[node name="CollisionShape2D" parent="Blocks" index="1" unique_id=552029158]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Blocks2" parent="." unique_id=103229229 instance=ExtResource("4_1bvp3")]
+position = Vector2(119, 48)
+
+[node name="Blocks3" parent="." unique_id=1017774122 instance=ExtResource("4_1bvp3")]
+position = Vector2(284, 48)
+
+[node name="CollisionShape2D" parent="Blocks3" index="1" unique_id=552029158]
+position = Vector2(50, 5)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="Trevor" parent="." unique_id=1554937440 instance=ExtResource("5_lquwl")]
+position = Vector2(18, 6)
+
+[editable path="Blocks"]
+[editable path="Blocks3"]
