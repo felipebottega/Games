@@ -120,3 +120,15 @@ Uma vez que o arquivo da classe já existe, o próximo passo é ir no *FileSyste
   <img width="650" src="https://github.com/user-attachments/assets/f6a93306-d322-4b17-aa44-da91ccf168d2" />
   <img width="700" src="https://github.com/user-attachments/assets/b2bd05ea-b42d-487b-aff8-ab98897f89a6" />
 </p>
+
+No *FileSystem*, clique duas vezes no arquivo que acabou de criar para abrir ele no *Inspector*. Você irá notar que está tudo como no default do `_init`. É aqui que a coisa começa a ficar interessante. Você pode alterar os valores do *Inspector* e mandar salvar o arquivo. Com isso, você terá salvo em um arquivo uma instância da classe. Geralmente, instâncias de classes são criadas dentro do código, durante a execução. Neste caso você possui um arquivo com esta instância, ele pode ser carregado em diversos lugares diferentes do projeto e inclusive pode ser usado em outros projetos.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/610ccd74-6696-4610-b0a2-c12fd07b6ab1" />
+</p>
+
+Alteramos alguns campos deste arquivo no *Inspector* e salvamos (ctrl+S). 
+
+<p align="center">
+  <img width="340" src="https://github.com/user-attachments/assets/d8ea7902-2c0e-40b6-8eb4-ef4979420af3" />
+</p>
