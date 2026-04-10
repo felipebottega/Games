@@ -132,3 +132,22 @@ Alteramos alguns campos deste arquivo no *Inspector* e salvamos (ctrl+S).
 <p align="center">
   <img width="340" src="https://github.com/user-attachments/assets/d8ea7902-2c0e-40b6-8eb4-ef4979420af3" />
 </p>
+
+Agora vamos ver como usar isso. Ao usar o comando `@export var stats: Stats`, o campo de fato aparece no *Inspector*, mas aparece vazio pois você só declarou a variável com o tipo da classe de recurso. 
+
+<p align="center">
+  <img width="1000" src="https://github.com/user-attachments/assets/7dd40659-8a91-41ae-83f4-385c53c0d3ea" />
+</p>
+
+Arraste o arquivo de recurso criado para o campo. Com isso, você está definindo um valor para esta variável, que é uma instância da classe.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/a1af6266-67eb-471c-a56a-704d5a4de6e4" />
+</p>
+
+Apenas para testar as coisas, printamos os atributos `health` e `strings`, e inserimos a textura em um `Sprite2D` que fica logo acima do personagem. 
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/d308bb36-478e-436e-b77a-9a259b1435f8" />
+  <img width="400" src="https://github.com/user-attachments/assets/5c546b3b-9dcf-47f7-9440-add610b5be23" />
+</p>
