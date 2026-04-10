@@ -64,7 +64,7 @@ Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciado
 </p>
 
 > PS: A observação acima apenas vale quando você não alterou a propriedade do objeto instanciado. Caso esta propriedade tenha sido alterada, aparecerá o símbolo <img width="20" src="https://github.com/user-attachments/assets/1df980bb-e48e-4daf-b6aa-7eba4d4e2e8d" /> ao lado da propriedade
- no *Inspector*, e isso sinaliza que ela foi alterada. Nesse caso, a propriedade não responde mais às alterações do original.
+ no *Inspector*, e isso sinaliza que ela foi alterada. Neste caso, a propriedade não responde mais às alterações do original.
 
 A opção *Local to Scene* brilha mesmo quando você cria instâncias por código. Nesse caso, é como se elas fossem *Editable Children* por default, então todas tem recursos independentes. Ocultamos os dois blocos A e B comentados acima e agoras criamos dois por código na Main. O bloco original ainda é o mesmo, com a opção *Local to Scene* habilitada. Apenas manipulamos a posição e escala dos blocos. Note que ambas os shapes de colisão se alteraram como pedimos. 
 
@@ -86,6 +86,7 @@ A opção *Make Unique* é mais simples, mais pontual e mais "radical". Esta op�
   <img width="450" src="https://github.com/user-attachments/assets/f2e365ce-f9fe-419c-9dd0-f5cd71d37b7a" />
 </p>
 
+É possível implementar o *Make Unique* por código. Para o caso do `CollisionShape2D` (exemplo), o comando `$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()` relpica o *Make Unique*. De maneira geral, `recurso = recurso.duplicate()` funciona para qualquer recurso, em que `recurso` é o nome do recurso. Se o recurso tiver sub-recursos dentro, use `recurso = recurso.duplicate(true)`. 
 
 ## Detectando recursos compartilhados
 
