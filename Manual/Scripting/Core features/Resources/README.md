@@ -57,9 +57,33 @@ Se a opção *Local to Scene* não estiver habilitada, vimos acima como é o com
 
 > PS: Apesar da instância com o *Editable Children* ter recurso independente, ela ainda é filha do objeto original e compartilha algumas propriedades com ele, como transformações, cores, visibilidade, entre outros. Tenha sempre atenção para não fazer confusão com isso.
 
-Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar a colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original. Como já comentamos em outras ocasiões, para ter total independência (transformações, recursos, tudo), habilite a opção *Make Local*.
+Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar a colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/db0bfd07-acc7-489b-9323-a80e53679f8c" />
 </p>
 
+> PS: Como já comentamos em outras ocasiões, para ter total independência (transformações, recursos, tudo), habilite a opção *Make Local*.
+
+A opção *Local to Scene* brilha mesmo quando você cria instâncias por código. Nesse caso, é como se elas fossem *Editable Children* por default, então todas tem recursos independentes. Ocultamos os dois blocos A e B comentados acima e agoras criamos dois por código na Main. O bloco original ainda é o mesmo, com a opção *Local to Scene* habilitada. Apenas manipulamos a posição e escala dos blocos. Note que ambas os shapes de colisão se alteraram como pedimos. 
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/cf9fdb47-c333-4d7f-a8dc-5c19d226c350" />
+</p>
+
+Se tivéssemos executado este mesmo script sem *Local to Scene*, o primeiro comando `a.get_node("CollisionShape2D").shape.size = Vector2(64, 32)` de fato iria funcionar, alterando a shape para todos os blocos, pois o recurso está sendo compartilhado. Logo depois, o comando `b.get_node("CollisionShape2D").shape.size = Vector2(128, 20)` iria sobrescrever o comando anterior, e a shape de colisão de todo mundo seria essa.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/2eaf0a17-2e57-456e-8bea-963973016d20" />
+</p>
+
+### Make Unique
+
+
+## Detectando recursos compartilhados
+
+Se você estiver em dúvida se um recurso de um node está sendo compartilhado com o de um outro node, olhe para a propriedade *Path* do recurso. Se esta propriedade for igual para o recurso em dois nodes diferentes, então é o mesmo recurso, está sendo compartilhado. Caso seja diferente, são recursos independentes.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/d779ee0a-a641-4155-a557-cab6b3fe747b" />
+</p>
