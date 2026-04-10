@@ -151,3 +151,30 @@ Apenas para testar as coisas, printamos os atributos `health` e `strings`, e ins
   <img width="300" src="https://github.com/user-attachments/assets/d308bb36-478e-436e-b77a-9a259b1435f8" />
   <img width="400" src="https://github.com/user-attachments/assets/5c546b3b-9dcf-47f7-9440-add610b5be23" />
 </p>
+
+Se quiser, você pode ir no *Inspector* e clicar no item do recurso para abrir e ver as suas propriedades. Todas elas são editáveis. Para este exemplo, achei interessante alterar todas. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/a9713889-06db-4827-893d-ae9e87c5875d" />
+  <img width="400" src="https://github.com/user-attachments/assets/94d62108-a711-42a3-8e7c-89686ef7469f" />
+</p>
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/a42ca346-7082-4942-bfa8-52f19fb9da5b" />
+  <img width="400" src="https://github.com/user-attachments/assets/f11a962d-5997-4a92-8f29-96c5c9e97e9d" />
+</p>
+
+⚠️ **Atenção:** É bom ter em mente que isso altera o recurso original (recursos não criam duplicatas por padrão). Caso queira manter o original, em vez de arrastar o arquivo de recurso do *FileSystem*, vá direto na propriedade exportada no *Inspector* e clique nela. Você verá que tem a opção da própria classe ali. Clique nela e isso irá criar uma intância zerada para você trabalhar.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/1f71988e-598c-4e0d-b9e4-606d45642822" />
+  <img width="400" src="https://github.com/user-attachments/assets/ce94feaf-2bda-454a-8464-a7de75d2b5d3" />
+</p>
+
+Em vez de usar o arquivo de recurso, você também pode criar uma instância da maneira tradicional.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/beb30139-09bb-4f8c-9d32-ca219df65035" />
+  <img width="600" src="https://github.com/user-attachments/assets/04172b13-97c7-4343-a711-a4d6ec423c57" />
+</p>
+
