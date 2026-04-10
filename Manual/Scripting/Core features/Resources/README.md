@@ -121,7 +121,7 @@ Uma vez que o arquivo da classe já existe, o próximo passo é ir no *FileSyste
   <img width="700" src="https://github.com/user-attachments/assets/b2bd05ea-b42d-487b-aff8-ab98897f89a6" />
 </p>
 
-No *FileSystem*, clique duas vezes no arquivo que acabou de criar para abrir ele no *Inspector*. Você irá notar que está tudo como no default do `_init`. É aqui que a coisa começa a ficar interessante. Você pode alterar os valores do *Inspector* e mandar salvar o arquivo. Com isso, você terá salvo em um arquivo uma instância da classe. Geralmente, instâncias de classes são criadas dentro do código, durante a execução. Neste caso você possui um arquivo com esta instância, ele pode ser carregado em diversos lugares diferentes do projeto e inclusive pode ser usado em outros projetos.
+No *FileSystem*, clique duas vezes no arquivo que acabou de criar para abri-lo no *Inspector*. Você irá notar que está tudo como no default do `_init`. É aqui que a coisa começa a ficar interessante. Você pode alterar os valores do *Inspector* e mandar salvar o arquivo. Com isso, você terá salvo em um arquivo uma instância da classe. Geralmente, instâncias de classes são criadas dentro do código, durante a execução. Neste caso você possui um arquivo com esta instância, ele pode ser carregado em diversos lugares diferentes do projeto e inclusive pode ser usado em outros projetos.
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/610ccd74-6696-4610-b0a2-c12fd07b6ab1" />
@@ -152,7 +152,7 @@ Apenas para testar as coisas, printamos os atributos `health` e `strings`, e ins
   <img width="400" src="https://github.com/user-attachments/assets/5c546b3b-9dcf-47f7-9440-add610b5be23" />
 </p>
 
-Se quiser, você pode ir no *Inspector* e clicar no item do recurso para abrir e ver as suas propriedades. Todas elas são editáveis. Para este exemplo, achei interessante alterar todas. 
+Se quiser, você pode ir no *Inspector* e clicar no item do recurso para abri-lo e ver as suas propriedades. Todas elas são editáveis. Para este exemplo, achei interessante alterar todas. 
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/a9713889-06db-4827-893d-ae9e87c5875d" />
