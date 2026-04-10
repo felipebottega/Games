@@ -46,7 +46,7 @@ Se habilitado, versões menores da textura serão geradas na importação. Por e
   - As texturas não ficarão granuladas à distância (em 3D) ou se forem reduzidas devido ao zoom da câmera ou à escala do `CanvasItem` (em 2D).
   - O desempenho melhorará se a textura for exibida à distância, já que a amostragem de versões menores da textura original é mais rápida e requer menos memória.
 
-A desvantagem dos mipmaps é que eles aumentam o uso de memória total em cerca de 33%. É recomendável habilitar os mipmaps em 3D. No entanto, em 2D, isso só deve ser habilitado se o seu projeto se beneficiar visivelmente da ativação dos mipmaps. Se a câmera nunca diminuir o zoom significativamente, não haverá benefício em habilitar mipmaps, mas o uso de memória aumentará. Segue abaixo uma pequeno resumo de quando usar e não usar mipmaps.
+A desvantagem dos mipmaps é que eles aumentam o uso de memória total em cerca de 33%. É recomendável habilitar os mipmaps em 3D. No entanto, em 2D, isso só deve ser habilitado se o seu projeto se beneficiar visivelmente da ativação dos mipmaps. Se a câmera nunca diminuir o zoom significativamente, não haverá benefício em habilitar mipmaps, mas o uso de memória aumentará. Depois que você tiver gerado os mipmaps, não é necessário fazer mais nada pois a enigne faz uso deles automaticamente no jogo. Segue abaixo uma pequeno resumo de quando usar e não usar mipmaps.
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/d3663f3e-8929-45bb-92b8-70fb88ed5653" />
