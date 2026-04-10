@@ -164,7 +164,7 @@ Se quiser, você pode ir no *Inspector* e clicar no item do recurso para abri-lo
   <img width="400" src="https://github.com/user-attachments/assets/f11a962d-5997-4a92-8f29-96c5c9e97e9d" />
 </p>
 
-⚠️ **Atenção:** É bom ter em mente que isso altera o recurso original (recursos não criam duplicatas por padrão). Caso queira manter o original, em vez de arrastar o arquivo de recurso do *FileSystem*, vá direto na propriedade exportada no *Inspector* e clique nela. Você verá que tem a opção da própria classe ali. Clique nela e isso irá criar uma intância zerada para você trabalhar.
+⚠️ **Atenção:** É bom ter em mente que isso altera o recurso original (recursos não criam duplicatas por padrão). Caso queira manter o original, em vez de arrastar o arquivo de recurso do *FileSystem*, vá direto na propriedade exportada no *Inspector* e clique nela. Você verá que tem a opção da própria classe ali. Clique nela e isso irá criar uma instância zerada para você trabalhar.
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/1f71988e-598c-4e0d-b9e4-606d45642822" />
