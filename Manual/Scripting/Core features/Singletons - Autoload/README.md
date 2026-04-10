@@ -6,13 +6,15 @@ Em Godot, o autoload é um recurso que permite manter um script ou cena sempre c
 
 ## Criando um autoload
 
-A primeira coisa a se fazer é criar a cena ou script que você quer que seja autoload. Vamos ver como se faz com um exemplo. Criamos um jogo onde a cena Main possui dois botões, cada um gera um sinal que aciona uma mudança de cena com a chamada `get_tree().change_scene_to_file()`. O usuário tem duas escolhas, cada uma levando a uma cena diferente. Nesse jogo o jogador clica para criar uma bolinha no espaço 2D, e o objetivo é que ela caia, ultrapassando os obstáculos. Cada bolinha que sai da tela acrescenta um ponto para o usuário. Queremos que a pontuação seja cumulativa durante o jogo: o jogador pode trocar de cenas à vontade e acumular mais pontos. Por design, cada troca de cena deleta a cena atual, então a contagem de pontos tem que ser feito a nível global, em um autoload.
+A primeira coisa a se fazer é criar a cena ou script que você quer que seja autoload. Vamos ver como se faz isso através de exemplo. Criamos um jogo onde a cena Main possui dois botões, cada um gera um sinal que aciona uma mudança de cena com a chamada `get_tree().change_scene_to_file()`. O usuário tem duas escolhas, cada uma levando a uma cena diferente. Nesse jogo o jogador clica para criar uma bolinha no espaço 2D, e o objetivo é que ela caia, ultrapassando os obstáculos. Cada bolinha que sai da tela acrescenta um ponto para o usuário. Queremos que a pontuação seja cumulativa durante o jogo: o jogador pode trocar de cenas à vontade e acumular mais pontos. Por design, cada troca de cena deleta a cena atual, então a contagem de pontos tem que ser feito a nível global, em um autoload.
 
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/b8cab8db-6d6b-40de-8f96-216850ef5093" />
 </p>
 
-Existem várias maneiras de se resolver esse problema. A maneira adotada aqui foi a seguinte: a cada segundo é feita uma varredura todos os nodes da cena, e registra-se os que são do tipo `RigidBody2D` e já saíram da tela. As ocorrências são guardadas em um array, portanto o tamanho do array é a pontuação do jogador.
+### Script autoload
+
+Existem várias maneiras de se resolver esse problema. A maneira adotada aqui foi a seguinte: criamos um script global que faz, a cada segundo, uma varredura todos os nodes da cena, registrando os que são do tipo `RigidBody2D` e já saíram da tela. As ocorrências são guardadas em um array, de modo que o tamanho do array é a pontuação do jogador.
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/2d442b89-2299-4b7f-a336-841a24ca3c09" />
@@ -31,6 +33,11 @@ Quando você executar o jogo e for em *Remote*, vai notar que um node associado 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/5e11f88f-5911-41ab-9e2a-3b2cea52bc2b" />
 </p>
+
+### Cena autoload
+
+Note que não existe nenhuma indicação da pontuação na tela ainda. É possível adicionar um node `Label` em cada uma das cenas, e nesse node teríamos a pontuação, que é global. Isso não é muito conveniente pois exige criar um label por cena. Para esse exemplo, será mais interessante ter uma label única visível constantemente na tela. Isso é possível através de uma cena autoload.
+
 
 
 
