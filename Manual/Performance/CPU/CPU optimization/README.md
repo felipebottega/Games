@@ -10,7 +10,7 @@ A primeira ferramenta fundamental para qualquer desenvolvedor que queira melhora
   <img width="900" src="https://github.com/user-attachments/assets/9056416e-30c5-4add-83e2-a69e1e97fd62" />
 </p>
 
-## árvore da cena
+## Árvore da cena
 
 Nodes são muito poderosos, mas cada um tem um custo de performance. Funções como `_process` e `_physics_process` percorrem toda a árvore da cena, e isso pode virar um gargalo quando há muitos nodes. Normalmente é mais eficiente ter menos nodes com mais responsabilidade cada um. 
 
