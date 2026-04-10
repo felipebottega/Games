@@ -95,3 +95,28 @@ Se você estiver em dúvida se um recurso de um node está sendo compartilhado c
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/d779ee0a-a641-4155-a557-cab6b3fe747b" />
 </p>
+
+## Criando recursos
+
+Para criar o seu próprio recurso, a primeira coisa que deve fazer é criar um arquivo *.gd*. Este arquivo vai conter a classe que representa o recurso a ser criado. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/b7c13dbf-0273-4268-89d6-4a68cf3330aa" />
+  <img width="400" src="https://github.com/user-attachments/assets/782cf3a4-9a9c-4642-a81f-1661f1d95228" />
+</p>
+
+No que diz respeito à escrita de código, a única diferença entre uma classe normal e uma classe representando um recurso é que a segunda usa o `extends Resource`. Mas essa diferença faz toda a diferença. A partir desta classe, você pode criar instâncias em formato de arquivo *.tres*, ele aparece no *Inspector*, salva automaticamente e pode ser arrastado pra nodes. Vamos ver como funciona na prática, tudo ficará mais claro.
+
+Começamos criando o nosso arquivo *stats.gd*. Ele possui a declaração das variáveis da instância e o `_init` para criar instâncias com parâmetros. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/6b55a08f-720d-4ee9-ad64-bd3accf58273" />
+</p>
+
+Uma vez que o arquivo da classe já existe, o próximo passo é ir no *FileSystem* novamente e criar um arquivo do tipo *Resource*. Na janela que abriu, busque o nome da classe que acabou de criar e clique em *Create*. Após isso você pode salvar o arquivo com o nome que quiser.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/72b096b9-101a-467d-af91-750f92484dc1" />
+  <img width="650" src="https://github.com/user-attachments/assets/f6a93306-d322-4b17-aa44-da91ccf168d2" />
+  <img width="700" src="https://github.com/user-attachments/assets/b2bd05ea-b42d-487b-aff8-ab98897f89a6" />
+</p>
