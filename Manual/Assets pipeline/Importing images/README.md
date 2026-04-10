@@ -52,6 +52,13 @@ A desvantagem dos mipmaps é que eles aumentam o uso de memória total em cerca 
   <img width="400" src="https://github.com/user-attachments/assets/d3663f3e-8929-45bb-92b8-70fb88ed5653" />
 </p>
 
+Ao habilitar mipmaps pelo import e mandar reimportar, as versões menores da textura estarão "embutidas" na textura principal. Você pode checar isso pelo *Inspector*.
+
+<p align="center">
+  <img width="150" src="https://github.com/user-attachments/assets/5f0516db-64c8-4692-bd15-3f1ffb9c3bd6" />
+  <img width="150" src="https://github.com/user-attachments/assets/6046f033-b294-4671-b707-d92d94ef48d1" />
+</p>
+
 > PS: Habilitar mipmaps pode fazer com que as texturas pareçam mais desfocadas, mas você pode optar por torná-las mais nítidas (ao custo de alguma granulação) definindo *Project → Project Settings → General → Rendering → Textures → Default Filters → Texture Mipmap Bias* para um valor negativo. 
 
 ### Roughness
