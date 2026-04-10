@@ -1,6 +1,6 @@
 # Resources
 
-O conceito de "recurso" ("resource" em inglês) já foi abordado diversas vezes em tutoriais anteriores. Vou deixar abaixo a lista das vezes em que ele foi tratado anteriormente, para termos uma referência geral.
+O conceito de "recurso" ("resource", em inglês) já foi abordado diversas vezes em tutoriais anteriores. Vou deixar abaixo a lista das vezes em que ele foi tratado anteriormente, para termos uma referência geral.
 
 - **Onde entram os recursos na estrutura do projeto:** [Organização de um projeto](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#organiza%C3%A7%C3%A3o-de-um-projeto)
 - **Recursos aplicados na linguagem do jogo:** [Assets associados a linguagens](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#assets-associados-a-linguagens)
@@ -57,13 +57,14 @@ Se a opção *Local to Scene* não estiver habilitada, vimos acima como é o com
 
 > PS: Apesar da instância com o *Editable Children* ter recurso independente, ela ainda é filha do objeto original e compartilha algumas propriedades com ele, como transformações, cores, visibilidade, entre outros. Tenha sempre atenção para não fazer confusão com isso.
 
-Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar a colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original.
+Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar a colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original (como já comentamos em outras ocasiões, para ter total independência (transformações, recursos, tudo), habilite a opção *Make Local*).
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/db0bfd07-acc7-489b-9323-a80e53679f8c" />
 </p>
 
-> PS: Como já comentamos em outras ocasiões, para ter total independência (transformações, recursos, tudo), habilite a opção *Make Local*.
+> PS: A observação acima apenas vale quando você não alterou a propriedade do objeto instanciado. Caso esta propriedade tenha sido alterada, aparecerá o símbolo <img width="20" src="https://github.com/user-attachments/assets/1df980bb-e48e-4daf-b6aa-7eba4d4e2e8d" /> ao lado da propriedade
+ no *Inspector*, e isso sinaliza que ela foi alterada. Nesse caso, a propriedade não responde mais às alterações do original.
 
 A opção *Local to Scene* brilha mesmo quando você cria instâncias por código. Nesse caso, é como se elas fossem *Editable Children* por default, então todas tem recursos independentes. Ocultamos os dois blocos A e B comentados acima e agoras criamos dois por código na Main. O bloco original ainda é o mesmo, com a opção *Local to Scene* habilitada. Apenas manipulamos a posição e escala dos blocos. Note que ambas os shapes de colisão se alteraram como pedimos. 
 
@@ -78,6 +79,12 @@ Se tivéssemos executado este mesmo script sem *Local to Scene*, o primeiro coma
 </p>
 
 ### Make Unique
+
+A opção *Make Unique* é mais simples, mais pontual e mais "radical". Esta opção você não habilita no node original, mas sim na instância. Ao habilitá-la, a engine cria uma cópia do recurso para a instância. Essa cópia é totalmente independente da original. Note que para acessar essa propriedade, você precisa primeiro ativar a *Editable Children* ou *Make Local*. A mesma observação sobre transformações e outras coisas continuam valendo. O node ainda é filho do original e reage à certas alterações dele.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/f2e365ce-f9fe-419c-9dd0-f5cd71d37b7a" />
+</p>
 
 
 ## Detectando recursos compartilhados
