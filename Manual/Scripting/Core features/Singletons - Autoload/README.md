@@ -61,7 +61,7 @@ Feito isso, repetimos o processo de ir em *Project → Project Settings → Glob
 Note na figura abaixo a ordem dos nodes na árvore durante a execução do jogo. A ordem dos autoloads segue a ordem listada em *Project → Project Settings → Globals*. Se a ordem for relevante, é só alterá-la ali.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/d442eeaf-99f5-4758-a1b7-df2d5be2866f" />
+  <img width="220" src="https://github.com/user-attachments/assets/d442eeaf-99f5-4758-a1b7-df2d5be2866f" />
 </p>
 
 
