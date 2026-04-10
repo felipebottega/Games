@@ -47,7 +47,7 @@ Se você voltar para a cena *Blocks* e clicar no campo *Shape* do `CollisionShap
   <img width="500" src="https://github.com/user-attachments/assets/cbc33964-7ac3-4ae7-b6ae-07e8a2bcd603" />
 </p>
 
-Em geral, vamos evitar alterar o *Path*. A propriedade *Name* é puramente estético, não faz mal alterar mas também não importa muito. A propriedade *Local to Scene* é a única que nos importa de verdade. Como comentamos antes, a engine carrega um recurso uma única vez, não faz duplicatas. Isso significa que os dois *Blocks* instanciados na cena principal estão referenciando o mesmo recurso. Como consequência disso, alterar qualquer um altera todos os outros imediatamente, seja alterar algum instanciado ou alterar o original.
+Em geral, vamos evitar alterar o *Path*. A propriedade *Name* é puramente estética, não faz mal alterar mas também não importa muito. A propriedade *Local to Scene* é a única que nos importa de verdade. Como comentamos antes, a engine carrega um recurso uma única vez, não faz duplicatas. Isso significa que os dois *Blocks* instanciados na cena principal estão referenciando o mesmo recurso. Como consequência disso, alterar qualquer um altera todos os outros imediatamente, seja alterar algum instanciado ou alterar o original.
 
 https://github.com/user-attachments/assets/dd43b99a-077a-4d52-8011-1240c90e7c7e
 
