@@ -6,10 +6,35 @@ Em Godot, o autoload é um recurso que permite manter um script ou cena sempre c
 
 ## Criando um autoload
 
-*Project → Project Settings → General → Display → Window*
+A primeira coisa a se fazer é criar a cena ou script que você quer que seja autoload. Vamos ver como se faz com um exemplo. Criamos um jogo onde a cena Main possui dois botões, cada um gera um sinal que aciona uma mudança de cena com a chamada `get_tree().change_scene_to_file()`. O usuário tem duas escolhas, cada uma levando a uma cena diferente. Nesse jogo o jogador clica para criar uma bolinha no espaço 2D, e o objetivo é que ela caia, ultrapassando os obstáculos. Cada bolinha que sai da tela acrescenta um ponto para o usuário. Queremos que a pontuação seja cumulativa durante o jogo: o jogador pode trocar de cenas à vontade e acumular mais pontos. Por design, cada troca de cena deleta a cena atual, então a contagem de pontos tem que ser feito a nível global, em um autoload.
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/b8cab8db-6d6b-40de-8f96-216850ef5093" />
+</p>
+
+Existem várias maneiras de se resolver esse problema. A maneira adotada aqui foi a seguinte: a cada segundo é feita uma varredura todos os nodes da cena, e registra-se os que são do tipo `RigidBody2D` e já saíram da tela. As ocorrências são guardadas em um array, portanto o tamanho do array é a pontuação do jogador.
+
+<p align="center">
+  <img width="550" src="https://github.com/user-attachments/assets/2d442b89-2299-4b7f-a336-841a24ca3c09" />
+</p>
+
+Uma vez que o script está salvo, agora é hora de torná-lo um autoload. Para isso, vá em *Project → Project Settings → Globals* e clique no ícone de pasta para buscar o seu script. Após selecioná-lo, o nome dele vai aparecer no campo *Node Name* (este campo é para nodes e scripts). Você pode editar o nome se quiser. Depois disso clique em *+Add*, e o seu script vai aparecer na lista abaixo de objetos globais.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/2fc161e9-6805-441c-bb3b-fa6dc673bc15" />
+  <img width="850" src="https://github.com/user-attachments/assets/eb22c4d3-20cf-4554-8a09-58ee98209687" />
+  <img width="850" src="https://github.com/user-attachments/assets/84fc2af2-63e0-491e-a2d5-3e2f465c8ec7" />
+</p>
+
+Quando você executar o jogo e for em *Remote*, vai notar que um node associado ao script foi criado. Esse é o comportamento padrão, a Godot sempre vai incluir o script no projeto através de um node. Note também que ele é inserido primeiro na árvore e no nível mais alto possível da hierarquia (apenas abaixo de *root*).
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/5e11f88f-5911-41ab-9e2a-3b2cea52bc2b" />
+</p>
 
 
-⚠️ **Atenção:** Isso foi um detalhe bobo que me pegou durante a elaboração deste tutorial, mas vale a pena deixa aqui registrado. Quando você executa uma cena com F6 (não é a cena principal do jogo) ou clicando no botão do painel abaixo, é necessário dar stop na execução para poder executar outra cena. Não bsata apenas selecionar outra cena no editor e dar F6 novamente, isso vai executar a cena anterior que estava rodando. 
+
+⚠️ **Atenção:** Isso foi um detalhe bobo que me pegou durante a elaboração deste tutorial, mas vale a pena deixa aqui registrado. Quando você executa uma cena com F6 (não é a cena principal do jogo) ou clicando no botão do painel abaixo, é necessário dar stop na execução para poder executar outra cena. Não basta apenas selecionar outra cena no editor e dar F6 novamente, isso vai executar a cena anterior que estava rodando. 
 
 <p align="center">
   <img width="180" src="https://github.com/user-attachments/assets/9cfd41f9-92d0-4875-a0e8-41548e14c899" />
