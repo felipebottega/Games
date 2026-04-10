@@ -1,1 +1,3 @@
 # Singletons - Autoload
+
+*Autoload* (ou o termo menos usado, *singleton*) é um tema que aplicamos na prática sem explicar muito o conceito. Recomendo dar uma olhada nos tutoriais de [TileMap](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#toques-finais), [Background loading](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading#m%C3%A9todo-esperto-de-pr%C3%A9-carregamento) e [Saving games](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#npcs-e-checkpoints).
