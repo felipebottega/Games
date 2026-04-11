@@ -3,7 +3,7 @@
 Como prometido anteriormente, agora vamos falar sobre o painel de output do editor.
 
 <p align="center">
-  <img width="850" src="https://github.com/user-attachments/assets/72977b5d-9e43-41d6-aa7e-27f62a4ce9f5" />
+  <img width="900" src="https://github.com/user-attachments/assets/72977b5d-9e43-41d6-aa7e-27f62a4ce9f5" />
 </p>
 
 ## Tipos de messagens
@@ -17,10 +17,10 @@ Quatro tipos de mensagens estão disponíveis neste painel:
 
 ## Filtros para as mensagens
 
-No painel de output há vários tipos de filtros, o que pode facilitar bastante a sua vida quando há mensagens demais no painel. Listamos abaixo todos os filtros disponíveis no editor.
+No painel de output há vários tipos de filtros, o que pode facilitar bastante a sua vida quando há mensagens demais no painel. Listamos abaixo todos os filtros disponíveis do editor.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/32b3d33d-7758-4a28-87d1-5b8a168e8d91" />
+  <img width="950" src="https://github.com/user-attachments/assets/32b3d33d-7758-4a28-87d1-5b8a168e8d91" />
 </p>
 
 1. Filtra o output para mostrar apenas os prints contendo o conteúdo digitado.
@@ -45,11 +45,11 @@ A Godot oferece alguns comandos especiais para printar. O mais comum é o `print
 - **print_rich():** Semelhante a `print()`, mas permite o uso de [BBCode](https://www.bbcode.org/reference.php) para formatar o texto.
 - **push_error():** Printa uma mensagem de erro. A mensagem é exibida na aba *Debugger → Errors*.
 - **push_warning():** Printa uma mensagem de aviso. A mensagem exibida na aba *Debugger → Errors*.
-- **print_stack():** Printa a *stack trace* a partir da localização atual. Suportado apenas quando executado a partir do editor ou quando o projeto é exportado em modo de debug.
-- **print_tree():** Printa a árvore de cena relativa ao node atual.
+- **print_stack():** Printa a *stack trace* a partir da localização atual. Suportado apenas quando o projeto é executado no editor ou quando o projeto é exportado em modo de debug.
+- **print_tree():** Printa a árvore de cena relativa ao node que chamou este comando.
 - **print_tree_pretty():** Semelhante ao `print_tree()`, mas com caracteres Unicode para uma aparência mais semelhante a uma árvore.
 
-Agora considere o exemplo abaixo.
+O exemplo abaixo mostra como esses comandos funcionam.
 
 <p align="center">
   <img width="220" src="https://github.com/user-attachments/assets/a5e389a9-5d02-43b8-a65e-9654e09c95dd" />
