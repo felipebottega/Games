@@ -1663,9 +1663,6 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system#resource-path-e-user-path
 ">  Resource path e user path
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system#
-">  
- </a><br>
 <li> <b>Manual\Scripting\Core features\Resources</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#carregando-recursos
 ">  Carregando recursos
