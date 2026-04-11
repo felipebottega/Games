@@ -6,7 +6,7 @@ Como dito [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/M
   <img width="1100" src="https://github.com/user-attachments/assets/5af43c6c-a1c1-4298-be86-6414f854cc84" />
 </p>
 
-Para começar a monitorar, você pode clicar no botão de *Start* durante a execução do jogo. Daí é só clicar no *Stop* para parar. Caso você clique no gráfico, vai pausar o jogo também e o monitoramento. Caso queira que o monitoramento comece junto do jogo, é habilitar a opção *Autostart*.
+Para começar a monitorar, você pode clicar no botão de *Start* durante a execução do jogo. Daí é só clicar no *Stop* para parar. Caso você clique no gráfico, vai pausar o jogo e o monitoramento. Caso queira que o monitoramento comece junto do jogo, é só habilitar a opção *Autostart*.
 
 ## Métricas
 
