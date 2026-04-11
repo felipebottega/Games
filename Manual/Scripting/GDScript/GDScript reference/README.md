@@ -670,7 +670,7 @@ match point:
 
 ### Classes sem nome
 
-Todo script de Godot é considerado como uma classe em Godot. Se nenhum nome for dado à classe representando o script, ela será uma classe sem nome. Neste caso, você deve referenciar esta classe em outros scripts usando o caminho absoluto até ela. Considere a classe abaixo de exemplo.
+Todo script de Godot é considerado como uma classe. Se nenhum nome for dado à classe representando o script, ela será uma classe sem nome. Neste caso, você deve referenciar esta classe em outros scripts usando o caminho absoluto até ela. Considere a classe abaixo de exemplo.
 
 <p align="center">
 	<img width="400" src="https://github.com/user-attachments/assets/cb2ad07d-f5fa-4070-bad3-1da533a425ed" />
@@ -688,15 +688,15 @@ Também é possível obter o mesmo resultado utilizando as chamadas `load` e `ne
 	<img width="750" src="https://github.com/user-attachments/assets/a9dda508-eb09-4485-82c7-4a9f1edeb4d9" />
 </p>
 
-> PS: Para criar uma instância de uma classe, usando o método `new`, para criar uma instância de uma cena, usamos o método `instantiate`. Para carregar uma classe (de um script) ou uma cena, ambas as funções `load` e `preload` podem ser usadas.
+> PS: Para criar uma instância de uma classe, usamos o método `new`. Para criar uma instância de uma cena, usamos o método `instantiate`. Para carregar uma classe (de um script) ou uma cena, ambas as funções `load` e `preload` podem ser usadas.
 
 ### Classes nomeadas
 
-Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. No nosso último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais, não é mais necessário usar nem `extends` nem `load`. Também é importante lembrar que classes nomeadas automaticamente podem ser encontradas pelo help do editor e passam a possuir a sua própria documentação. Isso foi explicado na seção de comentários.
+Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. No nosso último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais no projeto, não é mais necessário usar nem `extends` nem `load`. Também é importante lembrar que classes nomeadas automaticamente podem ser encontradas pelo help do editor e passam a possuir a sua própria documentação. Isso foi explicado na seção de comentários.
 
 <p align="center">
-	<img width="330" src="https://github.com/user-attachments/assets/00305d8a-f652-4227-bfa3-ff670d83668c" />
-	<img width="670" src="https://github.com/user-attachments/assets/73db02ee-8d38-464e-a958-9fd5c80fe3df" />
+	<img width="400" src="https://github.com/user-attachments/assets/00305d8a-f652-4227-bfa3-ff670d83668c" />
+	<img width="850" src="https://github.com/user-attachments/assets/73db02ee-8d38-464e-a958-9fd5c80fe3df" />
 </p>
 
 > PS: Este assunto foi brevemente abordado no projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo).
@@ -731,7 +731,7 @@ Para checar se um objeto herda de uma certa classe, você pode usar a sintaxe `i
 
 O construtor de classe é a função nativa `_init`, que já foi abordada [bem no início](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#_init-vs-_ready) desta série de tutoriais. Naquela época, apenas o descrevemos como uma função que inicializa variáveis básicas de scripts antes de qualquer node entrar em cena. Esta inicialização de variáveis serve para criar instâncias com parâmetros, assim como é o `__init__` de Python. 
 
-Abaixo segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Neste caso ela necessita de um construtor para ser inicializada. Este construtor exige uma variável inteira de entrada, é o parâmetro para inicializar uma instância. Quando a instância é inicializada com o comando `var my_class_instance = amazing2.new(100)`, a função `_init` é executada com este parâmetro. Isto ocorre antes de qualquer `_ready` na cena, a não ser que a instância seja criada explicitamente após o `_ready`.
+Abaixo, segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Neste caso ela necessita de um construtor para ser inicializada. Este construtor exige uma variável inteira de entrada, é o parâmetro para inicializar uma instância. Quando a instância é inicializada com o comando `var my_class_instance = amazing2.new(100)`, a função `_init` é executada com este parâmetro. Isto ocorre antes de qualquer `_ready` na cena, a não ser que a instância seja criada explicitamente após o `_ready`.
 
 <p align="center">
 	<img width="300" src="https://github.com/user-attachments/assets/a7b67bc0-d234-4596-a60a-cc261d3a595b" />
@@ -740,7 +740,7 @@ Abaixo segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Ne
 
 ### Classes internas
 
-Todo arquivo de classe pode conter outras classes internas. Para criar uma, basta usar o comando `class {nome}`, em que *nome* é qualquer nome que você queira dar para a sua classe interna. No projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo) foi utilizada uma classe interna no arquivo. Abaixo temos o trecho inicial do arquivo para relembrar.
+Todo arquivo de classe pode conter outras classes internas. Para criar uma, basta usar o comando `class {nome}`, em que *nome* é qualquer nome que você queira dar para a sua classe interna. No projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo) foi utilizada uma classe interna no arquivo. Abaixo, temos o trecho inicial do arquivo para relembrar.
 
 ```python
 class_name ComplexLib  
@@ -767,9 +767,9 @@ Uma instância pode ser definida com o comando `var z = ComplexLib.Complex.new(1
 
 ## setters e getters
 
-AS keywords `set` e `get` servem para fazer algo quando a variável é acessada ou alterar algo quando o valor da variável é alterado, respectivamente. Só é possível usar estas keywords em variáveis da instância, não serve para variáveis dentro de funções. 
+As keywords `set` e `get` servem para fazer algo quando a variável é acessada ou alterar algo quando o valor da variável é alterado, respectivamente. Só é possível usar estas keywords em variáveis da instância, não serve para variáveis dentro de funções. 
 
-No exemplo abaixo, o `get` diz que a variável `seconds` deve ser igual a `milliseconds / 1000` sempre que `seconds` for acessada. Se alguma computação intermediária e a alterou, ela voltará "ao normal" assim que tentarem acessá-la (pode-se dizer que ela tem um vínculo com `milliseconds`). O `set` diz que `milliseconds` deve ser alterado para `milliseconds = value * 1000` sempre que o valor de `seconds` for alterado (alterado do valor anterior para o novo valor `value`).
+No exemplo abaixo, o `get` diz que a variável `seconds` deve ser igual a `milliseconds / 1000` sempre que `seconds` for acessada. Se alguma computação intermediária a alterou, ela voltará "ao normal" assim que tentarem acessá-la (pode-se dizer que ela tem um vínculo com `milliseconds`). O `set` diz que `milliseconds` deve ser alterado para `milliseconds = value * 1000` sempre que o valor de `seconds` for alterado (alterado do valor anterior para o novo valor `value`).
 
 ```python
 var milliseconds: int = 15000
@@ -782,7 +782,7 @@ var seconds: int:
 ```
 
 <p align="center">
-	<img width="900" src="https://github.com/user-attachments/assets/eac94ae4-190f-479b-b9b3-1d8ac1d54195" />
+	<img width="1100" src="https://github.com/user-attachments/assets/eac94ae4-190f-479b-b9b3-1d8ac1d54195" />
 </p>
 
 Um exemplo prático de aplicação foi visto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#setter).
@@ -793,11 +793,11 @@ No Godot, existem dois tipos principais de objetos na memória.
 
 1) Objetos que a Godot limpa sozinho
 
-São os que herdam de `RefCounted`, como muitos Resource. Cada vez que alguém está usando o objeto, ele ganha um contador. Quando ninguém mais está usando, esse contador vai para zero e o Godot apaga o objeto automaticamente.
+São os objetos que herdam de `RefCounted`, como *resources*. Cada vez que alguém está usando o objeto, ele ganha um contador. Quando ninguém mais o está usando, esse contador vai para zero e a engine apaga o objeto automaticamente.
 
 2) Objetos que você precisa apagar manualmente
 
-São os que não herdam de `RefCounted`, como `Node` e `Object` (e todos os filhos destes). Esses não somem sozinhos. Você precisa mandar apagar com `free` (apaga na hora) ou com o `queue_free` (apaga no final do frame). Sempre que você apagar um node, os filhos dele também são apagados junto automaticamente.
+São os objetos que não herdam de `RefCounted`, como `Node` e `Object` (e todos os filhos destes). Esses não somem sozinhos. Você precisa mandar apagar com `free` (apaga na hora) ou com o `queue_free` (apaga no final do frame). Sempre que você apagar um node, os filhos dele também são apagados junto automaticamente.
 
 > PS: Alguns filhos do `Object` também são filhos do `RefCounted`, nestes caso é a Godot que limpa sozinha.
 
@@ -807,7 +807,7 @@ Os sinais são uma ferramenta para emitir mensagens de um objeto às quais outro
 
 ### Exemplo prático de sinais
 
-Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador em nossa árvore de cena. Em nosso script `character.gd`, definimos um sinal `health_changed` e o emitimos com `Signal.emit()`, e de um node `Game` mais acima em nossa árvore de cena, o conectamos à barra de vida usando o método `Signal.connect()`. 
+Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador em nossa árvore de cena. No script `character.gd` do personagem, definimos um sinal `health_changed` e o emitimos com `health_changed.emit()`, e de um node *Game* mais acima em nossa árvore de cena, o conectamos à barra de vida usando o método `health_changed.connect()`. 
 
 ```python
 # character.gd
@@ -833,7 +833,7 @@ func _on_Character_health_changed(old_value, new_value):
 	progress_bar.animate(old_value, new_value)
 ```
 
-No node `Game`, obtemos os nodes `Character` e `Lifebar`, e então conectamos o personagem, que emite o sinal, ao receptor, que neste caso é o node `Lifebar`. Isso permite que `Lifebar` reaja às mudanças sem precisar estar vinculada ao node `Character`.
+No node *Game*, obtemos os nodes *Character* e *Lifebar*, e então conectamos o personagem, que emite o sinal, ao receptor, que neste caso é o node *Lifebar*. Isso permite que *Lifebar* reaja às mudanças sem precisar estar vinculada ao node *Character*.
 
 ```python
 # game.gd
@@ -884,7 +884,7 @@ func request_confirmation():
 		print("User cancelled")
 ```
 
-Se você usar o comando `var confirmed = wait_confirmation()`, vai dar em erro. Chamar corrotinas sempre exige o uso do `await`. No entando, o código abaixo funciona, pois ele não tenta receber a saída da corrotina. Caso a corrotina ainda esteja executando, o código abaixo simplesmente vai continuar sem esperar.
+Se você usar o comando `var confirmed = wait_confirmation()`, vai dar em erro. Chamar corrotinas sempre exige o uso do `await`. No entanto, o código abaixo funciona, pois ele não tenta receber a saída da corrotina. Caso a corrotina ainda esteja executando, o código abaixo simplesmente vai continuar sem esperar.
 
 ```python
 func okay():
