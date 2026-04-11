@@ -1,6 +1,6 @@
 # Overview of debugging tools
 
-A Godot vem com um debugger e profiler poderosos para rastrear erros, inspecionar seu jogo em tempo de execução, monitorar métricas essenciais e medir o desempenho. Ele também oferece opções para visualizar caixas de colisão e polígonos de navegação no jogo em execução. Abaixo, temos os dois principais painéis responsáveis por esta parte. 
+A Godot vem com um debugger e profiler poderosos para rastrear erros, inspecionar seu jogo em tempo de execução, monitorar métricas essenciais e medir o desempenho. Ele também oferece opções para visualizar shapes de colisão e polígonos de navegação no jogo em execução. Abaixo, temos os dois principais painéis responsáveis por esta parte. 
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/326b1c64-00f0-4872-8f06-58a8dff00064" />
@@ -23,16 +23,16 @@ Vamos começar falando sobre as opções de debug do editor. Já explicamos sobr
 </p>
 
 - **Deploy with Remote Debug:** Quando esta opção está habilitada, exportar com *one-click deploy* fará com que o executável tente se conectar ao endereço IP deste computador para que o projeto em execução possa ser debugado. Esta opção destina-se à depuração remota (normalmente com um dispositivo móvel).
-- **Small Deploy with Network Filesystem:** Essa opção acelera os testes de jogos grandes em dispositivos remotos. Quando esta opção hailitada, em vez de exportar o jogo completo, gera um executável mínimo. O editor então fornece os arquivos do projeto pela rede.
-- **Visible Collision Shapes:** Quando esta opção estiver habilitada, os shapes de colisão e os nodes de raycast (2D e 3D) ficarão visíveis no projeto em execução.
-- **Visible Paths:** Quando esta opção estiver habilitada, as curvas usadas ​​pelos nodes de caminho (`Path2D` e `PathFollow2D`, ver [este tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child) e [este](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D). ) ficarão visíveis no projeto em execução.
-- **Visible Navigation:** Quando esta opção estiver habilitada, as malhas de navegação e os polígonos ficarão visíveis no projeto em execução. Utilizamos esta opção [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview), [neste](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes) e [neste](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools).
-- **Visible Avoidance:** Quando esta opção estiver habilitada, os shapes, raios e velocidades dos objetos a serem evitados (no sistema de navegação) ficarão visíveis no projeto em execução.
+- **Small Deploy with Network Filesystem:** Essa opção acelera os testes de jogos grandes em dispositivos remotos. Quando esta opção está habilitada, em vez de exportar o jogo completo, gera um executável mínimo. O editor então fornece os arquivos do projeto pela rede.
+- **Visible Collision Shapes:** Quando esta opção está habilitada, os shapes de colisão e os nodes de raycast (2D e 3D) ficarão visíveis no projeto em execução.
+- **Visible Paths:** Quando esta opção está habilitada, as curvas usadas ​​por nodes de caminho (`Path2D` e `PathFollow2D`, ver [este tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child) e [este](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D). ) ficarão visíveis no projeto em execução.
+- **Visible Navigation:** Quando esta opção está habilitada, as malhas e polígonos de navegação ficarão visíveis no projeto em execução. Utilizamos esta opção [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview), [neste](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Connecting%20navigation%20meshes) e [neste](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools).
+- **Visible Avoidance:** Quando esta opção está habilitada, os shapes, raios e velocidades dos objetos a serem evitados (no sistema de navegação) ficarão visíveis no projeto em execução.
 - **Debug CanvasItem Redraws:** Quando esta opção está habilitada, as solicitações de redraw de objetos 2D ficarão visíveis (como um breve flash) no projeto em execução. Isso é útil para solucionar problemas relacionados ao modo de baixo processamento.
 - **Synchronize Scene Changes:** Quando esta opção está habilitada, quaisquer alterações feitas na cena serão replicadas no projeto em execução. Ao usar remotamente em um dispositivo, isso é mais eficiente se a opção de sistema de arquivos de rede estiver ativada.
 - **Synchronize Script Changes:** Quando esta opção está habilitada, quaisquer alterações feitas no script serão recarregadas no projeto em execução. Quando usado remotamente em um dispositivo, isso é mais eficiente com o sistema de arquivos de rede.
 - **Keep Debug Server Open:** Quando essa opção está habilitada, o servidor de debug do editor permanecerá aberto e ficará à espera de novas sessões iniciadas fora do próprio editor.
-- **Customize Run Instances:** Isso abre uma caixa de diálogo que permite instruir a Godot a executar várias instâncias do jogo simultaneamente e especificar os argumentos da linha de comando para cada instância. Isso é especialmente para jogos multiplayer. Como este não é o meu foco no momento, não vou adentrar no assunto. Porém, vale ressaltar que há bastante coisa para se fazer nessa caixa de diálogo.
+- **Customize Run Instances:** Isso abre uma caixa de diálogo que permite instruir a Godot a executar várias instâncias do jogo simultaneamente e especificar os argumentos da linha de comando para cada instância. Isso é específico para jogos multiplayer. Como este não é o meu foco no momento, não vou adentrar no assunto. Porém, vale ressaltar que há bastante coisa para se fazer nessa caixa de diálogo.
 
 ## Script editor debug tools and options
 
@@ -50,7 +50,7 @@ Uma vez que você criou o breakpoint e executou o jogo, ele vai parar exatamente
   <img width="1000" src="https://github.com/user-attachments/assets/d5a774aa-944f-4379-adfe-3c48de743fd8" />
 </p>
 
-Para prosseguir, você pode clicar na aba *Debug* logo acima do script e selecionar *Step Into* ou *Step Over*. A primeira prossegue para a próxima linha da execução e entra nas linhas das funções, enquanto que a segunda não entra nas funções (considera a função como uma única linha e faz a execução toda em uma passo). A opção *Continue* sai do modo de pausa e continua a execução do jogo normalmente. 
+Para prosseguir, você pode clicar na aba *Debug* logo acima do script e selecionar *Step Into* ou *Step Over*. A primeira prossegue para a próxima linha da execução e entra nas linhas das funções, enquanto que a segunda não entra nas funções (considera a função como uma única linha e faz a execução toda da função em uma passo). A opção *Continue* sai do modo de pausa e continua a execução do jogo normalmente. 
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/cef6a2d0-66ee-4cdd-b2c8-1c3be0213cf2" />
@@ -60,7 +60,7 @@ Para prosseguir, você pode clicar na aba *Debug* logo acima do script e selecio
 
 No *Project Settings* há diversas configurações de Debug que podem ser interessantes de alterar dependo do projeto e do desenvolvedor. Para acessar, vá em *Project → Project Settings → General → Debug* (é necessário ativar as opções avançadas). Segue abaixo uma breve descrição de cada campo. 
 
-- **Settings:** Estas são algumas configurações gerais, como imprimir o FPS atual no painel de output, a quantidade máxima de funções durante a criação de perfil e outras.
+- **Settings:** Estas são algumas configurações gerais, como imprimir o FPS atual no painel de output, a quantidade máxima de funções durante o profiling, entre outras.
 - **File Logging:** Estas configurações permitem registrar os logs do console e mensagens de erro em arquivos.
 - **GDScript:** Estas configurações permitem ativar/desativar avisos específicos do GDScript. Você também pode desativar os avisos completamente. Consulte o tutorial [GDScript warning system](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system) para obter mais informações.
 - **Shader Language:** Estas configurações permitem ativar/desativar avisos específicos do shaders. Você também pode desativar os avisos completamente.
@@ -75,7 +75,7 @@ Em várias partes do tutorial foi dito que era necessário ativar as opções av
   <img width="850" src="https://github.com/user-attachments/assets/b99a332b-6d9a-4eb7-aeca-94f0334c071c" />
 </p>
 
-Vou deixar aqui como referência as abas que tem diferente entre o modo normal de avançado.
+Vou deixar aqui como referência as diferenças entre o modo normal de avançado.
 
 <p align="center">
   <img width="150" src="https://github.com/user-attachments/assets/baf62b32-3618-495a-89ab-f847b4ca451a" />
@@ -84,7 +84,7 @@ Vou deixar aqui como referência as abas que tem diferente entre o modo normal d
 
 ## Remote in scene dock
 
-Ao executar um jogo no editor, duas opções aparecem na parte superior do painel *Scene*: *Remote* e *Local*. Ao usar a opção *Remote*, você pode inspecionar ou alterar os parâmetros dos nodes do projeto em execução. A opção *Local* é o conjunto comum dos nodes que você manipula durante o desenvolvimento.
+Ao executar um jogo no editor, duas opções aparecem na parte superior do painel *Scene*: a opção *Remote* e a *Local*. Ao usar a opção *Remote*, você pode inspecionar ou alterar os parâmetros dos nodes do projeto em execução. A opção *Local* é o conjunto comum dos nodes que você manipula durante o desenvolvimento.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/7f1136a7-ec41-4fb6-a97b-edeb4bd1f2a4" />
