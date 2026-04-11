@@ -5,7 +5,7 @@ Na Godot, grupos funcionam como tags. Você pode adicionar um node a quantos gru
 - Chamar um método em todos os nodes de um grupo.
 - Enviar uma notificação para todos os nodes de um grupo.
 
-⚠️ **Atenção:** Esta série de tutoriais começou na Godot 4.4 e agora já está na 4.6. O painel à direta foi ligeiramente alterado. Anteriormente, para acessar os grupos, deveríamos ir na aba *Node* e depois *Groups*. Agora a aba *Groups* já está disponível diretamente.
+⚠️ **Atenção:** Esta série de tutoriais começou na Godot 4.4 e agora já está na 4.6. O painel onde fica o *Inspector* e sinais foi ligeiramente alterado. Anteriormente, para acessar os grupos, deveríamos ir na aba *Node* e depois *Groups*. Agora a aba *Groups* já está disponível diretamente.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/c6696d94-ab46-4abf-af1d-2231ccde8f5f" />
@@ -58,7 +58,7 @@ Criamos uma nova cena, com o sprite rosa desta vez. Em vez de adicioná-lo a um 
   <img width="450" src="https://github.com/user-attachments/assets/6b120c3f-0f71-4583-a4ad-d233e3606492" />
 </p>
 
-A função `add_to_group` não cria grupo global nem grupo de cena no sentido do editor. Ele simplesmente adiciona o nde a um grupo com aquele nome. Se o grupo não existir ainda, ele é criado automaticamente em runtime. Se já existir um grupo global com esse nome, ele usa o mesmo nome normalmente, não há conflito (grupos não têm "namespace").
+A função `add_to_group` não cria grupo global nem grupo de cena no sentido do editor. Ele simplesmente adiciona o node a um grupo com aquele nome. Se o grupo não existir ainda, ele é criado automaticamente em runtime. Se já existir um grupo global com esse nome, ele usa o mesmo nome normalmente, não há conflito (grupos não têm "namespace").
 
 Abaixo temos uma aplicação deste método. Nenhum node pertencente ao grupo "PinkGroup" estava na cena inicialmente, mas foi adicionado por código. Depois disso o programa checou cada node da árvore para ver a quais grupos cada um pertencia.
 
