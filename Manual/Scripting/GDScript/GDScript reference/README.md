@@ -72,7 +72,7 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | `x = y` <br> `x += y` <br> `x -= y` <br> `x *= y` <br> `x /= y` <br> `x **= y` <br> `x %= y` <br> `x &= y` <br> `x \|= y` <br> `x ^= y` <br> `x <<= y` <br> `x >>= y` | Atribuição. Não é possível usar operadores de atribuição dentro de uma expressão. |
 
 O comportamento de alguns operadores pode ser diferente do que você espera:
- - No operador `/`, se ambos os forem do tipo `int`, então será realizada divisão inteira em vez de fracionária. Por exemplo, `5 / 2 == 2`, e não `2.5`. Se isso não for desejado, use pelo menos um literal `float (x / 2.0)` ou faça um cast `float(x) / y`.
+ - No operador `/`, se ambos os valores forem do tipo `int`, então será realizada a divisão inteira em vez de fracionária. Por exemplo, `5 / 2 == 2`, e não `2.5`. Se isso não for desejado, use pelo menos um float na conta (`x / 2.0`) ou faça um cast (`x / float(y)`).
  - O operador `%` está disponível apenas para `int`. Para float, use a função `fmod()`.
  - Os operadores `==` e `!=` às vezes permitem comparar valores de tipos diferentes (por exemplo, `1 == 1.0` é true), mas em outros casos isso pode causar erro em tempo de execução. Se você não tiver certeza sobre os tipos dos elementos, pode usar a função `is_same()` (mas note que ela é mais rigorosa quanto a tipos e referências). Para comparar float, use as funções `is_equal_approx()` e `is_zero_approx()`.
 
@@ -100,28 +100,28 @@ As palavras da figura abaixo são especiais em comentários. A engine, automatic
  <img width="400" src="https://github.com/user-attachments/assets/c321f511-1e68-44c4-8c51-ef9939b3af7e" />
 </p>
 
-O uso de `##` faz com que o comentário tenha caráter de documentação, e vai aparecer como tooltip em outros lugares. Por exemplo, ao colocar este comentário especial sobre uma variável de uma script e depois utilizar esta variável em outro lugar (pode ser no mesmo script ou em outro), você poderá passar o mouse por cima e visualizar a descrição dela.
+O uso de `##` faz com que o comentário tenha caráter de documentação, e vai aparecer como tooltip em outros lugares. Por exemplo, ao colocar este tipo de comentário sobre uma variável de um script e depois utilizar esta variável em outro lugar (pode ser no mesmo script ou em outro), você poderá passar o mouse por cima e visualizar a descrição dela.
 
 <p align="center">
- <img width="400" src="https://github.com/user-attachments/assets/c073a701-1344-4a8f-b920-093e8a74ecc9" />
+ <img width="420" src="https://github.com/user-attachments/assets/c073a701-1344-4a8f-b920-093e8a74ecc9" />
  <img width="580" src="https://github.com/user-attachments/assets/a784a91e-ad9f-4b80-8e33-23e2bee7e1de" />
 </p>
 
 Isso também pode ser feito para funções.
 
 <p align="center">
- <img width="200" src="https://github.com/user-attachments/assets/30eff345-cbdb-4721-bc1e-4cb8e651627f" />
- <img width="630" src="https://github.com/user-attachments/assets/d7ee59cd-0098-4531-bbcb-7edc6ef821eb" />
+ <img width="210" src="https://github.com/user-attachments/assets/30eff345-cbdb-4721-bc1e-4cb8e651627f" />
+ <img width="650" src="https://github.com/user-attachments/assets/d7ee59cd-0098-4531-bbcb-7edc6ef821eb" />
 </p>
 
 No caso de fazer isso para uma variável com a anotação `@export`, a descrição também aparece no *Inspector*.
 
 <p align="center">
  <img width="330" src="https://github.com/user-attachments/assets/be2e7a5c-17f8-4b0d-8b7b-c35c935f0f02" />
- <img width="650" src="https://github.com/user-attachments/assets/fb4f2d02-feff-42c5-b208-511176307c7a" />
+ <img width="650" src="https://github.com/user-attachments/assets/7d0e27c4-017d-4c72-bc2d-82ec5c783edd" />
 </p>
 
-Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `##` logo acima ou logo abaixo da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe. O exemplo abaixo o básico para uma boa documentação.
+Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `##` logo acima da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe. O exemplo abaixo mostra o básico para uma boa documentação.
 
 <p align="center">
 	<img width="600" src="https://github.com/user-attachments/assets/b961b2bc-c18b-42bf-a4a5-67b5cf9d0a75" />
@@ -130,6 +130,8 @@ Se estiver trabalhando com uma classe nomeada, você pode inserir comentários c
 <p align="center">
 	<img width="600" src="https://github.com/user-attachments/assets/298db084-f650-4d9e-af1f-b9dea13d7828" />
 </p>
+
+> PS: A sintaxe usada para a estilização se chama [BBCode](https://www.bbcode.org/reference.php).
 
 ## Regiões de código
 
@@ -174,6 +176,8 @@ var b = 1 + \
 | `String`    | Sequência de caracteres em formato Unicode. |
 | `StringName`| String imutável com instância única por nome. Mais lenta para criar, mas muito rápida para comparação (ideal para chaves de dicionário). |
 | `NodePath`  | Caminho pré-processado para um node ou propriedade. Pode ser convertido de/para `String` e facilita interações com a árvore de cena. |
+
+> PS: `Variant` basicamente quer dizer que a variável é de tipagem dinâmica.
 
 ### Vetores
 
@@ -260,7 +264,7 @@ Definir os tipos das variáveis deixa o teu código mais robusto e ajuda a próp
 
 <p align="center">
 	<img width="150" src="https://github.com/user-attachments/assets/47b2e766-c5f4-4902-9603-59449669bbab" />
-	<img width="410" src="https://github.com/user-attachments/assets/d6eb8c72-c2ca-495e-9796-d7e25401d45f" />
+	<img width="210" src="https://github.com/user-attachments/assets/f6e4419b-e2d6-4bd3-baa0-ea66d8fa1f85" />
 </p>
 
 Para descobrir/checar o tipo de uma variável, você pode usar a função `typeof()`. O retorno desta função será uma constante inteira. Cada valor corresponde a um tipo internamente. Caso você queira o nome do tipo em vez de um número, pode usar o comando `type_string(typeof())`.  Segue abaixo a tabela geral de conversões.
@@ -339,15 +343,13 @@ Neste exemplo, a variável `max_id` é uma variável estática da classe. Isso s
 
 ### Casting
 
-*Casting* é o ato de trocar o tipo de uma variável no código. Se for necessário forçar um valor a ser de um determinado tipo, você pode usar o operador de conversão `as`. A conversão entre tipos de objeto resulta no mesmo objeto se o valor for do mesmo tipo ou de um subtipo do tipo de conversão. 
-
-Por exemplo, suponha que você declarou uma variável desta maneira: `var my_node2D: Node2D`. Depois disso, o comando `my_node2D = $Sprite2D as Node2D` funciona porque `$Sprite2D` é um subtipo do tipo `Node2D`. 
+*Casting* é o ato de trocar o tipo de uma variável no código. Se for necessário forçar um valor a ser de um determinado tipo, você pode usar o operador de conversão `as`. A conversão entre tipos para um objeto resultará no mesmo objeto se o valor for do mesmo tipo ou um subtipo do tipo de conversão. Por exemplo, suponha que você declarou uma variável desta maneira: `var my_node2D: Node2D`. Depois disso, o comando `my_node2D = $Sprite2D as Node2D` funciona porque `$Sprite2D` é um subtipo do tipo `Node2D`. 
 
 No caso de tipo básicos, a engine sempre vai tentar converter mesmo que não seja subtipo. Por exemplo, declarar `var my_int: int` e depois fazer `my_int = "123" as int`. Porém, algo como `my_int = Vector2() as int` não tem como funcionar.
 
 ## Constantes
 
-Constantes são valores declarados que não podem ser alterados depois. Os exemplo abaixo mostram claramente como se declarar constantes.
+Constantes são valores declarados que não podem ser alterados depois. Os exemplos abaixo mostram como declarar constantes.
 
 ```python
 const A = 5
@@ -363,7 +365,7 @@ const F = sin(20)
 
 ## Enum
 
-Enums são basicamente uma abreviação para constantes e são bastante úteis se você quiser atribuir números inteiros consecutivos a alguma constante. Por exemplo, `enum {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}` define um `enum`, em que cada variável é um `int`, começando em $0$ e seguindo sequencialmente. Essa definição é equivalente à mostrada abaixo.
+Enums são basicamente uma abreviação para constantes e são bastante úteis se você quiser constantes que sejam números inteiros consecutivos. Por exemplo, `enum {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}` define um `enum`, em que cada variável é um `int`, começando em $0$ e seguindo sequencialmente. Essa definição é equivalente à mostrada abaixo.
 
 ```python
 const TILE_BRICK = 0
@@ -372,11 +374,11 @@ const TILE_SPIKE = 2
 const TILE_TELEPORT = 3
 ```
 
-Se você nomear um `enum`, ele será considerado um dicionário constante, em que cada chave são os nomes que você definiu. Por exemplo, você pode definir `enum Tiles {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}`. As chaves não são armazenados como constantes e o acesso aos deve ser feita com a sintaxe `Tiles.TILE_BRICK`, por exemplo.
+Se você nomear um `enum`, ele será considerado um dicionário constante, em que as chaves são os nomes que você definiu. Por exemplo, você pode definir `enum Tiles {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}`. As chaves não são armazenadas como constantes e o acesso aos valores deve ser feita com a sintaxe `Tiles.TILE_BRICK`, por exemplo.
 
 ## Funções
 
-A definição de funções é bastante semelhante a Python. A maior diferença é o uso de `func` em vez de `def` para inicializar a função. Assim como no Python, o `return` não é obrigatório (ma caso não tenha, fica implícito que a função retorna `null`). 
+A definição de funções é bastante semelhante a Python. A maior diferença é o uso de `func` em vez de `def` para inicializar a função. Assim como em Python, o `return` não é obrigatório (ma caso não tenha, fica implícito que a função retorna `null`). 
 
 ### Parâmetros opcionais
 
@@ -403,7 +405,7 @@ func my_int_function() -> int:
 	return 0
 ```
 
-### Declarando um callabale a partir de uma função
+### Declarando um callable a partir de uma função
 
 Se você referenciar uma função sem as entradas, isso automaticamente gera um `callable`. O exemplo abaixo deve printar a sequência 1, 2, 3, 4 assim que o jogo é executado.
 
@@ -446,7 +448,7 @@ func _ready():
 
 O `self` serve para referenciar a instância atual que está sendo usada no script. Existem algumas aplicações para isso, vou citar uma aqui.
 
-ocê define uma variável da instância no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e a engine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse aviso é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. O exemplo abaixo funciona normalmente. VocÊ pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável da instância `x`, que é igual a 1.
+Suponha que você definiu uma variável da instância no seu script e depois usou o mesmo nome de variável para uma variável local dentro de uma função. Isso por si só não é recomendado e a engine vai dar alerta de *shadowing*. No entanto, não vai dar erro e a função funcionará normalmente. Esse aviso é para o próprio desenvolvedor não se enrolar com nome repetido sendo usado para coisas distintas no mesmo script. Você pode chamar a função `update` quando quiser, com os valores que quiser, e isso não vai afetar a variável da instância `x`, que é igual a 1.
 
 ```python
 var x = 1
@@ -456,7 +458,7 @@ func update(x):
     return x
 ```
 
-Caso você queira que a variável da instância seja usada dentro da função, deve usar o `self`. A nova função abaixo sempre apra alterar a variável da instância.
+Caso você queira que a variável da instância seja usada dentro da função, deve usar o `self`. Neste caso, a nova função abaixo sempre irá alterar a variável da instância.
 
 ```python
 var x = 1
@@ -491,7 +493,7 @@ O if ternário também permite lidar com múltiplas condicionais.
 var fruit = "apple" if x == 2 else "pear" if x == 1	else "banana" if x == 0	else "orange"
 ```
 
-Se preferir, você quebrar cada condição em uma linha, usando parênteses ou o `\`. Os dois modos abaixo são equivalentes ao que acabamos de ver.
+Se preferir, você pode quebrar cada condição em uma linha, usando parênteses ou o `\`. Os dois modos abaixo são equivalentes ao que acabamos de ver.
 
 ```python
 var fruit = ("apple" if x == 2
