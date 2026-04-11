@@ -321,45 +321,43 @@ var direction: Vector3 = Vector3(1, 2, 3)
 
 A estrutura do código é a ordem que os blocos de código devem aparecer no script. Vou seguir quase igual a sugestão oficial, apenas com algumas simplificações e ajustes. A numeração abaixo se refere ao número do item, não a linha de fato. Também deve-se incluir as quebras de linhas entre cada bloco, de acordo com a convenção descrita anteriormente.
 
-```python
-01. @tool, @icon
-02. class_name
-03. extends
-04. ## documentation
+```javascript
+┌─ Inicialização ────────────────┐
+│@tool, @icon                    │
+│class_name                      │
+│extends                         │
+│## documentation                │
+└────────────────────────────────┘
 
+┌─ Variáveis da instância ───────┐
+│signals                         │
+│enums                           │
+│constants                       │
+│static variables                │
+│remaining regular variables     │
+│@export variables               │
+│@onready variables              │
+└────────────────────────────────┘
 
-05. signals
+┌─ Métodos/Funções Estáticas ─────┐
+│ static methods/functions        │
+└─────────────────────────────────┘
 
-06. enums
+┌─ Métodos/Funções ─────────────────────────────┐
+│overridden built-in virtual methods/functions: │
+│     _init()                                   │
+│     _enter_tree()                             │
+│     _ready()                                  │
+│     _process()                                │
+│     _physics_process()                        │
+│     remaining virtual methods                 │
+│overridden custom methods                      │
+│remaining methods/functions                    │
+└───────────────────────────────────────────────┘
 
-07. constants
-
-08. static variables
-
-09. remaining regular variables
-
-10. @export variables
-
-11. @onready variables
-
-
-13. static methods/functions
-
-
-14. overridden built-in virtual methods/functions:
-	1. _init()
-	2. _enter_tree()
-	3. _ready()
-	4. _process()
-	5. _physics_process()
-	6. remaining virtual methods/functions
-
-15. overridden custom methods/functions
-
-16. remaining methods/functions
-
-
-17. inner classes
+┌─ Inner Classes ────────────────┐
+│inner classes                   │
+└────────────────────────────────┘
 ```
 
 Vamos falar um pouco sobre cada um dos itens acima.
