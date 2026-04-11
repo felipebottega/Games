@@ -6,6 +6,8 @@ Vimos uma descrição breve sobre o que são essas funções no [tutorial de est
 
 Estamos falando funções/métodos da classe `Node`, que vem vazios e prontos para serem sobrescritos. Cada um tem uma finalidade própria definida pela engine. Vamos falar dos mais gerais aqui, mas existem vários outros. Consulte a documentação oficial da [classe Node](https://docs.godotengine.org/en/stable/classes/class_node.html) para conhecer.
 
+## Overridable functions da classe Node
+
 - **_init:** O `_init` é chamado imediatamente quando a instância do script é criada. Esta inicialização de variáveis serve para criar instâncias com parâmetros, assim como é o `__init__` de Python. Veja mais sobre ela [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#construtor).
 - **_enter_tree:** O `_enter_tree` é chamado quando node acabou de entrar na árvore. Use quando você precisa reagir imediatamente à entrada do node. 
 - **_ready:** Filhos ainda podem não estar prontos na cena quando o `_init_` e `_enter_tree` são executados. Por outro lado, o `_ready` só é chamado quando todos os filhos já foram inicializados, então já é seguro acessar os nodes da cena. Acessar objetos externos ainda pode dar erro, como adicionar cenas externas, recursos externos, etc. Prefira usar a chamada `call_deferred` para objetos fora da cena.
