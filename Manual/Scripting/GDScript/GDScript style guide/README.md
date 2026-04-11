@@ -1,10 +1,10 @@
 # GDScript style guide
 
-Este tópico tem como propósito ser um conjunto de estilos de escrita de código para mim mesmo. Não espero que isso seja usado por terceiros, é algo pessoal. Inclusive, algumas convenções da documentação oficial eu vou ignorar e usar o meu estilo no lugar. Dito isso, vamos começar!
+Este texto tem como propósito ser um guia de estilo de escrita de código para mim mesmo. Não espero que isso seja usado por terceiros, é algo pessoal. Inclusive, algumas convenções da documentação oficial eu vou ignorar e usar o meu estilo no lugar. Dito isso, vamos começar!
 
 ## Linhas em branco
 
-Use uma linha em branco para separar funções/métodos. Use duas linhas em branco para separar grupos de estruturas. 
+Use duas linhas em branco para separar grupos de estruturas. Use uma linha em branco para separar funções/métodos ou certos blocos menores dentro das estruturas. 
 
 No exemplo abaixo, temos 3 estruturas: extends, variáveis da instância e funções. Note que as variáveis da instância possuem uma separação interna, sempre organizando com uma linha em branco entre as partes. A ideia geral é essa: grandes estruturas separadas por duas linhas em branco, partes internas de cada estrutura separadas por uma linha em branco.
 
@@ -46,9 +46,11 @@ var character_dict = {
 }
 ```
 
-Note que esse exemplo dado é bastante artificial. Seria totalmente factível usar um dicionário com as chaves "Hero", "NPC" e "Villan", e cada chave corresponder a um outro dicionário com os três campos descritos. Não acho que este tipo de formatação será usado muitas vezes, mas impossível não é.
+Note que esse exemplo dado é bastante artificial. Seria totalmente factível usar um dicionário com as chaves "Hero", "NPC" e "Villan", e cada chave corresponder a um outro dicionário com os três campos descritos. 
 
-> PS: O Tab é em relação à variável. Se ela estiver dentro de outra estrutura e for necessário dar 5 Tabs para checar ao nível dela (por exemplo), então cada elemento vai necessitar de 6 Tabs. Em muitos editores (incluindo a Godot), ao dar ENTER de uma linha para a outra, automaticamente ele já vai posicionar corretamente.
+> PS: O Tab é em relação à variável container. Se ela estiver dentro de outra estrutura e for necessário dar 5 Tabs para checar ao nível dela (por exemplo), então cada elemento vai necessitar de 6 Tabs. Em muitos editores (incluindo a Godot), ao dar ENTER de uma linha para a outra, automaticamente ele já vai posicionar corretamente.
+
+> PS: Sempre coloque uma vírgula no último elemento da variável, mesmo que ocupe uma única linha. Você pode ver que fizemos isso nos exemplos acima. É interessante fazer isso pois, caso você queira adicionar mais elementos futuramente, o diff não vai acusar o último elemento que estava antes.
 
 Se for uma função, sempre preferir usar uma única linha, tanto para a definição quanto para a chamada.
 
@@ -98,9 +100,7 @@ change_color(
 )
 ```
 
-> PS: Em geral, indentação de funções vai ocorrer mais nas chamadas do que nas definições, pois as chamadas tem inputs que geralmente vão ocupar mais espaço de linha.
-
-> PS: Sempre coloque uma vírgula no último elemento da variável, mesmo que ocupe uma única linha. Você pode ver que fizemos isso nos exemplos acima (a função não entra nessa regra). É interessante fazer isso pois, caso você queira adicionar mais elementos futuramente, o diff não vai acusar o último elemento que estava antes.
+Em geral, indentação de variáveis de funções vai ocorrer mais nas chamadas do que nas definições, pois as chamadas tem inputs que geralmente vão ocupar mais espaço de linha.
 
 ## Múltiplas condicionais
 
@@ -153,7 +153,7 @@ var fruit = \
     else "orange"
 ```
 
-Confesso que eu prefiro o estilo antigo, não apenas para o if ternário, mas para funções e variáveis com múltiplos também. O problema deste estilo é a falta de praticidade dele. Você tem que ficar alinhando tudo na mão. Quaçquer mudança de nome de variável e tudo tem que ser realinhando novamente. O estilo novo requer apenas um Tab e está pronto. 
+Confesso que eu prefiro o estilo antigo, não apenas para o if ternário, mas para funções e variáveis com múltiplos valores também. O problema deste estilo é a falta de praticidade dele. Você tem que ficar alinhando tudo na mão. Qualquer mudança de nome de variável e tudo tem que ser realinhado novamente. O estilo novo requer apenas um Tab e está pronto. 
 
 ## Parênteses
 
@@ -163,7 +163,7 @@ Confesso que eu prefiro o estilo antigo, não apenas para o if ternário, mas pa
 
 ## Comentários
 
-Já falamos bastante sobre comentários no [tutorial de referência](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#coment%C3%A1rios). Porém, naquele tutorial apenas falamos sobre as funcionalidades e comentário que o editor oferece, mas não sobre convenções de como fazer comentários. Vamos listar o nosso estilo aqui.
+Já falamos bastante sobre comentários no [tutorial de referência](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#coment%C3%A1rios). Porém, naquele tutorial apenas falamos sobre as funcionalidades que o editor oferece, mas não sobre convenções de como fazer comentários. Vamos listar o nosso estilo aqui.
 
 - Comentários sempre são uma frase, começando com letra maiúscula e terminando com ponto final. Isso vale mesmo para o caso em que o comentário é uma única palavra.
 
@@ -194,7 +194,7 @@ var w = x + w # Comentário curto pois o comando é muito simples e direto de en
 
 ## Espaços
 
-- Sempre use espaços entre operadores, após vírgulas e após dois pontos (:) de dicionários. Acesso a elementos de arrays ou dicionário com colchetes [] não deve incluir espaçamentos.
+- Sempre use espaços entre operadores, após vírgulas e após dois pontos (:) de dicionários. Acesso a elementos de arrays ou dicionário com colchetes `[ ]` não deve incluir espaçamentos.
 
 **Bom**
 
@@ -286,7 +286,7 @@ Siga a convenção de nomes dada pela tabela abaixo (está em total concordânci
 Já falamos sobre tipagem na parte de variáveis tipadas em [outro tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#vari%C3%A1veis-tipadas). Considere esta seção como uma continuação daquela.
 
 - Ao definir uma variável tipada, use a sintaxe `var my_variable: my_type` ou `var my_variable: my_type = my_initial_value`, com estes exatos espaçamentos mostrados.
-- Ao definir funções tipadas, use a sintaxe func my_function(my_arg1: my_type1, my_arg2: my_type2) -> my_output_type:`, com estes exatos espaçamentos mostrados.
+- Ao definir funções tipadas, use a sintaxe `func my_function(my_arg1: my_type1, my_arg2: my_type2) -> my_output_type:`, com estes exatos espaçamentos mostrados.
 - Evite explicitar o tipo da variável quando ele já é explícito pela própria definição.
 
 **Bom**
@@ -319,13 +319,14 @@ var direction: Vector3 = Vector3(1, 2, 3)
 
 ## Estrutura do código 
 
-A estrutura do código é a ordem que os blocos de código seguir no script. A sugestão oficial é a que eu vou seguir aqui, mas com as devidas simplificações e ajustes. A numeração abaixo se refere ao número do item, não a linha de fato. Também incluir as quebras de linhas entre cada bloco, de acordo com a minha convenção.
+A estrutura do código é a ordem que os blocos de código devem aparecer no script. Vou seguir quase igual a sugestão oficial, apenas com algumas simplificações e ajustes. A numeração abaixo se refere ao número do item, não a linha de fato. Também deve-se incluir as quebras de linhas entre cada bloco, de acordo com a convenção descrita anteriormente.
 
 ```python
 01. @tool, @icon
 02. class_name
 03. extends
 04. ## documentation
+
 
 05. signals
 
