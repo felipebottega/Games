@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ygpigmucrulv"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=82752247]
+
+[node name="Button1" type="Button" parent="." unique_id=847405869]
+offset_left = 78.0
+offset_top = 60.0
+offset_right = 106.0
+offset_bottom = 91.0
+text = "B1"
+
+[node name="Label" type="Label" parent="Button1" unique_id=2050844208]
+layout_mode = 0
+offset_left = -30.0
+offset_top = 34.0
+offset_right = 72.0
+offset_bottom = 83.0
+text = "Este botão 
+é importante"
+
+[node name="Button2" type="Button" parent="." unique_id=979192188]
+offset_left = 190.0
+offset_top = 60.0
+offset_right = 218.0
+offset_bottom = 91.0
+text = "B2"
