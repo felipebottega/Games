@@ -30,7 +30,7 @@ O *Profiler* é usado para ver qual código está sendo executado enquanto seu p
 
 ## Visual Profiler
 
-O *Visual Profiler* pode ser usado para monitorar o que está consumindo mais tempo durante a renderização de um quadro na CPU e na GPU, respectivamente. Isso permite rastrear as fontes de possíveis gargalos na CPU e na GPU causados ​​pela renderização. No caso da CPU, ele mede apenas o tempo gasto em tarefas de renderização, como chamadas de desenho (por isso o nome "visual" profiler). Ele não inclui o tempo de CPU gasto em outras tarefas, como scripts e física. 
+O *Visual Profiler* pode ser usado para monitorar o que está consumindo mais tempo durante a renderização de um frame na CPU e na GPU, respectivamente. Isso permite rastrear as fontes de possíveis gargalos na CPU e na GPU causados ​​pela renderização. No caso da CPU, ele mede apenas o tempo gasto em tarefas de renderização, como chamadas de desenho (por isso o nome "visual" profiler). Ele não inclui o tempo de CPU gasto em outras tarefas, como scripts e física. 
 
 Para usar, basta clicar no *Start* enquanto o jogo estiver em execução. Caso queira que seja iniciado automaticamente junto do jogo, habilite a opção *Autostart*. Após passado algum tempo, você pode dar *Stop* que as informações vão continuar na tela para você analisar. Na tela abaixo, o gráfico é divido em duas partes: a metade da esquerda é o gráfico da CPU e o da direita é o da GPU. Quando você clica em um frame específico, duas linhas verticais aparecem. Uma marca o frame no gráfico da CPU e outra marca o mesmo frame no gráfico da GPU.
 
