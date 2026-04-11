@@ -22,15 +22,13 @@ Ao usar o `@tool`, você pode querer que certo trecho de código seja apenas exe
 
 ### setter
 
-Quando você cria uma variável com o `@export`, sabemos que ela pode ser editada pelo *Inspector*. É possível fazer com que o node do script se comporte de alguma maneira sempre que esta variável for modificado no *Inspector*. Para isso, isso um *setter*. O exemplo abaixo mostra como funciona.
+Quando você cria uma variável com o `@export`, sabemos que ela pode ser editada pelo *Inspector*. É possível fazer com que o node associado ao script se comporte de uma maneira determinada sempre que esta variável for modificada. Para isso, usamos um *setter*. O exemplo abaixo mostra como funciona.
 
 <p align="center">
   <img width="240" src="https://github.com/user-attachments/assets/457c40f7-f166-4380-b8a5-7904e8e82e07" />
 </p>
 
-Sempre que o valor da variável for modificado no *Inspector*, o node (que é um `Sprite2D`) vai atualizar na hora para aquela nova velocidade e vai zerar a rotação (voltar para a rotação original). Note que isso só faz sentido no contexto do `@tool`, já que alterar o valor da variável no *Inspector* durante a execução do jogo não faz nenhuma diferença. 
-
-Abaixo segue o código completo deste exemplo.
+Sempre que o valor da variável for modificado no *Inspector*, o node (que é um `Sprite2D`) vai atualizar na hora para aquela nova velocidade e vai zerar a rotação (voltar para a rotação original). Abaixo, segue o código completo deste exemplo.
 
 <p align="center">
   <img width="370" src="https://github.com/user-attachments/assets/709e4c70-4c3f-4842-9262-c0bf5658972a" />
