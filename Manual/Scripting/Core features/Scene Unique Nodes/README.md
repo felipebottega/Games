@@ -29,3 +29,22 @@ Se a label não for node único, é necessário usar o comando `get_node("Button
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/d03ac77f-e4ce-45db-a8a7-5726c8e66662" />
 </p>
+
+## Nodes únicos em outras cenas
+
+Continuando no mesmo exemplo, suponha que a cena principal é um `Node2D` contendo um `Sprite2D` de background, e queremos inserir a cena do `CanvasLayer` aí. Clicamos no ícone de cadeado destacado em vermelho e selecionamos a cena para inserir.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/88b71796-fe42-4d52-9287-9f5ab6ae6459" />
+</p>
+
+Nesta caso, não é possível acessar o node único a partor de um script em `Node2D`. Este atalho foi feito para funcionar unicamente entre os nodes da própria cena. Apesar de um comando como `var label = $%Label` não ser possível a partir de `Node2D`, o comando `var label = $CanvasLayer/%Label` é possível. Ou seja, a engine primeiro acessa o node raíz da cena (inserida) que contém o node único e a partir dali pode-se usar o atalho até ele. 
+
+À primeira vista pode parecer uma limitação não poder acessar o node único diretamente quando a cena foi inserida em outra cena. Porém, isso é na verdade uma coisa boa. Se tivéssemos mais de uma instância da cena `CanvasLayer` inserida, não teria nenhum critério para decidir qual node único deveria ser acessado. Por ser necessário especificar a cena instanciada no caminho, essa ambiguidade desaparece.
+
+## Alternativas
+
+Apesar de nodes únicos serem convenientes, eles não são a única solução para o problema exposto no início deste tutorial. Caso você precisa acessar um node e ele muda de caminho durante o desenvolvimento do projeto, existe outras duas maneiras de evitar que isso seja uma dor de cabeça.
+
+1. Coloque este node em um grupo, podendo ser um grupo que contém apenas este node. Desta maneira, é fácil acessá-lo diretamente sem se importar onde ele se encontra na árvore.
+2. Armazene o caminho até o node um uma variável global do autoload. Desta maneira, só precisa atualizar o caminho no autoload caso ele mude de lugar. Todos os scripts do jogo acessam o caminho armazenado na variável global.
