@@ -97,7 +97,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 ">  VisibleOnScreenNotifier2D
  </a><br>
 <li> <b>Getting started\Your first 2D game\Creating the enemy\Layers e Masks</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#editable-child-e-make-local
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#editable-children-e-make-local
 ">  Editable Children e Make Local
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#definição-de-layer-e-mask
@@ -1594,6 +1594,136 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#parâmetro-delta
 ">  Parâmetro delta
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Groups</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Groups#adicionando-nodes-a-um-grupo-pelo-editor
+">  Adicionando nodes a um grupo pelo editor
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Groups#adicionando-nodes-a-um-grupo-por-código
+">  Adicionando nodes a um grupo por código
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Groups#métodos
+">  Métodos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Groups#aba-de-grupos-globais-no-project-settings
+">  Aba de grupos globais no Project Settings
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Nodes and scene instances</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#obtendo-nodes
+">  Obtendo nodes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#criando-nodes
+">  Criando nodes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#instanciando-cenas
+">  Instanciando cenas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#editable-children-e-make-local
+">  Editable Children e Make Local
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Overridable functions</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Overridable%20functions#overridable-functions-da-classe-node
+">  Overridable functions da classe Node
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Creating script templates</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Creating%20script%20templates#localização-dos-scripts-template
+">  Localização dos scripts template
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Creating%20script%20templates#configurando-o-script-template
+">  Configurando o script template
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Change scenes manually</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually#visualização-de-múltiplas-cenas-irmãs
+">  Visualização de múltiplas cenas irmãs
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually#mudança-de-cena
+">  Mudança de cena
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually#ideias-de-coisas-para-fazer-com-múltiplas-cenas-no-*root*
+">  Ideias de coisas para fazer com múltiplas cenas no *root*
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Instancing with signals</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Instancing%20with%20signals#exemplo-prático
+">  Exemplo prático
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Pausing games and process mode</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Pausing%20games%20and%20process%20mode#process-mode
+">  Process Mode
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Pausing%20games%20and%20process%20mode#o-que-acontece-no-pause
+">  O que acontece no pause
+ </a><br>
+<li> <b>Manual\Scripting\Core features\File system</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system#projectgodot
+">  project.godot
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system#delimitador-para-caminhos
+">  Delimitador para caminhos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system#resource-path-e-user-path
+">  Resource path e user path
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system#
+">  
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Resources</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#carregando-recursos
+">  Carregando recursos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#make-unique-e-local-to-scene
+">  Make Unique e Local to Scene
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#local-to-scene
+">  Local to Scene
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#make-unique
+">  Make Unique
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#detectando-recursos-compartilhados
+">  Detectando recursos compartilhados
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#criando-recursos
+">  Criando recursos
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Singletons - Autoload</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Singletons%20-%20Autoload#criando-um-autoload
+">  Criando um autoload
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Singletons%20-%20Autoload#script-autoload
+">  Script autoload
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Singletons%20-%20Autoload#cena-autoload
+">  Cena autoload
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Using SceneTree</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#entrando-e-saindo-da-árvore-de-cena
+">  Entrando e saindo da árvore de cena
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#propriedades
+">  Propriedades
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#métodos
+">  Métodos:
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Scene Unique Nodes</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Scene%20Unique%20Nodes#criando-nodes-únicos
+">  Criando nodes únicos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Scene%20Unique%20Nodes#aplicação
+">  Aplicação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Scene%20Unique%20Nodes#nodes-únicos-em-outras-cenas
+">  Nodes únicos em outras cenas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Scene%20Unique%20Nodes#alternativas
+">  Alternativas
+ </a><br>
+<li> <b>Manual\Scripting\Core features\Logging</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Logging#project-settings
+">  Project Settings
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Logging#arquivos-de-log
+">  Arquivos de log
  </a><br>
 <br><li> <b>Manual\Extras\Audio Server</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#atributos-do-audio-server
