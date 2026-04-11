@@ -2,7 +2,7 @@
 
 Acessar nodes pelo caminho pode ser um método frágil às vezes. Se você precisar mover um node na árvore e vários do código referenciavam o caminho até este node, você terá que reescrever o caminho em todos eles. A solução para isso é o *unique node* (ou *unique name*). Cahamremos ele de *node único*.
 
-## Criando nodes únicos pelo editor
+## Criando nodes únicos
 
 Para fazer um node ser único, basta dar o segundo clique do mouse nele e habilitar a opção *Access as Unique Name*.
 
@@ -20,4 +20,12 @@ Outra maneira de fazer o node ser único é simplesmente renomear o nomde dele c
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/6e8392ed-2086-4fb1-b49d-efbc5b11a33d" />
+</p>
+
+## Aplicação
+
+Se a label não for node único, é necessário usar o comando `get_node("Button1/Label")` ou `$Button1/Label` para acessá-la. Como node único, você pode acessá-la diretamente com `get_node("%Label")` ou `%Label`.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/d03ac77f-e4ce-45db-a8a7-5726c8e66662" />
 </p>
