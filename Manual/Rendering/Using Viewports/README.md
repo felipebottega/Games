@@ -19,7 +19,7 @@ Em muitos tutoriais anteriores, foi possível apenas listar propriedades e méto
 
 Vamos começar criando uma cena em que o node raíz é um `Node2D` chamado *FirstExample*. Dentro ele, colocamos um `Sprite2D` com o logo da Godot, e depois um `SubViewport` contendo o mesmo logo da Godot. Este segundo teve a sua cor alterada para um tom vermelho, assim é possível reconhecer a textura do `SubViewport`. 
 
-Na Godot, um `SubViewport` não é exibido automaticamente. Ele só renderiza para uma textura interna, mas está desenhando essa textura na tela. No entando, você consegue visualizar o conteúdo dele no *Inspector*.
+Na Godot, um `SubViewport` não é exibido automaticamente. Ele só renderiza para uma textura interna, mas está desenhando essa textura na tela. No entanto, você consegue visualizar o conteúdo dele no *Inspector*.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/5c5d6954-335e-4c44-84ad-59a673ea9fa0" />

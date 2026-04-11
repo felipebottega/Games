@@ -24,4 +24,4 @@ Várias coisas acontecem quando um node para de processar. As funções `_proces
 
 Os nodes de animação pausarão a animação atual, os nodes de áudio pausarão o áudio atual e as partículas também pausarão. Tudo isso será retomado automaticamente quando o jogo sair do pause.
 
-Mesmo que um node esteja processando enquanto o jogo estiver pausado, a física não funcionará para ele. Como mencionado anteriormente, isso ocorre porque os servidores de física estão desativados. No entando, é possível ativar os servidores de física enquanto o jogo estiver pausado usando seus métodos `set_active`.
+Mesmo que um node esteja processando enquanto o jogo estiver pausado, a física não funcionará para ele. Como mencionado anteriormente, isso ocorre porque os servidores de física estão desativados. No entanto, é possível ativar os servidores de física enquanto o jogo estiver pausado usando seus métodos `set_active`.
