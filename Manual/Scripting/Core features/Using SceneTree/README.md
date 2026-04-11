@@ -33,3 +33,23 @@ A maioria das operações de nodes, como desenhar em 2D, processar dados ou rece
 - **get_tree().paused:** Se for true, a árvore de cena é considerada pausada. A física 2D e 3D será interrompida, assim como a detecção de colisões e os sinais relacionados. Dependendo do *modo de processamento* de cada node, seus métodos `_process()`, `_physics_process()` e `_input()` podem não ser mais chamados. Vimos em detalhes como isso funciona [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Pausing%20games%20and%20process%20mode).
 - **get_tree().current_scene:** Retorna o node raiz da cena principal atualmente carregada, geralmente como um filho direto do *root*.
 - **get_tree().physics_interpolation:** Se for true, vai ativar a interpolação física. Vimos em detalhes como isso funciona [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20Interpolation).
+
+## Métodos:
+
+Todos os métodos relativos a grupos foram vistos no [tutorial de grupos](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Scripting/Core%20features/Groups/README.md), mas vamos repetir aqui para manter os métodos do `SceneTree` no mesmo local. Fora esses, alguns outros também já foram usados ao longo dos tutoriais.
+
+- **get_tree().call_group(group_name, method_name, ...):** Chama o método `method_name` em cada node pertencente ao grupo `group_name`. Você pode passar argumentos para o método especificando-os ao final da chamada. Nodes que não podem chamar o método (seja porque o método não existe ou porque os argumentos não correspondem) são ignorados.
+- **get_tree().get_nodes_in_group(group_name):** Retorna um array contendo todos os nodes pertencentes ao grupo `group_name`, na ordem da hierarquia da cena.
+- **get_tree().get_node_count_in_group(group_name):** Retorna o número de nodes pertencentes ao grupo `group_name`. É equivalente ao comando `get_tree().get_nodes_in_group(group_name).size()`, mas esse último é menos eficiente pois cria uma array e depois faz a contagem.
+- **get_tree().has_group(group_name):** Retorna *true* se existe pelo menos um node pertencente ao grupo `group_name` na árvore.
+- **get_tree().notify_group(group_name, notification):** Envia uma notificação para todos os nodes que estão no grupo `group_name`. A notificação `notification` deve ser um inteiro.
+- **get_tree().set_group(group_name, property, value):** Altera o valor da propriedade `property` para `value` em todos os nodes pertencentes ao grupo `group_name`. Os nodes que não possuem a propriedade são ignorados.
+- **get_tree().change_scene_to_file(path):** Altera a cena em execução para aquela no caminho especificado, após carregá-la em um `PackedScene` e criar uma nova instância.
+- **get_tree().change_scene_to_node(node):** Altera a cena em execução para o node fornecido. Útil quando você deseja configurar a nova cena antes de mudar.
+- **get_tree().change_scene_to_packed(packed_scene):** Altera a cena em execução para uma nova instância do `PackedScene` fornecido.
+- **get_tree().create_timer(time_sec):** Retorna um `SceneTreeTimer`. Após passar o tempo definido em `time_sec` (em segundos), o timer emitirá `SceneTreeTimer.timeout` e será liberado automaticamente.
+- **get_tree().get_frame():** Retorna quantos frames físicos foram processados desde o início.
+- **get_tree().get_node_count():** Retorna o número de nodes na árvore de cena. O *root* não é contabilizado.
+- **get_tree().queue_delete(object):** Coloca o objeto fornecido em fila para ser deletado, chamando seu método `Object.free()` ao final do frame atual. Este método é similar `queue_free()`.
+- **get_tree().quit():** Sai do jogo quando acabar a iteração atual.
+- **get_tree().reload_current_scene():** Recarrega a cena atualmente ativa, substituindo `current_scene` por uma nova instância de sua `PackedScene` original.
