@@ -121,7 +121,7 @@ No caso de fazer isso para uma variável com a anotação `@export`, a descriç�
  <img width="650" src="https://github.com/user-attachments/assets/7d0e27c4-017d-4c72-bc2d-82ec5c783edd" />
 </p>
 
-Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `##` logo acima da nomeação da classe (`class_name`). Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe. O exemplo abaixo mostra o básico para uma boa documentação.
+Se estiver trabalhando com uma classe nomeada, você pode inserir comentários com `##` logo acima da nomeação da classe (`class_name`) ou logo abaixo do `extends`. Isso vai gerar uma dosctring daquela classe, que pode, inclusive, ser acessada pelo help do editor. Depois que definir uma documentação (como mostrado abaixo), veja o resultado indo em *Help → Search Help...* e digitando o nome da classe. O exemplo abaixo mostra o básico para uma boa documentação.
 
 <p align="center">
 	<img width="600" src="https://github.com/user-attachments/assets/b961b2bc-c18b-42bf-a4a5-67b5cf9d0a75" />
