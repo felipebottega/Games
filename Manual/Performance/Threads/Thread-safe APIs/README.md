@@ -20,6 +20,6 @@ Godot tem suporte a multithreading, como já vimos. Porém, isso não vale para 
 
   2. **Criar nodes e cenas fora da árvore da cena:** Você pode fazer `load()`, `instantiate()`, entre outros, desde que não dê `add_child()` e não encoste na árvore ativa. Quando a thread terminar o trabalho, ela sinaliza a main thread. Aí a main thread faz `add_child()`. Isso é possível.
   3. **Passar resultados simples do thread pra main thread:** A thread pode escrever resultados em dados compartilhados (variáveis, arrays, dicionários), desde que o acesso seja controlado (com Mutex). A main thread lê esses dados depois.
-  4. **Usar chamadas de API para servidores:** Você pode usar servidores em thread se a thread não cria node, não chama `add_child()`, não acessa UI, só cria/configura coisas internas. Você não deve chamar se o método retorna node, o método depende da classe *SceneTree*, o método "parece alto nível".
+  4. **Usar chamadas de API para servidores:** Você pode usar servidores em thread se a thread não cria node, não chama `add_child()`, não acessa UI, só cria/configura coisas internas. Você não deve chamar se o método retorna node, o método depende da classe `SceneTree`, o método "parece alto nível".
   
 > PS: Os servidores de renderização e física por default não são thread-safe. Para liberar isso, você deve ir em *Project → Project Settings → Rendering → Driver → Thread Model → Separate* e *Project → Project Settings → 2D (3D) → Run on Separate Thread*.

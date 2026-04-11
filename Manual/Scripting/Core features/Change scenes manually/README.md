@@ -1,6 +1,6 @@
 # Change scenes manually
 
-Quando você executa o jogo de um projeto e uma cena inicial é carregada, o node raíz da cena não é o node raíz do jogo. Como já foi comentado [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#obtendo-nodes), o node oculto *root* é um Viewport global, tudo no jogo fica abaixo dele, incluindo outras cenas e autoload. Este node sempre existe e sempre fica no topo da árvore do jogo. Na Godot, a `SceneTree` (veremos mais sobre esta classe em um tutorial mais adiante) já vem com um root viewport automático, e a cena principal do jogo é só um node adicionado como filho dele.
+Quando você executa o jogo de um projeto e uma cena inicial é carregada, o node raíz da cena não é o node raíz do jogo. Como já foi comentado [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#obtendo-nodes), o node oculto *root* é um Viewport global, tudo no jogo fica abaixo dele, incluindo outras cenas e autoload. Este node sempre existe e sempre fica no topo da árvore do jogo. Na Godot, a `SceneTree` (veremos sobre esta classe em um tutorial mais adiante) já vem com um root viewport automático, e a cena principal do jogo é só um node adicionado como filho dele.
 
 Devemos ter uma cena main para carregar inicialmente no jogo. Mas depois que essa cena foi carregada (e é filha do *root*), nada impede de carregar outras cenas irmãs da inicial. No exemplo abaixo, assim que a cena Main é carregada, seu script carrega outras cenas e as adiciona como filhas direta do *root*. Todasas cenas estão sendo executadas paralelamente e de maneira independente.
 
@@ -49,7 +49,7 @@ Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e 
     - Alguns dados podem ficar desatualizados, pois não recebem updates (delta, input, etc.).
     - Use como um meio-termo: mantém a cena, mas sem custo de processamento.
 
-> PS: Na Godot, a `SceneTree` mantém uma referência para qual é a "cena atual" através do atributo `current_scene`. Quando você usa métodos prontos como o `change_scene_to_file()`, a próprio engine atualiza isso automaticamente. Mas se você estiver trocando cenas manualmente, a engine não atualiza esse campo sozinho. Ao trocar de cena manualmente, pode ser uma boa ideia definir `get_tree().current_scene = scene`, para que scripts que dependem de `SceneTree.current_scene` não parem de funcionar.
+> PS: Na Godot, a `SceneTree` mantém uma referência para qual é a "cena atual" através do atributo `current_scene`. Quando você usa métodos prontos como o `change_scene_to_file()`, a própria engine atualiza isso automaticamente. Mas se você estiver trocando cenas manualmente, a engine não atualiza esse campo sozinho. Ao trocar de cena manualmente, pode ser uma boa ideia definir `get_tree().current_scene = scene`, para que scripts que dependem de `SceneTree.current_scene` não parem de funcionar.
 
 ## Ideias de coisas para fazer com múltiplas cenas no *root*
 

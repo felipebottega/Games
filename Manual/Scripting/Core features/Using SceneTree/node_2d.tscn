@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://csbx30lcnqk8f"]
+
+[ext_resource type="Script" uid="uid://ixsxvllpc7uq" path="res://node_2d.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://b6areb4x13ut0" path="res://icon.svg" id="2_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=633588189]
+script = ExtResource("1_wtcfe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=451629294]
+texture = ExtResource("2_0e48y")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=393700125]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Texto Label"
+
+[node name="Button" type="Button" parent="." unique_id=1798097939]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Press me"
