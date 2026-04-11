@@ -17,7 +17,7 @@ O controle do processamento de física é análogo. Neste caso, você usará `se
 
 Mesmo que desative os dois processamentos, algumas coisas do jogo ainda continuam rodando: 
 
-- O loop principal da Godot continua rodando. A engine ainda renderiza a tela a cada frame, atualiza a árvore da cena internamente e mantém o jogo "vivo", mesmo sem chamar seus métodos de script.
+- O loop principal da Godot continua rodando. A engine ainda renderiza a tela a cada frame, atualiza a árvore de cena internamente e mantém o jogo "vivo", mesmo sem chamar seus métodos de script.
 - A engine de física continua ativa. Corpos como `CharacterBody2D`, `RigidBody2D` etc. ainda sofrem gravidade, colisões e respostas físicas, porque isso é calculado pela engine, não pelo seu `_physics_process()`.
 - Timers continuam funcionando: qualquer `Timer` na cena continua contando tempo e emitindo o sinal, independentemente de você ter desativado processamento no script.
 - Animações continuam rodando. Sistemas como `AnimationPlayer`, `Tween` e `GPUParticles2D` continuam atualizando automaticamente, pois têm seus próprios ciclos internos.

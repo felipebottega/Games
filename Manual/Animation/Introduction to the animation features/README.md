@@ -22,7 +22,7 @@ O painel de animação possui 4 partes principais:
 
 ## Animando propriedades
 
-Clique em *+ Add Track* e selecione *Property Track*. Uma janela com a árvore da cena vai se abrir. Escolhe o node que quer animar. Depois disso vai se abrir uma outra janela, agora com as propriedades deste node (as dele mesmo e as herdadas). Você pode editar qualquer propriedade que quiser. Isso já evidencia o quão poderosa é esta ferramenta, pois ela não é simplesmente uma ferramenta de animação, mas sim uma ferramenta de controle de estados dos nodes.
+Clique em *+ Add Track* e selecione *Property Track*. Uma janela com a árvore de cena vai se abrir. Escolhe o node que quer animar. Depois disso vai se abrir uma outra janela, agora com as propriedades deste node (as dele mesmo e as herdadas). Você pode editar qualquer propriedade que quiser. Isso já evidencia o quão poderosa é esta ferramenta, pois ela não é simplesmente uma ferramenta de animação, mas sim uma ferramenta de controle de estados dos nodes.
 
 <p align="center">
   <img width="150" src="https://github.com/user-attachments/assets/8e2b564b-6c7b-473a-812c-f782eb135bd7" />

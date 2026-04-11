@@ -46,7 +46,7 @@ A Godot oferece alguns comandos especiais para printar. O mais comum é o `print
 - **push_error():** Printa uma mensagem de erro. A mensagem é exibida na aba *Debugger → Errors*.
 - **push_warning():** Printa uma mensagem de aviso. A mensagem exibida na aba *Debugger → Errors*.
 - **print_stack():** Printa a *stack trace* a partir da localização atual. Suportado apenas quando executado a partir do editor ou quando o projeto é exportado em modo de debug.
-- **print_tree():** Printa a árvore da cena relativa ao node atual.
+- **print_tree():** Printa a árvore de cena relativa ao node atual.
 - **print_tree_pretty():** Semelhante ao `print_tree()`, mas com caracteres Unicode para uma aparência mais semelhante a uma árvore.
 
 Agora considere o exemplo abaixo.

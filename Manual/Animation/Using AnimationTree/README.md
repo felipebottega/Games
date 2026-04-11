@@ -54,7 +54,7 @@ O `AnimationPlayer` está constituído apenas de spritesheets, o que pode ser vi
 
 ## Introdução ao AnimationTree
 
-Depois de adicionar o node `AnimationTree` à sua árvore da cena, é necessário escolher uma *Tree Root* e um `AnimationPlayer` para a propriedade *Anim Player*. Cada *Tree Root* pode ser vista como um conjunto de ferramentas diferente para manipular o `AnimationPlayer` escolhido no *Anim Player*. Vamos ver cada uma dessas na sequência. 
+Depois de adicionar o node `AnimationTree` à sua árvore de cena, é necessário escolher uma *Tree Root* e um `AnimationPlayer` para a propriedade *Anim Player*. Cada *Tree Root* pode ser vista como um conjunto de ferramentas diferente para manipular o `AnimationPlayer` escolhido no *Anim Player*. Vamos ver cada uma dessas na sequência. 
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/b4ff9cae-c564-41ec-ad62-b2bda464f758" />

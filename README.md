@@ -1006,7 +1006,7 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 ">  Profiler 
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#árvore-de-cena
-">  árvore da cena
+">  árvore de cena
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#física
 ">  Física

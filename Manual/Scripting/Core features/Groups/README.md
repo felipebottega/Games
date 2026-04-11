@@ -75,7 +75,7 @@ Existem métodos de grupos da classe `Node` e da `SceneTree`. O método `add_to_
 - **get_groups():** Retorna um array com os nomes dos grupos aos quais o node foi adicionado. Este método também pode retornar alguns nomes de grupos que começam com um underscore. Estes são usados ​​internamente pela engine. Para evitar conflitos, não use grupos com nomes começando com underscore.
 - **is_in_group(group_name):** Retorna *true* se este node tiver sido adicionado ao grupo `group_name`.
 
-Os métodos de grupo da classe `SceneTree` dizem respeito à árvore da cena. Se algum dos métodos retorna nodes ou depende de nodes de alguma maneira, estes nodes devem estar na árvore da cena que chamou o método.
+Os métodos de grupo da classe `SceneTree` dizem respeito à árvore de cena. Se algum dos métodos retorna nodes ou depende de nodes de alguma maneira, estes nodes devem estar na árvore de cena que chamou o método.
 
 - **get_tree().call_group(group_name, method_name, ...):** Chama o método `method_name` em cada node pertencente ao grupo `group_name`. Você pode passar argumentos para o método especificando-os ao final da chamada. Nodes que não podem chamar o método (seja porque o método não existe ou porque os argumentos não correspondem) são ignorados.
 - **get_tree().get_nodes_in_group(group_name):** Retorna um array contendo todos os nodes pertencentes ao grupo `group_name`, na ordem da hierarquia da cena.

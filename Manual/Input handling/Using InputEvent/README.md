@@ -84,7 +84,7 @@ Após a camada *Input Event*, temos a camada da GUI ("Graphical User Interface")
   <img width="310" src="https://github.com/user-attachments/assets/faf18850-9c60-408b-9066-10d89b979d51" />
 </p>
 
-Repare como está a nossa árvore da cena até agora. Só temos os 2 nodes mencionados acima e o node raíz. Se deixarmos os scripts do jeito que estão acima, o botão não vai reagir ao clique pois a primeira camada "consumiu" o evento com o `get_viewport().set_input_as_handled()`. Se você quiser ver o clique funcionando no botão, deve comentar este comando, aí as duas camadas vão reagir ao clique do mouse.
+Repare como está a nossa árvore de cena até agora. Só temos os 2 nodes mencionados acima e o node raíz. Se deixarmos os scripts do jeito que estão acima, o botão não vai reagir ao clique pois a primeira camada "consumiu" o evento com o `get_viewport().set_input_as_handled()`. Se você quiser ver o clique funcionando no botão, deve comentar este comando, aí as duas camadas vão reagir ao clique do mouse.
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/31c22056-ea0a-4691-a899-0f00ab1153b4" />

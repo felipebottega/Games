@@ -59,7 +59,7 @@ Colocando aqui as diferenças pois isso me pegou um pouco.
     <img src="https://github.com/user-attachments/assets/d58522ac-dd69-416a-b8a7-72fc85187b3f" width="700">
 </p>
 
-O `_init` é chamado imediatamente quando a instância do script é criada. Não tem acesso à árvore ainda, ou seja, métodos como o `get_node` ainda não funcionam bem aqui. O método `_ready` só é chamado depois que o node atual foi adicionado à árvore da cena ("scene tree" em inglês) e todos os seus filhos também já foram adicionados. Ou seja, é o ponto em que todo mundo está no palco e você pode começar a interagir com segurança. 
+O `_init` é chamado imediatamente quando a instância do script é criada. Não tem acesso à árvore ainda, ou seja, métodos como o `get_node` ainda não funcionam bem aqui. O método `_ready` só é chamado depois que o node atual foi adicionado à árvore de cena ("scene tree" em inglês) e todos os seus filhos também já foram adicionados. Ou seja, é o ponto em que todo mundo está no palco e você pode começar a interagir com segurança. 
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/e2884af0-435f-4242-aa9d-eebfaa526d4b" width="700">
