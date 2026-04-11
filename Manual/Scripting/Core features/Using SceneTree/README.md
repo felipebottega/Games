@@ -53,3 +53,7 @@ Todos os métodos relativos a grupos foram vistos no [tutorial de grupos](https:
 - **get_tree().queue_delete(object):** Coloca o objeto fornecido em fila para ser deletado, chamando seu método `Object.free()` ao final do frame atual. Este método é similar `queue_free()`.
 - **get_tree().quit():** Sai do jogo quando acabar a iteração atual.
 - **get_tree().reload_current_scene():** Recarrega a cena atualmente ativa, substituindo `current_scene` por uma nova instância de sua `PackedScene` original.
+
+## SceneTree e root
+
+Como podemos notar, a classe `SceneTree` e o node *root* são dois objetos que sempre são chamados quando um jogo é executado, mas ambos operam por trás dos bastidores. Apesar da mesma natureza "oculta", é importante notar que é o `SceneTree` que engloba tudo. O *root* é apenas um viewport geral, ele representa a tela do jogador de fato. Por outro lado, o `SceneTree` é o coordenador geral, é ele quem conversa com o sistema operacional, quem executa o loop principal do jogo, quem coordena todas as cenas e nodes, etc. 
