@@ -23,7 +23,7 @@ Na Godot, cada shader está associado a uma única função, chamada de "funçã
 4. A função `start()` é executada para cada partícula em um sistema de partículas uma vez, quando a partícula é criada pela primeira vez. 
 5. A função `process()` é executada para cada partícula em um sistema de partículas a cada frame. 
 6. A função `sky()` é executada para cada pixel no mapa de *radiance cubemap* quando o *radiance cubemap* precisa ser atualizado e para cada pixel na tela atual. 
-7. A função `fog()` é executada para cada *froxel* no buffer de *volumetric fog froxel* que intersecta o `FogVolume`.
+7. A função `fog()` é executada para cada *froxel* no buffer de névoa volumétrica que intersecta o `FogVolume`.
 
 Muitos termos foram introduzidos de uma vez, eu sei disso. Vou explicar alguns agora e outros ficarão para um momento futuro.
 
@@ -44,4 +44,38 @@ O shader `light()` associado a essa etapa processa a influência das luzes sobre
 > PS: A função `light()` não será executada se o modo de renderização *vertex_lighting* estiver ativado ou se a opção *Rendering → Quality → Shading → Force Vertex Shading* estiver ativada no *Project Settings*. Essa opção está ativada por padrão para dispositivos móveis.
 
 ## Tipos de shaders
+
+Em vez de fornecer uma configuração de uso geral para todas as aplicações (2D, 3D, sky, fog, etc.), você deve especificar o tipo de shader que está escrevendo. Diferentes tipos suportam diferentes modos de renderização, variáveis ​​internas e funções de processamento. Os tipos disponíveis seguem abaixo.
+
+- **spatial:** Usado para renderização 3D.
+- **canvas_item:** Usado para renderização for 2D.
+- **particles:** Usado para sistemas de partículas.
+- **sky:** Usado para renderizar céus.
+- **fog:** Usado para renderizar névoas volumétricas.
+
+Ao escrever um shader em Godot, a primeira coisa a se fazer é definir o tipo de shader. Isso se faz com o comando `shader_type {my_type};` em que *my_type* é um dos tipos mostrados acima.
+
+## Modos de renderização
+
+Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader, você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a enigne ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
+
+Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de renderização do shader do tipo `canvas_item`. Como este é o shader para renderizar 2D, é um dos que mais nos interessa no momento. 
+
+| Render mode            | Descrição                                                                                  |
+|-----------------------|---------------------------------------------------------------------------------------------|
+| blend_mix             | Modo de mistura padrão (alpha define a transparência).                                      |
+| blend_add             | Modo de mistura aditivo.                                                                    |
+| blend_sub             | Modo de mistura subtrativo.                                                                 |
+| blend_mul             | Modo de mistura multiplicativo.                                                             |
+| blend_premul_alpha    | Modo de mistura com alpha pré-multiplicado, evitando artefatos em bordas de transparência.  |
+| blend_disabled        | Desativa a mistura. O pixel é desenhado diretamente, ignorando transparência.               |
+| unshaded              | Ignora completamente a iluminação. Mostra apenas a cor base (albedo).                       |
+| light_only            | O objeto só aparece quando afetado por luz (não aparece na renderização base).              |
+| skip_vertex_transform | Desativa a transformação automática de VERTEX; você deve aplicar manualmente no vertex().   |
+| world_vertex_coords   | VERTEX passa a ser manipulado em coordenadas globais (mundo), em vez de locais ao objeto.   |
+
+- **VERTEX:** É a posição de cada vértice que o shader processa. No `canvas_item` (2D), ele vem em espaço local, ou seja, em coordenadas relativas ao node, e você pode modificá-lo na função `vertex()` para mover ou deformar a geometria.
+- **Albedo:** É a cor base do material/objeto. Ele é definido como um vetor de 3 dimensões que contém a cor do objeto. Na prática, albedo é a cor do objeto por si só, antes da iluminação afetar.
+
+Para definir um modo de renderização, se usa o comando `render_mode {my_render_mode_1}, {my_render_mode_2};`, em que *my_render_mode_1* e *my_render_mode_2* são dois possívels modos de renderização. Pode-se usar quantos quiser.
 
