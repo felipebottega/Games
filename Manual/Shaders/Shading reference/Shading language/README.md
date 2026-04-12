@@ -182,3 +182,102 @@ b.bgr = a.rgb; // Valid assignment. "b"'s "blue" component will be "a"'s "red" a
 ```
 
 ## Arrays
+
+Arrays em shaders são containers para dados de tipo similar. Veremos a seguir como funciona.
+
+### Arrays locais
+
+Arrays locais são declarados em funções (como a função `vertex()` ou `fragment()`). Eles podem usar todos os tipos de dados permitidos, exceto os samplers. A sintaxe é no estilo de C.
+
+```c#
+void fragment() {
+    float arr[3];
+    float float_arr[3] = float[3] (1.0, 0.5, 0.0);
+    int int_arr[3] = int[] (2, 1, 0);
+    vec2 vec2_arr[3] = {vec2(1.0, 1.0), vec2(0.5, 0.5), vec2(0.0, 0.0)};
+    bool bool_arr[] = {true, true, false}; // size is defined automatically from the element count
+}
+```
+
+O comando `float arr[3]` define um array de tipo `float` e tamanho de 3 elementos. O comando `float[3] (1.0, 0.5, 0.0)` é um "construtor", ele cria um array `float` com as entradas `(1.0, 0.5, 0.0)`. Este array por si só não é nenhuma variável, é só um array "voando" no código. Ele passa a ser uma variável com a declaração `float arr[3] = float[3] (1.0, 0.5, 0.0)`. Isso é equivalente à `float arr[3] = {1.0, 0.5, 0.0}`, inclusive esse segundo comando é o mais usual.
+
+Você pode declarar vários arrays (mesmo com tamanhos diferentes) em uma única expressão. Neste caso o `float` vale para todas as declarações.
+
+```c#
+float a[3] = float[3] (1.0, 0.5, 0.0), b[2] = {1.0, 0.5}, c[] = {0.7}, d = 0.0, e[5];
+```
+
+Se quiser mais legibilidade, pode usar quebra de linha com indentação. É importante ficar atento pois indentação não é uma coisa obrigatória nessa linguagem. Então é a vírgula como separador que vai indicar se os elementos são da mesma expressão ou não. Quando a expressão termina, se indica isso com o ponto-vírgula (;).
+
+```c#
+float a[3] = float[3] (1.0, 0.5, 0.0),
+    b[2] = {1.0, 0.5},
+    c[] = {0.7},
+    d = 0.0,
+    e[5];
+```
+
+Para acessar um elemento de um array, utilize a sintaxe de indexação.
+
+```c#
+float arr[3];
+
+arr[0] = 1.0;
+
+COLOR.r = arr[0]; 
+```
+
+Arrays também possuem a função `.length()`. Ela não aceita nenhum parâmetro e retorna o tamanho do array. 
+
+```c#
+float arr[3];
+
+int n = arr.length();
+```
+
+É importante ressaltar que `arr.length()` é apenas um atalho de sintaxe para acessar esta função. Não existem classes e objetos no contexto de shaders.
+
+### Arrays globais
+
+Você pode declarar arrays globais declarando como `const` ou `uniform`.
+
+```c#
+shader_type canvas_item;
+
+const vec3 v[1] = vec3[1] (vec3(0, 0, 1));
+uniform vec3 w[1];
+
+void fragment() {
+  COLOR = vec4(v[0] + w[0], 1.0);
+}
+```
+
+## Constantes
+
+Use a keyword `const` antes da declaração da variável para torná-la imutável, o que significa que ela não pode ser modificada. Todos os tipos básicos, exceto os samplers, podem ser declarados como constantes. Acessar e usar um valor constante é ligeiramente mais rápido do que usar um valor `uniform`. As constantes devem ser inicializadas para algum valor no momento da declaração. Você pode declarar constantes no escopo global ou dentro de funções.
+
+```c#
+const vec2 a = vec2(0.0, 1.0);
+vec2 b;
+
+a = b; // invalid
+b = a; // valid
+```
+
+Múltiplas constantes podem ser declaradas de uma vez.
+
+```c#
+const vec2 V1 = vec2(1, 1), V2 = vec2(2, 2);
+```
+
+Arrays também podem ser constantes.
+
+```c#
+const float arr[] = {1.0, 0.5, 0.0};
+
+arr[0] = 1.0; // invalid
+
+COLOR.r = arr[0]; // valid
+```
+
+## Structs
