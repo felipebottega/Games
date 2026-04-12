@@ -12,11 +12,11 @@ O template *Node* vem com o básico: o `extends` a partir do node associado ao s
   <img width="720" src="https://github.com/user-attachments/assets/b79b9cc3-1964-4eba-b1bd-52270ea75350" />
 </p>
 
-Pode ocorrer de, num jogo seu, você querer inicializar todos os seus `CharacterBody2D` com outro script em vez de ficar inicializando com esse default e depois ter que ficar alterando. É possível criar seus próprios scripts template. Vamos ver aqui como fazer isso.
+Pode ocorrer de, num jogo seu, você querer inicializar todos os seus `CharacterBody2D` com outro script em vez de ficar inicializando com esse default e depois ter que ficar alterando. É possível criar seus próprios scripts de template. Vamos ver aqui como fazer isso.
 
-## Localização dos scripts template
+## Localização dos script templates
 
-Na pasta do seu projeto, crie uma pasta chamada *script_templates*. Se você for criar um script template para o `CharacterBody2D`, ele deverá ser um arquivo *.gd* dentro da pasta *CharacterBody2D*. Se for um script template, deverá estar dentro da pasta *Sprite2D*, e assim por diante. É possível ter múltiplos scripts templates dentro de cada pasta.
+Na pasta do seu projeto, crie uma pasta chamada *script_templates*. Se você for criar um script template para o `CharacterBody2D`, ele deverá ser um arquivo *.gd* dentro da pasta *CharacterBody2D*. Se for um script template para `Sprite2D`, deverá estar dentro da pasta *Sprite2D*, e assim por diante. É possível ter múltiplos scripts templates dentro de cada pasta.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/37ef936f-94ab-486b-bc61-2fb5e39b4a82" />
@@ -26,7 +26,7 @@ Na pasta do seu projeto, crie uma pasta chamada *script_templates*. Se você for
 
 ## Configurando o script template
 
-O seu script template não precisa de nada especial, apenas o `extends` deve estar de acordo com o node. Se você colocou um script na pasta `Sprite2D`, ele deve usar `extends Sprite2D`. Você também pode incluir comentários começando com as keywords `meta-name:` e `meta-description:`. A primeira é o nome que vai aparecer na lista de escolhas de scripts e a segunda é a descrição que vai aparecer. 
+O seu script template não precisa de nada especial, apenas o `extends` deve estar de acordo com o node. Se você colocou um script na pasta `Sprite2D`, ele deve usar `extends Sprite2D`, por exemplo. Você também pode incluir comentários começando com as keywords `meta-name:` e `meta-description:`. A primeira é o nome que vai aparecer na lista de escolhas de scripts e a segunda é a descrição que vai aparecer. 
 
 <p align="center">
   <img width="440" src="https://github.com/user-attachments/assets/3a16319d-b7a0-4d48-8028-d89ce8cf595c" />
@@ -35,4 +35,4 @@ O seu script template não precisa de nada especial, apenas o `extends` deve est
 
 Agora é só escolher o seu script template e começar a trabalhar a partir dele, não tem mistério!
 
-> PS: Não é obrigatório usar `meta-name:` e `meta-description:`. Caso você não use `meta-name:`, o nome do arquivo e usado. Caso não use `meta-description:`, também entra o nome do arquivo na descrição.
+> PS: Não é obrigatório usar `meta-name:` e `meta-description:`. Caso você não use `meta-name:`, o nome do arquivo é usado. Caso não use `meta-description:`, também entra o nome do arquivo na descrição.
