@@ -45,9 +45,9 @@ Godot usa uma linguagem de shader semelhante ao [GLSL ES 3.0](https://registry.k
 
 ### Comentários
 
-A linguagem de shader suporta a mesma sintaxe de comentários usada em C# e C++, usando `//` para comentários de linha única e `/* */` para comentários de várias linhas.
+A linguagem de shader suporta a mesma sintaxe de comentários usada em glsl e C++, usando `//` para comentários de linha única e `/* */` para comentários de várias linhas.
 
-```c#
+```glsl
 // Single-line comment.
 int a = 2;  // Another single-line comment.
 
@@ -61,7 +61,7 @@ int b = 3;
 
 Você pode usar comentários de documentação que são exibidos no *Inspector* ao passar o mouse sobre um parâmetro de shader. Os comentários de documentação são suportados atualmente apenas quando colocados imediatamente acima de uma declaração de `uniform`. Esses comentários de documentação suportam apenas a sintaxe de comentário multilinha (mesmo se usados ​​em uma única linha) e devem começar com dois asteriscos (/**) em vez de apenas um (/*).
 
-```c#
+```glsl
 /**
  * This is a documentation comment.
  * These lines will appear in the inspector when hovering the shader parameter
@@ -83,7 +83,7 @@ uniform float something_else = 1.0;
 
 O casting é semelhante ao Python, mas um pouco mais rígido.
 
-```c#
+```glsl
 float a = 2; // invalid
 float a = 2.0; // valid
 float a = float(2); // valid
@@ -91,7 +91,7 @@ float a = float(2); // valid
 
 Inteiros por padrão sempre são com sinal, portanto, é sempre necessário fazer um cast para convertê-los em `uint`.
 
-```c#
+```glsl
 int a = 2; // valid
 uint a = 2; // invalid
 uint a = uint(2); // valid
@@ -107,7 +107,7 @@ Para matrizes, use a sintaxe de indexação `m[coluna][linha]` para acessar cada
 
 Para construir um vetor, você deve sempre passar os valores, mas há diversas maneiras válidas de se fazer isso.
 
-```c#
+```glsl
 vec4 a = vec4(0.0, 1.0, 2.0, 3.0); // (0.0, 1.0, 2.0, 3.0)
 vec4 a = vec4(vec2(0.0, 1.0), vec2(2.0, 3.0)); // (0.0, 1.0, 2.0, 3.0)
 vec4 a = vec4(vec3(0.0, 1.0, 2.0), 3.0); // (0.0, 1.0, 2.0, 3.0)
@@ -116,7 +116,7 @@ vec4 a = vec4(0.0); // (0.0, 0.0, 0.0, 0.0)
 
 A construção de tipos de matrizes requer vetores da mesma dimensão da matriz, interpretados como colunas. Você também pode construir uma matriz diagonal usando a sintaxe `matx(float)`. Assim, `mat4(1.0)` é uma matriz identidade.
 
-```c#
+```glsl
 mat2 m2 = mat2(vec2(1.0, 0.0), vec2(0.0, 1.0));
 mat3 m3 = mat3(vec3(1.0, 0.0, 0.0), vec3(0.0, 1.0, 0.0), vec3(0.0, 0.0, 1.0));
 mat4 identity = mat4(1.0);
@@ -124,7 +124,7 @@ mat4 identity = mat4(1.0);
 
 Matrizes também podem ser construídas a partir de uma matriz de outra dimensão. Se uma matriz maior for construída a partir de uma matriz menor, as linhas e colunas adicionais assumem os valores que teriam em uma matriz identidade. Se uma matriz menor for construída a partir de uma matriz maior, a submatriz superior esquerda da matriz maior é utilizada.
 
-```c#
+```glsl
 // Pega a matriz 4x4 (MODEL_MATRIX) e extrai a submatriz superior esquerda 3x3
 // Ou seja, descarta a última linha e última coluna
 //
@@ -168,7 +168,7 @@ mat2 m2 = mat2(m4);
 
 É possível obter qualquer combinação de componentes em qualquer ordem, desde que o resultado seja outro tipo de vetor (ou escalar). Isso é mais fácil de demonstrar do que de explicar.
 
-```c#
+```glsl
 vec4 a = vec4(0.0, 1.0, 2.0, 3.0);
 vec3 b = a.rgb; // Creates a vec3 with vec4 components.
 vec3 b = a.ggg; // Also valid; creates a vec3 and fills it with a single vec4 component.
@@ -189,7 +189,7 @@ Arrays em shaders são containers para dados de tipo similar. Veremos a seguir c
 
 Arrays locais são declarados em funções (como a função `vertex()` ou `fragment()`). Eles podem usar todos os tipos de dados permitidos, exceto os samplers. A sintaxe é no estilo de C.
 
-```c#
+```glsl
 void fragment() {
     float arr[3];
     float float_arr[3] = float[3] (1.0, 0.5, 0.0);
@@ -203,13 +203,13 @@ O comando `float arr[3]` define um array de tipo `float` e tamanho de 3 elemento
 
 Você pode declarar vários arrays (mesmo com tamanhos diferentes) em uma única expressão. Neste caso o `float` vale para todas as declarações.
 
-```c#
+```glsl
 float a[3] = float[3] (1.0, 0.5, 0.0), b[2] = {1.0, 0.5}, c[] = {0.7}, d = 0.0, e[5];
 ```
 
 Se quiser mais legibilidade, pode usar quebra de linha com indentação. É importante ficar atento pois indentação não é uma coisa obrigatória nessa linguagem. Então é a vírgula como separador que vai indicar se os elementos são da mesma expressão ou não. Quando a expressão termina, se indica isso com o ponto-vírgula (;).
 
-```c#
+```glsl
 float a[3] = float[3] (1.0, 0.5, 0.0),
     b[2] = {1.0, 0.5},
     c[] = {0.7},
@@ -219,7 +219,7 @@ float a[3] = float[3] (1.0, 0.5, 0.0),
 
 Para acessar um elemento de um array, utilize a sintaxe de indexação.
 
-```c#
+```glsl
 float arr[3];
 
 arr[0] = 1.0;
@@ -229,7 +229,7 @@ COLOR.r = arr[0];
 
 Arrays também possuem a função `.length()`. Ela não aceita nenhum parâmetro e retorna o tamanho do array. 
 
-```c#
+```glsl
 float arr[3];
 
 int n = arr.length();
@@ -241,7 +241,7 @@ int n = arr.length();
 
 Você pode declarar arrays globais declarando como `const` ou `uniform`.
 
-```c#
+```glsl
 shader_type canvas_item;
 
 const vec3 v[1] = vec3[1] (vec3(0, 0, 1));
@@ -256,7 +256,7 @@ void fragment() {
 
 Use a keyword `const` antes da declaração da variável para torná-la imutável, o que significa que ela não pode ser modificada. Todos os tipos básicos, exceto os samplers, podem ser declarados como constantes. Acessar e usar um valor constante é ligeiramente mais rápido do que usar um valor `uniform`. As constantes devem ser inicializadas para algum valor no momento da declaração. Você pode declarar constantes no escopo global ou dentro de funções.
 
-```c#
+```glsl
 const vec2 a = vec2(0.0, 1.0);
 vec2 b;
 
@@ -266,13 +266,13 @@ b = a; // valid
 
 Múltiplas constantes podem ser declaradas de uma vez.
 
-```c#
+```glsl
 const vec2 V1 = vec2(1, 1), V2 = vec2(2, 2);
 ```
 
 Arrays também podem ser constantes.
 
-```c#
+```glsl
 const float arr[] = {1.0, 0.5, 0.0};
 
 arr[0] = 1.0; // invalid
@@ -284,7 +284,7 @@ COLOR.r = arr[0]; // valid
 
 Structs são parecidos com dicionários, mas possuem tamanho fixo e nomes fixos. Eles são usados para agrupar variáveis relacionadas em shaders. Você pode declarar um struct no escopo global como mostra o exemplo abaixo.
 
-```c#
+```glsl
 struct PointLight {
     vec3 position;
     vec3 color;
@@ -294,7 +294,7 @@ struct PointLight {
 
 Depois é possível instanciá-lo nas funções.
 
-```c#
+```glsl
 void fragment(){
     PointLight light;
     light.position = vec3(0.0);
@@ -305,7 +305,7 @@ void fragment(){
 
 A ordem dos elementos importa na definição de um struct (outra diferença entre dicionários). Você pode usar isso para instanciar um struct através de um construtor, de maneira análoga ao construtor de classes.
 
-```c#
+```glsl
 struct PointLight {vec3 position; vec3 color; float intensity;}; // Initializing the struct on a single line to highlight the order of the elements.
 
 void fragment() {
@@ -334,7 +334,7 @@ void fragment() {
 
 A linguagem de shaders suporta os tipos mais comuns de controle de fluxo. Note que o `switch` funciona como o `match` de GDScript (mas o `match` é mais poderoso).
 
-```c#
+```glsl
 // `if`, `else if` and `else`.
 if (cond) {
 }
@@ -387,7 +387,7 @@ do {
 
 Além das [funções de processamento](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Introduction%20to%20shaders#processor-functions), também é possível definir as suas próprias funções no shader da Godot. Elas usam a sintaxe mostrada abaixo.
 
-```c#
+```glsl
 return_type func_name(args) {
     return return_type; // if returning a value
 }
@@ -395,7 +395,7 @@ return_type func_name(args) {
 
 Um exemplo concreto é a função definida abaixo. 
 
-```c#
+```glsl
 int sum2(int a, int b) {
     return a + b;
 }
@@ -410,7 +410,7 @@ Você só pode usar funções que foram definidas acima (mais acima no editor). 
 
 Um exemplo concreto de aplicação de qualificadores. Neste exemplo, `result` não é um valor "normal" recebido pela função. Ele é um parâmetro de saída por referência. Isso significa que a função recebe acesso à mesma variável `result` que existe fora dela. Quando a função faz `result = a + b;`, ela está alterando a variável externa diretamente. Devolve um valor sem usar return.
 
-```c#
+```glsl
 void sum2(int a, int b, inout int result) {
     result = a + b;
 }
@@ -418,7 +418,7 @@ void sum2(int a, int b, inout int result) {
 
 Uma vantagem do quaificador por referência, é que o código fica mais limpo e se evita criar cópias dentro da função. Sem isso, poderíamos ter um bloco de código assim:
 
-```c#
+```glsl
 color = process1(color);
 color = process2(color);
 color = process3(color);
@@ -426,9 +426,98 @@ color = process3(color);
 
 Porém, com o qualificador o código pode ser assim:
 
-```c#
+```glsl
 process1(color);
 process2(color);
 process3(color);
 ```
 
+## Variáveis interpoladas (Varyings)
+
+Não existe uma tradução óbvia para "varyings", não que eu tenha encontrado. O melhor que temos é "variáveis interpoladas" e vamos seguir com isso. 
+
+Para enviar dados da função de processamento `vertex()` para a `fragment()` ou `light()`, utilizam-se *variáveis interpoladas*. Esses valores são definidos para cada vértice na função `vertex()`, e são interpolados para cada pixel na função `fragment()` ou `light()`.
+
+No exemplo abaixo, está acontecendo o seguinte: `vertex()` roda uma vez por vértice do primitivo 2D. Ali você pega um valor e guarda em `some_color`. Depois a GPU interpola esse valor automaticamente entre os vértices para cada pixel, é exatamente esse o papel de *variáveis interpoladas*. `fragment()` roda para cada pixel desenhado e escreve a cor final em `COLOR`, que é a saída do shader 2D. A iluminação 2D acontece no passe normal de desenho. Se você definir `light()`, ele substitui a função de luz padrão. `LIGHT` é a cor de saída para a classe `Light2D` na Godot. 
+
+```glsl
+shader_type canvas_item;
+
+varying vec3 some_color;
+
+void vertex() {
+    some_color = vec3(UV, 0.0);
+}
+
+void fragment() {
+    COLOR = vec4(some_color, 1.0);
+}
+
+void light() {
+    LIGHT = vec4(some_color * 100.0, 1.0); // opcional
+}
+```
+
+> PS: O "primitivo 2D" é a forma geométrica básica que está sendo desenhada. No contexto do `canvas_item`, isso pode ser um retângulo (`Sprite2D`, `TextureRect`, etc.), um polígono (`Polygon2D`) ou qualquer malha 2D desenhada.
+
+Essa funcionalidade é bastante usada. Existe uma separação rígida no pipeline: `vertex()` roda nos vértices e `fragment()` roda nos pixels, mas um não enxerga as variáveis locais do outro. *Variáveis interpoladas* é literalmente o único canal padrão pra levar dados de um pro outro.
+
+### Variáveis interpoladas como arrays
+
+*Variável interpolada* não precisam ser só uma variável única. Ele pode ser um vetor, uma cor, ou até um array. No exemplo, o valor é definido no `vertex()` e depois lido no `fragment()`.
+
+```glsl
+shader_type canvas_item;
+
+varying float var_arr[3];
+
+void vertex() {
+    var_arr[0] = 1.0;
+    var_arr[1] = 0.0;
+    var_arr[2] = 0.0;
+}
+
+void fragment() {
+    COLOR = vec4(var_arr[0], var_arr[1], var_arr[2], 1.0);
+}
+```
+
+### Passar dados do fragment() para light()
+
+O `fragment()` prepara um valor para o `light()` usar depois. Ou seja, você calcula algo na cor base e reaproveita isso na iluminação 2D.
+
+```glsl
+shader_type canvas_item;
+
+varying vec3 some_light;
+
+void fragment() {
+    some_light = COLOR.rgb * 100.0;
+}
+
+void light() {
+    LIGHT = vec4(some_light, 1.0);
+}
+```
+
+### Onde não pode atribuir variável interpolada
+
+Você só pode escrever em *variável interpolada* em certos lugares do pipeline, como `vertex()` ou `fragment()`. Não pode fazer isso em funções auxiliares como foo(), nem em `light()`.
+
+```glsl
+shader_type canvas_item;
+
+varying float test;
+
+void foo() {
+    test = 0.0; // erro
+}
+
+void vertex() {
+    test = 0.0;
+}
+
+void light() {
+    test = 0.0; // erro
+}
+```
