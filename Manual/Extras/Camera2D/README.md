@@ -65,7 +65,7 @@ Como dissemos no início, basta colocar um node `Camera2D` como filho do player 
   <img width="200" src="https://github.com/user-attachments/assets/970d6a23-fe02-4bcc-b09a-48a0e732a8de" />
 </p>
 
-Com este setup, você tem um jogo em que a câmera fica sempre centrada no personagem e o segue assim que ele se move. Abaixo, mostramos como é a cena inicial do jogo quando colocamos para rodar. 
+Com este setup, você tem um jogo em que a câmera fica sempre centrada no personagem e o segue assim que ele se move. 
 
 ## Básico de Camera2D
 
@@ -138,5 +138,5 @@ Temos as opções *Position Smoothing* e *Rotation Smoothing* no *Inspector*. Po
 Podemos implementar uma dinâmica onde o jogo começa com um certo zoom e o jogador consegue alterar o zoom pelo scroll do mouse. Isso é possível pelo script abaixo, que deve ser anexado ao node `Camera2D`.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/65e818f8-c58b-4f0c-bb55-0c1b84f41e89" />
+  <img width="450" src="https://github.com/user-attachments/assets/65e818f8-c58b-4f0c-bb55-0c1b84f41e89" />
 </p>
