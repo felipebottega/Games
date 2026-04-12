@@ -6,13 +6,13 @@ A solução para esse problema é usar um `emit`. O sinal inicial vem do input d
 
 ## Exemplo prático
 
-Começamos criando a cena da pedra. Ela é simplesmente um node `Area2D` com o script abaixo. Poderia ser algum outro node com velocidade. 
+Começamos criando a cena da pedra. Ela é simplesmente um node `Area2D` com o script abaixo.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/24d36c06-f94a-4279-b9f0-9cfc5ccf1bd8" />
 </p>
 
-O node do personagem é um `Sprite2D` que pode se movimentar, rotaciona seguindo o ponteiro do mouse, e reage aos cliques do mouse emitindo um sinal. No que diz respeito ao sinal, é um [sinal customizado](https://github.com/felipebottega/Games/blob/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203/README.md#signals-3), chamado *shoot*, com os parâmetros *rock*, *direction* e *location*. Note que já trabalhamos [anteriormente](https://github.com/felipebottega/Games/blob/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202/README.md#cena-do-hud) com sinal enviando parâmetros junto.
+O node do personagem é um `Sprite2D` que pode se movimentar, que rotaciona seguindo o ponteiro do mouse, e que reage aos cliques do mouse emitindo um sinal. No que diz respeito ao sinal, é um [sinal customizado](https://github.com/felipebottega/Games/blob/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203/README.md#signals-3), chamado *shoot*, com os parâmetros *rock*, *direction* e *location*. Note que já trabalhamos [anteriormente](https://github.com/felipebottega/Games/blob/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202/README.md#cena-do-hud) com sinal enviando parâmetros junto.
 
 <p align="center">
   <img width="570" src="https://github.com/user-attachments/assets/d5314623-d460-4268-88c8-563447e4c22d" />
@@ -26,4 +26,4 @@ Quando o jogador clica no mouse, é emitido o sinal do player para o exterior at
   <img width="480" src="https://github.com/user-attachments/assets/25ec0f8d-00ef-4cc0-826d-c79ace11618d" />
 </p>
 
-No script da pedra, podemos ver que ela é inicializada com vetor velocidade $(100, 0)$, mas logo após ser inicializada a rotação dela é alterada. A partir daí a direção dela passa a ser a direção, que é a do player no momento do clique. E é assim que se instancia objetos a partir de sinais de maneira adequada.
+No script da pedra, podemos ver que ela é inicializada com vetor velocidade $(100, 0)$, mas logo após ser inicializada a rotação dela é alterada. A partir daí a direção dela passa a ser a direção do player no momento do clique. E é assim que se instancia objetos a partir de sinais de maneira adequada.
