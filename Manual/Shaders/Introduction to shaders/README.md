@@ -1,6 +1,6 @@
 # Introduction to shaders
 
-"Shader" é um termo que foi utilizado algumas vezes em tutoriais passados, mas nunca utilizamos isso de fato. Agora chegou a hora de abordar esse tema de maneira sistemática. Vamos começar com algumas definições retiradas [daqui].
+"Shader" é um termo que foi dito algumas vezes em tutoriais passados, mas nunca utilizamos isso de fato. Agora chegou a hora de abordar esse tema de maneira sistemática. Vamos começar com algumas definições retiradas [daqui].
 
 - **Shader:** Em computação gráfica, shaders são pequenos programas que rodam na GPU e definem como os objetos são desenhados na tela. Cada shader executa uma parte específica do processo de renderização, controlando aspectos como cor, iluminação, sombras e outros efeitos visuais. Um jogo normalmente utiliza muitos shaders diferentes ao mesmo tempo.
 - **GLSL:** GLSL (OpenGL Shading Language) é a linguagem usada para escrever shaders. A Godot gera código GLSL automaticamente a partir dos materiais e shaders que você usa.
@@ -15,7 +15,7 @@ A figura abaixo ilustra o processo inteiro de maneira bem resumida. A CPU faz um
 
 ## Processor Functions
 
-Na Godot, cada shader está associado a uma única função, chamadas de "funções de processamento" (no original, "processor functions"). As *funções de processamento* são o ponto de entrada do seu shader no programa. Elas representam etapas específicas do pipeline, cada uma atuando como um "processador" de um tipo de dado. Existem 7 *funções de processamento* diferentes.
+Na Godot, cada shader está associado a uma única função, chamada de "função de processamento" (no original, "processor function"). As *funções de processamento* são o ponto de entrada do seu shader no programa. Elas representam etapas específicas do pipeline, cada uma atuando como um "processador" de um tipo de dado. Existem 7 *funções de processamento* diferentes.
 
 1. A função `vertex()` (*vertex shader*) percorre todos os vértices da malha e define suas posições e algumas outras variáveis ​​por vértice. 
 2. A função `fragment()` (*fragment shader* ou *pixel shader*) é executada para cada pixel coberto pela malha. Ela usa os valores retornados pela função `vertex()`, interpolados entre os vértices. 
@@ -42,3 +42,6 @@ Para shaders 2D, na prática, trabalhamos principalmente com `vertex()` e `fragm
 O shader `light()` associado a essa etapa processa a influência das luzes sobre os pixels do objeto. Essa função é executada para cada fragmento e para cada luz que o afeta. Ou seja, se um mesmo pixel estiver sob a influência de várias luzes, o `light()` será chamado múltiplas vezes para esse mesmo ponto. No contexto 2D, isso é usado principalmente com nodes de iluminação, como luzes que simulam lanternas, lâmpadas ou efeitos de brilho. Caso não haja luzes na cena, essa etapa simplesmente não é utilizada.
 
 > PS: A função `light()` não será executada se o modo de renderização *vertex_lighting* estiver ativado ou se a opção *Rendering → Quality → Shading → Force Vertex Shading* estiver ativada no *Project Settings*. Essa opção está ativada por padrão para dispositivos móveis.
+
+## Tipos de shaders
+
