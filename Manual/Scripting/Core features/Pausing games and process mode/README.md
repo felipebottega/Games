@@ -1,10 +1,10 @@
 # Pausing games and process mode
 
-Para pausar o jogo, basra executar o comando `get_tree().paused = true`. Fazer isso causará duas coisas. Primeiro, a física 2D e 3D será interrompida para todos os nodes. Segundo, o comportamento de certos nodes será interrompido ou iniciado dependendo do seu *modo de processamento* (*process mode*).
+Para pausar o jogo, basta executar o comando `get_tree().paused = true`. Fazer isso causará duas coisas. Primeiro, a física 2D e 3D será interrompida para todos os nodes. Segundo, o comportamento de certos nodes será interrompido ou iniciado dependendo do seu *modo de processamento* (*process mode*).
 
 ## Process Mode
 
-Todo node de Godot possui um *modo de processamento*, fica em *Inspector → Node → Process → Mode*.  
+Todo node da Godot possui um *modo de processamento*, essa propriedade fica em *Inspector → Node → Process → Mode*.  
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/fa9f6453-eab7-4df8-8904-8aca9b04343f" />
@@ -16,7 +16,7 @@ Todo node de Godot possui um *modo de processamento*, fica em *Inspector → Nod
 - **Always:** Processa o node independentemente de qualquer coisa. Pausado ou não, este node será processado.
 - **Disabled:** O node não será processado de forma alguma.
 
-Por padrão, todos os nodes começam no modo *Inherit*. Se o node pai estiver definido como *Inherit*, o node avô será verificado e assim por diante. Se nenhum modo diferente de *Inherit* for encontrado em nenhum dos nodes na hierarquia acima, o estado de pausa na `SceneTree` será usado. Isso significa que, por padrão, quando o jogo é pausado, todos os nós também serão pausados, pois o `SceneTree` é *Pausable*. 
+Por padrão, todos os nodes começam no modo *Inherit*. Se o node pai estiver definido como *Inherit*, o node avô será verificado, e assim por diante. Se nenhum modo diferente de *Inherit* for encontrado em nenhum dos nodes na hierarquia acima, o estado de pausa da `SceneTree` será utilizado. Isso significa que, por padrão, quando o jogo é pausado, todos os nodes também serão pausados, pois o `SceneTree` é *Pausable*. 
 
 ## O que acontece no pause
 
