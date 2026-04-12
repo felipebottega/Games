@@ -281,3 +281,37 @@ COLOR.r = arr[0]; // valid
 ```
 
 ## Structs
+
+Structs são parecidos com dicionários, mas possuem tamanho fixo e nomes fixos. Eles são usados para agrupar variáveis relacionadas em shaders. Você pode declarar um struct no escopo global como mostra o exemplo abaixo.
+
+```c#
+struct PointLight {
+    vec3 position;
+    vec3 color;
+    float intensity;
+};
+```
+
+Depois é possível instanciá-lo nas funções.
+
+```c#
+void fragment(){
+    PointLight light;
+    light.position = vec3(0.0);
+    light.color = vec3(1.0, 0.0, 0.0);
+    light.intensity = 0.5;
+}
+```
+
+A ordem dos elementos importa na definição de um struct (outra diferença entre dicionários). Você pode usar isso para instanciar um struct através de um construtor, de maneira análoga ao construtor de classes.
+
+```c#
+struct PointLight {vec3 position; vec3 color; float intensity;}; // Initializing the struct on a single line to highlight the order of the elements.
+
+void fragment() {
+    PointLight light = PointLight(vec3(0.0), vec3(1.0, 0.0, 0.0), 0.5);
+}
+```
+
+## Operadores
+
