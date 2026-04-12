@@ -330,5 +330,105 @@ void fragment() {
 | 11               | AND lógico                 | `&&`                 |
 | 12 (mais baixa)  | OU lógico inclusivo        | `\|\|`               |
 
-## Conrtole de fluxo
+## Controle de fluxo
+
+A linguagem de shaders suporta os tipos mais comuns de controle de fluxo. Note que o `switch` funciona como o `match` de GDScript (mas o `match` é mais poderoso).
+
+```c#
+// `if`, `else if` and `else`.
+if (cond) {
+}
+else if (other_cond) {
+}
+else {
+}
+
+// Ternary operator.
+// If `cond` evaluates to `true`, `result` will be `9`. Otherwise, `result` will be `5`.
+int result = cond ? 9 : 5;
+
+// `switch`.
+switch (i) { // `i` should be a signed integer expression.
+    case -1:
+        break;
+    case 0:
+        return; // `break` or `return` to avoid running the next `case`.
+    case 1: // Fallthrough (no `break` or `return`): will run the next `case`.
+    case 2:
+        break;
+    //...
+    default: // Only run if no `case` above matches. Optional.
+        break;
+}
+
+// `for` loop. Best used when the number of elements to iterate on
+// is known in advance.
+for (int i = 0; i < 10; i++) {
+}
+
+// `while` loop. Best used when the number of elements to iterate on is not known in advance.
+while (cond) {
+}
+
+// `do while`. Like `while`, but always runs at least once even if `cond` never evaluates to `true`.
+do {
+} while (cond);
+```
+
+⚠️ **Atenção:**
+1. Lembre-se de que, em GPUs modernas, um loop infinito pode ocorrer e congelar seu aplicativo (incluindo o editor). O Godot não pode protegê-lo disso, portanto, tome cuidado para não cometer esse erro!
+2. Ao comparar valores de ponto flutuante com um número, certifique-se de compará-los com um intervalo em vez de um número exato. Por exemplo, uma comparação como `if (value == 0.3)` pode não resultar em verdadeiro. A matemática de ponto flutuante geralmente é aproximada e pode desafiar as expectativas. Ela também pode se comportar de maneira diferente dependendo do hardware. Uma maneira mais segura seria usar `if (value >= 0.3 - 0.0001 && value <= 0.3 + 0.0001)`.
+
+## Descarte
+
+É possível usar a keyword `discard` nas funções `fragment()` e `light()`. Se usada, o pixel é descartado e nada é gravado. Tenha cuidado, pois um pixel descartado ainda precisa ser renderizado no vertex shader, o que significa que um shader que usa `discard` em todos os seus pixels ainda é mais custoso de renderizar do que não renderizar nenhum objeto.
+
+## Funções
+
+Além das [funções de processamento](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Introduction%20to%20shaders#processor-functions), também é possível definir as suas próprias funções no shader da Godot. Elas usam a sintaxe mostrada abaixo.
+
+```c#
+return_type func_name(args) {
+    return return_type; // if returning a value
+}
+```
+
+Um exemplo concreto é a função definida abaixo. 
+
+```c#
+int sum2(int a, int b) {
+    return a + b;
+}
+```
+
+Você só pode usar funções que foram definidas acima (mais acima no editor). Os argumentos de entrada da função podem ter qualificadores especiais.
+
+- **in:** Significa que o argumento é apenas para leitura (padrão).
+- **out:** Significa que o argumento é apenas para escrita.
+- **inout:** Significa que o argumento é totalmente passado por referência.
+- **const:** Significa que o argumento é uma constante e não pode ser alterado. pode ser combinado com o qualificador *in*.
+
+Um exemplo concreto de aplicação de qualificadores. Neste exemplo, `result` não é um valor "normal" recebido pela função. Ele é um parâmetro de saída por referência. Isso significa que a função recebe acesso à mesma variável `result` que existe fora dela. Quando a função faz `result = a + b;`, ela está alterando a variável externa diretamente. Devolve um valor sem usar return.
+
+```c#
+void sum2(int a, int b, inout int result) {
+    result = a + b;
+}
+```
+
+Uma vantagem do quaificador por referência, é que o código fica mais limpo e se evita criar cópias dentro da função. Sem isso, poderíamos ter um bloco de código assim:
+
+```c#
+color = process1(color);
+color = process2(color);
+color = process3(color);
+```
+
+Porém, com o qualificador o código pode ser assim:
+
+```c#
+process1(color);
+process2(color);
+process3(color);
+```
 
