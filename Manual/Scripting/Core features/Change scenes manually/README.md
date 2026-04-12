@@ -51,7 +51,7 @@ Existem 3 formas de fazer uma cena deixar de aparecer ou deixar de ser usada, e 
 
 > PS: Na Godot, a `SceneTree` mantém uma referência para qual é a "cena atual" através do atributo `current_scene`. Quando você usa métodos prontos como o `change_scene_to_file()`, a própria engine atualiza isso automaticamente. Mas se você estiver trocando cenas manualmente, a engine não atualiza esse campo sozinho. Ao trocar de cena manualmente, pode ser uma boa ideia definir `get_tree().current_scene = scene`, para que scripts que dependem de `SceneTree.current_scene` não parem de funcionar.
 
-## Ideias de coisas para fazer com múltiplas cenas no *root*
+## Ideias de coisas para fazer com múltiplas cenas no root
 
 1. Sistemas persistentes sem Autoload. Em vez de usar Autoload, você pode manter uma cena viva. Basicamente, uma cena que nunca sai do *root*.
     - UI global  
