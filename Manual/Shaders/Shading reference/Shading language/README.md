@@ -315,3 +315,20 @@ void fragment() {
 
 ## Operadores
 
+| Precedência      | Classe                     | Operadores           |
+|------------------|----------------------------|----------------------|
+| 1 (mais alta)    | agrupamento com parênteses | `()`                 |
+| 2                | unário                     | `+`, `-`, `!`, `~`   |
+| 3                | multiplicativo             | `/`, `*`, `%`        |
+| 4                | aditivo                    | `+`, `-`             |
+| 5                | deslocamento bit a bit     | `<<`, `>>`           |
+| 6                | relacional                 | `<`, `>`, `<=`, `>=` |
+| 7                | igualdade                  | `==`, `!=`           |
+| 8                | E bit a bit (AND)          | `&`                  |
+| 9                | OU exclusivo bit a bit     | `^`                  |
+| 10               | OU inclusivo bit a bit     | `\|`                 |
+| 11               | AND lógico                 | `&&`                 |
+| 12 (mais baixa)  | OU lógico inclusivo        | `\|\|`               |
+
+## Conrtole de fluxo
+
