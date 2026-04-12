@@ -43,7 +43,7 @@ Godot usa uma linguagem de shader semelhante ao [GLSL ES 3.0](https://registry.k
 
 ⚠️ **Atenção:** As variáveis ​​locais não são inicializadas com um valor padrão, como $0.0$. Se você usar uma variável sem atribuir um valor a ela primeiro, ela vai inicializar com qualquer valor que já estiver presente naquele endereço de memória, e falhas visuais imprevisíveis poderão aparecer. No entanto, as variáveis ​​`uniform` (veremos adiante) ​​são inicializadas com um valor padrão.
 
-## Comentários
+### Comentários
 
 A linguagem de shader suporta a mesma sintaxe de comentários usada em C# e C++, usando `//` para comentários de linha única e `/* */` para comentários de várias linhas.
 
@@ -73,3 +73,112 @@ uniform int something = 1;
 /** This is a single-line documentation comment. */
 uniform float something_else = 1.0;
 ```
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/dcf9d941-1b9e-4b6c-b99e-c2149cca29c5" />
+  <img width="1100" src="https://github.com/user-attachments/assets/7473e66b-6c28-4a7d-b80a-508cc7ee418b" />
+</p>
+
+### Casting
+
+O casting é semelhante ao Python, mas um pouco mais rígido.
+
+```c#
+float a = 2; // invalid
+float a = 2.0; // valid
+float a = float(2); // valid
+```
+
+Inteiros por padrão sempre são com sinal, portanto, é sempre necessário fazer um cast para convertê-los em `uint`.
+
+```c#
+int a = 2; // valid
+uint a = 2; // invalid
+uint a = uint(2); // valid
+```
+
+### Elementos de vetores e matrizes
+
+Os membros escalares individuais de tipos vetoriais são acessados ​​através dos membros `x`, `y`, `z` e `w`. Alternativamente, usar `r`, `g`, `b` e `a` também funciona e é equivalente. Use o que melhor se adequar às suas necessidades.
+
+Para matrizes, use a sintaxe de indexação `m[coluna][linha]` para acessar cada escalar, ou `m[coluna]` para acessar um vetor por coluna. Por exemplo, para acessar a componente $y$ da quarta coluna de uma matriz `m` (4ª coluna, 2ª linha), você usa `m[3][1]` ou `m[3].y`.
+
+### Construção de vetores e matrizes
+
+Para construir um vetor, você deve sempre passar os valores, mas há diversas maneiras válidas de se fazer isso.
+
+```c#
+vec4 a = vec4(0.0, 1.0, 2.0, 3.0); // (0.0, 1.0, 2.0, 3.0)
+vec4 a = vec4(vec2(0.0, 1.0), vec2(2.0, 3.0)); // (0.0, 1.0, 2.0, 3.0)
+vec4 a = vec4(vec3(0.0, 1.0, 2.0), 3.0); // (0.0, 1.0, 2.0, 3.0)
+vec4 a = vec4(0.0); // (0.0, 0.0, 0.0, 0.0)
+```
+
+A construção de tipos de matrizes requer vetores da mesma dimensão da matriz, interpretados como colunas. Você também pode construir uma matriz diagonal usando a sintaxe `matx(float)`. Assim, `mat4(1.0)` é uma matriz identidade.
+
+```c#
+mat2 m2 = mat2(vec2(1.0, 0.0), vec2(0.0, 1.0));
+mat3 m3 = mat3(vec3(1.0, 0.0, 0.0), vec3(0.0, 1.0, 0.0), vec3(0.0, 0.0, 1.0));
+mat4 identity = mat4(1.0);
+```
+
+Matrizes também podem ser construídas a partir de uma matriz de outra dimensão. Se uma matriz maior for construída a partir de uma matriz menor, as linhas e colunas adicionais assumem os valores que teriam em uma matriz identidade. Se uma matriz menor for construída a partir de uma matriz maior, a submatriz superior esquerda da matriz maior é utilizada.
+
+```c#
+// Pega a matriz 4x4 (MODEL_MATRIX) e extrai a submatriz superior esquerda 3x3
+// Ou seja, descarta a última linha e última coluna
+//
+// Se MODEL_MATRIX fosse:
+//
+// [ a b c d ]
+// [ e f g h ]
+// [ i j k l ]
+// [ m n o p ]
+//
+// Então basis vira:
+//
+// [ a b c ]
+// [ e f g ]
+// [ i j k ]
+mat3 basis = mat3(MODEL_MATRIX);
+
+// Constrói uma 4x4 a partir da 3x3
+// A parte 3x3 é preservada, e o resto vira identidade
+//
+// Resultado:
+//
+// [ a b c 0 ]
+// [ e f g 0 ]
+// [ i j k 0 ]
+// [ 0 0 0 1 ]
+mat4 m4 = mat4(basis);
+
+// Pega a submatriz superior esquerda 2x2 da 4x4
+//
+// Resultado:
+//
+// [ a b ]
+// [ e f ]
+mat2 m2 = mat2(m4);
+```
+
+> PS: `MODEL_MATRIX` é uma variável built-in (interna do shader), fornecida pela engine. É uma matriz que transforma coordenadas do espaço local do objeto para o espaço de mundo.
+
+### Swizzling
+
+É possível obter qualquer combinação de componentes em qualquer ordem, desde que o resultado seja outro tipo de vetor (ou escalar). Isso é mais fácil de demonstrar do que de explicar.
+
+```c#
+vec4 a = vec4(0.0, 1.0, 2.0, 3.0);
+vec3 b = a.rgb; // Creates a vec3 with vec4 components.
+vec3 b = a.ggg; // Also valid; creates a vec3 and fills it with a single vec4 component.
+vec3 b = a.bgr; // "b" will be vec3(2.0, 1.0, 0.0).
+vec3 b = a.xyz; // Also rgba, xyzw are equivalent.
+vec3 b = a.stp; // And stpq (for texture coordinates).
+float c = b.w; // Invalid, because "w" is not present in vec3 b.
+vec3 c = b.xrt; // Invalid, mixing different styles is forbidden.
+b.rrr = a.rgb; // Invalid, assignment with duplication.
+b.bgr = a.rgb; // Valid assignment. "b"'s "blue" component will be "a"'s "red" and vice versa.
+```
+
+## Arrays
