@@ -1,6 +1,6 @@
 # Resources
 
-O conceito de "recurso" ("resource", em inglês) já foi abordado diversas vezes em tutoriais anteriores. Vou deixar abaixo a lista das vezes em que ele foi tratado anteriormente, para termos uma referência geral.
+O conceito de "recurso" ("resource" em inglês) já foi abordado diversas vezes em tutoriais anteriores. Vou deixar abaixo a lista das vezes em que ele foi tratado anteriormente, para termos uma referência geral.
 
 - **Onde entram os recursos na estrutura do projeto:** [Organização de um projeto](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#organiza%C3%A7%C3%A3o-de-um-projeto)
 - **Recursos aplicados na linguagem do jogo:** [Assets associados a linguagens](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Internationalizing%20games#assets-associados-a-linguagens)
@@ -11,7 +11,7 @@ O conceito de "recurso" ("resource", em inglês) já foi abordado diversas vezes
 
 Quando a engine carrega um recurso do disco, ele o carrega apenas uma vez. Se uma cópia desse recurso já estiver na memória, tentar carregá-lo novamente retornará a mesma cópia todas as vezes. Como os recursos contêm apenas dados, não há necessidade de duplicá-los.
 
-Todo objeto em Godot, seja um node ou um recurso, pode exportar propriedades (usar o `@export`). Existem muitos tipos de propriedades, como String, inteiro, Vector2, etc., e qualquer um desses tipos pode se tornar um recurso. Isso significa que tanto nodes quanto recursos podem conter recursos como propriedades. A figura abaixo vem da [documentação oficial](), ela mostra como nodes podem conter recursos e como recursos podem contem outros recursos.
+Todo objeto em Godot, seja um node ou um recurso, pode exportar propriedades (usar o `@export`). Existem muitos tipos de propriedades, como String, inteiro, Vector2, etc., e qualquer um desses tipos pode se tornar um recurso. Isso significa que tanto nodes quanto recursos podem conter recursos como propriedades. A figura abaixo vem da [documentação oficial](), ela mostra como nodes podem conter recursos e como recursos podem conter outros recursos.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/231f9a0f-ef29-473a-a7fa-0a625788e782" />
@@ -25,9 +25,9 @@ Vamos pegar o exemplo do sprite na figura acima. Ela diz que o node do `Sprite2D
   <img width="300" src="https://github.com/user-attachments/assets/9d7b3276-7ce8-4871-826f-2f327e12aeee" />
 </p>
 
-É completamente possível adicionar recursos ao nodes através de código. Neste caso usaríamos o comando `var my_resource = load("res://my_texture.png")` e depois `$Sprite2D.texture = my_resource` (os nomes de variáveis e arquivos são fictícios). Na maioria dos exemplos, usamos o `load` ou `preload` para importar cenas, mas essas funções podem ser usadas para importar qualquer recurso.
+É completamente possível adicionar recursos aos nodes através de código. Neste caso, podemos usar o comando `var my_resource = load("res://my_texture.png")` e em seguida `$Sprite2D.texture = my_resource` (os nomes de variáveis e arquivos são fictícios). Na maioria dos exemplos, usamos o `load` ou `preload` para importar cenas, mas essas funções podem ser usadas para importar qualquer recurso.
 
-## Make Unique e Local to Scene
+## Local to Scene e Make Unique
 
 Para explicar essas duas funcionalidades, vamos considerar o exemplo de uma cena onde temos um `StaticBody2D` chamado *Blocks*. A ideia é que isso será inserido em uma cena de jogo depois. O corpo possui um `Sprite2D` e um `CollisionShape2D` retangular, algo comum.
 
@@ -57,22 +57,22 @@ Se a opção *Local to Scene* não estiver habilitada, vimos acima como é o com
 
 > PS: Apesar da instância com o *Editable Children* ter recurso independente, ela ainda é filha do objeto original e compartilha algumas propriedades com ele, como transformações, cores, visibilidade, entre outros. Tenha sempre atenção para não fazer confusão com isso.
 
-Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar a colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original (como já comentamos em outras ocasiões, para ter total independência (transformações, recursos, tudo), habilite a opção *Make Local*).
+Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar o shape de colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original (como já comentamos em outras ocasiões, para ter total independência tem que habilitar a opção *Make Local*).
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/db0bfd07-acc7-489b-9323-a80e53679f8c" />
 </p>
 
-> PS: A observação acima apenas vale quando você não alterou a propriedade do objeto instanciado. Caso esta propriedade tenha sido alterada, aparecerá o símbolo <img width="20" src="https://github.com/user-attachments/assets/1df980bb-e48e-4daf-b6aa-7eba4d4e2e8d" /> ao lado da propriedade
+> PS: Esse comportamento da instância copiar as propriedades do original apenas vale quando você não alterou a propriedade do objeto instanciado. Caso esta propriedade tenha sido alterada na instância, aparecerá o símbolo <img width="20" src="https://github.com/user-attachments/assets/1df980bb-e48e-4daf-b6aa-7eba4d4e2e8d" /> ao lado da propriedade
  no *Inspector*, e isso sinaliza que ela foi alterada. Neste caso, a propriedade não responde mais às alterações do original.
 
-A opção *Local to Scene* brilha mesmo quando você cria instâncias por código. Nesse caso, é como se elas fossem *Editable Children* por default, então todas tem recursos independentes. Ocultamos os dois blocos A e B comentados acima e agoras criamos dois por código na Main. O bloco original ainda é o mesmo, com a opção *Local to Scene* habilitada. Apenas manipulamos a posição e escala dos blocos. Note que ambas os shapes de colisão se alteraram como pedimos. 
+A opção *Local to Scene* brilha mesmo quando você cria instâncias por código. Nesse caso, é como se elas fossem *Editable Children* por default, então todas tem recursos independentes. Ocultamos os dois blocos A e B comentados acima e agoras criamos outros dois, por código, na Main. O bloco original ainda é o mesmo, com a opção *Local to Scene* habilitada. Apenas manipulamos a posição e escala dos blocos. Note que ambos os shapes de colisão se alteraram como pedimos. 
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/cf9fdb47-c333-4d7f-a8dc-5c19d226c350" />
 </p>
 
-Se tivéssemos executado este mesmo script sem *Local to Scene*, o primeiro comando `a.get_node("CollisionShape2D").shape.size = Vector2(64, 32)` de fato iria funcionar, alterando a shape para todos os blocos, pois o recurso está sendo compartilhado. Logo depois, o comando `b.get_node("CollisionShape2D").shape.size = Vector2(128, 20)` iria sobrescrever o comando anterior, e a shape de colisão de todo mundo seria essa.
+Se tivéssemos executado este mesmo script sem *Local to Scene*, o primeiro comando `a.get_node("CollisionShape2D").shape.size = Vector2(64, 32)` de fato iria funcionar, alterando o shape para todos os blocos, pois o recurso está sendo compartilhado. Logo depois, o comando `b.get_node("CollisionShape2D").shape.size = Vector2(128, 20)` iria sobrescrever o comando anterior, e o shape de colisão de todos seria esse último.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/2eaf0a17-2e57-456e-8bea-963973016d20" />
@@ -86,7 +86,7 @@ A opção *Make Unique* é mais simples, mais pontual e mais "radical". Esta op�
   <img width="450" src="https://github.com/user-attachments/assets/f2e365ce-f9fe-419c-9dd0-f5cd71d37b7a" />
 </p>
 
-É possível implementar o *Make Unique* por código. Para o caso do `CollisionShape2D` (exemplo), o comando `$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()` relpica o *Make Unique*. De maneira geral, `recurso = recurso.duplicate()` funciona para qualquer recurso, em que `recurso` é o nome do recurso. Se o recurso tiver sub-recursos dentro, use `recurso = recurso.duplicate(true)`. 
+É possível implementar o *Make Unique* por código. Para o caso do `CollisionShape2D` (exemplo), o comando `$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()` replica o *Make Unique*. De maneira geral, `recurso = recurso.duplicate()` funciona para qualquer recurso, em que `recurso` é o nome do recurso. Se o recurso tiver sub-recursos dentro, use `recurso = recurso.duplicate(true)`. 
 
 ## Detectando recursos compartilhados
 
@@ -105,7 +105,7 @@ Para criar o seu próprio recurso, a primeira coisa que deve fazer é criar um a
   <img width="400" src="https://github.com/user-attachments/assets/782cf3a4-9a9c-4642-a81f-1661f1d95228" />
 </p>
 
-No que diz respeito à escrita de código, a única diferença entre uma classe normal e uma classe representando um recurso é que a segunda usa o `extends Resource`. Mas essa diferença faz toda a diferença. A partir desta classe, você pode criar instâncias em formato de arquivo *.tres*, ele aparece no *Inspector*, salva automaticamente e pode ser arrastado pra nodes. Vamos ver como funciona na prática, tudo ficará mais claro.
+No que diz respeito à escrita de código, a única diferença entre uma classe normal e uma classe representando um recurso é que a segunda usa o `extends Resource`. Mas essa diferença faz toda a diferença. A partir desta classe, você pode criar instâncias em formato de arquivo *.tres*. Vamos ver como funciona na prática.
 
 Começamos criando o nosso arquivo *stats.gd*. Ele possui a declaração das variáveis da instância e o `_init` para criar instâncias com parâmetros. 
 
