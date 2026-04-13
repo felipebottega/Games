@@ -38,18 +38,18 @@ Nem todos os valores nativos estão disponíveis em todas as *funções de proce
 
 ### Valores nativos globais
 
-São valores nativos disponíveis para todas as funções, incluindo as customizadas.
+São valores os disponíveis para todas as funções, incluindo as customizadas.
 
-| Variável&nbsp;Nativa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição |
+| Valor&nbsp;Nativo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição |
 |--------------|-----------|
 | `in float TIME` | Tempo global desde que a engine foi iniciada, em segundos. Ele reinicia a cada 3600 segundos (isso pode ser alterado em *Project → Project Settings → General → Rendering → Limits → Time → Time Rollover Secs*, com a opção avançada ativada). É afetado por `time_scale`, mas não é afetado por pausa. Se você precisar de uma variável de tempo que não seja afetada por `time_scale`, crie seu próprio uniform global de shader e o atualize a cada frame. |
 | `in float PI` | Constante PI (3.141592). |
 | `in float TAU` | Constante TAU (6.283185). Equivalente a `PI * 2` e representa o número de radianos em uma volta completa. |
 | `in float E` | Constante E (2.718281). Número de Euler, base do logaritmo natural. |
 
-### Variáveis nativos do vertex
+### Valores nativos do vertex
 
-| Built-in | Descrição |
+| Valor&nbsp;Nativo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição |
 |----------|-----------|
 | `in mat4 MODEL_MATRIX` | Transformação do espaço local para o espaço global (world). O espaço global corresponde às coordenadas que você normalmente usa no editor. |
 | `in mat4 CANVAS_MATRIX` | Transformação do espaço global para o espaço de canvas. Nesse espaço, a origem fica no canto superior esquerdo da tela e as coordenadas vão de `(0.0, 0.0)` até o tamanho do viewport. |
@@ -78,15 +78,15 @@ void vertex() {
 }
 ```
 
-Outras variáveis nativas, como UV e COLOR, também são repassados para a função `fragment()` se não forem modificados. Para instanciar, a variável `INSTANCE_CUSTOM` contém os dados personalizados da instância. Ao usar partículas, essas informações normalmente são:
+Outros valores nativas, como UV e COLOR, também são repassados para a função `fragment()` se não forem modificados. Para instanciar, a variável `INSTANCE_CUSTOM` contém os dados personalizados da instância. Ao usar partículas, essas informações normalmente são:
 
 - **x:** ângulo de rotação em radianos.
 - **y:** fase durante a vida útil (0.0 a 1.0).
 - **z:** frame da animação.
 
-### Variáveis nativas do fragment
+### Valores nativos do fragment
 
-| Built-in | Descrição |
+| Valor&nbsp;Nativo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição |
 |----------|-----------|
 | `in vec4 FRAGCOORD` | Coordenada do centro do pixel, em espaço de tela. O componente `xy` define a posição dentro do viewport. A origem `(0.0, 0.0)` fica no canto superior esquerdo. |
 | `in vec2 SCREEN_PIXEL_SIZE` | Tamanho de um pixel individual. Equivale ao inverso da resolução da tela. |
