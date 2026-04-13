@@ -66,7 +66,7 @@ São valores os disponíveis para todas as funções, incluindo as customizadas.
 | `in vec4 CUSTOM0` | Valor personalizado vindo do vértice. |
 | `in vec4 CUSTOM1` | Valor personalizado vindo do vértice. |
 
-Os dados de vértice (VERTEX) são apresentados no espaço local (coordenadas de pixel, relativas à origem do Node2D). Se não forem alterados, esses valores permanecerão inalterados e serão transmitidos como foram recebidos. É possível pode desativar a transformação embutida de modelo para mundo (a conversão de mundo para tela e a projeção ainda ocorrerão mais adiante) e fazer isso manualmente com o seguinte código:
+Os dados de vértice (`VERTEX`) são apresentados no espaço local (coordenadas de pixel, relativas à origem do `Node2D`). Se não forem alterados, esses valores permanecerão inalterados e serão transmitidos como foram recebidos. É possível desativar a transformação embutida de modelo para mundo (a conversão de mundo para tela e a projeção ainda ocorrerão mais adiante) e fazer isso manualmente com o seguinte código:
 
 ```glsl
 shader_type canvas_item;
@@ -77,11 +77,7 @@ void vertex() {
 }
 ```
 
-Outros valores nativas, como UV e COLOR, também são repassados para a função `fragment()` se não forem modificados. Para instanciar, a variável `INSTANCE_CUSTOM` contém os dados personalizados da instância. Ao usar partículas, essas informações normalmente são:
-
-- **x:** ângulo de rotação em radianos.
-- **y:** fase durante a vida útil (0.0 a 1.0).
-- **z:** frame da animação.
+Outros valores nativos, como `UV` e `COLOR`, também são repassados para a função `fragment()` se não forem modificados. Para instanciar, a variável `INSTANCE_CUSTOM` contém os dados personalizados da instância. 
 
 ### Valores nativos do fragment
 
@@ -92,13 +88,12 @@ Outros valores nativas, como UV e COLOR, também são repassados para a função
 | `in vec4 REGION_RECT` | Área visível da região do sprite no formato `(x, y, largura, altura)`. Varia de acordo com a propriedade `region_enabled` do `Sprite2D`. |
 | `in vec2 POINT_COORD` | Coordenada usada para renderização de pontos. |
 | `sampler2D TEXTURE` | Textura 2D padrão. |
-| `in vec2 TEXTURE_PIXEL_SIZE` | Tamanho de pixel normalizado da textura 2D padrão. Para um `Sprite2D` com textura de 64x32 px, `TEXTURE_PIXEL_SIZE = vec2(1/64, 1/32)`. |
+| `in vec2 TEXTURE_PIXEL_SIZE` | Tamanho de pixel normalizado da textura 2D padrão. Para um `Sprite2D` com textura de 64x32 pixels, `TEXTURE_PIXEL_SIZE = vec2(1/64, 1/32)`. |
 | `in bool AT_LIGHT_PASS` | Sempre falso. |
 | `sampler2D SPECULAR_SHININESS_TEXTURE` | Textura de brilho especular deste objeto. |
 | `in vec4 SPECULAR_SHININESS` | Cor de brilho especular, obtida a partir da textura. |
 | `in vec2 UV` | Coordenadas UV vindas da função `vertex()`. Em um `Sprite2D` com `region` ativado, cobre a textura inteira. Para usar apenas a região definida, utilize `REGION_RECT`. |
 | `in vec2 SCREEN_UV` | Coordenadas UV da tela para o pixel atual. |
-| `sampler2D SCREEN_TEXTURE` | Removido no Godot 4. Use um `sampler2D` com `hint_screen_texture`. |
 | `inout vec3 NORMAL` | Normal lida de `NORMAL_TEXTURE`. Pode ser modificada. |
 | `sampler2D NORMAL_TEXTURE` | Textura de normais 2D padrão. |
 | `out vec3 NORMAL_MAP` | Permite usar normal maps pensados para 3D em 2D. Se usado, sobrescreve `NORMAL`. |
@@ -134,7 +129,7 @@ void fragment() {
 }
 ```
 
-Para ler apenas o `COLOR` do vértice em `fragment()`, ignorando a textura principal, você precisa passar `COLOR` como um varying e então lê-lo em `fragment()`.
+Para ler apenas o `COLOR` do vértice em `fragment()`, ignorando a textura principal, você precisa passar `COLOR` como uma *variável interpolada* e então lê-lo em `fragment()`.
 
 ```glsl
 varying vec4 vertex_color;
