@@ -615,8 +615,12 @@ Para agrupar vários uniforms em um grupo no *Inspector*, você pode usar a keyw
 
 > PS: Falamos anteriormente que uniforms são globais no escopo do shader, ou seja, só para um código de shader em específico. O uniform global que estamos tratando nesta seção vai além disso, ele vale para todos os shaders do projeto.
 
-Para criar um shader global, vá em *Project → Project Settings → Globals → Shader Globals*, escolha um nome para o seu uniform global, escolha o tipo, e clique em *+Add*.
+Para criar um shader global, vá em *Project → Project Settings → Globals → Shader Globals*, escolha um nome para o seu uniform global, escolha o tipo, e clique em *+Add*. Feito isso, ele vai entrar na lista de uniforms globals (o processo é bem semelhante ao de autoloads). Depois disso você pode acessá-lo em qualquer shader com a declaração `global uniform int my_global_uniform;`.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/78d743e5-254d-40a9-967b-dfb9653a1a1f" />
 </p>
+
+Você pode alterar o valor dessa variável global a qualquer momento via código GDScript com o comando `RenderingServer.global_shader_parameter_set("my_global_uniform", new_value)`. Além disso, é possível adicionar mais uniforms global via código com o comando `RenderingServer.global_shader_parameter_add("my_global_uniform", RenderingServer.GLOBAL_VAR_TYPE_FLOAT, value)`, e é possível remover com o comando `RenderingServer.global_shader_parameter_remove("my_global_uniform")`. Os tipos globais para shader (como o `GLOBAL_VAR_TYPE_FLOAT`) você encontra [nesse link](https://docs.godotengine.org/en/stable/classes/class_renderingserver.html#enum-renderingserver-globalshaderparametertype).
+
+
