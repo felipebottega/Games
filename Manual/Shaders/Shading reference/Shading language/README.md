@@ -502,7 +502,7 @@ void light() {
 
 ### Onde não pode atribuir variável interpolada
 
-Você só pode escrever em *variável interpolada* em certos lugares do pipeline, como `vertex()` ou `fragment()`. Não pode fazer isso em funções auxiliares como foo(), nem em `light()`.
+Você só pode escrever em *variável interpolada* em certos lugares do pipeline, como `vertex()` ou `fragment()`. Não pode fazer isso em funções auxiliares nem em `light()`.
 
 ```glsl
 shader_type canvas_item;
@@ -521,3 +521,102 @@ void light() {
     test = 0.0; // erro
 }
 ```
+
+## Qualificadores de interpolação
+
+Certos valores são interpolados durante o pipeline de renderização. Você pode alterar a forma como essa interpolação acontece usando qualificadores de interpolação.
+
+Os *qualificadores de interpolação* controlam como os valores da *variável interpolada* são distribuídas entre os pixels. O default é o *smooth*. A GPU interpola suavemente os valores entre os vértices, criando transições como gradientes. A outra opção é a *flat*. Não há interpolação, e um único valor é usado para toda a área. Embora seja importante entender que essa interpolação existe, na prática você quase nunca precisa alterar esse comportamento, usando *flat* apenas em casos específicos onde os valores não podem ser misturados.
+
+```glsl
+shader_type canvas_item;
+
+varying flat vec3 our_color;
+
+void vertex() {
+    our_color = COLOR.rgb;
+}
+
+void fragment() {
+    COLOR = vec4(our_color, 1.0);
+}
+```
+
+Existem dois qualificadores possíveis:
+
+| Qualificador | Descrição                                                                   |
+| ------------ | --------------------------------------------------------------------------- |
+| `flat`       | O valor **não é interpolado**.                                              |
+| `smooth`     | O valor é interpolado de forma compatível com perspectiva. Este é o default. |
+
+## Uniforms
+
+É possível passar valores externas para o shader usando *uniforms*, que são definidos no escopo global do shader, fora de qualquer função. Quando o shader é atribuído a um material, esses uniforms aparecem como parâmetros editáveis no inspetor do material. Uniforms não podem ser modificados de dentro do shader. Você pode definir uniforms no editor, no *Inspector* de materiais. Alternativamente, você pode defini-los por meio de código.
+
+Por exemplo, você pode declarar uma variável `uniform` no escopo global, como mostrado abaixo.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/f52fd15b-7836-4d93-b057-6fecd4b1a642" />
+</p>
+
+Automaticamente, esta variável ficará disponível no *Inspector* de materiais. A partir daí você pode alterar o valor pelo *Inspector* e ver em tempo real como ele afeta a imagem.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/05da628f-2963-4dab-9042-7cd44e9b633a" />
+</p>
+
+### Uniform hints
+
+O que se chama de "uniform hints" são keywords especiais para o *Inspector* disponibilizar mais ferramentas para a edição de valor.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/221bc6c2-dff2-48f5-8521-2909526f898e" />
+  <img width="350" src="https://github.com/user-attachments/assets/d4d26836-b704-4717-8c7c-1a66ef654d8c" />
+</p>
+
+Segue a lista completa abaixo.
+
+| Tipo | Hint | Descrição |
+|------|------|------|
+| `vec3`, `vec4` | `source_color` | Usado como cor. |
+| `int` | `hint_enum("String1", "String2")` | Exibe o valor inteiro como um menu dropdown no editor. |
+| `int`, `float` | `hint_range(min, max[, step])` | Restringe os valores a um intervalo (com mínimo/máximo/passo). |
+| `sampler2D` | `source_color` | Usado como cor base (albedo). |
+| `sampler2D` | `hint_normal` | Usado como mapa de normais. |
+| `sampler2D` | `hint_default_white` | Como valor ou cor base, o padrão é branco opaco. |
+| `sampler2D` | `hint_default_black` | Como valor ou cor base, o padrão é preto opaco. |
+| `sampler2D` | `hint_default_transparent` | Como valor ou cor base, o padrão é preto transparente. |
+| `sampler2D` | `hint_anisotropy` | Usado como mapa de fluxo, com padrão apontando para a direita. |
+| `sampler2D` | `hint_roughness[_r, _g, _b, _a, _normal, _gray]` | Usado para limitar a rugosidade na importação (reduz aliasing especular). `_normal` usa um mapa de normais para guiar a rugosidade, aumentando em áreas com muitos detalhes. |
+| `sampler2D` | `filter[_nearest, _linear][_mipmap][_anisotropic]` | Ativa o tipo de filtragem de textura especificado. |
+| `sampler2D` | `repeat[_enable, _disable]` | Ativa ou desativa a repetição da textura. |
+| `sampler2D` | `hint_screen_texture` | A textura é a textura da tela. |
+| `sampler2D` | `hint_depth_texture` | A textura é a textura de profundidade. |
+| `sampler2D` | `hint_normal_roughness_texture` | A textura é de normais + rugosidade (suportado apenas em Forward+). |
+
+### Usando source_color
+
+Texturas de imagem (PNG, JPG) normalmente estão em sRGB, enquanto o shader trabalha em linear. Sem correção, as cores ficam erradas. O `source_color` diz ao shader que aquela textura é de cor, aplicando a conversão correta. Use em albedo ou sprites. Não use em normal map, roughness, metallic, etc.
+
+> PS: sRGB é um padrão de como cores são armazenadas e exibidas em imagens digitais.
+
+### Uniform groups
+
+Para agrupar vários uniforms em um grupo no *Inspector*, você pode usar a keyword `group_uniform`. Primeiro você inicia o bloco com `group_uniforms {MyGroupName}`, coloca os uniforms dentro do bloco, e depois o o fecha com `group_uniforms`.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/0c120479-042e-4841-b3e6-7dddd6ed7aef" />
+  <img width="360" src="https://github.com/user-attachments/assets/3fda262f-1248-4af1-85db-cd00151b9789" />
+</p>
+
+### Global uniforms
+
+Às vezes, você deseja modificar um parâmetro em vários shaders diferentes simultaneamente. Com um uniform comum, isso exige muito trabalho, pois todos esses shaders precisam ser rastreados e o uniform precisa ser definido para cada um deles. Uniforms globais permitem criar e atualizar uniforms que estarão disponíveis em todos os shaders, em todos os tipos de shader.
+
+> PS: Falamos anteriormente que uniforms são globais no escopo do shader, ou seja, só para um código de shader em específico. O uniform global que estamos tratando nesta seção vai além disso, ele vale para todos os shaders do projeto.
+
+Para criar um shader global, vá em *Project → Project Settings → Globals → Shader Globals*, escolha um nome para o seu uniform global, escolha o tipo, e clique em *+Add*.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/78d743e5-254d-40a9-967b-dfb9653a1a1f" />
+</p>
