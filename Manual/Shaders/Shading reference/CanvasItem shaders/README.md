@@ -183,3 +183,11 @@ void light() {
   LIGHT = vec4(LIGHT_COLOR.rgb * COLOR.rgb * LIGHT_ENERGY * cNdotL, LIGHT_COLOR.a);
 }
 ```
+
+## O que é UV no 2D
+
+UV são coordenadas normalizadas da textura. U é eixo horizontal e V é eixo vertical. Neste sistema, $(0.0, 0.0)$ é canto superior esquerdo e $(1.0, 1.0)$ é canto inferior direito. 
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/0258daef-5fea-4a71-b1d5-91f166e9b153" />
+</p>
