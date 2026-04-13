@@ -3,7 +3,7 @@
 Os shaders do tipo `canvas_item` são usados ​​para desenhar todos os elementos 2D no Godot. Isso inclui todos os nodes que herdam de `CanvasItem` e todos os elementos da GUI.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/41e51ddf-ff9d-4207-8d05-e1a3449bf56b" />
+  <img width="700" src="https://github.com/user-attachments/assets/f4a84955-f32a-4274-8398-9a5126a5b2ab" />
 </p>
 
 > PS: GUI significa "Graphical User Interface". Esta é a camada da interface visual: botões, menus, painéis, etc. A classe responsável por lidar com isso é a `Control`.
