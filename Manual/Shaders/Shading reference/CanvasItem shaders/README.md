@@ -73,7 +73,6 @@ shader_type canvas_item;
 render_mode skip_vertex_transform;
 
 void vertex() {
-
     VERTEX = (MODEL_MATRIX * vec4(VERTEX, 0.0, 1.0)).xy;
 }
 ```
@@ -139,9 +138,11 @@ Para ler apenas o `COLOR` do vértice em `fragment()`, ignorando a textura princ
 
 ```glsl
 varying vec4 vertex_color;
+
 void vertex() {
   vertex_color = COLOR;
 }
+
 void fragment() {
   COLOR = vertex_color;
 }
