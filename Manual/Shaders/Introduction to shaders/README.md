@@ -67,18 +67,18 @@ Opcionalmente, também é possível escolher um modo de renderização (*render 
 
 Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de renderização do shader do tipo `canvas_item`. Como este é o shader para renderizar 2D, é um dos que mais nos interessa no momento. 
 
-| Render mode            | Descrição                                                                                  |
-|-----------------------|---------------------------------------------------------------------------------------------|
-| blend_mix             | Modo de mistura padrão (alpha define a transparência).                                      |
-| blend_add             | Modo de mistura aditivo.                                                                    |
-| blend_sub             | Modo de mistura subtrativo.                                                                 |
-| blend_mul             | Modo de mistura multiplicativo.                                                             |
-| blend_premul_alpha    | Modo de mistura com alpha pré-multiplicado, evitando artefatos em bordas de transparência.  |
-| blend_disabled        | Desativa a mistura. O pixel é desenhado diretamente, ignorando transparência.               |
-| unshaded              | Ignora completamente a iluminação. Mostra apenas a cor base (albedo).                       |
-| light_only            | O objeto só aparece quando afetado por luz (não aparece na renderização base).              |
-| skip_vertex_transform | Desativa a transformação automática de VERTEX; você deve aplicar manualmente no vertex().   |
-| world_vertex_coords   | VERTEX passa a ser manipulado em coordenadas globais (mundo), em vez de locais ao objeto.   |
+| Render mode             | Descrição                                                                                   |
+|-------------------------|---------------------------------------------------------------------------------------------|
+| `blend_mix`             | Modo de mistura padrão (alpha define a transparência).                                      |
+| `blend_add`             | Modo de mistura aditivo.                                                                    |
+| `blend_sub`             | Modo de mistura subtrativo.                                                                 |
+| `blend_mul`             | Modo de mistura multiplicativo.                                                             |
+| `blend_premul_alpha`    | Modo de mistura com alpha pré-multiplicado, evitando artefatos em bordas de transparência.  |
+| `blend_disabled`        | Desativa a mistura. O pixel é desenhado diretamente, ignorando transparência.               |
+| `unshaded`              | Ignora completamente a iluminação. Mostra apenas a cor base (albedo).                       |
+| `light_only`            | O objeto só aparece quando afetado por luz (não aparece na renderização base).              |
+| `skip_vertex_transform` | Desativa a transformação automática de VERTEX; você deve aplicar manualmente no vertex().   |
+| `world_vertex_coords`   | VERTEX passa a ser manipulado em coordenadas globais (mundo), em vez de locais ao objeto.   |
 
 - **VERTEX:** É a posição de cada vértice que o shader processa. No `canvas_item` (2D), ele vem em espaço local, ou seja, em coordenadas relativas ao node, e você pode modificá-lo na função `vertex()` para mover ou deformar a geometria.
 - **ALBEDO:** É a cor base do material/objeto. Ele é definido como um vetor de 3 dimensões que contém a cor do objeto. Na prática, `ALBEDO` é a cor do objeto por si só, antes da iluminação afetar. `ALBEDO` é usado apenas em shader 3D, para shader 2D se usa `COLOR`.
