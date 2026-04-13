@@ -68,7 +68,7 @@ São valores os disponíveis para todas as funções, incluindo as customizadas.
 
 Os dados de vértice (VERTEX) são apresentados no espaço local (coordenadas de pixel, relativas à origem do Node2D). Se não forem alterados, esses valores permanecerão inalterados e serão transmitidos como foram recebidos. É possível pode desativar a transformação embutida de modelo para mundo (a conversão de mundo para tela e a projeção ainda ocorrerão mais adiante) e fazer isso manualmente com o seguinte código:
 
-```c#
+```glsl
 shader_type canvas_item;
 render_mode skip_vertex_transform;
 
@@ -108,3 +108,81 @@ Outros valores nativas, como UV e COLOR, também são repassados para a função
 | `inout vec2 SHADOW_VERTEX` | Igual a `VERTEX`, mas pode ser modificado para alterar sombras. |
 | `inout vec3 LIGHT_VERTEX` | Igual a `VERTEX`, mas pode ser modificado para alterar iluminação. O componente `z` representa altura. |
 | `inout vec4 COLOR` | `COLOR` vindo da função `vertex()` multiplicado pela cor da `TEXTURE`. Também representa a cor final de saída. |
+
+**COLOR e TEXTURE**
+
+A variável embutida `COLOR` é usada para algumas finalidades:
+- Na função `vertex()`, `COLOR` contém a cor do primitivo de vértice multiplicada pelo `modulate` do `CanvasItem` e multiplicada pelo `self_modulate` do `CanvasItem`.
+- Na função `fragment()`, o valor de entrada de `COLOR` é esse mesmo valor multiplicado pela cor da `TEXTURE` padrão (se houver).
+- Na função `fragment()`, `COLOR` também é a saída final.
+
+Certos nodes (por exemplo, `Sprite2D`) exibem uma textura por padrão, como a textura principal. Ao usar uma função `fragment()` personalizada, há algumas formas de amostrar essa textura.
+
+Para ler apenas o conteúdo da textura padrão, ignorando o `COLOR` do vértice, pode-se usar o código abaixo.
+
+```glsl
+void fragment() {
+  COLOR = texture(TEXTURE, UV);
+}
+```
+
+Para ler o conteúdo da textura padrão multiplicado pelo `COLOR` do vértice, pode-se usar o código abaixo.
+
+```glsl
+void fragment() {
+  // Equivale a uma função fragment() vazia, já que COLOR também é a variável de saída.
+  COLOR = COLOR;
+}
+
+Para ler apenas o `COLOR` do vértice em `fragment()`, ignorando a textura principal, você precisa passar `COLOR` como um varying e então lê-lo em `fragment()`.
+
+```glsl
+varying vec4 vertex_color;
+void vertex() {
+  vertex_color = COLOR;
+}
+void fragment() {
+  COLOR = vertex_color;
+}
+```
+
+**NORMAL**
+
+De forma semelhante, se um normal map for usado no `CanvasTexture`, a Godot o utiliza por padrão e atribui seu valor à variável embutida `NORMAL`. Se você estiver usando um normal map feito para 3D, ele parecerá invertido. Para usá-lo no seu shader, você deve atribuí-lo à propriedade `NORMAL_MAP`. A Godot fará a conversão para uso em 2D e substituirá `NORMAL`.
+
+```glsl
+NORMAL_MAP = texture(NORMAL_TEXTURE, UV).rgb;
+```
+
+### Valores nativos do light
+
+| Built-in | Descrição |
+|----------|-----------|
+| `in vec4 FRAGCOORD` | Coordenada do centro do pixel, em espaço de tela. O componente `xy` define a posição no viewport. A origem `(0.0, 0.0)` fica no canto superior esquerdo. |
+| `in vec3 NORMAL` | Normal de entrada. |
+| `in vec4 COLOR` | Cor de entrada. Este é o valor de saída da função `fragment()`. |
+| `in vec2 UV` | Coordenadas UV vindas da função `vertex()`, equivalentes às UV usadas em `fragment()`. |
+| `sampler2D TEXTURE` | Textura atual em uso pelo `CanvasItem`. |
+| `in vec2 TEXTURE_PIXEL_SIZE` | Tamanho de pixel normalizado de `TEXTURE`. Para um `Sprite2D` com textura de 64x32 pixels, `TEXTURE_PIXEL_SIZE = vec2(1/64, 1/32)`. |
+| `in vec2 SCREEN_UV` | Coordenadas UV de tela para o pixel atual. |
+| `in vec2 POINT_COORD` | Coordenadas UV para Point Sprite. |
+| `in vec4 LIGHT_COLOR` | Cor do `Light2D`. Se for um `PointLight2D`, é multiplicada pela textura da luz. |
+| `in float LIGHT_ENERGY` | Multiplicador de intensidade do `Light2D`. |
+| `in vec3 LIGHT_POSITION` | Posição do `Light2D` em espaço de tela. Para `DirectionalLight2D`, é sempre `(0.0, 0.0, 0.0)`. |
+| `in vec3 LIGHT_DIRECTION` | Direção do `Light2D` em espaço de tela. |
+| `in bool LIGHT_IS_DIRECTIONAL` | `true` se este passo for de um `DirectionalLight2D`. |
+| `in vec3 LIGHT_VERTEX` | Posição do pixel em espaço de tela, conforme modificada na função `fragment()`. |
+| `inout vec4 LIGHT` | Cor de saída para este `Light2D`. |
+| `in vec4 SPECULAR_SHININESS` | Brilho especular, conforme definido na textura do objeto. |
+| `out vec4 SHADOW_MODULATE` | Multiplica as sombras projetadas neste ponto por esta cor. |
+
+Use o modo de renderização `unshaded` se você não quiser que a função `light()` seja executada. Use o modo `light_only` se quiser ver apenas o impacto da iluminação sobre o objeto; isso pode ser útil quando você quer que o objeto seja visível apenas nas áreas onde está iluminado. Se você definir uma função `light()`, ela substituirá a função de iluminação padrão, mesmo que a sua função esteja vazia.
+
+Abaixo está um exemplo de shader de iluminação que leva em consideração o normal map de um `CanvasItem`.
+
+```glsl
+void light() {
+  float cNdotL = max(0.0, dot(NORMAL, LIGHT_DIRECTION));
+  LIGHT = vec4(LIGHT_COLOR.rgb * COLOR.rgb * LIGHT_ENERGY * cNdotL, LIGHT_COLOR.a);
+}
+```
