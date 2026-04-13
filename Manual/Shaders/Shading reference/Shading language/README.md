@@ -623,4 +623,46 @@ Para criar um shader global, vá em *Project → Project Settings → Globals �
 
 Você pode alterar o valor dessa variável global a qualquer momento via código GDScript com o comando `RenderingServer.global_shader_parameter_set("my_global_uniform", new_value)`. Além disso, é possível adicionar mais uniforms global via código com o comando `RenderingServer.global_shader_parameter_add("my_global_uniform", RenderingServer.GLOBAL_VAR_TYPE_FLOAT, value)`, e é possível remover com o comando `RenderingServer.global_shader_parameter_remove("my_global_uniform")`. Os tipos globais para shader (como o `GLOBAL_VAR_TYPE_FLOAT`) você encontra [nesse link](https://docs.godotengine.org/en/stable/classes/class_renderingserver.html#enum-renderingserver-globalshaderparametertype).
 
+O comando `RenderingServer.global_shader_parameter_get("my_global_uniform")` permite extrair o valor do uniform global em tempo de execução. Porém, essa chamada é custosa, então use com moderação.
 
+### Alterando uniforms por código GDScript
+
+Alterar o valor de uniforms por código é a forma normal de controlar shader pelo GDScript. Você pode fazer isso com o o comando `aterial.set_shader_parameter("my_value", my_value)`, em que o primeiro parâmetro é o nome do uniform e o segundo é o seu valor inicial. 
+
+O GDScript usa tipos de variáveis ​​diferentes do GLSL, portanto, ao passar variáveis ​​do GDScript para shaders, a Godot converte o tipo automaticamente. Abaixo está uma tabela com os tipos correspondentes
+
+| Tipo GLSL | Tipo GDScript | Observações |
+|---|---|---|
+| `bool` | `bool` |  |
+| `bvec2` | `int` | Inteiro com bits compactados, onde o bit 0 (LSB) corresponde a `x`. Ex: `(int(bx)) \| (int(by) << 1)` |
+| `bvec3` | `int` | Inteiro com bits compactados, onde o bit 0 (LSB) corresponde a `x`. |
+| `bvec4` | `int` | Inteiro com bits compactados, onde o bit 0 (LSB) corresponde a `x`. |
+| `int` | `int` |  |
+| `ivec2` | `Vector2i` |  |
+| `ivec3` | `Vector3i` |  |
+| `ivec4` | `Vector4i` |  |
+| `uint` | `int` |  |
+| `uvec2` | `Vector2i` |  |
+| `uvec3` | `Vector3i` |  |
+| `uvec4` | `Vector4i` |  |
+| `float` | `float` |  |
+| `vec2` | `Vector2` |  |
+| `vec3` | `Vector3`, `Color` | Quando usado como `Color`, é interpretado como `(r, g, b)`. |
+| `vec4` | `Vector4`, `Color`, `Rect2`, `Plane`, `Quaternion` | `Color`: `(r, g, b, a)`.<br>`Rect2`: `(position.x, position.y, size.x, size.y)`.<br>`Plane`: `(normal.x, normal.y, normal.z, d)`. |
+| `mat2` | `Transform2D` |  |
+| `mat3` | `Basis` |  |
+| `mat4` | `Projection`, `Transform3D` | Quando usado como `Transform3D`, o vetor `w` é definido como identidade. |
+| `sampler2D` | `Texture2D` |  |
+| `isampler2D` | `Texture2D` |  |
+| `usampler2D` | `Texture2D` |  |
+| `sampler2DArray` | `Texture2DArray` |  |
+| `isampler2DArray` | `Texture2DArray` |  |
+| `usampler2DArray` | `Texture2DArray` |  |
+| `sampler3D` | `Texture3D` |  |
+| `isampler3D` | `Texture3D` |  |
+| `usampler3D` | `Texture3D` |  |
+| `samplerCube` | `Cubemap` | Veja “Changing import type” para importar cubemaps no Godot. |
+| `samplerCubeArray` | `CubemapArray` | Suportado apenas em Forward+ e Mobile (não no Compatibility). |
+| `samplerExternalOES` | `ExternalTexture` | Suportado apenas na plataforma Android (modo Compatibility). |
+
+> PS: Tenha cuidado com este approach, pois nenhum erro será lançado se o tipo não corresponder. Seu shader simplesmente apresentará comportamento indefinido. Especificamente, isso inclui definir um int/float (64 bits) do GDScript em um int/float (32 bits) da linguagem de shader da Godot. 
