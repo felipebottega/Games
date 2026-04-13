@@ -43,6 +43,12 @@ O shader `light()` associado a essa etapa processa a influência das luzes sobre
 
 > PS: A função `light()` não será executada se o modo de renderização *vertex_lighting* estiver ativado ou se a opção *Rendering → Quality → Shading → Force Vertex Shading* estiver ativada no *Project Settings*. Essa opção está ativada por padrão para dispositivos móveis.
 
+Geralmente quando nos referimos a um shader, estamos falando de uma *função de processamento*, que pode ser a `vertex()`, a `fragment()`, etc. Cada uma destas é um shader. Na Godot, também é chamado de shader o espaço do editor de código de shader, e este contém todas as *funções de processamento* juntas. Ou seja, o "shader contendo os shaders". No contexto da Godot geralmente o shader será isso, e no contexto mais geral o shader é a *função de processamento*. Você pode ver abaixo como o shader da Godot é inicializado por default, já contendo os shaders mais comuns para edição.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/0adf00e1-43b1-43a9-919c-781fc83641fa" />
+</p>
+
 ## Tipos de shaders
 
 Em vez de fornecer uma configuração de uso geral para todas as aplicações (2D, 3D, sky, fog, etc.), você deve especificar o tipo de shader que está escrevendo. Diferentes tipos suportam diferentes modos de renderização, variáveis ​​internas e funções de processamento. Os tipos disponíveis seguem abaixo.
