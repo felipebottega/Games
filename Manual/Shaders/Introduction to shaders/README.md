@@ -1,6 +1,6 @@
 # Introduction to shaders
 
-"Shader" é um termo que foi dito algumas vezes em tutoriais passados, mas nunca utilizamos isso de fato. Agora chegou a hora de abordar esse tema de maneira sistemática. Vamos começar com algumas definições retiradas [daqui].
+"Shader" é um termo que foi dito algumas vezes em tutoriais passados, mas nunca utilizamos isso de fato. Agora chegou a hora de abordar esse tema de maneira sistemática. Vamos começar com algumas definições retiradas [daqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations).
 
 - **Shader:** Em computação gráfica, shaders são pequenos programas que rodam na GPU e definem como os objetos são desenhados na tela. Cada shader executa uma parte específica do processo de renderização, controlando aspectos como cor, iluminação, sombras e outros efeitos visuais. Um jogo normalmente utiliza muitos shaders diferentes ao mesmo tempo.
 - **GLSL:** GLSL (OpenGL Shading Language) é a linguagem usada para escrever shaders. A Godot gera código GLSL automaticamente a partir dos materiais e shaders que você usa.
