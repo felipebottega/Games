@@ -77,11 +77,11 @@ Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de ren
 | `blend_disabled`        | Desativa a mistura. O pixel é desenhado diretamente, ignorando transparência.               |
 | `unshaded`              | Ignora completamente a iluminação. Mostra apenas a cor base (ALBEDO/COLOR).                       |
 | `light_only`            | O objeto só aparece quando afetado por luz (não aparece na renderização base).              |
-| `skip_vertex_transform` | Desativa a transformação automática de VERTEX; você deve aplicar manualmente no vertex().   |
+| `skip_vertex_transform` | Desativa a transformação automática de VERTEX. Você deve aplicar manualmente no `vertex()`.   |
 | `world_vertex_coords`   | VERTEX passa a ser manipulado em coordenadas globais (mundo), em vez de locais ao objeto.   |
 
 - **VERTEX:** É a posição de cada vértice que o shader processa. No `canvas_item` (2D), ele vem em espaço local, ou seja, em coordenadas relativas ao node, e você pode modificá-lo na função `vertex()` para mover ou deformar a geometria.
-- **ALBEDO:** É a cor base do material/objeto. Ele é definido como um vetor de 3 dimensões que contém a cor do objeto. Na prática, `ALBEDO` é a cor do objeto por si só, antes da iluminação afetar. `ALBEDO` é usado apenas em shader 3D, para shader 2D se usa `COLOR`.
+- **ALBEDO:** É a cor base do material/objeto. Ele é definido como um vetor de 3 dimensões que contém a cor do objeto. Na prática, `ALBEDO` é a cor do objeto por si só, antes da iluminação afetar. `ALBEDO` é usado apenas em shader 3D, o equivalente para shader 2D é o `COLOR`.
 
 Para definir um modo de renderização, se usa o comando `render_mode {my_render_mode_1}, {my_render_mode_2};`, em que *my_render_mode_1* e *my_render_mode_2* são dois possívels modos de renderização. Pode-se usar quantos quiser.
 
