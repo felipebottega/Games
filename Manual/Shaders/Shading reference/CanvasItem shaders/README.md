@@ -133,6 +133,7 @@ void fragment() {
   // Equivale a uma função fragment() vazia, já que COLOR também é a variável de saída.
   COLOR = COLOR;
 }
+```
 
 Para ler apenas o `COLOR` do vértice em `fragment()`, ignorando a textura principal, você precisa passar `COLOR` como um varying e então lê-lo em `fragment()`.
 
