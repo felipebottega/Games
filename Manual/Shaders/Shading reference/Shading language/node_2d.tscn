@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bug0gxe18alqq"]
+
+[ext_resource type="Shader" uid="uid://c5l8kdxn64ty2" path="res://node_2d.gdshader" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://b86x0aayfaowm" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://cq16odcdrnrd6" path="res://icon.svg" id="1_wtcfe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_epypp"]
+shader = ExtResource("1_0e48y")
+shader_parameter/myvar = 0.2
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/something = 1
+shader_parameter/something_else = 1.0
+shader_parameter/w = PackedVector3Array(0, 0, 0)
+shader_parameter/amount = 0.0
+shader_parameter/other_color = Color(1, 1, 1, 1)
+
+[node name="Node2D" type="Node2D" unique_id=176724479]
+script = ExtResource("1_epypp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1032921371]
+material = SubResource("ShaderMaterial_epypp")
+position = Vector2(151, 145)
+texture = ExtResource("1_wtcfe")
