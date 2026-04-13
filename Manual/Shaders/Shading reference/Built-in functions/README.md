@@ -56,18 +56,98 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 | `vec_type`      | `mod(vec_type x, vec_type y)`                                          | Módulo (resto da divisão).                                       |
 | `vec_type`      | `modf(vec_type x, out vec_type i)`                                     | Parte fracionária de x, com i como parte inteira.                |
 | `vec_type`      | `min(vec_type a, vec_type b)`                                          | Menor valor entre a e b.                                         |
-| `vec_type`      | `min(vec_type a, float b)`                                             | Menor valor entre a e b.                                         |
-| `vec_int_type`  | `min(vec_int_type a, vec_int_type b)`                                  | Menor valor entre a e b.                                         |
-| `vec_int_type`  | `min(vec_int_type a, int b)`                                           | Menor valor entre a e b.                                         |
-| `vec_uint_type` | `min(vec_uint_type a, vec_uint_type b)`                                | Menor valor entre a e b.                                         |
-| `vec_uint_type` | `min(vec_uint_type a, uint b)`                                         | Menor valor entre a e b.                                         |
 | `vec_type`      | `max(vec_type a, vec_type b)`                                          | Maior valor entre a e b.                                         |
-| `vec_type`      | `max(vec_type a, float b)`                                             | Maior valor entre a e b.                                         |
-| `vec_int_type`  | `max(vec_int_type a, vec_int_type b)`                                  | Maior valor entre a e b.                                         |
-| `vec_int_type`  | `max(vec_int_type a, int b)`                                           | Maior valor entre a e b.                                         |
-| `vec_uint_type` | `max(vec_uint_type a, vec_uint_type b)`                                | Maior valor entre a e b.                                         |
-| `vec_uint_type` | `max(vec_uint_type a, uint b)`                                         | Maior valor entre a e b.                                         |
 | `vec_bool_type` | `isnan(vec_type x)`                                                    | Retorna true se algum componente for NaN.                        |
 | `vec_bool_type` | `isinf(vec_type x)`                                                    | Retorna true se algum componente for infinito (INF).             |
 
-## 
+> PS: As funções `min` e `max` na verdade valem para muitos outros tipos, mas deixamos apenas o `vec_type` na lista para evitar repetições.
+
+## Funções geométricas
+
+| Tipo de Retorno | Função                                           | Descrição / Valor retornado                                  |
+|-----------------|--------------------------------------------------|--------------------------------------------------------------|
+| `float`         | `length(vec_type x)`                             | Comprimento do vetor.                                        |
+| `float`         | `distance(vec_type a, vec_type b)`               | Distância entre vetores, ou seja, length(a - b).             |
+| `float`         | `dot(vec_type a, vec_type b)`                    | Produto escalar.                                             |
+| `vec3`          | `cross(vec3 a, vec3 b)`                          | Produto vetorial.                                            |
+| `vec_type`      | `normalize(vec_type x)`                          | Normaliza para comprimento unitário.                         |
+| `vec3`          | `reflect(vec3 I, vec3 N)`                        | Reflexão.                                                    |
+| `vec3`          | `refract(vec3 I, vec3 N, float eta)`             | Refração.                                                    |
+| `vec_type`      | `faceforward(vec_type N, vec_type I, vec_type Nref)` | Se dot(Nref, I) < 0, retorna N, caso contrário -N.      |
+| `mat_type`      | `matrixCompMult(mat_type x, mat_type y)`         | Multiplicação componente a componente de matrizes.           |
+| `mat_type`      | `outerProduct(vec_type column, vec_type row)`    | Produto externo de matriz.                                   |
+| `mat_type`      | `transpose(mat_type m)`                          | Transposta da matriz.                                        |
+| `float`         | `determinant(mat_type m)`                        | Determinante da matriz.                                      |
+| `mat_type`      | `inverse(mat_type m)`                            | Inversa da matriz.                                           |
+
+## Funções de comparação
+
+| Tipo de Retorno | Função                                      | Descrição / Valor retornado                                      |
+|-----------------|---------------------------------------------|------------------------------------------------------------------|
+| `vec_bool_type` | `lessThan(vec_type x, vec_type y)`          | Comparação vetorial booleana usando < em vetores int/uint/float. |
+| `vec_bool_type` | `greaterThan(vec_type x, vec_type y)`       | Comparação vetorial booleana usando > em vetores int/uint/float. |
+| `vec_bool_type` | `lessThanEqual(vec_type x, vec_type y)`     | Comparação vetorial booleana usando <= em vetores int/uint/float.|
+| `vec_bool_type` | `greaterThanEqual(vec_type x, vec_type y)`  | Comparação vetorial booleana usando >= em vetores int/uint/float.|
+| `vec_bool_type` | `equal(vec_type x, vec_type y)`             | Comparação vetorial booleana usando == em vetores int/uint/float.|
+| `vec_bool_type` | `notEqual(vec_type x, vec_type y)`          | Comparação vetorial booleana usando != em vetores int/uint/float.|
+| `bool`          | `any(vec_bool_type x)`                      | Retorna true se algum componente for true, senão false.          |
+| `bool`          | `all(vec_bool_type x)`                      | Retorna true se todos os componentes forem true, senão false.    |
+| `vec_bool_type` | `not(vec_bool_type x)`                      | Inverte o vetor booleano.                                        |
+
+## Funções de textura
+
+| Tipo de Retorno | Função | Descrição / Valor retornado |
+|-----------------|--------|-----------------------------|
+| `ivec2` | `textureSize(gsampler2D s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
+| `ivec2` | `textureSize(samplerCube s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
+| `ivec2` | `textureSize(samplerCubeArray s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
+| `ivec3` | `textureSize(gsampler2DArray s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
+| `ivec3` | `textureSize(gsampler3D s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
+| `vec2` | `textureQueryLod(gsampler2D s, vec2 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
+| `vec3` | `textureQueryLod(gsampler2DArray s, vec2 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
+| `vec2` | `textureQueryLod(gsampler3D s, vec3 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
+| `vec2` | `textureQueryLod(samplerCube s, vec3 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
+| `int` | `textureQueryLevels(gsampler2D s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
+| `int` | `textureQueryLevels(gsampler2DArray s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
+| `int` | `textureQueryLevels(gsampler3D s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
+| `int` | `textureQueryLevels(samplerCube s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
+| `gvec4_type` | `texture(gsampler2D s, vec2 p [, float bias])` | Realiza uma leitura de textura. |
+| `gvec4_type` | `texture(gsampler2DArray s, vec3 p [, float bias])` | Realiza uma leitura de textura. |
+| `gvec4_type` | `texture(gsampler3D s, vec3 p [, float bias])` | Realiza uma leitura de textura. |
+| `vec4` | `texture(samplerCube s, vec3 p [, float bias])` | Realiza uma leitura de textura. |
+| `vec4` | `texture(samplerCubeArray s, vec4 p [, float bias])` | Realiza uma leitura de textura. |
+| `vec4` | `texture(samplerExternalOES s, vec2 p [, float bias])` | Realiza uma leitura de textura. |
+| `gvec4_type` | `textureProj(gsampler2D s, vec3 p [, float bias])` | Realiza uma leitura de textura com projeção. |
+| `gvec4_type` | `textureProj(gsampler2D s, vec4 p [, float bias])` | Realiza uma leitura de textura com projeção. |
+| `gvec4_type` | `textureProj(gsampler3D s, vec4 p [, float bias])` | Realiza uma leitura de textura com projeção. |
+| `gvec4_type` | `textureLod(gsampler2D s, vec2 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
+| `gvec4_type` | `textureLod(gsampler2DArray s, vec3 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
+| `gvec4_type` | `textureLod(gsampler3D s, vec3 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
+| `vec4` | `textureLod(samplerCube s, vec3 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
+| `vec4` | `textureLod(samplerCubeArray s, vec4 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
+| `gvec4_type` | `textureProjLod(gsampler2D s, vec3 p, float lod)` | Realiza uma leitura de textura com projeção e LOD. |
+| `gvec4_type` | `textureProjLod(gsampler2D s, vec4 p, float lod)` | Realiza uma leitura de textura com projeção e LOD. |
+| `gvec4_type` | `textureProjLod(gsampler3D s, vec4 p, float lod)` | Realiza uma leitura de textura com projeção e LOD. |
+| `gvec4_type` | `textureGrad(gsampler2D s, vec2 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
+| `gvec4_type` | `textureGrad(gsampler2DArray s, vec3 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
+| `gvec4_type` | `textureGrad(gsampler3D s, vec3 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
+| `vec4` | `textureGrad(samplerCube s, vec3 p, vec3 dPdx, vec3 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
+| `vec4` | `textureGrad(samplerCubeArray s, vec3 p, vec3 dPdx, vec3 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
+| `gvec4_type` | `textureProjGrad(gsampler2D s, vec3 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com projeção, LOD e gradientes explícitos. |
+| `gvec4_type` | `textureProjGrad(gsampler2D s, vec4 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com projeção, LOD e gradientes explícitos. |
+| `gvec4_type` | `textureProjGrad(gsampler3D s, vec4 p, vec3 dPdx, vec3 dPdy)` | Realiza uma leitura de textura com projeção, LOD e gradientes explícitos. |
+| `gvec4_type` | `texelFetch(gsampler2D s, ivec2 p, int lod)` | Obtém um único texel usando coordenadas inteiras. |
+| `gvec4_type` | `texelFetch(gsampler2DArray s, ivec3 p, int lod)` | Obtém um único texel usando coordenadas inteiras. |
+| `gvec4_type` | `texelFetch(gsampler3D s, ivec3 p, int lod)` | Obtém um único texel usando coordenadas inteiras. |
+| `gvec4_type` | `textureGather(gsampler2D s, vec2 p [, int comps])` | Reúne quatro texels de uma textura. |
+| `gvec4_type` | `textureGather(gsampler2DArray s, vec3 p [, int comps])` | Reúne quatro texels de uma textura. |
+| `vec4` | `textureGather(samplerCube s, vec3 p [, int comps])` | Reúne quatro texels de uma textura. |
+| `vec_type` | `dFdx(vec_type p)` | Derivada em relação à coordenada x da janela, granularidade automática. |
+| `vec_type` | `dFdxCoarse(vec_type p)` | Derivada em relação à coordenada x da janela, granularidade grosseira. |
+| `vec_type` | `dFdxFine(vec_type p)` | Derivada em relação à coordenada x da janela, granularidade fina. |
+| `vec_type` | `dFdy(vec_type p)` | Derivada em relação à coordenada y da janela, granularidade automática. |
+| `vec_type` | `dFdyCoarse(vec_type p)` | Derivada em relação à coordenada y da janela, granularidade grosseira. |
+| `vec_type` | `dFdyFine(vec_type p)` | Derivada em relação à coordenada y da janela, granularidade fina. |
+| `vec_type` | `fwidth(vec_type p)` | Soma das derivadas absolutas em x e y. |
+| `vec_type` | `fwidthCoarse(vec_type p)` | Soma das derivadas absolutas em x e y. |
+| `vec_type` | `fwidthFine(vec_type p)` | Soma das derivadas absolutas em x e y. |
