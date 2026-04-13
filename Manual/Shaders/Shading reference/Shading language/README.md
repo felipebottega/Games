@@ -627,7 +627,7 @@ O comando `RenderingServer.global_shader_parameter_get("my_global_uniform")` per
 
 ### Alterando uniforms por código GDScript
 
-Alterar o valor de uniforms por código é a forma normal de controlar shader pelo GDScript. Você pode fazer isso com o o comando `aterial.set_shader_parameter("my_value", my_value)`, em que o primeiro parâmetro é o nome do uniform e o segundo é o seu valor inicial. 
+Alterar o valor de uniforms por código é a forma normal de controlar shader pelo GDScript. Você pode fazer isso com o o comando `material.set_shader_parameter("my_value", my_value)`, em que `material` é a variável do material, o primeiro parâmetro é o nome do uniform e o segundo é o seu valor inicial. 
 
 O GDScript usa tipos de variáveis ​​diferentes do GLSL, portanto, ao passar variáveis ​​do GDScript para shaders, a Godot converte o tipo automaticamente. Abaixo está uma tabela com os tipos correspondentes
 
