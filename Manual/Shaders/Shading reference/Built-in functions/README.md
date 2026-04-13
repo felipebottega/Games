@@ -96,7 +96,7 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 
 ## Funções de textura
 
-| Tipo de Retorno | Função | Descrição / Valor retornado |
+| Tipo de Retorno | Função&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição / Valor retornado |
 |-----------------|--------|-----------------------------|
 | `ivec2` | `textureSize(gsampler2D s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
 | `ivec2` | `textureSize(samplerCube s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
