@@ -43,7 +43,7 @@ Para shaders 2D, na prática, trabalhamos principalmente com `vertex()` e `fragm
   <img width="450" src="https://github.com/user-attachments/assets/c9635077-6d5d-46e1-a730-414d36b97ae6" />
 </p>
 
-"Fragment" pode ser entendido como "fragmento", que representa um pixel na tela. O shader associado a essa etapa processa esses fragmentos, determinando a cor final que será exibida. Diferente do estágio de vértices, que lida com a geometria do objeto, o *fragment shader* atua na sua aparência visual (cores, texturas, transparência e efeitos de iluminação). No caso de sprites 2D, o *fragment shader* é executado para cada pixel da área ocupada pelo objeto na tela. Isso inclui inclusive regiões transparentes da textura, que ainda podem ser processadas antes de serem descartadas. 
+"Fragment" pode ser entendido como "fragmento", que representa um pixel na tela. O shader associado a essa etapa processa esses fragmentos, determinando a cor final que será exibida. Diferente do estágio de vértices, que lida com a geometria do objeto, o *fragment shader* atua na sua aparência visual (cores, texturas, transparência e efeitos de iluminação). No caso de sprites 2D, o *fragment shader* é executado para cada pixel da área ocupada pelo objeto na tela. Isso inclui regiões transparentes da textura, que ainda podem ser processadas antes de serem descartadas. 
 
 O shader `light()` associado a essa etapa processa a influência das luzes sobre os pixels do objeto. Essa função é executada para cada fragmento e para cada luz que o afeta. Ou seja, se um mesmo pixel estiver sob a influência de várias luzes, o `light()` será chamado múltiplas vezes para esse mesmo ponto. No contexto 2D, isso é usado principalmente com nodes de iluminação, como luzes que simulam lanternas, lâmpadas ou efeitos de brilho. Caso não haja luzes na cena, essa etapa simplesmente não é utilizada.
 
@@ -63,7 +63,7 @@ Ao escrever um shader em Godot, a primeira coisa a se fazer é definir o tipo de
 
 ## Modos de renderização
 
-Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader, você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a enigne ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
+Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader. Você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a enigne ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
 
 Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de renderização do shader do tipo `canvas_item`. Como este é o shader para renderizar 2D, é um dos que mais nos interessa no momento. 
 
