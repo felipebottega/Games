@@ -69,7 +69,7 @@ Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de ren
 
 | Render mode             | Descrição                                                                                   |
 |-------------------------|---------------------------------------------------------------------------------------------|
-| `blend_mix`             | Modo de mistura padrão (alpha define a transparência).                                      |
+| `blend_mix`             | Se nenhum modo for especificado, este é usado por default, que é o modo de transparência normal baseado no alpha. |
 | `blend_add`             | Modo de mistura aditivo.                                                                    |
 | `blend_sub`             | Modo de mistura subtrativo.                                                                 |
 | `blend_mul`             | Modo de mistura multiplicativo.                                                             |
