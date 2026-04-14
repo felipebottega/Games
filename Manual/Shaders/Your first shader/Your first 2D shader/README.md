@@ -52,3 +52,50 @@ Vamos usar o comando `COLOR = vec4(UV, 0.5, 1.0);` de exemplo. Esse comando defi
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/6778c649-5ba3-48b6-9af8-67ea37ef9e06" />
 </p>
+
+## Diferença de manipular o COLOR e o modulate
+
+Caso você vá no *modulate* do `Sprite2D` agora, vai notar que o RGB dele está em $(1.0, 1.0, 1.0)$. Esse valor equivale à cor branca e ele é multiplicado pelas cores originais do sprite. Isso significa que isso mantém as cores originais.
+
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/735fe0aa-6cab-47f3-bdd4-8adf768a770f" />
+</p>
+
+Por outro lado, o comando `COLOR.b = 1.0;` no shader é diferente. Ele define que todo pixel será da forma `(r, g, 1.0)`, ou seja, define a cor do canal azul diretamente. Portanto, as duas coisas não são equivalentes.
+
+## Usando o uniform
+
+No código abaixo, definimos o `uniform float blue = 1.0;` e o aplicamos no comando `COLOR.b = blue;`. Isso deixará o sprite mais azulado. Lembre-se de que, além do uniform ser uma variável global do shader, ela também é uma variável que pode ser alterada externamente. Você pode notar que é possível alterar esta variável pelo *Inspector* agora.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/217d5588-f59d-4644-8707-d229f3e956b9" />
+</p>
+
+## Interagindo com o shader por código
+
+Você pode alterar a variável uniform pelo GDScript através da função `set_shader_parameter`, em que o primeiro argumento é o nome da variável e o segundo é o valor a ser atribuído. 
+
+<p align="center">
+  <img width="430" src="https://github.com/user-attachments/assets/91b40321-85ef-4287-9b1c-1a944f0c5499" />
+  <img width="400" src="https://github.com/user-attachments/assets/59db2b50-75b0-47e2-8c53-8fb99bde1524" />
+</p>
+
+Alterar a variável por GDScript não tem efeito imediato no editor, mesmo que você usa a anotação `@export`. Para ter efeito, é necessário que use a anotação `@tool` (talvez precise reiniciar o editor) e que a interação seja após o `_ready`. De todo modo, isso é apenas para poder ver as mudanças em tempo real no editor. Mesmo que você só altere algo no `_ready` e não consigo ver no editor, a mudança acontecerá na execução do jogo.
+
+Abaixo temos um exemplo funcional para ver mudanças ocorrendo nop editor a partir de atualizações do GDscript.
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/8354fcf9-05b8-405b-9ddb-a0de181d9a52" />
+</p>
+
+## Alterando algo na função vertex
+
+Para jogos 2D, estaremos trabalhando com a função `fragment()` na grande maioria das vezes, pois é esta a função que altera cores de pixels e produz os efeitos especiais legais. A função `vertex()` meramente altera a posição dos vértices e os deforma. Isso também tem aplicações, só não são muitas.
+
+No exemplo abaixo, mostramos o sprite sem nada na função `vertex()` e depois com o comando `VERTEX.y += VERTEX.x / 2.0;` implementado na função. Este comando apenas desloca as coordenadas $y$ dos vértices. Esse é o tipo de transformação que podemos esperar com essa função. Não é muito útil para efeitos, mas é útil para movimentos e deformações gerais simples.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/52a46d3e-54f5-4409-a847-7633c3decf7c" />
+  <img width="200" src="https://github.com/user-attachments/assets/3de3ae1e-6c37-4ec2-91d9-1afed7ca4984" />
+  <img width="200" src="https://github.com/user-attachments/assets/87ae52d1-f6eb-41d9-a127-6127e8cd70c8" />
+</p>
