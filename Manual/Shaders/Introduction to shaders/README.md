@@ -63,7 +63,7 @@ Ao escrever um shader em Godot, a primeira coisa a se fazer é definir o tipo de
 
 ## Modos de renderização
 
-Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader. Você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a enigne ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
+Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader. Você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a engine ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
 
 Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de renderização do shader do tipo `canvas_item`. Como este é o shader para renderizar 2D, é um dos que mais nos interessa no momento. 
 
