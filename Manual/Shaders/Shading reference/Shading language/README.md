@@ -378,6 +378,7 @@ do {
 ⚠️ **Atenção:**
 1. Lembre-se de que, em GPUs modernas, um loop infinito pode ocorrer e congelar seu aplicativo (incluindo o editor). O Godot não pode protegê-lo disso, portanto, tome cuidado para não cometer esse erro!
 2. Ao comparar valores de ponto flutuante com um número, certifique-se de compará-los com um intervalo em vez de um número exato. Por exemplo, uma comparação como `if (value == 0.3)` pode não resultar em verdadeiro. A matemática de ponto flutuante geralmente é aproximada e pode desafiar as expectativas. Ela também pode se comportar de maneira diferente dependendo do hardware. Uma maneira mais segura seria usar `if (value >= 0.3 - 0.0001 && value <= 0.3 + 0.0001)`.
+3. É recomendado que cada caso do `switch` termine com um `return` ou `break`.
 
 ## Descarte
 
