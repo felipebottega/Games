@@ -416,7 +416,7 @@ void sum2(int a, int b, inout int result) {
 }
 ```
 
-Uma vantagem do quaificador por referência, é que o código fica mais limpo e se evita criar cópias dentro da função. Sem isso, poderíamos ter um bloco de código assim:
+Uma vantagem do qualificador por referência, é que o código fica mais limpo e se evita criar cópias dentro da função. Sem isso, poderíamos ter um bloco de código assim:
 
 ```glsl
 color = process1(color);
