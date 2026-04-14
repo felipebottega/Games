@@ -10,7 +10,7 @@ Os shaders do tipo `canvas_item` são usados ​​para desenhar todos os elemen
 
 ## Modos de renderização
 
-Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader. Você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a enigne ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
+Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader. Você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a engine ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
 
 | Render mode             | Descrição                                                                                   |
 |-------------------------|---------------------------------------------------------------------------------------------|
