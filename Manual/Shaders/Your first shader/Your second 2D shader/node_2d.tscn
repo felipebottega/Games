@@ -1,0 +1,411 @@
+[gd_scene format=3 uid="uid://bgy0ffo5csw0d"]
+
+[ext_resource type="Shader" uid="uid://8qn5hjq6i1ul" path="res://node_2d.gdshader" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://b7lmn86vay7nk" path="res://node_2d.gd" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://uhguo3hquvs6" path="res://map.png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://v7fuuofmjg85" path="res://img4.png" id="4_kdubu"]
+[ext_resource type="Texture2D" uid="uid://c2cdtq1e8g4yh" path="res://buttons_background.png" id="4_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://dmngix2kaylta" path="res://checker-map_tho.png" id="5_kdubu"]
+[ext_resource type="Texture2D" uid="uid://gxo6m2b0w7xx" path="res://bikini.png" id="6_d21ai"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_epypp"]
+shader = ExtResource("1_0e48y")
+shader_parameter/effect = 11
+shader_parameter/frequency = 10.0
+shader_parameter/amplitude = 0.02
+shader_parameter/speed = 2.0
+shader_parameter/falloff_strength = 10.0
+shader_parameter/highlight_intensity = 0.6
+shader_parameter/highlight_sharpness = 4.0
+shader_parameter/threshold = 0.8
+shader_parameter/rgb_offset = 0.01
+shader_parameter/pixel_size = 100.0
+shader_parameter/scanline_frequency = 800.0
+shader_parameter/outline_thickness = 0.002
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kdubu"]
+shader = ExtResource("1_0e48y")
+shader_parameter/effect = 11
+shader_parameter/frequency = 10.0
+shader_parameter/amplitude = 0.02
+shader_parameter/speed = 2.0
+shader_parameter/falloff_strength = 10.0
+shader_parameter/highlight_intensity = 0.6
+shader_parameter/highlight_sharpness = 4.0
+shader_parameter/threshold = 0.8
+shader_parameter/rgb_offset = 0.01
+shader_parameter/pixel_size = 100.0
+shader_parameter/scanline_frequency = 800.0
+shader_parameter/outline_thickness = 0.002
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d21ai"]
+shader = ExtResource("1_0e48y")
+shader_parameter/effect = 11
+shader_parameter/frequency = 10.0
+shader_parameter/amplitude = 0.02
+shader_parameter/speed = 2.0
+shader_parameter/falloff_strength = 10.0
+shader_parameter/highlight_intensity = 0.6
+shader_parameter/highlight_sharpness = 4.0
+shader_parameter/threshold = 0.8
+shader_parameter/rgb_offset = 0.01
+shader_parameter/pixel_size = 100.0
+shader_parameter/scanline_frequency = 800.0
+shader_parameter/outline_thickness = 0.002
+
+[node name="Node2D" type="Node2D" unique_id=1279600599]
+script = ExtResource("1_0hol4")
+
+[node name="Image1" type="Sprite2D" parent="." unique_id=825505053]
+material = SubResource("ShaderMaterial_epypp")
+position = Vector2(768, 512)
+texture = ExtResource("1_wtcfe")
+
+[node name="Image2" type="Sprite2D" parent="." unique_id=444577834]
+material = SubResource("ShaderMaterial_kdubu")
+position = Vector2(767.7, 535)
+scale = Vector2(1.5013671, 1.3289063)
+texture = ExtResource("4_kdubu")
+
+[node name="Image3" type="Sprite2D" parent="." unique_id=105028905]
+material = SubResource("ShaderMaterial_d21ai")
+position = Vector2(767.7, 535)
+texture = ExtResource("5_kdubu")
+
+[node name="Image4" type="Sprite2D" parent="." unique_id=1611506554]
+material = SubResource("ShaderMaterial_d21ai")
+position = Vector2(516, 531)
+texture = ExtResource("6_d21ai")
+
+[node name="ButtonsBackground" type="Sprite2D" parent="." unique_id=1459869643]
+modulate = Color(0.69230574, 0.69230574, 0.69230574, 1)
+position = Vector2(1325.5, 458.49997)
+scale = Vector2(2.5987663, 3.582031)
+texture = ExtResource("4_q6r6c")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1713243577]
+
+[node name="OptionButton" type="OptionButton" parent="HUD" unique_id=868221629]
+modulate = Color(0.03137255, 1, 0.05882353, 1)
+offset_left = 1124.0001
+offset_top = 6.0000024
+offset_right = 1375.0001
+offset_bottom = 56.000004
+scale = Vector2(1.6, 1.6)
+theme_override_font_sizes/font_size = 30
+selected = 11
+item_count = 12
+popup/item_0/text = "Waves"
+popup/item_0/id = 0
+popup/item_1/text = "Ripple"
+popup/item_1/id = 1
+popup/item_2/text = "Shiny Water"
+popup/item_2/id = 2
+popup/item_3/text = "Glitch"
+popup/item_3/id = 3
+popup/item_4/text = "RGB Split"
+popup/item_4/id = 4
+popup/item_5/text = "Heat Distortion"
+popup/item_5/id = 5
+popup/item_6/text = "Pixelation"
+popup/item_6/id = 6
+popup/item_7/text = "Scanlines (CRT)"
+popup/item_7/id = 7
+popup/item_8/text = "Outline"
+popup/item_8/id = 8
+popup/item_9/text = "Zoom Pulse"
+popup/item_9/id = 9
+popup/item_10/text = "Mask"
+popup/item_10/id = 10
+popup/item_11/text = "Normal"
+popup/item_11/id = 11
+metadata/_edit_use_anchors_ = true
+
+[node name="Parameters" type="CanvasLayer" parent="HUD" unique_id=1899982865]
+
+[node name="FrequencyLabel" type="Label" parent="HUD/Parameters" unique_id=1601460462]
+offset_left = 1128.0
+offset_top = 96.0
+offset_right = 1330.0
+offset_bottom = 151.0
+theme_override_font_sizes/font_size = 32
+text = "Frequency"
+metadata/_edit_use_anchors_ = true
+
+[node name="Frequency" type="HSlider" parent="HUD/Parameters" unique_id=295352266]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 143.0
+offset_right = 1384.0
+offset_bottom = 159.0
+min_value = 1.0
+value = 10.0
+exp_edit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AmplitudeLabel" type="Label" parent="HUD/Parameters" unique_id=1086027609]
+offset_left = 1128.0
+offset_top = 163.0
+offset_right = 1330.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 32
+text = "Amplitude"
+metadata/_edit_use_anchors_ = true
+
+[node name="Amplitude" type="HSlider" parent="HUD/Parameters" unique_id=1826040225]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 210.0
+offset_right = 1384.0
+offset_bottom = 226.0
+min_value = 0.001
+max_value = 10.0
+step = 0.001
+value = 0.02
+exp_edit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeedLabel" type="Label" parent="HUD/Parameters" unique_id=168384024]
+offset_left = 1128.0
+offset_top = 233.0
+offset_right = 1330.0
+offset_bottom = 288.0
+theme_override_font_sizes/font_size = 32
+text = "Speed"
+metadata/_edit_use_anchors_ = true
+
+[node name="Speed" type="HSlider" parent="HUD/Parameters" unique_id=162597168]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 280.0
+offset_right = 1384.0
+offset_bottom = 296.0
+min_value = 0.01
+max_value = 30.0
+step = 0.01
+value = 2.0
+exp_edit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="FalloffStrengthLabel" type="Label" parent="HUD/Parameters" unique_id=1602270918]
+offset_left = 1128.0
+offset_top = 304.0
+offset_right = 1366.0
+offset_bottom = 359.0
+theme_override_font_sizes/font_size = 32
+text = "Falloff Strength"
+metadata/_edit_use_anchors_ = true
+
+[node name="FalloffStrength" type="HSlider" parent="HUD/Parameters" unique_id=1486960962]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 351.0
+offset_right = 1384.0
+offset_bottom = 367.0
+min_value = 0.1
+max_value = 50.0
+step = 0.1
+value = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HighlightIntensityLabel" type="Label" parent="HUD/Parameters" unique_id=1343177845]
+offset_left = 1128.0
+offset_top = 375.0
+offset_right = 1412.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 32
+text = "Highlight Intensity"
+metadata/_edit_use_anchors_ = true
+
+[node name="HighlightIntensity" type="HSlider" parent="HUD/Parameters" unique_id=1525818576]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 422.0
+offset_right = 1384.0
+offset_bottom = 438.0
+min_value = 0.01
+max_value = 10.0
+step = 0.01
+value = 0.6
+exp_edit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="HighlightSharpnessLabel" type="Label" parent="HUD/Parameters" unique_id=503205078]
+offset_left = 1128.0
+offset_top = 456.0
+offset_right = 1412.0
+offset_bottom = 511.0
+theme_override_font_sizes/font_size = 32
+text = "Highlight Sharpness"
+metadata/_edit_use_anchors_ = true
+
+[node name="HighlightSharpness" type="HSlider" parent="HUD/Parameters" unique_id=181809509]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 503.0
+offset_right = 1384.0
+offset_bottom = 519.0
+min_value = 0.1
+max_value = 20.0
+step = 0.1
+value = 4.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ThresholdLabel" type="Label" parent="HUD/Parameters" unique_id=317340602]
+offset_left = 1128.0
+offset_top = 526.0
+offset_right = 1436.0
+offset_bottom = 581.0
+theme_override_font_sizes/font_size = 32
+text = "Threshold"
+metadata/_edit_use_anchors_ = true
+
+[node name="Threshold" type="HSlider" parent="HUD/Parameters" unique_id=1151589335]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 573.0
+offset_right = 1384.0
+offset_bottom = 589.0
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 0.8
+metadata/_edit_use_anchors_ = true
+
+[node name="RGBOffsetLabel" type="Label" parent="HUD/Parameters" unique_id=1382155124]
+offset_left = 1128.0
+offset_top = 603.0
+offset_right = 1436.0
+offset_bottom = 658.0
+theme_override_font_sizes/font_size = 32
+text = "RGB Offset"
+metadata/_edit_use_anchors_ = true
+
+[node name="RGBOffset" type="HSlider" parent="HUD/Parameters" unique_id=1237193175]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 650.0
+offset_right = 1384.0
+offset_bottom = 666.0
+min_value = 0.001
+max_value = 1.0
+step = 0.001
+value = 0.009999999999999998
+exp_edit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="PixelSizeLabel" type="Label" parent="HUD/Parameters" unique_id=672051297]
+offset_left = 1128.0
+offset_top = 683.0
+offset_right = 1436.0
+offset_bottom = 738.0
+theme_override_font_sizes/font_size = 32
+text = "Pixel Size"
+metadata/_edit_use_anchors_ = true
+
+[node name="PixelSize" type="HSlider" parent="HUD/Parameters" unique_id=203851404]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 730.0
+offset_right = 1384.0
+offset_bottom = 746.0
+min_value = 1.0
+max_value = 2000.0
+value = 100.0
+exp_edit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ScanlineFrequencyLabel" type="Label" parent="HUD/Parameters" unique_id=1225025587]
+offset_left = 1128.0
+offset_top = 763.0
+offset_right = 1436.0
+offset_bottom = 818.0
+theme_override_font_sizes/font_size = 32
+text = "Scanline Frequency"
+metadata/_edit_use_anchors_ = true
+
+[node name="ScanlineFrequency" type="HSlider" parent="HUD/Parameters" unique_id=1596482095]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 810.0
+offset_right = 1384.0
+offset_bottom = 826.0
+min_value = 1.0
+max_value = 1000.0
+value = 800.0
+metadata/_edit_use_anchors_ = true
+
+[node name="OutlineThicknessLabel" type="Label" parent="HUD/Parameters" unique_id=1949501012]
+offset_left = 1128.0
+offset_top = 839.0
+offset_right = 1436.0
+offset_bottom = 894.0
+theme_override_font_sizes/font_size = 32
+text = "Outline Thickness"
+metadata/_edit_use_anchors_ = true
+
+[node name="OutlineThickness" type="HSlider" parent="HUD/Parameters" unique_id=1922425002]
+modulate = Color(0, 0.8784314, 0.023529412, 1)
+offset_left = 1130.0
+offset_top = 886.0
+offset_right = 1384.0
+offset_bottom = 902.0
+min_value = 0.001
+max_value = 10.0
+step = 0.001
+value = 0.002
+exp_edit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Image1" type="Button" parent="HUD" unique_id=2055697115]
+modulate = Color(1, 1, 0, 1)
+offset_left = 1055.0
+offset_top = 966.0
+offset_right = 1159.0
+offset_bottom = 1008.0
+theme_override_font_sizes/font_size = 24
+text = "IMAGE 1"
+
+[node name="Image2" type="Button" parent="HUD" unique_id=1609656810]
+modulate = Color(1, 1, 0, 1)
+offset_left = 1176.0
+offset_top = 966.0
+offset_right = 1280.0
+offset_bottom = 1008.0
+theme_override_font_sizes/font_size = 24
+text = "IMAGE 2"
+
+[node name="Image3" type="Button" parent="HUD" unique_id=1275844171]
+modulate = Color(1, 1, 0, 1)
+offset_left = 1296.0
+offset_top = 966.0
+offset_right = 1400.0
+offset_bottom = 1008.0
+theme_override_font_sizes/font_size = 24
+text = "IMAGE 3"
+
+[node name="Image4" type="Button" parent="HUD" unique_id=1696925878]
+modulate = Color(1, 1, 0, 1)
+offset_left = 1417.0
+offset_top = 966.0
+offset_right = 1521.0
+offset_bottom = 1008.0
+theme_override_font_sizes/font_size = 24
+text = "IMAGE 4"
+
+[connection signal="item_selected" from="HUD/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="value_changed" from="HUD/Parameters/Frequency" to="." method="_on_frequency_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/Amplitude" to="." method="_on_amplidute_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/Speed" to="." method="_on_speed_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/FalloffStrength" to="." method="_on_falloff_strength_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/HighlightIntensity" to="." method="_on_highlight_intensity_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/HighlightSharpness" to="." method="_on_highlight_sharpness_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/Threshold" to="." method="_on_threshold_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/RGBOffset" to="." method="_on_rgb_offset_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/PixelSize" to="." method="_on_pixel_size_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/ScanlineFrequency" to="." method="_on_scanline_frequency_value_changed"]
+[connection signal="value_changed" from="HUD/Parameters/OutlineThickness" to="." method="_on_outline_thickness_value_changed"]
+[connection signal="pressed" from="HUD/Image1" to="." method="_on_image_1_pressed"]
+[connection signal="pressed" from="HUD/Image2" to="." method="_on_image_2_pressed"]
+[connection signal="pressed" from="HUD/Image3" to="." method="_on_image_3_pressed"]
+[connection signal="pressed" from="HUD/Image4" to="." method="_on_image_4_pressed"]
