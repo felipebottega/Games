@@ -10,9 +10,9 @@ Vamos começar pelo fim, já mostrando o jogo pronto. Como podemos ver, ele é c
   <img width="1100" src="https://github.com/user-attachments/assets/4d3a5736-bd19-4cdc-9a47-c33b3c1f708b" />
 </p>
 
+https://github.com/user-attachments/assets/20034047-c894-4f30-b766-dd53ccc31f87
 
 
-https://github.com/user-attachments/assets/432ec102-d41b-496a-a700-637bc633c2c8
 
 
 
