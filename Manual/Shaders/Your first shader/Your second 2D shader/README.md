@@ -70,6 +70,28 @@ void fragment() {
 }
 ```
 
+## Efeitos 
 
+Vamos explicar todos os efeitos que foram utilizados neste projeto. A ideia é entrar mais em detalhes nos primeiros efeitos e depois ser um pouco mais breve, já é o início que apresenta mais dificuldades.
 
+### Waves
 
+```glsl
+vec4 waves(sampler2D tex, vec2 uv) {
+	float wave = sin(uv.x * frequency + TIME * speed);
+	uv.y += wave * amplitude;
+	return texture(tex, uv);
+}
+```
+
+Note que esta função atualiza apenas a componente $y$ de cada pixel. Portanto, esperamos ver movimentos para cima e para baixo apenas. A fórmula exata da atualização está mostrada abaixo.
+
+$$uv.y = \sin(uv.x * \texttt{frequency} + \texttt{TIME} * \texttt{speed}) * \texttt{amplitude}$$
+
+Supondo que o jogador não mexa nos parâmetros `frequency`, `speed` e `amplitude`, eles podem ser considerados são constantes na fórmula. Deste modo, só o que varia é o tempo e a coordenada $x$. Note que, em um instante `TIME`, a linha horizontal associada a um $y$ fixo só varia com $x$. Em outras palavras, existe variação horizontal dependete de $x$. Por outro lado, se for $x$ fixo e $y$ variando em um mesmo instante `TIME`, temos que todos os valores `uv.y` são iguais. Em outras palavras, todos os pixels de uma coluna sobem ou descem iguais. 
+
+Cada quadrado da figura abaixo representa um pixel. Essa figura ilustra a movimento esperado por essa fórmula.
+
+<p align="center">
+	<img width="350" src="https://github.com/user-attachments/assets/67f2a1af-493b-4e2c-acd4-74fcbd2c08ee" />
+</p>
