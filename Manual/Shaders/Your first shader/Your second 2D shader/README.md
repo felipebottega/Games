@@ -96,5 +96,5 @@ Cada quadrado da figura abaixo representa um pixel. Essa figura ilustra a movime
 	<img width="350" src="https://github.com/user-attachments/assets/67f2a1af-493b-4e2c-acd4-74fcbd2c08ee" />
 </p>
 
-Uma vez que o ponto `uv` foi atualizado, isso deve ser repassado para o pixel, em vetor de um `vec4` para atualizar o `COLOR`. A função `texture()` deve receber a textura original (variável `tex`) e o novo ponto `uv`. Essa função retorna o RGB do `uv` da textura. Como a coordenada $y$ foi alterada, isso significa que o retorno da função vai retonar um ponto mais acima ou mais abaixo do original. Isso é o comportamento que queremos.
+Uma vez que o ponto `uv` foi atualizado, isso deve ser repassado para o pixel, em vetor de um `vec4` para atualizar o `COLOR`. A função `texture()` deve receber a textura original (variável `tex`) e o novo ponto `uv`. Essa função retorna o RGB do `uv` da textura. Como a coordenada $y$ foi alterada, isso significa que o retorno `texture(tex, uv)` da função vai retonar um ponto mais acima ou mais abaixo do original. Isso é o comportamento que queremos.
 
