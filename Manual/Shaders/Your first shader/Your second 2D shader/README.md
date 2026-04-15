@@ -72,7 +72,7 @@ void fragment() {
 
 ## Efeitos 
 
-Vamos explicar todos os efeitos que foram utilizados neste projeto. A ideia é entrar mais em detalhes nos primeiros efeitos e depois ser um pouco mais breve, já é o início que apresenta mais dificuldades.
+Vamos explicar apenas o primeiro efeito dos que foram utilizados neste projeto. A ideia é entrar em detalhes neste efeito e esperar que isso seja uma porta de entrada para poder entender os outros por conta própria depois.
 
 ### Waves
 
@@ -86,7 +86,7 @@ vec4 waves(sampler2D tex, vec2 uv) {
 
 Note que esta função atualiza apenas a componente $y$ de cada pixel. Portanto, esperamos ver movimentos para cima e para baixo apenas. A fórmula exata da atualização está mostrada abaixo.
 
-$$uv.y = \sin(uv.x * \texttt{frequency} + \texttt{TIME} * \texttt{speed}) * \texttt{amplitude}$$
+$$uv.y = \sin(uv.x \cdot \texttt{frequency} + \texttt{TIME} \cdot \texttt{speed}) \cdot \texttt{amplitude}$$
 
 Supondo que o jogador não mexa nos parâmetros `frequency`, `speed` e `amplitude`, eles podem ser considerados são constantes na fórmula. Deste modo, só o que varia é o tempo e a coordenada $x$. Note que, em um instante `TIME`, a linha horizontal associada a um $y$ fixo só varia com $x$. Em outras palavras, existe variação horizontal dependete de $x$. Por outro lado, se for $x$ fixo e $y$ variando em um mesmo instante `TIME`, temos que todos os valores `uv.y` são iguais. Em outras palavras, todos os pixels de uma coluna sobem ou descem iguais. 
 
@@ -95,3 +95,6 @@ Cada quadrado da figura abaixo representa um pixel. Essa figura ilustra a movime
 <p align="center">
 	<img width="350" src="https://github.com/user-attachments/assets/67f2a1af-493b-4e2c-acd4-74fcbd2c08ee" />
 </p>
+
+Uma vez que o ponto `uv` foi atualizado, isso deve ser repassado para o pixel, em vetor de um `vec4` para atualizar o `COLOR`. A função `texture()` deve receber a textura original (variável `tex`) e o novo ponto `uv`. Essa função retorna o RGB do `uv` da textura. Como a coordenada $y$ foi alterada, isso significa que o retorno da função vai retonar um ponto mais acima ou mais abaixo do original. Isso é o comportamento que queremos.
+
