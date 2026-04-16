@@ -99,56 +99,56 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 
 | Tipo de Retorno | Função&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição / Valor retornado |
 |-----------------|--------|-----------------------------|
-| `ivec2` | `textureSize(gsampler2D s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
-| `ivec2` | `textureSize(samplerCube s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
-| `ivec2` | `textureSize(samplerCubeArray s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
-| `ivec3` | `textureSize(gsampler2DArray s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
-| `ivec3` | `textureSize(gsampler3D s, int lod)` | Obtém o tamanho da textura. Por desempenho, esta função deve ser evitada, pois sempre faz uma leitura completa da textura. Quando possível, passe o tamanho da textura como um uniform. |
-| `vec2` | `textureQueryLod(gsampler2D s, vec2 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
-| `vec3` | `textureQueryLod(gsampler2DArray s, vec2 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
-| `vec2` | `textureQueryLod(gsampler3D s, vec3 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
-| `vec2` | `textureQueryLod(samplerCube s, vec3 p)` | Calcula o nível de detalhe (LOD) que seria usado para amostrar uma textura. |
-| `int` | `textureQueryLevels(gsampler2D s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
-| `int` | `textureQueryLevels(gsampler2DArray s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
-| `int` | `textureQueryLevels(gsampler3D s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
-| `int` | `textureQueryLevels(samplerCube s)` | Obtém a quantidade de níveis de mipmap acessíveis de uma textura. |
-| `gvec4_type` | `texture(gsampler2D s, vec2 p [, float bias])` | Realiza uma leitura de textura. |
-| `gvec4_type` | `texture(gsampler2DArray s, vec3 p [, float bias])` | Realiza uma leitura de textura. |
-| `gvec4_type` | `texture(gsampler3D s, vec3 p [, float bias])` | Realiza uma leitura de textura. |
-| `vec4` | `texture(samplerCube s, vec3 p [, float bias])` | Realiza uma leitura de textura. |
-| `vec4` | `texture(samplerCubeArray s, vec4 p [, float bias])` | Realiza uma leitura de textura. |
-| `vec4` | `texture(samplerExternalOES s, vec2 p [, float bias])` | Realiza uma leitura de textura. |
-| `gvec4_type` | `textureProj(gsampler2D s, vec3 p [, float bias])` | Realiza uma leitura de textura com projeção. |
-| `gvec4_type` | `textureProj(gsampler2D s, vec4 p [, float bias])` | Realiza uma leitura de textura com projeção. |
-| `gvec4_type` | `textureProj(gsampler3D s, vec4 p [, float bias])` | Realiza uma leitura de textura com projeção. |
-| `gvec4_type` | `textureLod(gsampler2D s, vec2 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
-| `gvec4_type` | `textureLod(gsampler2DArray s, vec3 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
-| `gvec4_type` | `textureLod(gsampler3D s, vec3 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
-| `vec4` | `textureLod(samplerCube s, vec3 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
-| `vec4` | `textureLod(samplerCubeArray s, vec4 p, float lod)` | Realiza uma leitura de textura com mipmap personalizado. |
-| `gvec4_type` | `textureProjLod(gsampler2D s, vec3 p, float lod)` | Realiza uma leitura de textura com projeção e LOD. |
-| `gvec4_type` | `textureProjLod(gsampler2D s, vec4 p, float lod)` | Realiza uma leitura de textura com projeção e LOD. |
-| `gvec4_type` | `textureProjLod(gsampler3D s, vec4 p, float lod)` | Realiza uma leitura de textura com projeção e LOD. |
-| `gvec4_type` | `textureGrad(gsampler2D s, vec2 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
-| `gvec4_type` | `textureGrad(gsampler2DArray s, vec3 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
-| `gvec4_type` | `textureGrad(gsampler3D s, vec3 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
-| `vec4` | `textureGrad(samplerCube s, vec3 p, vec3 dPdx, vec3 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
-| `vec4` | `textureGrad(samplerCubeArray s, vec3 p, vec3 dPdx, vec3 dPdy)` | Realiza uma leitura de textura com gradientes explícitos. |
-| `gvec4_type` | `textureProjGrad(gsampler2D s, vec3 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com projeção, LOD e gradientes explícitos. |
-| `gvec4_type` | `textureProjGrad(gsampler2D s, vec4 p, vec2 dPdx, vec2 dPdy)` | Realiza uma leitura de textura com projeção, LOD e gradientes explícitos. |
-| `gvec4_type` | `textureProjGrad(gsampler3D s, vec4 p, vec3 dPdx, vec3 dPdy)` | Realiza uma leitura de textura com projeção, LOD e gradientes explícitos. |
-| `gvec4_type` | `texelFetch(gsampler2D s, ivec2 p, int lod)` | Obtém um único texel usando coordenadas inteiras. |
-| `gvec4_type` | `texelFetch(gsampler2DArray s, ivec3 p, int lod)` | Obtém um único texel usando coordenadas inteiras. |
-| `gvec4_type` | `texelFetch(gsampler3D s, ivec3 p, int lod)` | Obtém um único texel usando coordenadas inteiras. |
-| `gvec4_type` | `textureGather(gsampler2D s, vec2 p [, int comps])` | Reúne quatro texels de uma textura. |
-| `gvec4_type` | `textureGather(gsampler2DArray s, vec3 p [, int comps])` | Reúne quatro texels de uma textura. |
-| `vec4` | `textureGather(samplerCube s, vec3 p [, int comps])` | Reúne quatro texels de uma textura. |
-| `vec_type` | `dFdx(vec_type p)` | Derivada em relação à coordenada x da janela, granularidade automática. |
-| `vec_type` | `dFdxCoarse(vec_type p)` | Derivada em relação à coordenada x da janela, granularidade grosseira. |
-| `vec_type` | `dFdxFine(vec_type p)` | Derivada em relação à coordenada x da janela, granularidade fina. |
-| `vec_type` | `dFdy(vec_type p)` | Derivada em relação à coordenada y da janela, granularidade automática. |
-| `vec_type` | `dFdyCoarse(vec_type p)` | Derivada em relação à coordenada y da janela, granularidade grosseira. |
-| `vec_type` | `dFdyFine(vec_type p)` | Derivada em relação à coordenada y da janela, granularidade fina. |
-| `vec_type` | `fwidth(vec_type p)` | Soma das derivadas absolutas em x e y. |
-| `vec_type` | `fwidthCoarse(vec_type p)` | Soma das derivadas absolutas em x e y. |
-| `vec_type` | `fwidthFine(vec_type p)` | Soma das derivadas absolutas em x e y. |
+| `ivec2` | `textureSize(gsampler2D s, int lod)` | Retorna o tamanho da textura `s` no nível de mipmap `lod`. |
+| `ivec2` | `textureSize(samplerCube s, int lod)` | Retorna o tamanho do cubemap `s` no nível de mipmap `lod`. |
+| `ivec2` | `textureSize(samplerCubeArray s, int lod)` | Retorna o tamanho do cubemap array `s` no nível de mipmap `lod`. |
+| `ivec3` | `textureSize(gsampler2DArray s, int lod)` | Retorna o tamanho da textura array `s` (incluindo camadas) no nível `lod`. |
+| `ivec3` | `textureSize(gsampler3D s, int lod)` | Retorna o tamanho da textura 3D `s` no nível `lod`. |
+| `vec2` | `textureQueryLod(gsampler2D s, vec2 p)` | Retorna o nível de detalhe (LOD) que seria usado ao acessar `s` nas coordenadas `p`. |
+| `vec3` | `textureQueryLod(gsampler2DArray s, vec2 p)` | Retorna o nível de detalhe (LOD) que seria usado ao acessar `s` nas coordenadas `p`. |
+| `vec2` | `textureQueryLod(gsampler3D s, vec3 p)` | Retorna o nível de detalhe (LOD) que seria usado ao acessar `s` nas coordenadas `p`. |
+| `vec2` | `textureQueryLod(samplerCube s, vec3 p)` | Retorna o nível de detalhe (LOD) que seria usado ao acessar o cubemap `s` na direção `p`. |
+| `int` | `textureQueryLevels(gsampler2D s)` | Retorna a quantidade de níveis de mipmap disponíveis na textura `s`. |
+| `int` | `textureQueryLevels(gsampler2DArray s)` | Retorna a quantidade de níveis de mipmap disponíveis na textura `s`. |
+| `int` | `textureQueryLevels(gsampler3D s)` | Retorna a quantidade de níveis de mipmap disponíveis na textura `s`. |
+| `int` | `textureQueryLevels(samplerCube s)` | Retorna a quantidade de níveis de mipmap disponíveis no cubemap `s`. |
+| `gvec4_type` | `texture(gsampler2D s, vec2 p [, float bias])` | Retorna a cor da textura `s` nas coordenadas `p`, com filtragem/interpolação; `bias` ajusta o mipmap. |
+| `gvec4_type` | `texture(gsampler2DArray s, vec3 p [, float bias])` | Retorna a cor da textura `s` nas coordenadas `p` (inclui camada), com filtragem/interpolação; `bias` ajusta o mipmap. |
+| `gvec4_type` | `texture(gsampler3D s, vec3 p [, float bias])` | Retorna a cor da textura `s` nas coordenadas `p`, com filtragem/interpolação; `bias` ajusta o mipmap. |
+| `vec4` | `texture(samplerCube s, vec3 p [, float bias])` | Retorna a cor do cubemap `s` na direção `p`, com filtragem/interpolação; `bias` ajusta o mipmap. |
+| `vec4` | `texture(samplerCubeArray s, vec4 p [, float bias])` | Retorna a cor do cubemap array `s` usando `p` (direção + camada), com filtragem/interpolação; `bias` ajusta o mipmap. |
+| `vec4` | `texture(samplerExternalOES s, vec2 p [, float bias])` | Retorna a cor da textura externa `s` nas coordenadas `p`, com filtragem/interpolação; `bias` ajusta o mipmap. |
+| `gvec4_type` | `textureProj(gsampler2D s, vec3 p [, float bias])` | Retorna a cor da textura `s` usando coordenadas projetivas `p` (divisão implícita pelo último componente); `bias` ajusta o mipmap. |
+| `gvec4_type` | `textureProj(gsampler2D s, vec4 p [, float bias])` | Retorna a cor da textura `s` usando coordenadas projetivas `p` (divisão implícita pelo último componente); `bias` ajusta o mipmap. |
+| `gvec4_type` | `textureProj(gsampler3D s, vec4 p [, float bias])` | Retorna a cor da textura `s` usando coordenadas projetivas `p` (divisão implícita pelo último componente); `bias` ajusta o mipmap. |
+| `gvec4_type` | `textureLod(gsampler2D s, vec2 p, float lod)` | Retorna a cor da textura `s` nas coordenadas `p`, usando explicitamente o nível de mipmap `lod`. |
+| `gvec4_type` | `textureLod(gsampler2DArray s, vec3 p, float lod)` | Retorna a cor da textura `s` nas coordenadas `p` (inclui camada), usando o nível de mipmap `lod`. |
+| `gvec4_type` | `textureLod(gsampler3D s, vec3 p, float lod)` | Retorna a cor da textura `s` nas coordenadas `p`, usando o nível de mipmap `lod`. |
+| `vec4` | `textureLod(samplerCube s, vec3 p, float lod)` | Retorna a cor do cubemap `s` na direção `p`, usando o nível de mipmap `lod`. |
+| `vec4` | `textureLod(samplerCubeArray s, vec4 p, float lod)` | Retorna a cor do cubemap array `s` usando `p`, com o nível de mipmap `lod`. |
+| `gvec4_type` | `textureProjLod(gsampler2D s, vec3 p, float lod)` | Retorna a cor da textura `s` com coordenadas projetivas `p`, usando o nível de mipmap `lod`. |
+| `gvec4_type` | `textureProjLod(gsampler2D s, vec4 p, float lod)` | Retorna a cor da textura `s` com projeção (divisão por componente) e `lod` explícito. |
+| `gvec4_type` | `textureProjLod(gsampler3D s, vec4 p, float lod)` | Retorna a cor da textura `s` com projeção e nível de mipmap `lod`. |
+| `gvec4_type` | `textureGrad(gsampler2D s, vec2 p, vec2 dPdx, vec2 dPdy)` | Retorna a cor da textura `s` em `p`, usando os gradientes `dPdx` e `dPdy` para calcular o LOD. |
+| `gvec4_type` | `textureGrad(gsampler2DArray s, vec3 p, vec2 dPdx, vec2 dPdy)` | Retorna a cor da textura `s` em `p` (inclui camada), usando gradientes para o LOD. |
+| `gvec4_type` | `textureGrad(gsampler3D s, vec3 p, vec2 dPdx, vec2 dPdy)` | Retorna a cor da textura `s` em `p`, usando gradientes para o LOD. |
+| `vec4` | `textureGrad(samplerCube s, vec3 p, vec3 dPdx, vec3 dPdy)` | Retorna a cor do cubemap `s` na direção `p`, usando gradientes para o LOD. |
+| `vec4` | `textureGrad(samplerCubeArray s, vec3 p, vec3 dPdx, vec3 dPdy)` | Retorna a cor do cubemap array `s`, usando gradientes para o LOD. |
+| `gvec4_type` | `textureProjGrad(gsampler2D s, vec3 p, vec2 dPdx, vec2 dPdy)` | Retorna a cor da textura `s` com projeção `p`, usando gradientes para o LOD. |
+| `gvec4_type` | `textureProjGrad(gsampler2D s, vec4 p, vec2 dPdx, vec2 dPdy)` | Retorna a cor da textura `s` com projeção e gradientes para o LOD. |
+| `gvec4_type` | `textureProjGrad(gsampler3D s, vec4 p, vec3 dPdx, vec3 dPdy)` | Retorna a cor da textura `s` com projeção e gradientes para o LOD. |
+| `gvec4_type` | `texelFetch(gsampler2D s, ivec2 p, int lod)` | Retorna o texel exato de `s` na coordenada inteira `p`, no nível `lod` (sem filtragem). |
+| `gvec4_type` | `texelFetch(gsampler2DArray s, ivec3 p, int lod)` | Retorna o texel exato de `s` na coordenada `p` (inclui camada), no nível `lod`. |
+| `gvec4_type` | `texelFetch(gsampler3D s, ivec3 p, int lod)` | Retorna o texel exato da textura `s` na coordenada `p`, no nível `lod`. |
+| `gvec4_type` | `textureGather(gsampler2D s, vec2 p [, int comps])` | Retorna quatro valores de texel vizinhos de `s` ao redor de `p` (componente opcional `comps`). |
+| `gvec4_type` | `textureGather(gsampler2DArray s, vec3 p [, int comps])` | Retorna quatro valores de texel vizinhos de `s` ao redor de `p` (inclui camada). |
+| `vec4` | `textureGather(samplerCube s, vec3 p [, int comps])` | Retorna quatro valores de texel do cubemap `s` ao redor da direção `p`. |
+| `vec_type` | `dFdx(vec_type p)` | Retorna a derivada de `p` em relação ao eixo x da tela. |
+| `vec_type` | `dFdxCoarse(vec_type p)` | Retorna uma aproximação da derivada de `p` em x com menor precisão. |
+| `vec_type` | `dFdxFine(vec_type p)` | Retorna uma derivada mais precisa de `p` em x. |
+| `vec_type` | `dFdy(vec_type p)` | Retorna a derivada de `p` em relação ao eixo y da tela. |
+| `vec_type` | `dFdyCoarse(vec_type p)` | Retorna uma aproximação da derivada de `p` em y com menor precisão. |
+| `vec_type` | `dFdyFine(vec_type p)` | Retorna uma derivada mais precisa de `p` em y. |
+| `vec_type` | `fwidth(vec_type p)` | Retorna a soma das derivadas absolutas de `p` em x e y. |
+| `vec_type` | `fwidthCoarse(vec_type p)` | Retorna uma aproximação da soma das derivadas de `p` em x e y. |
+| `vec_type` | `fwidthFine(vec_type p)` | Retorna uma soma mais precisa das derivadas de `p` em x e y. |
