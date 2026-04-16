@@ -1,5 +1,6 @@
 shader_type canvas_item;
 
+
 uniform int effect;
 uniform float frequency = 10.0;
 uniform float amplitude = 0.02;
@@ -12,6 +13,7 @@ uniform float rgb_offset = 0.01;
 uniform float pixel_size = 100.0; // Quantos "blocos" cabem na tela (quanto maior, menor o pixel).
 uniform float scanline_frequency = 800.0;
 uniform float outline_thickness = 0.002; // Espessura do contorno
+
 
 vec4 waves(sampler2D tex, vec2 uv) {
 	float wave = sin(uv.x * frequency + TIME * speed);
@@ -140,9 +142,11 @@ vec4 mask(sampler2D tex, vec2 uv) {
 	return col;
 }
 
+
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
+
 
 void fragment() {
 	vec2 uv = UV;
@@ -190,6 +194,7 @@ void fragment() {
 	}
 	
 }
+
 
 //void light() {
 //	// Called for every pixel for every light affecting the CanvasItem.
