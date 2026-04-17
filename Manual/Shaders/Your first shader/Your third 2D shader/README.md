@@ -56,6 +56,27 @@ No approach default, a coordenada do ponto é o vetor nativo `UV`, que nunca dev
 
 Por fim, no momento de atualizar o `COLOR`, é necessário normalizar o ponto `new_p` para o sistema `UV`, pois a função `texture()` só trabalha nas coordenadas usuais do shader. Essa normalização é feita com o comando `vec2 uv = new_p / screen_size`, e depois a atualização `COLOR = texture(input_texture, uv);` é a usual.
 
-Apenas para ter algo concreto em números, vamos considerar o exemplo de uma textura $10 \times 10$. Suponha que vamos atualizar o pixel na última coordenada (canto inferior direito), o pixel em $(9.5, 9.5)$. Ele está nessa posição quebrada pois este é o centro do último pixel. Sendo assim, temos que 
+Apenas para ter algo concreto em números, considere uma textura $10 \times 10$ e suponha que será atualizado o pixel da última coordenada (canto inferior direito), o pixel em $(9.5, 9.5)$. Ele está nessa posição quebrada pois este é o centro do último pixel. Sendo assim, temos que 
 
 $$ \texttt{uv} = \frac{\texttt{new p}}{\texttt{screen size}} = \left(\frac{\texttt{new p}_x}{\texttt{screen width}}, \frac{\texttt{new p}_y}{\texttt{screen heigth}}\right).$$
+
+## Experimento 3
+
+Este experimento é apenas para confirmar que aprendemos a trabalhar em coordenadas de pixels. O objetivo aqui é criar um padrão de tabuleiro de xadrez, com pixels se alternando em preto e branco. Desta vez não há nenhuma textura externa sendo atualizada. O shader apenas renderiza o padrão e mais nada se altera, é uma imagem fixa.
+
+Para esse caso, alteramos para um sistema de coordenadas de inteiros. O tipo de vetor `ivec2` trunca os valores. Isso significa que cada coordenada não está mais associada ao centro do pixel, mas sim ao seu canto superior esquerdo. Seria totalmente possível trabalhar com floats e os centros dos pixels, mas essa conversão foi criada justamente para mostrar que é possível um sistema de coordenada de inteiros.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/525d05ba-991f-45ed-9880-4b9dd21fb9bc" />
+</p>
+
+## Experimento 4
+
+Este experimento pode ser visto como uma continuação do anterior. Dessa vez, em vez de alterar todos os pixels da textura (que tem sido o logo da Godot desde o primeiro experimento), o shader altera apenas alguns. A cor se modifica dependendo de do valor da coordenada $x$ ou $y$ do pixel $\mod 5$. A cor nova depende da coordenada testada, o que cria um efeito gradiante na imagem final.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/7c0ce8ff-cf26-4643-bcbb-21686dc51f7f" />
+  <img width="440" src="https://github.com/user-attachments/assets/8629699c-7ac1-4f40-9372-55968f80f71e" />
+</p>
+
+
