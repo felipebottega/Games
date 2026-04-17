@@ -107,10 +107,24 @@ Primeiro o shader aumenta a escala da caixa ao multiplicar o UV por 2. Como quer
   <img width="400" src="https://github.com/user-attachments/assets/ad78828b-c844-474b-a0e8-c51a9419b95a" />
 </p>
 
-Como intepretamos isso? Primeiro note que, pelo fato das coordenadas terem o mesmo valor, estamos trabalhando na escala de cinza. Pontos mais distantes são mais claros, tendendo ao branco. Conforme se aproximam da borde de distância $0.5$ do centro, vão escurecendo. Depois dessa borda houve uma inversão de intensidade por causa das manipulações discutidas acima. Então no centro temos o branco máximo e a cor vai escurecendo conforme o ponto se distancia do centro e se aproxima da borda de distância $0.5$ do centro. A figura resultante está mostrada abaixo para ajudar a visualizar o que está acontecendo.
+Como intepretamos isso? Primeiro note que, pelo fato das componentes da cor terem o mesmo valor, estamos trabalhando na escala de cinza. Pontos mais distantes são mais claros, tendendo ao branco. Conforme se aproximam da borda de distância $0.5$ do centro, vão escurecendo. Depois dessa borda houve uma inversão de intensidade por causa das manipulações discutidas acima. Então no centro temos o branco máximo e a cor vai escurecendo conforme o ponto se distancia do centro e se aproxima da borda de distância $0.5$ do centro. A figura resultante está mostrada abaixo para ajudar a visualizar o que está acontecendo.
 
 <p align="center">
   <img width="450" src="https://github.com/user-attachments/assets/345425df-93e8-47e0-bb5e-5fbda1cba040" />
 </p>
 
+## Experimento 7
 
+Este experimento é basicamente uma repetição do anterior, mas aplicando uma função extra antes de definir a cor nova. Esta função é a `step()`, que está definida no tutorial de [função do shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#fun%C3%A7%C3%B5es-matem%C3%A1ticas). O comando `step(0.1, d)` é bem simples, se $0.1 > \texttt{d}$, retorna $0$, caso contrário retorna $1$. Ou seja, se `d` por pequeno o suficiente (menor que $0.1$), vira a cor preta, senão é cor branca. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/e25651c1-40e8-468c-98e8-f878606dc63c" />
+</p>
+
+Em relação à imagem mostrada no experimento anterior, isso significa que ela será convertida para preto e branco, com o threshold de $0.1$ para definir o que é preto e o que é branco.
+
+<p align="center">
+  <img width="460" src="https://github.com/user-attachments/assets/31423b5f-76ec-4288-a6da-15d9ad14c844" />
+</p>
+
+## Experimento 8
