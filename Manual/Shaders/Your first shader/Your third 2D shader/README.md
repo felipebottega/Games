@@ -92,10 +92,14 @@ Esse começa fazendo subtraindo `uv` por $0.5$. Desta vez a subtração não é 
 <p align="center">
   <img width="306" src="https://github.com/user-attachments/assets/1707017c-06e5-42c9-b74a-1cc192236213" />
   <img width="300" src="https://github.com/user-attachments/assets/8f6e4a05-f9ab-45d7-8781-500fd4f1b09b" />
-  <img width="800" src="https://github.com/user-attachments/assets/0e4fe0ce-75c1-4348-a9ae-369e27eb291a" />
+  <img width="800" src="https://github.com/user-attachments/assets/2268f2a0-a35a-49fc-953b-3817a156442b" />
 </p>
 
 Após a mudança de coordenadas, a função `length()` calcula a norma Euclideana do vetor `uv`. Como o sistema está centrado na origem, esta norma coincide com a distância do pixel ao centro da imagem. Usando essa informação, a atualização `COLOR.r = pow(1.0 - uv_size, 2)` faz com que pontos mais próximos do centro tenham vermelhos mais intensos que os distantes. A condicão `int(TIME) % 2 == 0` faz com que a atualização só ocorra em segundos pares. Ou seja, atualiza uma vez a cada 2 segundos. Isso dá um efeito de luz vermelha de alerta. 
 
 ## Experimento 6
+
+Agora que a mudança de sistema de coordenadas está entendida, vai ser mais fácil entender este shader e os seguintes.
+
+<img width="576" height="275" alt="image" src="https://github.com/user-attachments/assets/ad78828b-c844-474b-a0e8-c51a9419b95a" />
 
