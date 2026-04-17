@@ -58,7 +58,7 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 | `vec_type`      | `min(vec_type a, vec_type b)`                                          | Menor valor entre a e b.                                         |
 | `vec_type`      | `max(vec_type a, vec_type b)`                                          | Maior valor entre a e b.                                         |
 | `vec_type`      | `step(vec_type a, vec_type b)`                                         | `a > b ? 0.0 : 1.0`.                                             |
-| `vec_type`      | `smoothstep(vec_type a, vec_type b)`                                   | Interpolação de Hermite entre a e b por c.                       |
+| `vec_type`      | `smoothstep(float a, float b, vec_type c)`                             | Interpolação de Hermite entre a e b por c.                       |
 | `vec_bool_type` | `isnan(vec_type x)`                                                    | Retorna true se algum componente for NaN.                        |
 | `vec_bool_type` | `isinf(vec_type x)`                                                    | Retorna true se algum componente for infinito (INF).             |
 
