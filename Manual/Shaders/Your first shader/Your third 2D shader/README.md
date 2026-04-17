@@ -35,3 +35,14 @@ A figura abaixo ilustra o processo. Quando o shader ler o pixel `uv` = $(\texttt
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/e85f2825-d52f-42d4-8b96-823d6356ceca" />
 </p>
+
+## Experimento 2
+
+Assim que você olha a animação que esse shader produz, consegue notar que a diagonal fica meio borrada assim que começa a descer. Isso acontece porque o deslocamento dela não é em pixels, mas sim em um percentual da altura. Como as coordenadas UV são contínuas, não existe a discretização de pixel e movimento por grade. O borrado acontece porque o cor entregue bate em subpixels, o que acarreta numa cor interpolada entre as vizinhas. Então além de preto ou branco, acabamos obtendo tons de cinza também.
+
+O fato de UV sererm as coordenadas usuais para shader, não significa que é impossível trabalhar em coordenadas de pixels. Vamos ver neste experimento como se faz isso. Este experimento é um réplica do anterior, com a diferença que o movimento da diagonal será por passos baseados em pixels em vez de percentual da altura. Antes mesmo de começar a explicar o código, deixamos os dois códigos lado a lado: o código anterior (baseado em UV) e o código atual (baseado em pixels).
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/912ea581-8cc6-4d1c-aa04-1fe58da7aacf" />
+</p>
+
