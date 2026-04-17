@@ -24,7 +24,7 @@ No shader, utiliza-se o comando `texture(input_texture, uv)` para extrair a cor 
 
 Abaixo temos o código do shader. Na primeira iteração (`iter == 0`) o shader desenha uma linha diagonal preta em um fundo branco. A espessura dessa linha corresponde a 2% do tamanho da tela (UV). Basicamente 1% acima da diagonal e 1% abaixo da diagonal, é isso que a condição `abs(uv.x - uv.y) < 0.01` significa.
 
-Depois dessa primeira iteração, as outras fazem semper a mesma coisa. Primeiro verifica se a coordenada $y$ está longe o suficiente do topo, devendo estar distante do topo em pelo menos 1% da altura total (condição `uv.y >= 0.01`). Se a condição não for satisfeita, pinta o pixel de branco. Ou seja, os primeiros 1% do topo da imagem sempre serão brancos. Se a condição for satisfeita, a coordenada $y$ muda para a que está 1% do total da altura acima (`uv.y -= 0.01;`). Depois disso, o shader extrai a cor correspondente do pixel `uv` em relação à textura do frame anterior (comando `texture(input_texture, uv)`). Essa cor é usada para atualizar a cor do pixel atual ao atribuir este valor para `COLOR`.
+Depois dessa primeira iteração, as outras fazem semper a mesma coisa. Primeiro verifica se a coordenada $y$ está longe o suficiente do topo, devendo estar distante do topo em pelo menos 1% da altura total (condição `uv.y >= 0.01`). Se a condição não for satisfeita, pinta o pixel de branco. Ou seja, os primeiros 1% do topo da imagem sempre serão brancos. Se a condição for satisfeita, a coordenada $y$ muda para a que está 1% do total da altura acima (`uv.y -= 0.01`). Depois disso, o shader extrai a cor correspondente do pixel `uv` em relação à textura do frame anterior (comando `texture(input_texture, uv)`). Essa cor é usada para atualizar a cor do pixel atual ao atribuir este valor para `COLOR`.
 
 <p align="center">
   <img width="320" src="https://github.com/user-attachments/assets/90f33327-690b-4970-b94b-3a3763bb6e44" />
@@ -48,13 +48,13 @@ O fato de UV sererm as coordenadas usuais para shader, não significa que é imp
 
 A primeira coisa que fazemos é obter as coordenadas em pixels do ponto. O [valor nativo](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-do-fragment) `FRAGCOORD` faz esse trabalho. Nesse caso, basta extrair as coordenadas $xy$ deste vetor. Vale ressaltar que o espaço original não é discreto, esse valor representa o centro do pixel correspondente. 
 
-O valor nativo `SCREEN_PIXEL_SIZE` te entrega um vetor 2D, contendo o tamanho do pixel. Não é necessariamente verdade que o pixel será um quadrado neste sistema de coordenadas. Vale também ressaltar que este approach te entrega os pixels em coordenadas locais do node, começando do canto superior esquerdo até o canto inferior direito. Por conta desta propriedade, podemos obter o tamanho da textura com o comando `vec2 screen_size = 1.0 / SCREEN_PIXEL_SIZE;`, como foi feito no exemplo.
+O valor nativo `SCREEN_PIXEL_SIZE` te entrega um vetor 2D, contendo o tamanho do pixel. Não é necessariamente verdade que o pixel será um quadrado neste sistema de coordenadas. Vale também ressaltar que este approach te entrega os pixels em coordenadas locais do node, começando do canto superior esquerdo até o canto inferior direito. Por conta desta propriedade, podemos obter o tamanho da textura com o comando `vec2 screen_size = 1.0 / SCREEN_PIXEL_SIZE`, como foi feito no exemplo.
 
 As condicionais e operações feitas são análogas a do exemplo anterior, mas em termos de pixels. Vale notar que o valor de 10 pixels é arbitrário, apenas para testes. 
 
-No approach default, a coordenada do ponto é o vetor nativo `UV`, que nunca deve ser alterado diretamente. Você pode notar que sempre declaramos `vec2 uv = UV;` e trabalhamos com o vetor `uv`. No caso de pixels, apesar de não ser obrigatório, tratamos o vetor `p` como o `UV`. Até usamos o `p` para as verificações, mas no momento de definir um novo ponto, usamos o `new_p`, que faz o papel análogo do `uv`.
+No approach default, a coordenada do ponto é o vetor nativo `UV`, que nunca deve ser alterado diretamente. Você pode notar que sempre declaramos `vec2 uv = UV` e trabalhamos com o vetor `uv`. No caso de pixels, apesar de não ser obrigatório, tratamos o vetor `p` como o `UV`. Até usamos o `p` para as verificações, mas no momento de definir um novo ponto, usamos o `new_p`, que faz o papel análogo do `uv`.
 
-Por fim, no momento de atualizar o `COLOR`, é necessário normalizar o ponto `new_p` para o sistema `UV`, pois a função `texture()` só trabalha nas coordenadas usuais do shader. Essa normalização é feita com o comando `vec2 uv = new_p / screen_size`, e depois a atualização `COLOR = texture(input_texture, uv);` é a usual.
+Por fim, no momento de atualizar o `COLOR`, é necessário normalizar o ponto `new_p` para o sistema `UV`, pois a função `texture()` só trabalha nas coordenadas usuais do shader. Essa normalização é feita com o comando `vec2 uv = new_p / screen_size`, e depois a atualização `COLOR = texture(input_texture, uv)` é a usual.
 
 Apenas para ter algo concreto em números, considere uma textura $10 \times 10$ e suponha que será atualizado o pixel da última coordenada (canto inferior direito), o pixel em $(9.5, 9.5)$. Ele está nessa posição quebrada pois este é o centro do último pixel. Sendo assim, temos que 
 
@@ -87,9 +87,15 @@ Este exemplo também possui um código GDScript que altera a escala da figura co
 
 ## Experimento 5
 
+Esse começa fazendo subtraindo `uv` por $0.5$. Desta vez a subtração não é feita para extrair a cor do pixel em outra posição, o que está acontencendo agora é uma mudança de coordenadas. O modo mais usual de interpretar isso, é imaginar que o sistema `UV` é uma "caixa" no plano 2D (com o eixo $y$ invertido em relação ao tradicional) e, ao fazer um shift, movemos a caixa de posição.
 
 <p align="center">
   <img width="306" src="https://github.com/user-attachments/assets/1707017c-06e5-42c9-b74a-1cc192236213" />
   <img width="300" src="https://github.com/user-attachments/assets/8f6e4a05-f9ab-45d7-8781-500fd4f1b09b" />
+  <img width="800" src="https://github.com/user-attachments/assets/0e4fe0ce-75c1-4348-a9ae-369e27eb291a" />
 </p>
+
+Após a mudança de coordenadas, a função `length()` calcula a norma Euclideana do vetor `uv`. Como o sistema está centrado na origem, esta norma coincide com a distância do pixel ao centro da imagem. Usando essa informação, a atualização `COLOR.r = pow(1.0 - uv_size, 2)` faz com que pontos mais próximos do centro tenham vermelhos mais intensos que os distantes. A condicão `int(TIME) % 2 == 0` faz com que a atualização só ocorra em segundos pares. Ou seja, atualiza uma vez a cada 2 segundos. Isso dá um efeito de luz vermelha de alerta. 
+
+## Experimento 6
 
