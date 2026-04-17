@@ -43,6 +43,19 @@ Assim que você olha a animação que esse shader produz, consegue notar que a d
 O fato de UV sererm as coordenadas usuais para shader, não significa que é impossível trabalhar em coordenadas de pixels. Vamos ver neste experimento como se faz isso. Este experimento é um réplica do anterior, com a diferença que o movimento da diagonal será por passos baseados em pixels em vez de percentual da altura. Antes mesmo de começar a explicar o código, deixamos os dois códigos lado a lado: o código anterior (baseado em UV) e o código atual (baseado em pixels).
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/912ea581-8cc6-4d1c-aa04-1fe58da7aacf" />
+  <img width="700" src="https://github.com/user-attachments/assets/86b39d8f-eeee-461e-8b65-7e115a94394b" />
 </p>
 
+A primeira coisa que fazemos é obter as coordenadas em pixels do ponto. O [valor nativo](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-do-fragment) `FRAGCOORD` faz esse trabalho. Nesse caso, basta extrair as coordenadas $xy$ deste vetor. Vale ressaltar que o espaço original não é discreto, esse valor representa o centro do pixel correspondente. 
+
+O valor nativo `SCREEN_PIXEL_SIZE` te entrega um vetor 2D, contendo o tamanho do pixel. Não é necessariamente verdade que o pixel será um quadrado neste sistema de coordenadas. Vale também ressaltar que este approach te entrega os pixels em coordenadas locais do node, começando do canto superior esquerdo até o canto inferior direito. Por conta desta propriedade, podemos obter o tamanho da textura com o comando `vec2 screen_size = 1.0 / SCREEN_PIXEL_SIZE;`, como foi feito no exemplo.
+
+As condicionais e operações feitas são análogas a do exemplo anterior, mas em termos de pixels. Vale notar que o valor de 10 pixels é arbitrário, apenas para testes. 
+
+No approach default, a coordenada do ponto é o vetor nativo `UV`, que nunca deve ser alterado diretamente. Você pode notar que sempre declaramos `vec2 uv = UV;` e trabalhamos com o vetor `uv`. No caso de pixels, apesar de não ser obrigatório, tratamos o vetor `p` como o `UV`. Até usamos o `p` para as verificações, mas no momento de definir um novo ponto, usamos o `new_p`, que faz o papel análogo do `uv`.
+
+Por fim, no momento de atualizar o `COLOR`, é necessário normalizar o ponto `new_p` para o sistema `UV`, pois a função `texture()` só trabalha nas coordenadas usuais do shader. Essa normalização é feita com o comando `vec2 uv = new_p / screen_size`, e depois a atualização `COLOR = texture(input_texture, uv);` é a usual.
+
+Apenas para ter algo concreto em números, vamos considerar o exemplo de uma textura $10 \times 10$. Suponha que vamos atualizar o pixel na última coordenada (canto inferior direito), o pixel em $(9.5, 9.5)$. Ele está nessa posição quebrada pois este é o centro do último pixel. Sendo assim, temos que 
+
+$$ \texttt{uv} = \frac{\texttt{new p}}{\texttt{screen size}} = \left(\frac{\texttt{new p}_x}{\texttt{screen width}}, \frac{\texttt{new p}_y}{\texttt{screen heigth}}\right).$$
