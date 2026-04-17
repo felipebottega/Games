@@ -17,14 +17,21 @@ Em todos os experimentos, a estrutura principal da árvore é a mostrada abaixo.
   <img width="460" src="https://github.com/user-attachments/assets/72ec061d-2987-4d5c-9c61-d455bb217982" />
 </p>
 
-Abaixo temos o código do shader. Na primeira iteração (`iter == 0`) o shader desenha uma linha diagonal preta em um fundo branco. A espessura dessa linha corresponde a 2% do tamanho da tela (UV). Basicamente 1% acima da diagonal e 1% abaixo da diagonal, é isso que a condição `abs(uv.x - uv.y) < 0.01` significa.
-
-Depois dessa primeira iteração, as outas fazem semper a mesma coisa. Primeiro verifica se a coordenada $y$ está longe o suficiente do topo, devendo estar distante do topo em  pelo menos 1% da altura total (condição `uv.y >= 0.01`). Se a condição não for satisfeita, pinta o pixel de branco. Ou seja, os primeiros 1% do topo da imagem sempre serão brancos. Se a condição for satisfeita, a coordenada $y$ muda para a que está 1% do total da altura acima (`uv.y -= 0.01;`). Depois disso, o shader extrai a cor correspondente do pixel `uv` em relação à textura do frame anterior (comando `texture(input_texture, uv)`). Essa cor é usada para atualizar a cor do pixel atual ao atribuir este valor para `COLOR`.
-
-<p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/90f33327-690b-4970-b94b-3a3763bb6e44" />
-</p>
-
+No shader, utiliza-se o comando `texture(input_texture, uv)` para extrair a cor do pixel da posição `uv` da textura `input_texture`. Como essa textura veio de um uniform, que veio do exterior, podemos sempre armazenar extenamente a textura de um frame e passá-la para o frame seguinte. 
 
 ## Experimento 1
 
+
+Abaixo temos o código do shader. Na primeira iteração (`iter == 0`) o shader desenha uma linha diagonal preta em um fundo branco. A espessura dessa linha corresponde a 2% do tamanho da tela (UV). Basicamente 1% acima da diagonal e 1% abaixo da diagonal, é isso que a condição `abs(uv.x - uv.y) < 0.01` significa.
+
+Depois dessa primeira iteração, as outras fazem semper a mesma coisa. Primeiro verifica se a coordenada $y$ está longe o suficiente do topo, devendo estar distante do topo em pelo menos 1% da altura total (condição `uv.y >= 0.01`). Se a condição não for satisfeita, pinta o pixel de branco. Ou seja, os primeiros 1% do topo da imagem sempre serão brancos. Se a condição for satisfeita, a coordenada $y$ muda para a que está 1% do total da altura acima (`uv.y -= 0.01;`). Depois disso, o shader extrai a cor correspondente do pixel `uv` em relação à textura do frame anterior (comando `texture(input_texture, uv)`). Essa cor é usada para atualizar a cor do pixel atual ao atribuir este valor para `COLOR`.
+
+<p align="center">
+  <img width="320" src="https://github.com/user-attachments/assets/90f33327-690b-4970-b94b-3a3763bb6e44" />
+</p>
+
+A figura abaixo ilustra o processo. Quando o shader ler o pixel `uv` = $(\texttt{uv}_x, \texttt{uv}_y)$, ele vai atualizar este pixel de modo que a cor deele seja igual a do pixel $(\texttt{uv}_x, \texttt{uv}_y - 0.01)$, que está um pouco acima. Se o pixel de cima for branco, nada muda. Se for um pixel da diagonal, ele será preto. Então a cor do pixel um pouco abaixo será preto também. O efeito disso é que, aos poucos, a diagonal vai descendo na tela verticalmente. A regra de sempre deixar os primeiros 1% brancos é para evitar que estes pixel tentem atualizar para valores fora da textura.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/e85f2825-d52f-42d4-8b96-823d6356ceca" />
+</p>
