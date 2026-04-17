@@ -10,11 +10,19 @@ Antes mesmo de falar dos experimentos, precisamos falar de uma técnica importan
 
 > PS: Dependendo do tipo de shader a ser aplicado, pode não ser necessário passar a textura completa entre CPU e GPU a cada frame. Vamos adotar o approach menos otimizado por ser rápido o suficiente para as nossas aplicações e também por ser mais simples.
 
-Em todos os experimentos, a estrutura principal da árvore é a mostrada abaixo. Precisamos do `SubViewport` pois é esse node que nos permite salvar a textura. 
+Em todos os experimentos, a estrutura principal da árvore é a mostrada abaixo. Precisamos do `SubViewport` pois é esse node que nos permite salvar a textura. A função `snapshot` recebe o node `SubViewport`, extrai a sua textura com o método `get_texture().get_image()` e salva essa textura como imagem, usando o comando `ImageTexture.create_from_image()`. Note que sempre antes de chamar a função devemos usar o `await RenderingServer.frame_post_draw` para esperar a renderização terminar. Nenhuma dessas chamadas foi abordada nos tutoriais, recomendo consultar a documentação para um melhor entendimento. Depois que textura está salva, a próxima iteração usa a chamada `set_shader_parameter()` para enviar essa textura para o shader. Esta última chamada já foi abordada, no [Your first 2D shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#interagindo-com-o-shader-por-c%C3%B3digo).
 
 <p align="center">
   <img width="220" src="https://github.com/user-attachments/assets/0dde028f-71ba-4766-bd75-b31fb95b68ae" />
   <img width="460" src="https://github.com/user-attachments/assets/72ec061d-2987-4d5c-9c61-d455bb217982" />
+</p>
+
+Abaixo temos o código do shader. Na primeira iteração (`iter == 0`) o shader desenha uma linha diagonal preta em um fundo branco. A espessura dessa linha corresponde a 2% do tamanho da tela (UV). Basicamente 1% acima da diagonal e 1% abaixo da diagonal, é isso que a condição `abs(uv.x - uv.y) < 0.01` significa.
+
+Depois dessa primeira iteração, as outas fazem semper a mesma coisa. Primeiro verifica se a coordenada $y$ está longe o suficiente do topo, devendo estar distante do topo em  pelo menos 1% da altura total (condição `uv.y >= 0.01`). Se a condição não for satisfeita, pinta o pixel de branco. Ou seja, os primeiros 1% do topo da imagem sempre serão brancos. Se a condição for satisfeita, a coordenada $y$ muda para a que está 1% do total da altura acima (`uv.y -= 0.01;`). Depois disso, o shader extrai a cor correspondente do pixel `uv` em relação à textura do frame anterior (comando `texture(input_texture, uv)`). Essa cor é usada para atualizar a cor do pixel atual ao atribuir este valor para `COLOR`.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/90f33327-690b-4970-b94b-3a3763bb6e44" />
 </p>
 
 
