@@ -79,4 +79,17 @@ Este experimento pode ser visto como uma continuação do anterior. Dessa vez, e
   <img width="440" src="https://github.com/user-attachments/assets/8629699c-7ac1-4f40-9372-55968f80f71e" />
 </p>
 
+Este exemplo também possui um código GDScript que altera a escala da figura com o passar do tempo, aumentando e diminuindo de maneira oscilatória. Meu objetivo com esse teste foi o de confirmar que o sistema de coordenada UV escala junto co a textura, o que de fato é verdade. Não importa se aplicamos escala, rotacionamos ou transladamos a figura, o sistema UV se altera junto e os efeitos do shader são aplicados corretamente.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/712d6027-c166-4405-930c-e9f64f5c6357" />
+</p>
+
+## Experimento 5
+
+
+<p align="center">
+  <img width="306" src="https://github.com/user-attachments/assets/1707017c-06e5-42c9-b74a-1cc192236213" />
+  <img width="300" src="https://github.com/user-attachments/assets/8f6e4a05-f9ab-45d7-8781-500fd4f1b09b" />
+</p>
 
