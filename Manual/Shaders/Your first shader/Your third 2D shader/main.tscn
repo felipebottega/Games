@@ -18,12 +18,6 @@ Boa viagem!!!
 
 Experimento nº"
 
-[node name="LineEdit" type="LineEdit" parent="." unique_id=499582791]
-offset_left = 127.0
-offset_top = 178.0
-offset_right = 195.5
-offset_bottom = 209.0
-
 [node name="Label2" type="Label" parent="." unique_id=687038072]
 offset_left = 204.0
 offset_top = 187.0
@@ -41,4 +35,17 @@ mouse_filter = 0
 theme_override_font_sizes/font_size = 6
 text = "Música: Brandon Morris - https://opengameart.org/content/cave-theme"
 
-[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[node name="Control" type="Control" parent="." unique_id=990186078]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LineEdit" type="LineEdit" parent="Control" unique_id=499582791]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 178.0
+offset_right = 195.5
+offset_bottom = 209.0
+
+[connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
