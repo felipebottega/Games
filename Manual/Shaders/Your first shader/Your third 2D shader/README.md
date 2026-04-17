@@ -54,7 +54,7 @@ As condicionais e operações feitas são análogas a do exemplo anterior, mas e
 
 No approach default, a coordenada do ponto é o vetor nativo `UV`, que nunca deve ser alterado diretamente. Você pode notar que sempre declaramos `vec2 uv = UV` e trabalhamos com o vetor `uv`. No caso de pixels, apesar de não ser obrigatório, tratamos o vetor `p` como o `UV`. Até usamos o `p` para as verificações, mas no momento de definir um novo ponto, usamos o `new_p`, que faz o papel análogo do `uv`.
 
-Por fim, no momento de atualizar o `COLOR`, é necessário normalizar o ponto `new_p` para o sistema `UV`, pois a função `texture()` só trabalha nas coordenadas usuais do shader. Essa normalização é feita com o comando `vec2 uv = new_p / screen_size`, e depois a atualização `COLOR = texture(input_texture, uv)` é a usual.
+Por fim, no momento de atualizar o `COLOR`, é necessário normalizar o ponto `new_p` para o sistema UV, pois a função `texture()` só trabalha nas coordenadas usuais do shader. Essa normalização é feita com o comando `vec2 uv = new_p / screen_size`, e depois a atualização `COLOR = texture(input_texture, uv)` é a usual.
 
 Apenas para ter algo concreto em números, considere uma textura $10 \times 10$ e suponha que será atualizado o pixel da última coordenada (canto inferior direito), o pixel em $(9.5, 9.5)$. Ele está nessa posição quebrada pois este é o centro do último pixel. Sendo assim, temos que 
 
@@ -99,7 +99,18 @@ Após a mudança de coordenadas, a função `length()` calcula a norma Euclidean
 
 ## Experimento 6
 
-Agora que a mudança de sistema de coordenadas está entendida, vai ser mais fácil entender este shader e os seguintes.
+Agora que a mudança de sistema de coordenadas está entendida, vai ser mais fácil entender este shader e os seguintes. 
 
-<img width="576" height="275" alt="image" src="https://github.com/user-attachments/assets/ad78828b-c844-474b-a0e8-c51a9419b95a" />
+Primeiro o shader aumenta a escala da caixa ao multiplicar o UV por 2. Como queremos que este também fique centrado na origem, devemos subtrair tudo por 1. Novamente, calculamos a norma do vetor (distância ao centro da imagem). Agora fazemos algo diferente, subtraímos $-0.5$ deste valor. Isso significa que os pontos com distância $0.5$ ou menos do centro passam a ter uma distância fictícia que é menor ou igual a zero. Com isso, criamos uma região diferenciada de raio $0.5$ em torno do centro. Agora o shader aplica o valor absoluto nessa distância. O tratamento diferenciado muda, agora quanto mais próximos do centro, maior fica o valor da distância, indo de zero (na borda) até $0.5$ (no centro). Esse valor é usado para definir a cor `vec4(d, d, d, 1.0)`. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/ad78828b-c844-474b-a0e8-c51a9419b95a" />
+</p>
+
+Como intepretamos isso? Primeiro note que, pelo fato das coordenadas terem o mesmo valor, estamos trabalhando na escala de cinza. Pontos mais distantes são mais claros, tendendo ao branco. Conforme se aproximam da borde de distância $0.5$ do centro, vão escurecendo. Depois dessa borda houve uma inversão de intensidade por causa das manipulações discutidas acima. Então no centro temos o branco máximo e a cor vai escurecendo conforme o ponto se distancia do centro e se aproxima da borda de distância $0.5$ do centro. A figura resultante está mostrada abaixo para ajudar a visualizar o que está acontecendo.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/345425df-93e8-47e0-bb5e-5fbda1cba040" />
+</p>
+
 
