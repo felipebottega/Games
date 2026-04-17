@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://iqqqxah41ukp"]
+
+[ext_resource type="Shader" uid="uid://dwfijikrog5af" path="res://shaders/test9.gdshader" id="1_u76r3"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_2dlvw"]
+[ext_resource type="Shader" uid="uid://bvaga5wnjuugr" path="res://shaders/test9x.gdshader" id="3_2dlvw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ok7t0"]
+shader = ExtResource("1_u76r3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ueraw"]
+shader = ExtResource("3_2dlvw")
+
+[node name="Test9" type="Node2D" unique_id=780571341]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1485047085]
+offset_top = 1.0
+offset_right = 150.0
+offset_bottom = 101.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=881716509]
+handle_input_locally = false
+size = Vector2i(150, 100)
+render_target_update_mode = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport" unique_id=1102922929]
+material = SubResource("ShaderMaterial_ok7t0")
+position = Vector2(74.999954, 49.49996)
+scale = Vector2(1.1718757, 0.7734382)
+texture = ExtResource("2_2dlvw")
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="." unique_id=1684759370]
+offset_left = 160.0
+offset_top = 1.0
+offset_right = 310.0
+offset_bottom = 101.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer2" unique_id=122154317]
+handle_input_locally = false
+size = Vector2i(150, 100)
+render_target_update_mode = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer2/SubViewport" unique_id=2035871492]
+material = SubResource("ShaderMaterial_ueraw")
+position = Vector2(74.99997, 49.999954)
+scale = Vector2(1.171876, 0.7812507)
+texture = ExtResource("2_2dlvw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2088444400]
+visible = false
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1509102946]
+modulate = Color(0, 0, 0, 1)
+offset_left = 16.0
+offset_top = 128.0
+offset_right = 56.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 64

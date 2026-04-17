@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://s0avgoj8exc5"]
+
+[ext_resource type="Script" uid="uid://cb246qwigqcik" path="res://scripts/test1.gd" id="1_v763p"]
+[ext_resource type="Shader" uid="uid://basnrkr4pyx4e" path="res://shaders/test1.gdshader" id="2_ok7t0"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="3_ok7t0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ok7t0"]
+shader = ExtResource("2_ok7t0")
+shader_parameter/iter = 0
+
+[node name="Test1" type="Node2D" unique_id=780571341]
+script = ExtResource("1_v763p")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1485047085]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=881716509]
+handle_input_locally = false
+size = Vector2i(320, 240)
+render_target_update_mode = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport" unique_id=1102922929]
+material = SubResource("ShaderMaterial_ok7t0")
+position = Vector2(159.99994, 119.99997)
+scale = Vector2(2.5000005, 1.8750006)
+texture = ExtResource("3_ok7t0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2088444400]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1509102946]
+modulate = Color(0, 0, 0, 1)
+offset_left = 16.0
+offset_top = 135.0
+offset_right = 56.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 64

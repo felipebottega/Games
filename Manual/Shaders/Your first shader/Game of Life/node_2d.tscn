@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cgyo0hogk4ivi"]
+
+[ext_resource type="Script" uid="uid://hakv5m0rq8c8" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Shader" uid="uid://blgb8h6okr8x8" path="res://new_shader.gdshader" id="2_epypp"]
+[ext_resource type="Script" uid="uid://cuixci8eaui5i" path="res://camera_2d.gd" id="3_epypp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0hol4"]
+shader = ExtResource("2_epypp")
+shader_parameter/iter = 0
+
+[node name="Node2D" type="Node2D" unique_id=622692244]
+script = ExtResource("1_0e48y")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1116081316]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=179356719]
+size = Vector2i(2048, 2048)
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=807239679]
+material = SubResource("ShaderMaterial_0hol4")
+offset_right = 4096.0
+offset_bottom = 4096.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1553002074]
+position = Vector2(1024, 1024)
+limit_left = 0
+limit_top = 0
+script = ExtResource("3_epypp")
