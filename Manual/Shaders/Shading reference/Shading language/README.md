@@ -552,7 +552,7 @@ Existem dois qualificadores possíveis:
 
 ## Uniforms
 
-É possível passar valores externas para o shader usando *uniforms*, que são definidos no escopo global do shader, fora de qualquer função. Quando o shader é atribuído a um material, esses uniforms aparecem como parâmetros editáveis no inspetor do material. Uniforms não podem ser modificados de dentro do shader. Você pode definir uniforms no editor, no *Inspector* de materiais. Alternativamente, você pode defini-los por meio de código.
+É possível passar valores externos para o shader usando *uniforms*, que são definidos no escopo global do shader, fora de qualquer função. Quando o shader é atribuído a um material, esses uniforms aparecem como parâmetros editáveis no inspetor do material. Uniforms não podem ser modificados de dentro do shader. Você pode definir uniforms no editor, no *Inspector* de materiais. Alternativamente, você pode defini-los por meio de código GDScript e passá-los para o shader.
 
 Por exemplo, você pode declarar uma variável `uniform` no escopo global, como mostrado abaixo.
 
