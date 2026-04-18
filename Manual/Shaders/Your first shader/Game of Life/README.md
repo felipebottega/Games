@@ -46,8 +46,8 @@ Por default, a câmera estará posicionada com centro na origem, mas com a resol
 O projeto está configurado para a resolução máxima e isso não é alterado. O que se altera são as dimensões dos objetos e o zoom da câmera. O jogador tem a possibilidade de alterar as dimensões no menu do jogo, e o código abaixo garante que o tabuleiro gerado e o zoom estarão corretos ao carregar a cena.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/b01a3212-4b33-431e-bf96-514f1121178d" />
-  <img width="400" src="https://github.com/user-attachments/assets/86727f99-ae2a-42b4-b181-276870bdccca" />
+  <img width="840" src="https://github.com/user-attachments/assets/b01a3212-4b33-431e-bf96-514f1121178d" />
+  <img width="440" src="https://github.com/user-attachments/assets/86727f99-ae2a-42b4-b181-276870bdccca" />
   <img width="400" src="https://github.com/user-attachments/assets/2fb918e8-1e7e-4618-a8a3-168f91291356" />
 </p>
 
