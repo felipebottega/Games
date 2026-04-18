@@ -211,10 +211,23 @@ Um pequeno detalhe interessante mas que enriquece a animação é a variável `d
   <img width="450" src="https://github.com/user-attachments/assets/dba44343-ef0d-4fc3-b2b1-f5531d096821" />
 </p>
 
+⚠️ **Atenção:** Apenas de ser possível atribuir um valor inicial ao uniform (como foi feito neste código), esse tipo de variável deve ser alterado pelo *Inspector*. Isso foi mencionado no [guia de referência](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language/README.md#uniforms). Caso você tente alterar pelo código shader, não vai conseguir ver a mudança ocorrendo. Fique atento a isso.
+
 ## Experimento 13
 
-
+Ainda continuando o experimento anterior, mas colocando um efeito extra. No código abaixo,a cada iteração do loop, temos um `uv` diferente, o que acarreta em estar repetindo	o padrão em outro ponto. Este comportamento repetido cria uma estrutura com aspectos fractais.
 
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/8cff2ce5-e253-4f29-9e28-feeb482e3698" />
+  <img width="400" src="https://github.com/user-attachments/assets/36435e27-3d1f-4469-886a-645fddef220c" />
+</p>
+
+## Experimento 14
+
+Finalmente, o último experimento. Esse aqui é uma continuação do anterior. Apenas temos mais variáveis uniform para testar pelo *Inspector*, e agora alguns valores intermediários passam por mais funções matemáticas, com o intuito de obter efeitos novos. A partir daqui é questão de experimentação, não existe um caminho certo. 
+
+Apenas vou deixar uma imagem de um frame da animação deste shader. Vale a pena conferir!
+
+<p align="center">
+  <img width="500" src="https://github.com/user-attachments/assets/07157d78-14e8-4627-9c09-2acaec38d59d" />
 </p>
