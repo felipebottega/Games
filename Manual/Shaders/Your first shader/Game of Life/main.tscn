@@ -24,9 +24,9 @@ theme_override_font_sizes/font_size = 72
 text = "Game of Life"
 
 [node name="DimensionsLabel" type="Label" parent="." unique_id=589237956]
-offset_left = 27.0
+offset_left = 9.0
 offset_top = 171.0
-offset_right = 118.0
+offset_right = 100.0
 offset_bottom = 194.0
 text = "Dimensions"
 
@@ -47,9 +47,9 @@ popup/item_3/text = "2048 x 2048"
 popup/item_3/id = 3
 
 [node name="SpeedLabel" type="Label" parent="." unique_id=994351824]
-offset_left = 40.0
+offset_left = 10.0
 offset_top = 309.0
-offset_right = 131.0
+offset_right = 101.0
 offset_bottom = 332.0
 text = "Speed"
 
@@ -72,9 +72,9 @@ popup/item_4/text = "Super Fast"
 popup/item_4/id = 4
 
 [node name="RadiusLabel" type="Label" parent="." unique_id=459154772]
-offset_left = 172.0
+offset_left = 154.0
 offset_top = 309.0
-offset_right = 224.0
+offset_right = 206.0
 offset_bottom = 332.0
 text = "Radius"
 
@@ -93,9 +93,9 @@ popup/item_2/text = "Large"
 popup/item_2/id = 2
 
 [node name="PatternLabel" type="Label" parent="." unique_id=1118003539]
-offset_left = 205.0
+offset_left = 157.0
 offset_top = 171.0
-offset_right = 269.0
+offset_right = 221.0
 offset_bottom = 194.0
 text = "Pattern"
 
