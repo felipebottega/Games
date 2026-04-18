@@ -48,7 +48,7 @@ O fato de UV sererm as coordenadas usuais para shader, não significa que é imp
 
 A primeira coisa que fazemos é obter as coordenadas em pixels do ponto. O [valor nativo](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-do-fragment) `FRAGCOORD` faz esse trabalho. Nesse caso, basta extrair as coordenadas $xy$ deste vetor. Vale ressaltar que o espaço original não é discreto, esse valor representa o centro do pixel correspondente. 
 
-O valor nativo `SCREEN_PIXEL_SIZE` te entrega um vetor 2D, contendo o tamanho do pixel. Não é necessariamente verdade que o pixel será um quadrado neste sistema de coordenadas. Vale também ressaltar que este approach te entrega os pixels em coordenadas locais do node, começando do canto superior esquerdo até o canto inferior direito. Por conta desta propriedade, podemos obter o tamanho da textura com o comando `vec2 screen_size = 1.0 / SCREEN_PIXEL_SIZE`, como foi feito no exemplo.
+O valor nativo `SCREEN_PIXEL_SIZE` te entrega um vetor 2D, contendo o tamanho do pixel em coordenadas UV. Não é necessariamente verdade que o pixel será um quadrado neste sistema de coordenadas. Vale também ressaltar que este approach te entrega os pixels em coordenadas locais do node, começando do canto superior esquerdo até o canto inferior direito. Por conta desta propriedade, podemos obter o tamanho da textura com o comando `vec2 screen_size = 1.0 / SCREEN_PIXEL_SIZE`, como foi feito no exemplo.
 
 As condicionais e operações feitas são análogas a do exemplo anterior, mas em termos de pixels. Vale notar que o valor de 10 pixels é arbitrário, apenas para testes. 
 
