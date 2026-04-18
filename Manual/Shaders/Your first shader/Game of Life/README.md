@@ -29,3 +29,26 @@ A primeira coisa que a função faz é extrair os dados da célula central com o
 
 ## Dimensões
 
+Esta parte requer um pouco de cuidado, porque todas as dimensões destes objetos devem estar de acordo: `SubViewportContainer`, `SubViewport`, 'ColorRect' e `Camera2D`. Primeiro, o `SubViewportContainer` e `SubViewport` devem estar com as mesmas dimensões, como mostrado abaixo. Na minha experiência, só precisa alterar o `SubViewport` que o `SubViewportContainer` atualiza junto automaticamente, mas pode ser que o contrário também seja possível. Depois disso o `ColorRect` é atualizado também.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/03a04cb0-9010-4362-90b3-ed30ed0dfa18" />
+  <img width="250" src="https://github.com/user-attachments/assets/68a8db4e-773e-4e14-bcb0-48d264bcc2d7" />
+  <img width="250" src="https://github.com/user-attachments/assets/18e7e7ab-ac8e-4fc9-9cef-729e4220f7c9" />
+</p>
+
+Por default, a câmera estará posicionada com centro na origem, mas com a resolução já correta. Deve-se alterar a posição de modo que as coordenadas sejam metade da dimensão cada uma.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/2db5b612-fa9b-4330-aa5d-b5922746fc21" />
+</p>
+
+O projeto está configurado para a resolução máxima e isso não é alterado. O que se altera são as dimensões dos objetos e o zoom da câmera. O jogador tem a possibilidade de alterar as dimensões no menu do jogo, e o código abaixo garante que o tabuleiro gerado e o zoom estarão corretos ao carregar a cena.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/b01a3212-4b33-431e-bf96-514f1121178d" />
+  <img width="400" src="https://github.com/user-attachments/assets/86727f99-ae2a-42b4-b181-276870bdccca" />
+  <img width="400" src="https://github.com/user-attachments/assets/2fb918e8-1e7e-4618-a8a3-168f91291356" />
+</p>
+
+> PS: Note que as dimensões do node `SubViewportContainer` não foram atualizadas no código. Como foi dito acima, as dimensões deste objeto se ajustam automaticamente para ficarem iguas às do `SubViewport`. Portanto basta alterar este último.
