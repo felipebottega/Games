@@ -104,7 +104,7 @@ Agora que a mudança de sistema de coordenadas está entendida, vai ser mais fá
 Primeiro o shader aumenta a escala da caixa ao multiplicar o UV por 2. Como queremos que este também fique centrado na origem, devemos subtrair tudo por 1. Novamente, calculamos a norma do vetor (distância ao centro da imagem). Agora fazemos algo diferente, subtraímos $-0.5$ deste valor. Isso significa que os pontos com distância $0.5$ ou menos do centro passam a ter uma distância fictícia que é menor ou igual a zero. Com isso, criamos uma região diferenciada de raio $0.5$ em torno do centro. Agora o shader aplica o valor absoluto nessa distância. O tratamento diferenciado muda, agora quanto mais próximos do centro, maior fica o valor da distância, indo de zero (na borda) até $0.5$ (no centro). Esse valor é usado para definir a cor `vec4(d, d, d, 1.0)`. 
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/ad78828b-c844-474b-a0e8-c51a9419b95a" />
+  <img width="480" src="https://github.com/user-attachments/assets/ad78828b-c844-474b-a0e8-c51a9419b95a" />
 </p>
 
 Como intepretamos isso? Primeiro note que, pelo fato das componentes da cor terem o mesmo valor, estamos trabalhando na escala de cinza. Pontos mais distantes são mais claros, tendendo ao branco. Conforme se aproximam da borda de distância $0.5$ do centro, vão escurecendo. Depois dessa borda houve uma inversão de intensidade por causa das manipulações discutidas acima. Então no centro temos o branco máximo e a cor vai escurecendo conforme o ponto se distancia do centro e se aproxima da borda de distância $0.5$ do centro. A figura resultante está mostrada abaixo para ajudar a visualizar o que está acontecendo.
@@ -118,7 +118,7 @@ Como intepretamos isso? Primeiro note que, pelo fato das componentes da cor tere
 Este experimento é basicamente uma repetição do anterior, mas aplicando uma função extra antes de definir a cor nova. Esta função é a `step()`, que está definida no tutorial de [função do shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#fun%C3%A7%C3%B5es-matem%C3%A1ticas). O comando `step(0.1, d)` é bem simples, se $0.1 > \texttt{d}$, retorna $0$, caso contrário retorna $1$. Ou seja, se `d` por pequeno o suficiente (menor que $0.1$), vira a cor preta, senão é cor branca. 
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/e25651c1-40e8-468c-98e8-f878606dc63c" />
+  <img width="580" src="https://github.com/user-attachments/assets/e25651c1-40e8-468c-98e8-f878606dc63c" />
 </p>
 
 Em relação à imagem mostrada no experimento anterior, isso significa que ela será convertida para preto e branco, com o threshold de $0.1$ para definir o que é preto e o que é branco.
@@ -128,3 +128,67 @@ Em relação à imagem mostrada no experimento anterior, isso significa que ela 
 </p>
 
 ## Experimento 8
+
+Idêntico ao anterior, só foi alterado o tipo de função step. Nesse caso foi usada a função `smoothstep()`, que também está definida no tutorial de [função do shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#fun%C3%A7%C3%B5es-matem%C3%A1ticas). Ela é parecida com a função `step()`, mas em vez de ter uma decisão booleana baseada em $0.1 > \texttt{d}$, temos o seguinte:
+
+- $0$ quando $d <= 0.1$,
+- $1$ quando $d >= 0.2$,
+- Entre $0.1$ e $0.2$ faz uma transição suave.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/191aee57-b126-471d-b02a-b916566c68ff" />
+</p>
+
+Segue abaixo o resultado dessa mudança.
+
+<p align="center">
+  <img width="460" src="https://github.com/user-attachments/assets/a7fea77c-7ca1-485a-9635-8aa6edd9a6c1" />
+</p>
+
+## Experimento 9
+
+Este experimento é uma continuação dos anteriores, agora incluindo o tempo no código. Quase sempre que você ver que o código usa o `TIME`, é quase certo que haverá animação. Esse é o caso agora.
+
+O que mudou agora é apareceram as variáveis `frequency = 5.0` e `speed = 1.5`, que são aplicadas na fórmula da distância `d = sin(d * frequency + TIME * speed)`. A frequência controla quantos círculos teremos, e a velocidade controla a velocidade com que esses círculos se movem.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/2e1a3d99-0887-4faa-9f8f-9db4f7607aa8" />
+</p>
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/261a6932-c0f7-4a2e-908e-8a8559c6687b" />
+</p>
+
+Neste experimento, eu fiz uma versão alternativa onde o comando `d = 0.05/d` é aplicado antes de atualizar a cor. Vale mencionar que valores negativos são "truncados" para $0$ na hora de calcular a cor, e valores maiores que $1$ são truncados para $1$. O efeito desta fórmula é deixar bem claro os escuros próximos de zero e escurecer os claros. Note que os pretos negativos se mantém pretos por convenção. O efeito final é a figura abaixo à esquerda.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/c86153cf-9323-49f9-9504-3e66a29ab94f" />
+</p>
+
+> PS: Essa regra pode acarretar em divisão por zero. Neste caso, a convenção so shader é que $\frac{0.05}{0.0} = + \inf$, o que é "truncado" para $1.0$.
+
+## Experimento 10
+
+Esse é quase o mesmo de antes. A diferença é que agora adicionamos uma paleta de cores. A fórmula dessa paleta não tem nada de especial é só uma bagunça mesmo. O interessante é o fato do `TIME` estar sendo usado na paleta. Isso significa que a cor agora não é apenas determinada pela distância, mas ela varia com o tempo. Isso deixa a animação com muito mais dinâmica. Recomendo testar esse experimento removendo o `TIME` na chamada `COLOR = vec4(palette(d + TIME * speed), 1.0)`.
+
+<p align="center">
+  <img width="590" src="https://github.com/user-attachments/assets/b03b2054-c318-4242-b9e0-c0753756dba1" />
+</p>
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/3411db6d-9d34-4f42-a4e3-92b5f0228048" />
+</p>
+
+## Experimento 11
+
+Pode-se dizer que o primeiro método avançado é o deste experimento. Vamos aprender como repetir a imagem múltiplas vezes na tela através do shader.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/2c149dc8-8fc5-403e-81cc-35c031ae84d7" />
+</p>
+
+Só o que muda neste código é o comando `uv = fract(uv)` que vem logo após definir `uv` e fazer a mudança do sistema de coordenadas (agora centrado na origem e inde de $(-1, -1)$ até $(1, 1)$). A função `fract()` retorna a parte fracionária do número, descartando sinal negativo. Por exemplo, `fract(1.52) = 0.52`. Como consequência, todos os 4 pontos $(1.52, y), (0.52, y), (-0.52, y), (-1.52, y)$ possuem a mesma cor, que é a cor do $(0.52, y)$. Como consequência, apenas o quadrante inferior direito $[0, 1) \times [0, 1)$ que importa, os outros só copiam deste. Daí sai o efeito de repetição de imagens.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/0bdf2140-8ff7-451d-b36b-7940d18e6dd0" />
+</p>
