@@ -17,6 +17,8 @@ Na inicialização do tabuleiro, a função `_ready()` recebe alguns parâmetros
   <img width="500" src="https://github.com/user-attachments/assets/95f36058-c257-4ef4-94f2-1009128c6abd" />
 </p>
 
+> PS: O `SubViewport` precisa estar configurado de modo que a propriedade *Render Target/Update Mode` seja  *Always*.
+
 ## Shader
 
 A primeira coisa que acontece na `fragment()` é a declaração de variáveis básicas. Elas precisam ser definidas para que seja possível trabalhar em grid. Depois disso a função verifica se é a primeira iteração ou não, para decidir se deve executar a inicialização ou atualização do tabuleiro. Não discutiremos como a inicialização funciona, mas não tem nada demais ali. A parte interessante é a atualização. 
@@ -70,3 +72,5 @@ Na prática, isso é feito usando dois `SubViewport` (ou duas texturas). Cada um
 No frame seguinte, eles trocam de papel. Assim, em vez de salvar a textura com `get_image()` e reenviá-la, você apenas passa diretamente a `ViewportTexture` de um `SubViewport` para o shader do outro. Isso evita o gargalo de transferência de dados e mantém o processamento eficiente, mesmo em resoluções altas. 
 
 Uma boa leitura sobre o assunto é [esse artigo](https://ostefani.dev/tech-notes/ping-pong-technique) aqui. Recomendo também testar a [minha implementação](https://felipebottega.github.io/Games/Manual/Shaders/Your%20first%20shader/Game%20of%20Life/html/) do Game of Life. 
+
+> PS: Para a implementação em Godot sugerida, o `SubViewport` precisa estar configurado de modo que a propriedade *Render Target/Update Mode` seja  *Always*.
