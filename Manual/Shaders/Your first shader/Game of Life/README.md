@@ -29,7 +29,7 @@ A primeira coisa que a função faz é extrair os dados da célula central com o
 
 ## Dimensões
 
-Esta parte requer um pouco de cuidado, porque todas as dimensões destes objetos devem estar de acordo: `SubViewportContainer`, `SubViewport`, 'ColorRect' e `Camera2D`. Primeiro, o `SubViewportContainer` e `SubViewport` devem estar com as mesmas dimensões, como mostrado abaixo. Na minha experiência, só precisa alterar o `SubViewport` que o `SubViewportContainer` atualiza junto automaticamente, mas pode ser que o contrário também seja possível. Depois disso o `ColorRect` é atualizado também.
+Esta parte requer um pouco de cuidado, porque todas as dimensões destes objetos devem estar de acordo: `SubViewportContainer`, `SubViewport`, `ColorRect` e `Camera2D`. Primeiro, o `SubViewportContainer` e `SubViewport` devem estar com as mesmas dimensões, como mostrado abaixo. Na minha experiência, só precisa alterar o `SubViewport` que o `SubViewportContainer` atualiza junto automaticamente, mas pode ser que o contrário também seja possível. Depois disso o `ColorRect` é atualizado também.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/03a04cb0-9010-4362-90b3-ed30ed0dfa18" />
@@ -64,8 +64,8 @@ A técnica "Ping-Pong Rendering" ou "Feedback loop", consiste em usar duas textu
 </p>
 
 Na prática, isso é feito usando dois `SubViewport` (ou duas texturas). Cada um possui um `ColorRect` com o shader aplicado. A cada frame, você alterna:
-  - Um `SubViewport` serve como entrada (input_texture).
-  - O outro como saída (onde o shader escreve).
+  - Um `SubViewport` serve como entrada (`input_texture`).
+  - O outro serve como saída (onde o shader escreve).
 
 No frame seguinte, eles trocam de papel. Assim, em vez de salvar a textura com `get_image()` e reenviá-la, você apenas passa diretamente a `ViewportTexture` de um `SubViewport` para o shader do outro. Isso evita o gargalo de transferência de dados e mantém o processamento eficiente, mesmo em resoluções altas. 
 
