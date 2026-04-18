@@ -52,3 +52,21 @@ O projeto está configurado para a resolução máxima e isso não é alterado. 
 </p>
 
 > PS: Note que as dimensões do node `SubViewportContainer` não foram atualizadas no código. Como foi dito acima, as dimensões deste objeto se ajustam automaticamente para ficarem iguas às do `SubViewport`. Portanto basta alterar este último.
+
+## Ping-Pong Rendering
+
+A implementação utilizada neste tutorial não é ótima. A cada frame a CPU precisa salvar a textura para passar para a GPU no frame seguinte. Essa constante passagem de dados entre CPU e GPU é um gargalo enorme. Esta implementação foi utilizada por ser simples e didática, mas vamos apresentar uma abordagem melhor para esse problema.
+
+A técnica "Ping-Pong Rendering" ou "Feedback loop", consiste em usar duas texturas A e B que ficam alternando os papéis: em um frame o shader lê a textura de A e escreve a nova em B, no frame seguinte o shader lê a textura de B e escreve em A, e assim sucessivamente. Ao fazer as coisas desta maneira, evita-se a cópia de dados entre CPU e GPU, mantendo toda a simulação dentro da própria GPU.
+
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/313a666e-7452-4ffd-a7df-ec5abc0b5862" />
+</p>
+
+Na prática, isso é feito usando dois `SubViewport` (ou duas texturas). Cada um possui um `ColorRect` com o shader aplicado. A cada frame, você alterna:
+  - Um `SubViewport` serve como entrada (input_texture).
+  - O outro como saída (onde o shader escreve).
+
+No frame seguinte, eles trocam de papel. Assim, em vez de salvar a textura com `get_image()` e reenviá-la, você apenas passa diretamente a `ViewportTexture` de um `SubViewport` para o shader do outro. Isso evita o gargalo de transferência de dados e mantém o processamento eficiente, mesmo em resoluções altas. 
+
+Uma boa leitura sobre o assunto é [esse artigo](https://ostefani.dev/tech-notes/ping-pong-technique) aqui. Recomendo também testar a [minha implementação](https://felipebottega.github.io/Games/Manual/Shaders/Your%20first%20shader/Game%20of%20Life/html/) do Game of Life. 
