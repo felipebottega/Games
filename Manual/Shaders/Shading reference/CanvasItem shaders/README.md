@@ -84,7 +84,7 @@ Outros valores nativos, como `UV` e `COLOR`, também são repassados para a fun�
 | Valor&nbsp;Nativo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição |
 |----------|-----------|
 | `in vec4 FRAGCOORD` | Coordenada do centro do pixel, em espaço de tela. O componente `xy` define a posição dentro do viewport. A origem `(0.0, 0.0)` fica no canto superior esquerdo. |
-| `in vec2 SCREEN_PIXEL_SIZE` | Tamanho de um pixel individual. Equivale ao inverso da resolução da tela. Equivale a algo como `vec2(1.0 / screen_width, 1.0 / screen_height)`.|
+| `in vec2 SCREEN_PIXEL_SIZE` | Tamanho de um pixel em coordenadas UV. Equivale ao inverso da resolução da tela. Equivale a algo como `vec2(1.0 / screen_width, 1.0 / screen_height)`. Basicamente te diz o quanto precisa andar nas coordenadas UV para mover exatamente 1 pixel na tela.|
 | `in vec4 REGION_RECT` | Área visível da região do sprite no formato `(x, y, largura, altura)`. Varia de acordo com a propriedade `region_enabled` do `Sprite2D`. |
 | `in vec2 POINT_COORD` | Coordenada usada para renderização de pontos. |
 | `sampler2D TEXTURE` | Textura 2D padrão. |
