@@ -210,3 +210,11 @@ Um pequeno detalhe interessante mas que enriquece a animação é a variável `d
 <p align="center">
   <img width="450" src="https://github.com/user-attachments/assets/dba44343-ef0d-4fc3-b2b1-f5531d096821" />
 </p>
+
+## Experimento 13
+
+
+
+<p align="center">
+  <img width="650" src="https://github.com/user-attachments/assets/8cff2ce5-e253-4f29-9e28-feeb482e3698" />
+</p>
