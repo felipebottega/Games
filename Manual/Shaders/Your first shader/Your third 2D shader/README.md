@@ -187,8 +187,26 @@ Pode-se dizer que o primeiro método avançado é o deste experimento. Vamos apr
   <img width="450" src="https://github.com/user-attachments/assets/2c149dc8-8fc5-403e-81cc-35c031ae84d7" />
 </p>
 
-Só o que muda neste código é o comando `uv = fract(uv)` que vem logo após definir `uv` e fazer a mudança do sistema de coordenadas (agora centrado na origem e inde de $(-1, -1)$ até $(1, 1)$). A função `fract()` retorna a parte fracionária do número, descartando sinal negativo. Por exemplo, `fract(1.52) = 0.52`. Como consequência, todos os 4 pontos $(1.52, y), (0.52, y), (-0.52, y), (-1.52, y)$ possuem a mesma cor, que é a cor do $(0.52, y)$. Como consequência, apenas o quadrante inferior direito $[0, 1) \times [0, 1)$ que importa, os outros só copiam deste. Daí sai o efeito de repetição de imagens.
+Só o que muda neste código é o comando `uv = fract(uv)` que vem logo após definir `uv` e fazer a mudança do sistema de coordenadas (agora centrado na origem e indo de $(-1, -1)$ até $(1, 1)$. A função `fract()` retorna a parte fracionária do número, descartando sinal negativo. Por exemplo, `fract(1.52) = 0.52`. Como consequência, todos os 4 pontos $(1.52, y), (0.52, y), (-0.52, y), (-1.52, y)$ possuem a mesma cor, que é a cor do $(0.52, y)$. Como consequência, apenas o quadrante inferior direito $[0, 1) \times [0, 1)$ que importa, os outros só copiam deste. Daí sai o efeito de repetição de imagens.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/0bdf2140-8ff7-451d-b36b-7940d18e6dd0" />
+</p>
+
+## Experimento 12
+
+No experimento anterior, havia 4 blocos porque as únicas partes inteiras para serem descartadas eram os números $1, -1, 0, -0$. É totalmente possível aumentar a escala da UV por um fator maior e incluir mais inteiros. Isso vai gerar mais blocos da mesma imagem na tela. 
+
+Se quisermos uma grid $3 \ times 3$ de imagens repetidas, usamos $n = 3$ no código abaixo. Com isso, a mudança de escala vai gerar uma UV indo de $(0, 0)$ a $(3, 3)$. Neste caso, devemos subtrair por $1.5$ para deixar o centro na oriem (sempre subtrair por $n/2$). Após isso, a função `fract()` vai gerar a grid $3 \times 3$ de imagens repetidas, como desejado.
+
+Uma possível melhoria seria a de deixar o centro de cada bloco coincidindo com o centro do círculo, assim como era antes do experimento 11. Para isso, basta subtrair por $0.5$ que tudo está resolvido. Para entender o porquê, pense no bloco canônico do sistema UV, ele faz parte da grid. Todos os outros blocos copiam deste. Como esta bloco vai de $(0, 0)$ a $(1, 1)$ e o centro do círculo está no canto superior esquerdo, subtrair a coordenada $x$ e $y$ por $0.5$ vai levar aquele ponto para o centro do bloco. Com isso, esse bloco fica ajustado para o padrão que queremos. E como todos os outros blocos copiam deste, tudo fica corrigido.
+
+<p align="center">
+  <img width="650" src="https://github.com/user-attachments/assets/ca0d60b9-ade6-4669-b515-7ec67d208e3d" />
+</p>
+
+Um pequeno detalhe interessante mas que enriquece a animação é a variável `d0` no código. Antes da `fract()` ser chamada, esta variável armazena a distância original do pixel ao centro. Esse valor é usado na paleta para obter uma coloração baseada na distância original. Graças a isso, as cópias tem uma leve variação na coloração, o que acrescenta mais dinâmica à animação.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/dba44343-ef0d-4fc3-b2b1-f5531d096821" />
 </p>
