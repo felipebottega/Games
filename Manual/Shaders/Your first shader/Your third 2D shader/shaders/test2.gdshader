@@ -20,8 +20,8 @@ void fragment() {
 	else {
 		if (p.y > 10.0) {
 			vec2 new_p = vec2(p.x, p.y - 10.0);
-			vec2 tmp = new_p / screen_size; // UV normalizado (ESSENCIAL pro texture)
-	    	COLOR = texture(input_texture, tmp);
+			vec2 uv = new_p / screen_size; 
+	    	COLOR = texture(input_texture, uv);
 		}
 		else {
 			COLOR = vec4(1.0);

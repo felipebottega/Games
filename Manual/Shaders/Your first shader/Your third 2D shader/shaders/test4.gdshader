@@ -21,5 +21,4 @@ void fragment() {
 	else if (p.y % 5 == 4) {
 		COLOR = vec4(float(p.y)/screen_size.y, val, 0.0, 1.0);
 	}
-	//COLOR = vec4(UV.x, 0.0, 0.0, 1.0);
 }

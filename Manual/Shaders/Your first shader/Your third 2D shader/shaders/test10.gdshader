@@ -15,5 +15,5 @@ void fragment() {
 	d = sin(d * frequency + TIME * speed);  // borda para a região de escurecimento
 	d = abs(d);
 	d = 0.05/d; // inversão de intensidade
-	COLOR = vec4(palette(d + TIME * speed), 1.0); 
+	COLOR = vec4(palette(d + TIME * speed), 1.0);
 }
