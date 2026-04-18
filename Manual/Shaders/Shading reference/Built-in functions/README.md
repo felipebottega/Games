@@ -58,7 +58,7 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 | `vec_type`      | `min(vec_type a, vec_type b)`                                          | Menor valor entre a e b.                                         |
 | `vec_type`      | `max(vec_type a, vec_type b)`                                          | Maior valor entre a e b.                                         |
 | `vec_type`      | `step(vec_type a, vec_type b)`                                         | `a > b ? 0.0 : 1.0`.                                             |
-| `vec_type`      | `smoothstep(float a, float b, vec_type c)`                             | Retorna um número entre 0 e 1, mas com uma transição suave: 0 quando c <= a, 1 quando x >= b, e entre a e b faz uma transição suave. |
+| `vec_type`      | `smoothstep(float a, float b, vec_type c)`                             | Retorna um número entre 0 e 1, mas com uma transição suave: 0 quando c < a, 1 quando c > b, e entre a e b faz uma transição suave. |
 | `vec_bool_type` | `isnan(vec_type x)`                                                    | Retorna true se algum componente for NaN.                        |
 | `vec_bool_type` | `isinf(vec_type x)`                                                    | Retorna true se algum componente for infinito (INF).             |
 
