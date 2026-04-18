@@ -17,7 +17,7 @@ Na inicialização do tabuleiro, a função `_ready()` recebe alguns parâmetros
   <img width="500" src="https://github.com/user-attachments/assets/95f36058-c257-4ef4-94f2-1009128c6abd" />
 </p>
 
-> PS: O `SubViewport` precisa estar configurado de modo que a propriedade *Render Target/Update Mode` seja  *Always*.
+> PS: O `SubViewport` precisa estar configurado de modo que a propriedade *Render Target/Update Mode* seja  *Always*.
 
 ## Shader
 
@@ -73,4 +73,4 @@ No frame seguinte, eles trocam de papel. Assim, em vez de salvar a textura com `
 
 Uma boa leitura sobre o assunto é [esse artigo](https://ostefani.dev/tech-notes/ping-pong-technique) aqui. Recomendo também testar a [minha implementação](https://felipebottega.github.io/Games/Manual/Shaders/Your%20first%20shader/Game%20of%20Life/html/) do Game of Life. 
 
-> PS: Para a implementação em Godot sugerida, o `SubViewport` precisa estar configurado de modo que a propriedade *Render Target/Update Mode` seja  *Always*.
+> PS: Para a implementação em Godot sugerida, o `SubViewport` precisa estar configurado de modo que a propriedade *Render Target/Update Mode* seja  *Always*.
