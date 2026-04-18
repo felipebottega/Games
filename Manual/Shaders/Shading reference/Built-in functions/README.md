@@ -52,7 +52,7 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 | `vec_type`      | `round(vec_type x)`                                                    | Arredonda para o inteiro mais próximo.                           |
 | `vec_type`      | `trunc(vec_type x)`                                                    | Truncamento.                                                     |
 | `vec_type`      | `ceil(vec_type x)`                                                     | Arredonda para cima.                                             |
-| `vec_type`      | `fract(vec_type x)`                                                    | Parte fracionária (retorna x - floor(x)).                        |
+| `vec_type`      | `fract(vec_type x)`                                                    | Parte fracionária (retorna x - floor(x)). Sempre >= 0.           |
 | `vec_type`      | `mod(vec_type x, vec_type y)`                                          | Módulo (resto da divisão).                                       |
 | `vec_type`      | `modf(vec_type x, out vec_type i)`                                     | Parte fracionária de x, com i como parte inteira.                |
 | `vec_type`      | `min(vec_type a, vec_type b)`                                          | Menor valor entre a e b.                                         |
