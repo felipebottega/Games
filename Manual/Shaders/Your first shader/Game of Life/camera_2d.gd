@@ -1,27 +1,23 @@
 extends Camera2D
 
-# ============================================================
-# CONFIGURAÇÃO
-# ============================================================
-@export var zoom_speed := 0.1
-@export var min_zoom := 0.001
-@export var max_zoom := 100.0
-@export var drag_speed := 0.1
 
-# ============================================================
-# ESTADO
-# ============================================================
 var dragging := false
 
+@export var zoom_speed := 0.1
+@export var min_zoom := 1.0
+@export var max_zoom := 10.0
 
-# ============================================================
-# INPUT
-# ============================================================
+
+func _ready() -> void:
+	position = Manager.dims/2
+	zoom = (
+		Vector2(1, 1) if Manager.dims[0] == 2048
+		else Vector2(2, 2) if Manager.dims[0] == 1024
+		else Vector2(4, 4) if Manager.dims[0] == 512
+		else Vector2(8, 8)
+	) 
+
 func _input(event):
-
-	# --------------------------------------------------------
-	# ZOOM COM SCROLL
-	# --------------------------------------------------------
 	if event is InputEventMouseButton:
 
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
@@ -34,17 +30,9 @@ func _input(event):
 		zoom.x = clamp(zoom.x, min_zoom, max_zoom)
 		zoom.y = clamp(zoom.y, min_zoom, max_zoom)
 
-		# ----------------------------------------------------
-		# DRAG COM BOTÃO DO MEIO (SCROLL CLICK)
-		# ----------------------------------------------------
-		if event.button_index == MOUSE_BUTTON_MIDDLE:
+		# Drag de botão para mover "arrastar" a textura.
+		if event.button_index == MOUSE_BUTTON_MIDDLE or event.button_index == MOUSE_BUTTON_LEFT:
 			dragging = event.pressed
 
-
-	# --------------------------------------------------------
-	# MOVIMENTO AO ARRASTAR
-	# --------------------------------------------------------
 	if event is InputEventMouseMotion and dragging:
-
-		# move a câmera na direção oposta do mouse
-		position -= event.relative * zoom * drag_speed
+		position -= event.relative / zoom

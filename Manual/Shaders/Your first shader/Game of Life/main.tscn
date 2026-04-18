@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cyuabyoadvg2w"]
+
+[ext_resource type="Script" uid="uid://dwamt1nc33s3l" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://ce0un2abp36j6" path="res://background.png" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://djrcuxvk4nlwe" path="res://Xolonium-Regular.ttf" id="3_h2yge"]
+
+[node name="Main" type="Node2D" unique_id=47634976]
+script = ExtResource("1_ig7tw")
+metadata/_edit_horizontal_guides_ = [159.0]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1793121652]
+position = Vector2(257.00003, -113.99997)
+scale = Vector2(0.47000006, 0.36055553)
+texture = ExtResource("2_0xm2m")
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="." unique_id=996543799]
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 497.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 72
+text = "Game of Life"
+
+[node name="DimensionsLabel" type="Label" parent="." unique_id=589237956]
+offset_left = 27.0
+offset_top = 171.0
+offset_right = 118.0
+offset_bottom = 194.0
+text = "Dimensions"
+
+[node name="Dimensions" type="OptionButton" parent="." unique_id=1115601934]
+offset_left = 7.0
+offset_top = 195.0
+offset_right = 130.0
+offset_bottom = 226.0
+selected = 3
+item_count = 4
+popup/item_0/text = "256 x 256"
+popup/item_0/id = 0
+popup/item_1/text = "512 x 512"
+popup/item_1/id = 1
+popup/item_2/text = "1024 x 1024"
+popup/item_2/id = 2
+popup/item_3/text = "2048 x 2048"
+popup/item_3/id = 3
+
+[node name="SpeedLabel" type="Label" parent="." unique_id=994351824]
+offset_left = 40.0
+offset_top = 309.0
+offset_right = 131.0
+offset_bottom = 332.0
+text = "Speed"
+
+[node name="Speed" type="OptionButton" parent="." unique_id=163600626]
+offset_left = 7.0
+offset_top = 333.0
+offset_right = 130.0
+offset_bottom = 364.0
+selected = 2
+item_count = 5
+popup/item_0/text = "Super Slow"
+popup/item_0/id = 0
+popup/item_1/text = "Slow"
+popup/item_1/id = 1
+popup/item_2/text = "Normal"
+popup/item_2/id = 2
+popup/item_3/text = "Fast"
+popup/item_3/id = 3
+popup/item_4/text = "Super Fast"
+popup/item_4/id = 4
+
+[node name="RadiusLabel" type="Label" parent="." unique_id=459154772]
+offset_left = 172.0
+offset_top = 309.0
+offset_right = 224.0
+offset_bottom = 332.0
+text = "Radius"
+
+[node name="Radius" type="OptionButton" parent="." unique_id=1518936501]
+offset_left = 152.0
+offset_top = 333.0
+offset_right = 248.0
+offset_bottom = 364.0
+selected = 1
+item_count = 3
+popup/item_0/text = "Small"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Large"
+popup/item_2/id = 2
+
+[node name="PatternLabel" type="Label" parent="." unique_id=1118003539]
+offset_left = 205.0
+offset_top = 171.0
+offset_right = 269.0
+offset_bottom = 194.0
+text = "Pattern"
+
+[node name="Pattern" type="OptionButton" parent="." unique_id=352627740]
+offset_left = 155.0
+offset_top = 195.0
+offset_right = 315.0
+offset_bottom = 226.0
+selected = 0
+item_count = 6
+popup/item_0/text = "Random"
+popup/item_0/id = 0
+popup/item_1/text = "Diagonal"
+popup/item_1/id = 1
+popup/item_2/text = "Double Diagonal"
+popup/item_2/id = 2
+popup/item_3/text = "Vertical"
+popup/item_3/id = 3
+popup/item_4/text = "Horizontal"
+popup/item_4/id = 4
+popup/item_5/text = "Checkers"
+popup/item_5/id = 5
+
+[node name="Start" type="Button" parent="." unique_id=1990435832]
+modulate = Color(0.2948566, 0.8106917, 0.4879287, 1)
+offset_left = 390.0
+offset_top = 195.0
+offset_right = 446.0
+offset_bottom = 226.0
+text = "START"
+
+[node name="Quit" type="Button" parent="." unique_id=1788348473]
+modulate = Color(1, 0.13333334, 0, 1)
+offset_left = 457.0
+offset_top = 194.0
+offset_right = 504.0
+offset_bottom = 225.0
+text = "QUIT"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1224526]
+position = Vector2(256, 256)
+zoom = Vector2(4, 4)
+
+[connection signal="item_selected" from="Dimensions" to="." method="_on_dimensions_item_selected"]
+[connection signal="item_selected" from="Speed" to="." method="_on_speed_item_selected"]
+[connection signal="item_selected" from="Radius" to="." method="_on_radius_item_selected"]
+[connection signal="item_selected" from="Pattern" to="." method="_on_pattern_item_selected"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

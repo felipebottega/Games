@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Game of Life"
-run/main_scene="uid://cgyo0hogk4ivi"
+run/main_scene="uid://cyuabyoadvg2w"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Manager="*uid://cu5ko1bliy7rs"
 
 [display]
 
