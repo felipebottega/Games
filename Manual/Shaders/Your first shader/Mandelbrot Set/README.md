@@ -60,3 +60,24 @@ Após a etapa de aplicar o zoom, vem o deslocamento do sistema. Isso é feito co
   <img width="750" src="https://github.com/user-attachments/assets/b3a521c6-4455-491b-a78c-bd2e37738b1e" />
 </p>
 
+Depois dessa etapa já com a computação das iterações de Mandelbro. Note que as computações serão baseadas nessa caixa delimitada pelo novo sistema UV. Pegando o exemplo da imagem acima, as iterações de Mandelbrot seriam computadas para $[-2+a, 2+a] \times [-2+b, 2+b]$. Isso equivale a fazer um zoom-out e apontar a câmera para o ponto $(a, b)$. No entanto, nenhuma câmera foi usada na cena, isso é tudo manipulação de sistema de coordenadas.
+
+## GDScript
+
+Acredito que até aqui tudo está bem claro. Esse tipo de manipulação com shaders não é um tópico super avançado. Com um pouco de prática isso passa a ser natural. 
+
+Um pouco mais de dificuldade se encontra no lado do script da Godot. Este script deve passar os parâmetros uniform corretamente para o shader, de maneira dinâmica. Queremos que o zoom seja controlado pelo scroll do mouse e o centro seja a posição do mouse no momento em que o scroll é feito. Além disso, queremos poder clicar e arrastar a imagem, o que essencialmente é alterar o centro da imagem também.
+
+A primeira coisa que acontece na função de input (a função nativa `_input`) é a detecção do tamanho da tela ($800 \times 800$ nesse exemplo) e a posição do mouse na tela em coordenadas da tela. Isso é feito com os comandos `get_viewport().get_visible_rect().size` e `get_viewport().get_mouse_position()`, respectivamente. Neste código, temos as variáveis da instância abaixo. Elas definem o zoom inicial, velocidade de alteração do zoom e o centro inicial, respectivamente.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/9c90c972-44ad-4ba4-a507-013dc2788e44" />
+</p>
+
+### Zoom-in
+
+Ao fazer um zoom-in, a primeira coisa que o programa faz é extrair a posição do centro do sistema UV atual, antes de qualquer alteração. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/59fa3775-898f-4247-8808-20bddde1ff4c" />
+</p>
