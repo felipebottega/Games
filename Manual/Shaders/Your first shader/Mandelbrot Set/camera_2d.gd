@@ -1,34 +1,34 @@
 extends Camera2D
 
-@export var zoom_factor := 0.9   # quanto menor, mais agressivo
-@onready var mat: ShaderMaterial = $"../ColorRect".material
+
+var dragging := false
+
+@export var zoom_speed := 0.01
+@export var min_zoom := 0.1
+@export var max_zoom := 10.0
+
+
+func _ready() -> void:
+	var viewport_size = get_viewport().get_visible_rect().size
+	position = viewport_size/2
+	zoom = Vector2(1, 1)
 
 func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			apply_zoom(zoom_factor)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			apply_zoom(1.0 / zoom_factor)
+	if event is InputEventMouseButton:
 
-func apply_zoom(factor: float):
-	var mouse_pos = get_viewport().get_mouse_position()
-	var screen_size = get_viewport().get_visible_rect().size
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			zoom *= (1.0 - zoom_speed)
 
-	# Coordenada normalizada (-1 → 1)
-	var uv = (mouse_pos / screen_size) * 2.0 - Vector2.ONE
+		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			zoom *= (1.0 + zoom_speed)
 
-	# Corrige aspect ratio (igual no shader)
-	uv.x *= screen_size.x / screen_size.y
+		# clamp do zoom
+		zoom.x = clamp(zoom.x, min_zoom, max_zoom)
+		zoom.y = clamp(zoom.y, min_zoom, max_zoom)
 
-	# Pega valores atuais do shader
-	var current_zoom: float = mat.get_shader_parameter("zoom")
-	var center: Vector2 = mat.get_shader_parameter("center")
+		# Drag de botão para mover "arrastar" a textura.
+		if event.button_index == MOUSE_BUTTON_MIDDLE or event.button_index == MOUSE_BUTTON_LEFT:
+			dragging = event.pressed
 
-	# Ajusta centro para manter o ponto fixo
-	center += uv * current_zoom * (1.0 - factor)
-
-	# Aplica novo zoom
-	current_zoom *= factor
-
-	mat.set_shader_parameter("zoom", current_zoom)
-	mat.set_shader_parameter("center", center)
+	if event is InputEventMouseMotion and dragging:
+		position -= event.relative / zoom

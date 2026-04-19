@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://c1o2r5wihy4ou"]
+
+[ext_resource type="Script" uid="uid://dkrvjycmrosei" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Shader" uid="uid://crvs0gmjf2wjb" path="res://manbdelbrot.gdshader" id="2_h2yge"]
+
+[sub_resource type="Shader" id="Shader_7dm0k"]
+code = "shader_type canvas_item;
+
+uniform vec2 center = vec2(-0.5, 0.0);
+uniform float zoom = 3.0;
+
+void fragment() {
+    vec2 uv = SCREEN_UV;
+
+    vec2 p = uv * 2.0 - 1.0;
+    p.x *= SCREEN_PIXEL_SIZE.y / SCREEN_PIXEL_SIZE.x;
+
+    vec2 c = center + p * zoom;
+
+    vec2 z = vec2(0.0);
+
+    float iter = 0.0;
+    float max_iter = 100.0;
+
+    for (int i = 0; i < 100; i++) {
+        if (dot(z, z) > 4.0) break;
+
+        z = vec2(
+            z.x*z.x - z.y*z.y,
+            2.0*z.x*z.y
+        ) + c;
+
+        iter += 1.0;
+    }
+
+    float t = iter / max_iter;
+
+    COLOR = vec4(vec3(t), 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0e48y"]
+shader = SubResource("Shader_7dm0k")
+shader_parameter/center = Vector2(-0.5, 0)
+shader_parameter/zoom = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
+shader = ExtResource("2_h2yge")
+shader_parameter/zoom = 2.0
+shader_parameter/center = Vector2(0, 0)
+shader_parameter/max_iter = 500
+shader_parameter/colors = 0.5
+
+[node name="Main" type="Node2D" unique_id=416591185]
+material = SubResource("ShaderMaterial_0e48y")
+script = ExtResource("1_ig7tw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1351421467]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=731947999]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=708178426]
+material = SubResource("ShaderMaterial_1bvp3")
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1529482421]
+
+[node name="Colors" type="Label" parent="CanvasLayer" unique_id=112221730]
+offset_left = 713.0
+offset_top = 9.0
+offset_right = 786.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 24
+text = "Colors"
+
+[node name="Colors" type="VSlider" parent="CanvasLayer/Colors" unique_id=322434076]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 30.0
+offset_top = 35.0
+offset_right = 46.0
+offset_bottom = 155.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="MaxIter" type="Label" parent="CanvasLayer" unique_id=745144270]
+offset_left = 604.0
+offset_top = 9.0
+offset_right = 700.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 24
+text = "Max Iter"
+
+[node name="Maxiter" type="VSlider" parent="CanvasLayer/MaxIter" unique_id=300361247]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 30.0
+offset_top = 35.0
+offset_right = 46.0
+offset_bottom = 155.0
+min_value = 10.0
+max_value = 10000.0
+value = 500.0
+exp_edit = true
+
+[node name="Label" type="Label" parent="CanvasLayer/MaxIter" unique_id=87587635]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 159.0
+offset_right = 113.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 24
+text = "500"
+
+[connection signal="value_changed" from="CanvasLayer/Colors/Colors" to="." method="_on_colors_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/MaxIter/Maxiter" to="." method="_on_maxiter_value_changed"]
