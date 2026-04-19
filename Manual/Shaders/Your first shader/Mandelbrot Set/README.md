@@ -57,7 +57,7 @@ Logo após a normalização do sistema, o próximo comando é o `uv *= zoom`. Es
 Após a etapa de aplicar o zoom, vem o deslocamento do sistema. Isso é feito com o comando `uv += center`, em que `center` é um `vec2` que vem do exterior também. É o ponto onde o mouse está apontando no momento do zoom. Faz todo sentido que o zoom seja nessa direção.
 
 <p align="center">
-  <img width="750" src="https://github.com/user-attachments/assets/b3a521c6-4455-491b-a78c-bd2e37738b1e" />
+  <img width="750" src="https://github.com/user-attachments/assets/f0fdb263-a5ac-4270-a8e1-463b97046c0e" />
 </p>
 
 Depois dessa etapa já com a computação das iterações de Mandelbro. Note que as computações serão baseadas nessa caixa delimitada pelo novo sistema UV. Pegando o exemplo da imagem acima, as iterações de Mandelbrot seriam computadas para $[-2+a, 2+a] \times [-2+b, 2+b]$. Isso equivale a fazer um zoom-out e apontar a câmera para o ponto $(a, b)$. No entanto, nenhuma câmera foi usada na cena, isso é tudo manipulação de sistema de coordenadas.
@@ -71,13 +71,47 @@ Um pouco mais de dificuldade se encontra no lado do script da Godot. Este script
 A primeira coisa que acontece na função de input (a função nativa `_input`) é a detecção do tamanho da tela ($800 \times 800$ nesse exemplo) e a posição do mouse na tela em coordenadas da tela. Isso é feito com os comandos `get_viewport().get_visible_rect().size` e `get_viewport().get_mouse_position()`, respectivamente. Neste código, temos as variáveis da instância abaixo. Elas definem o zoom inicial, velocidade de alteração do zoom e o centro inicial, respectivamente.
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/9c90c972-44ad-4ba4-a507-013dc2788e44" />
+  <img width="260" src="https://github.com/user-attachments/assets/9c90c972-44ad-4ba4-a507-013dc2788e44" />
 </p>
 
-### Zoom-in
+### Extraindo a posição do mouse no sistema UV
 
-Ao fazer um zoom-in, a primeira coisa que o programa faz é extrair a posição do centro do sistema UV atual, antes de qualquer alteração. 
+Ao fazer um zoom, seja zoom-in ou zoom-out, a primeira coisa que o programa faz é extrair a posição do mouse no sistema UV atual. Você pode notar que o código abaixo é uma réplica do que o shader faz. Neste caso, em vez de aplicar a transformação para um pixel, ela é aplicada para posição do mouse em coordenadas UV.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/59fa3775-898f-4247-8808-20bddde1ff4c" />
+  <img width="380" src="https://github.com/user-attachments/assets/59fa3775-898f-4247-8808-20bddde1ff4c" />
 </p>
+
+### Atualizando zoom e deslocamento
+
+A variável `before` contém para a posição atual do mouse no sistema UV atual. Após este valor ser armazenado, o novo zoom é calculado. Com isso há um novo sistema UV, onde o centro é o mesmo mas o zoom é diferente. Calcula-se novamente a posição do mouse no sistema UV, que agora está diferente pois teve a aplicação do zoom. A diferença entre essa posição e a calculada anteriormente é usada como "delta" para incrementar a variável `center`, e essa última é que vai para o shader.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/0d933633-247d-4439-81d3-fbd843d46ad8" />
+</p>
+
+Abaixo nós temos algumas imagens mostrando cada etapa das operações feitas. Vale notar o ponto `center` no último diagrama é a posição do mouse no frame anterior, e `S` é o montante de zoom do último frame anterior. O ponto $(x'', y'')$ é a posição atual do mouse relativo ao sistema de coordenadas anterior. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/05c946a4-9411-47a8-96b7-b6617cf79873" />
+</p>
+
+Depois disso é aplicado o zoom sobre o sistema de coordenadas anterior. Aqui nós o representamos como um fator multiplicativo $T$ sobre as coordenadas, mas no código está separado em zoom-in e zoom-out, sendo um divisão e outro multiplicação. No fim das contas tudo pode ser visto como multiplicação, bastando inverter o valor antes de aplicar a multiplicação. 
+
+De todo modo, após aplicar este zoom, obtemos um novo sistema de coordenadas, onde a posição do mouse na tela se encontra em $(Tx'', Ty'')$. 
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/ca5e70b1-9ba6-4598-b77a-dc2cde32ae7c" />
+</p>
+
+Agora a diferença $\delta = (x'', y'') - (Tx'', Ty'')$ é usada para obter o novo centro, dado por 
+
+$$\texttt{center} = \texttt{old center} + \delta = (a, b) + \delta = (a, b) + (x'', y'') - (Tx'', Ty'').$$
+
+As fórmulas explícitas e cada etapa dos diagramas foram colocados aqui apenas para deixar claro o que acontece por trás dos bastidores, mas na prática você apenas precisa pensar em alterar escala e transladar. Pense geometricamente no que está acontecendo e tudo vai ficar bem, nenhuma dessas fórmulas precisa de fato ser pensada durante o desenvolvimento.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/9475f541-ba97-42e5-9967-6ab0eac19ef0" />
+</p>
+
+O meu projeto do conjunto de Mandelbrot pode ser acessado [neste link](https://felipebottega.github.io/Games/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set/html/).
