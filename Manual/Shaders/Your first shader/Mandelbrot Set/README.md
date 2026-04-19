@@ -95,10 +95,10 @@ Essa abordagem de deslocar o centro desta maneira é para que o comportamento do
 
 ### Explicação por diagramas
 
-Abaixo nós temos algumas imagens mostrando cada etapa das operações feitas. Vale notar o ponto `center` no último diagrama é a posição do mouse no frame anterior, e `S` é o montante de zoom do último frame anterior. O ponto $(x'', y'')$ é a posição atual do mouse relativo ao sistema de coordenadas anterior. 
+Abaixo nós temos algumas imagens mostrando cada etapa das operações feitas. Vale notar que o ponto `center` no último diagrama abaixo era a posição do mouse no frame anterior e `S` é o montante de zoom do frame anterior. O ponto $(x'', y'')$ é a posição atual do mouse relativo ao sistema de coordenadas anterior. 
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/05c946a4-9411-47a8-96b7-b6617cf79873" />
+  <img width="800" src="https://github.com/user-attachments/assets/e02976c9-0c1f-4565-b7d0-86b9fe67e793" />
 </p>
 
 Depois disso é aplicado o zoom sobre o sistema de coordenadas anterior. Aqui nós o representamos como um fator multiplicativo $T$ sobre as coordenadas, mas no código está separado em zoom-in e zoom-out, sendo um divisão e outro multiplicação. No fim das contas tudo pode ser visto como multiplicação, bastando inverter o valor antes de aplicar a multiplicação. 
@@ -106,17 +106,17 @@ Depois disso é aplicado o zoom sobre o sistema de coordenadas anterior. Aqui n�
 De todo modo, após aplicar este zoom, obtemos um novo sistema de coordenadas, onde a posição do mouse na tela se encontra em $(Tx'', Ty'')$. 
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/ca5e70b1-9ba6-4598-b77a-dc2cde32ae7c" />
+  <img width="800" src="https://github.com/user-attachments/assets/78806363-1849-4166-9d36-6ccfb6fa060e" />
 </p>
 
 Agora a diferença $\delta = (x'', y'') - (Tx'', Ty'')$ é usada para obter o novo centro, dado por 
 
 $$\texttt{center} = \texttt{old center} + \delta = (a, b) + \delta = (a, b) + (x'', y'') - (Tx'', Ty'').$$
 
-As fórmulas explícitas e cada etapa dos diagramas foram colocados aqui apenas para deixar claro o que acontece por trás dos bastidores, mas na prática você apenas precisa pensar em alterar escala e transladar. Pense geometricamente no que está acontecendo e tudo vai ficar bem, nenhuma dessas fórmulas precisa de fato ser pensada durante o desenvolvimento.
-
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/9475f541-ba97-42e5-9967-6ab0eac19ef0" />
 </p>
+
+As fórmulas explícitas e cada etapa dos diagramas foram colocados aqui apenas para deixar claro o que acontece por trás dos bastidores, mas na prática você apenas precisa pensar em alterar escala e transladar. Pense geometricamente no que está acontecendo e tudo vai ficar bem, nenhuma dessas fórmulas precisa de fato ser pensada durante o desenvolvimento.
 
 O meu projeto do conjunto de Mandelbrot pode ser acessado [neste link](https://felipebottega.github.io/Games/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set/html/).
