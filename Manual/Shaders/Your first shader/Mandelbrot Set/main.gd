@@ -5,19 +5,19 @@ var zoom: float = 2.0
 var zoom_speed = 1.2
 var center := Vector2(0.0, 0.0)
 var dragging := false
+var viewport_size
 
 @onready var subv = $SubViewportContainer/SubViewport
 @onready var rect = $SubViewportContainer/SubViewport/ColorRect
 
 
 func _ready() -> void:
-	var viewport_size = get_viewport().get_visible_rect().size
+	viewport_size = get_viewport().get_visible_rect().size
 	subv.size = viewport_size
 	rect.size = viewport_size
 
 func _input(event: InputEvent) -> void:
-	var viewport_size = get_viewport().get_visible_rect().size
-	var mouse = get_viewport().get_mouse_position()	
+	var mouse = get_viewport().get_mouse_position()
 	
 	if mouse.x > 0.7 * viewport_size.x and mouse.y < 0.25 * viewport_size.y:
 		return
@@ -57,8 +57,7 @@ func _input(event: InputEvent) -> void:
 		rect.material.set_shader_parameter("center", center)
 
 func get_fractal_pos(mouse_pos: Vector2) -> Vector2:
-	var size = get_viewport().get_visible_rect().size
-	var uv = mouse_pos / size
+	var uv = mouse_pos / viewport_size
 	
 	uv = uv * 2.0 - Vector2(1.0, 1.0)
 	uv *= zoom

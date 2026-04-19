@@ -49,10 +49,10 @@ void fragment() {
 	// Muda para as coordenadas entre -1 e 1.
 	uv = uv * 2.0 - 1.0;
 	
-	// aplica zoom
+	// Aplica zoom.
 	uv *= zoom;
 
-	// aplica deslocamento (pan)
+	// Aplica deslocamento (pan).
 	uv += center;
 	
 	COLOR = compute_iteration(uv);
