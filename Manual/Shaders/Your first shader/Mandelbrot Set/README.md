@@ -33,5 +33,15 @@ $$f_c(z) = z^2 + c =  (z_x + iz_y)^2 + c_x + ic_y = z_x^2 + i2z_xz_y - z_y^2 + c
 Abaixo temos o código completo do shader, apenas omitindo a paleta e o código da iteração que já foi mostrado acima. Como podemos ver, a função `fragment()` é bem simples.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/f0f2c902-27ae-40e4-b3d7-06905efd6788" />
+  <img width="330" src="https://github.com/user-attachments/assets/f0f2c902-27ae-40e4-b3d7-06905efd6788" />
 </p>
+
+A dificuldade deste projeto não é tanto no código, mas no entendimento do que está acontecendo no sistema de coordenadas. Vale a pena dar uma lida nos experimentos 5 e 6 [deste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader) para relembrar o básico. 
+
+A primeira coisa que precisa estar clara é que a transformação `uv = uv * 2.0 - 1.0` faz a mudança que está ilustrada abaixo. Como mencionado no experimento 5 do tutorial mencionado acima, em vez de interpretar essa transformação como uma mudança de sistema de coordenadas, pense que a "caixa" do sistema UV é como uma câmera apontada para o espaço 2D. Neste caso nós fizemos um zoom-out para ver 2x mais do que antes e apontamos a câmera para a origem. Esta interpretação é essencial para este projeto, pois passamos a interpretar o conjunto de Mandlebrot como uma objeto estático no plano 2D, e o que se move e faz zoom é a "câmera" implementada pelo sistema UV.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/0bbc7653-9fb9-45ea-b76f-7596f1d76aef" />
+</p>
+
+> PS: É importante entender a diferença entre esse zoom simulado e o zoom com o node `Camera2D`. Neste zoom simulado, a resolução da tela é sempre a mesma, então sempre teremos a mesma qualidade de imagem. O zoom do node `Camera2D` é um zoom na tela do jogo de fato, ele se aproxima e se distancia dos pixels, alterando a resolução do que está sendo visto na tela.
