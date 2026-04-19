@@ -2,9 +2,9 @@
 
 Este é o projeto final para solidificar o conhecimento básico (ou intermediário) de shaders. Depois disso o foco volta a ser as funcionalidades da Godot. Implementar o conjunto de Mandelbrot é importante para confirmar o entendimento da manipulação do sistema UV.
 
-A estrutura da árvore á análoga a utilizada no [Game of Life](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Game%20of%20Life), um `SubViewportContainer` contendo um `SubViewport` contendo um `ColorRect`. O `CanvasLayer` é apenas para mostrar UI. Uma diferença relevante é que aqui não teremos `Camera2D`. No tutorial do Game of Life, bastou renderizar tudo até um pixel de detalhe, pois se tratava de um objeto discretizado por pixel. Aqui temos um objeto que varia continuamente e que requer muito mais detalhe além de um pixel. A renderização total do objeto não é possível em uma única passagem, ela deve ser refeita a cada zoom aplicado. 
+A estrutura da árvore é análoga a utilizada no [Game of Life](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Game%20of%20Life), um `SubViewportContainer` contendo um `SubViewport` contendo um `ColorRect`. O `CanvasLayer` é apenas para mostrar UI. Uma diferença relevante é que aqui não teremos `Camera2D`. No tutorial do Game of Life, bastou renderizar tudo até um pixel de detalhe, pois se tratava de um objeto discretizado por pixel. Aqui temos um objeto que varia continuamente e que requer muito mais detalhe além de um pixel. A renderização total do objeto não é possível em uma única passagem, ela deve ser refeita a cada zoom aplicado. 
 
-> PS: Dar zoom com a câmera e mandar renderizar novamente não funcionaria, pois o zoom da câmera é apenas uma amplicação da imagem, então há perda de resolução. O zoom mencionado é de outra natureza. O importante é que não há perda de resolução neste outro zoom. Veremos isso a seguir.
+> PS: Dar zoom com a câmera e mandar renderizar novamente não funcionaria, pois o zoom da câmera é apenas uma amplicação da imagem, então há perda de resolução. O outro zoom mencionado acima é de outra natureza. O importante é que não há perda de resolução neste outro zoom. Veremos isso a seguir.
 
 ## Matemática
 
@@ -46,7 +46,7 @@ A primeira coisa que precisa estar clara é que a transformação `uv = uv * 2.0
 
 > PS: É importante entender a diferença entre esse zoom simulado e o zoom com o node `Camera2D`. Neste zoom simulado, a resolução da tela é sempre a mesma, então sempre teremos a mesma qualidade de imagem. O zoom do node `Camera2D` é um zoom na tela do jogo de fato, ele se aproxima e se distancia dos pixels, alterando a resolução do que está sendo visto na tela.
 
-Posicionar o sistema da maneira como foi feita acima não é obrigatório, pode-se considerar que isso é uma normalização, de modo a facilitar a interação com os parâmetros de zoom (variável uniform `zoom`) e deslocamento (variável uniform `center`). Veremos como isso funciona.
+Posicionar o sistema da maneira como foi feita acima não é obrigatório, pode-se considerar que isso é uma normalização, de modo a facilitar a atualização dos parâmetros de zoom (variável uniform `zoom`) e deslocamento (variável uniform `center`).
 
 Logo após a normalização do sistema, o próximo comando é o `uv *= zoom`. Esta variável vem do exterior, através da interação do usuário com o scroll do mouse. Se for $> 1$, o range do sistema UV se expande, o que significa um zoom-out, se for $< 1$, é um zoom-in.
 
@@ -54,13 +54,13 @@ Logo após a normalização do sistema, o próximo comando é o `uv *= zoom`. Es
   <img width="720" src="https://github.com/user-attachments/assets/71714ace-b5d0-4511-99c7-a3ff56efe7fe" />
 </p>
 
-Após a etapa de aplicar o zoom, vem o deslocamento do sistema. Isso é feito com o comando `uv += center`, em que `center` é um `vec2` que vem do exterior também. É o ponto onde o mouse está apontando no momento do zoom. Faz todo sentido que o zoom seja nessa direção.
+Após a etapa de aplicar o zoom, vem o deslocamento do sistema. Isso é feito com o comando `uv += center`, em que `center` é um `vec2` que vem do exterior também. É o ponto onde o mouse está apontando no momento do zoom.
 
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/f0fdb263-a5ac-4270-a8e1-463b97046c0e" />
 </p>
 
-Depois dessa etapa já com a computação das iterações de Mandelbro. Note que as computações serão baseadas nessa caixa delimitada pelo novo sistema UV. Pegando o exemplo da imagem acima, as iterações de Mandelbrot seriam computadas para $[-2+a, 2+a] \times [-2+b, 2+b]$. Isso equivale a fazer um zoom-out e apontar a câmera para o ponto $(a, b)$. No entanto, nenhuma câmera foi usada na cena, isso é tudo manipulação de sistema de coordenadas.
+Note que as computações serão baseadas nessa caixa delimitada pelo novo sistema UV. Pegando o exemplo da imagem acima, as iterações de Mandelbrot seriam computadas para $[-2+a, 2+a] \times [-2+b, 2+b]$. Isso equivale a fazer um zoom-out e apontar a câmera para o ponto $(a, b)$. No entanto, nenhuma câmera foi usada na cena, isso é tudo manipulação de sistema de coordenadas.
 
 ## GDScript
 
@@ -84,11 +84,16 @@ Ao fazer um zoom, seja zoom-in ou zoom-out, a primeira coisa que o programa faz 
 
 ### Atualizando zoom e deslocamento
 
-A variável `before` contém para a posição atual do mouse no sistema UV atual. Após este valor ser armazenado, o novo zoom é calculado. Com isso há um novo sistema UV, onde o centro é o mesmo mas o zoom é diferente. Calcula-se novamente a posição do mouse no sistema UV, que agora está diferente pois teve a aplicação do zoom. A diferença entre essa posição e a calculada anteriormente é usada como "delta" para incrementar a variável `center`, e essa última é que vai para o shader.
+A variável `before` contém para a posição atual do mouse no sistema UV atual. Após este valor ser armazenado, o novo zoom é calculado. Com isso há um novo sistema UV, onde o zoom é diferente. Calcula-se a posição do mouse no sistema UV com esse zoom. A diferença entre essa posição e a calculada anteriormente é usada como "delta" para incrementar a variável `center`, e essa última é que vai para o shader.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/0d933633-247d-4439-81d3-fbd843d46ad8" />
-</p>
+</p>  
+
+Essa abordagem de deslocar o centro desta maneira é para que o comportamento do zoom seja mais adequado. Um modo mais simples de proceder seria simplesmente passar o novo zoom e novo centro para o shader, desconsiderando totalmente o centro anterior, mas o comportamento ficaria do zoom 
+"estranho" e o usuário iria notar isso. Durante um zoom, o mouse acaba apontando para outra ponto, e acabaria que o zoom não iria para a direção esperada. O método por incrementos funciona melhor nesse sentido.
+
+### Explicação por diagramas
 
 Abaixo nós temos algumas imagens mostrando cada etapa das operações feitas. Vale notar o ponto `center` no último diagrama é a posição do mouse no frame anterior, e `S` é o montante de zoom do último frame anterior. O ponto $(x'', y'')$ é a posição atual do mouse relativo ao sistema de coordenadas anterior. 
 
