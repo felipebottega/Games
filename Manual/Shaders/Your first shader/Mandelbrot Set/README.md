@@ -41,7 +41,22 @@ A dificuldade deste projeto não é tanto no código, mas no entendimento do que
 A primeira coisa que precisa estar clara é que a transformação `uv = uv * 2.0 - 1.0` faz a mudança que está ilustrada abaixo. Como mencionado no experimento 5 do tutorial mencionado acima, em vez de interpretar essa transformação como uma mudança de sistema de coordenadas, pense que a "caixa" do sistema UV é como uma câmera apontada para o espaço 2D. Neste caso nós fizemos um zoom-out para ver 2x mais do que antes e apontamos a câmera para a origem. Esta interpretação é essencial para este projeto, pois passamos a interpretar o conjunto de Mandlebrot como uma objeto estático no plano 2D, e o que se move e faz zoom é a "câmera" implementada pelo sistema UV.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/0bbc7653-9fb9-45ea-b76f-7596f1d76aef" />
+  <img width="700" src="https://github.com/user-attachments/assets/7b73380a-2700-4be3-b6f1-326c917ebddd" />
 </p>
 
 > PS: É importante entender a diferença entre esse zoom simulado e o zoom com o node `Camera2D`. Neste zoom simulado, a resolução da tela é sempre a mesma, então sempre teremos a mesma qualidade de imagem. O zoom do node `Camera2D` é um zoom na tela do jogo de fato, ele se aproxima e se distancia dos pixels, alterando a resolução do que está sendo visto na tela.
+
+Posicionar o sistema da maneira como foi feita acima não é obrigatório, pode-se considerar que isso é uma normalização, de modo a facilitar a interação com os parâmetros de zoom (variável uniform `zoom`) e deslocamento (variável uniform `center`). Veremos como isso funciona.
+
+Logo após a normalização do sistema, o próximo comando é o `uv *= zoom`. Esta variável vem do exterior, através da interação do usuário com o scroll do mouse. Se for $> 1$, o range do sistema UV se expande, o que significa um zoom-out, se for $< 1$, é um zoom-in.
+
+<p align="center">
+  <img width="720" src="https://github.com/user-attachments/assets/71714ace-b5d0-4511-99c7-a3ff56efe7fe" />
+</p>
+
+Após a etapa de aplicar o zoom, vem o deslocamento do sistema. Isso é feito com o comando `uv += center`, em que `center` é um `vec2` que vem do exterior também. É o ponto onde o mouse está apontando no momento do zoom. Faz todo sentido que o zoom seja nessa direção.
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/b3a521c6-4455-491b-a78c-bd2e37738b1e" />
+</p>
+
