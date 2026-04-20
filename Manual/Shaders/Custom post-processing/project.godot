@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Custom post-processing"
+run/main_scene="uid://bk5sihkh5mbry"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/aspect="expand"
 
 [physics]
 

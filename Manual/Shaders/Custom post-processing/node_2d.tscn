@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bk5sihkh5mbry"]
+
+[ext_resource type="Texture2D" uid="uid://b1dol75u28a65" path="res://post_example1.png" id="1_kdubu"]
+[ext_resource type="Texture2D" uid="uid://5153luw4ji6f" path="res://icon.svg" id="2_d21ai"]
+[ext_resource type="Shader" uid="uid://blosinffemcxs" path="res://new_shader.gdshader" id="3_rj586"]
+[ext_resource type="Shader" uid="uid://2fm3h45887l2" path="res://new_shader2.gdshader" id="4_4d7sh"]
+[ext_resource type="Shader" uid="uid://ciqad7uncacsn" path="res://new_shader3.gdshader" id="5_ir8iy"]
+[ext_resource type="Shader" uid="uid://dfa1htc7oyhx0" path="res://new_shader4.gdshader" id="6_hqns4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x0ka3"]
+shader = ExtResource("3_rj586")
+shader_parameter/size = Vector2(32, 28)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0h7mo"]
+shader = ExtResource("4_4d7sh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nr8wp"]
+shader = ExtResource("5_ir8iy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2bti"]
+shader = ExtResource("6_hqns4")
+
+[node name="Node2D" type="Node2D" unique_id=1879344692]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1379539656]
+position = Vector2(576, 324)
+scale = Vector2(1.44, 1.388651)
+texture = ExtResource("1_kdubu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1725097733]
+position = Vector2(1158, 397)
+texture = ExtResource("2_d21ai")
+
+[node name="CanvasLayer5" type="CanvasLayer" parent="." unique_id=1101345939]
+
+[node name="Label" type="Label" parent="CanvasLayer5" unique_id=96281228]
+offset_left = 1006.0
+offset_top = 223.0
+offset_right = 1265.0
+offset_bottom = 311.0
+theme_override_font_sizes/font_size = 64
+text = "TESTING"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=199828340]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=288045959]
+material = SubResource("ShaderMaterial_x0ka3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1457672774]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=1798810556]
+material = SubResource("ShaderMaterial_0h7mo")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1653577317]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer3" unique_id=919071367]
+material = SubResource("ShaderMaterial_nr8wp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="." unique_id=1371222755]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer4" unique_id=1415049134]
+material = SubResource("ShaderMaterial_d2bti")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="." unique_id=1089741701]
+
+[node name="Label2" type="Label" parent="CanvasLayer6" unique_id=73525102]
+offset_left = 1006.0
+offset_top = 105.0
+offset_right = 1265.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 64
+text = "TESTING"
