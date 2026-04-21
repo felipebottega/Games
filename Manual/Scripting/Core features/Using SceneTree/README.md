@@ -11,7 +11,7 @@ Alguns tutoriais anteriores que passaram por este tema: [Change scenes manually]
 - Ela contém informações sobre os grupos e permite acessar todos os nodes de um grupo ou obter uma lista deles.
 - Ela contém algumas funcionalidades de estado global, como definir o modo de pausa ou encerrar o processo.
 
-> PS: Quando um nó faz parte da árvore de cena, o `SceneTree` pode ser obtido chamando o comando `get_tree()`.
+> PS: Quando um node faz parte da árvore de cena, o `SceneTree` pode ser obtido chamando o comando `get_tree()`.
 
 > PS: Vimos anteriormente que é possível acessar o *root* com o comando `get_node("/root")`. Como o `SceneTree` contém o *root*, ele também possui um método para acessá-lo diretamente: `get_tree().root`.
 

@@ -10,4 +10,4 @@ Vimos um pouco sobre notificações [neste tutorial de internacionalização](ht
 
 Essa função lida com notificações do sistema, como clicar no X da janela, usar Alt+F4, comando externo para fechar a janela, evento de shutdown do sistema, entre outros. Caso você queira fazer algum botão no jogo para sair, ou algo do tipo, pode só chamar a `get_tree().quit()` diretamente, sem notificações. Inclusive, foi o que fizemos no [jogo do gafanhoto](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games), no scritp do [menu](https://github.com/felipebottega/Games/blob/gh-pages/Manual/File%20and%20data%20IO/Saving%20games/scripts/game/ui/menu.gd). 
 
-> PS: Esse `_notification` deve estar no nó raíz da cena ou em um nó `Control` que está sempre carregado ou em um autoload que herda de `Control` ou `Window`.
+> PS: Esse `_notification` deve estar no node raíz da cena ou em um node `Control` que está sempre carregado ou em um autoload que herda de `Control` ou `Window`.
