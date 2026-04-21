@@ -426,7 +426,9 @@ func map(item: int, function: Callable) -> int:
 
 ### Funções estáticas
 
-Assim como temos variáveis estáticas em classes, também existem as *funções estáticas*. Estas funções não devem estar dentro de classes internas a uma classe, pois elas servem para referenciar apenas à classe geral e suas variáveis estáticas. Deste modo, estas funções não são acessíveis por instâncias, e elas mesmas não são capazes de acessar variáveis de instâncias. Para definir uma variável estática, basta utilizar a sintaxe `static func` na declaração dela. Falaremos mais sobre este assunto na seção de classes.
+Assim como temos variáveis estáticas em classes, também existem as *funções estáticas*. Estas funções não devem estar dentro de classes internas a uma classe, pois elas servem para referenciar apenas à classe geral e suas variáveis estáticas. Deste modo, estas funções não são acessíveis por instâncias, e elas mesmas não são capazes de acessar variáveis de instâncias. Para definir uma variável estática, basta utilizar a sintaxe `static func` na declaração dela. 
+
+Se você quiser acessar métodos da classe diretamente, sem criar instâncias, faça isso com funções estáticas. 
 
 ### Funções variádicas
 
@@ -692,7 +694,7 @@ Também é possível obter o mesmo resultado utilizando as chamadas `load` e `ne
 
 ### Classes nomeadas
 
-Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. No nosso último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais no projeto, não é mais necessário usar nem `extends` nem `load`. Também é importante lembrar que classes nomeadas automaticamente podem ser encontradas pelo help do editor e passam a possuir a sua própria documentação. Isso foi explicado na seção de comentários.
+Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. Nesse último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais no projeto, não é mais necessário usar nem `extends` nem `load`. Também é importante lembrar que classes nomeadas automaticamente podem ser encontradas pelo help do editor e passam a possuir a sua própria documentação. Isso foi explicado na seção de comentários.
 
 <p align="center">
 	<img width="400" src="https://github.com/user-attachments/assets/00305d8a-f652-4227-bfa3-ff670d83668c" />
@@ -712,7 +714,7 @@ Além de poder nomear classes, também é possível associa-la a um ícone, que 
 
 ### Herança de classes
 
-Existem três maneiras de se herdar de uma classe. Mostramos as três abaixo com exemplos de código.
+Existem três maneiras de se herdar de uma classe.
 
 ```python
 # Inherit/extend a globally available class.
@@ -731,7 +733,7 @@ Para checar se um objeto herda de uma certa classe, você pode usar a sintaxe `i
 
 O construtor de classe é a função nativa `_init`, que já foi abordada [bem no início](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#_init-vs-_ready) desta série de tutoriais. Naquela época, apenas o descrevemos como uma função que inicializa variáveis básicas de scripts antes de qualquer node entrar em cena. Esta inicialização de variáveis serve para criar instâncias com parâmetros, assim como é o `__init__` de Python. 
 
-Abaixo, segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Neste caso ela necessita de um construtor para ser inicializada. Este construtor exige uma variável inteira de entrada, é o parâmetro para inicializar uma instância. Quando a instância é inicializada com o comando `var my_class_instance = amazing2.new(100)`, a função `_init` é executada com este parâmetro. Isto ocorre antes de qualquer `_ready` na cena, a não ser que a instância seja criada explicitamente após o `_ready`.
+Abaixo, segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Neste caso ela possui um construtor para inicializar instâncias. Neste exemplo, o construtor exige uma variável inteira de entrada, é o parâmetro para inicializar uma instância. Quando a instância é inicializada com o comando `var my_class_instance = amazing2.new(100)`, a função `_init` é executada com este parâmetro. Isto ocorre antes de qualquer `_ready` na cena, a não ser que a instância seja criada explicitamente após o `_ready`.
 
 <p align="center">
 	<img width="300" src="https://github.com/user-attachments/assets/a7b67bc0-d234-4596-a60a-cc261d3a595b" />
