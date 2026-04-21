@@ -11,6 +11,6 @@ Neste tutorial, falaremos de *anchor preset, anchor points* e *anchor offsets*. 
 *Anchor offsets* (também chamados de "margens"), são as distâncias entre as arestas do objeto e as coordenadas $x$ e $y$ da "âncora" ("anchor" em inglês). A âncora é aquele X verde no canto superior esquerdo do objeto. Para editar estas margens, você deve ir em *Inspector → Control → Layout → Anchors Presets* e alterar esta propriedade para *Custom*. ISso vai abrir mais uma lista de propriedades para editar abaixo.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/ffad3384-f060-4571-a56c-cd0f2e9ddd2c" />
+  <img width="900" src="https://github.com/user-attachments/assets/044e14e1-c8e0-4f36-b883-d3876dcb4774" />
 </p>
 
