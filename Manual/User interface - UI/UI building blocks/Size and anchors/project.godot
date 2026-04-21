@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Size and anchors"
+run/main_scene="uid://cb64efa8almm5"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=200
+window/size/viewport_height=200
+window/stretch/mode="viewport"
 
 [physics]
 
