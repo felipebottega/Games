@@ -87,3 +87,14 @@ As propriedades *Horizontal, Vertical, Expand* e *Stretch Ratio* continuam valen
   <img width="310" src="https://github.com/user-attachments/assets/ba43343c-e3a1-470f-a11f-2b773ef23780" />
   <img width="360" src="https://github.com/user-attachments/assets/1c2fce25-1777-4328-a0b0-59c3645d76c4" />
 </p>
+
+## Margin Container
+
+Este container serve para criar margens ao redor de um node control. Para criar as margens, vá em *Inspector → Control → Theme Overrides → Constants* e altere as margens conforme mostrado abaixo. 
+
+<p align="center">
+  <img width="580" src="https://github.com/user-attachments/assets/20a60c45-0887-4f26-8a7e-6354c7460591" />
+  <img width="350" src="https://github.com/user-attachments/assets/ae30ae40-ac5c-411d-8f7d-b4797cc45e43" />
+</p>
+
+## Tab Container
