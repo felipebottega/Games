@@ -52,5 +52,38 @@ Vá em *Inspector → Control → Container Sizing*. O default mostrado abaixo �
 - **Stretch Ratio:** Essa propriedade apenas funciona quando o node e um vizinho dele a estão alterando. Ela determina o quando de espaço em relação ao node vizinho este node pode ocupar. Por exemplo, se este node tiver *Stretch Ratio* igual a $2$ e o do vizinho for $1$, então este node pode ocupar 2x mais espaço que o vizinho, o que inclui utilizar o espaço que originalmente era do vizinho (por default a distribuição de espaço é igualitária). Abaixo temos um exemplo onde o espaço do `Button` ficou muito maior que o do `OptionButton` por conta desta propriedade. 
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/2b98c9a6-41a4-40ff-a27b-7624f990fef2" />
+  <img width="500" src="https://github.com/user-attachments/assets/2b98c9a6-41a4-40ff-a27b-7624f990fef2" />
+</p>
+
+Todas as propriedades mostradas acima podem ser alteradas em conjunto. Recomendo testar para ver.
+
+## VBoxContainer
+
+Este container é a versão vertical do `HBoxContainer`.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/33826fb2-daf6-463f-8fd1-40aeb9aba9d4" />
+</p>
+
+As propriedades *Horizontal, Vertical, Expand* e *Stretch Ratio* continuam valendo, só que para a vertical. É importante chamar a atenção para a propriedade *Expand*, pois agora ela se encontrada vinculada à *Vertical*. Esta propriedade altera seu efeito dependendo do container em questão.
+
+## Grid Container
+
+Este container posiciona os nodes filhos em formato de grid, preenche linha por linha. Quando uma linha é preenchida, ele continua posicionando os nodes na linha seguinte. No exemplo abaixo, temos uma grid $2 \times 2$ composta por 3 nodes control filhos.
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/7e78dc33-6c08-422a-a385-b4c44fc73023" />
+</p>
+
+O número de colunas é determinado pela propriedade *Columns*, no *Inspector*.
+
+<p align="center">
+  <img width="380" src="https://github.com/user-attachments/assets/ac3f8b8e-0482-457f-9fea-205c3da8f39d" />
+</p>
+
+As propriedades *Horizontal, Vertical, Expand* e *Stretch Ratio* continuam valendo, inclusive com o *Expand* nas duas direções. 
+
+<p align="center">
+  <img width="310" src="https://github.com/user-attachments/assets/ba43343c-e3a1-470f-a11f-2b773ef23780" />
+  <img width="360" src="https://github.com/user-attachments/assets/1c2fce25-1777-4328-a0b0-59c3645d76c4" />
 </p>
