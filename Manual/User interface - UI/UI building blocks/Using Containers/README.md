@@ -136,3 +136,23 @@ Um tipo de container que arranja seus filhos de forma a preservar automaticament
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/294e4dc5-819d-4084-a26b-0f988deebd98" />
 </p>
+
+## FlowContainer
+
+Este container ajusta a disposição dos filhos dinamicamente de acordo com a forma delimitada do container.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/d461d651-aad6-4569-b0c6-22b417344ed8" />
+</p>
+
+## CenterContainer
+
+Este container sempre mantém o filho centralizado dentro de sua delimitação.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/d966c8c1-1ca7-41f1-a9d1-e09fd063b8fe" />
+</p>
+
+## SubViewportContainer
+
+Este é um container que aceita apenas um único node `SubViewport` como filho e o exibe como se fosse uma imagem. Vimos bastante sobre o assunto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports). Este container também foi aplicado no jogo do [Lobo Malandro](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game).
