@@ -156,3 +156,11 @@ Este container sempre mantém o filho centralizado dentro de sua delimitação.
 ## SubViewportContainer
 
 Este é um container que aceita apenas um único node `SubViewport` como filho e o exibe como se fosse uma imagem. Vimos bastante sobre o assunto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports). Este container também foi aplicado no jogo do [Lobo Malandro](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game).
+
+## Combinando containers
+
+Você pode combinar os caintainers de diversas maneiras para obter resultados variados. Abaixo, por exemplo, temos um `CenterContainer` contendo um `HBoxContainer`. O primeiro elemento do `HBoxContainer` é um `MarginContainer` contendo uma label. Depois disso tem um `Button` com a propriedade *Vertical* em *Shrink End*, um `OptionButton` com a propriedade *Vertical* em *Shrink Begin* e, por fim, um `VBoxContainer` contendo mais três nodes control.
+
+<p align="center">
+  <img width="750" src="https://github.com/user-attachments/assets/1d1b9fe0-10c2-4ead-836a-8eea0baf4e38" />
+</p>
