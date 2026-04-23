@@ -98,3 +98,41 @@ Este container serve para criar margens ao redor de um node control. Para criar 
 </p>
 
 ## Tab Container
+
+Como o próprio nome diz, esse node cria um container de tabs.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/33ccbdc1-9ae4-4489-b6ad-465818d3f12c" />
+</p>
+
+## Split Container
+
+Para este container funcionar, é necessário deixar ele com um espaço a mais do que o mínimo dos nodes. Feito isso, no jog você pdoerá arrastar a separação entre os itens, para ajustar dinamicamente o quanto de espaço cada um ocupa.
+
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/06693119-3de0-4706-9a79-0cdc20a7e997" />
+</p>
+
+## Foldable Container
+
+Esse container você usa para poder ocultar nodes control clicando na setinha. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/78fed25e-6de5-4770-86ef-a05d566995ba" />
+</p>
+
+## ScrollContainer
+
+Esse container cria barra de rolagem quando o filho não cabe dentro do container. Ele só aceita um node como filho.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/a4f580d4-5e8f-40b0-b90c-abb09912850a" />
+</p>
+
+## AspectRatioContainer
+
+Um tipo de container que arranja seus filhos de forma a preservar automaticamente suas proporções quando o container é redimensionado. Possui múltiplos modos de expansão, oferecendo opções para ajustar os tamanhos dos controles filhos em relação ao container. Em *Inspector → AspectRatioContainer → Stretch Mode*, temos as opões *Fit, Width Controls Height, Height controls Width* e *Cover*. Recomendo testar para ver como funcionam. Este container é útil quando você precisa ter um container dinâmico e responsivo a diferentes tamanhos de tela, e deseja que os elementos filhos sejam redimensionados proporcionalmente sem perder suas formas originais.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/294e4dc5-819d-4084-a26b-0f988deebd98" />
+</p>
