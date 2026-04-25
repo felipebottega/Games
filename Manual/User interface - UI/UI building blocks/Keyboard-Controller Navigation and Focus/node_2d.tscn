@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://dvfc2sl48aj7f"]
+
+[ext_resource type="Script" uid="uid://dbxbfy3ecep3i" path="res://node_2d.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=2121196945]
+script = ExtResource("1_wtcfe")
+
+[node name="Button1" type="Button" parent="." unique_id=529596532]
+offset_right = 8.0
+offset_bottom = 8.0
+focus_neighbor_right = NodePath("../Button2")
+focus_neighbor_bottom = NodePath("../Button4")
+focus_next = NodePath("../Button2")
+text = "BUTTON 1"
+
+[node name="Button2" type="Button" parent="." unique_id=415443867]
+offset_left = 98.0
+offset_right = 185.0
+offset_bottom = 31.0
+focus_neighbor_left = NodePath("../Button1")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button5")
+focus_next = NodePath("../Button3")
+text = "BUTTON 2"
+
+[node name="Button3" type="Button" parent="." unique_id=608951952]
+offset_left = 198.0
+offset_right = 285.0
+offset_bottom = 31.0
+focus_neighbor_left = NodePath("../Button2")
+focus_neighbor_bottom = NodePath("../Button6")
+focus_next = NodePath("../Button4")
+text = "BUTTON 3"
+
+[node name="Button4" type="Button" parent="." unique_id=1902821285]
+offset_top = 43.0
+offset_right = 90.0
+offset_bottom = 74.0
+focus_neighbor_top = NodePath("../Button1")
+focus_neighbor_right = NodePath("../Button5")
+focus_neighbor_bottom = NodePath("../Button7")
+focus_next = NodePath("../Button5")
+text = "BUTTON 4"
+
+[node name="Button5" type="Button" parent="." unique_id=1168563377]
+offset_left = 97.0
+offset_top = 43.0
+offset_right = 187.0
+offset_bottom = 74.0
+focus_neighbor_left = NodePath("../Button4")
+focus_neighbor_top = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button6")
+focus_neighbor_bottom = NodePath("../Button8")
+focus_next = NodePath("../Button6")
+text = "BUTTON 5"
+
+[node name="Button6" type="Button" parent="." unique_id=1491127849]
+offset_left = 196.0
+offset_top = 43.0
+offset_right = 286.0
+offset_bottom = 74.0
+focus_neighbor_left = NodePath("../Button5")
+focus_neighbor_top = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button9")
+focus_next = NodePath("../Button7")
+text = "BUTTON 6"
+
+[node name="Button7" type="Button" parent="." unique_id=2139435786]
+offset_top = 84.0
+offset_right = 90.0
+offset_bottom = 115.0
+focus_neighbor_top = NodePath("../Button4")
+focus_neighbor_right = NodePath("../Button8")
+focus_next = NodePath("../Button8")
+text = "BUTTON 7"
+
+[node name="Button8" type="Button" parent="." unique_id=1764649624]
+offset_left = 97.0
+offset_top = 84.0
+offset_right = 187.0
+offset_bottom = 115.0
+focus_neighbor_left = NodePath("../Button7")
+focus_neighbor_top = NodePath("../Button5")
+focus_neighbor_right = NodePath("../Button9")
+focus_next = NodePath("../Button9")
+text = "BUTTON 8"
+
+[node name="Button9" type="Button" parent="." unique_id=658043291]
+offset_left = 196.0
+offset_top = 84.0
+offset_right = 286.0
+offset_bottom = 115.0
+focus_neighbor_left = NodePath("../Button8")
+focus_neighbor_top = NodePath("../Button6")
+focus_next = NodePath("../Button1")
+text = "BUTTON 9"
+
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=1591957755]
+offset_left = 557.0
+offset_top = 181.0
+offset_right = 840.0
+offset_bottom = 287.0
+
+[node name="Button1" type="Button" parent="FlowContainer" unique_id=1467070573]
+layout_mode = 2
+focus_neighbor_right = NodePath("../Button2")
+focus_neighbor_bottom = NodePath("../Button4")
+focus_next = NodePath("../Button2")
+text = "BUTTON 1"
+
+[node name="Button2" type="Button" parent="FlowContainer" unique_id=1430544377]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Button1")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button5")
+focus_next = NodePath("../Button3")
+text = "BUTTON 2"
+
+[node name="Button3" type="Button" parent="FlowContainer" unique_id=39168027]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Button2")
+focus_neighbor_bottom = NodePath("../Button6")
+focus_next = NodePath("../Button4")
+text = "BUTTON 3"
+
+[node name="Button4" type="Button" parent="FlowContainer" unique_id=1158052913]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Button1")
+focus_neighbor_right = NodePath("../Button5")
+focus_neighbor_bottom = NodePath("../Button7")
+focus_next = NodePath("../Button5")
+text = "BUTTON 4"
+
+[node name="Button5" type="Button" parent="FlowContainer" unique_id=2042992926]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Button4")
+focus_neighbor_top = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button6")
+focus_neighbor_bottom = NodePath("../Button8")
+focus_next = NodePath("../Button6")
+text = "BUTTON 5"
+
+[node name="Button6" type="Button" parent="FlowContainer" unique_id=206533142]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Button5")
+focus_neighbor_top = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button9")
+focus_next = NodePath("../Button7")
+text = "BUTTON 6"
+
+[node name="Button7" type="Button" parent="FlowContainer" unique_id=123959264]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Button4")
+focus_neighbor_right = NodePath("../Button8")
+focus_next = NodePath("../Button8")
+text = "BUTTON 7"
+
+[node name="Button8" type="Button" parent="FlowContainer" unique_id=182728494]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Button7")
+focus_neighbor_top = NodePath("../Button5")
+focus_neighbor_right = NodePath("../Button9")
+focus_next = NodePath("../Button9")
+text = "BUTTON 8"
+
+[node name="Button9" type="Button" parent="FlowContainer" unique_id=700792]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Button8")
+focus_neighbor_top = NodePath("../Button6")
+focus_next = NodePath("../Button1")
+text = "BUTTON 9"
