@@ -14,4 +14,20 @@ Nenhum node control começa focado automaticamente, mas é interessante que semp
 
 ## Navegação
 
-A navegação é simplesmente a maneira como o jogador 
+A navegação é simplesmente a maneira como o jogador altera o foco entre os nodes control. Normalmente isso é feito com os inputs descritos no início dste tutorial. 
+
+Usando a imagem acima como exemplo, a engine não sabe que o input `ui_right` deveria alterar o foco de *BUTTON 1* para *BUTTON 2*. Para implementar este comportamento, a partir do node do *BUTTON 1*, você deve ir em *Inspector → Control → Focus → Neighbor Right* e selecionar o botão que está à direita. Esse procedimento deve ser feito para todos os nodes control. Feito isso, a navegação entre os botões está finalizada. A engine vai detectar automaticamente se o jogador está usando teclado ou joystick, e vai reagir de acordo. 
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/a7512d1d-6b11-4e23-8d24-d85d6abc4d09" />
+</p>
+
+> PS: Se a interação com o jogo for apenas com mouse, nada disso é necessário. Porém, se o jogo for restrito apenas ao mouse, ele pode acabar excluindo muitos outros jogadores que preferem usar teclado ou joystick.
+
+O input `ui_focus_next` está associado com o *Next* na imagem acima. Este input serve para efetuar uma navegação que não seja direcional, mas sim sequencial nos nodes control. No teclado é o botão *Tab* que está associado a este input.
+
+A propriedade de *Mode* define como um node pode ser focado. Segue a baixo a descrição de cada uma das opções.
+
+- **All:** Significa que o node pode ser focado clicando nele com o mouse ou selecionando-o com o teclado ou joystick.
+- **Click:** Significa que o node só pode ser focado clicando nele.
+- **None:** Significa que o node não pode ser focado de forma alguma. Por exemplo, nodes de label são definidos como *None* por padrão, enquanto botões são definidos como *All*
