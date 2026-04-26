@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dhlgudg0insgk"]
+
+[ext_resource type="Shader" uid="uid://ncgkja6hlwcq" path="res://my_button_3.gdshader" id="1_gsyt2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gsyt2"]
+shader = ExtResource("1_gsyt2")
+shader_parameter/line_speed = 10.0
+shader_parameter/line_density = 50.0
+shader_parameter/line_intensity = 0.15
+shader_parameter/alpha = 0.85
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxaun"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_scebj"]
+content_margin_top = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vukgx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jywg"]
+content_margin_top = 10.0
+
+[sub_resource type="Theme" id="Theme_78m0p"]
+Button/colors/font_pressed_color = Color(0.8901961, 0, 0.5372549, 1)
+Button/font_sizes/font_size = 32
+Button/styles/focus = SubResource("StyleBoxEmpty_jxaun")
+Button/styles/hover = SubResource("StyleBoxEmpty_scebj")
+Button/styles/normal = SubResource("StyleBoxEmpty_vukgx")
+Button/styles/pressed = SubResource("StyleBoxEmpty_7jywg")
+
+[node name="ColorRect" type="ColorRect" unique_id=1156549256]
+material = SubResource("ShaderMaterial_gsyt2")
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 1, 0.60784316)
+
+[node name="Button3" type="Button" parent="." unique_id=319498461]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 45.0
+theme = SubResource("Theme_78m0p")
+text = "BUTTON 3"

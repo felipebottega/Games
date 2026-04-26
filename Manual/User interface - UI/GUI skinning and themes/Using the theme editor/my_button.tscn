@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dgv6d8myfn53x"]
+
+[ext_resource type="Theme" uid="uid://ckcaln2jmbiqw" path="res://my_button.tres" id="1_as87b"]
+
+[node name="Button" type="Button" unique_id=1064854354]
+offset_right = 114.0
+offset_bottom = 31.0
+theme = ExtResource("1_as87b")
+text = "BUTTON 1"

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bqjyljolxeok1"]
+
+[ext_resource type="Texture2D" uid="uid://crvsfmal6n1d4" path="res://Space-Background-Images.jpg" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dgv6d8myfn53x" path="res://my_button.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://wlc4gtnflx13" path="res://my_button_2.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dhlgudg0insgk" path="res://my_button_3.tscn" id="4_1bvp3"]
+[ext_resource type="Shader" uid="uid://ncgkja6hlwcq" path="res://my_button_3.gdshader" id="5_lquwl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
+shader = ExtResource("5_lquwl")
+shader_parameter/line_speed = 7.0
+shader_parameter/line_density = 50.0
+shader_parameter/line_intensity = 1.0
+shader_parameter/alpha = 0.1
+
+[node name="Main" type="Node2D" unique_id=1693520621]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1910259823]
+position = Vector2(572, 312)
+scale = Vector2(0.609, 0.5461365)
+texture = ExtResource("1_ig7tw")
+
+[node name="Button" parent="." unique_id=1064854354 instance=ExtResource("2_h2yge")]
+offset_left = 22.0
+offset_top = 196.0
+offset_right = 136.0
+offset_bottom = 234.0
+
+[node name="Button2" parent="." unique_id=1208033196 instance=ExtResource("3_1bvp3")]
+offset_left = 227.0
+offset_top = 181.0
+offset_right = 282.0
+offset_bottom = 236.0
+
+[node name="Button3" parent="." unique_id=319498461 instance=ExtResource("4_1bvp3")]
+material = SubResource("ShaderMaterial_7mycd")
+offset_left = 357.0
+offset_top = 189.0
+offset_right = 515.0
+offset_bottom = 234.0
+grow_horizontal = 1
+grow_vertical = 1

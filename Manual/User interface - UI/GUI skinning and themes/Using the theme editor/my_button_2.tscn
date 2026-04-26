@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://wlc4gtnflx13"]
+
+[ext_resource type="Texture2D" uid="uid://bmkuanbv1rqgo" path="res://BTN_BLUE_CIRCLE_OUT.png" id="1_dm0mu"]
+[ext_resource type="Texture2D" uid="uid://dmv4dy8p054mh" path="res://BTN_BLUE_CIRCLE_IN.png" id="2_k1as8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1as8"]
+texture = ExtResource("1_dm0mu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyc6r"]
+texture = ExtResource("1_dm0mu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkw0x"]
+texture = ExtResource("1_dm0mu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lirr"]
+texture = ExtResource("2_k1as8")
+
+[sub_resource type="Theme" id="Theme_unfys"]
+Button/styles/focus = SubResource("StyleBoxTexture_k1as8")
+Button/styles/hover = SubResource("StyleBoxTexture_jyc6r")
+Button/styles/normal = SubResource("StyleBoxTexture_nkw0x")
+Button/styles/pressed = SubResource("StyleBoxTexture_5lirr")
+
+[node name="Button2" type="Button" unique_id=1208033196]
+offset_right = 55.0
+offset_bottom = 55.0
+theme = SubResource("Theme_unfys")
