@@ -60,7 +60,7 @@ Faltou mencionar alguns outros campos deste painel de edição. É melhor fazer 
   <img width="400" src="https://github.com/user-attachments/assets/4b87a430-d927-49c4-8081-6c8088d2c7dd" />
 </p>
 
- 9. Este item não é importante e será ignorado.
+ 9. Este item está associado ao tópico [theme type variations](https://docs.godotengine.org/en/stable/tutorials/ui/gui_theme_type_variations.html). Basicamente é para você criar variações de um mesmo tema. Eu li a respeito e não me agradou o modo como o processo é feito. Para estes casos de variações de um tema, ou eu vou implementar as variações com o *Theme Overrides* ou simplesmente vou criar outro arquivo de recurso com um nome que indique que o recurso é variação de um tema (inclusive a organização feita na documentação oficial é através de nomes).  
 
 ## Styles
 
