@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://rcnewklyvcod"]
+
+[ext_resource type="Theme" uid="uid://b188dxhbnwrbm" path="res://new_theme.tres" id="1_wtcfe"]
+
+[sub_resource type="Theme" id="Theme_0e48y"]
+LineEdit/colors/caret_color = Color(0, 1, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=415708658]
+
+[node name="Button" type="Button" parent="." unique_id=404190221]
+offset_left = 35.0
+offset_top = 32.0
+offset_right = 254.0
+offset_bottom = 168.0
+theme = ExtResource("1_wtcfe")
+text = "BUTTON 1"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1498248857]
+offset_left = 475.0
+offset_top = 86.0
+offset_right = 543.5
+offset_bottom = 117.0
+theme = SubResource("Theme_0e48y")
+text = "1"
