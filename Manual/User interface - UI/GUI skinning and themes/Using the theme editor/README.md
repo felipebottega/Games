@@ -90,9 +90,54 @@ Vamos customizar o botão no estado normal (idle). Para isso, clique no *+* ao l
 
 ### StyleBoxEmpty
 
-Ao selecionar esta opção, toda a estilização default do node desaparece. Ele possui o mínimo possível para existir. Você pode clicar novamente no *StyleBoxEmpty* para abrir as propriedades dele no *Inspector*. Vai notar que ele possui apenas propriedades de margem. Essa estilização é usada quando todo o estilo que você precisa já veio de outros itens de tema, como cores, fontes, etc. 
+Ao selecionar esta opção, toda a estilização default do node desaparece. Ele possui o mínimo possível para existir. Você pode clicar novamente no *StyleBoxEmpty* para abrir as propriedades dele no *Inspector*. Vai notar que ele possui apenas propriedades de margem, que sempre estão disponíveis para todos os estilos. Geralmente se usa essa opção de estilo quando toda a estilização que você precisa já veio de outros itens de tema, como cores, fontes, etc. 
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/84c45a68-a97a-4ede-8729-d197d18040a2" />
 </p>
 
+### StyleBoxTexture
+
+Esse possui mais opções que o anterior. Ele foi feito para receber um textura como background do node control. 
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/47a7a9b4-9e57-48b5-a9c6-04df5f7eaa6f" />
+</p>
+
+Uma vez que a textura foi selecionada, é possível aplicar alguns efeitos, como deformações, alterações nas margens, na cor, repetições como tiles, entre outros. O número de efeitos é limitado, pois a ideia é que a textura já venha praticamente pronta para servir de background. Se quiser alterações mais sofisticadas, é aconselhável trabalhar a textura por fora, em outro programa. 
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/7634efbb-cfa9-46d3-9fd6-9308950c695a" />
+  <img width="300" src="https://github.com/user-attachments/assets/42820fe5-20fd-4050-8125-fcccc451fd9f" />
+</p>
+
+### StyleBoxFlat
+
+Esse é o estilo mais usado no default da Godot. A quantidade de efeitos também é limitada, assim como o anterior, mas com alguma criatividade é possível conseguir efeitos interessantes.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/a5354420-fa1c-48eb-917c-884bcbf2402e" />
+</p>
+
+Abaixo segue um exemplo do que é possível conseguir com algumas customizações.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/ca825f6e-7fa1-4785-b8e7-d9a1415c1578" />
+  <img width="300" src="https://github.com/user-attachments/assets/1e9fcc37-7021-4eeb-a957-d0ed09966de8" />
+  <img width="300" src="https://github.com/user-attachments/assets/cc02bd5d-7381-4727-a0e7-d7bf3db9eb5f" />
+</p>
+
+### StyleBoxLine
+
+Esse estilo é bem simples, é apenas uma linha horizontal ou vertical acompanhando o node control. É útil para layouts minimalistas.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/23d1756e-591c-4103-a431-1ae21e5a7c9a" />
+</p>
+
+Abaixo segue um exemplo de aplicação.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/1dc5d572-dc46-4a24-ae88-4417b7b396aa" />
+  <img width="300" src="https://github.com/user-attachments/assets/a11dcd2f-523a-4dc1-b6fd-6cfd26eaad1b" />
+</p>
