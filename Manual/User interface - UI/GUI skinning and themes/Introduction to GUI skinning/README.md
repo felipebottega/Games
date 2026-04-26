@@ -22,8 +22,8 @@ Ao abrir o campo de cada item de tema, podemos ter uma ou diversas propriedades 
 Apenas para se ter um exemplo concreto, abaixo temos todas as propriedades explicitadas dos itens de tema de um node `Button`.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/9b730a5b-52cb-4775-a9fb-b717028355a6" />
-  <img width="350" src="https://github.com/user-attachments/assets/89dbf131-f12a-459c-b020-72b3a43a2449" />
+  <img width="370" src="https://github.com/user-attachments/assets/9b730a5b-52cb-4775-a9fb-b717028355a6" />
+  <img width="370" src="https://github.com/user-attachments/assets/89dbf131-f12a-459c-b020-72b3a43a2449" />
 </p>
 
 ## Tipos de tema
@@ -34,3 +34,8 @@ Como dito acima, cada node possui um conjunto diferente de propriedades em cada 
 
 Como já foi mencionado, até agora apenas o *Theme Overrides* foi utilizado para alterar alguma propriedade de UI de nodes control. O *Theme Overrides* geralmente é utilizado apenas quando a UI é única e não será reutilizada ou é utilizado para alterar/sobrescrever alguma coisa específica de um tema carregado. O mais comum mesmo é carregar um tema através do campo *Theme*. Cada tema é um recurso, ele fica armazenado em um arquivo *.tres*. A vantagem disso em relação ao *Theme Overrides* é que você consegue uniformidade de estilo mais facilmente no jogo, não precisa ficar editando cada item da UI individualmente. Não apenas isso, mas o *.tres* pode ser até utilizado em outros projetos. 
 
+## Customizando o projeto
+
+Existem duas configurações de projeto que podem ser ajustadas para afetar todo o projeto. Indo em *Project → Project Settings → General → GUI → Theme → Custom* permite definir um tema personalizado para todo o projeto. Indo em  *Project → Project Settings → General → GUI → Theme → Custom Font* faz o mesmo com a fonte padrão de fallback. Quando um item de tema é solicitado por um node control, o tema personalizado do projeto, se presente, é verificado primeiro. Somente se o item não estiver presente, o tema padrão é verificado. Isso permite configurar a aparência padrão de cada node control da Godot com um único recurso de tema.
+
+Apesar de conveniente, eu recomendo não utilizar isso por ser muito implícito. Não há como descobrir de onde veio o tema inspecionando as cenas e nodes. Qualquer pessoa que for debugar o projeto precisa saber que essa possibilidade existe e deve saber exatamente onde ela é configurada, caso contrário, vai parecer que o tema foi aplicado de maneira mágica.
