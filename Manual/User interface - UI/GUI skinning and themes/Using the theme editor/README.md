@@ -76,3 +76,23 @@ Para inserir a cena no editor de temas, vá no *+* ao lado de *Default Preview* 
   <img width="950" src="https://github.com/user-attachments/assets/f0fa2a32-f043-4fcc-be5b-d4cfb3761d27" />
 </p>
 
+Feito isso, vá no *+* ao lado de *Type*, para escolher o tipo de tema, e selecione `Button`. Depois clique no ícone de *Styles* e finalmente podemos começar a customizar o estilo do botão.
+
+<p align="center">
+  <img width="350" src="https://github.com/user-attachments/assets/f1d40763-02b7-48fc-83db-c020faec0042" />
+</p>
+
+Vamos customizar o botão no estado normal (idle). Para isso, clique no *+* ao lado do campo *normal*. Note que o respectivo campo aparecerá no *Inspector*. Para começar a customização, clique onde está escrito *empty*, ao lado do campo *normal*. Isso vai abrir algumas opções para selecionar. Vamos falar um pouco de cada uma.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/ea0b4ad9-5292-4133-9ec0-b0c24e43f1f3" />
+</p>
+
+### StyleBoxEmpty
+
+Ao selecionar esta opção, toda a estilização default do node desaparece. Ele possui o mínimo possível para existir. Você pode clicar novamente no *StyleBoxEmpty* para abrir as propriedades dele no *Inspector*. Vai notar que ele possui apenas propriedades de margem. Essa estilização é usada quando todo o estilo que você precisa já veio de outros itens de tema, como cores, fontes, etc. 
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/84c45a68-a97a-4ede-8729-d197d18040a2" />
+</p>
+
