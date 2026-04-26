@@ -12,4 +12,4 @@ Caso você queira uma engine física externa, deve baixá-la e colocar a pasta d
   <img width="700" src="https://github.com/user-attachments/assets/fa81a124-a03f-4168-be67-6de4c50f9131" />
 </p>
 
-Por default, as engines utilizadas na Godot não possuem física de fluídos. A engine Rapier é uma alternativa para quem precisa dessas simulações, sejam em 2D quanto 3D. Para quem tiver interesse em ver um caso de aplicação em 2D, recomendo ver o meu [tutorial sobre fluídos com Rapier]().
+Por default, as engines utilizadas na Godot não possuem física de fluídos. A engine Rapier é uma alternativa para quem precisa dessas simulações, sejam em 2D quanto 3D. Para quem tiver interesse em ver um caso de aplicação em 2D, recomendo ver o meu [tutorial sobre fluídos com Rapier](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Godot%20Rapier%20Physics).

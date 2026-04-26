@@ -90,7 +90,7 @@ Para a continuação do jogo, utilizaremos os assets [fort-of-illusion](https://
   <img width="900" src="https://github.com/user-attachments/assets/40b442bc-5cd0-4e5f-853c-0a21267dcaf8" />
 </p>
 
-Vale a pena chamar a atenção para uma técnica utilizada. Nós colocamos as figueiras em um nível mais à frente que tudo no jogo. Isso aumenta a sensação de profundidade no jogo. Para obter este efeito, alteramos a propriedade *Z Index* no *Inspector*. Por default, todas os nodes ficam no nível 0, então um node com um número maior fica mais à frente da câmera. Vimos um pouco deste assunto [neste tutorial]().
+Vale a pena chamar a atenção para uma técnica utilizada. Nós colocamos as fogueiras em um nível mais à frente que tudo no jogo. Isso aumenta a sensação de profundidade no jogo. Para obter este efeito, alteramos a propriedade *Z Index* no *Inspector*. Por default, todas os nodes ficam no nível 0, então um node com um número maior fica mais à frente da câmera.
 
 <p align="center">
   <img width="200" alt="image" src="https://github.com/user-attachments/assets/57f2e406-f1dc-4302-92a6-8ebea76330d3" />

@@ -32,7 +32,7 @@ A partir daqui vale a pena separar as propriedades entre *Grounded* e *Floating*
 
 Vamos ver agora as propriedades em comum à ambos os modos *Grounded* e *Floating*.
 
-- **Moving Platform/On Leave:** Controla como deve ser a dinâmica de velocidade quando o corpo sai de uma plataforma. Veremos mais sobre isso no tutorial de [AnimatableBody2D]().
+- **Moving Platform/On Leave:** Controla como deve ser a dinâmica de velocidade quando o corpo sai de uma plataforma.
 - **Moving Platform/Floor Layers:** Camadas de colisão para chão que o corpo irá detectar como plataforma móvel.
 - **Moving Platform/Wall Layers:**  Camadas de colisão para parede que o corpo irá detectar como plataforma móvel.
 - **Collision/Safe Margin:** Valor, em pixels, para determinar quando houve colisão na chamada do `move_and_slide`. Por exemplo, se este valor for de 2 pixels, o corpo vai considerar que houve collisão quando estiver a 2 pixels de outro corpo com colisão. O default é de $0.08$ pixels.

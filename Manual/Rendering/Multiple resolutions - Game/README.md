@@ -88,4 +88,4 @@ O `SubViewport` deve estar configurado com a resolução máxima e a propriedade
 
 A função `DisplayServer.window_set_mode()` é geral do projeto, então não importa em qual cena ela é alterada, vai alterar e vai se manter pelo jogo inteiro. O mesmo não vale para a resolução. Precisamos replicar a estrutura de `TextureRect` e `SubViewport` em todas as cenas que são afetadas pela mudança de resolução. Provavelmente deve ser mais interessante rodar o jogo inteiro numa única cena Main com essa estrutura, mas por enquanto estamos no esquema de troca de cenas ainda. Para um jogo pequeno como este, não tem problema.
 
-Acesse [este link]() para conferir como ficou o jogo!
+Acesse [este link](https://felipebottega.github.io/Games/Manual/Rendering/Multiple%20resolutions%20-%20Game/html/) para conferir como ficou o jogo!
