@@ -1,6 +1,6 @@
 # Using the theme editor
 
-O tutorial anterior foi para aprender os conceitos básicos de tema/skin em GUI. Agora vamos como fazer isso na prática.
+O tutorial anterior foi para aprender os conceitos básicos de tema/skin em GUI. Agora iremos ver como funciona a parte prática.
 
 ## Criando um tema
 
@@ -60,8 +60,8 @@ Faltou mencionar alguns outros campos deste painel de edição. É melhor fazer 
   <img width="400" src="https://github.com/user-attachments/assets/4b87a430-d927-49c4-8081-6c8088d2c7dd" />
 </p>
 
+ 9. Este item não é importante e será ignorado.
 
-
-
+## Styles
 
 
