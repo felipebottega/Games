@@ -147,13 +147,13 @@ Abaixo segue um exemplo de aplicação.
 Quando você seleciona um stylebox em específico, aparecem alguns ícones ao lado dele no páinel de edição. Vou explicar apenas o destacado em vermelho abaixo, acredito que os outros são de fácil entendimento a essa altura.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/179232e4-3fce-433d-adf4-ea49736858fe" />
+  <img width="500" src="https://github.com/user-attachments/assets/179232e4-3fce-433d-adf4-ea49736858fe" />
 </p>
 
 Esse é o ícone de *pin*. Quando você clica nele, o stylebox foi "pinado" ou "fixado", usando a tradução para o português. Isso significa que qualquer stylebox novo do mesmo tipo irá copiar as alterações feitas no fixado. Por exemplo, na imagem abaixo o *StyleBoxLine* associado ao campo *normal* foi fixado. Isso significa que qualquer alteração feita nesse estilo será copiada também no stylebox do campo *hover*, pois ele é do mesmo tipo de stylebox.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/28d62bf3-d56e-4814-90f6-5f65d194e108" />
+  <img width="500" src="https://github.com/user-attachments/assets/28d62bf3-d56e-4814-90f6-5f65d194e108" />
 </p>
 
 Fixar stylebox desta maneira é útil quando você tem um conjunto de GUIs do mesmo tipo que requerem as mesmas edições. Isso garante que as edições são feitas em paralelo.
@@ -161,3 +161,49 @@ Fixar stylebox desta maneira é útil quando você tem um conjunto de GUIs do me
 > PS: Só é possível ter um stylebox fixado por vez.
 
 ## Exemplos
+
+### Botão 1
+
+Criamos um cena contendo um único botão e criamos um tema para editar. Este tema é do tipo `Button`. Criamos stylebox para os campos *focus, hover, pressed* e *normal*, e fixamos o stylebox do *normal*. A ideia é começar customizando todos estes de maneira idêntica, mas depois criar as diferenças de cada um individualmente. 
+
+<p align="center">
+  <img width="450" src="https://github.com/user-attachments/assets/d1ba5d54-8f61-4a3a-acc2-c6dc67674da2" />
+</p>
+
+> PS: Também seria possível criar as diferenças de cada um pelo *Theme Overrides*, mas isso não ficaria salvo no arquivo de recurso. Não existe certo e errado nesse caso. Depende se vale a pena ou não salvar essas diferenças em arquivo de recurso.
+
+Abaixo seguem as customizações utilizadas para este botão. Apenas o *hover* e *pressed* tiveram algumas alterações em relação ao *normal* (que pode ser vista como o estilo base). O *focus* ficou igual neste caso.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/be1a2333-69c0-4943-9647-57dbb6d283a5" />
+</p>
+
+### Botão 2
+
+O anterior foi feito com *StyleBoxFlat*, mas esse de agora será feito com *StyleBoxTexture*. Procedemos de maneira análoga ao anterior, até a parte de fixar o stylebox normal. Abaixo segue a customizção dele. A textura é o arquivo *BTN_BLUE_CIRCLE_OUT.png*, obtida [aqui](https://opengameart.org/content/free-ui-asset-pack-1).
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/db761dff-8c23-4b52-b05d-bae3e782d237" />
+</p>
+
+Só o que alteramos depois foi a textura do *pressed*, que usou a textura do mesmo botão, mas pressionado para baixo. Com isso nós obtemos uma animação de apertar botão através da estilização.
+
+### Botão 3
+
+Esse botão recebeu o estilo *StyleBoxEmpty*, que basicamente deixou ele sem estilo nenhum. Foi feita uma manipulação da cor e tamanho da margem para poder perceber o *hover* e o *pressed*, mas são efeitos sutis.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/5b0d632b-5aea-4857-91f7-d7f82fa6ff32" />
+</p>
+
+O interessante deste botão é que ele possui um efeito de shader de background. Para isso utilizamos a estrutura de cena abaixo. Não é possível visualizar o botão desta cena no painel de edição de temas. Caso prefira, primeiro edite o botão e depois acrescente o `ColorRect`.
+
+<p align="center">
+  <img width="250" src="https://github.com/user-attachments/assets/98e771cc-474e-4e5a-8ee3-98b6e2e73ec4" />
+</p>
+
+Depois disso, os três botões foram colocados em uma cena principal. Este pequeno projeto de testes pode ser acessado [neste link]().
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/402ab617-1407-49b4-84c8-84f0d56cc8ca" />
+</p>
