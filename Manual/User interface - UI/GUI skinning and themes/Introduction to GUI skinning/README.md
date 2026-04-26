@@ -26,3 +26,11 @@ Apenas para se ter um exemplo concreto, abaixo temos todas as propriedades expli
   <img width="350" src="https://github.com/user-attachments/assets/89dbf131-f12a-459c-b020-72b3a43a2449" />
 </p>
 
+## Tipos de tema
+
+Como dito acima, cada node possui um conjunto diferente de propriedades em cada item de tema. Dizemos que cada node control está associado a um "tipo de tema" ("theme type" em inglês), que basicamente é esta conjunto de propriedades que cada um possui. Vale ressaltar que os itens de tema são sempre os mesmos para todos os nodes control (ou todos os tipos de tema), mudando apenas as propriedades que cada item de tema possui.
+
+## Theme vs Theme Overrides
+
+Como já foi mencionado, até agora apenas o *Theme Overrides* foi utilizado para alterar alguma propriedade de UI de nodes control. O *Theme Overrides* geralmente é utilizado apenas quando a UI é única e não será reutilizada ou é utilizado para alterar/sobrescrever alguma coisa específica de um tema carregado. O mais comum mesmo é carregar um tema através do campo *Theme*. Cada tema é um recurso, ele fica armazenado em um arquivo *.tres*. A vantagem disso em relação ao *Theme Overrides* é que você consegue uniformidade de estilo mais facilmente no jogo, não precisa ficar editando cada item da UI individualmente. Não apenas isso, mas o *.tres* pode ser até utilizado em outros projetos. 
+
