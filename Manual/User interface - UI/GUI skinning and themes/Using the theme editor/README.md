@@ -43,7 +43,7 @@ Este painel que se abrir é o *editor de tema*. Há bastante coisa para ser vist
 Faltou mencionar alguns outros campos deste painel de edição. É melhor fazer eles em separado dos anteriores pois há mais detalhes para se considerar agora. Pode-se considerar que as funcionalidades acima são as básicas do painel, enquanto que as de agora são avançadas.
 
 <p align="center">
-  <img width="370" src="https://github.com/user-attachments/assets/dbdf799f-5e67-44d7-9285-5df206ae24b5" />
+  <img width="390" src="https://github.com/user-attachments/assets/dbdf799f-5e67-44d7-9285-5df206ae24b5" />
 </p>
 
  1. Se o *Show Default* estiver habilitado, mostra todas as propriedades daquele tipo de tema, incluindo as que não foram editadas e estão no valor default. Se não estiver habilitada, mostra apenas as propriedades que foram editadas.
@@ -64,4 +64,15 @@ Faltou mencionar alguns outros campos deste painel de edição. É melhor fazer 
 
 ## Styles
 
+Criamos uma cena com um botão e inicializamos um tema para ser customizado neste botão. 
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/3054df57-bb1b-440d-9041-0ce923cc1ff1" />
+</p>
+
+Para inserir a cena no editor de temas, vá no *+* ao lado de *Default Preview* e selecione a cena desejada. Após isso ela deve aparecer no editor. É necessario que o node raíz da cena seja um node control.
+
+<p align="center">
+  <img width="950" src="https://github.com/user-attachments/assets/f0fa2a32-f043-4fcc-be5b-d4cfb3761d27" />
+</p>
 
