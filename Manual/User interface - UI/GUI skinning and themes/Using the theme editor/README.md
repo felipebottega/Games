@@ -141,3 +141,23 @@ Abaixo segue um exemplo de aplicação.
   <img width="300" src="https://github.com/user-attachments/assets/1dc5d572-dc46-4a24-ae88-4417b7b396aa" />
   <img width="300" src="https://github.com/user-attachments/assets/a11dcd2f-523a-4dc1-b6fd-6cfd26eaad1b" />
 </p>
+
+### Pin do estilo
+
+Quando você seleciona um stylebox em específico, aparecem alguns ícones ao lado dele no páinel de edição. Vou explicar apenas o destacado em vermelho abaixo, acredito que os outros são de fácil entendimento a essa altura.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/179232e4-3fce-433d-adf4-ea49736858fe" />
+</p>
+
+Esse é o ícone de *pin*. Quando você clica nele, o stylebox foi "pinado" ou "fixado", usando a tradução para o português. Isso significa que qualquer stylebox novo do mesmo tipo irá copiar as alterações feitas no fixado. Por exemplo, na imagem abaixo o *StyleBoxLine* associado ao campo *normal* foi fixado. Isso significa que qualquer alteração feita nesse estilo será copiada também no stylebox do campo *hover*, pois ele é do mesmo tipo de stylebox.
+
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/28d62bf3-d56e-4814-90f6-5f65d194e108" />
+</p>
+
+Fixar stylebox desta maneira é útil quando você tem um conjunto de GUIs do mesmo tipo que requerem as mesmas edições. Isso garante que as edições são feitas em paralelo.
+
+> PS: Só é possível ter um stylebox fixado por vez.
+
+## Exemplos
