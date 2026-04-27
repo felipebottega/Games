@@ -55,3 +55,12 @@ Apenas com esta configuração já é possível visualizar os caracteres correta
   <img width="900" src="https://github.com/user-attachments/assets/ae00b063-efea-4584-9a1b-408c1d5b8254" />
 </p>
 
+ 3. Se a imagem da fonte contiver margens não utilizadas pelos glifos, tente ajustar os valores *Image Margin*. Essa margem é aplicada apenas uma vez ao redor de toda a imagem. Se a imagem da sua fonte contiver guias (na forma de linhas entre os glifos) ou se o espaçamento entre os caracteres parecer incorreto, tente ajustar os valores *Character Margin*. Essa margem é aplicada a cada glifo importado.
+
+## Contornos
+
+É possível ativar o contorno de uma fonte indo em *Inspector → Control → Theme Overrides → Colors → Font Outline Color*. Depois disso, é necessário ainda alterar o tamanho do contorno em *Inspector → Control → Theme Overrides → Constants → Outline Size*. Se quiser isso como um recurso de tema, também é possível. Basta seguir os passos vistos no [tutorial de temas](https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor) e alterar estas mesmas propriedades.
+
+<p align="center">
+  <img width="800" src="https://github.com/user-attachments/assets/b8cecf71-cbe4-45f1-be83-209dbad3c029" />
+</p>
