@@ -83,6 +83,8 @@ O texto normal e os emojis não são o mesmo tipo de desenho para a fonte. Para 
   <img width="900" src="https://github.com/user-attachments/assets/64742efa-ab3a-433b-982a-4ae88c594922" />
 </p>
 
+⚠️ **Atenção:** Fontes de emoji basicamente são imagens disfarçadas de fontes. A utilizada no exemplo acima é bastante pesada, por exemplo. Quando for usar este tipo de fonte, verifique se ela está causando stutter.
+
 ## Negrito e itálico 
 
 Existem dois jeitos de deixar um texto em negrito ou itálico na Godot. O jeito ideal é usar uma variante da fonte (um outro arquivo de fonte) que já foi feita para isso, porque o desenho das letras fica melhor e o espaçamento costuma ficar mais certinho. O outro jeito é o que se chama de "faux bold" e "faux italic" ("faux" quer dizer "falso" em francês). Nesse outro jeito, a Godot pega a fonte normal e força um efeito parecido com negrito ou itálico, sem precisar de outro arquivo de fonte. É uma solução prática quando você quer economizar espaço no projeto. Em `RichTextLabel`, os efeitos de negrito e itálico já usam o efeito faux automaticamente se você não fornecer as fontes customizadas.
