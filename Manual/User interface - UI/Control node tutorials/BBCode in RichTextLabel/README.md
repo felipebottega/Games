@@ -188,3 +188,49 @@ Item dois
 Também dá para usar espaços depois do caractere do marcador para aumentar a distância entre o bullet e o texto do item. Isso é útil se você quiser uma lista mais aberta visualmente. 
 
 Na [wikipedia](https://en.wikipedia.org/wiki/Bullet_(typography)) tem uma lista de possíveis bullets que você pode colar diretamente no código do seu BBCode.
+
+### Listas ordenadas
+
+As listas ordenadas podem ser usadas para marcar automaticamente os itens com números ou letras em ordem crescente. A tag `[ol]` suporta alguns tipos de numeração diferentes. O tipo `1` usa números. Os tipos `a` e `A` usam letras latinas em ordem crescente, em minúsculas e maiúsculas, respectivamente. Os tipos `i` e `I` usam números romanos, também em minúsculas e maiúsculas.
+
+## Efeitos de texto
+
+Agora que passamos pelo guia de referência, chegou a hora de ver algumas coisas mais interessantes. Vamos ver os tipos de efeitos que podem obter sobre as fontes do `RichTextLabel`!
+
+### Pulse
+
+A tag `[pulse]` cria um efeito animado de pulsação que altera a opacidade e a cor de cada caractere ao longo do tempo. Ela pode ser usada para chamar atenção para partes específicas do texto. A sintaxe é `[pulse freq=1.0 color=#ffffff40 ease=-2.0]{text}[/pulse]`. 
+
+O parâmetro `freq` controla a frequência da pulsação (valores maiores deixam a animação mais rápida). Um ciclo completo de pulsação leva $2 \cdot \frac{1.0}{\texttt{freq}}$ segundos. O parâmetro `color` define a cor alvo usada como multiplicador durante o efeito. Por padrão, o texto tende a desaparecer parcialmente (fica mais transparente), mas não some completamente. O parâmetro `ease` define a curva de interpolação (easing) da animação. Valores negativos produzem um efeito de entrada e saída suave (in-out easing), por isso o padrão é $-2.0$.
+
+### Wave
+
+A tag `[wave]` cria um efeito animado em que o texto se move para cima e para baixo, formando uma espécie de onda. É útil para dar destaque visual ou criar efeitos mais dinâmicos. A sintaxe é `[wave amp=50.0 freq=5.0 connected=1]{text}[/wave]`. 
+
+O parâmetro `amp` controla o quanto o texto sobe e desce. O parâmetro `freq` define a velocidade da animação. Valores maiores deixam o movimento mais rápido. Se freq for $0$, não haverá movimento visível, e valores negativos também não exibem o efeito. O parâmetro `connected` define como caracteres ligados (ligatures) se comportam. Se estiver como $1$ (default), caracteres que formam ligaturas se movem juntos. Se estiver como $0$, cada caractere se move individualmente, mesmo que estejam visualmente conectados.
+
+### Tornado
+
+A tag `[tornado]` cria um efeito animado em que o texto se move em círculo, como se cada caractere estivesse girando ao redor de um ponto. É útil para efeitos mais chamativos e dinâmicos. A sintaxe é `[tornado radius=10.0 freq=1.0 connected=1]{text}[/tornado]`.
+
+O parâmetro `radius` define o raio do círculo que controla o deslocamento do texto. O parâmetro `freq` controla a velocidade da animação. Valores maiores fazem o movimento circular acontecer mais rápido. Se freq for $0$, a animação fica pausada. Valores negativos fazem o movimento acontecer ao contrário. O parâmetro `connected define como caracteres ligados (ligatures) se comportam. Se estiver como $1$ (default), caracteres que formam ligaturas se movem juntos. Se estiver como $0$, cada caractere se move individualmente, mesmo que estejam visualmente conectados.
+
+### Shake
+
+A tag `[shake]` cria um efeito animado em que o texto treme, como se estivesse vibrando. É útil para transmitir impacto, tensão ou urgência. A sintaxe é `[shake rate=20.0 level=5 connected=1]{text}[/shake]`.
+
+O parâmetro `rate` controla a velocidade da tremida. O parâmetro `level` define a intensidade do deslocamento, ou seja, o quanto o texto se afasta da posição original. O parâmetro `connected` define como caracteres ligados (ligatures) se comportam. Se estiver como $1$ (DEFAULT), caracteres que formam ligaturas se movem juntos. Se estiver como $0$, cada caractere se move individualmente, mesmo que estejam visualmente conectados.
+
+### Fade
+
+A tag `[fade]` cria um efeito estático de desaparecimento (fade), que reduz gradualmente a opacidade dos caracteres. Diferente de outras tags, esse efeito não é animado, ele apenas aplica um gradiente de transparência ao texto. A sintaxe é `[fade start=4 length=14]{text}[/fade]`.
+
+O parâmetro `start` define a posição inicial do desaparecimento em relação ao ponto onde a tag foi aplicada. Ou seja, a partir de qual caractere o efeito começa. O parâmetro `length` define ao longo de quantos caracteres o fade acontece.
+
+### Rainbow
+
+A tag `[rainbow]` aplica um efeito animado de arco-íris ao texto, fazendo com que as cores mudem ao longo do tempo. É útil para criar textos chamativos e dinâmicos. A sintaxe é `[rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]{text}[/rainbow]`.
+
+O parâmetro `freq` define quantos caracteres o arco-íris percorre antes de se repetir. O parâmetro `sat` controla a saturação das cores. O parâmetro `val` controla o brilho das cores. O parâmetro `speed` define a velocidade da animação, em ciclos completos por segundo. Valores positivos fazem a animação avançar normalmente, $0$ pausa o efeito, e valores negativos fazem a animação rodar ao contrário.
+
+As bordas da fonte (outlines) não são afetadas pelo efeito, elas mantêm sua cor original. Além disso, qualquer cor aplicada anteriormente ao texto é sobrescrita pelo efeito. Por outro lado, as propriedades *Modulate* e *Self Modulate* do `CanvasItem` ainda influenciam o resultado final, pois multiplicam as cores geradas pelo efeito.
