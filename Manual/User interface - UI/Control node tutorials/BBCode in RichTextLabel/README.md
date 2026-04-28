@@ -78,6 +78,8 @@ Este guia de referência contém a maior parte da sintaxe que será necessária 
 | `language`            | `lang`     | Códigos de idioma ISO. Veja **Locale codes**.                                                                                                                                                                          | Herda                                       | Sobrescrita de localidade. Alguns arquivos de fonte podem conter substituições específicas por script, e elas serão usadas.                                                                                                                                                                                                                          |
 | `tab_stops`           | —          | Lista de números de ponto flutuante, por exemplo: `10.0,30.0`                                                                                                                                                          | Largura do caractere de espaço na fonte     | Sobrescreve os deslocamentos horizontais de cada caractere de tabulação. Quando o fim da lista é alcançado, os tab stops voltam ao início. Por exemplo, se `tab_stops` for `10.0,30.0`, a primeira tabulação ficará a 10 pixels, a segunda a `10 + 30 = 40` pixels, e a terceira a `10 + 30 + 10 = 50` pixels a partir da origem do `RichTextLabel`. |
 
+> PS: Geralmente essas opções são para a tag `[p]`, mas algumas outras tags na prática usam parágrafos por baixo dos panos, então elas também aceitam (ou herdam) essas opções. São tags como `[center]`, `[left]`, `[right]`, `[fill]`, etc. (são basicamente atalhos para `[p align=...]`).
+
 ### URLs
 
 Por default, a tag `[url]` não faz nada quando clicada. Para obter esta funcionalidade, é necessário criar o sinal `meta_clicked`. O comando `OS.shell_open(str(meta))` no sinal garante a conexão com a url através do sistema operacional.
@@ -86,3 +88,21 @@ Por default, a tag `[url]` não faz nada quando clicada. Para obter esta funcion
   <img width="320" src="https://github.com/user-attachments/assets/bea777dd-23af-49c7-b735-2d02795f0d8e" />
   <img width="470" src="https://github.com/user-attachments/assets/33728cf5-e2bb-4cfa-ba17-1ebe64a5f863" />
 </p>
+
+Abaixo seguem algumas opções de URL.
+
+| Opção       | Valores                    | Padrão          | Descrição                                                    |
+| ----------- | -------------------------- | --------------- | ------------------------------------------------------------ |
+| `underline` | `always`, `never`, `hover` | `always`        | Define o modo de sublinhado do link (`URL`).                 |
+| `tooltip`   | String                     | Texto da URL    | Texto exibido como *tooltip* ao passar o mouse sobre o link. |
+| `href`      | String                     | Endereço da URL | Define o endereço de destino do link.                        |
+
+### Opções para a tag [hr]
+
+| Opção    | Valores                                              | Padrão              | Descrição                                                                                                                                 |
+| -------- | ---------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `color`  | Nome de cor ou cor em formato HEX                    | `Color(1, 1, 1, 1)` | Define a tonalidade da linha (*modulation*).                                                                                              |
+| `height` | Número inteiro                                       | `2`                 | Define a altura da linha em pixels. Você pode adicionar `%` ao final para usar porcentagem da largura do controle em vez de pixels.       |
+| `width`  | Número inteiro                                       | `90%`               | Define a largura alvo da linha em pixels. Você pode adicionar `%` ao final para usar porcentagem da largura do controle em vez de pixels. |
+| `align`  | `left` (ou `l`), `center` (ou `c`), `right` (ou `r`) | `left`              | Alinhamento horizontal da linha.                                                                                                          |
+### 
