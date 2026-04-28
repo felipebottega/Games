@@ -105,4 +105,17 @@ Abaixo seguem algumas opções de URL.
 | `height` | Número inteiro                                       | `2`                 | Define a altura da linha em pixels. Você pode adicionar `%` ao final para usar porcentagem da largura do controle em vez de pixels.       |
 | `width`  | Número inteiro                                       | `90%`               | Define a largura alvo da linha em pixels. Você pode adicionar `%` ao final para usar porcentagem da largura do controle em vez de pixels. |
 | `align`  | `left` (ou `l`), `center` (ou `c`), `right` (ou `r`) | `left`              | Alinhamento horizontal da linha.                                                                                                          |
-### 
+### Opções para a tag [img]
+
+| Opção     | Valores                                                                     | Padrão          | Descrição                                                                                                                                                   |
+| --------- | --------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `color`   | Nome de cor ou cor em formato HEX                                           | Herda           | Aplica uma tonalidade na imagem (*modulation*).                                                                                                             |
+| `height`  | Número inteiro                                                              | Herda           | Define a altura alvo da imagem em pixels. Adicione `%` ao final para usar porcentagem da largura do controle em vez de pixels.                              |
+| `width`   | Número inteiro                                                              | Herda           | Define a largura alvo da imagem em pixels. Adicione `%` ao final para usar porcentagem da largura do controle em vez de pixels.                             |
+| `region`  | `x,y,width,height` em pixels                                                | Herda           | Define uma região retangular da imagem. Isso pode ser usado para exibir apenas uma parte de uma spritesheet.                                                |
+| `pad`     | `false`, `true`                                                             | `false`         | Se `true`, e a imagem for menor que o tamanho definido por `width` e `height`, adiciona preenchimento para atingir esse tamanho em vez de ampliar a imagem. |
+| `tooltip` | String                                                                      | Texto da imagem | Texto exibido como dica ao passar o mouse sobre a imagem.                                                                                                   |
+| `align`   | Valores de alinhamento vertical, ver **Image and table vertical alignment** | `center,center` | Alinha a imagem ao texto ao redor.                                                                                                                          |
+| `alt`     | String                                                                      | —               | Descrição da imagem para apps assistivos, como leitores de tela.                                                                                            |
+
+
