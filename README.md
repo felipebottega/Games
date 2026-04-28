@@ -1373,8 +1373,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#definindo-os-tipos-das-entradas-e-saídas
 ">  Definindo os tipos das entradas e saídas
  </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#declarando-um-callabale-a-partir-de-uma-função
-">  Declarando um callabale a partir de uma função
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#declarando-um-callable-a-partir-de-uma-função
+">  Declarando um callable a partir de uma função
  </a><br>
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#funções-estáticas
 ">  Funções estáticas
@@ -1502,6 +1502,9 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#estrutura-do-código-
 ">  Estrutura do código 
  </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#documentation----------------│
+"> │ documentation                │
+ </a><br>
 <li> <b>Manual\Scripting\GDScript\GDScript warning system</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system#warning-ignore
 ">  Warning ignore
@@ -1626,8 +1629,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 ">  Overridable functions da classe Node
  </a><br>
 <li> <b>Manual\Scripting\Core features\Creating script templates</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Creating%20script%20templates#localização-dos-scripts-template
-">  Localização dos scripts template
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Creating%20script%20templates#localização-dos-script-templates
+">  Localização dos script templates
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Creating%20script%20templates#configurando-o-script-template
 ">  Configurando o script template
@@ -1639,8 +1642,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually#mudança-de-cena
 ">  Mudança de cena
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually#ideias-de-coisas-para-fazer-com-múltiplas-cenas-no-*root*
-">  Ideias de coisas para fazer com múltiplas cenas no *root*
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually#ideias-de-coisas-para-fazer-com-múltiplas-cenas-no-root
+">  Ideias de coisas para fazer com múltiplas cenas no root
  </a><br>
 <li> <b>Manual\Scripting\Core features\Instancing with signals</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Instancing%20with%20signals#exemplo-prático
@@ -1667,8 +1670,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#carregando-recursos
 ">  Carregando recursos
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#make-unique-e-local-to-scene
-">  Make Unique e Local to Scene
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#local-to-scene-e-make-unique
+">  Local to Scene e Make Unique
  </a><br>
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Resources#local-to-scene
 ">  Local to Scene
@@ -1702,6 +1705,9 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#métodos
 ">  Métodos:
  </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#scenetree-e-root
+">  SceneTree e root
+ </a><br>
 <li> <b>Manual\Scripting\Core features\Scene Unique Nodes</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Scene%20Unique%20Nodes#criando-nodes-únicos
 ">  Criando nodes únicos
@@ -1721,6 +1727,447 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Logging#arquivos-de-log
 ">  Arquivos de log
+ </a><br>
+<br><li> <b>Manual\Shaders\Introduction to shaders</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Introduction%20to%20shaders#processor-functions
+">  Processor Functions
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Introduction%20to%20shaders#vertex,-fragment-e-light
+">  Vertex, fragment e light
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Introduction%20to%20shaders#tipos-de-shaders
+">  Tipos de shaders
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Introduction%20to%20shaders#modos-de-renderização
+">  Modos de renderização
+ </a><br>
+<li> <b>Manual\Shaders\Shading reference\Shading language</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#tipos-de-dados
+">  Tipos de dados
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#comentários
+">  Comentários
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#casting
+">  Casting
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#elementos-de-vetores-e-matrizes
+">  Elementos de vetores e matrizes
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#construção-de-vetores-e-matrizes
+">  Construção de vetores e matrizes
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#swizzling
+">  Swizzling
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#arrays
+">  Arrays
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#arrays-locais
+">  Arrays locais
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#arrays-globais
+">  Arrays globais
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#constantes
+">  Constantes
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#structs
+">  Structs
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#operadores
+">  Operadores
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#controle-de-fluxo
+">  Controle de fluxo
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#descarte
+">  Descarte
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#funções
+">  Funções
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#variáveis-interpoladas-(varyings)
+">  Variáveis interpoladas (Varyings)
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#variáveis-interpoladas-como-arrays
+">  Variáveis interpoladas como arrays
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#passar-dados-do-fragment()-para-light()
+">  Passar dados do fragment() para light()
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#onde-não-pode-atribuir-variável-interpolada
+">  Onde não pode atribuir variável interpolada
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#qualificadores-de-interpolação
+">  Qualificadores de interpolação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#uniforms
+">  Uniforms
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#uniform-hints
+">  Uniform hints
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#usando-source_color
+">  Usando source_color
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#uniform-groups
+">  Uniform groups
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#global-uniforms
+">  Global uniforms
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#alterando-uniforms-por-código-gdscript
+">  Alterando uniforms por código GDScript
+ </a><br>
+<li> <b>Manual\Shaders\Shading reference\Built-in functions</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#nomenclatura
+">  Nomenclatura
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#funções-matemáticas
+">  Funções matemáticas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#funções-geométricas
+">  Funções geométricas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#funções-de-comparação
+">  Funções de comparação
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#funções-de-textura
+">  Funções de textura
+ </a><br>
+<li> <b>Manual\Shaders\Shading reference\CanvasItem shaders</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#modos-de-renderização
+">  Modos de renderização
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-
+">  Valores nativos 
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-globais
+">  Valores nativos globais
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-do-vertex
+">  Valores nativos do vertex
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-do-fragment
+">  Valores nativos do fragment
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#valores-nativos-do-light
+">  Valores nativos do light
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders#o-que-é-uv-no-2d
+">  O que é UV no 2D
+ </a><br>
+<li> <b>Manual\Shaders\Your first shader\Your first 2D shader</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#primeiros-passos
+">  Primeiros passos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#escrevendo-código-no-shader
+">  Escrevendo código no shader
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#diferença-de-manipular-o-color-e-o-modulate
+">  Diferença de manipular o COLOR e o modulate
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#usando-o-uniform
+">  Usando o uniform
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#interagindo-com-o-shader-por-código
+">  Interagindo com o shader por código
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#alterando-algo-na-função-vertex
+">  Alterando algo na função vertex
+ </a><br>
+<li> <b>Manual\Shaders\Your first shader\Your second 2D shader</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20second%202D%20shader#visão-geral
+">  Visão geral
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20second%202D%20shader#estrutura-geral-do-shader
+">  Estrutura geral do shader
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20second%202D%20shader#efeitos-
+">  Efeitos 
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20second%202D%20shader#waves
+">  Waves
+ </a><br>
+<li> <b>Manual\Shaders\Your first shader\Your third 2D shader</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#leitura-da-texturas-do-frame-anterior-no-shader
+">  Leitura da texturas do frame anterior no shader
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-1
+">  Experimento 1
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-2
+">  Experimento 2
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-3
+">  Experimento 3
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-4
+">  Experimento 4
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-5
+">  Experimento 5
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-6
+">  Experimento 6
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-7
+">  Experimento 7
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-8
+">  Experimento 8
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-9
+">  Experimento 9
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-10
+">  Experimento 10
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-11
+">  Experimento 11
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-12
+">  Experimento 12
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-13
+">  Experimento 13
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20third%202D%20shader#experimento-14
+">  Experimento 14
+ </a><br>
+<li> <b>Manual\Shaders\Your first shader\Game of Life</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Game%20of%20Life#estrutura-geral
+">  Estrutura geral
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Game%20of%20Life#shader
+">  Shader
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Game%20of%20Life#dimensões
+">  Dimensões
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Game%20of%20Life#ping-pong-rendering
+">  Ping-Pong Rendering
+ </a><br>
+<li> <b>Manual\Shaders\Your first shader\Mandelbrot Set</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set#matemática
+">  Matemática
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set#shader
+">  Shader
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set#gdscript
+">  GDScript
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set#extraindo-a-posição-do-mouse-no-sistema-uv
+">  Extraindo a posição do mouse no sistema UV
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set#atualizando-zoom-e-deslocamento
+">  Atualizando zoom e deslocamento
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Mandelbrot%20Set#explicação-por-diagramas
+">  Explicação por diagramas
+ </a><br>
+<li> <b>Manual\Shaders\Custom post-processing</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Custom%20post-processing#implementando-um-pós-processamento
+">  Implementando um pós-processamento
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Custom%20post-processing#implementando-múltiplos-pós-processamentos
+">  Implementando múltiplos pós-processamentos
+ </a><br>
+<br><li> <b>Manual\User interface - UI\UI building blocks\Size and anchors</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Size%20and%20anchors#anchor-offsets
+">  Anchor Offsets
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Size%20and%20anchors#anchor-points
+">  Anchor Points
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Size%20and%20anchors#anchor-presets
+">  Anchor Presets
+ </a><br>
+<li> <b>Manual\User interface - UI\UI building blocks\Using Containers</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#hboxcontainer
+">  HBoxContainer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#vboxcontainer
+">  VBoxContainer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#grid-container
+">  Grid Container
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#margin-container
+">  Margin Container
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#tab-container
+">  Tab Container
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#split-container
+">  Split Container
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#foldable-container
+">  Foldable Container
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#scrollcontainer
+">  ScrollContainer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#aspectratiocontainer
+">  AspectRatioContainer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#flowcontainer
+">  FlowContainer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#centercontainer
+">  CenterContainer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#subviewportcontainer
+">  SubViewportContainer
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Using%20Containers#combinando-containers
+">  Combinando containers
+ </a><br>
+<li> <b>Manual\User interface - UI\UI building blocks\Keyboard-Controller Navigation and Focus</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Keyboard-Controller%20Navigation%20and%20Focus#foco
+">  Foco
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Keyboard-Controller%20Navigation%20and%20Focus#navegação
+">  Navegação
+ </a><br>
+<li> <b>Manual\User interface - UI\UI building blocks\Control node gallery</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Control%20node%20gallery#control-node-gallery
+">  Control node gallery
+ </a><br>
+<li> <b>Manual\User interface - UI\GUI skinning and themes\Introduction to GUI skinning</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Introduction%20to%20GUI%20skinning#itens-de-tema
+">  Itens de tema
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Introduction%20to%20GUI%20skinning#tipos-de-tema
+">  Tipos de tema
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Introduction%20to%20GUI%20skinning#theme-vs-theme-overrides
+">  Theme vs Theme Overrides
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Introduction%20to%20GUI%20skinning#customizando-o-projeto
+">  Customizando o projeto
+ </a><br>
+<li> <b>Manual\User interface - UI\GUI skinning and themes\Using the theme editor</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#criando-um-tema
+">  Criando um tema
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#overview-do-editor-de-tema
+">  Overview do editor de tema
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#styles
+">  Styles
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#styleboxempty
+">  StyleBoxEmpty
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#styleboxtexture
+">  StyleBoxTexture
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#styleboxflat
+">  StyleBoxFlat
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#styleboxline
+">  StyleBoxLine
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#pin-do-estilo
+">  Pin do estilo
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#exemplos
+">  Exemplos
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#botão-1
+">  Botão 1
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#botão-2
+">  Botão 2
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor#botão-3
+">  Botão 3
+ </a><br>
+<li> <b>Manual\User interface - UI\GUI skinning and themes\Using Fonts</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20Fonts#fontes-dinâmicas
+">  Fontes dinâmicas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20Fonts#fontes-bitmap
+">  Fontes bitmap
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20Fonts#contornos
+">  Contornos
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20Fonts#sombras
+">  Sombras
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20Fonts#emojis
+">  Emojis
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20Fonts#negrito-e-itálico-
+">  Negrito e itálico 
+ </a><br>
+<li> <b>Manual\User interface - UI\Control node tutorials\BBCode in RichTextLabel</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#básico-de-bbcode
+">  Básico de BBCode
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#referência
+">  Referência
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#básico
+">  Básico
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#opções-de-parágrafo
+">  Opções de parágrafo
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#urls
+">  URLs
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#opções-para-a-tag-[hr]
+">  Opções para a tag [hr]
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#opções-para-a-tag-[img]
+">  Opções para a tag [img]
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#alinhamento-vertical-de-imagem-e-tabela
+">  Alinhamento vertical de imagem e tabela
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#opções-de-fonte
+">  Opções de fonte
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#cores-nomeadas
+">  Cores nomeadas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#cores-em-hexadecimal
+">  Cores em hexadecimal
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#opções-de-células-em-tabelas
+">  Opções de células em tabelas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#bullets
+">  Bullets
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#listas-ordenadas
+">  Listas ordenadas
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#efeitos-de-texto
+">  Efeitos de texto
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#pulse
+">  Pulse
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#wave
+">  Wave
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#tornado
+">  Tornado
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#shake
+">  Shake
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#fade
+">  Fade
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel#rainbow
+">  Rainbow
  </a><br>
 <br><li> <b>Manual\Extras\Audio Server</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#atributos-do-audio-server
@@ -1745,8 +2192,8 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#método-3-para-lidar-com-tiles-de-tamanhos-diferentes-do-tileset
 ">  Método 3 para lidar com tiles de tamanhos diferentes do TileSet
  </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#player-com-movimento-de-*clicar-e-mover*
-">  Player com movimento de *clicar e mover*
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#player-com-movimento-de-clicar-e-mover
+">  Player com movimento de clicar e mover
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Camera2D#super-básico-de-camera2d
 ">  Super básico de Camera2D
