@@ -118,4 +118,73 @@ Abaixo seguem algumas opções de URL.
 | `align`   | Valores de alinhamento vertical, ver **Image and table vertical alignment** | `center,center` | Alinha a imagem ao texto ao redor.                                                                                                                          |
 | `alt`     | String                                                                      | —               | Descrição da imagem para apps assistivos, como leitores de tela.                                                                                            |
 
+### Alinhamento vertical de imagem e tabela
 
+As tags `[img]` e `[table]` podem receber um valor de alinhamento vertical para tentar se posicionar em relação ao texto ao redor. O alinhamento funciona comparando um ponto vertical da imagem/tabela com um ponto vertical do texto. 
+
+Na imagem, os pontos possíveis são `top`, `center e `bottom`. No texto e na tabela, os pontos possíveis são `top`, `center`, `baseline` e `bottom`. Você pode especificar os dois lados diretamente, por exemplo `text [img=top,bottom]...[/img] text` ou `text [table=3,top,bottom]...[/table] text`. Também dá para passar só um valor, e aí a Godot usa um default automático: `top = top-top`, `center = center-center`, `bottom = bottom-bottom`.
+
+Abaixo temos um exemplo tirado da própria [documentação oficial](https://docs.godotengine.org/en/stable/tutorials/ui/bbcode_in_richtextlabel.html#image-and-table-vertical-alignment), apenas para ilustrar alguns possíveis efeitos destas opções.
+
+<p align="center">
+  <img width="400" src="https://github.com/user-attachments/assets/9eb4bd64-204a-4ef3-9976-b0e7def9e9ba" />
+</p>
+
+> PS: As formas curtas são `t = top`, `c = center`, `l = baseline` e `b = bottom`.
+
+### Opções de fonte
+
+| Opção                | Abreviação | Valores                                                                                | Padrão                                    | Descrição                                                                                                                                                                             |
+| -------------------- | ---------- | -------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`               | `n`        | Caminho válido para um recurso `Font`                                                  | Herda                                     | Caminho do recurso de fonte.                                                                                                                                                          |
+| `size`               | `s`        | Número em pixels                                                                       | Herda                                     | Tamanho personalizado da fonte.                                                                                                                                                       |
+| `glyph_spacing`      | `gl`       | Número em pixels                                                                       | Herda                                     | Espaçamento extra para cada glyph.                                                                                                                                                    |
+| `space_spacing`      | `sp`       | Número em pixels                                                                       | Herda                                     | Espaçamento extra para o caractere de espaço.                                                                                                                                         |
+| `top_spacing`        | `top`      | Número em pixels                                                                       | Herda                                     | Espaçamento extra na parte superior da linha.                                                                                                                                         |
+| `bottom_spacing`     | `bt`       | Número em pixels                                                                       | Herda                                     | Espaçamento extra na parte inferior da linha.                                                                                                                                         |
+| `embolden`           | `emb`      | Número de ponto flutuante                                                              | `0.0`                                     | Intensidade de negrito da fonte. Se for diferente de zero, engrossa os contornos da fonte. Valores negativos reduzem a espessura do contorno.                                         |
+| `face_index`         | `fi`       | Número inteiro                                                                         | `0`                                       | Índice da face ativa em uma coleção TrueType / OpenType.                                                                                                                              |
+| `slant`              | `sln`      | Número de ponto flutuante                                                              | `0.0`                                     | Intensidade de inclinação da fonte. Valores positivos inclinam os glyphs para a direita; negativos, para a esquerda.                                                                  |
+| `opentype_variation` | `otv`      | Lista separada por vírgulas de tags de variação OpenType, sem espaço após cada vírgula | Coordenadas de variação OpenType da fonte | Coordenadas de variação OpenType. Veja **OpenType variation tags**. O valor deve ficar entre aspas para permitir usar `=` dentro dele, por exemplo: `[font otv="wght=200,wdth=400"]`. |
+| `opentype_features`  | `otf`      | Lista separada por vírgulas de tags de recursos OpenType, sem espaço após cada vírgula | Recursos OpenType da fonte                | Recursos OpenType da fonte. Veja **OpenType features tags**. O valor deve ficar entre aspas para permitir usar `=` dentro dele, por exemplo: `[font otf="calt=0,zero=1"]`.            |
+
+### Cores nomeadas
+
+Você pode usar nomes de cores pré-definidas nas tags que aceitam cores por nome. Esses nomes não são sensíveis a maiúsculas/minúsculas, então variações como `DARK_RED`, `DarkRed` e `darkred` produzem exatamente o mesmo resultado.
+
+<p align="center">
+  <img width="1100" src="https://github.com/user-attachments/assets/68b0753b-9f92-4054-9dba-b915316a962c" />
+</p>
+
+### Cores em hexadecimal
+
+Você pode usar cores em formato hexadecimal (HEX) nas tags do BBCode da Godot, como `[color]` ou `[bgcolor]`. Esse formato é o mesmo usado em CSS, começando com # seguido pelos valores de cor.
+
+Para cores sem transparência, usa-se o padrão de 6 dígitos (#RRGGBB). Cada par representa vermelho, verde e azul. Por exemplo `[color=#ffffff]Branco[/color]` ou `[color=#ff0000]Vermelho[/color]`. Se você quiser adicionar transparência, pode usar o formato com 8 dígitos (#RRGGBBAA). Os dois últimos dígitos representam o canal alfa (transparência), indo de 00 (totalmente transparente) até ff (totalmente opaco). Por exemplo `[color=#ffffff88]Branco translúcido[/color]` ou `[color=#ff000080]Vermelho semi-transparente[/color]`.
+
+### Opções de células em tabelas
+
+Essas opções são da tag `[cell]`, dentro de uma `[table]`, e controlam o comportamento visual de cada célula.
+
+| Opção     | Valores                                                                          | Padrão    | Descrição                                                                                                                                                 |
+| --------- | -------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `shrink`  | `false`, `true`                                                                  | `true`    | Se `true`, a célula pode encolher para se ajustar ao seu conteúdo.                                                                                        |
+| `expand`  | Número inteiro                                                                   | `1`       | Razão de expansão da célula. Define quais células tentarão se expandir proporcionalmente em relação às outras e aos seus respectivos valores de expansão. |
+| `border`  | Nome de cor ou cor em formato HEX                                                | Herda     | Cor da borda da célula.                                                                                                                                   |
+| `bg`      | Nome de cor ou cor em formato HEX                                                | Herda     | Cor de fundo da célula. Para fundos alternados em linhas ímpares/pares, você pode usar `bg=odd_color,even_color`.                                         |
+| `padding` | 4 números de ponto flutuante separados por vírgula, sem espaço após cada vírgula | `0,0,0,0` | Preenchimento interno da célula: esquerda, topo, direita e baixo.                                                                                         |
+
+### Bullets
+
+Por padrão, a tag [ul] usa o caractere Unicode U+2022 (•) como marcador dos itens da lista. Isso é parecido com o que os navegadores fazem em listas HTML. Esse marcador pode ser personalizado com o parâmetro [ul bullet={bullet}]. Se você informar esse parâmetro, o valor de {bullet} deve ser uma string sem aspas ao redor. considere o exemplo abaixo.
+
+```
+[ul bullet=*]
+Item um
+Item dois
+[/ul]
+```
+
+Também dá para usar espaços depois do caractere do marcador para aumentar a distância entre o bullet e o texto do item. Isso é útil se você quiser uma lista mais aberta visualmente. 
+
+Na [wikipedia](https://en.wikipedia.org/wiki/Bullet_(typography)) tem uma lista de possíveis bullets que você pode colar diretamente no código do seu BBCode.
