@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://bkt87wpwidt58"]
+
+[ext_resource type="Script" uid="uid://dfqjemc8vp05v" path="res://node_2d.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1962017933]
+script = ExtResource("1_wtcfe")
+metadata/_edit_vertical_guides_ = [14.0]
+
+[node name="Label" type="Label" parent="." unique_id=1974838844]
+offset_left = 14.0
+offset_top = 8.0
+offset_right = 94.0
+offset_bottom = 31.0
+text = "I am Label"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1192953469]
+offset_left = 119.0
+offset_top = 8.0
+offset_right = 277.0
+offset_bottom = 48.0
+text = "I am RichTextLabel"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1615906111]
+offset_left = 285.0
+offset_top = 8.0
+offset_right = 443.0
+offset_bottom = 48.0
+bbcode_enabled = true
+text = "I am [color=green]BBCode[/color]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=48470717]
+offset_left = 15.0
+offset_top = 40.0
+offset_right = 460.0
+offset_bottom = 80.0
+bbcode_enabled = true
+text = "[color=blue][url]https://github.com/felipebottega/Games/tree/gh-pages[/url][/color]"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=1100786121]
+offset_left = 15.0
+offset_top = 72.0
+offset_right = 460.0
+offset_bottom = 169.0
+bbcode_enabled = true
+text = "Tag [lb]img  width=40[rb] = [img width=40]icon.svg[/img]
+Tag [lb]img  width=40 height=80[rb] = [img width=40 height=80]icon.svg[/img]
+Tag [lb]img  width=30 tooltip=\"Godot icon\"[rb] = [img width=30 tooltip=\"Godot icon\"]icon.svg[/img]"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="." unique_id=1805697392]
+offset_left = 17.0
+offset_top = 178.0
+offset_right = 462.0
+offset_bottom = 211.0
+bbcode_enabled = true
+text = "I am [i][b][color=dark_red]BBCode[/color][/b][/i] in italic bold dark red"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="." unique_id=491127815]
+offset_top = 211.0
+offset_right = 445.0
+offset_bottom = 270.0
+bbcode_enabled = true
+text = "[ul bullet=❥ ]
+One
+Two
+[/ul]"
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="." unique_id=914887149]
+offset_top = 265.0
+offset_right = 445.0
+offset_bottom = 324.0
+bbcode_enabled = true
+text = "[ol type=1]
+First
+Second
+[/ol]"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="." unique_id=201215290]
+offset_top = 320.0
+offset_right = 445.0
+offset_bottom = 379.0
+bbcode_enabled = true
+text = "[ol type=i]
+First
+Second
+[/ol]"
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="." unique_id=576772671]
+offset_left = 15.0
+offset_top = 371.0
+offset_right = 106.0
+offset_bottom = 397.0
+bbcode_enabled = true
+text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0]PULSE[/pulse]"
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="." unique_id=1534303325]
+offset_left = 15.0
+offset_top = 400.0
+offset_right = 106.0
+offset_bottom = 426.0
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]WAVE[/wave]"
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="." unique_id=1052723686]
+offset_left = 15.0
+offset_top = 425.0
+offset_right = 123.0
+offset_bottom = 459.0
+bbcode_enabled = true
+text = "[tornado radius=5.0 freq=2.0 connected=1]  TORNADO  [/tornado]"
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="." unique_id=1401834217]
+offset_left = 15.0
+offset_top = 453.0
+offset_right = 123.0
+offset_bottom = 487.0
+bbcode_enabled = true
+text = "[shake rate=20.0 level=5 connected=1]SHAKE[/shake]"
+
+[node name="RichTextLabel13" type="RichTextLabel" parent="." unique_id=850127959]
+offset_left = 15.0
+offset_top = 481.0
+offset_right = 123.0
+offset_bottom = 515.0
+bbcode_enabled = true
+text = "[fade start=0 length=4]FADE[/fade]"
+
+[node name="RichTextLabel14" type="RichTextLabel" parent="." unique_id=1340557051]
+offset_left = 15.0
+offset_top = 507.0
+offset_right = 123.0
+offset_bottom = 541.0
+bbcode_enabled = true
+text = "[rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]RAINBOW[/rainbow]"
+
+[connection signal="meta_clicked" from="RichTextLabel3" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel4" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel5" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel6" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel7" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel8" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel9" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel10" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel11" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel12" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel13" to="." method="_on_rich_text_label_3_meta_clicked"]
+[connection signal="meta_clicked" from="RichTextLabel14" to="." method="_on_rich_text_label_3_meta_clicked"]
