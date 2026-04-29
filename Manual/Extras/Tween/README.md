@@ -146,4 +146,4 @@ tween.tween_property(sprite, "scale", Vector2.ZERO, 1.0).set_delay(1)
 tween.tween_property(sprite, "scale", Vector2.ONE, 1.0)
 ```
 
-Existem muitos outros métodos que podem ser usados no Tween. A lista mostrada aqui contém apenas os mais usuais.
+Existem muitos outros métodos que podem ser usados no Tween. A lista mostrada aqui contém apenas os mais usuais. Os outros métodos podem ser encontrados [aqui](https://docs.godotengine.org/en/stable/classes/class_tween.html#).
