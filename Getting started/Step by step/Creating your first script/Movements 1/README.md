@@ -24,6 +24,8 @@ Outra coisa que este projeto trouxe à minha atenção é o fato de que apenas d
 
 Para garantir independência, dê o segundo clique do mouse no node e selecione *Make Local*. 
 
+> 🟦 **REVISÃO POSTERIOR:** O *Make Local* não é necessário de verdade. O problema foi ter acessado a posição e escala do node como variável da instância (antes do `_init` e do `_ready`). Ao fazer isso no código, a engine puxa os valores do node original mas ainda não "teve tempo" de alterar o que deveria ser alterado na duplicata, pois ela nem entrou na cena ainda, apenas foram carregadas as instâncias. Fazer isso pelo `_init` também não funcionaria pois ele é chamado antes do node entrar na cena. O correto seria chamar `position` e `scale` dentro do `_ready`, pois aí sim o node já estaria na cena. 
+
 <p align="center">
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20instances/Galton%20Board%201">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202">Próximo ➡</a>
