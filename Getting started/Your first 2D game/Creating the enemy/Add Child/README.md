@@ -1,6 +1,6 @@
 # Add Child
 
-Assim como foi ocorreu no [jogo do tutorial](https://felipebottega.github.io/Games/Getting%20started/Your%20first%202D%20game/First%20Game%20in%20Godot/html/), haverá vários outros momentos em que você precisará instanciar outras cenas de maneira automatizada. Isso é feito através do método `add_child`, mas ainda vamos precisar ver algumas coisas antes de chegar nisso.
+Assim como foi ocorreu no [jogo do tutorial](https://felipebottega.github.io/Games/Getting%20started/Your%20first%202D%20game/First%20Game%20in%20Godot/html/), haverá vários outros momentos em que você precisará instanciar outras cenas de maneira automatizada. Isso é feito através do método `add_child`, mas ainda vamos aprender algumas coisas antes de chegar nisso.
 
 Vamos começar preparando a cena do mob, que consiste das 3 animações que ele possui. Estamos nos baseando parcialmente no projeto [Animation 2](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Animation%202) para a criação desta cena. Abaixo, segue um resumo geral de como as coisas estão configuradas. O objeto raíz da cena é um `RigidBody2D`. Uma coisa que percebi na prática é que esses objetos perdem velocidade com o tempo mesmo sem gravidade e fricção e com todos os damps zerados. Para evitar que isso aconteça, vá em *Linear → Damp Mode* e selecione a opção *Replace*. Problema resolvido!
 
