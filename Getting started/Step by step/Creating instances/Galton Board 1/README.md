@@ -22,5 +22,5 @@ Por fim, no tabuleiro de Galton é importante que o shape dos pins forme um quad
 
 <p align="center">
   <a href="https://github.com/felipebottega/Games/tree/gh-pages">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://pt.wikipedia.org/wiki/Glifo">Próximo ➡</a>
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Creating%20your%20first%20script/Movements%201">Próximo ➡</a>
 </p>
