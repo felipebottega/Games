@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b5jkmmnjxwvob"]
+
+[ext_resource type="Script" uid="uid://b8c3sfqaf4406" path="res://node_2d.gd" id="1_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=1618442773]
+script = ExtResource("1_0e48y")
+animation = 11
+
+[node name="SpinBox" type="SpinBox" parent="." unique_id=1182248028]
+offset_left = 116.0
+offset_top = 262.0
+offset_right = 202.5
+offset_bottom = 293.0
+max_value = 11.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1677175193]
+offset_left = 274.0
+offset_top = 491.0
+offset_right = 876.0
+offset_bottom = 581.0
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+horizontal_alignment = 1
+
+[connection signal="value_changed" from="SpinBox" to="." method="_on_spin_box_value_changed"]
