@@ -6,7 +6,7 @@ O Tween é mais adequado do que o `AnimationPlayer` para animações em que voc�
 
 Você deve evitar usar mais de um Tween por propriedade de um objeto. Se dois ou mais Tweens animarem uma propriedade ao mesmo tempo, o último criado terá prioridade e atribuirá o valor final. Se você quiser interromper e reiniciar uma animação, considere atribuir o Tween a uma variável.
 
-As animações Tween não foram projetadas para serem reutilizadas e tentar fazer isso resulta em um comportamento indefinido. Crie uma nova animação Tween para cada animação e sempre que você reproduzir uma animação desde o início. Lembre-se de que as animações Tween iniciam imediatamente, portanto, crie uma animação Tween somente quando desejar começar a animação.
+As animações Tween não foram projetadas para serem reutilizadas e tentar fazer isso resulta em um comportamento indefinido. Crie uma nova animação Tween para cada animação e sempre que você reproduzir uma animação desde o início. Lembre-se de que as animações Tween iniciam imediatamente, portanto, crie uma animação Tween somente quando desejar começar a animação. Pense que toda a configuração de uma animação Tween deve ser feito em um único frame. A animação em si pode levar mais frames, mas a configuração não (então usar coisas como `await` em um `Timer` entre as configurações pode resultar em erro).
 
 ## create_tween()
 
