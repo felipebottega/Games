@@ -2,7 +2,7 @@
 
 *Tweens* são mais úteis para animações que exigem a interpolação de uma propriedade numérica em um range de valores. O nome "tween" vem de "in-betweening", uma técnica de animação em que você especifica keyframes e o computador interpola os quadros que aparecem entre eles. Animar algo com um Tween é chamado de "tweening".
 
-O Tween é mais adequado do que o `AnimationPlayer` para animações em que você não conhece os valores finais antecipadamente. Tweens também são mais leves do que o `AnimationPlayer`, portanto, são muito adequados para animações simples ou tarefas gerais que não exigem ajustes visuais fornecidos pelo editor. m CallbackTweener em loop com um atraso.
+O Tween é mais adequado do que o `AnimationPlayer` para animações em que você não conhece os valores finais antecipadamente. Tweens também são mais leves do que o `AnimationPlayer`, portanto, são muito adequados para animações simples ou tarefas gerais que não exigem ajustes visuais fornecidos pelo editor. 
 
 Você deve evitar usar mais de um Tween por propriedade de um objeto. Se dois ou mais Tweens animarem uma propriedade ao mesmo tempo, o último criado terá prioridade e atribuirá o valor final. Se você quiser interromper e reiniciar uma animação, considere atribuir o Tween a uma variável.
 
