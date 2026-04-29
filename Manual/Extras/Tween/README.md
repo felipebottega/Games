@@ -75,4 +75,75 @@ tween.tween_property(sprite, "modulate", Color.RED, 1.0).set_ease(Tween.EASE_OUT
 tween.tween_property(sprite, "scale", Vector2.ZERO, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 ```
 
-## 
+## parallel()
+
+Esse método faz com que o o próximo comando de Tween seja executado junto do anterior. Por exemplo, o código abaixo vai executar as duas primeiras linhas em paralelo e depois a terceira linha é executada.
+
+```python
+tween.tween_property(sprite, "modulate", Color.RED, 1.0)
+tween.parallel().tween_property(sprite, "scale", Vector2.ZERO, 1.0)
+tween.tween_property(sprite, "scale", Vector2.ONE, 1.0)
+```
+
+## set_parallel() e chain()
+
+Todos os Tweens após o `set_parallel(true)` são executados em paralelos. Assim como é o caso do `parallel()`, o Tween logo antes do comando também é executado em paralelo aos que vem depois. O comando `chain()` encerra passo anterior e começa um novo. Por exemplo, no código abaixo todos os Tweens são executados em paralelo, com exceção do último que é executado depois.
+
+```python
+tween.tween_property(sprite, "modulate", Color.RED, 1.0)
+tween.set_parallel(true)
+tween.tween_property(sprite, "scale", Vector2.ZERO, 1.0)
+tween.tween_property(sprite, "rotation_degrees", 180.0, 1.0)
+tween.chain().tween_property(sprite, "scale", Vector2.ONE, 1.0)
+```
+
+## set_loops()
+
+Esse método faz com que o Tween repita toda a sequência de animações um determinado número de vezes. No exemplo abaixo, a sequência completa será executada 3 vezes.
+
+```python
+tween = tween.set_loops(3)
+tween.tween_property(sprite, "modulate", Color.RED, 0.5)
+tween.tween_property(sprite, "scale", Vector2.ZERO, 0.5)
+tween.tween_property(sprite, "scale", Vector2.ONE, 0.5)
+```
+
+## bind_node()
+
+Esse método faz com que o Tween esteja vinculado ao node. Assim que o node é removido da cena, o Tween é removido junto. No exemplo abaixo, a última linha não é executada pois o node foi removido da cena (não precisa ser removido pelo próprio Tween). 
+
+```python
+tween = tween.bind_node(sprite)
+tween.tween_property(sprite, "modulate", Color.RED, 1.0)
+tween.tween_property(sprite, "scale", Vector2.ZERO, 1.0)
+tween.tween_callback(sprite.queue_free)
+tween.tween_property(sprite, "scale", Vector2.ONE, 1.0)
+```
+
+##  stop() e play()
+
+Esse par de métodos serve para interromper e depois retomar um Tween. O `stop()` pausa o tweening e o `play()` retoma um Tween que estava pausado. No exemplo abaixo, o Tween começa normalmente. Após $1.5$ segundos vem o `stop()`, que pausa a animação no ponto atual. Ele espera mais $1.5$ segundos e vem dá o `play()`, que retoma de onde parou. A retomada da animação será na metade da animação da linha `tween.tween_property(sprite, "scale", Vector2.ZERO, 1.0)`.
+
+```python
+tween.tween_property(sprite, "modulate", Color.RED, 1.0)
+tween.tween_property(sprite, "scale", Vector2.ZERO, 1.0)
+tween.tween_property(sprite, "scale", Vector2.ONE, 1.0)
+await get_tree().create_timer(1.5).timeout
+tween.stop()
+await get_tree().create_timer(1.5).timeout
+tween.play()
+```
+
+> PS: Se um Tween estiver parado e não estiver preso a um node, ele pode continuar existindo indefinidamente até ser retomado ou invalidado manualmente (com o método `kill`).
+
+## set_delay()
+
+Esse método adiciona um atraso antes de iniciar um Tweener específico. No exemplo abaixo, ele executa a primeira linha e espera $1$ segundo para executar a segunda. à primeira vista isso pode parecer equivalente ao `tween_interval()`, mas o comportamento será diferente quando `parallel()` estiver sendo usado também.
+
+```python
+tween.tween_property(sprite, "modulate", Color.RED, 1.0)
+tween.tween_property(sprite, "scale", Vector2.ZERO, 1.0).set_delay(1)
+tween.tween_property(sprite, "scale", Vector2.ONE, 1.0)
+```
+
+Existem muitos outros métodos que podem ser usados no Tween. A lista mostrada aqui contém apenas os mais usuais.
