@@ -1,8 +1,6 @@
 # Integral Games
 Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https://docs.godotengine.org/en/stable/index.html), vou deixando aqui os jogos que considero interessantes para mostrar a outras pessoas. Dentro de cada pasta deste repositório há um readme detalhando sobre o que é o jogo e explicando alguns detalhes técnicos que considero relevantes. Este repositório não contém os projetos em Godot, mas apenas os arquivos necessários para jogar. Todos os jogos que estão aqui podem ser acessados na [minha página de jogos](https://felipebottega.github.io/Games/).
 
-Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO POSTERIOR**". Estes blocos contém observações a respeito do próprio tutorial, mas feitas após eu ter finalizado todos os tutoriais. Eu não quis alterar o conteúdo original, mas por já ter adquirido bastante conhecimento da engine, achei que valia a pena comentar trechos dos tutoriais que estivessem muito equivocados ou limitados.
-
 <h2>Conteúdo </h2>
 
 <li> <b>Getting started\Step by step\Creating instances\Galton Board 1</b> </li>
@@ -69,19 +67,6 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201#tomando-dano
 ">  Tomando dano
  </a><br>
-<li> <b>Getting started\Your first 2D game\Creating the enemy\Add Child</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#position-vs-global_position-em-path2d
-">  position vs global_position em Path2D
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#configurando-a-main
-">  Configurando a Main
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#packedscene
-">  PackedScene
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#movimentando-os-mobs
-">  Movimentando os mobs
- </a><br>
 <li> <b>Getting started\Your first 2D game\Creating the enemy\Animation 2</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Animation%202#arrays
 ">  Arrays
@@ -117,6 +102,19 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D#variações-do-mesmo-objeto
 ">  Variações do mesmo objeto
+ </a><br>
+<li> <b>Getting started\Your first 2D game\Creating the enemy\Add Child</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#position-vs-global_position-em-path2d
+">  position vs global_position em Path2D
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#configurando-a-main
+">  Configurando a Main
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#packedscene
+">  PackedScene
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child#movimentando-os-mobs
+">  Movimentando os mobs
  </a><br>
 <li> <b>Getting started\Your first 2D game\Heads up display\Galton Board 2</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#organização-de-um-projeto
