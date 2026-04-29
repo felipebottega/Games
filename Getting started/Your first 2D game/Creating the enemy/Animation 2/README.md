@@ -14,22 +14,22 @@ Em particular, usaremos o método `pick_random` para selecionar um elemento alea
 
 ## Animações
 
-Vamos relembrar rapidamente como acrescentar animações para o seu personagem. Começamos criando a estrutura principal da cena da árvore dele.
+Vamos relembrar rapidamente como acrescentar animações para o seu personagem. Começamos criando a estrutura da cena dele.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/127c3452-87b0-4f71-a117-eee5dbca3853" width="200">
+    <img src="https://github.com/user-attachments/assets/127c3452-87b0-4f71-a117-eee5dbca3853" width="250">
 </p>
 
-Vá em `AnimatedSprite2D` → *Inspector → Animation → Sprite Frames → New SpriteFrames* e clique novamente no mesmo local onde estava *New SpriteFrames* (agora terá escrito *SpriteFrames*, o novo objeto de edição que você acabou de criar).  
+Vá em *Inspector → Animation → Sprite Frames → New SpriteFrames* e clique novamente no mesmo local onde estava *New SpriteFrames* (agora terá escrito *SpriteFrames*, o novo objeto de edição que você acabou de criar).  
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/2a53779f-8841-41c6-a5db-834870486863" width="250">
+    <img src="https://github.com/user-attachments/assets/2a53779f-8841-41c6-a5db-834870486863" width="300">
 </p>
 
-Crie três tipos de animação e arraste os respectivos sprites de *FileSystem* para a caixa de edição ao lado. Faça isso para os três tipos. A *Animation Speed* (espaço onde está escrito "5 FPS") pode ser editada à vontade, recomendo escolher entre 3 e 6 FPS. Deixe o *Animation Looping* ligado para todos (ícone ao lado do *Animation Speed*, por default já vem ligado).
+Crie três tipos de animação e arraste os respectivos sprites do *FileSystem* para a caixa de edição ao lado. Faça isso para os três tipos. A *Animation Speed* (espaço onde está escrito "5.0 FPS") pode ser editada à vontade, recomendo escolher entre 3 e 6 FPS. Deixe o *Animation Looping* ligado para todos (ícone ao lado do *Animation Speed*, por default já vem ligado).
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/f221ad2b-5a7b-49e0-add1-d580b4e7a6db" width="700">
+    <img src="https://github.com/user-attachments/assets/f221ad2b-5a7b-49e0-add1-d580b4e7a6db" width="900">
 </p>
 
 Aproveite para já colocar o shape de colisão no personagem.
@@ -39,27 +39,32 @@ Aproveite para já colocar o shape de colisão no personagem.
 Se você não quer usar física e quer controle total sobre a posição, o tipo de node ideal é `Node2D`, trabalha apenas com o visual. O `CharacterBody2D` permite colisão mas te deixa com algum controle. O `RigidBody2D` só deve ser usado se você quer que o movimento obedeça as leis da física, como gravidade, colisões, impulsos etc. Um resumo geral é dado na tabela abaixo.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/355f04a9-ad66-4cc8-a113-694a3ae10d6c" width="800">
+    <img src="https://github.com/user-attachments/assets/355f04a9-ad66-4cc8-a113-694a3ae10d6c" width="900">
 </p>
 
-Vale ressaltar que essa é uma tabela de recomendações, não de regras absolutas. Em diversos exemplos anteriores nós criamos a medusa como `RigidBody2D` e mudamos sua posição manualmente com o `position`. O `RigidBody2D` é controlado pelo motor de física da Godot. Quando você define a posição diretamente, está lutando contra o sistema de física, que pode sobrescrever sua posição no mesmo frame ou nos seguintes. Isso causa comportamentos inconsistentes. Nos nossos exemplos anteriores tudo ficou ok, mas vamos tentar fazer as coisas corretas daqui para frente. 
+Vale ressaltar que essa é uma tabela de recomendações, não de regras absolutas. Em diversos exemplos anteriores nós criamos a medusa como `RigidBody2D` e mudamos sua posição manualmente com o `position`. O `RigidBody2D` é controlado pela engine física da Godot. Quando você define a posição diretamente, está lutando contra o sistema de física, que pode sobrescrever sua posição no mesmo frame ou nos seguintes. Isso causa comportamentos inconsistentes. Nos nossos exemplos anteriores tudo ficou ok, mas vamos tentar fazer as coisas corretas daqui para frente. 
 
 ## Animações com aleatoriedade
 
-O script do personagem está mostrado abaixo. Ele começa definindo um array de fatores de velocidade e escolhe aleatoriamente um deles. Depois, define um array com os nomes das animações ("fly", "swim", "walk"), escolhe um deles aleatoriamente e dá play na animação. Na função `_process`, o personagem se locomove um pouco para frente no eixo $x$ a cada frame. 
+O script do personagem está mostrado abaixo. Ele começa definindo o array *factor* de fatores de velocidade e escolhe aleatoriamente um destes fatores. Depois, define o array *mob_types* com os nomes das animações ("fly", "swim", "walk"), escolhe um deles aleatoriamente e dá play na animação. Na função `_process`, o personagem se locomove um pouco para frente no eixo $x$ a cada frame. 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/c1365882-1a4a-4b0f-94db-043c10f5ee13" width="500">
+    <img src="https://github.com/user-attachments/assets/c1365882-1a4a-4b0f-94db-043c10f5ee13" width="600">
 </p>
 
 > PS: Se você trocar o `CharacterBody2D` por `RigidBody2D` (e tirar a gravidade no segundo caso), vai notar que o personagem fica um pouco parado no início. Esse comportamento inesperado se deve ao que falamos anteriormente sobre forçar posição em um `RigidBody2D`. É possível, mas pode levar a comportamentos inesperados.
 
 ## VisibleOnScreenNotifier2D
 
-Agora vá para o node `VisibleOnScreenNotifier2D` e ative o sinal `screen_exited`.
+Agora vá para o node `VisibleOnScreenNotifier2D` e ative o sinal `screen_exited`. Este node representa uma região retangular no espaço 2D. Quando qualquer parte dessa região se torna visível na tela ou em uma viewport, ela emite um sinal `screen_entered` e, da mesma forma, emite um sinal `screen_exited` quando nenhuma parte dela permanece visível. 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/59ed5a8f-d50f-4622-9a0a-b40462834f77" width="1000">
+    <img src="https://github.com/user-attachments/assets/59ed5a8f-d50f-4622-9a0a-b40462834f77" width="1100">
 </p>
 
 Na função `_on_visible_on_screen_notifier_2d_screen_exited`, basta acrescentar o comando `queue_free()`. Isto coloca o respectivo node na fila para ser deletado ao fim do frame. Como o sinal foi feito para ser emitido apenas quando o sprite sair da tela, isso é exatamente o que queremos, pois vai evitar armazenar objetos sem utilidade na memória.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Coding%20the%20player/Animation%201">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks">Próximo ➡</a>
+</p>
