@@ -26,6 +26,8 @@ O parâmetro `delay` controla quando um sprite do rastro será adicionado, usand
   <img src="https://github.com/user-attachments/assets/413b2296-f478-40cf-a26d-c33ce101cfb2" width="600">
 </p>
 
+> 🟦 **REVISÃO POSTERIOR:**  A função `start_lifetime` do sprite usa um timer para marcar o tempo antes de destruir o sprite. Mais especificamente, usa o comando `await get_tree().create_timer(seconds).timeout`. A SceneTree possui nativamente esse método que cria um timer. Isso é equivalente a usar um sinal por script e o node `Timer` com o comando `$Timer.timeout.connect(_on_timer_timeout)`.
+
 ## Menu principal
 
 Este é o meu primeiro projeto que possui uma cena especificamente para o menu. À primeira vista, ela contém apenas um botão para iniciar o jogo, um botão para mostrar instruções e um background móvel. Aliás, note que o script está todo no background. O `_process` contém a lógica que faz o backrgound se mover em torno do botão de Start enquanto muda sua escala suavemente também. Ao pressionar no botão de instruções, vários itens se omitem e o sprite com as instruções se abre, além do background sofrer uma aplicação do `modulate` que o deixa mais escurecido. O botão de start executa a linha `get_tree().change_scene_to_file("res://scenes/rotations_composition.tscn")`, que serve para mudar fazer mudança de cena.
