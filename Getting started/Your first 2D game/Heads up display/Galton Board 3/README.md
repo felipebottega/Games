@@ -2,6 +2,8 @@
 
 Assim que mostrei o Galton Board 2 para alguns conhecidos, recebi pedidos. Como estes pedidos faziam bastante sentido e são fáceis de implementar, resolvi fazer logo. Um pedido era para aumentar o slider pois ele estava muito discreto e o outro era para colocar poder alterar mais parâmetros (com sliders). Então vamos lá!
 
+## Melhorias no Galton Board 2
+
 Colocar mais sliders visualmente é fácil, só ir no HUD e acrescentar os nodes necessários e seus labels. Mudei um pouco algumas coisas na nomenclatura, mas nada demais. Cada slider tem sua própria configuração de parâmetros, não se esqueça de configurar.
 
 <p align="center">
