@@ -156,6 +156,10 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#sobre-o-canvaslayer
 ">  Sobre o CanvasLayer
  </a><br>
+<li> <b>Getting started\Your first 2D game\Heads up display\Galton Board 3</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%203#melhorias-no-galton-board-2
+">  Melhorias no Galton Board 2
+ </a><br>
 <br><li> <b>Manual\2D\Canvas layers\Galton Board 4</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items
 ">  Viewport e Canvas items
