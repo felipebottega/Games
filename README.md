@@ -173,19 +173,6 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#-implementando-o-shake-para-o-tabuleiro-de-galton
 ">   Implementando o shake para o tabuleiro de Galton
  </a><br>
-<li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites
-">  Sprites de sprites
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#rastro-de-sprites
-">  Rastro de sprites
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#menu-principal
-">  Menu principal
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#hud-de-sliders
-">  HUD de sliders
- </a><br>
 <li> <b>Manual\2D\Viewport and canvas transforms\Viewport and canvas transforms</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#sistema-de-coordenadas-locais
 ">  Sistema de coordenadas locais
@@ -198,6 +185,19 @@ Enquanto estiver estudando e testando as funcionalidades da engine [Godot](https
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Viewport%20and%20canvas%20transforms#movimento-após-rotação
 ">  Movimento após rotação
+ </a><br>
+<li> <b>Manual\2D\Viewport and canvas transforms\Movements 3</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#sprites-de-sprites
+">  Sprites de sprites
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#rastro-de-sprites
+">  Rastro de sprites
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#menu-principal
+">  Menu principal
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203#hud-de-sliders
+">  HUD de sliders
  </a><br>
 <li> <b>Manual\2D\Rendering\2D lights and shadows - Introduction</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20lights%20and%20shadows%20-%20Introduction#pointlight2d
