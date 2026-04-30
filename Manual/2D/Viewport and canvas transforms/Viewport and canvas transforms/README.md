@@ -3,14 +3,14 @@
 Vamos falar sobre sistemas de coordenadas neste tutorial. Começamos inicializando uma cena simples, um  `Node2D` contendo o `Sprite2D` do logo da Godot.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/41c58729-46fe-497f-981d-99dfbf2ec4c2" width="600">
+  <img src="https://github.com/user-attachments/assets/41c58729-46fe-497f-981d-99dfbf2ec4c2" width="800">
 </p>
 
-Se você for no *Inspector* agora e abrir a aba *Transform* de ambos, as posições deles devem ser $(0, 0)$. A figura abaixo mostra isso, o `Node2D` à esquerda e o `Sprite2D` à direita.
+Se você for no *Inspector* agora e abrir a aba *Transform* de ambos, as posições de ambos deve ser $(0, 0)$. A figura abaixo mostra isso, o `Node2D` à esquerda e o `Sprite2D` à direita.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/26904547-7b24-4582-acbc-a255593bb572" width="150">
-  <img src="https://github.com/user-attachments/assets/eb8dd125-bf5f-42cf-9c85-f6e4a6584019" width="140">
+  <img src="https://github.com/user-attachments/assets/26904547-7b24-4582-acbc-a255593bb572" width="210">
+  <img src="https://github.com/user-attachments/assets/eb8dd125-bf5f-42cf-9c85-f6e4a6584019" width="210">
 </p>
 
 ## Sistema de coordenadas locais
@@ -18,9 +18,9 @@ Se você for no *Inspector* agora e abrir a aba *Transform* de ambos, as posiç�
 Agora vamos mover apenas o node do sprite. Repare que o `Node2D` continua na origem enquanto que o filho mudou de posição.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/98985292-8f48-4731-8de3-4ebe335d9f0b" width="500">
-  <img src="https://github.com/user-attachments/assets/be7340a8-4fce-47d3-95a3-780a5a633f1e" width="150">
-  <img src="https://github.com/user-attachments/assets/8eeb30c8-eaf5-47a7-8eba-394a590aad56" width="150">
+  <img src="https://github.com/user-attachments/assets/98985292-8f48-4731-8de3-4ebe335d9f0b" width="550">
+  <img src="https://github.com/user-attachments/assets/be7340a8-4fce-47d3-95a3-780a5a633f1e" width="200">
+  <img src="https://github.com/user-attachments/assets/8eeb30c8-eaf5-47a7-8eba-394a590aad56" width="200">
 </p>
 
 Salve essa cena do jeito que está e crie uma outra cena chamada *World*, com apenas um node do tipo `Node2D`. Feito isso, coloque a cena inicial dentro da *World* e mova ela de posição. Dentro da cena *World* a nossa cena inicial foi colocada na posição $(44, 112)$, mas note que o `Sprite2D` ainda está em $(485, 243)$. Habilitamos o *Editable Children* para poder mostrar isso.
@@ -40,12 +40,12 @@ O que está acontecendo é que a posição mostrada no *Transform* sempre diz re
 No [tabuleiro de Galton 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204) vimos sobre o `Viewport.canvas_transform`. Na verdade esse é só um exemplo de aplicação do `Transform2D`, que é uma classe de transformações lineares de Godot. Em particular, estamos interessados na matriz mencionada no projeto. Essa matriz é acessível por qualquer node filho do `CanvasItem`, através do atributo `transform`. Considere o script simples mostrado abaixo.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cb558283-2ed0-4f03-9dac-c2199f7ebe2f" width="250">
+  <img src="https://github.com/user-attachments/assets/cb558283-2ed0-4f03-9dac-c2199f7ebe2f" width="220">
 </p>
 
-O script deve ser criado sobre o `Node2D` e na cena inicial deste tutorial. Os prints que iremos obter são $[X: (1, 0),\ Y: (0, 1),\ O: (0, 0)]$ e $[X: (1, 0),\ Y: (0, 1),\ O: (485, 243)]$, que se refere aos vetores $e_1, e_2, v_o$. O node raíz está com os valores default e o sprite está com a translação mencionada acima. Ao executar a cena *World*, obtemos $[X: (1, 0),\ Y: (0, 1),\ O: (44, 112)]$ e $[X: (1, 0),\ Y: (0, 1),\ O: (485, 243)]$. O `Node2D` foi transladado da origem nessa cena. Note que o `transform` do `Sprite2D` não se alterou, pois ele se refere ao sistema de coordenadas local, isto é, em relação ao seu pai e não a cena onde ele está. Isto nada mais é do que acessarmos as informações mostradas acimas por meio de código.
+O script deve ser criado sobre o `Node2D` e na cena inicial deste tutorial. Os prints que iremos obter são $[X: (1, 0),\ Y: (0, 1),\ O: (0, 0)]$ e $[X: (1, 0),\ Y: (0, 1),\ O: (485, 243)]$, que se refere aos vetores $e_1, e_2, v_o$ de cada node. O node raíz está com os valores default e o sprite está com a translação mencionada acima. Ao executar a cena *World*, obtemos $[X: (1, 0),\ Y: (0, 1),\ O: (44, 112)]$ e $[X: (1, 0),\ Y: (0, 1),\ O: (485, 243)]$. O `Node2D` foi transladado da origem nessa cena. Note que o `transform` do `Sprite2D` não se alterou, pois ele se refere ao sistema de coordenadas local, isto é, em relação ao seu pai e não a cena onde ele está. Isto nada mais é do que acessarmos as informações mostradas acimas por meio de código.
 
-O atributo `transform` é interpretado em Godot como a matriz $2 \times 3$ dada por $\left[ e_1, e_2, v_o \right]$. Assim como temos a posição local dos objetos (em relação ao pai), também temos a posição global deles, que são as coordenadas em relação ao mundo real. O primeiro se chama *Item Coordinates* (ou *CanvasItem Coordinates*) e o segundo se chama *Canvas Coordinates* (ou *World Coordinates*). Temos também o *Viewport Coordinates*, que são as coordenadas da viewport (a tela que o jogador enxerga). Vale a pena checar [esta explicação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items) para lembrar a diferença destes últimos dois sistemas. Por fim, vale notar que o *Viewport Coordinates* é um sistema de coordenadas dentro da engine, para edição. Quando o jogo de fato vai para a tela do jogador, podemos ter diferentes resoluções. Aí entra o último sistema de coordenadas, que é o *Screen Coordinates* (ou *Pixel Coordinates*). É recomendado nunca se trabalhar com este último sistema de coordenadas diretamente.
+O atributo `transform` é interpretado em Godot como a matriz $2 \times 3$ dada por $\left[ e_1, e_2, v_o \right]$. Assim como temos a posição local dos objetos (em relação ao pai), também temos a posição global deles, que são as coordenadas em relação ao mundo real. O primeiro se chama *Item Coordinates* (ou *CanvasItem Coordinates*) e o segundo se chama *Canvas Coordinates* (ou *World Coordinates*). Temos também o *Viewport Coordinates*, que são as coordenadas da viewport (a tela que o jogador enxerga). Vale a pena checar [esta explicação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items) para lembrar a diferença entre *Canvas* e *Viewport*. Por fim, vale notar que o *Viewport Coordinates* é um sistema de coordenadas dentro da engine, para edição. Quando o jogo de fato vai para a tela do jogador, podemos ter diferentes resoluções. Aí entra o último sistema de coordenadas, que é o *Screen Coordinates* (ou *Pixel Coordinates*). É recomendado nunca se trabalhar com este último sistema de coordenadas diretamente.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/858f2685-18c5-4fe6-879c-97000889e6a9" />
@@ -60,8 +60,8 @@ O script abaixo mostra todas as informações discutidas aqui. Ao executarmos o 
 Note que $(529, 355) = (485+44, 243+12)$, que é justamente o que esperávamos, é apenas a translação do ponto de acordo com a translação feita no node pai. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b12fb6e1-54d0-4721-b3a4-19e1cbe4b4cf" width="350">
-  <img src="https://github.com/user-attachments/assets/2b7fa680-3a20-4408-817c-62a97d0f17ff" width="350">
+  <img src="https://github.com/user-attachments/assets/b12fb6e1-54d0-4721-b3a4-19e1cbe4b4cf" width="380">
+  <img src="https://github.com/user-attachments/assets/2b7fa680-3a20-4408-817c-62a97d0f17ff" width="360">
 </p>
 
 De maneira informal, podemos dizer que `get_global_transform()` = `transform_pai` * `transform`. Note que o próprio `transform` já está embutido no `get_global_transform()`. Tanto esta matriz quando a `get_global_transform().affine_inverse()` apenas servem para converter a posição do objeto em diferentes coordenadas.  Os vetores $e_1$ e $e_2$ no sistema de coordenadas global são exatamente os que já estão em `get_global_transform()`. 
@@ -99,7 +99,7 @@ Por mais que a rotação do `Node2D` tenha acrescentado um pouco mais de rotaç�
 
 Acredito que não seja necessário levar o `Node2D` para o *World* para checar que este comportamento irá se repetir lá. Inclusive, o experimento da translação poderia ter sido feito na cena do `Node2D`. Se ele for transladado da origem, a posição do sprite continuará a mesma (no `transform` e no *Inspector*), pois ela sempre é em relação ao node pai. Apenas fizemos aquela mudança de cena para efeito didático, pois é o que vai acontecer mais vezes na prática.
 
-Vale ressaltar que quaisquer outros efeitos de mudar escala e distorção seguem a mesma lógica, isto é, os valores mostrados são os valores em relação ao node pai. Além disso, ressaltamos também que as transformações de converter coordenadas são aplicáveis em tudo o que discutimos até aqui, não apenas translações.
+Vale ressaltar que quaisquer outros efeitos de mudar escala e distorção seguem a mesma lógica, isto é, os valores mostrados são os valores em relação ao node pai. Além disso, as transformações de converter coordenadas são aplicáveis em tudo o que discutimos até aqui, não apenas translações.
 
 ## Movimento após rotação
 
@@ -110,6 +110,11 @@ Todo node sempre possui duas "setinhas" ("gizmos" em inglês) indicando as dire�
   <img src="https://github.com/user-attachments/assets/cae8971c-4228-4093-b849-acc8ac62f266" width="500">
 </p>
 
-O atributo `position` sempre se refere à tela (o mundo real, posição global, etc). Note que $e_1$ e $e_2$ são os vetores que indicam essas setinhas da rotação. Então se quisermos andar com o node pelo sei eixo $x$, por exemplo, basta fazer algo como `position += speed * transform.x`, em que `speed` é um float que determina a velocidade. Se fosse um `CharacterBody2D ` você poderia usar `velocity = speed * transform.x` e depois `move_and_slide()`. Se fosse um `RigidBody2D` você não usaria o `position` pois isso "brigaria" com a física, mas é possível usar `linear_velocity = speed * transform.x`. 
+O atributo `position` sempre se refere à tela (o mundo real, posição global, etc). Note que $e_1$ e $e_2$ são os vetores que indicam essas setinhas da rotação. Então se quisermos andar com o node pelo sei eixo $x$ rotacionado, devemos fazer algo como `position += speed * transform.x`, em que `speed` é um float que determina a velocidade. Se fosse um `CharacterBody2D ` você poderia usar `velocity = speed * transform.x` e depois `move_and_slide()`. Se fosse um `RigidBody2D` você não usaria o `position` pois isso "brigaria" com a física, mas é possível usar `linear_velocity = speed * transform.x`. 
 
 Há diversas outras aplicações. O principal é ter esse conceito em mente, pois ele é muito útil em jogos.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Viewport%20and%20canvas%20transforms/Movements%203">Próximo ➡</a>
+</p>
