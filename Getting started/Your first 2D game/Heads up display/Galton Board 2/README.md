@@ -150,8 +150,8 @@ Agora adicione o HUD à cena Main e acrescente a linha `$HUD.update_num_balls(1 
 Anteriormente o script do HUD só tinha a função `update_num_balls`. Agora vamos criar um sinal para este botão. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c8b45d32-797c-4eb8-a26a-e7bab4d3cc94" width="200">
-  <img src="https://github.com/user-attachments/assets/a6a1f160-d74f-4015-8a9f-75ead37c561a" width="550">
+  <img src="https://github.com/user-attachments/assets/c8b45d32-797c-4eb8-a26a-e7bab4d3cc94" width="250">
+  <img src="https://github.com/user-attachments/assets/a6a1f160-d74f-4015-8a9f-75ead37c561a" width="650">
 </p>
 
 Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pressionado. Este sinal faz o HUD esconder o botão de Start e emitir um [sinal customizado](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203) que chamamos de `start_game`. Note que este sinal customizado envia um float junto, isto também é possível. 
@@ -159,55 +159,55 @@ Como podemos ver, criamos o sinal que é acionado quando o botão de Start é pr
 Tudo que fizemos até agora diz respeito apenas à própria cena do HUD, são ações independentes do ambiente externo. Para conectar o sinal `start_game` à Main, precisamos ir na HUD instanciada na Main. Clique na HUD da Main e vá em Node do painel à direita, ali deve estar presente o sinal `start_game`. Clique no sinal e defina a função `new_game` na Main.  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c" width="1000">
+  <img src="https://github.com/user-attachments/assets/9dfecccc-ebba-4779-99cd-961eddd3278c" width="1100">
 </p>
 
 > PS: O sinal vem do node HUD e não do botão Start, apesar de ser este o botão que aciona o trigger. Porém, no script você pode notar que o sinal foi criado no cabeçalho, sendo uma variável da instância do HUD e, a princípio, sem relação direta com o botão de Start. Essa relação ocorre quando a função `_on_start_pressed` é acionada, pois ela emite o sinal `start_game`. Sendo assim, o evento de pressionar o botão não aciona diretamente a função `new_game`, ele aciona um outro sinal que aciona a função `new_game`. É importante ter isso em mente para não ter confusão na hora e, por exemplo, procurar o sinal `start_game` no botão de Start (eu fiz isso).
 
-Altere o script da Main para ocultar todos os elementos e o processamento da física, exceto o botão de Start. Ao apertar o botão, a `new_game` vai trazer tudo de volta e o jogo vai começar.
+Altere o script da Main para ocultar todos os elementos e o processamento da física, exceto o botão de Start. Ao apertar o botão, a função `new_game` vai trazer tudo de volta e o jogo vai começar.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/eb785366-0755-45f0-8e87-28e8316359b2" width="350">
+  <img src="https://github.com/user-attachments/assets/eb785366-0755-45f0-8e87-28e8316359b2" width="450">
 </p>
 
 **Quit:** Quando todas as bolinhas caírem, o jogador pode querer recomeçar. Do jeito que está agora isso não é possível, então vamos resolver esta questão. Adicione um node do tipo `Button` como mais um filho do HUD e renomeie este botão para *Quit*. Em *Inspector → Text*, escreva "Quit". Pode usar a mesma fonte especial que tem na pasta de fontes e faça os ajustes estético que preferir. A posição do botão na cena do HUD não é tão relevante, podemos deixar pra arrumar na cena principal (aliás, essa observação vale para todos os itens do HUD). Deixamos o botão alinhado com a caixa de contagem.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d5053e46-b96b-47b7-81c7-fd8c659c5b1a" width="900">
+  <img src="https://github.com/user-attachments/assets/d5053e46-b96b-47b7-81c7-fd8c659c5b1a" width="1100">
 </p>
 
 Queremos que todo o jogo reinicie quando este botão for pressionado. Além disso, só faz sentido que ele esteja na tela após o Start ter sido pressionado. Para obter o primeiro comportamento, criamos um sinal ao pressionar o botão de Quit. O comando `get_tree().reload_current_scene()` busca o nível mais alto da árvore de execução e recomeça tudo dali. Ou seja, dentro da Main este botão terá o efeito de retroceder toda a Main, nos levando ao início do jogo.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/32ecccaa-69e5-4cbd-81ba-4fe312877875" width="200">
-  <img src="https://github.com/user-attachments/assets/3a18c2e5-ef9b-40cd-926b-80f511616042" width="300">
-  <img src="https://github.com/user-attachments/assets/42cbe785-13d2-42d3-8822-0cee70d4b4b2" width="350">
+  <img src="https://github.com/user-attachments/assets/32ecccaa-69e5-4cbd-81ba-4fe312877875" width="240">
+  <img src="https://github.com/user-attachments/assets/3a18c2e5-ef9b-40cd-926b-80f511616042" width="350">
+  <img src="https://github.com/user-attachments/assets/42cbe785-13d2-42d3-8822-0cee70d4b4b2" width="410">
 </p>
 
 **StepSlider:** Existe um node em Godot chamado `HSlider`, que é um slider na horizontal. O usuário pode clicar e arrastar para mudar um parâmetro dentro de um range de valores. Usaremos isso no menu principal para o usuário definir o valor do parâmetro *step*. Adicione ele ao HUD, renomeie para "StepSlider" e defina os valores `Min Value` = 18, `Step` = 1 e `Value` = 40, como mostrado abaixo.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/eb632954-f877-46f5-a005-4bf31d5855f3" width="1000">
+  <img src="https://github.com/user-attachments/assets/eb632954-f877-46f5-a005-4bf31d5855f3" width="1100">
 </p>
 
 Desse jeito ele é apenas um slider bonito na tela. Para ter funcionalidade, precisamos que o seu valor defina o novo *step* de fato. Lembra que na Main o step estava definido no topo como sendo igual a 70? Vamos redefinir este valor com base no atributo `value` do nosso novo slider. Alteramos a função `_on_start_pressed` para enviar a variável `step_value` com algum valor (antes ela foi inicializada mas nunca usada, mas por default vale zero), e esse valor é o `value` do slider. Esse valor entra no `emit` do sinal `start_game` que entra na `new_game` e substitui o antigo valor do `step`. Assim o `set_stage` usará esse valor novo para montar o cenário. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8f60d2a1-96d2-47d9-9bd6-5a3b4c42482c" width="250">
-  <img src="https://github.com/user-attachments/assets/77cc2492-4382-4724-aa31-5991c8d35ac7" width="250">
+  <img src="https://github.com/user-attachments/assets/8f60d2a1-96d2-47d9-9bd6-5a3b4c42482c" width="290">
+  <img src="https://github.com/user-attachments/assets/77cc2492-4382-4724-aa31-5991c8d35ac7" width="280">
 </p>
 
 **StepSliderInfo:** Nosso último elemento do HUD é um node do tipo `Label` que apenas informa ao usuário o que aquele slider faz. A imagem abaixo deve ser o suficiente para explicar tudo. Não esquecer que ele também deve ser omitido após o jogador pressionar o Start. Coloque isso no `new_game` junta das outras chamadas do mesmo tipo. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a7fb3c6c-8221-473c-9dbc-52f107a2b640" width="1000">
+  <img src="https://github.com/user-attachments/assets/a7fb3c6c-8221-473c-9dbc-52f107a2b640" width="1100">
 </p>
 
 > PS: Não precisa se preocupar com o reaparecimento deste botão e de todos os outros que foram omitidos e queremos de volta na tela inicial, pois o Quit dá um hard reset no jogo, então tudo é carregado novamente.
 
 ## Extras
 
-Como você já deve ter notado, o background e os objetos da cena não harmonizam bem. O principal é a semelhança de cores. Para resolver isso, colocaremos um sprite como background. Ele é o arquivo *HD-wallpaper-beautiful-sunset-beauty-blue-sky.jpg* na pasta de sprites. É importante que ele seja o primeiro elemento da cena Main, assim fiará atrás de tudo. Poderíamos criar uma cena para ele, mas como é algo tão simples, vai direto na cena Main.
+Como você já deve ter notado, o background e os objetos da cena não harmonizam bem. O principal problema é a semelhança das cores. Para resolver isso, colocaremos um sprite como background. Ele é o arquivo *HD-wallpaper-beautiful-sunset-beauty-blue-sky.jpg* na pasta de sprites. É importante que ele seja o primeiro elemento da cena Main, assim ficará atrás de tudo. Poderíamos criar uma cena para ele, mas como é algo tão simples, vai direto na cena Main.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0bccbdd2-c7a2-40c7-942c-bdedf4ae4c48" width="800">
@@ -216,13 +216,18 @@ Como você já deve ter notado, o background e os objetos da cena não harmoniza
 Por fim, adicionamos o node `AudioStreamPlayer` à cena Main e arrastamos a música *John Cage - Dream.mp3* para *Inspector → Stream*. Clique na setinha ao lado do nome da música no Inspector e selecione *Make Unique*, só assim você poderá fazer a música ficar em loop. Também selecione a opção *Autoplay* para que a música comece automaticamente assim que a cena começar a rodar.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/50a008f5-d2e6-4027-a6f7-0dfcdab7dc75" width="200">
-  <img src="https://github.com/user-attachments/assets/7c9627f2-60f2-4278-a1ca-4e3361ef8084" width="200">
-  <img src="https://github.com/user-attachments/assets/d7049497-df0c-4e58-9fa6-f7da5c17662d" width="200">
+  <img src="https://github.com/user-attachments/assets/50a008f5-d2e6-4027-a6f7-0dfcdab7dc75" width="220">
+  <img src="https://github.com/user-attachments/assets/7c9627f2-60f2-4278-a1ca-4e3361ef8084" width="210">
+  <img src="https://github.com/user-attachments/assets/d7049497-df0c-4e58-9fa6-f7da5c17662d" width="210">
 </p>
 
 Com isso o jogo está pronto!!!
 
 ### Sobre o CanvasLayer
 
-O `CanvasLayer` não é um node posicional comum como `Node2D` ou `Control`. Ele serve para desenhar seus filhos em uma camada de renderização separada, geralmente usada para HUDs, menus ou overlays que não se movem com o mundo do jogo. Ele não responde a position, rotation ou scale do pai (ele ignora transformações do pai). Ele cria uma camada própria de desenho que é renderizada acima dos elementos normais do jogo, por isso ignora transformações da câmera. Por isso não importa tanto o posicionamento e escala dos elementos no HUD, apenas os crie os deixe "largados" na cena. O ajuste acontece quando eles são instanciados na cena que vai aparecer no jogo. 
+O `CanvasLayer` não é um node posicional comum como `Node2D` ou `Control`. Ele serve para desenhar seus filhos em uma camada de renderização separada, geralmente usada para HUDs, menus ou overlays que não se movem com o mundo do jogo. Ele não responde a position, rotation ou scale do pai (ele ignora transformações do pai). Ele cria uma camada própria de desenho que é renderizada acima dos elementos normais do jogo e que ignora transformações da câmera. Por isso não importa tanto o posicionamento e escala dos elementos no HUD, apenas os crie os deixe "largados" na cena do HUD. O ajuste acontece quando eles são instanciados na cena que vai aparecer no jogo. 
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%203">Próximo ➡</a>
+</p>
