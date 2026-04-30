@@ -110,9 +110,11 @@ Todo node sempre possui duas "setinhas" ("gizmos" em inglês) indicando as dire�
   <img src="https://github.com/user-attachments/assets/cae8971c-4228-4093-b849-acc8ac62f266" width="500">
 </p>
 
-O atributo `position` sempre se refere à tela (o mundo real, posição global, etc). Note que $e_1$ e $e_2$ são os vetores que indicam essas setinhas da rotação. Então se quisermos andar com o node pelo sei eixo $x$ rotacionado, devemos fazer algo como `position += speed * transform.x`, em que `speed` é um float que determina a velocidade. Se fosse um `CharacterBody2D ` você poderia usar `velocity = speed * transform.x` e depois `move_and_slide()`. Se fosse um `RigidBody2D` você não usaria o `position` pois isso "brigaria" com a física, mas é possível usar `linear_velocity = speed * transform.x`. 
+O atributo `position` sempre se refere à tela (o mundo real, posição global, etc). Note que $e_1$ e $e_2$ são os vetores que indicam essas setinhas da rotação. Então se quisermos andar com o node pelo sei eixo $x$ rotacionado, devemos fazer algo como `position += speed * transform.x`, em que `speed` é um float que determina a velocidade. Se fosse um `CharacterBody2D` você poderia usar `velocity = speed * transform.x` e depois `move_and_slide()`. Se fosse um `RigidBody2D` você não usaria o `position` pois isso "brigaria" com a física, mas é possível usar `linear_velocity = speed * transform.x`. 
 
 Há diversas outras aplicações. O principal é ter esse conceito em mente, pois ele é muito útil em jogos.
+
+> 🟦 **REVISÃO POSTERIOR:** Um approach comum para rotacionar vetores é aplicar o métodode vetores [`rotated`](https://docs.godotengine.org/en/stable/classes/class_vector2.html#class-vector2-method-rotated). No caso do `CharacterBody2D`, por exemplo, seria possível usar o comando `velocity = speed * velocity.rotated(angle)`, em que `angle` é um float em radianos. 
 
 <p align="center">
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
