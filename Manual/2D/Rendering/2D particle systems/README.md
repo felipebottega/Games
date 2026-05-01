@@ -1,9 +1,9 @@
 # 2D particle systems
 
-Para cirar um node de partículas, utilizamos o `GPUParticles2D`. Começamos a nossa cena criando um node raíz `Node2D` com o `GPUParticles2D` como filho. Depois disso, vá em *Inspector → Process Material* e selecione o *New ParticleProcessMaterial* na aba *Process Material*. Após isso já será possível ver uma animação constante de partículas caindo. Este é o default de Godot. Agora que já temos um sistema de partículas em funcionamento, o resto é apenas customizaçãopara obter algum efeito desejado.
+Para cirar um node de partículas, utilizamos o `GPUParticles2D`. Começamos a nossa cena criando um node raíz `Node2D` com o `GPUParticles2D` como filho. Depois disso, vá em *Inspector → Process Material* e selecione o *New ParticleProcessMaterial* na aba *Process Material*. Após isso já será possível ver uma animação constante de partículas caindo, este é o default da Godot. Agora que já temos um sistema de partículas em funcionamento, o resto é apenas customização para obter diferentes efeitos.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3cb102cd-5169-412c-a524-319f009bc044" width="800">
+  <img src="https://github.com/user-attachments/assets/3cb102cd-5169-412c-a524-319f009bc044" width="1100">
 </p>
 
 > PS: Existe o node `CPUParticles2D`, porém ele é mais lento e está em processo de ser descontinuado. Não o utilize.
@@ -17,7 +17,7 @@ Essa lista não é completa, mas cobre as principais propriedades de partíclas.
 - **Amount:** Número base de partículas por ciclo. 
 - **Amount Ratio:** Multiplicador do número base de partículas por ciclo, de modo que em cada ciclo teremos $\text{Amount} \times \text{Amount Ratio}$ partículas.
 - **Texture:** Arquivo de imagem para ser a aparência das partículas. Veremos mais sobre isso adiante.
-- **Time/Lifetime:** Tempo de vida de cada partícula emitida. No fim das contas, a Godot vai emitir $\frac{\text{Amount} \times \text{Amount Ratio}}{\text{Lifetime}}$ partículas por segundo.
+- **Time/Lifetime:** Tempo de vida de cada partícula emitida. No fim das contas, a engine vai emitir $\frac{\text{Amount} \times \text{Amount Ratio}}{\text{Lifetime}}$ partículas por segundo.
 - **Time/Speed Scale:** Velocidade do sistema como um todo. Note que isso não aumenta apenas a taxa de emissão das partículas, mas também a velocidade da animação delas.
 - **Time/Explosiveness:** É um parâmetro que varia entre 0 e 1. Seu default de 0 significa que as partículas são emitidas a uma taxa constante no tempo. O valor 1 significa que todas são emitidas de uma vez.
 - **Time/Randomness:** É um parâmetro que varia entre 0 e 1 também. Controla o momento em que cada partícula é emitida. O default de 0 significa que elas são emitidas deterministicamente em momentos equidistantes, enquanto 1 significa que elas são emitidas em momentos totalmente aleatórios dentro do tempo do ciclo.
@@ -30,8 +30,11 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Proces
   <img src="https://github.com/user-attachments/assets/404897c4-2899-4dc2-92fd-89ac1dd9d691" width="300">
 </p>
 
-- **Lifetime Randomness:** É um parâmetro que varia entre 0 e 1. Controla o tempo de vida de cada partícula. O default de 0 significa que ela vive durante todo o seu tempo de vida (o valor de *Lifetime*), ou seja, nenhuma aleatoriedade. Valores mais altos implicam em mais aleatoriedade no tempo de vida, sendo esse tempo aleatório sempre entre 0 e *Lifetime*.
-- **Spawn/Position/Emission Shape Offset:** Muda a posição da origem da emissão de partículas, em relação as coordenadas locais. Note na figura abaixo que a origem do node está no $(0, 0)$ mas a origem da emissão foi shiftada para $(-10, -20)$ em relação ao node.
+- **Lifetime Randomness:** É um parâmetro que varia entre 0 e 1. Controla o tempo de vida de cada partícula. O default de 0 significa que ela vive durante todo o seu tempo de vida (o valor de *Lifetime*), ou seja, nenhuma aleatoriedade. Valores mais altos implicam em mais aleatoriedade no tempo de vida, sendo esse tempo aleatório sempre entre 0 e *Lifetime*. A fórmula exata é
+  
+$$\texttt{lifetime} = \texttt{lifetime} \cdot (1 - \texttt{randf()} \cdot \texttt{lifetime randomness}).$$
+
+- **Spawn/Position/Emission Shape Offset:** Muda a posição da origem da emissão de partículas em relação às coordenadas locais. Note na figura abaixo que a origem do node está no $(0, 0)$ mas a origem da emissão foi shiftada para $(-10, -20)$ em relação ao node.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/eb6b6d22-85e7-4392-b393-dc5fb056c7fb" width="700">
@@ -53,7 +56,7 @@ O que chamamos de "propriedades avançadas" aqui são as propriedades do *Proces
 - **Display/Scale:** Controla o tamanho das partículas. Se o mínimo e o máximo forem diferentes, a variação de escala é aleatória. Você pode selecionar a opção *CurveTexture* no parâmetro *Scale Curve*. Com isso você pode determinar como a escala varia com o tempo para cada partícula. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/36a6bfe8-4ad6-41ae-aa97-92424614804d" width="750">
+  <img src="https://github.com/user-attachments/assets/36a6bfe8-4ad6-41ae-aa97-92424614804d" width="850">
 </p>
 
 - **Display/Color Curves/Color:** Altera a cor das partículas.
@@ -115,7 +118,7 @@ Encerraremos este tutorial mostrando alguns exemplos de aplicação de partícul
 
 ### Fogos de artifício
 
-Começamos criando um `Node2D` com o filho `GPUParticles2D` e adicionamos o flipbook ` textura do node. O passo mandatório após isso é criar o *New ParticleProcessMaterial* na aba *Process Material*. Isso foi ensinado no início deste tutorial.
+Começamos criando um `Node2D` com o filho `GPUParticles2D` e adicionamos o flipbook na textura do node. O passo mandatório após isso é criar o *New ParticleProcessMaterial* na aba *Process Material*. Isso foi ensinado no início deste tutorial.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0d5a41ec-f60b-4b82-9f42-d47224e97a6b" width="1100">
@@ -161,4 +164,7 @@ Para obter aleatoriedade na emissão de cada fumaça. coloque o *Randomness* no 
   <img src="https://github.com/user-attachments/assets/8457eadc-f86a-4da5-a137-5c5da5b671b5" width="950">
 </p>
 
-
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20sprite%20animation">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/ParticleProcessMaterial%202D%20Usage">Próximo ➡</a>
+</p>
