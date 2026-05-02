@@ -53,7 +53,7 @@ A terceira e última camada não tem o mesmo problema que a segunda (lacuna sobr
 
 ## Posicionando as camadas de paralaxe
 
-Em termos de estrutura da árvore de cena, não tem mistério, adicionamos um node `Parallax2D` com um filho `Sprite2D` para cada camada. É importante lembrar que os nodes mais abaixo são os que vão aparecer mais à frente.
+Em termos de estrutura da árvore da cena, não tem mistério, adicionamos um node `Parallax2D` com um filho `Sprite2D` para cada camada. É importante lembrar que os nodes mais abaixo são os que vão aparecer mais à frente.
 
 Quando for trabalhar o posicionamento, basta posicionar o `Sprite2D`, e deixe `Parallax2D` na origem. Podemos ver abaixo que a primeira e segundas camadas se encaixaram perfeitamente na viewport. Isso era o esperado já que ambas possuem largura igual à da viewport. 
 

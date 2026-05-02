@@ -11,13 +11,13 @@ Alguns tutoriais anteriores que passaram por este tema: [Change scenes manually]
 - Ela contém informações sobre os grupos e permite acessar todos os nodes de um grupo ou obter uma lista deles.
 - Ela contém algumas funcionalidades de estado global, como definir o modo de pausa ou encerrar o processo.
 
-> PS: Quando um node faz parte da árvore de cena, o `SceneTree` pode ser obtido chamando o comando `get_tree()`.
+> PS: Quando um node faz parte da árvore de cenas, o `SceneTree` pode ser obtido chamando o comando `get_tree()`.
 
 > PS: Vimos anteriormente que é possível acessar o *root* com o comando `get_node("/root")`. Como o `SceneTree` contém o *root*, ele também possui um método para acessá-lo diretamente: `get_tree().root`.
 
-## Entrando e saindo da árvore de cena
+## Entrando e saindo da árvore de cenas
 
-Quando um node é conectado ao *root*, ele passa a fazer parte da árvore de cena. Isso significa que ele receberá as funções nativas `_enter_tree()`, `_ready()` e `_exit_tree()` automaticamente. Além disso, ele obtêm acesso a tudo o que precisa para processar dados, receber inputs, exibir visuais 2D e 3D, receber e enviar notificações, reproduzir sons, etc. Quando é removido da árvore de cena, ele perde essas capacidades. A ordem dos eventos desde a entrada até a saída da árvore de cena está resumida abaixo.
+Quando um node é conectado ao *root*, ele passa a fazer parte da árvore de cenas. Isso significa que ele receberá as funções nativas `_enter_tree()`, `_ready()` e `_exit_tree()` automaticamente. Além disso, ele obtêm acesso a tudo o que precisa para processar dados, receber inputs, exibir visuais 2D e 3D, receber e enviar notificações, reproduzir sons, etc. Quando é removido da árvore de cenas, ele perde essas capacidades. A ordem dos eventos desde a entrada até a saída da árvore de cenas está resumida abaixo.
 
 1. Uma cena é carregada do disco ou criada por script.
 2. O node raiz dessa cena é adicionado como filho do *root* ou a qualquer um de seus descendentes.
@@ -29,8 +29,8 @@ A maioria das operações de nodes, como desenhar em 2D, processar dados ou rece
 
 ## Propriedades
 
-- **get_tree().root:** Retorna o *root* da árvore de cena,
-- **get_tree().paused:** Se for true, a árvore de cena é considerada pausada. A física 2D e 3D será interrompida, assim como a detecção de colisões e os sinais relacionados. Dependendo do *modo de processamento* de cada node, seus métodos `_process()`, `_physics_process()` e `_input()` podem não ser mais chamados. Vimos em detalhes como isso funciona [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Pausing%20games%20and%20process%20mode).
+- **get_tree().root:** Retorna o *root* da árvore de cenas,
+- **get_tree().paused:** Se for true, a árvore de cenas é considerada pausada. A física 2D e 3D será interrompida, assim como a detecção de colisões e os sinais relacionados. Dependendo do *modo de processamento* de cada node, seus métodos `_process()`, `_physics_process()` e `_input()` podem não ser mais chamados. Vimos em detalhes como isso funciona [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Pausing%20games%20and%20process%20mode).
 - **get_tree().current_scene:** Retorna o node raiz da cena principal atualmente carregada, geralmente como um filho direto do *root*.
 - **get_tree().physics_interpolation:** Se for true, vai ativar a interpolação física. Vimos em detalhes como isso funciona [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20Interpolation).
 
@@ -49,7 +49,7 @@ Todos os métodos relativos a grupos foram vistos no [tutorial de grupos](https:
 - **get_tree().change_scene_to_packed(packed_scene):** Altera a cena em execução para uma nova instância do `PackedScene` fornecido.
 - **get_tree().create_timer(time_sec):** Retorna um `SceneTreeTimer`. Após passar o tempo definido em `time_sec` (em segundos), o timer emitirá `SceneTreeTimer.timeout` e será liberado automaticamente.
 - **get_tree().get_frame():** Retorna quantos frames físicos foram processados desde o início.
-- **get_tree().get_node_count():** Retorna o número de nodes na árvore de cena. O *root* não é contabilizado.
+- **get_tree().get_node_count():** Retorna o número de nodes na árvore de cenas. O *root* não é contabilizado.
 - **get_tree().queue_delete(object):** Coloca o objeto fornecido em fila para ser deletado, chamando seu método `Object.free()` ao final do frame atual. Este método é similar `queue_free()`.
 - **get_tree().quit():** Sai do jogo quando acabar a iteração atual.
 - **get_tree().reload_current_scene():** Recarrega a cena atualmente ativa, substituindo `current_scene` por uma nova instância de sua `PackedScene` original.

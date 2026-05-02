@@ -8,7 +8,7 @@ Vamos começar pelo fim, já mostrando o jogo pronto. Como podemos ver, ele é c
 
 https://github.com/user-attachments/assets/20034047-c894-4f30-b766-dd53ccc31f87
 
-A árvore de cena em si é simples, um `Node2D` contendo as imagens, o fundo do HUD e o HUD. Como todas as imagens vão interagir com o mesmo shader, basta escrever o código de um arquivo de shader. Para isso, replicamos os passos vistos no tutorial [Your first 2D shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#primeiros-passos) para a primeira imagem. Podemos fazer tudo relativo à primeira imagem apenas, e só no fim entramos com as outras.
+A árvore da cena em si é simples, um `Node2D` contendo as imagens, o fundo do HUD e o HUD. Como todas as imagens vão interagir com o mesmo shader, basta escrever o código de um arquivo de shader. Para isso, replicamos os passos vistos no tutorial [Your first 2D shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#primeiros-passos) para a primeira imagem. Podemos fazer tudo relativo à primeira imagem apenas, e só no fim entramos com as outras.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/f57fa25f-8168-4712-ade2-58db3077fe3d" />

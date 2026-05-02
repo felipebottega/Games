@@ -62,7 +62,7 @@ Para finalizar, vamos abordar o principal objetivo deste jogo, que é a inclusã
   <img width="750" src="https://github.com/user-attachments/assets/ed23f5eb-580d-4896-97c9-24d557a37b5d" />
 </p>
 
-A árvore de cena Main segue a estrutura mostrada abaixo. Para implementar a resolução, devemos criar um `TextureRect`. Logo após isso, vá em *Inspector → Texture → Transform → Size* e coloque o `TextureRect` na resolução base da viewport, $1920 \times 1080$. Feito isso, vá em *Inspector → Texture → ViewportTexture* e selecionar o node `SubViewport`. Este node deve conter todas as texturas que irão sofrer o processo de mudança de resolução. Note que deixamos o HUD de fora disso, mas é opcional.
+A árvore da cena Main segue a estrutura mostrada abaixo. Para implementar a resolução, devemos criar um `TextureRect`. Logo após isso, vá em *Inspector → Texture → Transform → Size* e coloque o `TextureRect` na resolução base da viewport, $1920 \times 1080$. Feito isso, vá em *Inspector → Texture → ViewportTexture* e selecionar o node `SubViewport`. Este node deve conter todas as texturas que irão sofrer o processo de mudança de resolução. Note que deixamos o HUD de fora disso, mas é opcional.
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/6c363a82-0dee-4409-aa12-572a56a6f48d" />

@@ -1012,7 +1012,7 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 ">  Profiler 
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#árvore-de-cena
-">  árvore de cena
+">  árvore de cenas
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#física
 ">  Física
@@ -1703,7 +1703,7 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
  </a><br>
 <li> <b>Manual\Scripting\Core features\Using SceneTree</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#entrando-e-saindo-da-árvore-de-cena
-">  Entrando e saindo da árvore de cena
+">  Entrando e saindo da árvore de cenas
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#propriedades
 ">  Propriedades

@@ -15,4 +15,4 @@ Estamos falando das funções da classe `Node` que vem vazios e prontos para ser
 - **_physics_process:** Função que executa processos a cada frame físico.
 - **_input:** Primeira função que recebe inputs.
 - **_unhandled_input:** Última função que recebe inputs. Se o input não for consumido aqui, ele será ignorado completamente pelo jogo.
-- **_exit_tree:** Chamado quando o node está prestes a sair da árvore de cena. Se o node tiver filhos, o seu `_exit_tree()` será chamado por último, depois que todos os seus filhos tiverem saído da árvore.
+- **_exit_tree:** Chamado quando o node está prestes a sair da árvore de cenas. Se o node tiver filhos, o seu `_exit_tree()` será chamado por último, depois que todos os seus filhos tiverem saído da árvore.

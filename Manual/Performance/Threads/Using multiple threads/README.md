@@ -14,7 +14,7 @@ Antes de falar de threads, devemos introduzir o método `bind`, pois ele será n
 
 ## _exit_tree
 
-A função nativa `_exit_tree()` é chamada automaticamente pela Godot quando um node está prestes a sair da árvore de cena (remoção, troca de cena, fechar o jogo, etc.). Ela é usada para limpeza final (parar threads, liberar recursos, etc.). 
+A função nativa `_exit_tree()` é chamada automaticamente pela Godot quando um node está prestes a sair da árvore de cenas (remoção, troca de cena, fechar o jogo, etc.). Ela é usada para limpeza final (parar threads, liberar recursos, etc.). 
 
 ## Criando uma thread
 

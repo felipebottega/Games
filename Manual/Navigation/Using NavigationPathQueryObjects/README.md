@@ -126,7 +126,7 @@ A parte inicial do código foi ampliada e ficou assim:
 
 ### Line2D
 
-Além das ferramentas de desenho vistas em um [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D), a Godot possui um node específico apenas para o desenho de linhas, é o node `Line2D`. Inserimos ele na árvore de cena ates do NPC, para que o NPC fique por cima da cima. Também alteramos a cor e a grossura da linha no *Inspector*. Também criamos uma função de plot para atualizar as linhas e desenhar pontos de acordo com o caminho calculado. A função `plot_path` é chamada dentro do `_physics_process` logo após a `follow_path`. Com isso, agora é possível visualizar o caminho que o NPC fará. 
+Além das ferramentas de desenho vistas em um [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D), a Godot possui um node específico apenas para o desenho de linhas, é o node `Line2D`. Inserimos ele na árvore da cena antes do NPC, para que o NPC fique por cima da cima. Também alteramos a cor e a grossura da linha no *Inspector*. Também criamos uma função de plot para atualizar as linhas e desenhar pontos de acordo com o caminho calculado. A função `plot_path` é chamada dentro do `_physics_process` logo após a `follow_path`. Com isso, agora é possível visualizar o caminho que o NPC fará. 
 
 <p align="center">
   <img width="180" src="https://github.com/user-attachments/assets/ce9b87d4-667a-45bb-81c3-5c0f3843e115" />

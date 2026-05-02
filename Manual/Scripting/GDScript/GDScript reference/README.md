@@ -175,7 +175,7 @@ var b = 1 + \
 | `float`     | Número real com casas decimais. Armazenado como 64 bits. Algumas estruturas reduzem a precisão para 32 bits (ex: `Vector2`, `Vector3`). |
 | `String`    | Sequência de caracteres em formato Unicode. |
 | `StringName`| String imutável com instância única por nome. Mais lenta para criar, mas muito rápida para comparação (ideal para chaves de dicionário). |
-| `NodePath`  | Caminho pré-processado para um node ou propriedade. Pode ser convertido de/para `String` e facilita interações com a árvore de cena. |
+| `NodePath`  | Caminho pré-processado para um node ou propriedade. Pode ser convertido de/para `String` e facilita interações com a árvore de cenas. |
 
 > PS: `Variant` basicamente quer dizer que a variável é de tipagem dinâmica.
 
@@ -809,7 +809,7 @@ Os sinais são uma ferramenta para emitir mensagens de um objeto às quais outro
 
 ### Exemplo prático de sinais
 
-Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador em nossa árvore de cena. No script `character.gd` do personagem, definimos um sinal `health_changed` e o emitimos com `health_changed.emit()`, e de um node *Game* mais acima em nossa árvore de cena, o conectamos à barra de vida usando o método `health_changed.connect()`. 
+Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador em nossa árvore da cena. No script `character.gd` do personagem, definimos um sinal `health_changed` e o emitimos com `health_changed.emit()`, e de um node *Game* mais acima em nossa árvore da cena, o conectamos à barra de vida usando o método `health_changed.connect()`. 
 
 ```python
 # character.gd

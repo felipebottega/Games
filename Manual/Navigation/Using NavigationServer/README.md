@@ -2,7 +2,7 @@
 
 Neste tutorial, vamos nos concentrar no `NavigationServer2D`, pois as funcionalidades do `NavigationServer3D` são praticamente equivalentes, apenas com as devidas adaptações para o número de dimensões. 
 
-`NavigationServer2D` é o sistema de navegação de baixo nível da Godot. Ele funciona separado da árvore de cena ("scene tree" em inglês) e é responsável por construir mapas de navegação, gerenciar regiões de navegação, calcular caminhos, controlar agentes de navegação, resolver colisões dinâmicas entre agentes, entre outros. Os nodes que você usa na cena (`NavigationRegion2D`, `NavigationAgent2D`, etc.) são apenas interfaces, pois o trabalho real é feito dentro do servidor. 
+`NavigationServer2D` é o sistema de navegação de baixo nível da Godot. Ele funciona separado da árvore de cenas e é responsável por construir mapas de navegação, gerenciar regiões de navegação, calcular caminhos, controlar agentes de navegação, resolver colisões dinâmicas entre agentes, entre outros. Os nodes que você usa na cena (`NavigationRegion2D`, `NavigationAgent2D`, etc.) são apenas interfaces, pois o trabalho real é feito dentro do servidor. 
 
 ## RIDs
 

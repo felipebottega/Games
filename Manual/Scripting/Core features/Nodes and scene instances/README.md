@@ -4,7 +4,7 @@ Neste tutorial, veremos como obter nodes, criar nodes, adicioná-los como filhos
 
 ## Obtendo nodes
 
-Você pode obter uma referência a um node chamando o método nativo `get_node()` (como já foi explicado [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#idle-and-physics-processing), estamos chamando de "nativos" os métodos da classe `Node`). Para que a chamada funcione, o node deve estar presente na árvore de cena. Portanto, este método deve ser chamado no `_ready()` ou depois. 
+Você pode obter uma referência a um node chamando o método nativo `get_node()` (como já foi explicado [antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#idle-and-physics-processing), estamos chamando de "nativos" os métodos da classe `Node`). Para que a chamada funcione, o node deve estar presente na árvore de cenas. Portanto, este método deve ser chamado no `_ready()` ou depois. 
 
 Suponha que a sua cena está como mostrado abaixo. Se tiver um script anexado ao node `Node2D` e for necessário acessar o node `Blue` neste script, deve-se usar o comando `get_node("Blue")`. Por default, o `get_node()` sempre busca os filhos do node que executou o script. Uma maneira alternativa de fazer essa chamada é com o comando `$Blue`. 
 
@@ -18,7 +18,7 @@ Agora suponha que a cena está como mostrado abaixo. Para acessar o node `Sprite
   <img width="200" src="https://github.com/user-attachments/assets/9032a982-d04f-44fa-a675-d9a370c8574a" />
 </p>
 
-Acabamos de ver como obter nodes para baixo na hierarquia de nodes. Também é possível obter nodes na hierarquia acima. Para explicar como funciona, considere a árvore de cena abaixo. 
+Acabamos de ver como obter nodes para baixo na hierarquia de nodes. Também é possível obter nodes na hierarquia acima. Para explicar como funciona, considere a árvore de cenas abaixo. 
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/c8f958d8-c243-4cb7-a542-9ac9bfd29127" />
