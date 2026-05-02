@@ -19,7 +19,7 @@ Quando você definir um script para este propósito, é interessante que a prime
 
 > PS: Funções soltas no script externo precisam ser declaradas como `static`.
 
-> 🟦 **REVISÃO POSTERIOR:** Não é obrigatório nomear a classe do script. Mas nesse caso você usar `extends {path_to_script}` (em que *path_to_script* é o caminho para o arquivo) em todo script que for utilizar as funcionalidades da sua biblioteca.
+> 🟦 **REVISÃO POSTERIOR:** Não é obrigatório nomear a classe do script. Mas nesse caso você deve usar `extends {path_to_script}` (em que *path_to_script* é o caminho para o arquivo) em todo script que for utilizar as funcionalidades da sua biblioteca.
 
 ## Botões globais
 
