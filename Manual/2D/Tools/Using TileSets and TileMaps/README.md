@@ -179,50 +179,48 @@ Na aba *Select* (selecionada em azul, ao lado de *Setup*), temos as propriedades
 Para poder adicionar colisão aos tiles, primeiro você deve criar uma camada de física indo em *Add Element* no *Physics Layers*, como mostrado abaixo. Ao fazer isso, vão aparecer mais coisas no *Inspector*, mas você não precisa mexer nelas. 
 
 <p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/dab1ca88-1997-4481-a432-0b97d4656fc3" />
-  <img width="260" alt="image" src="https://github.com/user-attachments/assets/013177c5-9116-4ae6-9b5d-77fa1117a5f9" />
-  <img width="240" alt="image" src="https://github.com/user-attachments/assets/cdb762bc-05fb-438c-b3ff-3fbbeff39924" />  
+  <img width="900" alt="image" src="https://github.com/user-attachments/assets/6650832b-e941-43c2-9210-bb18567bc377" />
 </p>
 
-Feito isso, vá para a aba *Select* no painel e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [Polygon2D e CollisionPolygon2D]([https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D)). 
+Feito isso, vá para a aba *Select* no painel e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [outro tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D). 
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/56d20c52-5766-457e-8bce-a7e13b97fb26" />
-  <img width="220" src="https://github.com/user-attachments/assets/15cb3d9c-a702-4438-9bd1-400919843ef9" />
+  <img width="700" src="https://github.com/user-attachments/assets/56d20c52-5766-457e-8bce-a7e13b97fb26" />
+  <img width="250" src="https://github.com/user-attachments/assets/15cb3d9c-a702-4438-9bd1-400919843ef9" />
 </p>
 
 > Dica: Geralmente é mais conveniente começar já com um quadrado de colisão selecionado, ocupando os 4 vértices do tile. Para isso, basta clicar no tile, dentro da parte de edição, e apertar F.
 
 ### Navigation e light occlusion para o TileSet
 
-O modo de adicionar e customizar estas propriedades para os TileSets é inteiramente análogo ao que fizemos para colisão. A maior diferença é o ponto de partida. Enquanto na colisão nós adicionamos física, os outros requerem interação em outras abas.
+O modo de adicionar e customizar estas propriedades para os TileSets é inteiramente análogo ao que fizemos para colisão. A maior diferença é o ponto de partida. Enquanto que na colisão nós adicionamos física, os outros requerem usar em outras abas.
 
 <p align="center">
-  <img width="180" src="https://github.com/user-attachments/assets/1d63b176-7fff-4b58-9afd-31b596c1fce5" />
+  <img width="200" src="https://github.com/user-attachments/assets/1d63b176-7fff-4b58-9afd-31b596c1fce5" />
 </p>
 
 ### Metadados
 
-É possível adicionar metadados aos tiles individualmente ou em grupo. Por exemplo, poderíamos ter um tile de lava, daí teríamos um metadado tipo *damage* $= 15$. O metadado em si não faz nada, é apenas uma informação para ser acessada. Note que outros nodes, como `Sprite2D`, não possuem isso, então seria necessário criar um dicionário para gerar metadados para estas estruturas. OS tiles possuem tratamento diferenciado pois eles foram feitos para serem tratados em quantidade. Portanto a engine está otimizada para acessar mnetadados de conjuntos grandes de tiles, mas para um conjunto grande de `Sprite2D`, por exemplo, pois cada `Sprite2D` é uma entidade única e separada das outras. 
+É possível adicionar metadados aos tiles individualmente ou em grupo. Por exemplo, poderíamos ter um tile de lava, daí teríamos um metadado tipo *damage* $= 15$. O metadado em si não faz nada, é apenas uma informação para ser acessada. Note que isso não seria possível fazer isso com o `Sprite2D`, então seria necessário criar algo como um dicionário associado ao sprite para armazenar seus metadados. Os tiles possuem tratamento diferenciado pois eles foram feitos para serem tratados em quantidade. Portanto a engine está otimizada para acessar metadados de conjuntos grandes de tiles. 
 
-Para poder adicionar metadados, primeiro clique na aba *Custom Data Layers* e depois em adicionar para ir adicionando cada um dos metadados. Abaixo temos um exemplo simples com a criação de dois metadados. O primeiro é o *damage*, do tipo *int*. O segundo é o *insta_kill*, do tipo *bool*. 
+Para poder adicionar metadados, primeiro clique na aba *Custom Data Layers* no *Inspector* e depois em adicionar para ir adicionando cada um dos metadados. Abaixo, temos um exemplo simples com a criação de dois metadados. O primeiro é o *damage*, do tipo *int*. O segundo é o *insta_kill*, do tipo *bool*. 
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/e905f17c-a0b7-472a-9fe9-8c2fd25f4583" />
+  <img width="220" src="https://github.com/user-attachments/assets/e905f17c-a0b7-472a-9fe9-8c2fd25f4583" />
 </p>
 
-Note que estes metadados foram criados para o TileSet inteiro. Ou seja, eles serão acessíveis por todos os atlas que você colocar ali. Inclusive, na aba *Select* no painel, você pode reparar que a aba *Custom Data* já apareceu automaticamente, incluindo os metadados que você criou (a engine sempre atribui valores default para cada tipo de variável). No exemplo da imagem abaixo, podemos ver que é possível configurar os metadados para cada tile individualmente. Este valor fica evidenciado no próprio atlas, à direita da imagem.
+Note que estes metadados foram criados para o TileSet inteiro. Ou seja, eles serão acessíveis por todos os atlas que você colocar ali. Inclusive, na aba *Select* no painel, você pode reparar que a aba *Custom Data* já apareceu automaticamente, incluindo os metadados que você criou (a engine sempre atribui valores default para cada tipo de variável). No exemplo da imagem abaixo, podemos ver que é possível configurar os metadados para cada tile individualmente. Este valor fica evidenciado no próprio atlas, à direita na imagem.
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/63a6df85-d21b-4606-aa08-032a951428b4" />
+  <img width="600" src="https://github.com/user-attachments/assets/63a6df85-d21b-4606-aa08-032a951428b4" />
 </p>
 
 ### Aba Paint
 
-Esta aba é simples. Basta escolher uma propriedade que você quer "pintar" no atlas. No exemplo abaixo nós escolhemos o metadado *damage*. Vamos supor que queremos inserir *damage* $=25$ em diversos tiles. É só escrever o valor e no próprio atlas você clica com o mouse, se gura o clique, e percorre com o mouse sobre o atlas. Você vai notar que ele começa a "pintar" o valor $25$ por onde você passa com o mouse clicado. Esta é a funcionalidade desta aba.
+Esta aba é simples. Basta escolher uma propriedade que você quer "pintar" no atlas. No exemplo abaixo nós escolhemos o metadado *damage*. Vamos supor que queremos inserir *damage* $=25$ em diversos tiles. É só escrever o valor e no próprio atlas você clica com o mouse, segura o clique, e percorre com o mouse sobre o atlas. Você vai notar que ele começa a "pintar" o valor $25$ por onde você passa com o mouse. Esta é a funcionalidade desta aba.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/465a1466-76e5-402b-af3d-4e276ccb1699" />
+  <img width="230" src="https://github.com/user-attachments/assets/465a1466-76e5-402b-af3d-4e276ccb1699" />
 </p>
 
 Outra maneira de se fazer múltiplas atribuições de valores é indo na aba *Select*, selecionando vários tiles e alterando o valor para o que você quer. É menos dinâmico que pintar os valores, mas se for um conjunto retangular e grande de tiles, por exemplo, é mais prático. Depende de cada caso qual o modo de atribuição múltipla você vai utilizar.
@@ -233,11 +231,16 @@ Outra maneira de se fazer múltiplas atribuições de valores é indo na aba *Se
 
 ### Tiles alternativos
 
-Para criar um tile alternativo, basta dar o segundo clique em algum tile e selecionar *Create Alternative Tile*. Feito isso, note que em *Rendering* ele possui algumas propriedades extras que podem ser modificadas.
+Para criar um tile alternativo, basta dar o segundo clique em algum tile e selecionar *Create Alternative Tile*. Feito isso, em *Rendering* ele possui algumas propriedades extras que podem ser modificadas.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/19015b3f-2fa8-432b-9d62-f9f7ff700a06" />
-  <img width="500" src="https://github.com/user-attachments/assets/06bc2ef7-3afc-4978-8bbf-5bdab6eb1e1d" />
+  <img width="350" src="https://github.com/user-attachments/assets/19015b3f-2fa8-432b-9d62-f9f7ff700a06" />
+  <img width="550" src="https://github.com/user-attachments/assets/06bc2ef7-3afc-4978-8bbf-5bdab6eb1e1d" />
 </p>
 
 > PS: Tiles alternativos possuem um ID alternativo, como pode ser visto na imagem. É recomendado não alterar este valor. Deixa o automático da engine dar conta da ordenação.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets#criando-um-terrain-set">Próximo ➡</a>
+</p>
