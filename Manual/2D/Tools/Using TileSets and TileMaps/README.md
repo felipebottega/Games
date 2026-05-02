@@ -4,25 +4,27 @@ Este tutorial é consituído dos tutoriais [Using TileMaps](https://docs.godoten
 
 ## Definições básicas 
 
-- **Tiles:** Pode ser traduzido como "ladrilhos". São basicamente sprites, mas que são alocados repetidamente nos cenários, podendo ser os blocos que formam o chão, paredes, parede, objetos de decoração, entre outros. Por ter esse caráter de ser um objeto que aparece repetidamente, ele pode ser tratado na engine de maneira coletiva. Isso possibilita algumas otimizações e facilidades que não existe com o sprite, pois este último é tratado como um objeto único e diferenciado do restante.
+- **Tiles:** Pode ser traduzido como "ladrilhos". São basicamente sprites, mas que são alocados repetidamente nos cenários, podendo ser os blocos que formam o chão, paredes, objetos de decoração, entre outros. Por ter esse caráter de ser um objeto que aparece repetidamente, ele pode ser tratado na engine de maneira coletiva. Isso possibilita algumas otimizações e facilidades que não existem com sprites, pois este último é tratado como um objeto único e diferenciado do restante.
 - **Tilemap:** É uma grid de tiles pronta para ser colocada no jogo.
-- **TileSet:** É um conjunto de tiles que pode ser colocado no tilemap do jogo.
+- **TileSet:** É um conjunto de tiles + configuração que pode ser colocado no tilemap do jogo.
 - **Tilesheet:** É uma imagem contendo vários tiles. A tilesheet é utilizada para criar o objeto tileset, que então é utilizado para compor o tilemap do jogo.
 - **Atlas:** É o tilesheet com a divisão quadriculada já pronta. Um TileSet pode conter vários atlas diferentes.
 
 ## Criando um TileSet
 
-Começamos baixando o tilesheet [Kenney's "Abstract Platformer" pack](https://kenney.nl/assets/abstract-platformer) que é de licença free. Descompacte o arquivo e coloque a imagem na pasta do seu projeto. Feito isso, crie um node `TileMapLayer` e no *Inspector* vá em *TileSet → NewTileSet*. Clique novamente neste ícone para abrir as opções e coloque o *Tile Size* para $64 \times 64$. Neste caso estas são as dimensões de cada tile, você vai ter que saber isso antes de proceder.
+Começamos baixando o tilesheet [Kenney's "Abstract Platformer" pack](https://kenney.nl/assets/abstract-platformer) que é de licença free. Descompacte o arquivo e coloque a imagem na pasta do seu projeto. Feito isso, crie um node `TileMapLayer` e no *Inspector* vá em *TileSet → NewTileSet*. Clique novamente neste ícone para abrir as opções e coloque o *Tile Size* para $64 \times 64$. Estas são as dimensões de cada tile para este exemplo, mas poderia ser diferente. Normalmente você vai ter que saber isso antes de proceder.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/382a4ec0-e0e7-48fc-bd11-26992f270058" />
+  <img width="220" src="https://github.com/user-attachments/assets/382a4ec0-e0e7-48fc-bd11-26992f270058" />
 </p>
 
-Depois clique em *TileSet* no painel abaixo do canvas (rodapé da imagem abaixo), selecione o tilesheet em *FileSystem* e arraste o tilesheet para o espaço vazio. Vai abrir uma mensagem perguntando se você quer gerar automaticamente o atlas, selecione sim. Raramente você vai precisar fazer o atlas na mão. O resultado deverá ser parecido com o da figura abaixo.
+Depois clique em *TileSet* no painel abaixo do canvas (rodapé da imagem abaixo), selecione o tilesheet em *FileSystem* e arraste o tilesheet para o espaço vazio ao lado. Vai abrir uma mensagem perguntando se você quer gerar automaticamente o atlas, selecione sim. Raramente você vai precisar fazer o atlas na mão. O resultado deverá ser parecido com o da figura abaixo. 
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/10935ae9-3276-495c-8a52-7f239fa9ca31" />
 </p>
+
+A aba *TileSet* é para a configurar os tiles, enquanto que a aba *TileMap* é para desenhar com os tiles. Uma vez que encerramos as configurações, podemos mudar para a aba *TileMap*.
 
 ## Coordenadas do tilemap
 
@@ -36,7 +38,7 @@ Uma coisa importante para ficar atento logo de início é que o tilemap possui s
 
 ## Desenhando tiles na tela
 
-A principal ferramenta para desenhar com tiles é este pequeno conjunto de opções destacado na imagem abaixo. Só isso já é suficiente para cobrir a maioria das necessidades com tiles. Apenas os primeiros 5 itens são ferramentas de fato, o que vem depois são modificadores das ferramentas. No caso da ferarmenta de seleção (que é a que está sendo usada na imagem), ela não é afetada por nenhum modificador. Vamos passar um por um.
+A principal ferramenta para desenhar com tiles é este pequeno conjunto de opções destacado na imagem abaixo. Só isso já é suficiente para cobrir a maioria das necessidades com tiles. Os primeiros 5 itens são as ferramentas de fato, o que vem depois são modificadores das ferramentas. No caso da ferramenta de seleção (que é a que está sendo usada na imagem), ela não é afetada por nenhum modificador. Vamos passar um por um.
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/3efed9b7-4fde-4c96-a332-0f69a64d08ed" />
@@ -44,7 +46,7 @@ A principal ferramenta para desenhar com tiles é este pequeno conjunto de opç�
 
 - <img width="40" src="https://github.com/user-attachments/assets/c245310f-a5f1-4f4a-8492-47bc3081cb03" /> O lápis é a ferramenta de desenho comum. Basta você selecionar o tile no painel e depois pode ir no canvas para desenhar os tiles como bem entender.
 
-- <img width="40" src="https://github.com/user-attachments/assets/ceb82f16-16c3-40fe-a516-d6d11577a626" /> O traço é a ferramenta para desenhar segmentos de reta com tiles. Você tem que clicar e segurar o botão do mouse no ponto ininial, então basta mover o mouse para decidir o ponto final e soltar o clique.
+- <img width="40" src="https://github.com/user-attachments/assets/ceb82f16-16c3-40fe-a516-d6d11577a626" /> O traço é a ferramenta para desenhar segmentos de reta com tiles. Você tem que clicar e segurar o botão do mouse no ponto inicial, então basta mover o mouse para decidir o ponto final e soltar o clique.
 
 - <img width="40" src="https://github.com/user-attachments/assets/6a86c611-38a1-4ca6-a3e4-f8e90c1aff81" /> Ferramenta de retângulo preenchido. Também é só questão de clicar e segurar o clique do mouse, depois o mova e solte onde achar melhor.
 
@@ -78,7 +80,7 @@ Todas essas funcionalidades não precisam ser aplicadas a uma única seleção d
   <img width="700" src="https://github.com/user-attachments/assets/80194def-9be2-4f4e-a3c3-0d3b96cd8bfd" />
 </p>
 
-A ferramenta de seleção não serve apenas para o atlas, você também pode selecionar tiles na cena, e então movês-los, deletá-los, etc. 
+A ferramenta de seleção não serve apenas para o atlas, você também pode selecionar tiles na cena, e então movês-los, copiá-los, deletá-los, etc. 
 
 ## Patterns
 
@@ -89,13 +91,15 @@ Até agora estávamos na aba *Tiles* do painel. Vamos trocar para a aba *Pattern
   <img width="500" src="https://github.com/user-attachments/assets/438fad1d-1cb9-4a70-b3ae-2181d89d051a" />
 </p>
 
-O legal disso é que cada um desses padrões escolhidos podem ser utilizados nas mesmas ferramentas descritas anteriormente, como se fossem tiles. Por exemplo, escolhemos o primeiro padrão e a ferramenta de desenho retangular para preencher uma região retangular com este padrão. Veja como ficou o resultado. Na esquerda o original e na direta o resultado com o preenchimento retangular do padrão. Novamente, este é um exemplo abstrato, mas com criatividade e visão você pode fazer muitas coisas legais com isso.
+> PS: Também é possível selecionar a região e arrastá-la até o painel.
+
+O legal disso é que cada um desses padrões escolhidos podem ser utilizados nas mesmas ferramentas descritas anteriormente, como se fossem tiles. Por exemplo, escolhemos o primeiro padrão e a ferramenta de desenho retangular para preencher uma região retangular com este padrão. Veja como ficou o resultado. Na esquerda o original e na direta o resultado com o preenchimento retangular do padrão. Este é um exemplo abstrato de aplicação, mas com criatividade e visão você pode fazer muitas coisas legais com isso.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/060034bf-6cfa-48fd-8cf0-dfdd99d2d80b" />
 </p>
 
-Só para dar um exemplo concreto, criamos um padrão de quadriculado $2 \times 2$ e usamos a ferramenta de senho retangular para criar um tabuleiro. 
+Só para dar um exemplo concreto, criamos um padrão de quadriculado $2 \times 2$ e usamos a ferramenta de desenho retangular para criar um tabuleiro. 
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/d01f9ea9-aab8-41a0-97a5-5471fe0d616c" />
@@ -103,7 +107,7 @@ Só para dar um exemplo concreto, criamos um padrão de quadriculado $2 \times 2
 
 ## TileSets
 
-Vimos bastante sobre como desenhar os tiles na cena, que é manipulação do atlas e suas ferramentas na aba *TileMap* do painel. Porém, note que ao lado dela temos também a aba *TileSet*. Enquanto a *TileMap* trata de desenhar os tiles na cena, a *TileSet* trata de configurar os tiles. Veremos nesta seção que dá para fazer muito coisa sobre os tiles antes dele serem desenhados.
+Vimos bastante sobre como desenhar os tiles na cena, que é manipulação do atlas e suas ferramentas na aba *TileMap* do painel. Porém, vimos pouco da aba *TileSet*. Enquanto a *TileMap* trata de desenhar os tiles na cena, a *TileSet* trata de configurar os tiles. Veremos nesta seção que dá para configurar muito coisa dos tiles antes dele serem desenhados.
 
 ### Propriedades do TileSet no Inspector
 
@@ -127,14 +131,14 @@ Todas as propriedades mostradas na figura dizem respeito ao atlas selecionado. V
 </p>
 
 - **ID:** Identificador único do atlas. É preferível não mudar e deixar a engine fazer a ordenação automática.
-- **Name:** O nome do atlas. O usuário pode escolher o nome que quiser para identificar pelo nome o atlas.  
+- **Name:** O nome do atlas. O usuário pode escolher o nome que quiser para identificar o atlas pelo nome.
 - **Texture:** O arquivo do tilesheet.  
 - **Margins:** Desloca toda a divisão quadricular do atlas no eixo $x$ ou $y$. É útil quando ele vem originalmente com margens. 
 - **Separation:** Cria um vão entre os tiles, deixando uma camada de transparência entre eles.
 - **Texture Region Size:** Tamanho dos tiles no atlas. Em geral este valor será igual ao que você definiu com *Tile Size* (visto acima), mas você pode querer alterar aqui. O *Tile Size* define o atlas, enquanto que este pode ser visto como uma deformação posterior do atlas.
 - **Use Texture Padding:** Adiciona um pixel de transparência ao redor de cada tile. Isto ajuda a prevenir o efeito de "texture bleeding", que é quando alguns pixels do tile podem "vazar" para os tiles vizinhos. Isto não acontecerá para tiles fixos vindo de um TileSet bem configurado, mas podem surgir artefatos quando há efeitos de luz, deformação, colisão, entre outros.
 
-Quando estiver mexendo com *Margins, Separation* e *Texture Region Size*, lguns tiles podem desaparecer. Para garantir que isso não aconteça, selecione a opção *Create Tiles in Non-Transparent Texture Regions* mostrada abaixo.
+Quando estiver mexendo com *Margins, Separation* e *Texture Region Size*, alguns tiles podem desaparecer. Para garantir que isso não aconteça, selecione a opção *Create Tiles in Non-Transparent Texture Regions* mostrada abaixo.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/a1875f5f-90af-4331-bf5a-5ea4c96e5a45" />
@@ -142,10 +146,10 @@ Quando estiver mexendo com *Margins, Separation* e *Texture Region Size*, lguns 
 
 ### Fusão de atlas
 
-Você pode vários atlas no mesmo TileSet. Em alguns casos pode ser mais conveniente fundir os atlas em um único. Para isso, selecione a opção *Open Atlas Merging Tool* como mostrado abaixo.
+Você pode trabalhar com vários atlas no mesmo TileSet, mas em alguns casos pode ser mais conveniente fundir os atlas em um único maior. Para isso, selecione a opção *Open Atlas Merging Tool* como mostrado abaixo.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/4dbc82ed-506f-45fa-8488-9bfdd78aa228" />
+  <img width="440" src="https://github.com/user-attachments/assets/4dbc82ed-506f-45fa-8488-9bfdd78aa228" />
 </p>
 
 Isto vai abrir a janela mostrada abaixo. Agora basta selecionar os atlas que você quer fundir e selecionar uma das opções abaixo. DAlém disso, dependendo de como você configura a opção *Next Line After Column*, os atlas podem ficar alinhados horizontalmente ou verticalmente caso sejam só 2 atlas. Se forem mais atlas, você pode ainda ter um retângulo de atlas. É questão de testar os valores.
@@ -156,26 +160,28 @@ Isto vai abrir a janela mostrada abaixo. Agora basta selecionar os atlas que voc
 
 ### Aba Select
 
-Na aba *Select* (selecionada em azul, ao lado de *Setup*), temos as propriedades mostradas abaixo. Vamos explicar algumas delas abaixo.
+Na aba *Select* (selecionada em azul, ao lado de *Setup*), temos as propriedades mostradas abaixo para cada tile selecionado no atlas. Vamos explicar as propriedades mais relevantes.
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/7c23a17f-ab4e-4c54-b39f-14f8a6a215cf" />
+  <img width="400" src="https://github.com/user-attachments/assets/7c23a17f-ab4e-4c54-b39f-14f8a6a215cf" />
 </p>
 
-- **Atlas Coords:** São as *coordenadas do tilemap* que vimos no início deste tutorial. Não é editável.
+- **Atlas Coords:** São coordenadas do tile dentro do atlas. Não é editável.
 
 - **Size in Atlas:** Tamanho do tile em termos das coordenadas do tilemap. Não é editável.
 
-- **Rendering/Texture Origin:** Altera a posição do centro do tile.
+- **Rendering/Texture Origin:** Altera a coordenada do centro do tile.
 
 -  **Rendering/Modulate:** Altera a coloração do tile.
 
 ### Colisão 
 
-Para poder adicionar colisão aos tiles, primeiro você deve criar uma camada de física indo em *Add Element* no *Physics Layers*, como mostrado abaixo. Ao fazer isso, vai aparecer mais coisas, mas você não precisa mexer nelas. 
+Para poder adicionar colisão aos tiles, primeiro você deve criar uma camada de física indo em *Add Element* no *Physics Layers*, como mostrado abaixo. Ao fazer isso, vão aparecer mais coisas no *Inspector*, mas você não precisa mexer nelas. 
 
 <p align="center">
   <img width="220" src="https://github.com/user-attachments/assets/dab1ca88-1997-4481-a432-0b97d4656fc3" />
+  <img width="260" alt="image" src="https://github.com/user-attachments/assets/013177c5-9116-4ae6-9b5d-77fa1117a5f9" />
+  <img width="240" alt="image" src="https://github.com/user-attachments/assets/cdb762bc-05fb-438c-b3ff-3fbbeff39924" />  
 </p>
 
 Feito isso, vá para a aba *Select* no painel e selecione algum tile. Note que a opção *Physics* está disponível. Agora abra esta aba até encontrar a janela *Polygons*, mostrada abaixo, na imagem à direita. Usando as ferramentas de edição logo acima, você pode criar e editar shapes poligonais de colisão para o tile. O funcionamento destas ferramentas de edição é análogo ao visto em [Polygon2D e CollisionPolygon2D]([https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Path2D)). 
