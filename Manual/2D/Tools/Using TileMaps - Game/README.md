@@ -1,14 +1,14 @@
 # Using TileMaps - Game
 
-Este projeto será o meu primeiro jogo com o objetivo de ser um jogo de fato. O propósito final dele ainda é colocar em prática o que foi aprendido, que no caso são as ferramentas de tiles. Ainda assim, será algo além de um experimento avulso da ferramenta.
+Este projeto será o meu primeiro jogo com o objetivo de ser um jogo de fato. O principal propósito final dele ainda é colocar em prática o que foi aprendido de tiles, mas ainda assim, será algo além de um experimento focado só nesse aprendizado. Vou usar um pouco de tudo que foi visto até agora.
 
 ## Organização de um projeto
 
-[Neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#organiza%C3%A7%C3%A3o-de-um-projeto), vimos superficialmente como organizar um projeto em Godot. Eu olhei essa questão mais a fundo cheguei a uma estrutura de pastas bem organizada e voltada a projetos sérios. 
+[Nesse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Heads%20up%20display/Galton%20Board%202#organiza%C3%A7%C3%A3o-de-um-projeto), vimos superficialmente como organizar um projeto em Godot. Eu pesquisei sobre essa questão mais a fundo cheguei a uma estrutura de pastas bem organizada e voltada a projetos sérios. 
 
 ```text
 res://
-├── assets/                        # Arquivos brutos de mídia (nunca editados por Godot)
+├── assets/                        # Arquivos brutos de mídia
 │   ├── graphics/                  # Imagens e sprites (ex: PNG, SVG, sprite sheets)
 │   │   ├── characters/            # Personagens (ex: jogador, inimigos)
 │   │   ├── environment/           # Cenários, objetos de mapa
@@ -63,7 +63,7 @@ Começaremos com o objeto principal deste tutorial, os tiles! De maneira análog
 Iremos trabalhar principalmente com os 3 tiles destacados abaixo. Adicione uma camada de colisão à eles, conforme ensinado no tutorial de tiles.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/c880212a-0f5f-4951-bbba-fc7d37b20cbe" />
+  <img width="1100" src="https://github.com/user-attachments/assets/c880212a-0f5f-4951-bbba-fc7d37b20cbe" />
 </p>
 
 O chão foi feito com os dois primeiros tiles indicados acima (o da esquerda e o do meio). Colocamos o primeiro tile mais à esquerda individualmente e depois utilizamos a ferramenta de traçar retas para fazer a linha de tiles repetidos até o final da tela. Para a parte inferior (a terra, talvez), usamos a ferramenta de retângulo para fazer um retângulo preenchido. Depois selecionamos os dois tiles selecionados na figura abaixo e colocamos uma probabilidade para a ferramenta. Daí repetimos o desenho retangular para estes desenhos serem alocados aleatoriamente em alguns pontos. Isso deixa a imagem mais dinâmica e agradável aos olhos.
@@ -84,13 +84,13 @@ Agora selecione as plantas e a ferramenta de traçar reta, com o modificador de 
   <img width="800" src="https://github.com/user-attachments/assets/0134dbf4-38ba-47ac-ab66-b7cdbb346bdc" />
 </p>
 
-Depois de salvar esta cena, vamos criar uma nova, que vamos chamar de "PlatformsFront". Vá em *FileSystem*, crie uma duplicata da cena anterior e altere o nome.
+Depois de salvar esta cena, vamos criar uma nova, que será chamada de "PlatformsFront". Vá em *FileSystem*, crie uma duplicata da cena anterior e altere o nome.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/320f049c-628f-4224-a400-cdb7a012aff7" />
+  <img width="450" src="https://github.com/user-attachments/assets/320f049c-628f-4224-a400-cdb7a012aff7" />
 </p>
 
-Nesta cena, deixe um `Node2D` como node raíz, crie uma duplicate do node `Platforms` mas apague todo o desenho deste novo node. Você vai repetir o procedimento que fizemos para colocar as plantas no chão do cenário.
+Nesta cena, deixe um `Node2D` como node raíz, crie uma duplicata do node `Platforms` mas apague todo o desenho deste novo node. Você vai repetir o procedimento que fizemos para colocar as plantas no chão do cenário.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/13feca19-bc87-4934-8bab-f3082f126bfd" />
@@ -115,26 +115,26 @@ Crie a cena *Level* como um `Node2D` sem nada por enquanto. Aos poucos vamos pop
 A cena do personagem será um `CharacterBody2D`. Primeiramente, vamos configurar as animações. As spritesheets da *Vampire Girl* foram obtidas no [Craftpix](https://craftpix.net/freebies/free-vampire-pixel-art-sprite-sheets/?num=1&count=80&sq=vampire%20girl&pos=3). Iremos utilizar as animações *idle, jump, run* e *walk*. Ao fim das configuraçõs, o resultado deve estar como mostrado abaixo.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/3462d798-6820-4a8f-84e5-92dd5be7ddda" />
+  <img width="1100" src="https://github.com/user-attachments/assets/3462d798-6820-4a8f-84e5-92dd5be7ddda" />
 </p>
 
-Adicione uma caixa de colisão para o personagem, se baseando na animação idle para decidir o tamanho do shape. Aumente em 3 vezes a escala do personagem. Adicione os 3 efeitos sonoros na cena (`AudioStreamPlayer`), como mostrado abaixo.
+Adicione uma caixa de colisão para o personagem, se baseando na animação idle para decidir o tamanho do shape. Aumente em 3 vezes a escala do personagem e adicione os 3 efeitos sonoros na cena (`AudioStreamPlayer`), como mostrado abaixo.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/f40ca28c-9d90-4493-add4-b75b791640a6" />
+  <img width="230" src="https://github.com/user-attachments/assets/f40ca28c-9d90-4493-add4-b75b791640a6" />
 </p>
 
 Depois disso, adicione o script abaixo ao `CharacterBody2D`. Agora já é possível adicionar o personagem na cena *Level*. Lembre-se de colocá-lo após *Platforms* e antes de *PlatformsFront*. 
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/e76cd871-2223-42dd-b88e-2be14dbcd63e" />
+  <img width="550" src="https://github.com/user-attachments/assets/e76cd871-2223-42dd-b88e-2be14dbcd63e" />
 </p>
 
-> PS: A partir daqui já entramos em um ponto que podemos começar a testar o jogo na prática, basta executar a cena *Level*. Duas coisas que eu fiz neste estágio: coloquei manualmente lgumas plantas grandes no *PlatformsFront* e ajustei os volumes dos efeitos sonoros.
+> PS: A partir daqui já entramos em um ponto que podemos começar a testar o jogo na prática, basta executar a cena *Level*. Duas coisas que eu fiz neste estágio: coloquei manualmente algumas plantas grandes no *PlatformsFront* e ajustei os volumes dos efeitos sonoros.
 
 ## Nuvens
 
-Vamos aproveitar a oportunidade e relembrar o que aprendemos de paralaxe. Usaremos as nuvens disponíveis [neste link do Craftpix](https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/?num=1&count=180&sq=clouds%20sky%20background&pos=2). Crie uma nova cena com um `Node2D` como raíz e 3 filhos do tipo `Parallax2D`. Renomeamos os nodes filhos e adicionamos seus respectivos sprites. Começaremos analisando a situação com o terceira nuvem, que é a mais próxima. Abaixo, temos as configurações do node de paralaxe, que já estão corretos. O que está errado é que o tamanho do sprite é muito pequeno em relação a viewport. Para ajustar isso, devemos aumentar a escala do `Sprite2D` filho. Como já vimos no tutorial de paralaxe, esse é um ajuste delicado. Você pode ajustar manipulando visualmente, mas lembre que [cada bloco do editor equivale a 8 pixels](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#o-quadriculado-do-editor-%C3%A9-8x8-pixels).
+Vamos aproveitar a oportunidade e relembrar o que aprendemos de paralaxe. Usaremos as nuvens disponíveis [neste link do Craftpix](https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/?num=1&count=180&sq=clouds%20sky%20background&pos=2). Crie uma nova cena com um `Node2D` como raíz e 3 filhos do tipo `Parallax2D`. Renomeamos os nodes filhos e adicionamos seus respectivos sprites. Começaremos analisando a situação com o terceira nuvem, que é a mais próxima. Abaixo, temos as configurações do node de paralaxe, que já estão corretos. O que está errado é que o tamanho do sprite é muito pequeno em relação a viewport. Para ajustar isso, devemos aumentar a escala do `Sprite2D` filho. Como já vimos no tutorial de paralaxe, esse é um ajuste delicado.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/5ffd5505-b23d-4cb5-848f-5ab4c4180481" />
@@ -144,7 +144,7 @@ Vamos aproveitar a oportunidade e relembrar o que aprendemos de paralaxe. Usarem
 
 Depois que tiver ajustado corretamente essa camada de nuvens, basta repetir os passos para as outras camadas e adicionar a cena no *Level*. Como elas são background, devem estar acima dos outros nodes na árvore (exceto a raíz).
 
-Assim como utilizamos duas camadas de plantas para dar uma sensação de profundidade, utilizaremos duas camdas de nuvens. Além da sensação de profundidade na cena, também vai mostrar que o cenário se passa num local muito alto (que é a minha intenção). Crie uma nova cena, chamaremos ela de *CloudsFront*. Deixe um `Node2D` como raíz e faça ctrl+C ctrl+V no node de paralaxe *Clouds-3* da cena anterior. Isto vai copiar este objeto de uma cena para a outra. Inverta a escala da eixo $x$ para fazer um flip horizontal na nuvem e deixe tudo menor e posicionado na base da viewport. Feito isso, vá para o *Inspector* da paralaxe e ajuste o *Repeat Size* do eixo $x$ até ter um encaixe perfeito, aumente o *Repeat Times* para 3 e aumenta a velocidade horizontal dela. Com isso nós teremos um nave à frente do plano, e como fizemos uma inversão dela pelo eixo $x$, ela não vai ficar parecerndo uma cópia miniatura da nuvem de fundo. Isso dará mais autenticidade aos elementos do jogo.
+Assim como utilizamos duas camadas de plantas para dar uma sensação de profundidade, utilizaremos duas camadas de nuvens. Além da sensação de profundidade na cena, também vai mostrar que o cenário se passa num local muito alto (que é a minha intenção). Crie uma nova cena, chamaremos ela de *CloudsFront*. Deixe um `Node2D` como raíz e faça ctrl+C ctrl+V no node de paralaxe *Clouds-3* da cena anterior. Isto vai copiar este objeto de uma cena para a outra. Inverta a escala da eixo $x$ para fazer um flip horizontal na nuvem e deixe tudo menor e posicionado na base da viewport. Feito isso, vá para o *Inspector* da paralaxe e ajuste o *Repeat Size* do eixo $x$ até ter um encaixe perfeito, aumente o *Repeat Times* para 3 e aumenta a velocidade horizontal dela. Com isso nós teremos um nave à frente do plano, e como fizemos uma inversão dela pelo eixo $x$, ela não vai ficar parecendo uma cópia miniatura da nuvem de fundo. Isso dará mais autenticidade aos elementos do jogo.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/667e2c81-a614-48d0-9739-9f301684b8f6" />
@@ -170,9 +170,11 @@ Por fim, crie uma duplicata deste node com ctrl+D, mude o texto para "TIMER = 0.
   <img width="1000" src="https://github.com/user-attachments/assets/9c219463-6785-423e-8168-6263a32d44fc" />
 </p>
 
+> 🟦 **REVISÃO POSTERIOR:** Em geral, prefira usar o node `CanvasLayer` como raíz de um HUD em vez do `Node2D`.
+
 ## Partículas com folhas
 
-O objetivo desse joguinho é coletar umas bandeirinhas que dão pontos, até coletar todas. Vamos introduzir um desafio extra colocando eventos de vento no jogo. Então de tempos em tempos o jogador será empurrado para o buraco que tem no lado esquerdo da tela. Além da força exercida sobre o personagem, o cenrário terá diversas folhas voando para indicar a força do vento. Isso será feito com partículas, algo que já [vimos anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems). Para começar, crie uma cena com um node `GPUParticles2D` e vamos chamá-la de *Leaves*.
+O objetivo desse joguinho é coletar umas bandeirinhas que dão pontos, até coletar todas. Vamos introduzir um desafio extra colocando eventos de vento no jogo. Então de tempos em tempos o jogador será empurrado para o buraco que tem no lado esquerdo da tela. Além da força exercida sobre o personagem, o cenário terá diversas folhas voando para indicar a força do vento. Isso será feito com partículas, algo que já [vimos anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20particle%20systems). Para começar, crie uma cena com um node `GPUParticles2D` e vamos chamá-la de *Leaves*.
 
 A ideia por trás dos parâmetros abaixo foi a de ter as folhas voando para a esquerda, ocupando toda a tela, e tendo um comportamento mais orgânico, em que um jato de ar pode empurrar um pequeno grupo de folhas pelo mesmo caminho. Também colocamos um pouco de *Explosiveness* para que as folhas não fossem aparecendo na tela de maneira linear e previsível. Coloque esta cena na *Level*, antes do *HUD*. Aliás, o *HUD* deve vir depois de tudo. 
 
@@ -187,14 +189,14 @@ A ideia por trás dos parâmetros abaixo foi a de ter as folhas voando para a es
 Vamos colocar alguns tiles de bandeiras espalhadas pelo cenário. Cada bandeira vale um ponto, e o jogo acaba quando o jogador coleta todas elas. Vamos voltar ao cenário de plataformas e inserir as bandeiras. Isso é feito facilmente com a ferramenta de lápis.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/ae2781fe-378e-417e-90e5-15b08f1a91f6" />
+  <img width="900" src="https://github.com/user-attachments/assets/ae2781fe-378e-417e-90e5-15b08f1a91f6" />
 </p>
 
 Agora crie um metadado chamado *Points* e atribua o valor $1$ para a bandeira, indo em, *TileSet → Select → Custom Data → Points*, com a seleção na bandeira.
 
 <p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/7e5ae326-0412-4552-838a-fc3f232db797" />
-  <img width="600" src="https://github.com/user-attachments/assets/3558aee0-bb5b-469b-bca6-ab8ff89b1863" />
+  <img width="250" src="https://github.com/user-attachments/assets/7e5ae326-0412-4552-838a-fc3f232db797" />
+  <img width="680" src="https://github.com/user-attachments/assets/3558aee0-bb5b-469b-bca6-ab8ff89b1863" />
 </p>
 
 Agora precisamos de um código para implementar a seguinte sequência lógica: *personagem toca na bandeira → tile da bandeira desaparece → score aumenta em 1 → valor do score na tela é atualizado*. Isso tudo é feito com o código abaixo no node raíz de *Level*.
@@ -233,16 +235,16 @@ Crie um script para o node raíz da cena e um sinal para cada um dos botões.
 O botão do start game é o mais fácil, basta colocar o comando `get_tree().change_scene_to_file("res://scenes/game/levels/level.tscn")` para ser executado. Isso carrega a cena *Level*. Para os controles, colocamos um `Sprite2D` com a descrição dos controles. Aí quando o jogador clica no botão, alguns itens do menu ficam escondidos ou escurecidos, e apaerce a sprite na frente. Os créditos ficaram sendo um node `Label` simplesmente. Vale notar que estes dois últimos precisam de um botão para voltar ao menu. Por fim, adicionamos o node do personagem para instanciar apenas a animação de caminhar na cena. Colocamos abaixo o script completo do menu.
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/0f321766-4323-4e6f-b6ea-26dac65d5365" />
-  <img width="380" src="https://github.com/user-attachments/assets/db3554be-cbfb-4b91-9f6b-43b764714072" />
+  <img width="590" src="https://github.com/user-attachments/assets/0f321766-4323-4e6f-b6ea-26dac65d5365" />
+  <img width="410" src="https://github.com/user-attachments/assets/db3554be-cbfb-4b91-9f6b-43b764714072" />
 </p>
 
 ## Pré-Menu
 
-Como este jogo será exportado para HTML5, é possível que algumas coisas do jogo não carreguem antes do jogador apertar algum botão. Em particular, minha ideia é colcar uma música para tocar assim que entrar o menu. Então preciso que alguma interação do jogador ocorra antes disso. Uma solução simples é usar a clássica tela de "Pressione qualquer tecla/botão para começar". Além de posicionar o botão, também acrescentamos um script ao node raíz para lidar com a lógica do botão e efeito visual de piscar para chamar a atenção. É verdade que ainda não vimos nada sobre a função `_input`. Por enquanto vamos apenas aceitar que é uma função nativa de Godot que detecta eventos de input.
+Como este jogo será exportado para HTML5, é possível que algumas coisas do jogo não carreguem antes do jogador apertar algum botão. Em particular, minha ideia é colocar uma música para tocar assim que entrar o menu. Então preciso que alguma interação do jogador ocorra antes disso. Uma solução simples é usar a clássica tela de "Pressione qualquer tecla/botão para começar". Além de posicionar o botão, também acrescentamos um script ao node raíz para lidar com a lógica do botão e efeito visual de piscar para chamar a atenção. É verdade que ainda não vimos nada sobre a função `_input`. Por enquanto vamos apenas aceitar que é uma função nativa de Godot que detecta eventos de input.
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/ad08fe81-42ab-42c2-8ad1-84e3dc75ee3e" />
+  <img width="580" src="https://github.com/user-attachments/assets/ad08fe81-42ab-42c2-8ad1-84e3dc75ee3e" />
 </p>
 
 Note que o background padrão do jogo está no cinza default da Godot. Queremos uma cor preta, que também é classico deste tipo de tela de pressionar tecla. Para isso, você deve ir em *Project Setings → General → Rendering Environment → Default Clear Color*.
@@ -263,7 +265,7 @@ Para implementar a lógica do vento, criamos um `Timer` que muda a força horizo
 Nesse jogo eu tentei uma coisa nova, que foi colocar os inputs para reconhecerem gamepads (controles de game, como o do XBox para PC). Não é difícil, basta ir em *Project → Project Settings → Input Map*, escolher a ação que quer e clicar no + à direita (*Add Event*). Isso vai abrir a tela de escutar o comando, e aí é só pressionar o botão correspondente no gamepad. Para relembrar mais em detalhe como configurar, veja [esse tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Listening%20to%20player%20input/Movements%202#inputs). 
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/7833155e-a5cd-41ae-918e-1263a5ecbfd0" />
+  <img width="800" src="https://github.com/user-attachments/assets/7833155e-a5cd-41ae-918e-1263a5ecbfd0" />
 </p>
 
 ## Toques finais
@@ -285,7 +287,7 @@ Como mencionado anteriormente, quero colocar uma música para tocar logo no iní
 Crie uma cena com um único node `AudioStreamPlayer` e configure como mostrado abaixo. Chamaremos esta cena de *Music*.
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/043d3b88-9b29-4d9d-a925-b9c16c23280f" />
+  <img width="280" src="https://github.com/user-attachments/assets/043d3b88-9b29-4d9d-a925-b9c16c23280f" />
 </p>
 
 Depois de configurada a cena, precisamos habilitar o autoload para ela. Vá em *Project → Project Settings → Globals*, clique no ícone de pasta para buscar arquivo, selecione a cena *music.tscn* e clique em *+Add*. Isso é o suficiente para termos ela carregando automaticamente no início do jogo e rodando independentemente de qualquer coisa. 
@@ -294,7 +296,7 @@ Depois de configurada a cena, precisamos habilitar o autoload para ela. Vá em *
   <img width="1200" src="https://github.com/user-attachments/assets/3ea72da1-ac55-423b-8863-5d3e99cd30be" />
 </p>
 
-Quando o player coleta todas as moedas, queremos pausar o jogo e exigir uma mensagem de vitória na tela. Comece criando uma cópia do node do score no HUD, mude a mensagem para uma mensagem de vitória e deixe este node invisível por default. A posição dele e tamanho não importa, pois isto será determinado via script.
+Quando o player coleta todas as moedas, queremos pausar o jogo e mostrar uma mensagem de vitória na tela. Comece criando uma cópia do node do score no HUD, mude a mensagem para uma mensagem de vitória e deixe este node invisível por default. A posição dele e tamanho não importa, pois isto será determinado via script.
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/ac189bf8-4144-4cf7-90fc-b79fd88cc246" />
@@ -311,8 +313,13 @@ Depois disso acabou, o jogador ganhou! Também acabou o tutorial/documentação 
 
 ## Extra - Export de jogo sem modo DEBUG
 
-Demorou um pouco para eu descobrir como fazer isso. A opção estava meio escondida, o chatGPT estava desatualizado e na internet eu não encontrei (também não procurei muito). Por acaso agora eu vi onde remove a opção de upload com DEBUG. Quando estiver na última etapa antes de exportar o projeto, a opção está ali embaixo. Basta tirar a seleção dela e o projeto vai sem DEBUG.
+Demorou um pouco para eu descobrir como fazer isso. Por acaso agora eu vi onde remove a opção de upload com DEBUG. Quando estiver na última etapa antes de exportar o projeto, a opção está ali embaixo. Basta tirar a seleção dela e o projeto vai sem DEBUG.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/a9c29c7c-d72a-4d03-92f8-b00b503135b2" />
+  <img width="900" src="https://github.com/user-attachments/assets/a9c29c7c-d72a-4d03-92f8-b00b503135b2" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">Próximo ➡</a>
 </p>
