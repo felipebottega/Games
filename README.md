@@ -55,6 +55,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#_init-vs-_ready
 ">  _init vs _ready
  </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#definição-de-árvore-de-cenas-(scene-tree)
+">  Definição de árvore de cenas (scene tree)
+ </a><br>
 <li> <b>Getting started\Step by step\Using signals\Signals 3</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203#criando-o-seu-próprio-sinal
 ">  Criando o seu próprio sinal
@@ -367,6 +370,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#rotação-e-movimento-com-mouse
 ">  Rotação e movimento com mouse
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#get_global_mouse_position()-vs-get_viewport()get_mouse_position()
+">  get_global_mouse_position() vs get_viewport().get_mouse_position()
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#clicar-e-mover
 ">  Clicar e mover
@@ -1011,7 +1017,7 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#profiler-
 ">  Profiler 
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#árvore-de-cena
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#árvore-de-cenas
 ">  árvore de cenas
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#física
@@ -1702,7 +1708,7 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 ">  Cena autoload
  </a><br>
 <li> <b>Manual\Scripting\Core features\Using SceneTree</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#entrando-e-saindo-da-árvore-de-cena
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#entrando-e-saindo-da-árvore-de-cenas
 ">  Entrando e saindo da árvore de cenas
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Using%20SceneTree#propriedades
