@@ -343,7 +343,7 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#arrumando-paralaxe-para-figura-com-o-tamanho-correto-mas-espaço-extra-sobrando
 ">  Arrumando paralaxe para figura com o tamanho correto mas espaço extra sobrando
  </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#arrumando-paralaxe-para-figura-com-o-espaçamento-correto-mas-figura-menor-que-o-viewport
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#arrumando-paralaxe-para-figura-com-o-espaçamento-correto-mas-figura-menor-que-a-viewport
 ">  Arrumando paralaxe para figura com o espaçamento correto mas figura menor que a viewport
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#repeat-times
@@ -355,20 +355,20 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#paralaxe-com-movimento-de-câmera
 ">  Paralaxe com movimento de câmera
  </a><br>
-<li> <b>Manual\2D\2D movement overview</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#todos-os-vetores-do-transform-são-em-coordenadas-locais
+<li> <b>Manual\2D\Physics and movement\2D movement overview</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#todos-os-vetores-do-transform-são-em-coordenadas-locais
 ">  Todos os vetores do transform são em coordenadas locais
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#8-way-movement
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#8-way-movement
 ">  8-way movement
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#rotação-e-movimento-(asteroids-style)
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#rotação-e-movimento-(asteroids-style)
 ">  Rotação e movimento (Asteroids-style)
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#rotação-e-movimento-com-mouse
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#rotação-e-movimento-com-mouse
 ">  Rotação e movimento com mouse
  </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#clicar-e-mover
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#clicar-e-mover
 ">  Clicar e mover
  </a><br>
 <li> <b>Manual\2D\Tools\TerrainSets</b> </li>
