@@ -2,9 +2,9 @@
 
 O problema de lidar com resoluções é antigo, e muitas abordagens já foram usadas para lidar com isso. A Godot usa uma abordagem muito comum hoje em dia: criar o jogo todo em uma *resolução base* e usar as funcionalidades da engine para encaixar a tela do jogo onde for necessário. Como veremos, a Godot fornece um conjunto de funcionalidades para que esses ajustes de resolução sejam fáceis e práticos. 
 
-Lembre que no tutorial do jogo [Galton Board 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items) foi dito que o viewport é o espaço delimitado pelo retângulo azul do editor, e que este espaço representa a tela que o jogador enxerga no jogo. A resolução do viewport é esta resolução base (é a mesma que foi mencionada no [tutorial de viewports](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#size-e-stretch) no caso de subviewport). Portanto, a resolução base nada mais é do que a resolução "ideal" do seu jogo. Você define a resolução do jogo, desenvolve o jogo usando o viewport com estas dimensões, e só depois que o jogo está pronto é que você usa as funcionalidades da engine para ajustar a resolução base para uma outra resolução, a depender do dispositivo e configuração utilizada no jogo. 
+Lembre que no tutorial do jogo [Galton Board 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items) foi dito que a viewport é o espaço delimitado pelo retângulo azul do editor, e que este espaço representa a tela que o jogador enxerga no jogo. A resolução da viewport é esta resolução base (é a mesma que foi mencionada no [tutorial de viewports](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#size-e-stretch) no caso de subviewport). Portanto, a resolução base nada mais é do que a resolução "ideal" do seu jogo. Você define a resolução do jogo, desenvolve o jogo usando a viewport com estas dimensões, e só depois que o jogo está pronto é que você usa as funcionalidades da engine para ajustar a resolução base para uma outra resolução, a depender do dispositivo e configuração utilizada no jogo. 
 
-Como já foi dito antes, a resolução do viewport (resolução base) é definida em *Project → Project Settings → Display → Window → Size → Viewport width/Height*. Além destes dois parâmetros, há outros essenciais nesta mesma tela de configurações. São estes parâmetros que definem o conjunto de funcionalidades para lidar com múltiplas resoluções.
+Como já foi dito antes, a resolução da viewport (resolução base) é definida em *Project → Project Settings → Display → Window → Size → Viewport width/Height*. Além destes dois parâmetros, há outros essenciais nesta mesma tela de configurações. São estes parâmetros que definem o conjunto de funcionalidades para lidar com múltiplas resoluções.
 
 ## Aba Game
 
@@ -53,7 +53,7 @@ O *stretch mode* determina como a resolução base é esticada para se encaixar 
   <img width="1100" src="https://github.com/user-attachments/assets/b6ce5921-403e-4f0f-8ed3-b97fccc3d493" />
 </p>
 
-Note que no caso da tela cheia, tivemos um fundo branco que passou a ser cinza de repente. Isso aconteceu porque a tela cheia conseguiu ir além do background branco que tinha no jogo, revelando um pouco do espaço vazio do viewport.
+Note que no caso da tela cheia, tivemos um fundo branco que passou a ser cinza de repente. Isso aconteceu porque a tela cheia conseguiu ir além do background branco que tinha no jogo, revelando um pouco do espaço vazio da viewport.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/363c8f2c-3b76-421a-a72b-20cf73213da0" />
@@ -77,7 +77,7 @@ Apesar de não ser evidente, o quadriculado e logo da Godot também sofreram alt
 
 > PS: Você pode fazer um jogo inteiro utilizando assets de resolução alta em um viewport de resolução base mais baixa, de modo a ter duas opções de resolução no seu jogo. A figura acima indica isso. Porém, isso não é prático, pois é limitado a duas resoluções apenas. Para ter múltiplas resoluções, o indicado é usar o modo windowed e escolher alguma resolução dentre as várias opções (ou simplesmente esticar a janela, pois a engine ajusta a resolução automaticamente neste caso). Se você quiser múltiplas escolhas de resolução em fullscreen, é melhor usar subviewport. Veremos como fazer isso no próximo tutorial.
 
-Na questão de movimento, também há diferenças entre o modo canvas items. O impulso inicial é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels com o up-scaling, enquanto que o viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo. 
+Na questão de movimento, também há diferenças entre o modo canvas items. O impulso inicial é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels com o up-scaling, enquanto que a viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo. 
 
 Você pode testar estes efeitos no [jogo associado a este projeto](https://felipebottega.github.io/Games/Manual/Rendering/Multiple%20resolutions/html/), os direcionais movem a figura. Porém, como ele foi exportado para web, não é possível testar todas as funcionalidades discutidas aqui. Caso queira testar tudo, é melhor baixar o projeto e executar na própria engine.
 
@@ -103,19 +103,19 @@ Este parâmetro determina como o jogo é deformado para se encaixar no formato d
   <img width="600" src="https://github.com/user-attachments/assets/4d301636-9d92-4215-8712-7e2eb846c434" />
 </p>
 
-- **Keep Width:** Estica o jogo ao máximo que dá, limitado à largura. Em outras palavras, quando a engine estica até esse limite da largura, ela tem que parar o esticamento pois esticar mais iria desfazer as proporções originais da resolução base. Se tiver mais espaço sobrando para a altura preencher a tela, não haverá esticamento, mas será revelado o restanto do viewport até preencher a tela nesta direção.
+- **Keep Width:** Estica o jogo ao máximo que dá, limitado à largura. Em outras palavras, quando a engine estica até esse limite da largura, ela tem que parar o esticamento pois esticar mais iria desfazer as proporções originais da resolução base. Se tiver mais espaço sobrando para a altura preencher a tela, não haverá esticamento, mas será revelado o restanto da viewport até preencher a tela nesta direção.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/b631f724-a131-4892-a192-708ac8f0db32" />
 </p>
 
-- **Keep Height:** Semelhante ao *keep width*, mas em relação à altura. Na figura abaixo, note que o limite da altura foi atingido e, em vez de continuar o esticamento para a largura, a engine revelou mais do viewport nesta direção. É assim que o keep width/height funcionam, vão até onde dá em uma direção e continuam na outra revelando mais do viewport.
+- **Keep Height:** Semelhante ao *keep width*, mas em relação à altura. Na figura abaixo, note que o limite da altura foi atingido e, em vez de continuar o esticamento para a largura, a engine revelou mais da viewport nesta direção. É assim que o keep width/height funcionam, vão até onde dá em uma direção e continuam na outra revelando mais da viewport.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/b677b51f-11b2-428b-b3bc-c58cb31e5c6f" />
 </p>
 
-- **Expand:** Basicamente é *keep width + keep height*. A engine mantém as proporções originais da resolução base e apenas revela mais do viewport nas duas direções até ocupar a tela toda.
+- **Expand:** Basicamente é *keep width + keep height*. A engine mantém as proporções originais da resolução base e apenas revela mais da viewport nas duas direções até ocupar a tela toda.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/bdf3cd6c-1e07-4e2c-ad08-9ae07a0071a9" />

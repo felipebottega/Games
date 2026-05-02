@@ -52,7 +52,7 @@ São valores os disponíveis para todas as funções, incluindo as customizadas.
 | Valor&nbsp;Nativo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição |
 |----------|-----------|
 | `in mat4 MODEL_MATRIX` | Transformação do espaço local para o espaço global (world). O espaço global corresponde às coordenadas que você normalmente usa no editor. |
-| `in mat4 CANVAS_MATRIX` | Transformação do espaço global para o espaço de canvas. Nesse espaço, a origem fica no canto superior esquerdo da tela e as coordenadas vão de `(0.0, 0.0)` até o tamanho do viewport. |
+| `in mat4 CANVAS_MATRIX` | Transformação do espaço global para o espaço de canvas. Nesse espaço, a origem fica no canto superior esquerdo da tela e as coordenadas vão de `(0.0, 0.0)` até o tamanho da viewport. |
 | `in mat4 SCREEN_MATRIX` | Transformação do espaço de canvas para o espaço de recorte (clip space). Nesse espaço, as coordenadas variam de `(-1.0, -1.0)` até `(1.0, 1.0)`. |
 | `in int INSTANCE_ID` | ID da instância usada para instancing. |
 | `in vec4 INSTANCE_CUSTOM` | Dados personalizados da instância. |
@@ -83,7 +83,7 @@ Outros valores nativos, como `UV` e `COLOR`, também são repassados para a fun�
 
 | Valor&nbsp;Nativo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Descrição |
 |----------|-----------|
-| `in vec4 FRAGCOORD` | Coordenada do centro do pixel, em espaço de tela. O componente `xy` define a posição dentro do viewport. A origem `(0.0, 0.0)` fica no canto superior esquerdo. |
+| `in vec4 FRAGCOORD` | Coordenada do centro do pixel, em espaço de tela. O componente `xy` define a posição dentro da viewport. A origem `(0.0, 0.0)` fica no canto superior esquerdo. |
 | `in vec2 SCREEN_PIXEL_SIZE` | Tamanho de um pixel em coordenadas UV. Equivale ao inverso da resolução da tela. Equivale a algo como `vec2(1.0 / screen_width, 1.0 / screen_height)`. Basicamente te diz o quanto precisa andar nas coordenadas UV para mover exatamente 1 pixel na tela.|
 | `in vec4 REGION_RECT` | Área visível da região do sprite no formato `(x, y, largura, altura)`. Varia de acordo com a propriedade `region_enabled` do `Sprite2D`. |
 | `in vec2 POINT_COORD` | Coordenada usada para renderização de pontos. |
@@ -155,7 +155,7 @@ NORMAL_MAP = texture(NORMAL_TEXTURE, UV).rgb;
 
 | Built-in | Descrição |
 |----------|-----------|
-| `in vec4 FRAGCOORD` | Coordenada do centro do pixel, em espaço de tela. O componente `xy` define a posição no viewport. A origem `(0.0, 0.0)` fica no canto superior esquerdo. |
+| `in vec4 FRAGCOORD` | Coordenada do centro do pixel, em espaço de tela. O componente `xy` define a posição na viewport. A origem `(0.0, 0.0)` fica no canto superior esquerdo. |
 | `in vec3 NORMAL` | Normal de entrada. |
 | `in vec4 COLOR` | Cor de entrada. Este é o valor de saída da função `fragment()`. |
 | `in vec2 UV` | Coordenadas UV vindas da função `vertex()`, equivalentes às UV usadas em `fragment()`. |

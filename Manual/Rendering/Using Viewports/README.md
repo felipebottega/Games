@@ -55,7 +55,7 @@ https://github.com/user-attachments/assets/312c8998-f158-4ef9-bc07-918533bf2942
 
 ## Captura
 
-O método `get_viewport().get_texture().get_image()` permite fazer uma captura de tela e armazenar o resultado como uma textura. Você pode usar este método tanto no viewport raíz como em um subviewport.
+O método `get_viewport().get_texture().get_image()` permite fazer uma captura de tela e armazenar o resultado como uma textura. Você pode usar este método tanto na viewport raíz como em um subviewport.
 
 Na cena de exemplo, adicionamos um botão que contém dois sprites. O primeiro é aquele quadrado verde, que serve apenas de background, nada demais. O segundo é um `Sprite2D` vazio, chamado *Capture*. Ele está ali para ser a textura da captura de tela do subviewport.
 
@@ -87,7 +87,7 @@ Ao script do `Sprite2D`, adicionamos uma função que aumenta ou diminui a escal
 
 ## Câmeras
 
-Sempre que você adiciona câmeras na cena, ela vai mostrar o conteúdo do primeiro viewport acima dela na árvore de cena. 
+Sempre que você adiciona câmeras na cena, ela vai mostrar o conteúdo do primeira viewport acima dela na árvore de cena. 
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/12aad556-b245-495f-8cc5-a3b619059f5b" />
@@ -103,7 +103,7 @@ Para deixar este exemplo mais interessante, colocamos um background estático no
 
 ## World
 
-Em Godot, o `World2D` (`World3D`) é o "ambiente de simulação" ligado a um viewport, ele reúne o que faz aquele conteúdo existir e funcionar ali, como renderização/canvas, física e áudio espacial. Já o viewport é a "tela" em si, a superfície onde o jogo é projetado. Se dois viewports usam o mesmo `World2D`, eles enxergam a mesma física/canvas desse mundo. Se usam mundos diferentes, cada um fica isolado. Em 2D, cada viewport já vem com seu próprio `World2D` por default, mas em 3D o default é todos usarem o mesmo `World3D`. É possível alterar este comportamento nos dois casos (por exemplo, com o comando `$SubViewport.world_2d = get_viewport().world_2d` você redefine o `World2D` de um `SubViewport` para ser igual ao do viewport pai).
+Em Godot, o `World2D` (`World3D`) é o "ambiente de simulação" ligado a um viewport, ele reúne o que faz aquele conteúdo existir e funcionar ali, como renderização/canvas, física e áudio espacial. Já a viewport é a "tela" em si, a superfície onde o jogo é projetado. Se dois viewports usam o mesmo `World2D`, eles enxergam a mesma física/canvas desse mundo. Se usam mundos diferentes, cada um fica isolado. Em 2D, cada viewport já vem com seu próprio `World2D` por default, mas em 3D o default é todos usarem o mesmo `World3D`. É possível alterar este comportamento nos dois casos (por exemplo, com o comando `$SubViewport.world_2d = get_viewport().world_2d` você redefine o `World2D` de um `SubViewport` para ser igual ao da viewport pai).
 
 Um exemplo de aplicação: Você pode ter várias câmeras olhando para o mesmo mundo, cada uma com uma "interpretação visual" diferente. Se dois viewports compartilham o mesmo `World2D`, eles estão enxergando os mesmos nodes (`Node2D`, `PhysicsBody2D`, etc.), a mesma simulação de física, o mesmo estado do jogo. A única coisa que muda é como esse mundo é renderizado, ou seja, a câmera e os efeitos.
 

@@ -344,7 +344,7 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 ">  Arrumando paralaxe para figura com o tamanho correto mas espaço extra sobrando
  </a><br>
 &emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#arrumando-paralaxe-para-figura-com-o-espaçamento-correto-mas-figura-menor-que-o-viewport
-">  Arrumando paralaxe para figura com o espaçamento correto mas figura menor que o viewport
+">  Arrumando paralaxe para figura com o espaçamento correto mas figura menor que a viewport
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#repeat-times
 ">  Repeat Times

@@ -11,7 +11,7 @@ Montamos uma cena contendo dois sprites e uma label. Um dos sprites é a imagem 
   <img width="500" src="https://github.com/user-attachments/assets/8899709a-075d-4ba7-8f84-db2bd69a3fd2" />
 </p>
 
-Agora adicione um `CanvasLayer` contendo um `ColorRect`. Em alguns tutoriais passados, foi utilizada essa mesma combinação de nodes para alterar a textura do próprio `ColorRect`. Neste tutoriais, o `ColorRect` foi esticado manualmente para ficar com o tamanho da viewport, mas isso não é necessário. Você pode clicar no *Anchor Preset* do node e selecionar o *Full Rect*, indicado na figura abaixo. Isso criará um retângulo branco ocupando todo o viewport. 
+Agora adicione um `CanvasLayer` contendo um `ColorRect`. Em alguns tutoriais passados, foi utilizada essa mesma combinação de nodes para alterar a textura do próprio `ColorRect`. Neste tutoriais, o `ColorRect` foi esticado manualmente para ficar com o tamanho da viewport, mas isso não é necessário. Você pode clicar no *Anchor Preset* do node e selecionar o *Full Rect*, indicado na figura abaixo. Isso criará um retângulo branco ocupando todo a viewport. 
 
 <p align="center">
   <img width="150" src="https://github.com/user-attachments/assets/993ef9fd-3832-49af-af64-9348b86b815d" />
