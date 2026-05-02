@@ -4,7 +4,7 @@ Para apresentar as principais funcionalidades de paralaxe em Godot, faremos uma 
 
 ## O quadriculado do editor é 8x8 pixels
 
-Para obter o efeito de paralaxe, você deve preparar as figuras das camadas e se certificar de que elas tem os tamanhos apropriados. O modo mais comum de errar paralaxe é errando nos tamanhos. Caso os tamanhos sejam diferentes e você pretenda ajustar no editor da Godot, tenha em mente que o ajuste pelo gráfico se dá de 8 em 8 pixels. O ajuste fino deve ser no *Inspector*.
+Para obter o efeito de paralaxe, você deve preparar as figuras das camadas e se certificar de que elas tem os tamanhos apropriados. O modo mais comum de errar paralaxe é errando nos tamanhos. Caso os tamanhos sejam diferentes e você pretenda ajustar no editor da Godot usando o *Grid Snap*, tenha em mente que o ajuste pelo gráfico se dá de 8 em 8 pixels. O ajuste fino deve ser no *Inspector*.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/46f9827b-7e98-4692-b8d8-17d9f9f0a0c3" />
@@ -20,20 +20,20 @@ Note que o primeiro objeto tem dimensões $1302 \times 402$. Além de se atentar
 
 ### Criar sprite sheet no GIMP
 
-A segunda camada eu quero que sejam diversas bolas lado a lado. Vamos utilizar o GIMP para isso. Para obter uma separação uniforme, o ideal é criar uma grid para controle. Isso também serve para sprite sheets. Começamos com a figura de uma única bola. Note que a largura da imagem já está em $1302$.
+A segunda camada eu quero que sejam diversas bolas lado a lado. Vamos utilizar o GIMP para isso. Para obter uma separação uniforme, o ideal é criar uma grid de controle. Note que isso também serve para sprite sheets. A largura da imagem já deve estar em $1302$. Começamos com a figura de uma única bola.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/0c725d62-9589-4fcd-8ba1-0edf5a298504" />
 </p>
 
-Depois disso vamos em *Visualizar → Exibir grade* e depois em *Imagem → Configurar grade*. Depois disso é ajustar até encontrar o ponto ideial. Feito isso, copie a bola e coloque em cada uma das lacunas.
+Depois disso, vamos em *Visualizar → Exibir grade* e depois em *Imagem → Configurar grade*. Agora é só ajustar até encontrar o ponto ideial. Feito isso, copie a bola e coloque em cada uma das lacunas.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/169d08c8-91bf-4880-899e-8bf6e5506277" />
   <img width="250" src="https://github.com/user-attachments/assets/a9b4ac97-e020-4409-b1fb-0a0920586d7e" />
 </p>
 
-A colocação da bola dentro de cada frame foi no olho. Pode-se melhorar a precisão utilizando uma grid mais fina e depois reduzindo para a separação de cada frame. Abaixo segue o resultado final. Note que há uma gap no final. Ajustaremos isso mais adiante com uma ferramenta da Godot para configurar paralaxe.
+A colocação da bola dentro de cada frame foi no olho. Pode-se melhorar a precisão utilizando uma grid mais fina e depois reduzindo para a separação de cada frame. Abaixo temos o resultado final. Note que há uma gap no final. Ajustaremos isso mais adiante com uma ferramenta da Godot para configurar paralaxe.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/03d55fd3-f408-4e93-8e07-3b590fac7615" />
@@ -42,10 +42,10 @@ A colocação da bola dentro de cada frame foi no olho. Pode-se melhorar a preci
 Este procedimento mostra a grade, mas ela não é salva quando você exporta para PNG. Se fizer questão de salvar a grade junto, deve ir em *Filtros → Renderizar → Texturas → Grade*, como mostrado abaixo. 
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/cdbf041c-6b43-4d45-b6c0-39c5baaa8dbc" />
+  <img width="600" src="https://github.com/user-attachments/assets/cdbf041c-6b43-4d45-b6c0-39c5baaa8dbc" />
 </p>
 
-A terceira e última camada não tem o mesmo problema que a segunda, mas a figura tem largura de $1100$ pixels em vez dos $1302$ que gostaríamos. Também veremos como resolver isso com as ferramentas da Godot. Note que ambos os problemas poderiam ser tratados no próprio GIMP, de modo a começar a trabalhar na Godot com as figuras já corretas. Não faremos isso aqui apenas para mostrar as possibilidades pela Godot.
+A terceira e última camada não tem o mesmo problema que a segunda (lacuna sobrando), mas a figura tem largura de $1100$ pixels em vez dos $1302$ que gostaríamos. Também veremos como resolver isso com as ferramentas da Godot. Ambos os problemas poderiam ser resolvidos no próprio GIMP, de modo a começar a trabalhar na Godot com as figuras já corretas. Mas não faremos isso aqui apenas para mostrar as possibilidades pela Godot.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/49b54936-d891-4762-b34a-77b345402375" />
@@ -53,9 +53,9 @@ A terceira e última camada não tem o mesmo problema que a segunda, mas a figur
 
 ## Posicionando as camadas de paralaxe
 
-Em termos de estrutura da árvore de cena, não tem mistério, adicionamos um node `Parallax2D` com um filho `Sprite2D` para cada camada. É importante lembrar que os últimos nodes são os que vão aparecer mais à frente.
+Em termos de estrutura da árvore de cena, não tem mistério, adicionamos um node `Parallax2D` com um filho `Sprite2D` para cada camada. É importante lembrar que os nodes mais abaixo são os que vão aparecer mais à frente.
 
-Na hora de posicionar os nodes, basta posicionar o `Sprite2D`, e deixe `Parallax2D` na origem. Note que ambos se encaixaram perfeitamente na viewport. Ainda não colocamos a terceira camada.
+Quando for trabalhar o posicionamento, basta posicionar o `Sprite2D`, e deixe `Parallax2D` na origem. Podemos ver abaixo que a primeira e segundas camadas se encaixaram perfeitamente na viewport. Isso era o esperado já que ambas possuem largura igual à da viewport. 
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/b6fe02f5-a61b-49f1-8a0c-4a97f34e60e2" />
@@ -71,12 +71,14 @@ Omitimos a segunda camada para focar apenas na primeira por enquanto. Como a fig
   <img width="1000" src="https://github.com/user-attachments/assets/d17c7357-7dfc-4c41-bad2-2e34b7221260" />
 </p>
 
-Abaixo, mostramos duas imagens, a primeira usando um *Repeat Size* menor que $1302$ e depois um *Repeat Size* maior. A tela do editor dá uma preview de como virá a próxima figura da repetição.
+Abaixo, mostramos duas imagens, a primeira usando um *Repeat Size* menor que $1302$ e depois um *Repeat Size* maior. A tela do editor dá uma preview de como virá a próxima figura da repetição. Essas imagens ilustram bem o que acontece quando colocamos tamanhos errados nos parâmetros.
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/6934f917-d647-4f1e-82db-2a1cdbbefb3a" />
   <img width="1000" src="https://github.com/user-attachments/assets/6fc91352-23d1-4d0b-a17f-5883bf250922" />
 </p>
+
+> PS: É importante ressaltar que esse efeito é "errado" apenas no contexto de termos espaçamento uniforme perfeito. Se alguém quiser um espaçamento desigual, o efeito pasa a ser o certo.
 
 ### Arrumando paralaxe para figura com o tamanho correto mas espaço extra sobrando
 
