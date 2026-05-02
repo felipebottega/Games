@@ -12,7 +12,7 @@ Para obter o efeito de paralaxe, você deve preparar as figuras das camadas e se
 
 ## Preparando as camadas para o Parallax2D
 
-Note que o primeiro objeto tem dimensões $1302 \times 402$. Além de se atentar a isso quando for fazer as outras camadas, também não esqueça de configurar o viewport de acordo. Neste exemplo eu quero que o viewport tenha a largura igual à da figura.
+Note que o primeiro objeto tem dimensões $1302 \times 402$. Além de se atentar a isso quando for fazer as outras camadas, também não esqueça de configurar a viewport de acordo. Neste exemplo eu quero que a viewport tenha a largura igual à da figura.
 
 <p align="center">
   <img width="250" src="https://github.com/user-attachments/assets/1d784fd5-3b89-469b-9273-6576d374680b" />
@@ -92,9 +92,9 @@ Note que a velocidade desta camada é mais baixa que a anterior. Como ela está 
 
 https://github.com/user-attachments/assets/ad941bc4-4858-4e5c-93a0-400abb6bfd6c
 
-### Arrumando paralaxe para figura com o espaçamento correto mas figura menor que o viewport
+### Arrumando paralaxe para figura com o espaçamento correto mas figura menor que a viewport
 
-Agora vamos para a terceira camada. Apesar dela ser um quadriculado onde o fim se encaixa com o início corretamente, ela é menor que o viewport. 
+Agora vamos para a terceira camada. Apesar dela ser um quadriculado onde o fim se encaixa com o início corretamente, ela é menor que a viewport. 
 
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/d941642f-3c76-4330-bf18-2d47822086c0" />
@@ -105,25 +105,25 @@ Há pelo menos duas maneiras de se resolver isso no editor:
 1. Aumentar a escala do sprite
 2. Diminuir o *Repeat Size* que nem fizemos anteriormente
 
-Para esse exemplo nós usamos a segunda maneira.
+Para esse exemplo a segunda maneira será utilizada.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/c252af7d-6cfe-4fd2-86d5-40ccb3ea20f8" />
+  <img width="850" src="https://github.com/user-attachments/assets/c252af7d-6cfe-4fd2-86d5-40ccb3ea20f8" />
 </p>
 
 ## Repeat Times
 
-Note que por default o parâmetro *Repeat Times* é igual a $1$. Este parâmetro define quantas repetições da figura existem na tela. Para este loop em particular bastou ter uma, mas em algumas situações você vai querer mais repetições, como situações de zoom out ou quando você tem uma figura pequena e quer várias repetições na tela, entre outros. 
+Note que, por default, o parâmetro *Repeat Times* é igual a $1$. Este parâmetro define quantas repetições da figura existem na tela. Para este loop em particular bastou ter uma, mas em algumas situações você vai querer mais repetições, como situações de zoom out ou quando você tem uma figura pequena e quer várias repetições na tela, entre outros. 
 
 ## Movimento vertical
 
-Você deve ter notado que também temos os parâmetros para o eixo $y$. A lógica deles é a mesma do eixo $x$. Vamos fazer a cena de antes também se mover para cima, só que um pouco mais rápido que o movimento do eixo $x$. Note que neste caso é necessário configurar o parâmetro *Repeat Size* adequadamente para o eixo $y$. Vamos deixar este valor igual a $400$ pixels para todas as três camadas. Antes de rodar, olhe a cena como está. 
+Você deve ter notado que também há parâmetros para o eixo $y$. A lógica deles é a mesma do eixo $x$. Vamos fazer a cena de antes também se mover para cima, só que um pouco mais rápido que o movimento do eixo $x$. Note que neste caso é necessário configurar o parâmetro *Repeat Size* adequadamente para o eixo $y$. Vamos deixar este valor igual a $400$ pixels para todas as três camadas. Antes de rodar, olhe a cena como está. 
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/7fbec401-8c26-4b70-b048-478f5c99d794" />
+  <img width="800" src="https://github.com/user-attachments/assets/7fbec401-8c26-4b70-b048-478f5c99d794" />
 </p>
 
-A altura do viewport é de 800 pixels. Sendo $400$ pixels o *Repeat Size* do eixo $y$, temos que as figuras vão desaparecer (para a seguinte aparecer no loop) antes mesmo de saírem do viewport. Podemos resolver isso aumentando o *Repeat Times* para $3$.
+A altura da viewport é de 800 pixels. Sendo $400$ pixels o *Repeat Size* do eixo $y$, temos que as figuras vão desaparecer (para a seguinte aparecer no loop) antes mesmo de saírem do viewport. Podemos resolver isso aumentando o *Repeat Times* para $3$.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/0d095d93-9c97-4854-9d52-2675d465f34b" />
@@ -141,12 +141,17 @@ https://github.com/user-attachments/assets/ec5900c3-49fb-4061-a361-27057a0c4c92
 
 ## Paralaxe com movimento de câmera
 
-Não vamos entrar em muitos detalhes deste tópico pois ainda não vimos nada sobre câmeras. No caso de estarmos nesse contexto, devemos usar mais o parâmetro *Scroll Scale*. Ele funciona como um multiplicador de velocidade de rolagem, permitindo que as camadas se movam a uma velocidade diferente da câmera para cada conjunto de eixos. Um valor de $1$ faz com que a camada role na mesma velocidade da câmera. Se quiser que sua imagem pareça mais distante ao rolar, use um valor menor que $1$, com $0$ parando-a completamente. Se quiser que algo pareça mais próximo da câmera, use um valor maior que $1$, para que a rolagem seja mais rápida.
+Não vamos entrar em muitos detalhes deste tópico pois ainda não vimos nada sobre câmeras. No caso de estarmos nesse contexto, devemos usar mais o parâmetro *Scroll Scale*. Ele funciona como um multiplicador de velocidade de rolagem, permitindo que as camadas se movam a uma velocidade diferente da câmera para cada conjunto de eixos. Um valor de $1$ faz com que a camada role na mesma velocidade da câmera. Se quiser que sua imagem pareça mais distante ao rolar, use um valor menor que $1$, com $0$ parando-a completamente. Se quiser que algo pareça mais próximo da câmera, use um valor maior que $1$ para que a rolagem seja mais rápida.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/c257ed87-ad63-450a-9238-1c596bfcae3f" />
+  <img width="250" src="https://github.com/user-attachments/assets/c257ed87-ad63-450a-9238-1c596bfcae3f" />
 </p>
 
-A diferença entre esse parâmetro e a velocidade do *Autoscroll* é que o primeiro é dinâmico, ele define as relações de velocidade entre as camadas em relação a câmera. É de fato para ser utilizado in-game. O segundo é basicamente um script estático. As camadas terão aquela velocidade definida independentemente de qualquer outra coisa. 
+A diferença entre o parâmetro *Scroll Scale* e a velocidade *Autoscroll* é que o primeiro é dinâmico, ele define as relações das velocidades entre as camadas em relação a câmera. É de fato para ser utilizado in-game. O segundo é basicamente um script estático. As camadas terão aquela velocidade definida independentemente de qualquer outra coisa. 
 
 Eu fiz uma cena bem legal com paralaxe [neste link](https://felipebottega.github.io/Games/Manual/2D/Rendering/2D%20Parallax%20-%20Car%20Scene/html/). Vale a pena conferir!
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#todos-os-vetores-do-transform-s%C3%A3o-em-coordenadas-locais">Próximo ➡</a>
+</p>
