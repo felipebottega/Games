@@ -4,20 +4,22 @@ Uma coisa que eu sempre tive vontade de ter foi um aplicativo para visualizar de
 
 ## Boot Splash 
 
-Boot Splash (ou Boot Splash Screen) é uma tela de carregamento exibida durante a inicialização de um sistema operacional ou de um programa, geralmente antes da interface gráfica principal ser carregada. Na Godot o default é aparecer o logo da Godot e o nome "Godot Engine". É possível customizar isso e colocar o que você quiser, basta ir em *Project → Project Settings → General → Application → Boot Splash*. Ativando as opções avançadas você consegue controlar o tempo mínimo de exibição. Para este projeto, eu gerei um logo baseado no símbolo da integral de uma função, $\int f(x)\ dx$ e deixei para ficar na tela por pelo menos 1 segundo ($1000$ ms).
+Boot Splash (ou Boot Splash Screen) é uma tela de carregamento exibida durante a inicialização de um sistema operacional ou de um programa, geralmente antes da interface gráfica principal ser carregada. Na Godot, o default é aparecer o logo da Godot e o nome "Godot Engine". É possível customizar isso e colocar o que você quiser, basta ir em *Project → Project Settings → General → Application → Boot Splash*. Ativando as opções avançadas você consegue controlar o tempo mínimo de exibição. Para este projeto, eu gerei um logo baseado no símbolo clássico da integral definida de uma função, $\int_a^b f(x)\ dx$, e deixei para ficar na tela por pelo menos 1 segundo ($1000$ ms).
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/f72916be-d551-401b-8bf7-1ce61501a358" />
-  <img width="400" src="https://github.com/user-attachments/assets/44bc8d7c-83ab-4c1c-ad3d-72c1d04f4830" />
+  <img width="700" src="https://github.com/user-attachments/assets/f72916be-d551-401b-8bf7-1ce61501a358" />
+  <img width="300" src="https://github.com/user-attachments/assets/44bc8d7c-83ab-4c1c-ad3d-72c1d04f4830" />
 </p>
 
 ## Script externo
 
 Nem todo script do projeto precisa estar associado a um node para ser executado no jogo. É possível criar scripts que terão um papel análogo a uma biblioteca de Python, você importa aquele script para usar as funcionalidades dele em outros scripts. No caso deste projeto, eu criei o arquivo `complex.gd`, que é basicamente uma biblioteca para trabalhar com números complexos em Godot. 
 
-Sempre que você definir um script para este propósito, a primeira linha dele deve ser da forma `class_name {nome}`, em que *nome* é qualquer nome que você queria dar para o seu script. Esta linha faz com que o script possa ser acessado globalmente através desse nome. Para este projeto eu utilizei `class_name ComplexLib`. Então, por exemplo, o script `littlewood_polynomials.gd` necessita chamar a função `find_roots` do *ComplexLib*. Para isto, faz a chamada `ComplexLib.find_roots`. Não é necessário fazer nenhum tipo de "import", a `ComplexLib` é acessível globalmente.
+Quando você definir um script para este propósito, é interessante que a primeira linha dele deve ser da forma `class_name {nome}`, em que *nome* é qualquer nome que você queria dar para o seu script. Esta linha faz com que o script possa ser acessado globalmente através desse nome. Para este projeto eu utilizei `class_name ComplexLib`. Então, por exemplo, o script `littlewood_polynomials.gd` necessita chamar a função `find_roots` do *ComplexLib*. Para isto, faz a chamada `ComplexLib.find_roots`. Não é necessário fazer nenhum tipo de "import", a `ComplexLib` é acessível globalmente.
 
 > PS: Funções soltas no script externo precisam ser declaradas como `static`.
+
+> 🟦 **REVISÃO POSTERIOR:** Não é obrigatório nomear a classe do script. Mas nesse caso você usar `extends {path_to_script}` (em que *path_to_script* é o caminho para o arquivo) em todo script que for utilizar as funcionalidades da sua biblioteca.
 
 ## Botões globais
 
@@ -33,4 +35,9 @@ Do tutorial de desenho, utilizamos as funções de desenhar retas e círculos. D
 
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/371db4bd-c395-4e84-8693-0702c451cb88" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Parallax#o-quadriculado-do-editor-%C3%A9-8x8-pixels">Próximo ➡</a>
 </p>
