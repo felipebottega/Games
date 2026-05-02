@@ -371,6 +371,52 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#clicar-e-mover
 ">  Clicar e mover
  </a><br>
+<li> <b>Manual\2D\Tools\Using TileSets and TileMaps</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#definições-básicas-
+">  Definições básicas 
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#criando-um-tileset
+">  Criando um TileSet
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#coordenadas-do-tilemap
+">  Coordenadas do tilemap
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#desenhando-tiles-na-tela
+">  Desenhando tiles na tela
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#patterns
+">  Patterns
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#tilesets
+">  TileSets
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#propriedades-do-tileset-no-inspector
+">  Propriedades do TileSet no Inspector
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#aba-setup
+">  Aba Setup
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#fusão-de-atlas
+">  Fusão de atlas
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#aba-select
+">  Aba Select
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#colisão-
+">  Colisão 
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#navigation-e-light-occlusion-para-o-tileset
+">  Navigation e light occlusion para o TileSet
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#metadados
+">  Metadados
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#aba-paint
+">  Aba Paint
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileSets%20and%20TileMaps#tiles-alternativos
+">  Tiles alternativos
+ </a><br>
 <li> <b>Manual\2D\Tools\TerrainSets</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets#criando-um-terrain-set
 ">  Criando um Terrain Set
@@ -392,52 +438,6 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/TerrainSets#templates
 ">  Templates
- </a><br>
-<li> <b>Manual\2D\Tools\Using TileMaps</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#definições-básicas-
-">  Definições básicas 
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#criando-um-tileset
-">  Criando um TileSet
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#coordenadas-do-tilemap
-">  Coordenadas do tilemap
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#desenhando-tiles-na-tela
-">  Desenhando tiles na tela
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#patterns
-">  Patterns
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#tilesets
-">  TileSets
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#propriedades-do-tileset-no-inspector
-">  Propriedades do TileSet no Inspector
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#aba-setup
-">  Aba Setup
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#fusão-de-atlas
-">  Fusão de atlas
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#aba-select
-">  Aba Select
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#colisão-
-">  Colisão 
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#navigation-e-light-occlusion-para-o-tileset
-">  Navigation e light occlusion para o TileSet
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#metadados
-">  Metadados
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#aba-paint
-">  Aba Paint
- </a><br>
-&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps#tiles-alternativos
-">  Tiles alternativos
  </a><br>
 <li> <b>Manual\2D\Tools\Using TileMaps - Game</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#organização-de-um-projeto
