@@ -17,7 +17,7 @@ O approach correto é começar criando um `AnimatedSprite2D`, como se faz normal
 Agora crie um `AnimationPlayer` e clique no *Animation* no painel de edição para criar uma nova animação. Iremos chamar esta animação de *idle*, assim como fizemos no `AnimatedSprite2D`. 
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/3ea6b34a-ffdc-4c66-b8e7-58caa50f1760" />
+  <img width="550" src="https://github.com/user-attachments/assets/3ea6b34a-ffdc-4c66-b8e7-58caa50f1760" />
 </p>
 
 Adicione uma track e selecione o *Property Track* sobre a propriedade *animation* do *AnimatedSprite2D*. Agora insira um keyframe no instante inicial com o valor "idle". Isso significa que a propriedade *animation* do `AnimatedSprite2D` será igual a "idle" no início desta chamada do `AnimationPlayer`. 
@@ -44,7 +44,7 @@ Repita estes passos para as outras animações e você terá toda a coleção de
 
 ## Animações contínuas
 
-Por enquanto o `AnimationPlayer` está constituído apenas de spritesheets, o que pode ser visto como um conjunto discreto de animações. Será relavante termos também um conjunto contínuo de animações. Definimos abaixo algumas animações de transformações 2D sobre um sprite de espada. Vimos como fazer isso no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features).
+Por enquanto o `AnimationPlayer` está constituído apenas de spritesheets, o que pode ser visto como um conjunto discreto de animações. Será relevante também termos um conjunto contínuo de animações. Definimos abaixo algumas animações de transformações 2D sobre um sprite de espada. Vimos como fazer isso no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features).
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/782ff24c-406a-4703-b433-35a2fd82047f" />
@@ -55,7 +55,7 @@ Por enquanto o `AnimationPlayer` está constituído apenas de spritesheets, o qu
 Depois de adicionar o node `AnimationTree` à sua árvore da cena, é necessário escolher uma *Tree Root* e um `AnimationPlayer` para a propriedade *Anim Player*. Cada *Tree Root* pode ser vista como um conjunto de ferramentas para manipular o `AnimationPlayer` escolhido no *Anim Player*. Vamos ver cada uma dessas na sequência. 
 
 <p align="center">
-  <img width="1100" src="https://github.com/user-attachments/assets/b4ff9cae-c564-41ec-ad62-b2bda464f758" />
+  <img width="700" src="https://github.com/user-attachments/assets/8dd5b639-a48b-41c4-bfe4-077265488d3f" />
 </p>
 
 > PS: Para este tutorial eu criei diversos nodes `AnimationTree` na mesma cena, referenciando o mesmo `AnimationPlayer`. Fiz isso apenas para ter os exemplos no mesmo lugar, mas é importante saber que as animações do último `AnimationTree` ficam por cima das anteriores, já que estão referenciando o mesmo objeto.
@@ -149,7 +149,7 @@ No painel de edição, no topo direito, você pode notar que há duas opções d
 Tantos os nodes quanto as transições possuem propriedades para serem modificadas no *Inspector*. Vamos começar descrevendo as propriedades dos nodes.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/02f1b39a-8662-4bab-bbe1-7f7e4c98caba" />
+  <img width="380" src="https://github.com/user-attachments/assets/02f1b39a-8662-4bab-bbe1-7f7e4c98caba" />
 </p>
 
 - **Animation:** Modifica a animação que você quer tocar naquele node.
@@ -164,7 +164,7 @@ Agora vamos ver as propriedades das transições.
 </p>
 
 - **Xfade Time:** Tempo que uma animação pode continuar tocando mesmo após a próxima já ter começado.
-- **Xfade Curve:** Você pode definir a curva de peso do fade-out animnação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
+- **Xfade Curve:** Você pode definir a curva de peso do fade-out da animação do *Xfade Time*. Menores valores significam que o fade-out é mais leve, então a animação anterior fica mais evidente.
 - **Break Loop at End:** Se a animação for um loop, ativar esta opção garante que o loop será tocado apenas uma vez.
 - **Switch Mode:** É o tipo de transição, que é escolhido ao se criar a conexão. As opções são *Immediate, Sync* e *At End*, como já vimos acima.
 
@@ -172,37 +172,37 @@ Agora vamos ver as propriedades das transições.
 
 ### Condicionamento do AnimationNodeStateMachine
 
-A parte *Advance* do *Inspector* é a parte onde introduzimos condicionais para as transições. Ou seja, a transição só ocorre se certas condições forem satisfeitas. Para poder usar essas lógicas de maneira apropriada, deixe a propriedade *Mode* em *auto*. Você só vai querer mudar isso se for chamar o método `travel` por código (algo que eu não acho que seja muito usado). 
+A parte *Advance* do *Inspector* é a parte onde introduzimos condicionais para as transições. Ou seja, a transição só ocorre se certas condições forem satisfeitas. Para poder usar essas lógicas de maneira apropriada, deixe a propriedade *Mode* em *auto*. Você só vai querer mudar isso se for chamar o método `travel` no código (algo que eu não acho que seja muito usado). 
 
 Agora vamos ver como criar condições na prática. Primeiro deixe todas as transições como *Immediate* e coloque as animações para rodar em loop. Feito isso, crie um script no node `AnimationNodeStateMachine`. Este script cria a variável *time*, que vai apenas contar o número de segundo que passou desde que se iniciou a cena. O principal é a linha `set("parameters/conditions/x", time > 5)`. Com ela, nós criamos uma variável condicional $x$ que será igual ao resultado da condição *time* $>5$. 
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/91c2bf26-9f92-48be-a090-9ba6749d2d61" />
+  <img width="430" src="https://github.com/user-attachments/assets/91c2bf26-9f92-48be-a090-9ba6749d2d61" />
 </p>
 
-> PS: Note que $x$ é um booleano, que é falso durante os primeiros $5$ segundos da cene a depois passa a ser verdadeiro pelo restante da cena.
+> PS: Note que $x$ é um booleano, que é falso durante os primeiros $5$ segundos da cena e depois passa a ser verdadeiro pelo restante da cena.
 
 Volte para o painel de edição e selecione a transição entre as duas animações. No *Inspector* desta transição, coloque a variável $x$ no campo *Condition*. A partir de agora essa transição só vai ser ativada quando $x$ for verdadeiro. Isso quer dizer que a primeira animação vai ficar sendo executada no seu loop por $5$ segundos antes de passar para a próxima animação.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/b08c2b2d-6382-4a99-83ba-2de1ccea9a59" />
+  <img width="1100" src="https://github.com/user-attachments/assets/b08c2b2d-6382-4a99-83ba-2de1ccea9a59" />
 </p>
 
 Como podemos notar, a primeira animação de fato foi tocada por $5$ segundos, mas a segunda animação foi totalmente ignorada. Na verdade ela não foi ignorada, o que aconteceu é que a transição *Immediate* fez com que o fluxo fosse direto para o fim do *State Machine*. Vamos fazer a segunda animação tocar por $3$ segundos. Para isso, criamos mais uma variável condicional, na última transição.
 
 <p align="center">
-  <img width="950" src="https://github.com/user-attachments/assets/2d646492-2f27-4cf8-a2ac-5a40ee410517" />
+  <img width="1100" src="https://github.com/user-attachments/assets/2d646492-2f27-4cf8-a2ac-5a40ee410517" />
 </p>
 
-Por fim, inserimos mais um node, repetindo a primeira animação, e na transição após ele colocamos para tocar até o décimo segundo (então essa animação tocará por $2$ segundos). Porém, em vez de utilizarmos o campo *Condition*, usaremos o *Expression*. Neste caso, basta colocar diretamente a condicional que queremos, assim como seria no código. Neste caso, `time>10`.
+Por fim, inserimos mais um node, repetindo a primeira animação, e na transição após ele, colocamos para tocar até o décimo segundo (portanto essa animação tocará por $2$ segundos). Porém, em vez de utilizarmos o campo *Condition*, usaremos o *Expression*. Neste caso, basta colocar diretamente a condicional que queremos, assim como seria no código. Neste caso, `time>10`.
 
 <p align="center">
-  <img width="850" src="https://github.com/user-attachments/assets/83ddb328-8048-4b1f-b9f1-efdc49f838fc" />
+  <img width="1100" src="https://github.com/user-attachments/assets/83ddb328-8048-4b1f-b9f1-efdc49f838fc" />
 </p>
 
 ### AnimationNodeBlendTree
 
-Esta é a última modalidade do `AnimationTree` que veremos. Ela é tão poderosa que após ela não precisaremos ver mais nenhuma outra. O *Blend Tree* permite mixar todas as modalidades vistas acima em uma estrutura de fluxograma. Mas em vez de ser um fluxograma como o *State Machine*, o *Blend Tree* não trabalha com condicionais. Em vez disso ele possui diversas ferramentas de suporte para a animação. Veremos adiante como funciona.
+Esta é a última modalidade do `AnimationTree` que veremos. Ela é tão poderosa que após ela não precisaremos ver mais nenhuma outra. O *Blend Tree* permite mixar todas as modalidades vistas acima em uma estrutura de fluxograma. Mas em vez de ser um fluxograma como o *State Machine*, o *Blend Tree* não trabalha com condicionais. Em vez disso ele possui diversas ferramentas de suporte para a animação.
 
 Se você inicializou o node corretamente, o painel de edição deve estar como mostrado abaixo. O node de output sempre estará presente, e é necessário que ele esteja conectado a algo para tocar as animações. 
 
@@ -213,8 +213,8 @@ Se você inicializou o node corretamente, o painel de edição deve estar como m
 Você pode clicar em *Add Node* ou dar o segundo clique do mouse no espaço no painel de edição. As opções abaixo vão aparecer. Apenas como exemplo, clique na opção *Animation* (a primeira do topo). Uma caixa representando este node vai aparecer no painel. Todas as opções abrem uma caixa similar no painel, mas cada uma com as suas próprias propriedades. 
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/47bcebce-a69c-4845-9c1b-045716584db2" />
-  <img width="320" src="https://github.com/user-attachments/assets/51c1ca8f-68ad-48ea-8825-5ef10e6d9003" />
+  <img width="330" src="https://github.com/user-attachments/assets/47bcebce-a69c-4845-9c1b-045716584db2" />
+  <img width="370" src="https://github.com/user-attachments/assets/51c1ca8f-68ad-48ea-8825-5ef10e6d9003" />
 </p>
 
 > PS: Assim como em *State Machine*, é necessário conectar os nodes para determinar a sequência de eventos.
@@ -222,7 +222,7 @@ Você pode clicar em *Add Node* ou dar o segundo clique do mouse no espaço no p
 Vamos dar uma descrição geral de cada tipo de node e depois mostraremos um pequeno exemplo de aplicação.
 
 - **Animation:** É o node mais simples de todos, ele simplesmente toca uma animação.
-- **OneShot:** Toca uma animação uma única vez caso seja requisitado (via código). A estrutura e o código estão mostrados abaixo. Como a requisição foi feita logo na entrada da cena, e engine primeiro vai tocar a animação *idle* e logo depois a *run*, que ficará em loop. Para que a *idle* não fique presa no loop, você pode ativar a opção *Break Loop at End* no *Inspector* do *One Shot*.
+- **OneShot:** Toca a animação conectada à entrada *in*. Opcionalmente, pode tocar primeiro a animação conectada à entrada *shot* uma única vez caso seja requisitado via código. A estrutura e o código estão mostrados abaixo. Como a requisição foi feita logo na entrada da cena, a engine primeiro vai tocar a animação *idle* e logo depois a *run*, que ficará em loop. Para que a *idle* não fique presa no loop, você pode ativar a opção *Break Loop at End* no *Inspector* do *One Shot*.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/e0c5d32e-b7c3-4839-aa0d-a61f22fe65eb" />
@@ -272,31 +272,29 @@ Começamos criando uma cena com um node raíz do tipo `Node2D`, que chamaremos d
   <img width="550" src="https://github.com/user-attachments/assets/f24cfab8-56bb-4d10-a412-1d5af4937e0d" />
 </p>
 
-Vamos mostrar uma maneira de inserir as animações no `AnimationPlayer` a partir de uma spritesheet completa como essa dentro de um `Sprite2D`. Primeiro crie o node `AnimationPlayer` dentro do `CharacterBody2D`. No painel de edição, vamos criar 4 animações distintas: *right, left, up, down*. Vamos começar mostrando a animação *right*. As outras são análogas. 
+Vamos mostrar uma maneira de inserir as animações no `AnimationPlayer` a partir de uma spritesheet completa dentro de um `Sprite2D`. Primeiro crie o node `AnimationPlayer` como filho do `CharacterBody2D`. No painel de edição, vamos criar 4 animações distintas: *right, left, up, down*. Vamos começar mostrando a animação *right*. As outras são análogas. 
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/0b6d9e31-5da3-44e1-bc87-675046d14cbb" />
 </p>
 
-> PS: Como serão 5 frames tocados em $1$ segundo, deixe em $0.2$ segundos o tempo de cada FPS no painel de edição (você muda este valor no campo que fica embaixo). 
-
-Volte para o `Sprite2D` e coloque *HFrames* $= 5$ e *VFrames* $= 4$, pois temos uma spritesheet $4 \times 5$. Feito isso, vá no campo *Frame* e comece a passar de um em um, até encontrar o primeiro do sprite se movimentando para a direita. Assim que encontrar este sprite, clique no picone de chave ao lado para adicioná-lo ao `AnimationPlayer`, e vá clicando na chave para adicionar os seguintes. Você irá inserir $5$ frames no total. Não se esqueça de deixar a animação em loop.
+Volte para o `Sprite2D` e coloque *HFrames* $= 5$ e *VFrames* $= 4$, pois temos uma spritesheet $4 \times 5$. Feito isso, vá no campo *Frame* e comece a passar de um em um, até encontrar o primeiro do sprite se movimentando para a direita. Assim que encontrar este sprite, clique no ícone de chave ao lado para adicioná-lo ao `AnimationPlayer`, e vá clicando na chave para adicionar os seguintes. Você irá inserir $5$ frames no total. Não se esqueça de deixar a animação em loop.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/92962484-96b8-4caf-980c-0058d0d4de55" />
-  <img width="600" src="https://github.com/user-attachments/assets/35e7e381-d13a-46fa-892b-fb2bc61911b0" />
+  <img width="350" src="https://github.com/user-attachments/assets/92962484-96b8-4caf-980c-0058d0d4de55" />
+  <img width="650" src="https://github.com/user-attachments/assets/35e7e381-d13a-46fa-892b-fb2bc61911b0" />
 </p>
 
 Isso encerra o papel do `AnimationPlayer` neste projeto. Antes de partir para o `AnimationTree`, adicione uma caixa de colisão para a engine parar de reclamar.
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/cd41cffb-235e-4747-99ff-380cc68992a6" />
+  <img width="700" src="https://github.com/user-attachments/assets/cd41cffb-235e-4747-99ff-380cc68992a6" />
 </p>
 
-Também vamos criar um script de movimentação "8-way", como visto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/2D%20movement%20overview#8-way-movement). Com isso, já temos movimentação, só falta a animação.
+Também vamos criar um script de movimentação "8-way", como visto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Physics%20and%20movement/2D%20movement%20overview#8-way-movement). Com isso, já temos movimentação implementada.
 
 <p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/877e92d2-36a7-4c9c-8e9e-983a7ff2070e" />
+  <img width="550" src="https://github.com/user-attachments/assets/877e92d2-36a7-4c9c-8e9e-983a7ff2070e" />
 </p>
 
 Adicione um `AnimationTree` como filho do `CharacterBody2D`. A ideia será criar um *AnimationNodeBlendTree* contendo um node *State Machine* e um *TimeScale* para controlar a velocidade da animação de acordo com a posição do sprite na tela. A estrutura inicial está mostrada abaixo. 
@@ -305,36 +303,36 @@ Adicione um `AnimationTree` como filho do `CharacterBody2D`. A ideia será criar
   <img width="800" src="https://github.com/user-attachments/assets/9248a5b3-f25a-4168-a1d5-ee66ad88014a" />
 </p>
 
-Começaremos editando o *State Machine*, então clique em *Open Editor* para começarmos a edição deste node. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. Insira 4 pontos, de modo que *up* $= (0, -1)$, *down* $=(0, 1)$, *right* $=(1, 0)$, *left* $=(-1, 0)$. Coloque o modo blend como discreto e se certifique de que a conexão entre o *Start* e o *BlendSpace2D* é do tipo *Immediate*. 
+Agora vamos editar o *State Machine*. Clique em *Open Editor* para começarmos a edição deste node. Dentro do *State Machine*, adicione um node do tipo *BlendSpace2D* e clique para começar a edição dentro dele. Insira 4 pontos, de modo que *up* $= (0, -1)$, *down* $=(0, 1)$, *right* $=(1, 0)$, *left* $=(-1, 0)$. Coloque o modo blend como discreto e se certifique de que a conexão entre o *Start* e o *BlendSpace2D* é do tipo *Immediate*. 
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/c14a75a1-9f6b-4b49-a539-16f61a0fcced" />
   <img width="800" src="https://github.com/user-attachments/assets/4443cfb5-8a9f-4750-8ca0-a1dd9ec5051e" />
 </p>
 
-> PS: Talvez por estar num nível mais profundo da lógica da engine, não é possível ver a animações ao trocar ao manipular a posição do *blending point* no editor.
+> PS: Talvez por estar num nível mais profundo da lógica da engine, não é possível ver as animações ao trocar ou manipular a posição do *blending point* no editor.
 
-Uma coisa que não foi dita na discussão acima é que as novas propriedades que surgem a partir dos novos nodes aparecem no *Inspector*. Na figura abaixo, podemos ver que tanto o *blending point* (chamado de *Blend Position*) quanto o tempo do *Time Scale* são parâmetros manipuláveis pelo *Inspector*.
+Uma coisa que não foi dita na discussão acima é que as novas propriedades que surgem a partir dos novos nodes aparecem no *Inspector*. Na figura abaixo, podemos ver que tanto o *blending point* (chamado de *Blend Position*) quanto o tempo do *Time Scale* são parâmetros manipuláveis no *Inspector*.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/6def3435-3139-4a4c-baf6-12fde0a0d45f" />
+  <img width="440" src="https://github.com/user-attachments/assets/6def3435-3139-4a4c-baf6-12fde0a0d45f" />
 </p>
 
 Não podemos esquecer da condicional, algo que acabamos de aprender sobre *State Machine*. Selecione a transição entre o *Start* e o *BlendSpace2D* e em *Inspector → 
-advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai.
+Advance → Expression* coloque a expressão `get_parent().velocity.length() > 0`. Devemos colocar este `get_parent()` na frente pois a velocidade não é do `AnimationTree` e sim do seu pai.
 
 No script do `CharacterBody2D`, note que a variável `direction` recebe a direção normalizada para onde o sprite está se movendo. Portanto basta fazer o *blending point* ser igual a essa variável para que a animação correta seja mostrada quando o sprite se locomover. Para isso, inserimos o comando `$AnimationTree.set("parameters/StateMachine/BlendSpace2D/blend_position", direction)`. Isso é análogo ao que fizemos para a condicional, mas em vez de definir a variável condicional, nós sobrescrevemos o valor de uma variável que já existe.
 
 > Dica: Você pode clicar em qualquer nome de propriedade no *Inspector* e simplesmente arrastar para dentro do script. Na figura abaixo isso foi feito para o *Blend Position*. Note como o nome já aparece enquanto ainda o estamos arrastando.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/bfd4d9ef-5f3c-4e6e-b7a0-c9512d857918" />
+  <img width="440" src="https://github.com/user-attachments/assets/bfd4d9ef-5f3c-4e6e-b7a0-c9512d857918" />
 </p>
 
 Com isso, temos o script abaixo. 
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/3299fca5-c60e-4963-a006-c7b424cb91a9" />
+  <img width="600" src="https://github.com/user-attachments/assets/3299fca5-c60e-4963-a006-c7b424cb91a9" />
 </p>
 
 Este script já é funcional, mas ainda pode ser melhorado. Queremos que o "idle" mantenha a direção do sprite. Vamos adicionar mais um node no *State Machine* igual ao anterior, mas que seja ativado com a condição `get_parent().velocity.length() == 0`. Vamos aproveitar e renomear o node anterior para "Movement" e este para "Idle". Não se esqueça de atualizar o script de acordo. A transição do *Movement* para o *Idle* será do tipo *At End* para que a mudança de animação não tenha quebras. Além disso, não se esqueça também de colocar uma transição do *Idle* para *Movement*, que é idêntica a do *Start* para *Movement*.
@@ -358,3 +356,8 @@ Para finalizar, vamos considerar duas regiões da tela, com o lado esquerdo send
 Também incluímos um `Sprite2D` de background para evidenciar as duas regiões. Abaixo temos uma prévia deste mini-game. Você pode brincar com ele [neste link](https://felipebottega.github.io/Games/Manual/Animation/Using%20AnimationTree/html/).
 
 https://github.com/user-attachments/assets/bc8fda04-4c3c-4180-b965-b4f2bb5400c4
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Playing%20videos">Próximo ➡</a>
+</p>
