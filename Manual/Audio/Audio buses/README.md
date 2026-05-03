@@ -1,16 +1,16 @@
 # Audio buses
 
-## Escala de decibel 
+## Escala de decibéis
 
 A escala de decibéis (dB) é uma escala logarítmica que determina o volume do som. Para cada 6 dB, a amplitude do som dobra ou cai pela metade. Por exemplo, 12 dB representa um fator de 4 vezes 1 dB, 18 dB um fator de 8 vezes, e assim por diante. Como a escala é logarítmica, o zero verdadeiro (sem áudio) não pode ser representado.
 
-0 dB é a amplitude máxima possível em um sistema de áudio digital. Este limite não é o limite humano, mas sim um limite do hardware de som. Áudios com amplitudes muito altas para serem representadas corretamente abaixo de 0 dB criam um tipo de distorção chamado *clipping*. Para evitar este efeito, sua mixagem sonora deve ser organizada de forma que a *master bus* (falaremos mais sobre isso adiante) nunca exceda 0 dB.
+0 dB é a amplitude máxima possível em um sistema de áudio digital. Este limite não é o limite humano, mas sim um limite do hardware de som. Áudios com amplitudes muito altas, para serem representadas corretamente abaixo de 0 dB, criam um tipo de distorção chamado *clipping*. Para evitar este efeito, sua mixagem sonora deve ser organizada de forma que o *master bus* (falaremos mais sobre isso adiante) nunca exceda 0 dB.
 
 Ao trabalhar com decibéis, o som é considerado inaudível entre -60 dB e -80 dB. Isso torna sua faixa de trabalho geralmente entre -60 dB e 0 dB.
 
 ## Audio buses
 
-Um *audio bus* (também chamado de *audio channel*/*canal de áudio*) pode ser considerado um local por onde o áudio passa e pode ser modificado antes de ser passado para o próximo canal de áudio. Desta maneira, temos uma sequência de canais de áudio antes de chegar no canal master (*master bus*), cada um acrescentando uma camada de modificações sobre o áudio.
+Um *audio bus* (também chamado de *audio channel*/*canal de áudio*) pode ser definido como sendo um local por onde o áudio passa e pode ser modificado antes de ser passado para o próximo canal de áudio. Desta maneira, temos uma sequência de canais de áudio antes de chegar no canal master (*master bus*), cada um acrescentando uma camada de modificações sobre o áudio.
 
 > PS: Iremos utilizar ambos os termos "canal de áudio" e "áudio bus" neste e nos tutoriais seguintes. A ideia é reforçar que estes termos são equivalentes.
 
@@ -19,27 +19,32 @@ Um *audio bus* (também chamado de *audio channel*/*canal de áudio*) pode ser c
 Crie uma cena com um `AudioStreamPlayer` como node raíz e abra o painel de Audio, mostrado abaixo, na imagem.
 
 <p align="center">
-  <img width="950" src="https://github.com/user-attachments/assets/896029c6-65a1-4e53-b8e4-caa5b77d589c" />
+  <img width="1100" src="https://github.com/user-attachments/assets/896029c6-65a1-4e53-b8e4-caa5b77d589c" />
 </p>
 
 Agora selecione algum audio no *FileSystem* e o arraste para a propriedade *Stream* no *Inspector* do `AudioStreamPlayer`. Lembre que Godot apenas aceita *ogg, wav* e *mp3*. Para adicionar algum efeito, basta clicar em *Add Effect* no painel de audio e selecionar algum. Depois disso, você pode escutar o audio com o efeito no próprio editor, bastante habilitar a propriedade *Playing* no *Inspector*.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/177de6b9-d161-4656-9af1-08b5fdc21e98" />
+  <img width="330" src="https://github.com/user-attachments/assets/177de6b9-d161-4656-9af1-08b5fdc21e98" />
 </p>
 
 Você ter vários efeitos por audio bus. Caso não queria mais algum efeito, basta dar o segundo clique do mouse e selecionar para deletar. Além disso, ao selecionar um dos efeitos, vai aparecer um conjunto de parâmetros modificáveis no *Inspector*. Cada efeito tem seus próprios parâmetros para mexer.
 
 <p align="center">
-  <img width="145" src="https://github.com/user-attachments/assets/2300e08a-0508-4a79-ad7b-9b54611300f5" />
-  <img width="200" src="https://github.com/user-attachments/assets/1c0193ca-24f9-4497-8217-8b766bfc1d75" />
-  <img width="250" src="https://github.com/user-attachments/assets/abb45f18-7c67-4c28-9f6d-eb561a1ee3c7" />
+  <img width="130" src="https://github.com/user-attachments/assets/2300e08a-0508-4a79-ad7b-9b54611300f5" />
+  <img width="180" src="https://github.com/user-attachments/assets/1c0193ca-24f9-4497-8217-8b766bfc1d75" />
+  <img width="220" src="https://github.com/user-attachments/assets/abb45f18-7c67-4c28-9f6d-eb561a1ee3c7" />
 </p>
 
-Você pode clicar em *Add Bus* para adicionar outro audio bus no painel. O fluxo dos dados é da direita para a esquerda, sendo o *Master* o último canal a ser acessado pelo áudio (que já deverá ter várias modificações a essa altura). Nte que parte inferior de cada audio bus há um nome, isso é a saída do audio, ou seja, para onde ele vai. O novo audio bus, chamado *New Bus*, tem seu output indo para o canal *Master*, e desse o output vai os *Speakers*, que são a caixa de som de fato. 
+Você pode clicar em *Add Bus* para adicionar outro audio bus no painel. O fluxo dos dados é da direita para a esquerda, sendo o *Master* o último canal a ser acessado pelo áudio (que já deverá ter várias modificações a essa altura). Note que parte inferior de cada audio bus há um nome, isso é a saída do audio, ou seja, para onde ele vai. O novo audio bus, chamado *New Bus*, tem seu output indo para o canal *Master*, e desse o output vai para os *Speakers*, que são a caixa de som de fato. 
 
 <p align="center">
   <img width="950" src="https://github.com/user-attachments/assets/c3189139-40a8-499f-a1d4-f2fa1d741a08" />
 </p>
 
-O layout default do canal de áudio é salvo automaticamente no arquivo `res://default_bus_layout.tres`. Layouts personalizados de canais de áudio podem ser salvos e carregados no disco.
+O layout default do canal de áudio é salvo automaticamente no arquivo `res://default_bus_layout.tres`. Layouts personalizados de canais de áudio podem ser salvos e carregados no disco (inclusive podem ser carregados e utilizados em outros projetos).
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20translations#op%C3%A7%C3%B5es-de-import">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20effects">Próximo ➡</a>
+</p>
