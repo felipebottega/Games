@@ -4,11 +4,11 @@
 
 Godot possui diversos métodos semelhantes a Python para trabalhar com strings e caminhos. Abaixo, temos uma lista dos mais básicos. Em todos os itens, considere que $x$ e $y$ são strings de caminhos.
 
-- **path_join:** Faz o join de caminhos. Análogo ao `os.path.join` de Python. Exemplo de uso: `x.path_join(y)`.
+- **path_join:** Faz o join de caminhos. Exemplo de uso: `x.path_join(y)`.
 - **get_file:** Extrai o nome do arquivo no caminho. Exemplo de uso: `y.get_file()`.
 - **get_base_dir:** Extrai a primeira pasta no caminho. Exemplo de uso: `y.get_base_dir()`.
 - **get_basename:** Extrai o caminho completo até a última pasta antes do arquivo. Exemplo de uso: `y.get_basename()`.
-- **similarity:** Simlariadde de strings (0 = nenhuma, 1 = idênticas). Exemplo de uso: `x.similarity(y)`.
+- **similarity:** Calcula a similaridade entre duas strings (0 = nenhuma, 1 = idênticas). Exemplo de uso: `x.similarity(y)`.
 - **split:** Faz split por uma substring. Exemplo de uso: `y.split("scenes")`.
 - **replace:** Replace de substring. Exemplo de uso: `y.replace("res", "abc")`.
 - **to_float:** Converte string para float. Também tem conversões análogas para outros tipos de variável. Exemplo de uso: `"123.45".to_float()`.
@@ -18,7 +18,7 @@ Godot possui diversos métodos semelhantes a Python para trabalhar com strings e
 
 ## Strings contendo variáveis
 
-Há duas maneiras principais de gerar strings contendo variáveis. A primeira é fazer soma de string, se atentando a converter váriaveis de diferentes tipos para string. O exemplo abaixo ilustra uma situação destas.
+Há algumas maneiras de gerar strings contendo variáveis. A primeira é fazer soma de string, se atentando a converter váriaveis de diferentes tipos para string. O exemplo abaixo ilustra uma situação destas.
 
 ```
 var name = "Integral"
@@ -30,7 +30,7 @@ print(name + ' health is ' + str(health))
 Output: Integral health is 1234
 ```
 
-Outra maneira é utilizar o método `format`. Coloque `{i}` no lugar da sua variável dentro da string, em que *i* é o *i*-ésimo elemento, começando do zero. Depois da string, coloque um `.format([x_0, x_1, ..., x_n])`. A lista deve ter o mesmo número de variáveis que você inseriu na string, e na mesma ordem. Um exemplo deixará mais claro como funciona. 
+Outra maneira é utilizar o método `format`. Coloque `{i}` no lugar da sua variável dentro da string, em que *i* é o *i*-ésimo elemento, começando do zero. Depois da string, coloque um `.format([x_0, x_1, ..., x_n])`. A lista deve ter o mesmo número de variáveis que você inseriu na string, e na mesma ordem. O exemplo abaixo deixa mais claro como funciona. 
 
 ```
 var name = "Integral"
@@ -55,7 +55,7 @@ Output:
 Integral health is 1234.57
 ```
 
-Outra maneira possível é através de um dicionário, como mostrado abaixo.
+Outra maneira possível é através de um dicionário.
 
 ```
 var name = "Integral"
@@ -67,7 +67,7 @@ print("{player_name} health is {player_health}".format({player_name=name, player
 Output: Integral health is 1234
 ```
 
-Ainda uma última maneira de obter o mesmo resultado é utilizando a sintaxe abaixo. Você precisa escpecificar o tipo da variável: `%s` → string, `%d` → inteiro, `%f` → float, `%x` → hexadecimal. Se não souber ou não quiser se incomodar com isso, used string para tudo que funciona.
+Ainda uma última maneira de obter o mesmo resultado é utilizando a sintaxe abaixo. Você precisa especificar o tipo da variável: `%s` → string, `%d` → inteiro, `%f` → float, `%x` → hexadecimal. Se não souber ou não quiser se incomodar com isso, use `%s` (string) para tudo que funciona também.
 
 ```
 var name = "Integral"
@@ -87,7 +87,7 @@ De maneira simples e direta, `res://` é a raíz dos arquivos do projeto e `user
   <img width="700" src="https://github.com/user-attachments/assets/3d629e09-4432-446f-92fe-09dd9085ffab" />
 </p>
 
-> PS: No Windows, você pode colocar *%APPDATA%* diretamente na barra de busca do Windows Explorer e ele te levará para o local esperado.
+> PS: No Windows, você pode colocar *%APPDATA%* diretamente na barra de busca do Windows Explorer e ele te levará para o local correto.
 
 Além da pasta do jogador (uma para cada jogo), também há um local onde dados do editor são armazenados. Ali você terá 3 tipos de dados: 
 
