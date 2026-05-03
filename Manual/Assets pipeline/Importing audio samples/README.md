@@ -19,9 +19,9 @@ A Godot oferece 3 opções para importar seus dados de áudio: WAV, Ogg Vorbis e
 
 ### Edit
 
-- **Trim:** O arquivo de áudio de origem pode conter longos silêncios no início e/ou no final. Ativar o Trim cortará automaticamente o início e o fim do áudio se estiver abaixo de -50 dB após a normalização (veja Editar > Normalizar abaixo). Um período de fade-in/fade-out também é usado durante o corte para evitar estalos audíveis.
+- **Trim:** O arquivo de áudio de origem pode conter longos silêncios no início e/ou no final. Ativar o Trim cortará automaticamente o início e o fim do áudio se estiver abaixo de -50 dB após a normalização. Um período de fade-in/fade-out também é usado durante o corte para evitar estalos audíveis.
 - **Normalize:** Se ativado, o volume do áudio será normalizado para que seu pico seja igual a 0 dB. Quando ativado, a normalização tornará o áudio mais alto, dependendo do seu pico de volume original.
-- **Loop Mode:** Ao contrário do Ogg Vorbis e do MP3, os arquivos WAV podem conter metadados para indicar se estão em loop (além dos pontos de loop). Por padrão, o Godot seguirá esses metadados, mas você pode optar por aplicar um modo de loop específico:
+- **Loop Mode:** Ao contrário do Ogg Vorbis e do MP3, os arquivos WAV podem conter metadados para indicar se estão em loop (além dos pontos de loop). Por padrão, a Godot seguirá esses metadados, mas você pode optar por aplicar um modo de loop específico:
   - **Disabled:** Não reproduz o áudio em loop, mesmo que os metadados indiquem que o arquivo deve ser reproduzido em loop.
   - **Forward:** Loop de áudio padrão.
   - **Ping-Pong:** Reproduz o áudio para frente até terminar de tocar, depois reproduz para trás e repete. Isso é semelhante à repetição de textura espelhada, mas para áudio.
@@ -30,11 +30,11 @@ A Godot oferece 3 opções para importar seus dados de áudio: WAV, Ogg Vorbis e
 ### Compress/Mode 
 
 - **Disabled/Uncompressed:** Não reduz nada.
-- **IMA-ADPC:** Reduz um pouco o tamanho do arquivo e o uso de memória, mas reduz a qualidade de forma audível.
-- **QOA (Quite OK Audio):** Reduz o tamanho do arquivo um pouco mais do que a RAM (IMA-ADPCM), e a redução na qualidade é muito menos perceptível, mas aumenta o uso da CPU (ainda muito menor do que o MP3).
+- **IMA-ADPC:** Reduz um pouco o tamanho do arquivo e o uso de memória, mas reduz a qualidade de forma perceptível.
+- **QOA (Quite OK Audio):** Reduz o tamanho do arquivo um pouco mais do que o IMA-ADPCM, e a redução na qualidade é muito menos perceptível, mas aumenta o uso da CPU (ainda muito menor do que o MP3).
 
 <p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/c15ed063-60ad-44ed-be04-5daf1bb7ee42" />
+  <img width="250" src="https://github.com/user-attachments/assets/c15ed063-60ad-44ed-be04-5daf1bb7ee42" />
 </p>
 
 ## Opções de import do Ogg Vorbis e MP3
@@ -46,23 +46,26 @@ A Godot oferece 3 opções para importar seus dados de áudio: WAV, Ogg Vorbis e
 - **Bar Beats:** O número de compassos dentro de uma única batida na faixa de áudio. Isso é relevante apenas para músicas que desejam usar a funcionalidade musical interativa, não efeitos sonoros.
 
 <p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/16f47828-5c58-4684-8a23-c810fe171367" />
+  <img width="250" src="https://github.com/user-attachments/assets/16f47828-5c58-4684-8a23-c810fe171367" />
 </p>
 
 ## Configurações avançadas de importação (WAV)
 
-Se você clicar duas em um arquivo de áudio WAV pelo *FileSystem*, vão aparecer algumas opções de edição no *Inspector*. É limitado, mas permite aditar algumas coisas sem a necessidade de ter que reimportar o arquivo. Além disso, você pode ouvir o áudio antes de utilizá-lo.
+Se você clicar duas vezes em um arquivo de áudio WAV pelo *FileSystem*, vão aparecer algumas opções de edição no *Inspector*. É limitado, mas permite editar algumas coisas sem a necessidade de ter que reimportar o arquivo. Além disso, você pode ouvir o áudio antes de utilizá-lo.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/fbe27703-4b50-4bc9-b9d7-fb8ad5f755e8" />
+  <img width="250" src="https://github.com/user-attachments/assets/fbe27703-4b50-4bc9-b9d7-fb8ad5f755e8" />
 </p>
 
 ## Configurações avançadas de importação (Ogg Vorbis ou MP3)
 
-Se você clicar duas em um arquivo de áudio Ogg Vorbis ou MP3 pelo *FileSystem*, a janela com configurações avançadas de áudio vai abrir. Esta janela permite editar o ponto de loop do áudio com uma prévia em tempo real, além do BPM, da contagem de batidas e dos compassos. Essas três configurações não são utilizadas no momento, mas serão usadas no futuro para suporte a música interativa (o que permite transições suaves entre diferentes faixas de música). Note que várias das opções de import mostradas acima podem ser editadas diretamente nesta janela, sem a necessidade de reimportar o áudio.
+Se você clicar duas vezes em um arquivo de áudio Ogg Vorbis ou MP3 pelo *FileSystem*, a janela com configurações avançadas de áudio vai abrir. Esta janela permite editar o ponto de loop do áudio com uma prévia em tempo real, além do BPM, contagem de batidas e compassos. Várias das opções de import mostradas acima podem ser editadas diretamente nesta janela, sem a necessidade de reimportar o áudio.
 
 <p align="center">
-  <img width="380" src="https://github.com/user-attachments/assets/0ef793f4-6dd3-4369-af95-338e2c127b91" />
+  <img width="450" src="https://github.com/user-attachments/assets/0ef793f4-6dd3-4369-af95-338e2c127b91" />
 </p>
 
-
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20images">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20translations">Próximo ➡</a>
+</p>
