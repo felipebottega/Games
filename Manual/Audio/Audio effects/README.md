@@ -1,6 +1,6 @@
 # Audio effects
 
-Quando você clica no *Add Effect* no audio bus, muitas opções de efeito aparecem. O recomendado é testar na prática e buscar conhecer mais sobre o efeito conforme a necessidade surgir. No entanto, vamos deixar uma descrição geral de cada efeito aqui, apenas para referência. Para cada efeito, sempre se atento ao *Inspector*, pois lá teremos vários parâmetros para ajustar.
+Quando você clica no *Add Effect* de um audio bus, muitas opções de efeito aparecem. O recomendado é testar na prática e buscar conhecer mais sobre o efeito conforme a necessidade surgir. No entanto, vamos deixar uma descrição geral de cada efeito aqui, apenas para referência. Para cada efeito, é importante sempre se atentar ao *Inspector*, pois lá há vários parâmetros para ajustar.
 
 ## Lista dos efeitos áudio
 
@@ -31,3 +31,8 @@ Quando você clica no *Add Effect* no audio bus, muitas opções de efeito apare
 - **Reverb:** O *Reverb* simula salas de diferentes tamanhos. Possui parâmetros ajustáveis ​​que podem ser ajustados para obter o som de uma sala específica.
 - **SpectrumAnalyzer:** Este efeito não altera o áudio, você o adiciona canais de áudio dos quais deseja uma análise de espectro. Isso pode ser usado para visualização de áudio. Por exemplo, visualizar vozes pode ser uma ótima maneira de chamar a atenção para elas sem apenas aumentar o volume.
 - **StereoEnhance:** Este efeito usa alguns algoritmos para melhorar o som estéreo.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20streams">Próximo ➡</a>
+</p>
