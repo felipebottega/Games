@@ -376,7 +376,7 @@ do {
 ```
 
 ⚠️ **Atenção:**
-1. Lembre-se de que, em GPUs modernas, um loop infinito pode ocorrer e congelar seu aplicativo (incluindo o editor). O Godot não pode protegê-lo disso, portanto, tome cuidado para não cometer esse erro!
+1. Lembre-se de que, em GPUs modernas, um loop infinito pode ocorrer e congelar seu aplicativo (incluindo o editor). A Godot não pode protegê-lo disso, portanto, tome cuidado para não cometer esse erro!
 2. Ao comparar valores de ponto flutuante com um número, certifique-se de compará-los com um intervalo em vez de um número exato. Por exemplo, uma comparação como `if (value == 0.3)` pode não resultar em verdadeiro. A matemática de ponto flutuante geralmente é aproximada e pode desafiar as expectativas. Ela também pode se comportar de maneira diferente dependendo do hardware. Uma maneira mais segura seria usar `if (value >= 0.3 - 0.0001 && value <= 0.3 + 0.0001)`.
 3. É recomendado que cada caso do `switch` termine com um `return` ou `break`.
 
@@ -662,7 +662,7 @@ O GDScript usa tipos de variáveis ​​diferentes do GLSL, portanto, ao passar
 | `sampler3D` | `Texture3D` |  |
 | `isampler3D` | `Texture3D` |  |
 | `usampler3D` | `Texture3D` |  |
-| `samplerCube` | `Cubemap` | Veja “Changing import type” para importar cubemaps no Godot. |
+| `samplerCube` | `Cubemap` | Veja “Changing import type” para importar cubemaps na Godot. |
 | `samplerCubeArray` | `CubemapArray` | Suportado apenas em Forward+ e Mobile (não no Compatibility). |
 | `samplerExternalOES` | `ExternalTexture` | Suportado apenas na plataforma Android (modo Compatibility). |
 

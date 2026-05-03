@@ -93,7 +93,7 @@ Além da pasta do jogador (uma para cada jogo), também há um local onde dados 
 
 1. **Editor data:** Contêm modelos de exportação e dados específicos do projeto.
 2. **Editor settings:** Contêm o arquivo principal de configuração do editor, bem como diversas outras personalizações específicas do usuário (layouts do editor, perfis de recursos, modelos de script, etc.).
-3. **Cache:** Contém dados gerados pelo editor ou armazenados temporariamente. Ele pode ser removido com segurança quando o Godot for fechado.
+3. **Cache:** Contém dados gerados pelo editor ou armazenados temporariamente. Ele pode ser removido com segurança quando a Godot for fechado.
 
 <p align="center">
   <img width="450" src="https://github.com/user-attachments/assets/88b41546-57d9-4584-907e-cddcf5df5cdf" />

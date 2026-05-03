@@ -23,7 +23,7 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | `class_name`   | Define o script como uma classe globalmente acessível com o nome especificado. Veja Registro de classes nomeadas. |
 | `extends`      | Define qual classe será estendida pela classe atual. |
 | `is`           | Testa se uma variável estende uma determinada classe ou é de um tipo embutido específico. |
-| `in`           | Testa se um valor está contido em uma string, array, range, dicionário ou nó. Quando usado com for, itera sobre eles em vez de testar. |
+| `in`           | Testa se um valor está contido em uma string, array, range, dicionário ou node. Quando usado com for, itera sobre eles em vez de testar. |
 | `as`           | Converte o valor para um tipo específico, se possível. |
 | `self`         | Refere-se à instância atual da classe. Veja self. |
 | `super`        | Resolve o escopo do método da classe pai. Veja Herança. |
@@ -791,7 +791,7 @@ Um exemplo prático de aplicação foi visto [neste tutorial](https://github.com
 
 ## Gerenciamento de memória 
 
-No Godot, existem dois tipos principais de objetos na memória.
+Na Godot, existem dois tipos principais de objetos na memória.
 
 1) Objetos que a Godot limpa sozinho
 

@@ -1,6 +1,6 @@
 # CanvasItem shaders
 
-Os shaders do tipo `canvas_item` são usados ​​para desenhar todos os elementos 2D no Godot. Isso inclui todos os nodes que herdam de `CanvasItem` e todos os elementos da GUI.
+Os shaders do tipo `canvas_item` são usados ​​para desenhar todos os elementos 2D na Godot. Isso inclui todos os nodes que herdam de `CanvasItem` e todos os elementos da GUI.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/f4a84955-f32a-4274-8398-9a5126a5b2ab" />

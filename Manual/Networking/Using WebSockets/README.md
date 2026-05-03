@@ -14,7 +14,7 @@ from fastapi import FastAPI, WebSocket
 
 app = FastAPI()
 
-# Endpoint WebSocket: o Godot se conecta aqui. Execute o script com python server.py.
+# Endpoint WebSocket: a Godot se conecta aqui. Execute o script com python server.py.
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()  # Aceita a conexão do cliente

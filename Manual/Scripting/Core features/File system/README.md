@@ -10,7 +10,7 @@ O arquivo `project.godot` é o arquivo de descrição do projeto e está sempre 
 
 ## Delimitador para caminhos
 
-O Godot só aceita `/` como delimitador de caminho. Isso é feito por motivos de portabilidade. Todos os sistemas operacionais suportam isso, inclusive o Windows, então um caminho como `C:\project\project.godot` precisa ser digitado como `C:/project/project.godot`.
+A Godot só aceita `/` como delimitador de caminho. Isso é feito por motivos de portabilidade. Todos os sistemas operacionais suportam isso, inclusive o Windows, então um caminho como `C:\project\project.godot` precisa ser digitado como `C:/project/project.godot`.
 
 ## Resource path e user path
 
