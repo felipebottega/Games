@@ -1,16 +1,16 @@
 # Importing images
 
-Como vimos no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Import%20process), há diversas opções de configuração para fazer um reimport. Vamos ver como elas são no caso de imagens. Neste tutorial, vamos apenas descrever as opções disponíveis de maneira objetiva, sem gastar tempo em análises qualitativas.
+Como vimos no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Import%20process), há diversas opções de configuração para fazer um reimport. Vamos ver como elas são no caso de imagens. 
 
 ## Alterando o tipo
 
-- **BitMap:** Textura monocromática de 1 bit (destinada a ser usada como máscara de clique em `TextureButton` e `TouchScreenButton`). Este tipo de recurso não pode ser exibido diretamente em nós 2D ou 3D, mas os valores de pixel podem ser consultados em um script usando `get_bit`.
+- **BitMap:** Textura monocromática de 1 bit (destinada a ser usada como máscara em `TextureButton` e `TouchScreenButton`). Este tipo de recurso não pode ser exibido diretamente em nodes 2D ou 3D, mas os valores de pixel podem ser consultados em um script usando `get_bit`.
 - **Cubemap:** Importa a textura como um cubemap de 6 lados, com interpolação entre os lados do cubemap (cubemaps contínuos), que podem ser amostrados em shaders personalizados.
-- **CubemapArray:** Importe a textura como uma coleção de cubemaps de 6 lados, que podem ser amostrados em shaders personalizados. Este tipo de recurso só pode ser exibido ao usar os renderizadores *Forward+* ou *Mobile*, não o renderizador de *Compatibility*.
+- **CubemapArray:** Importa a textura como uma coleção de cubemaps de 6 lados, que podem ser amostrados em shaders personalizados. Este tipo de recurso só pode ser exibido ao usar os renderizadores *Forward+* ou *Mobile*, não o renderizador de *Compatibility*.
 - **Font Data:** Importa a imagem como uma fonte bitmap com todos os caracteres com a mesma largura.
-- **Image:** Importa a imagem original. Este tipo de recurso não pode ser exibido diretamente em nós 2D ou 3D, mas os valores de pixel podem ser consultados em um script usando `get_pixel`.
+- **Image:** Importa a imagem original. Este tipo de recurso não pode ser exibido diretamente em nodes 2D ou 3D, mas os valores de pixel podem ser consultados em um script usando `get_pixel`.
 - **Texture2D:** Importa a imagem como uma textura bidimensional, adequada para exibição em superfícies 2D e 3D. Este é o modo de importação padrão.
-- **Texture2DArray:** Importe a imagem como uma coleção de texturas bidimensionais. *Texture2DArray* é semelhante a uma textura tridimensional, mas sem interpolação entre camadas. Os shaders 2D e 3D integrados não podem exibir matrizes de textura, portanto, você deve criar um shader personalizado em 2D ou 3D para exibir uma textura a partir de um array de texturas.
+- **Texture2DArray:** Importa a imagem como uma coleção de texturas bidimensionais. *Texture2DArray* é semelhante a uma textura tridimensional, mas sem interpolação entre camadas. Os shaders 2D e 3D integrados não podem exibir matrizes de textura, portanto, você deve criar um shader personalizado em 2D ou 3D para exibir uma textura a partir de um array de texturas.
 - **Texture3D:** Importa a imagem como uma textura tridimensional. Esta não é uma textura 2D aplicada a uma superfície 3D. O *Texture3D* é semelhante a um array de texturas, mas com interpolação entre camadas. 
 - **TextureAtlas:** Importa a imagem como um atlas de diferentes texturas. Pode ser usado para reduzir o uso de memória para sprites 2D animados. Suportado apenas em 2D devido à falta de suporte nos shaders 3D integrados.
 
@@ -22,16 +22,14 @@ Como vimos no [tutorial anterior](https://github.com/felipebottega/Games/tree/gh
 
 ### Compress/Mode
 
-Images are one of the largest assets in a game. To handle them efficiently, they need to be compressed. Godot offers several compression methods, depending on the use case.
-
-- **Lossless:** Este é o modo de compressão padrão e mais comum para assets 2D. Ele mostra assets sem nenhum tipo de artefato, e a compressão de disco é decente. No entanto, ele usará consideravelmente mais memória de vídeo do que a *VRAM Compression*. Esta também é a configuração recomendada para pixel art.
-- **Lossy:** Esta é uma boa opção para grandes assets 2D. Possui alguns artefatos, mas menos do que a compactação VRAM, e o tamanho do arquivo é várias vezes menor em comparação com o modo *Lossless* ou *VRAM Uncompressed*. 
+- **Lossless:** Este é o modo de compressão padrão e mais comum para assets 2D. Ele mostra assets sem nenhum tipo de artefato, e a compressão de disco é decente. No entanto, ele usará consideravelmente mais memória de vídeo do que a *VRAM Compressed*. Esta também é a configuração recomendada para pixel art.
+- **Lossy:** Esta é uma boa opção para grandes assets 2D. Possui alguns artefatos, mas menos do que a *VRAM Compressed*, e o tamanho do arquivo é várias vezes menor em comparação com o modo *Lossless* ou *VRAM Uncompressed*. 
 - **VRAM Compressed:** Este é o modo de compressão padrão e mais comum para assets 3D. O tamanho do disco é reduzido e o uso da memória de vídeo também diminui consideravelmente. Este modo deve ser evitado para 2D, pois exibe artefatos perceptíveis, especialmente para texturas de baixa resolução.
 - **VRAM Uncompressed:** Útil somente para formatos que não podem ser compactados, como imagens brutas de ponto flutuante.
-- **Basis Universal:** Este modo alternativo de compressão VRAM codifica a textura em um formato que pode ser transcodificado para a maioria dos formatos compactados por GPU no momento do carregamento. Isso gera arquivos muito pequenos que utilizam compressão VRAM, mas com qualidade inferior em comparação com a *VRAM Compresse* e tempos de compressão mais lentos. O uso de VRAM geralmente é o mesmo que o da *VRAM Compressed*. O *Basis Universal* não suporta formatos de imagem de ponto flutuante.
+- **Basis Universal:** Este modo alternativo de compressão VRAM codifica a textura em um formato que pode ser transcodificado para a maioria dos formatos compactados por GPU no momento do carregamento. Isso gera arquivos muito pequenos que utilizam compressão VRAM, mas com qualidade inferior em comparação com a *VRAM Compressed* e tempos de compressão mais lentos. O uso de VRAM geralmente é o mesmo que o da *VRAM Compressed*. O *Basis Universal* não suporta formatos de imagem de ponto flutuante.
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/bc07c13e-a23e-4b4b-a403-97cc73847659" />
+  <img width="280" src="https://github.com/user-attachments/assets/bc07c13e-a23e-4b4b-a403-97cc73847659" />
 </p>
 
 ### Compress/Channel Pack
@@ -41,22 +39,24 @@ Images are one of the largest assets in a game. To handle them efficiently, they
 
 ### Mipmaps/Generate
 
-Se habilitado, versões menores da textura serão geradas na importação. Por exemplo, uma textura de $64 \times 64$ pixels gerará 6 mipmaps ($32 \times 32, 16 \times 16, 8 \times 8, 4 \times 4, 2 \times 2, 1 \times 1$). Isso traz vários benefícios:
+Se habilitado, versões menores da textura serão geradas na importação. Por exemplo, uma textura de $64 \times 64$ pixels irá gerar 6 mipmaps $(32 \times 32, 16 \times 16, 8 \times 8, 4 \times 4, 2 \times 2, 1 \times 1)$. Isso traz vários benefícios:
 
   - As texturas não ficarão granuladas à distância (em 3D) ou se forem reduzidas devido ao zoom da câmera ou à escala do `CanvasItem` (em 2D).
   - O desempenho melhorará se a textura for exibida à distância, já que a amostragem de versões menores da textura original é mais rápida e requer menos memória.
 
-A desvantagem dos mipmaps é que eles aumentam o uso de memória total em cerca de 33%. É recomendável habilitar os mipmaps em 3D. No entanto, em 2D, isso só deve ser habilitado se o seu projeto se beneficiar visivelmente da ativação dos mipmaps. Se a câmera nunca diminuir o zoom significativamente, não haverá benefício em habilitar mipmaps, mas o uso de memória aumentará. Depois que você tiver gerado os mipmaps, não é necessário fazer mais nada pois a enigne faz uso deles automaticamente no jogo. Segue abaixo uma pequeno resumo de quando usar e não usar mipmaps.
+A desvantagem dos mipmaps é que eles ocupam mais espaço total, em cerca de 33%. É recomendável habilitar os mipmaps em 3D. No entanto, em 2D, só deve ser habilitado se o seu projeto se beneficiar visivelmente da ativação dos mipmaps. Depois que você tiver gerado os mipmaps, não é necessário fazer mais nada pois a enigne faz uso deles automaticamente no jogo. Segue abaixo um pequeno resumo de quando usar e não usar mipmaps.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/d3663f3e-8929-45bb-92b8-70fb88ed5653" />
+  <img width="450" src="https://github.com/user-attachments/assets/d3663f3e-8929-45bb-92b8-70fb88ed5653" />
 </p>
+
+> PS: Mesmo com zoom no caso 2D, é melhor testar para ter certeza se vale a pena.
 
 Ao habilitar mipmaps pelo import e mandar reimportar, as versões menores da textura estarão "embutidas" na textura principal. Você pode checar isso pelo *Inspector*.
 
 <p align="center">
-  <img width="150" src="https://github.com/user-attachments/assets/5f0516db-64c8-4692-bd15-3f1ffb9c3bd6" />
-  <img width="150" src="https://github.com/user-attachments/assets/6046f033-b294-4671-b707-d92d94ef48d1" />
+  <img width="180" src="https://github.com/user-attachments/assets/5f0516db-64c8-4692-bd15-3f1ffb9c3bd6" />
+  <img width="180" src="https://github.com/user-attachments/assets/6046f033-b294-4671-b707-d92d94ef48d1" />
 </p>
 
 > PS: Habilitar mipmaps pode fazer com que as texturas pareçam mais desfocadas, mas você pode optar por torná-las mais nítidas (ao custo de alguma granulação) definindo *Project → Project Settings → General → Rendering → Textures → Default Filters → Texture Mipmap Bias* para um valor negativo. 
@@ -76,8 +76,8 @@ Ao habilitar mipmaps pelo import e mandar reimportar, as versões menores da tex
   <img width="300" src="https://github.com/user-attachments/assets/27a742c7-8695-4235-93d2-27333b67d8e0" />
 </p>
 
-- **Premult Alpha:** Uma alternativa para corrigir bordas escurecidas com *Fix Alpha Border* é usar o alfa pré-multiplicado. Ao habilitar esta opção, a textura será convertida para este formato. Uma textura alfa pré-multiplicada requer materiais específicos para ser exibida corretamente.
-- **Normal Map Invert Y:** A Godot exige que o mapa normal use as coordenadas X+, Y+ e Z+, o que é conhecido como um mapa normal no estilo OpenGL. Se você importou um material criado para ser usado em outra engine, ele pode estar no estilo DirectX. Nesse caso, o mapa normal precisa ser convertido habilitando a opção de importação *Normal Map Invert Y*.
+- **Premult Alpha:** Uma alternativa para corrigir bordas escurecidas com *Fix Alpha Border* é usar o alfa pré-multiplicado. Ao habilitar esta opção, a textura será convertida para este formato. Uma *textura alfa pré-multiplicada* requer materiais específicos para ser exibida corretamente.
+- **Normal Map Invert Y:** A Godot exige que o mapa normal use as coordenadas X+, Y+ e Z+, o que é conhecido como um mapa normal no estilo OpenGL. Se você importou um material criado para ser usado em outra engine, ele pode estar no estilo DirectX. Nesse caso, o mapa normal precisa ser convertido habilitando esta opção.
 - **HDR as sRGB:** Algumas imagens HDR que você encontra online podem estar corrompidas e conter dados de cores sRGB (em vez de dados de cores lineares). É aconselhável não usar esses arquivos. Se for absolutamente necessário, ativar esta opção fará com que pareçam corretas.
 
 > PS: Habilitar HDR como sRGB em imagens HDR bem formatadas fará com que a imagem resultante pareça muito escura, então deixe essa opção desabilitada se não tiver certeza.
@@ -86,3 +86,8 @@ Ao habilitar mipmaps pelo import e mandar reimportar, as versões menores da tex
 
 ### Detect 3D 
 - **Compress To:** Isso altera a opção *Compress/Mode*, usada quando uma textura é detectada como sendo usada em 3D. Alterar esta opção para *Disabled* e, em seguida, reimportar, não alterará o modo de compressão existente em uma textura (se for detectado que ela está sendo usada em 3D), mas escolher *VRAM Compressed* or *Basis Universal* alterará.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Import%20process">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Assets%20pipeline/Importing%20audio%20samples">Próximo ➡</a>
+</p>
