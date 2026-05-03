@@ -7,16 +7,16 @@ Vimos algumas coisas sobre exportação de projeto conforme a necessidade surgia
 Após ter feito o seu jogo em Godot, para exportar você deve ir em *Project → Export*. 
 
 <p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/cd5497e4-da47-4d61-b847-46545a851d5d" />
+  <img width="250" src="https://github.com/user-attachments/assets/cd5497e4-da47-4d61-b847-46545a851d5d" />
 </p>
 
 Depois disso, uma janela com as opções de exportação irá abrir. A primeira coisa que você deve fazer é clicar em *Add* para selecionar as plataformas em que o jogo será executado. 
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/5d4ac10b-1d72-4729-9f46-44568ed4fd93" />
+  <img width="600" src="https://github.com/user-attachments/assets/5d4ac10b-1d72-4729-9f46-44568ed4fd93" />
 </p>
 
-Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algumas ferramentas (SDKs) e templates para a exportação funcionar. A própria mensagem de erro serve de guia para o que deve ser instalado. [Neste link](https://godotengine.org/download/windows/) você encontra os templates da Godot que devem ser instalados. Depois de baixar os templates, vá em *Editor → Manage Export Templates* e selecione os templates para instalar. Note que você também pode baixar a partir dessa janela. Faça o que for mais conveniente para você.
+Dependendo da escolha, na hora de exportar a Godot pode reclamar que faltam algumas ferramentas (SDKs) e templates. A própria mensagem de erro serve de guia para o que deve ser instalado. [Neste link](https://godotengine.org/download/windows/) você encontra os templates da Godot que devem ser instalados. Depois de baixar os templates, vá em *Editor → Manage Export Templates* e selecione os templates para instalar. Note que você também pode baixar a partir dessa janela. Faça o que for mais conveniente para você.
 
 Antes mesmo de tentar exportar o seu jogo, é bom saber que tipo de exportação você quer fazer. Existem três alternativas.
 
@@ -36,14 +36,14 @@ Eu recomendo usar apenas a opção *Export Project* e exportar para uma platafor
 > PS: Quando for exportar, não se esqueça de desmarcar a opção *Export With Debug*.
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/f45dc6ae-4ffd-40be-89a1-a59fef52d9dd" />
+  <img width="700" src="https://github.com/user-attachments/assets/f45dc6ae-4ffd-40be-89a1-a59fef52d9dd" />
 </p>
 
 ## Configuration files 
 
-A configuração de exportação é armazenada em dois arquivos, ambos encontrados no diretório do projeto:
+A configuração da exportação é armazenada em dois arquivos, ambos encontrados na pasta do projeto:
 
-- **export_presets.cfg:** Este arquivo contém a grande maioria da configuração de exportação e pode ser submetido com segurança ao controle de versão. Não há nada aqui que você normalmente precisaria manter em segredo.
+- **export_presets.cfg:** Este arquivo contém a maior parte das configurações de exportação e pode ser submetido com segurança ao controle de versão. Não há nada aqui que você normalmente precisaria manter em segredo.
 - **.godot/export_credentials.cfg:** Este arquivo contém opções de exportação consideradas confidenciais, como senhas e chaves de criptografia. Geralmente, ele não deve ser submetido ao controle de versão nem compartilhado com terceiros, a menos que você saiba exatamente o que está fazendo.
 
 Como o arquivo de credenciais geralmente é mantido fora dos sistemas de controle de versão, algumas opções de exportação estarão ausentes se você clonar o projeto para uma nova máquina. A maneira mais fácil de lidar com isso é copiar o arquivo manualmente do local antigo para o novo.
@@ -51,13 +51,17 @@ Como o arquivo de credenciais geralmente é mantido fora dos sistemas de control
 Abaixo nós temos o conteúdo que tipicamente aparece no *export_presets.cfg*. Note que o *preset.0* se refere à exportação Web, como mostramos em uma imagem acima. Depois disso, no mesmo arquivo de texto, vem o *preset.1*, referente à exportação Windows, e assim por diante. 
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/8e89c06e-7522-49d9-845d-692e66425177" />
-  <img width="400" src="https://github.com/user-attachments/assets/f0545703-5016-4e2c-a393-f20852626d2e" />
+  <img width="250" src="https://github.com/user-attachments/assets/8e89c06e-7522-49d9-845d-692e66425177" />
+  <img width="480" src="https://github.com/user-attachments/assets/f0545703-5016-4e2c-a393-f20852626d2e" />
 </p>
 
 Abaixo temos o conteúdo do *export_credentials.cfg*. Para este projeto nenhum tipo de credencial foi criada, por isso não há nada no arquivo.
 
 <p align="center">
-  <img width="170" src="https://github.com/user-attachments/assets/1cccb600-bc2a-4d66-8898-d4a39b21c70d" />
+  <img width="200" src="https://github.com/user-attachments/assets/1cccb600-bc2a-4d66-8898-d4a39b21c70d" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20streams">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20packs%2C%20patches%2C%20and%20mods">Próximo ➡</a>
+</p>
