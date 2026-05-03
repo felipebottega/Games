@@ -4,11 +4,11 @@ Existem alguns métodos em Godot para carregar cenas, recursos, texturas, entre 
 
 ## preload
 
-Este foi o primeiro método de carregamento que vimos. Ele foi introduzido no tutorial [Add Child](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child) lá atrás. Ela funciona seguindo os passos mostrados abaixo.
+Este foi o primeiro método de carregamento que vimos. Ele foi introduzido no tutorial [Add Child](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Add%20Child) lá atrás. O uso deste método funciona de acordo com os passos abaixo.
 
 1. `minha_cena = preload("res://scenes/minha_cena.tscn")`    # carrega a cena na memória e retorna um objeto do tipo `PackedScene`
 2. `cena_instancia = minha_cena.instantiate()`    # cria uma instância da cena (variável do tipo `Node`)
-3. `cena_instancia.position = Vector2(x, y)`    # altera atributos da cena
+3. `cena_instancia.position = Vector2(x, y)`    # altera atributos da cena (exemplo)
 4. `add_child(cena_instancia)`    # adiciona a cena dentro da cena principal, como um filho (entra na árvode de nodes)
 
 O `preload` é executado assim que script é inicializado/compilado, não dá para ficar chamando ele dinamicamente durante a execução várias vezes. É indicado para carregar recursos/cenas que são mais pesados ou que serão utilizados diversas vezes. Para otimizar a velocidade do carregamento, prefira chamar o `preload` antes mesmo do `_ready`, junto da definição das variáveis da instância.
@@ -17,9 +17,9 @@ O `preload` é executado assim que script é inicializado/compilado, não dá pa
 
 ## load
 
-Funciona parecido da `preload`, mas carrega dinamicamente, no momento em que a chamada é feita. Pode usar caminhos variáveis. Ela é boa para carregar cenas/recursos que são pequenos ou só precisam ser carregados em condições específicas. É importante notar que a `load` bloqueia a thread principal do jogo, criando um pequeno engasgo (*stutter*) na execução. Em geral isso será coisa de milisegundos, então não é problema. Só será problema se você quiser carregar um estágio inteiro com `load`. O `preload` seria mais indicado para este caso. O modo de uso é o mesmo do `preload`.
+Funciona parecido do `preload`, mas carrega dinamicamente, no momento em que a chamada é feita. Pode usar caminhos variáveis. Ela é boa para carregar cenas/recursos que são pequenos ou só precisam ser carregados em condições específicas. É importante notar que o `load` bloqueia a thread principal do jogo, criando um pequeno engasgo (*stutter*) na execução. Em geral isso será coisa de milisegundos, então não é problema. Só será problema se você quiser carregar um estágio inteiro com `load`. O `preload` seria mais indicado para este caso. O modo de uso é o mesmo do `preload`.
 
-> PS: De fato, o `preload` é mais rápido que o `load`, mas ele tem a limitação de só poder ser chamado na inicialização/compilação do scritp uma vez. 
+⚠️ **Atenção:** De fato, o `preload` é mais rápido que o `load`, mas ele é chamado na inicialização/compilação do scritp mesmo que ele não esteja sendo usado na cena. Além disso, o carregamento do `preload` é recursivo, isto é, se uma cena foi chamada com `preload` e dentro desta cena há outro `preload`, ele também será executado. Se houver ainda mais `preload` para dentro, as chamadas continuam. Se isso não estiver bem estruturado, pode causar lags enormes por causa de carregamentos de coisas que estão longe de serem usadas no momento.
 
 ## preload e load em loops
 
@@ -39,7 +39,7 @@ Se você tiver uma cena grande e quiser evitar pequenas pausas ao trocar, você 
 1. `minha_cena = preload("res://scenes/minha_cena.tscn")`    # carregada antes
 2. `get_tree().change_scene_to_packed(minha_cena)`    # troca instantânea
 
-Aqui você pré-carregou a cena, então a troca é quase instantânea, evitando o lag que normalmente aconteceria com `get_tree().change_scene_to_file()` direto.
+Aqui você pré-carregou a cena, então a troca é instantânea, evitando o lag se tem normalmente com `get_tree().change_scene_to_file()`.
 
 ## ResourceLoader
 
@@ -55,12 +55,12 @@ A chamada `ResourceLoader.load_threaded_get_status` deve ficar rodando dentro do
 
 > PS: Existe também o método `ResourceLoader.load`, mas ele é basicamente o `load` com algumas opções extras que não importam muito. 
 
-> ⚠️: Não chame a `ResourceLoader.load_threaded_get` sem ter certeza que o carregamento finalizou, senão você vai travar o jogo.
+⚠️ **Atenção:** Não chame a `ResourceLoader.load_threaded_get` sem ter certeza que o carregamento finalizou, senão você vai travar o jogo.
 
 ## Tabela comparativa dos tipos de carregamento
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/24717e94-9d90-410d-95df-8fa750271ef7" />
+  <img width="1100" src="https://github.com/user-attachments/assets/24717e94-9d90-410d-95df-8fa750271ef7" />
 </p>
 
 ## Testes
@@ -96,21 +96,21 @@ Tivemos duas fontes de lentidão: as partículas da primeira cena e as partícul
 
 ## Método esperto de pré-carregamento 
 
-Alguns devs usam uma cena de loading que já contém todas as partículas usadas no jogo, cada uma instanciada uma vez e deixada invisível, só para garantir que os shaders fiquem prontos. Ou seja, carregamos tudo logo no loading inicial do jogo e deixamos disponível como variável da instância, usando *autoload/singleton*. Vimos um pouco deste assunto no nosso [jogo usando tiles](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#toques-finais), onde foi necessário ter a música como cena global que ficasse tocando independentemente da cena em que estávamos. Este approach não nos faz ganhar ganhar tempo, mas coloca todo o tempo de espera para o início, antes mesmo do jogo começar. Com isso, evitamos qualquer tipo de lag ou congelamento no meio do jogo. Vamos mostrar como se faz.
+Alguns devs usam uma cena de loading que já contém todas as partículas usadas no jogo, cada uma instanciada uma vez e colocadas atrás de algum elemento de UI, só para garantir que os shaders fiquem prontos. Ou seja, carregamos tudo logo no loading inicial do jogo e deixamos disponível como variável da instância, usando *autoload/singleton*. Vimos um pouco deste assunto no nosso [jogo usando tiles](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game#toques-finais), onde foi necessário ter a música como cena global que ficasse tocando independentemente da cena em que estávamos. Este approach não nos faz ganhar ganhar tempo, mas coloca todo o tempo de espera para o início, antes mesmo do jogo começar. Com isso, evitamos qualquer tipo de lag ou congelamento no meio do jogo. Vamos mostrar como se faz.
 
 ### Adicionando cenas no Autoload
 
 A cena do jogo possui 4 objetos com partículas: *Fireworks, Sparkles, Smoke, Ball*. Além disso, a cena inicial carrega o objeto *SmokeBig*, que também possui partículas.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/dcfc5e83-ed7b-453e-8be4-d7e0b46ad3cb" />
-  <img width="190" src="https://github.com/user-attachments/assets/a5f3dba2-032a-4ce0-948e-8913c94d8770" />
+  <img width="220" src="https://github.com/user-attachments/assets/dcfc5e83-ed7b-453e-8be4-d7e0b46ad3cb" />
+  <img width="210" src="https://github.com/user-attachments/assets/a5f3dba2-032a-4ce0-948e-8913c94d8770" />
 </p>
 
-Primeiro coloque todos os arquivos destas cenas/objetos na pasta *autoload* do projeto. Depois sá em *Project → Project Settings → Globals* e adicione cada um delas como global. Para adicionar, vá no ícone de pasta e selecione o arquivo, e depois clique em *Add* para ele entrar na lista. Ele será referenciado nos scripts através do nome na colune *Name* (é editável). 
+Primeiro coloque todos os arquivos destas cenas/objetos na pasta *autoload* do projeto. Depois vá em *Project → Project Settings → Globals* e adicione cada um delas como global. Para adicionar, vá no ícone de pasta e selecione o arquivo, e depois clique em *Add* para ele entrar na lista. Ele será referenciado nos scripts através do nome na colune *Name* (é editável). 
 
 <p align="center">
-  <img width="750" src="https://github.com/user-attachments/assets/57c7c994-1908-4c4b-b472-c48f4bc0a5d8" />
+  <img width="850" src="https://github.com/user-attachments/assets/57c7c994-1908-4c4b-b472-c48f4bc0a5d8" />
 </p>
 
 Essa parte não é muito divertida, mas você deve abrir o arquivo `scene.tscn`, remover as uids dos objetos mencionados acima e trocar o caminho para *autoload*. Isso só deve ser feito para este caso em que estamos redefinindo todo o projeto. Se for seguir do jeito normal, isto é, criar outro projeto apra isso, pode pular esse passo.
@@ -122,7 +122,7 @@ Essa parte não é muito divertida, mas você deve abrir o arquivo `scene.tscn`,
 Após isso, toda referência a um dos objetos acima é via autoload. É importante que você chame os objetos carregados no autoload através de script, usando os nomes deles. Por exemplo, removemos o node *SmokeBig* que tinha na árvore de cenas e fizemos sua chamada por script. Isso garante que você vai usar o objeto global. Se colocasse na árvore pelo editor, criaria uma instância nova que seria carregada na hora, criando mais lag desnecessário.
 
 <p align="center">
-  <img width="750" src="https://github.com/user-attachments/assets/13e5d178-659b-4864-8e7d-097dcdeef80a" />
+  <img width="850" src="https://github.com/user-attachments/assets/13e5d178-659b-4864-8e7d-097dcdeef80a" />
 </p>
 
 Com isso, obtivemos os tempos mostrados abaixo. O tempo total ainda é o mesmo, algo que é inevítável. O importante é que concentramos todo o tempo de carregamento o mais cedo possível. Note que o delay entre *timer* e *finish* é o menor de todos, independentemente do método escolhido. Isso significa que a transição de cena é suave, sem lags. Prefira este método quando for ter objetos pesados no jogo.
@@ -132,3 +132,8 @@ Com isso, obtivemos os tempos mostrados abaixo. O tempo total ainda é o mesmo, 
 </p>
 
 > PS: O fato do fim do `Timer` ter sido próximo aos $6$ segundos não é algo para se estranhar. Isso significa que o início do `Timer` foi adiado mais do que anteriormente. Isso porque a engine gastou mais tempo pré-carregando recursos para o jogo. É isto que queremos mesmo. 
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20the%20Web">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects">Próximo ➡</a>
+</p>
