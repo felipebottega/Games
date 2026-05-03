@@ -11,7 +11,7 @@ Começamos criando uma cena com um `Node2D` como raíz e depois adicionamos o no
   <img width="300" src="https://github.com/user-attachments/assets/8dad4ccf-d0af-4c1d-9790-0e9f68f87145" />
 </p>
 
-Quando adicionar o vídeo, vai aparecer um retângulo laranja na tela do editor. Esse é o espaço exato que o vídeo vai ocupar na tela. Você pode mexer nas dimensões com o mouse como se fosse qualquer outro objeto de Godot. É importante ressaltar que as dimnesões iniciais são iguais as dimensões do vídeo original.
+Quando adicionar o vídeo, vai aparecer um retângulo laranja na tela do editor. Esse é o espaço exato que o vídeo vai ocupar na tela. Você pode mexer nas dimensões com o mouse. É importante ressaltar que as dimensões iniciais são iguais as dimensões do vídeo original.
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/30bb09cb-b0bb-4ea1-bdd3-37351d1e566f" />
@@ -36,3 +36,8 @@ A Godot não trabalha com os clássicos formatos como *mp4, avi, mkv, mpg*, entr
   2. O comando `ffmpeg -i input.mp4 -vf "scale=-1:720" -q:v 6 -q:a 6 -g:v 64 output.ogv` redimensiona um vídeo para 720 pixels de altura (720p), preservando sua proporção de tela atual. Isso ajuda a reduzir significativamente o tamanho do arquivo se a fonte for gravada em uma resolução superior a 720p.
 
 Se quiser ver uma demonstração deste node na prática, fiz um mini-game de exemplo que pode ser acessado [neste link](https://felipebottega.github.io/Games/Manual/Animation/Playing%20videos/html/).
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Creating%20movies">Próximo ➡</a>
+</p>
