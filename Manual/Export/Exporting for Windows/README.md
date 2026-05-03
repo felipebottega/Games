@@ -2,13 +2,13 @@
 
 ## Changing the executable icon
 
-Ao gerar o executável do seu jogo no Windows, o ícone utilizado é o ícone da Godot <img width="28" src="https://github.com/user-attachments/assets/0a3c6ed7-5dd2-48ef-9d63-a6492b698d50" /> por default. Para alterar isso quando for exportar, vá em *Options → Application → Icon* e escolha o arquivo do novo ícone. Depois disso, ao exportar o jogo para executável o ícone do arquivo será o que você escolheu. O ícone de  *Console Wrapper Icon* só faz sentido se você exportar com debug, pois isso cria um arquivo de console além do arquivo do jogo.
+Ao gerar o executável do seu jogo no Windows, o ícone utilizado é o ícone da Godot <img width="28" src="https://github.com/user-attachments/assets/0a3c6ed7-5dd2-48ef-9d63-a6492b698d50" /> por default. Para alterar isso quando for exportar, vá em *Options → Application → Icon* e escolha o arquivo do novo ícone. Depois disso, ao exportar o jogo para executável o ícone do arquivo será o novo que você escolheu. O ícone de  *Console Wrapper Icon* só faz sentido se você exportar com debug, pois isso cria um arquivo de console além do arquivo do jogo.
 
 <p align="center">
-  <img width="650" height="684" alt="image" src="https://github.com/user-attachments/assets/eba61d48-641b-493d-926f-cb82e28b86f5" />
+  <img width="650" src="https://github.com/user-attachments/assets/eba61d48-641b-493d-926f-cb82e28b86f5" />
 </p>
 
-Na imagem acima, podemos notar que, além do ícone, também é possível editar diversos metadados. Essas funcionalidades não vem de graça com a Godot, é necessário baixar o programa *rcedit.exe* do Windows, colocá-lo em algum lugar do seu computador e inserir este caminho em *Editor → General → Export → rcedit*, como mostrado abaixo. Provavelmente você terá reiniciar a Godot após estes passos.
+Ainda podemos notar que, além do ícone, também é possível editar diversos metadados. Essas funcionalidades não vem de graça com a Godot, é necessário baixar o programa *rcedit.exe* do Windows, colocá-lo em algum lugar do seu computador e inserir este caminho em *Editor → General → Export → rcedit*, como mostrado abaixo. Provavelmente você terá reiniciar a Godot após estes passos.
 
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/754ca574-c65f-4735-a75e-d31518e6efdc" />
@@ -71,4 +71,9 @@ A maneira correta de transferir cenas e scripts entre projetos é indo no *FileS
 <p align="center">
   <img width="320" src="https://github.com/user-attachments/assets/507ed9ad-1464-43fa-ad05-315f6494cbb1" />
   <img width="400" src="https://github.com/user-attachments/assets/8d01d1ad-cefa-4f74-9a75-0a62efc05e56" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20packs%2C%20patches%2C%20and%20mods">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20the%20Web">Próximo ➡</a>
 </p>
