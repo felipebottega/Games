@@ -19,7 +19,7 @@ Ainda no *Movie File*, ative as opções avançadas. O parâmetro *MJPEG Quality
 > PS: Com FPS = 60 em um jogo 2D simples, o jogo rodou mais rápido que o normal com a opção *Movie Maker* ativada, mas na hora de ver o vídeo a velocidade estava normal. Acredito que depende de cada caso. Abaixo a mensagem do output da Godot deixa claro o que aconteceu.
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/e240297e-ab0e-4117-88dc-4f09cb97bd4e" />
+  <img width="800" src="https://github.com/user-attachments/assets/e240297e-ab0e-4117-88dc-4f09cb97bd4e" />
 </p>
 
 <p align="center">
