@@ -179,11 +179,11 @@ Vamos continuar trabalhando a nossa animação, mas dessa vez com um arsenal mai
   <img width="400" src="https://github.com/user-attachments/assets/7621a87f-9e9e-4b42-b031-c5411b7e6cd6" />
 </p>
 
-A ideia basicamente é selecionar um destes botões, alterar o sprite com a transformação correspondente ao botão e clicar no botão de inserir keyframe. é análogo ao estilo de animação *stopmotion*, onde você modelo o objeto em cada posição e vai tirando fotos de cada instante. O video abaixo ilustra o procedimento para a edição das posições.
+A ideia basicamente é selecionar um destes botões, alterar o sprite com a transformação correspondente ao botão e clicar no botão de inserir keyframe. Isso é análogo ao estilo de animação *stopmotion*, onde você modela o objeto em cada posição e vai tirando uma foto de cada instante. O video abaixo ilustra o procedimento para a edição das posições.
 
 https://github.com/user-attachments/assets/404d1a19-bf9e-4dfc-b2ed-6b03264d5a59
 
-Vamos também aplicar uma rotação na espada, para simular um balanço. Dessa vez usaremos o método ensinado inicialmente. Vamos em *Add Track → Property Track → Sprite2D → Node2D/rotation*. Inserimos o primeiro keyframe no instante zero e sem nenhuma rotação. Depois acrescentamos keyframes nos mesmos instantes onde foram inseridos os keyframes das posições, intercalando entre $45^\circ$ e $-45^\circ$. Note que no *Inspector* nós temos a curva *Easing* para editar. Ela define o quanto da rotação será aplicado a cada instante. Nesta curva, em particular, adiamos a rotação para ser mais aplicada no fim da animação. Tem como se conseguir diversos efeitos com essa curva. 
+Vamos também aplicar uma rotação na espada, para simular um balanço. Dessa vez usaremos o método ensinado inicialmente. Vamos em *+Add Track → Property Track → Sprite2D → Node2D/rotation*. Inserimos o primeiro keyframe no instante zero e sem nenhuma rotação. Depois acrescentamos keyframes nos mesmos instantes onde foram inseridos os keyframes das posições, intercalando entre $45^\circ$ e $-45^\circ$. Note que no *Inspector* nós temos a curva *Easing* para editar. Ela define o quanto da rotação será aplicado a cada instante. Nesta curva, em particular, adiamos a rotação para ser mais aplicada no fim da animação. Tem como se conseguir diversos efeitos com essa curva. 
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/5daed26d-1a38-4ec7-9a03-6d2dae7e1c44" />
@@ -220,3 +220,8 @@ Para finalizar, criamos mais uma animação de posição, deslocando a espada da
 Abaixo temos a animação final.
 
 https://github.com/user-attachments/assets/9c43842b-8f2f-4a2d-8d8b-c4b15a4addb5
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Tools/Using%20TileMaps%20-%20Game">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Animation%20Track%20types#call-method-track">Próximo ➡</a>
+</p>
