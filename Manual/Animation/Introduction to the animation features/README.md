@@ -1,8 +1,8 @@
 # Introduction to the animation features
 
-O node `AnimationPlayer` pode gerar animações sobre qualquer outro node, então não é preciso se preocupar se ele é filho ou pai de algum node em específico. A exceção a isso é quando quisermos que a animação "acompanhe" algum node pai, daí ele tem que ser filho (por exemplo, se a animação se move junto do player).
+O node `AnimationPlayer` pode gerar animações sobre qualquer outro node na árvore da cena, então não é preciso se preocupar se ele é filho ou pai de algum node em específico. A exceção a isso é quando quisermos que a animação "acompanhe" algum node pai, daí ele tem que ser filho (por exemplo, se a animação se move junto do player).
 
-Começamos com uma simples cena de um `Node2D` contendo um `AnimationPlayer` e um `Sprite2D` que será animado. Ressaltamos que a animação de agora não é animação como um `AnimatedSprite2D`, mas sim animação das transformações 2D sobre o sprite.
+Começamos com uma simples cena de um `Node2D` contendo um `AnimationPlayer` e um `Sprite2D` que será animado. A animação de agora não é animação como um `AnimatedSprite2D`, mas sim animação das transformações 2D sobre o sprite.
 
 No painel de animação, clique para adicionar uma nova animação e escolha um nome para ela.
 
@@ -11,10 +11,10 @@ No painel de animação, clique para adicionar uma nova animação e escolha um 
 </p>
 
 O painel de animação possui 4 partes principais: 
- - Tracks: Cada track corresponde a algum tipo de animação sobre algum objeto em específico. Todas as tracks ocorrem simultaneamente, podendo ser cada uma sobre objetos distintos.
- - Timeline: Linha do tempo da animação. Ali você verá marcadores indicando quando algum evento de animação vai acontecer.
- - Animation Controls: Principais ferramentas para gerenciar e editar as animações.
- - Timeline Controls: Configurações sobre a visualização do Timeline. Essas configurações não tem efeito nenhum sobre nas animações em si.  
+- **Tracks:** Cada track corresponde a algum tipo de animação sobre algum objeto em específico. Todas as tracks ocorrem simultaneamente, podendo ser cada uma sobre objetos distintos.
+- **Timeline:** Linha do tempo da animação. Ali você verá marcadores indicando quando algum evento de animação vai acontecer.
+- **Animation Controls:** Principais ferramentas para gerenciar e editar as animações.
+- **Timeline Controls:** Configurações sobre a visualização do Timeline. Essas configurações não tem efeito nenhum sobre as animações em si.  
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/85166f4b-d008-4074-83e4-993831ca7800" />
@@ -23,6 +23,8 @@ O painel de animação possui 4 partes principais:
 ## Animando propriedades
 
 Clique em *+ Add Track* e selecione *Property Track*. Uma janela com a árvore da cena vai se abrir. Escolhe o node que quer animar. Depois disso vai se abrir uma outra janela, agora com as propriedades deste node (as dele mesmo e as herdadas). Você pode editar qualquer propriedade que quiser. Isso já evidencia o quão poderosa é esta ferramenta, pois ela não é simplesmente uma ferramenta de animação, mas sim uma ferramenta de controle de estados dos nodes.
+
+> 🟦 **REVISÃO POSTERIOR:** O *+ Add Track* passou a ser apenas o símbolo *+* em versões futuras da Godot. Ainda assim, o botão continua na mesma posição.
 
 <p align="center">
   <img width="150" src="https://github.com/user-attachments/assets/8e2b564b-6c7b-473a-812c-f782eb135bd7" />
@@ -33,20 +35,20 @@ Clique em *+ Add Track* e selecione *Property Track*. Uma janela com a árvore d
 Dê o segundo clique do mouse sobre a linha vertical azul no track (essa linha marca o ponto da animação que o editor está no momento) e selecione a opção *Insert Key*. Logo após isso, vai aparecer uma "bolinha" no timeline, no local onde você clicou. Você acabou de inserir um evento de animação, que é chamado de "keyframe" na Godot. 
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/ae30d732-0bab-43ac-ae9e-3531e7874224" />
-  <img width="325" src="https://github.com/user-attachments/assets/c7ce6f08-fb89-4716-8a54-d02ae3ddb4a5" />
+  <img width="440" src="https://github.com/user-attachments/assets/ae30d732-0bab-43ac-ae9e-3531e7874224" />
+  <img width="360" src="https://github.com/user-attachments/assets/c7ce6f08-fb89-4716-8a54-d02ae3ddb4a5" />
 </p>
 
-Agora clique na bolinha e olhe para o *Inspector*. Estas são as configurações das propriedades do `position` do `Sprite2D` naquele instante marcado. Estamos dizendo à engine que queremos o sprite na origem no instante inicial.
+Agora clique na bolinha e olhe para o *Inspector*. Estas são as configurações das propriedades do `position` do `Sprite2D` naquele instante marcado. Estamos dizendo à engine que queremos o sprite na origem no instante inicial da animação.
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/9097e2e8-9439-4684-915e-85f4403d0405" />
+  <img width="300" src="https://github.com/user-attachments/assets/9097e2e8-9439-4684-915e-85f4403d0405" />
 </p>
 
  Agora repita o procedimento para colocar o sprite na posição $(100, 100)$ no instante $1.0$ (em segundos). Se você fez tudo certo, o editor deve estar como mostrado abaixo. Note que não é necessário inserir a bolinha na posição perfeita, pois você pode editar o instante dela no *Inspector* caso ele fique um pouco deslocada do momento que você queria. Depois disso você já pode dar o play e ver a sua animação acontecer. 
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/09ec1e7e-edbc-4bb5-856d-5b09ba0a3447" />
+  <img width="1100" src="https://github.com/user-attachments/assets/09ec1e7e-edbc-4bb5-856d-5b09ba0a3447" />
 </p>
 
 Esses foi o nosso primeiro passo no mundo de `AnimationPlayer`. A partir disso você já deve ter uma ideia das possibilidades. Aos poucos o nosso arsenal de ferramentas só vai aumentar.
@@ -67,7 +69,7 @@ Esses foi o nosso primeiro passo no mundo de `AnimationPlayer`. A partir disso v
   <img width="700" src="https://github.com/user-attachments/assets/fe52ad55-f310-45d3-b735-62d79d8e6664" />
 </p>
 
-  4. Lista de animações. Um mesmo node de animações pode ter várias animações, assim como o `AnimatedSprite2D`. E assim como o `AnimatedSprite2D`, só é permitido tocar uma animação por vez. A animação *RESET* é especial. Nela você deve colocar a "pose" default do objeto. Esta pose sempre será carregada quando você carregar a cena. Caso você não use isso e deixe a animação no meio caminho ao fechar o editor, na próxima vez que for abrí-lo, o objeto estará na pose da animação. O *RESET* é útil para evitar isso e forçar uma pose inicial ao abrir a cena. Apenas insira as poses para o primeiro frame de track track no *RESET* e esas será a pode default.
+  4. Lista de animações. Um mesmo node de animações pode ter várias animações, assim como o `AnimatedSprite2D`. E assim como o `AnimatedSprite2D`, só é permitido tocar uma animação por vez. A animação *RESET* é especial. Nela você deve colocar a "pose" default do objeto. Esta pose sempre será carregada quando você carregar a cena. Caso você não use isso e deixe a animação no meio caminho ao fechar o editor, na próxima vez que for abrí-lo, o objeto estará na pose da animação. O *RESET* é útil para evitar isso e forçar uma pose inicial ao abrir a cena. Apenas insira as poses para o primeiro frame de track track no *RESET* e essa será a pode default.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/5686799f-d264-4418-9711-7f8c40f5b7cf" />
@@ -88,7 +90,7 @@ Esses foi o nosso primeiro passo no mundo de `AnimationPlayer`. A partir disso v
   9. Tempo total da animação. Por default vem como 1 segundo. A barra cinza no Timeline indica a faixa onde há animação.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/fb3f976a-6c75-402c-abd9-d33291d78c88" />
+  <img width="900" src="https://github.com/user-attachments/assets/fb3f976a-6c75-402c-abd9-d33291d78c88" />
 </p>
 
   10. Opções de loop. Você pode deixar a animação sem loop nenhum (default), de modo que ela é executada uma única vez. Tem a opção de loop, onde ela fica repetindo indefinidamente. Por fim, tem uma outra opção de executar em loop, mas em vez de repetir a animação, ela executa de trás para frente quando acaba a execução normal, e fica repetindo indefinidamente desta maneira. 
@@ -101,7 +103,7 @@ Quando você adiciona uma track, aparecem algumas opções junto a ela. Estas op
   <img width="1100" src="https://github.com/user-attachments/assets/fc67acd1-8909-428d-92dc-fa1d39738bd5" />
 </p>
 
-  1. Método geral que com que a mudança da animação ocorre entre duas keyframes. O método *contínuo* faz com que a mudança seja gradual e ocorra frame a frame. O método *Discrete* faz com que a mudança só ocorra em keyframes. O método *Capture* só vale para o primeiro keyframe. Caso o instante dele seja positivo, então o instante zero é capturado do estado atual do objeto da cena.   
+  1. Método geral que com que a mudança da animação ocorre entre duas keyframes. O método *contínuo* faz com que a mudança seja gradual e ocorra frame a frame. O método *Discrete* faz com que a mudança só ocorra em keyframes. O método *Capture* só vale para o primeiro keyframe. Caso o instante dele seja positivo, então o instante zero é capturado do estado atual do objeto da cena.
 
 <p align="center">
   <img width="120" src="https://github.com/user-attachments/assets/ed0ca223-6e5f-4d71-82b3-30b60c10dfcb" />
@@ -127,9 +129,9 @@ Quando você adiciona uma track, aparecem algumas opções junto a ela. Estas op
   <img width="400" src="https://github.com/user-attachments/assets/852fbc5a-0f2f-4ab3-a554-d2c580b33595" />
 </p>
 
-  1. Tempo de cada frame na animação. Este valor não tem nada a ver com o jogo, é apenas para auxiliar na edição da animação. Se você quiser uma animação com menos frames, isto pode ser útil para análises com o Onion Skinning, mas quando for rodar a cena, o número de frames dela é o default do jogo.
+  1. Tempo de cada frame na animação. Este valor não tem nada a ver com o jogo, é apenas para auxiliar na edição da animação. Você pode ativar o botão de snap <img width="30" alt="image" src="https://github.com/user-attachments/assets/2dd4528e-0956-4b7d-87c2-89236bf22b56" /> para as keyframes. Isso faz com que as keyframes sejam deslocadas em passos discretos na timeline, o que pode ser conveniente muitas vezes. O botão <img width="30" src="https://github.com/user-attachments/assets/ee20e940-ec1f-4ae1-9386-af6e9aed8760" /> afeta a linha vertical azul na timeline, responsável por mostrar a animação quando você clica e arrasta. Esse tempo por frame também pode ser útil para análises com o Onion Skinning. É importante ressaltar que isso é apenas uma conveniência para a edição, não afeta a animação do jogo.
 
-  2. Determina se você quer trabalhar com as unidades de segundos (default) ou FPS. Se for alterar para FPS, o painel inteiro sde adapta para essa unidade.
+  2. Determina se você quer trabalhar com as unidades de segundos (default) ou FPS. Se for alterar para FPS, o painel inteiro se adapta para essa unidade.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/0e517f11-1b0a-4e8b-b667-d328776985e7" />
