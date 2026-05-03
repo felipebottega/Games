@@ -12,7 +12,7 @@ Tudo que temos para falar sobre exportar jogos para a Web pode ser colocado em u
 </p>
 
 3. Jogos exportados para Web também funcionam em celular, mas com performance inferior aos exportados para *Android* ou *iOS* diretamente.
-4. Como observado no [tutorial Audio Server](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), os efeitos de áudio não funcionam na Web se você deixar o *Playback Type* do `AudioStreamPlayer` no default, que é o *Sample* quando exportado para Web. Então ele deve ser alterado para *Stream*. A principal diferença entre estes dois é que o *Sample* carrega o áudio inteiro na memória antes de tocar, enquanto que o *Stream* carrega o áudio em partes, à medida que toca (streaming do arquivo do disco ou da rede).
+4. Como observado no [tutorial Audio Server](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Extras/Audio%20Server#adicionando-efeitos-de-%C3%A1udio-por-c%C3%B3digo), os efeitos de áudio não funcionam na Web se você deixar o *Playback Type* do `AudioStreamPlayer` no default, que é o *Sample*. Ele deve ser alterado para *Stream*. A principal diferença entre estes dois é que o *Sample* carrega o áudio inteiro na memória antes de tocar, enquanto que o *Stream* carrega o áudio em partes, à medida que toca (streaming do arquivo do disco ou da rede).
 
 > Dica: Em jogos Web, use *Sample* para efeitos curtos e *Stream* para música de fundo, para não sobrecarregar o navegador.
 
@@ -20,6 +20,12 @@ Tudo que temos para falar sobre exportar jogos para a Web pode ser colocado em u
 6. Browsers não entram automaticamente em fullscreen. Por conta disso, é melhor configurar para que o jogo não comece em fullscreen e deixe isso como opção. Se o usuário escolher a opção fullscreen dentro do jogo, aí sim vai funcionar.
 7. Browsers só tocam áudios do jogo após o usuário interagir. Por conta disso, deixe um botão para o usuário clicar para começar o jogo. Caso contrário, você corre o risco de ter a sua abertura ou menu rodando totalmente no silêncio.
 8. Fique atento aos *addons* que usa, pois nem todos funcionam em jogos Web (o perigo é que as mensagens de erro podem não ajudar a detectar que o problema é o addon).
-9. Depois de ter exportado seu jogo como HTML5 (com o nome *index.html*), você pode ir na pasta do jogo, abrir o *cmd* e executar o comando `python -m http.server`. Esse comando roda o seu jogo em um servidor local através da porta $8000$. Assim você pode testá-lo pelo endereço *http://127.0.0.1:8000/*.
+9. GDExtension não funciona na web.
+10. Depois de ter exportado seu jogo como HTML5 (com o nome *index.html*), você pode ir na pasta do jogo, abrir o *cmd* e executar o comando `python -m http.server`. Esse comando roda o seu jogo em um servidor local através da porta $8000$. Assim você pode testá-lo pelo endereço *http://127.0.0.1:8000/*.
 
 > PS: Se quiser especificar a porta, use o comando `python -m http.server {porta}`.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Export/Exporting%20for%20Windows">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Background%20loading">Próximo ➡</a>
+</p>
