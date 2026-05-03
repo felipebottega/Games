@@ -8,7 +8,7 @@ Anteriormente, quando clicamos em *+ Add Track* no painel de animação, vimos q
 
 ## Call Method Track
 
-Este, de longe, me parece ser o tipo de track mais interessante de todos. O track do tipo *call method* permite chamar uma função em um momento especificado dentro de uma animação. Por exemplo, você pode chamar `queue_free` para excluir um node no final de uma animação de morte. Clique em *+ Add Track* e selecione *Call Method Track*. Uma janela com a árvore da cena vai se abrir. Escolhe o node que quer animar. Nós começamos criando uma animação de posição para a espada e depois adicionamos a track de *call method*, como mostrado abaixo.
+Este, de longe, me parece ser o tipo de track mais interessante de todos. O track *call method* permite chamar uma função qualquer em um momento especificado dentro de uma animação. Por exemplo, você pode chamar `queue_free` para excluir um node no final de uma animação de morte. Clique em *+ Add Track* e selecione *Call Method Track*. Uma janela com a árvore da cena vai se abrir. Escolhe o node que quer animar. Nós começamos criando uma animação de posição para a espada e depois adicionamos a track de *call method*, como mostrado abaixo.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/80ee2381-7ab8-4770-8b37-155344d54e6a" />
@@ -46,24 +46,24 @@ Depois que a função foi criada, basta repetir os passos anteriores, mas dessa 
 
 ## Audio Playback Track
 
-Para inserir sons na sua animação, é necessário que sua cena tenha um node `AudioStreamPlayer`, `AudioStreamPlayer2D`, ou `AudioStreamPlayer3D`. Vamos considerar o `AudioStreamPlayer` nesse exemplo. 
+Para inserir sons na animação, é necessário que a cena tenha um node `AudioStreamPlayer` ou `AudioStreamPlayer2D` ou `AudioStreamPlayer3D`. Vamos considerar o `AudioStreamPlayer` nesse exemplo. 
 
 <p align="center">
-  <img width="150" src="https://github.com/user-attachments/assets/2ca92729-8290-4b2b-8497-82596b8c978d" />
-  <img width="300" src="https://github.com/user-attachments/assets/da0669a6-d865-4b97-b10a-5cd0f9e5031f" />
+  <img width="180" src="https://github.com/user-attachments/assets/2ca92729-8290-4b2b-8497-82596b8c978d" />
+  <img width="330" src="https://github.com/user-attachments/assets/da0669a6-d865-4b97-b10a-5cd0f9e5031f" />
 </p>
 
 Depois disso comece a inserir as keyframes de audio nos instantes que você quiser. Para cada keyframe, no *Inspector* você pode arrastar o arquivo de áudio normalmente como faria no `AudioStreamPlayer`. Note que o arquivo pode ser diferente em cada keyframe.
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/f4830fb0-3724-4167-afae-273239ed5bbe" />
-  <img width="250" src="https://github.com/user-attachments/assets/732a65f8-5ed7-4312-a051-2b5ade60688d" />
+  <img width="680" src="https://github.com/user-attachments/assets/f4830fb0-3724-4167-afae-273239ed5bbe" />
+  <img width="280" src="https://github.com/user-attachments/assets/732a65f8-5ed7-4312-a051-2b5ade60688d" />
 </p>
 
 A opção de usar *Blend* ou não só importa quando estamos fazendo mix de animações distintas. Isso nós iremos ver mais para frente no tópico de `AnimationTree`.
 
 <p align="center">
-  <img width="120" src="https://github.com/user-attachments/assets/3e9194c4-b743-4f4c-8676-aea8ffc8a550" />
+  <img width="140" src="https://github.com/user-attachments/assets/3e9194c4-b743-4f4c-8676-aea8ffc8a550" />
 </p>
 
 ## Animation Playback Track
@@ -77,11 +77,16 @@ O *Animation Playback Track* permite sequenciar as animações de outros nodes d
 Dê o clique direito na timeline para inserir uma keyframe no instante onde você que comece a outra animação. Depois disso clique no keyframe e vá para o *Inspector* para selecionar qual animação você quer tocar. Nesse exemplo nós chamamos a outra animação de "normal", e é ela que selecionaremos.
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/6c6d8f2e-1540-4b42-ac54-02fc4a56607e" />
+  <img width="280" src="https://github.com/user-attachments/assets/6c6d8f2e-1540-4b42-ac54-02fc4a56607e" />
 </p>
 
 ⚠️ **Atenção:** Caso você queira múltiplas animações do mesmo objeto rolando ao mesmo tempo, cada `AnimationPlayer` precisa referenciar objetos distintos, ainda que um seja uma cópia do outro. Caso contrário, ambas as animações vão entrar em conflito ao tentar manipular o mesmo objeto. Neste exemplo em particular eu fiz duas animações da espada, e tive que criar dois `Sprite2D` idênticos para isso.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/a10ef6c8-4af0-4d5d-9766-96c34c10082f" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Using%20AnimationTree">Próximo ➡</a>
 </p>
