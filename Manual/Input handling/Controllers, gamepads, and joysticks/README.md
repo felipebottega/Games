@@ -1,10 +1,10 @@
 # Controllers, gamepads, and joysticks
 
-Godot oferece suporte a centenas de modelos de controles prontos para uso. Os controles são compatíveis com Windows, macOS, Linux, Android, iOS e Web. Note que dispositivos mais especializados, como volantes, pedais de leme e HOTAS, são menos testados e podem não funcionar sempre como esperado.
+Godot oferece suporte a centenas de modelos de controles prontos para uso. Os controles são compatíveis com Windows, macOS, Linux, Android, iOS e Web. Note que dispositivos mais especializados, como volantes, pedais de leme e [HOTAS](https://en.wikipedia.org/wiki/HOTAS) são menos testados e podem não funcionar sempre como esperado.
 
 ## Supporting universal input
 
-Por causa do sistema de *ação de input* da Godot, não é necessário ter códigos separados para cada tipo de input. Você pode simplesmente criar uma ação de input e associa-la a diversos inputs diferentes. Isso só não vale para mouse. O tratamento de inputs de mouse deve ser separado do restante.
+Por causa do sistema de [input action](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent#input-actions) da Godot, não é necessário ter códigos separados para cada tipo de input. Você pode simplesmente criar uma *input action* e associá-la a diversos inputs diferentes. Isso só não vale para mouse. O tratamento de inputs de mouse deve ser separado do restante.
 
 Abaixo, segue um pequeno guia de quando usar cada chamada de input. Vimos um pouco sobre isso [aqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Using%20InputEvent#input-actions), mas vale a pena dar uma repassada neste tópico, acrescentando algumas informações novas.
 
@@ -16,7 +16,7 @@ Abaixo, segue um pequeno guia de quando usar cada chamada de input. Vimos um pou
 
 - **Input.is_action_pressed:** Para inputs digitais/booleanas não-analógicos (apenas valores "pressionado" ou "não pressionado"), como botões de controle, botões de mouse ou teclas de teclado. As intensidades são apenas $0$ ou $1$.
 
-> PS: No caso do `Input.is_action_pressed`, já vimos que ele percebe quando o input continua sendo pressionado em um `InputEvent`, mas isso não vale para joysticks/gamepads. Nesses casos é mais aconselhável usar uma ação de input em um `_process`.
+> PS: No caso do `Input.is_action_pressed`, já vimos que ele percebe quando o input de teclado continua sendo pressionado em um `InputEvent`, mas isso não vale para joysticks/gamepads. Nesses casos é mais aconselhável usar uma ação de input em um `_process`.
 
 ## Dead zone
 
@@ -32,7 +32,7 @@ Por default, todas as *ações de input* da Godot possuem deadzone igual a $0.5$
 
 ## Jogo teste de aceleração
 
-Para testar o conhecimento adquirido aqui, fiz um pequeno "jogo", que é basicamente um sprite que pode se mover pela tela. A ideia é movê-lo com um controle analógico que possua um botão analógico para controlar a aceleração. Para isso, vá em *Project → Project Settings → Input Map* e crie uma ação de input nova. Para testar este jogo você deve baixar o projeto e rodar na engine. A versão web não respondeu aos inputs.
+Para testar o conhecimento adquirido aqui, fiz um "jogo", que é basicamente um sprite que pode se mover pela tela. A ideia é movê-lo com um controle analógico que possua um botão analógico para controlar a aceleração. Para isso, vá em *Project → Project Settings → Input Map* e crie uma ação de input nova. Para testar este jogo você deve baixar o projeto e rodar na engine. A versão web não respondeu aos inputs.
 
 <p align="center">
   <img width="830" src="https://github.com/user-attachments/assets/2f057ceb-e1a1-4e50-82c8-1820d7e937aa" />
@@ -41,5 +41,10 @@ Para testar o conhecimento adquirido aqui, fiz um pequeno "jogo", que é basicam
 O sprite possui uma velocidade máxima de $500$ pixels/segundo. A aceleração se dá pelo botão novo que configuramos. Note que o sprite fica imóvel mesmo que você pressione os direcionais. Para mover é necessário usar o botão de aceleração, e ele será sensível à intensidade aplicada. 
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/a08a9c31-04d5-4063-ac34-41562ecb8408" />
+  <img width="500" src="https://github.com/user-attachments/assets/a08a9c31-04d5-4063-ac34-41562ecb8408" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Handling%20quit%20requests">Próximo ➡</a>
 </p>
