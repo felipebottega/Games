@@ -1,6 +1,6 @@
 # Math
 
-Acredito que a parte de matemática de qualquer engine tenha muito mais a ver com a experiência com matemática e menos com tutoriais. Então não acho fazer exemplos de aplicações com matemática vão agregar muito. No fim do dia, o que vai contar são as experiências que o dev terá ao longo de sua jornada. Vou me limitar a listar algumas funcionalidades aqui.
+Acredito que o entendimento da parte de matemática de qualquer engine tenha muito mais a ver com a experiência em matemática do que qualquer outra coisa. Então não acho fazer exemplos de aplicações com matemática vão agregar muito. No fim do dia, o que vai contar são as experiências que o dev terá ao longo de sua jornada. Vou me limitar a listar algumas funcionalidades aqui.
 
 ## Vetores
 
@@ -12,7 +12,7 @@ Um exemplo simples, porém importante, é o de mover um ponto em direção a out
   <img width="300" src="https://github.com/user-attachments/assets/e09615b2-b4aa-4027-9e47-a455f1b918ee" />
 </p>
 
-Dado um vetor $A$ em Godot, o método `A.normalized()` retorna a versão normalizada deste vetor, isto é, o vetor com a mesma direção e sentido mas magnitude igual a $1$. O método `A.length()` retorna a o comprimento (norma Euclideana) do vetor. Dados dois vetores $A$ e $B$, o método `A.dot(B)` retorna o produto escalar entre eles. Dados dois vetores $A$ e $B$ de 3 dimensões, o método `A.cross(B)` retorna o produto vetorial entre eles.
+Dado um vetor $A$ em Godot, o método `A.normalized()` retorna a versão normalizada deste vetor, isto é, o vetor com a mesma direção e sentido mas comprimento (norma Euclideana) igual a $1$. O método `A.length()` retorna a o comprimento (norma Euclideana) do vetor. Dados dois vetores $A$ e $B$, o método `A.dot(B)` retorna o produto escalar entre eles. Dados dois vetores $A$ e $B$ de 3 dimensões, o método `A.cross(B)` retorna o produto vetorial entre eles.
 
 A Godot apresenta alguns vetores especiais nativos:
 
@@ -26,13 +26,13 @@ A Godot apresenta alguns vetores especiais nativos:
 
 ## Funções matemáticas
 
-A Godot já tem implementadas algumas funções matemáticas básicas, de escopo global. Algumas delas são `cos, sin, tan, min, max, log, exp, floor, ceil, sqrt, abs`. Para ver a listagem geral, acesse [este link](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html). O uso destas funções é bem direto, então não vou me aprofundar nisto.
+A Godot já tem implementadas algumas funções matemáticas básicas, de escopo global. Algumas delas são `cos, sin, tan, min, max, log, exp, floor, ceil, sqrt, abs`. Para ver a listagem geral, acesse [este link](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html). O uso destas funções é bem direto, então não vou me aprofundar nisso.
 
 ## Interpolação
 
 Dados dois vetores $A$ e $B$, e um escalar $t \in [0, 1]$ o método `A.lerp(B, t)` retorna a interpolação linear $(1-t) \cdot A + t \cdot B$. Nós já vimos [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Animation/Introduction%20to%20the%20animation%20features) que é possível movimentar objetos no jogo manipulando parâmetros com animação. Em alguns momentos pode ser mais prático fazer isto com código. 
 
-O exemplo abaixo mostra uma aplicação da interpolação linear entre vetores. Note que podemos manipular o parâmetro $t$ antes de entrar na função para que a interpolação fique mais suave (e menos linear).
+O exemplo abaixo mostra uma aplicação da interpolação linear entre vetores. Note que podemos manipular o parâmetro $t$ antes de entrar na função de interpolação.
 
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/e0252442-ed5a-4b4e-a163-80190007a25e" />
@@ -48,3 +48,8 @@ A Godot oferece muitas funções para gerar números aleatórios. Vamos listar a
 - **randfn(mean, deviation):** Retorna um float aleatório pela distribuição normal com média *mean* e desvio padrão *deviation*.
 - **randf_range(a, b):** Retorna um float aleatório pela distribuição uniforme entre *a* e *b*.
 - **pick_random():** Dado um array *arr*, o método `arr.pick_random()` retorna um elemento aleatório deste array.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Handling%20quit%20requests">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview#navigationregion2d">Próximo ➡</a>
+</p>
