@@ -1,10 +1,10 @@
 # WebSocket
 
-É possível utilizar a engine Godot como frontend e um script rodando como backend. Isso é interessante quando se tem computações pesadas para processar e você não quer fazer isso com GDScript. Neste tutorial, vou mostrar como utilizar um script em Python para atuar como servidor backend de um jogo em Godot.
+É possível utilizar a engine como frontend e um script externo rodando como backend. Isso é interessante quando se tem computações pesadas para processar e você não quer fazer isso com GDScript. Neste tutorial, vou mostrar como utilizar um script em Python para atuar como servidor backend de um jogo em Godot.
 
 ## Preparando o servidor backend em Python
 
-Abaixo, temos um script minimal para rodar um servidor utilizando a biblioteca *fastapi* de Python. Ele é executado localmente na porta $8000$ e fica aguardando algum processo externo se comunicar com esta porta através de um tipo de POST. Quando esta comunicação ocorre, o servidor converte a mensagem recebida para um json. Neste exemplo, o json deve contar as chaves "npc_id" e "inputs". A função `process_npc` processa os inputs de cada NPC, resultando em uma lista de dicionários, um por NPC. Então o método `websocket.send_text()` envia os resultados de volta para a engine.
+Abaixo, temos um script minimal para rodar um servidor utilizando a biblioteca *fastapi* de Python. Ele é executado localmente na porta $8000$ e fica aguardando algum processo externo se comunicar com esta porta através de um tipo de POST. Quando esta comunicação ocorre, o servidor converte a mensagem recebida para um json. Neste exemplo, o json deve conter as chaves "npc_id" e "inputs". A função `process_npc` processa os inputs de cada NPC, resultando em uma lista de dicionários, um por NPC. Então o método `websocket.send_text()` envia os resultados de volta para a engine.
 
 ```
 import json
@@ -14,11 +14,11 @@ from fastapi import FastAPI, WebSocket
 
 app = FastAPI()
 
-# Endpoint WebSocket: a Godot se conecta aqui. Execute o script com python server.py.
+# Endpoint WebSocket: a Godot se conecta aqui. Execute o script com 'python server.py'.
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()  # Aceita a conexão do cliente
-    print("✅ Conexão WebSocket estabelecida")
+    print("Conexão WebSocket estabelecida")
 
     try:
         while True:
@@ -37,7 +37,7 @@ async def websocket_endpoint(websocket: WebSocket):
             await websocket.send_text(response)  # Envia a resposta ao cliente
 
     except Exception as e:
-        print("⚠️ Conexão encerrada:", e)  # Exibe erro caso ocorra
+        print("Conexão encerrada:", e)  # Exibe erro caso ocorra
         await websocket.close()  # Fecha a conexão
 
 # Função simulando a lógica de decisão de um NPC
@@ -61,13 +61,13 @@ if __name__ == "__main__":
 Iremos criar a conexão numa cena do tipo `Node`. A primeira coisa necessária é estabelecer a conexão, faremos isso na função `_ready`. Importante ressaltar que o script deve estar executando antes do jogo ser executado.
 
 <p align="center">
-    <img width="650" src="https://github.com/user-attachments/assets/7a9ac1c8-35fa-4043-a8ef-092cce5970e4" />
+    <img width="680" src="https://github.com/user-attachments/assets/7a9ac1c8-35fa-4043-a8ef-092cce5970e4" />
 </p>
 
 Depois disso quem toma conta de tudo é o `_process`, todas as chamadas seguintes são feitas ali.
 
 <p align="center">
-    <img width="520" src="https://github.com/user-attachments/assets/827aecaa-8d18-4270-a659-11430feddabf" />
+    <img width="560" src="https://github.com/user-attachments/assets/827aecaa-8d18-4270-a659-11430feddabf" />
 </p>
 
 A função `handle_received_data` é responsável por receber e tratar a resposta do servidor. Esta resposta vem como uma string que precisa ser convertida em dicionário. A função `send_dummy_inputs` envia os inputs para o servidor. Note que eles são aleatórios pois este é um exemplo dummy, nada de fato acontece. Por fim, a função `handle_disconnection` trata a desconexão com o servidor. Ela é chamada quando o jogo é encerrado. 
@@ -106,7 +106,7 @@ Usar Nginx para terminar TLS na porta `443` e repassar o WebSocket para o FastAP
 Se usar domínio, o DNS deve apontar para o IP público da EC2 antes de emitir o certificado.
 
 8. **Latência e quedas:**  
-Em remoto há atraso e desconexões. O cliente precisa tratar `STATE_CLOSED` e reconectar.
+Em servidor remoto há atraso e desconexões. O cliente precisa tratar `STATE_CLOSED` e reconectar.
 
 9. **Timeout e fluxo:**  
 Definir o que fazer se o servidor demorar ou não responder (retry, descartar, fallback).
@@ -114,6 +114,9 @@ Definir o que fazer se o servidor demorar ou não responder (retry, descartar, f
 10. **Ambiente da EC2:**  
 Garantir que Python, dependências e o processo (systemd, screen, docker, etc.) mantenham o servidor rodando.
 
-> PS: Em um jogo distribuído (ex: Steam), o usuário final **não deve nunca** lidar com certificados TLS. Toda a configuração de TLS (`wss://`) é responsabilidade exclusiva do servidor (domínio válido + certificado de CA confiável, como Let's Encrypt). Se o cliente Godot exigir configuração manual de certificados, isso indica ambiente de desenvolvimento.
+> PS: Em um jogo distribuído (ex: Steam), o usuário final **nunca deve** lidar com certificados TLS. Toda a configuração de TLS (`wss://`) é responsabilidade exclusiva do servidor (domínio válido + certificado de CA confiável, como *Let's Encrypt*). Se o cliente Godot exigir configuração manual de certificados, isso indica ambiente de desenvolvimento.
 
-
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Optimizing%20Navigation%20Performance">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips">Próximo ➡</a>
+</p>
