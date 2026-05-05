@@ -12,6 +12,11 @@ Nodes possuem métodos como `get_rid()` para expor o RID do objeto. Por exemplo,
 
 ## call_deferred()
 
-`call_deferred()` é um método da Godot usado para chamar uma função mais tarde, depois que o frame atual terminar de processar. O `NavigationServer` (e os outros nodes de navegação) processa os dados depois do physics frame atual, não imediatamente. Se você tentar modificar regiões, mapas ou agentes durante certas fases, podem ocorrer inconsistências. Por isso, ao mudar algo que afeta o `NavigationServer`, é comum fazer `func.call_deferred()`, em que `func` é uma função que você definiu que faz atualizações na navegação. Isso é especialmente importante ao se chamar alguma função de navegação no `_ready`, pois nenhuma chamada de navegação funciona durante o `_ready`.
+`call_deferred()` é um método da Godot usado para chamar uma função mais tarde, depois que o frame atual terminar de processar. O `NavigationServer` (e os outros nodes de navegação) processa os dados depois do physics frame atual, não imediatamente. Se você tentar modificar regiões, mapas ou agentes durante certas fases, podem ocorrer inconsistências. Por isso, ao mudar algo que afeta o `NavigationServer`, é comum fazer `foo.call_deferred()`, em que `foo` é uma função que você definiu que faz atualizações na navegação. Isso é especialmente importante ao se chamar alguma função de navegação no `_ready`, pois nenhuma chamada de navegação funciona nesta etapa.
 
 > PS: Por conta dessa limitação, é recomendado trabalhar com navegação dentro do `_physics_process`.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/2D%20navigation%20overview">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationMaps">Próximo ➡</a>
+</p>
