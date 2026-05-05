@@ -15,7 +15,7 @@ Habilitar a pseudolocalização é fácil, basta ir em *Project → Project Sett
 Agora vamos dar uma olhada nas opções de pseudolocalização.
 
 - **Replace With Accents:** Substitui todos os caracteres na string por suas variantes acentuadas. "The quick brown fox jumped over the lazy dog" será convertido para "Ŧh̀é q́üíćḱ ḅŕôŵή f́ôx́ ǰüm̀ṕéd́ ôṽéŕ ŧh̀é łáźý d́ôǵ" quando esta configuração estiver ativada.
-- **Double Vowels:** Duplica todas as vogais na string. É uma boa aproximação para simular a expansão do texto durante a localização. Isso pode ser usado para verificar se o texto ultrapassa os limites do contêiner.
+- **Double Vowels:** Duplica todas as vogais na string. É uma boa aproximação para simular a expansão do texto durante a localização. Isso pode ser usado para verificar se o texto ultrapassa os limites do container.
 - **Fake Bidi:** Texto bidirecional falso (simula texto da direita para a esquerda). Isso é útil para simular sistemas de escrita da direita para a esquerda e verificar possíveis problemas de formatação que ocorreriam em idiomas que usam escrita da direita para a esquerda.
 - **Override:** Substitui todos os caracteres da string por um asterisco (*). Isso é útil para encontrar rapidamente textos que não estão sendo localizados (no sentido de atribuir localidade ao texto).
 - **Expansion Ratio:** Pode ser usado em casos onde dobrar as vogais não é uma aproximação suficiente. Essa configuração preenche a string com underscore (_) e a expande pela proporção especificada.

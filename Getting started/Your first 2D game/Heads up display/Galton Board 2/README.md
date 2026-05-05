@@ -117,7 +117,7 @@ A ideia do jogo é que as bolas caiam automaticamente do céu e de maneira rando
 
 ## Cena do HUD
 
-"HUD" significa "heads-up display", uma exibição informativa que aparece como uma sobreposição na parte superior da visualização do jogo. É comum usar o node `CanvasLayer` para elementos de UI ("user interface"), como botões, menus, barras de vida, painéis, sliders, HUD, entre outros. Vamos criar uma cena chamada "HUD", do tipo `CanvasLayer`. 
+"HUD" significa "heads-up display", uma exibição informativa que aparece como uma sobreposição na parte superior da visualização do jogo. É comum usar o node `CanvasLayer` para elementos de UI ("User Interface"), como botões, menus, barras de vida, painéis, sliders, HUD, entre outros. Vamos criar uma cena chamada "HUD", do tipo `CanvasLayer`. 
 
 Assim como no exemplo do tutorial, essa cena terá o propósito duplo de servir como heads-up display e menu inicial. Nosso HUD terá 5 elementos. Vamos descrever um por vez abaixo.
 
