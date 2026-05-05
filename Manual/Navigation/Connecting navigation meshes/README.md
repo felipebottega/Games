@@ -8,7 +8,7 @@ Diferentes malhas de navegação são mescladas automaticamente pelo servidor de
 
 ## Conexão de duas malhas de navegação
 
-Duas malhas de navegação são consideradas "conectadas" pelo servidor de navegação quando suas arestas são quase paralelas e estão suficiente próximas entre si. A distância de conexão é definida pela propriedade *edge_connection_margin* para cada mapa de navegação. Esta propriedade é encontrada em *Project → Project Settings → General → Navigation → 2D → Default Edge Connection Margin*. Também é necessário que a propriedade *Use Edge Connections* esteja habilitada no *Inspector*.
+Duas malhas de navegação são consideradas "conectadas" pelo servidor de navegação quando suas arestas são quase paralelas e estão suficientemente próximas entre si. A distância de conexão é definida pela propriedade *edge_connection_margin* para cada mapa de navegação. Esta propriedade é encontrada em *Project → Project Settings → General → Navigation → 2D → Default Edge Connection Margin*. Também é necessário que a propriedade *Use Edge Connections* esteja habilitada no *Inspector*.
 
 <p align="center">
   <img width="750" src="https://github.com/user-attachments/assets/41021faa-bc86-4fb9-87f8-0c6216be8666" />
@@ -22,3 +22,8 @@ Caso a opção de debug *Visible Navigation* esteja ativada, a conexão é indic
 </p>
 
 > PS: Em muitos casos, as arestas da malha de navegação não podem ser conectadas corretamente quando se sobrepõem parcialmente. É melhor evitar qualquer sobreposição de malhas de navegação para ter um comportamento consistente. 
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Navigation%20debug%20tools">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Optimizing%20Navigation%20Performance">Próximo ➡</a>
+</p>
