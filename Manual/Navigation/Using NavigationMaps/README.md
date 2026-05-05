@@ -4,6 +4,10 @@ Um `NavigationMap` é um mundo de navegação abstrato no `NavigationServer` (2D
 
 Diferentes `NavigationMap` são completamente isolados uns dos outros, mas as regiões de navegação e os *agentes de evasão* (veremos sobre isso mais adiante) podem alternar entre eles. Ressaltamos que eles só podem fazer parte de um `NavigationMap`. Então ao trocar de mapa, eles deixam de fazer parte do antigo mapa.
 
+<p align="center">
+  <img width="700" src="https://github.com/user-attachments/assets/178208a2-48d5-4c6e-be80-af905d40b35e" />
+</p>
+
 ## Default navigation maps
 
 Por default, já existe um `NavigationMap` onde estão as regiões e agentes criados. Você pode obter o RID deste mapa default com o comando `get_world_2d().get_navigation_map()`. Caso queira criar outro `NavigationMap`, utilize o comando `var new_navigation_map: RID = NavigationServer2D.map_create()` para criar o novo mapa e depois `NavigationServer2D.map_set_active(new_navigation_map, true)` para ativar este mapa. 
