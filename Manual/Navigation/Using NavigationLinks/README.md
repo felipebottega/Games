@@ -16,7 +16,7 @@ O agente foi programado para ir atrás do target. Com o link desativado, ele vai
 
 ## Configurando o NavigationLink
 
-Para criar um `NavigationLink2D` funcional, primeiro coloque este node da cena e posicione o seu ponto inicial e final nas regiões. É importante que a propriedade *Enabled* esteja ativada. 
+Para criar um `NavigationLink2D` funcional, primeiro coloque este node na cena e posicione o seu ponto inicial e final nas regiões. É importante que a propriedade *Enabled* esteja ativada. 
 
 <p align="center">
   <img width="200" src="https://github.com/user-attachments/assets/86d4eae0-a714-40e6-856c-03b20a1bd0ff" />
@@ -37,7 +37,12 @@ Primeiramente, é necessário que o servidor saiba que o ponto inicial do link f
 O trecho no final da função abaixo é a função normal do agente (já a vimos anteriormente). Quando a flag de travessia está ativada, implementamos um movimento normal de `CharacterBody2D` indo até o ponto final do link. Ou seja, o agente vai se mover em linha reta até o ponto final.
 
 <p align="center">
-  <img width="550" src="https://github.com/user-attachments/assets/6b055f36-79cc-416a-b69e-586a27b7f229" />
+  <img width="580" src="https://github.com/user-attachments/assets/6b055f36-79cc-416a-b69e-586a27b7f229" />
 </p>
 
 ⚠️ **Atenção:** É preciso ter uma certa atenção com a propriedade *Path Desired Distance*. Para relembrar, esta propriedade define a distância (em pixels) para a engine considerar que o agente já atingiu o próximo ponto da sequência. Caso ele esteja se movendo muito rápido e esta propriedade tenha um valor muito baixo, o agente pode ultrapassar o ponto inicial do link. Se isso acontecer, o agente pode ficar oscilando entre este ponto e o anterior, sem conseguir avançar e sem conseguir ativar o sinal. Assim, ele ficará preso. 
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationObstacles">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLayers">Próximo ➡</a>
+</p>
