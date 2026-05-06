@@ -7,13 +7,13 @@ Já fizemos diversas aplicações de física em tutoriais anteriores, mas agora 
 Tanto o `StaticBody2D` quanto o `RigidBody2D` possuem a capacidade de terem suas propriedades físicas configuradas através do *Physics material*, que fica no *Inspector*. 
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/a53e9a17-fc05-4460-8405-0660768d271f" />
+  <img width="380" src="https://github.com/user-attachments/assets/a53e9a17-fc05-4460-8405-0660768d271f" />
 </p>
 
   - **Friction:** Como o nome indica, esse parâmetro define o nível de fricção de um corpo.
-  - **Rough:** Quando há colisão entre dois objetos, a fricção deve ser levada em conta. Por default, o engine sempre escolhe a menor fricção para aplicar entre os objetos. Caso apenas um deles esteja com a *rough* habilitada, a fricção deste objeto será utilizada na colisão. Caso ambas estejam com a *rough* habilitada, a maior fricção entre eles será utilizada.
-  - **Bounce:** Nível do quanto um objeto pode quicar ao colidor com outros objetos.
-  - **Absorbent:** Por default essa opção vem desabilitada, o que significa que o *bounce* dele é adicionado ao objeto que está colidindo. Quando a opção está desabilitada, ele passa a subtrair, diminuindo a ação de quicar.
+  - **Rough:** Quando há colisão entre dois objetos, a fricção deve ser levada em conta. Por default, a engine sempre escolhe a menor fricção para aplicar entre os objetos quando há colisão. Caso apenas um deles esteja com a *rough* habilitada, a fricção deste objeto será utilizada na colisão. Caso ambas estejam com a *rough* habilitada, a maior fricção entre eles será utilizada.
+  - **Bounce:** Nível do quanto um objeto pode quicar ao colidir com outros objetos.
+  - **Absorbent:** Por default essa opção vem desabilitada, o que significa que o *bounce* dele é adicionado ao objeto que está colidindo. Quando a opção está habilitada, ele passa a subtrair, diminuindo a ação de quicar.
 
 Os nodes `Area2D` e `CharacterBody2D` não possuem *Physics material* por serem "menos físicos" que os dois nodes mencionados acima. O `Area2D` serve apenas para detectar colisão, mas não reage fisicamente a essas colisões (você pode interpretá-lo como um sensor simplesmente). O `CharacterBody2D` já responde mais a física, mas não tanto assim, pois ele também deve responder aos inputs do jogador, então ele é mais meio termo.
 
@@ -33,9 +33,9 @@ Quando quiser alterar o tamanho ou formato de um shape de colisão, nunca faça 
 
 ## Physics process
 
-A engine física da Godot roda a uma taxa constante de 60 iterações por segundo (60 Hz). Isso é diferente de 60 FPS, pois não há nenhum frame a ser renderizado, apenas cálculos de física ocorrendo no servidor/backend. A Godot possui dois tipos de processamento, o de física que já mencionamos, e o processamento "normal" (em inglês é chamado de *idle processing*). Este segundo é o que de fato é executado em cada frame, e não possui taxa constante. Tudo que depende de FPS cai nesse tipo de processamento e pode ter variação de velocidade. Como não se espera que processos físicos variem de velocidade por conta de mais ou menos FPS, ele possuem essa taxa constante.
+A engine física da Godot roda a uma taxa constante de $60$ iterações por segundo ($60$ Hz). Isso é diferente de $60$ FPS, pois não há nenhum frame a ser renderizado, apenas cálculos de física ocorrendo no servidor/backend. A Godot possui dois tipos de processamento, o de física que já mencionamos, e o processamento "normal" (em inglês é chamado de *idle processing*). Este segundo é o que de fato é executado a cada frame, e não possui taxa constante. Tudo que depende de FPS cai nesse tipo de processamento e pode ter taxa de atualização variável. Como a taxa de atualização de processos físicos não podem variar por conta de mais ou menos FPS, eles possuem essa taxa constante de $60$ Hz.
 
-> PS: Vamos esclarecer porque a física não pode depender de FPS. Imagine que a gravidade fosse executada no processamento normal e dependesse de FPS. Em um computador fraco, o personagem iria cair em câmera lenta (FPS baixo), enquanto que num computador potente ele poderia cair absurdamente rápido (FPS alto). Não queremos esse tipo de comportamento. Na Godot, a gravidade atua num processamento de taxa constante. Por conta disso, o personagem do exemplo pode "teleportar" de um ponto a outro se estiver rodando num computador fraco. Esse "teleporte" serve para compensar a lentidão da máquina mas mantendo o personagem caindo de acordo com tempo "real" que deveria cair de acordo com a física. Em outras palavras, se é esperado que ele leve $t$ segundos para cair no chão, esse é o tempo que ele vai levar, não importa a máquina nem o FPS.
+> PS: Vamos esclarecer porque a física não pode depender de FPS, caso isso não tenha ficado claro ainda. Imagine que a gravidade fosse executada no processamento normal e dependesse de FPS. Em um computador fraco, o personagem iria cair em câmera lenta (FPS baixo), enquanto que num computador potente ele poderia cair absurdamente rápido (FPS alto). Não queremos esse tipo de comportamento. Na Godot, a gravidade atua num processamento de taxa constante. Por conta disso, o personagem do exemplo pode "teleportar" de um ponto a outro se estiver rodando num computador fraco. Esse "teleporte" serve para compensar a lentidão da máquina mas mantendo o personagem caindo de acordo com tempo "real" que deveria cair de acordo com a física. Em outras palavras, se é esperado que ele leve $t$ segundos para cair no chão, esse é o tempo que ele vai levar, não importa a máquina nem o FPS.
 
 Use o `_physics_process` para qualquer processo do jogo que você precise que seja executado de maneira mais controlada e sem depender de FPS. Caso contrário, use o `_process`. Essas duas funções nativas da Godot recebem o parâmetro `delta`. Este valor equivale a quanto tempo se passou desde a última iteração. No caso do `_process` este será o tempo que levou entre o último frame e o atual. No caso do `_physics_process`esse valor é constante, sendo igual a $\frac{1}{60} = 0.0166 \ldots$.
 
@@ -55,8 +55,8 @@ Pense nas layers como sendo as camadas em que o objeto está presente e masks co
 É possível editar os nomes das layers/masks indo em *Project → Project Settings → General → Layers Names → 2D Physics*. Isso altera os nomes das layers e masks ao mesmo tempo.
 
 <p align="center">
-  <img width="600" src="https://github.com/user-attachments/assets/93020d1f-37cd-478f-95e2-724f5a1d2aaf" />
-  <img width="350" src="https://github.com/user-attachments/assets/9a926d19-5b01-4701-8d82-111c768a3b10" />
+  <img width="630" src="https://github.com/user-attachments/assets/93020d1f-37cd-478f-95e2-724f5a1d2aaf" />
+  <img width="370" src="https://github.com/user-attachments/assets/9a926d19-5b01-4701-8d82-111c768a3b10" />
 </p>
 
 Neste [tutorial de navegação](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationPathQueryObjects#par%C3%A2metros-para-o-caminho), falamos um pouco sobre a codificação para referenciar as layers e masks (propriedade *navigation_layers*). Isso é útil quando se quer manipular estes valores por código.
@@ -66,19 +66,19 @@ Neste [tutorial de navegação](https://github.com/felipebottega/Games/tree/gh-p
 Todos os principais objetos físicos herdam de `CollisionObject2D`, então é relevante saber um pouco dessa classe. 
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/b15bbd05-84c8-4815-a2be-de161a086111" />
+  <img width="1100" src="https://github.com/user-attachments/assets/b15bbd05-84c8-4815-a2be-de161a086111" />
 </p>
 
 `CollisionObject2D` é a classe base abstrata para objetos físicos 2D. Uma instância de `CollisionObject2D` pode conter qualquer número de objetos `Shape2D` para colisões. Também colocamos abaixo a estrutura desta última classe para referência.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/c4643a71-4cba-4453-a01b-8e4888113e4f" />
+  <img width="450" src="https://github.com/user-attachments/assets/c4643a71-4cba-4453-a01b-8e4888113e4f" />
 </p>
 
 No próprio *Inspector*, podemos ver que as layers e masks de colisão são atributos do `CollisionObject2D`. Agora vamos ver sobre as outras propriedades que estão ali.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/90ef9f85-d3a4-4c86-9cfc-1abcd0730521" />
+  <img width="360" src="https://github.com/user-attachments/assets/90ef9f85-d3a4-4c86-9cfc-1abcd0730521" />
 </p>
 
   - **Disable Mode:** Todos os objetos que herdam da classe `Node`, possuem o atributo `process_mode`, que controla se aquele node deve ser pausado ou não (apenas o node, o não o jogo). A propriedade *Disable Mode* determina como a física do node deve reagir no caso de uma pausa. Há três possibilidades:
@@ -89,5 +89,10 @@ No próprio *Inspector*, podemos ver que as layers e masks de colisão são atri
   - **Input/Pickable:** Faz o objeto físico detectar eventos de mouse (cliques, passar o ponteiro pela área de colisão, etc.). Isso apenas ativa a detecção. Se quiser que algo aconteça, é necessário fazer um script para isso. Na figura abaixo temos um exemplo onde a propriedade foi ativada e o node correspondente tem um trecho no script que faz o objeto alterar a cor quando o usuário clica no objeto.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/064b735f-db55-492e-86c4-f8dac5eaaee6" />
+  <img width="950" src="https://github.com/user-attachments/assets/064b735f-db55-492e-86c4-f8dac5eaaee6" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Thread-safe%20APIs">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20engines">Próximo ➡</a>
 </p>
