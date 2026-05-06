@@ -1,6 +1,6 @@
 # Thread-safe APIs
 
-Godot tem suporte a multithreading, como já vimos. Porém, isso não vale para a engine toda. Ou seja, não podemos mexer no que quisermos ao fazer multithreading. Neste tutorial, vamos falar sobre o que pode e o que não pode ser feito com threads.
+Godot tem suporte a multithreading, como já vimos. Porém, isso não vale para tudo na engine. Vamos ver o que pode e o que não pode ser feito com threads.
 
 ## O que não pode fazer com threads
 
@@ -23,3 +23,8 @@ Godot tem suporte a multithreading, como já vimos. Porém, isso não vale para 
   4. **Usar chamadas de API para servidores:** Você pode usar servidores em thread se a thread não cria node, não chama `add_child()`, não acessa UI, só cria/configura coisas internas. Você não deve chamar se o método retorna node, o método depende da classe `SceneTree`, o método "parece alto nível".
   
 > PS: Os servidores de renderização e física por default não são thread-safe. Para liberar isso, você deve ir em *Project → Project Settings → Rendering → Driver → Thread Model → Separate* e *Project → Project Settings → 2D (3D) → Run on Separate Thread*.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20introduction">Próximo ➡</a>
+</p>
