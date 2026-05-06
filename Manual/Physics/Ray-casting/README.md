@@ -4,15 +4,15 @@
 
 Este raio de fato funciona como um raio físico no sentido da detecção, isto é, ele vai detectar a primeira colisão e parar ali. Por mais que existam outros objetos atrás do primeiro objeto detectado, é como se este objeto estivesse bloqueando o raio.
 
-> PS: Caos vá usar o `RayCast2D` em loop, use ele dentro do `_physics_process`.
+> PS: Caso queira usar o `RayCast2D` em loop, use ele dentro do `_physics_process`.
 
 ## Criando um ray-casting
 
 O node deste raio se chama `RayCast2D` (`RayCast3D`). Basta adicioná-lo na sua cena e posicioná-lo onde quiser no espaço 2D. Feito isso, vá no *Inspector* e escolha o ponto final do raio através do *Target Position*. Este ponto não é global, ele é relativo à origem do `RayCast2D`.
 
 <p align="center">
-  <img width="180" src="https://github.com/user-attachments/assets/fdf4c8de-ee7f-4b71-ae27-73ce1a985b2d" />
-  <img width="250" src="https://github.com/user-attachments/assets/d3c8b7bb-2085-4460-868b-42f6dddf75c6" />
+  <img width="200" src="https://github.com/user-attachments/assets/fdf4c8de-ee7f-4b71-ae27-73ce1a985b2d" />
+  <img width="280" src="https://github.com/user-attachments/assets/d3c8b7bb-2085-4460-868b-42f6dddf75c6" />
   <img width="500" src="https://github.com/user-attachments/assets/46b18d12-f2de-4fb5-bf98-b75108ccecd8" />
 </p>
 
@@ -41,3 +41,8 @@ Apenas com isso o seu raio de detecção já está pronto para uso. Para obter a
 - **force_raycast_update:** Por default, o `RayCast2D` reporta a colisão no frame físico seguinte. Caso precise desta notificação no mesmo frame em que ocorreu a colisão, use este método.
 
 Existem outros métodos úteis, como exclusão de certos nodes na detecção, extrair RID do corpo que colidiu, extrair vetor normal, etc. Recomendo ver a [documentação oficial](https://docs.godotengine.org/en/stable/classes/class_raycast2d.html#class-raycast2d) caso precise de alguma outra coisa.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/CharacterBody">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Collision%20shapes%202D">Próximo ➡</a>
+</p>
