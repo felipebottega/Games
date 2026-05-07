@@ -1,6 +1,6 @@
 # Output panel
 
-Como prometido anteriormente, agora vamos falar sobre o painel de output do editor.
+Como prometido anteriormente, agora vamos falar sobre o painel de output do editor (também chamado de *console*).
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/72977b5d-9e43-41d6-aa7e-27f62a4ce9f5" />
@@ -20,7 +20,7 @@ Quatro tipos de mensagens estão disponíveis neste painel:
 No painel de output há vários tipos de filtros, o que pode facilitar bastante a sua vida quando há mensagens demais no painel. Listamos abaixo todos os filtros disponíveis do editor.
 
 <p align="center">
-  <img width="950" src="https://github.com/user-attachments/assets/32b3d33d-7758-4a28-87d1-5b8a168e8d91" />
+  <img width="1000" src="https://github.com/user-attachments/assets/32b3d33d-7758-4a28-87d1-5b8a168e8d91" />
 </p>
 
 1. Filtra o output para mostrar apenas os prints contendo o conteúdo digitado.
@@ -62,7 +62,7 @@ O exemplo abaixo mostra como esses comandos funcionam.
 Abaixo temos os outputs que saíram na aba Output.
 
 <p align="center">
-  <img width="580" src="https://github.com/user-attachments/assets/6555eef8-1351-407a-b47a-832701b28da7" />
+  <img width="600" src="https://github.com/user-attachments/assets/6555eef8-1351-407a-b47a-832701b28da7" />
 </p>
 
 Por fim, os output que saíram na aba *Debugger → Errors*.
@@ -72,3 +72,8 @@ Por fim, os output que saíram na aba *Debugger → Errors*.
 </p>
 
 > PS: Note que os prints do comando `print_stack()` começaram pelo node mais na base da árvore, depois indo para o topo. A ordem de montagem de uma cena sempre vai de baixo para cima na árvore.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Debugger%20panel">Próximo ➡</a>
+</p>
