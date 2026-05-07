@@ -1,6 +1,6 @@
 # GDScript exported properties
 
-Já vimos o que faz a anotação `@export`, basicamente ela exporta uma propriedade para o *Inspector*. Desta maneira, você pode alterar parâmetros do jogo sem ter que ficar mexendo no código toda hora. Inclusive, as propriedades exportadas para o *Inspector* tem efeito imediato no jogo durante a execução. Ou seja, você pode alterar uma propriedade exportada e ver o efeito dela no jogo, sem precisar executar o jogo novamente, pois ela afeta o jogo no instante em que é alterada. Vale notar que o export também vale para [*Resource*](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html#) e nodes.
+Já vimos o que faz a anotação `@export`, basicamente ela exporta uma propriedade para o *Inspector*. Desta maneira, você pode alterar parâmetros do jogo sem ter que ficar mexendo no código toda hora. Inclusive, as propriedades exportadas para o *Inspector* tem efeito imediato no jogo durante a execução. Ou seja, você pode alterar uma propriedade exportada e ver o efeito dela no jogo, sem precisar executar o jogo novamente, pois ela afeta o jogo no instante em que é alterada. Vale notar que o export também vale para recursos e nodes.
 
 `@export` não é só deixar uma propriedade aparecer no *Inspector*. Na Godot, exportar um membro faz duas coisas importantes ao mesmo tempo: salva o valor junto com a cena/recurso e cria um campo editável no *Inspector*. Além disso, esses valores também podem ser transferidos via RPCs. 
 
@@ -20,8 +20,8 @@ A ideia deste tutorial é cobrir apenas os pontos que considerei mais interessan
 O interessante de utilizar estes exports é que você pode ir no *Inspector* e clicar no ícone de busca (no lado direito) para selecionar o arquivo/pasta desejado. Muito mais prático que ficar escrevendo.
 
 <p align="center">
-  <img width="250" src="https://github.com/user-attachments/assets/8522d5b0-7976-4a5c-a13d-037a0dd6c1e6" />
-  <img width="440" src="https://github.com/user-attachments/assets/a3c3edd5-fdf7-429f-b8cc-3885650fee33" />
+  <img width="260" src="https://github.com/user-attachments/assets/8522d5b0-7976-4a5c-a13d-037a0dd6c1e6" />
+  <img width="480" src="https://github.com/user-attachments/assets/a3c3edd5-fdf7-429f-b8cc-3885650fee33" />
 </p>
 
 ## Ranges
@@ -55,22 +55,27 @@ O export de nodes também é normal, basta indicar o tipo de node que quer. Com 
 
 ## Resources
 
-Com o export `@export var resource: Resource`, você pode arrastar e soltar um arquivo de recurso do *FileSystem* para o campo correspondente no *Inspector*. No entanto, abrir o menu dropdown desta propriedade do *Inspector* pode resultar em uma lista extremamente longa de classes que podem ser criadas (já que o tipo *Resource* é qualquer recurso). É possível ser mais específico com o tipo de recurso a ser utilizado. Por exemplo você pode usar `@export var resource: AnimationNode` para ser mais específico.
+Com o export `@export var resource: Resource`, você pode arrastar e soltar um arquivo de recurso do *FileSystem* para o campo correspondente no *Inspector*. No entanto, abrir o menu dropdown desta propriedade do *Inspector* pode resultar em uma lista extremamente longa de recursos que podem ser criados (já que o tipo *Resource* é qualquer recurso). É possível ser mais específico com o tipo de recurso a ser utilizado. Por exemplo você pode usar `@export var resource: AnimationNode` para ser mais específico.
 
 ## Enums
 
-Você utiliza a anotação `@export_enum` para exportar um `Enum` para o *Inspector*. Por exemplo, o comando `@export_enum("WARRIOR", "MAGICIAN", "THIEF") var character_class = "THIEF"` cria o respectivo `Enum`, em que `WARRIOR = 0`, `MAGICIAN = 1`, `THIEF = 2`. O parâmetro que receberá estes valores é o `character_class`, que será inicializado como `THIEF`, pois colocamos o igual ao fim do comando do export.
+A anotação `@export_enum` é utilizada para exportar um `Enum` para o *Inspector*. Por exemplo, o comando `@export_enum("WARRIOR", "MAGICIAN", "THIEF") var character_class = "THIEF"` cria o respectivo `Enum`, em que `WARRIOR = 0`, `MAGICIAN = 1`, `THIEF = 2`. O parâmetro que receberá estes valores é o `character_class`, que será inicializado como `THIEF`, pois colocamos o igual ao fim do comando do export.
 
 <p align="center">
-  <img width="900" src="https://github.com/user-attachments/assets/47a36103-f899-4598-8933-adb5f70c6f30" />
+  <img width="1100" src="https://github.com/user-attachments/assets/47a36103-f899-4598-8933-adb5f70c6f30" />
 </p>
 
-> PS: Colocar a anotação igual a algum valor na sua declaração (fizemos acima) fará com que aquele seja o valor inicial no *Inspector*. Porém, tem que tomar cuidado pois às vezes ele altera o modo de intratividade no *Inspector*. Só testando para saber.
+> PS: Colocar a anotação igual a algum valor na sua declaração (como foi feito acima) fará com que aquele seja o valor inicial no *Inspector*. Porém, tem que tomar cuidado pois às vezes ele altera o modo de interatividade no *Inspector*. Só testando para saber.
 
 ## Arrays
 
-É possível exportar arrays, mas devem ser valores constantes. Por exemplo `@export var a = [1, 2, 3]` funciona, mas `@export var a = [1, 2, x]` não funciona, mesmo que `x` tenha um valor  definido. Também é possível não inserir nenhum valor. Neste caso ele será inicializado como `null`. Por exemplo, `@export var b: Array` funciona. Você também definir o tipo de array a ser exportado, por exemplo, `@export var c: Array[int] = [1, 2, 3]` e `@export var d: Array[PackedScene]` funcionam. Por fim, você também pode exportar [`PackedArray`](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#tipos-de-containers), mas ele deve ser inicializado vazio, por exemplo, `@export var e = PackedVector3Array()`.
+É possível exportar arrays, mas devem ser constantes. Por exemplo `@export var a = [1, 2, 3]` funciona, mas `@export var a = [1, 2, x]` não funciona, mesmo que `x` tenha um valor  definido. Também é possível não inserir nenhum valor. Neste caso ele será inicializado como `null`. Por exemplo, `@export var b: Array` funciona. Você também definir o tipo de array a ser exportado, por exemplo, `@export var c: Array[int] = [1, 2, 3]` e `@export var d: Array[PackedScene]` funcionam. Por fim, você também pode exportar [`PackedArray`](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#tipos-de-containers), mas ele deve ser inicializado vazio, por exemplo, `@export var e = PackedVector3Array()`.
 
 <p align="center">
-  <img width="1000" src="https://github.com/user-attachments/assets/e008eb7a-ab10-485e-aefa-6d0ff4200017" />
+  <img width="1100" src="https://github.com/user-attachments/assets/e008eb7a-ab10-485e-aefa-6d0ff4200017" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference%20-%20Big%20Math">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide">Próximo ➡</a>
 </p>
