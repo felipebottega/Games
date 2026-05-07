@@ -4,7 +4,11 @@ O problema de lidar com resoluções é antigo, e muitas abordagens já foram us
 
 Lembre que no tutorial do jogo [Galton Board 4](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Canvas%20layers/Galton%20Board%204#viewport-e-canvas-items) foi dito que a viewport é o espaço delimitado pelo retângulo azul do editor, e que este espaço representa a tela que o jogador enxerga no jogo. A resolução da viewport é esta resolução base (é a mesma que foi mencionada no [tutorial de viewports](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#size-e-stretch) no caso de subviewport). Portanto, a resolução base nada mais é do que a resolução "ideal" do seu jogo. Você define a resolução do jogo, desenvolve o jogo usando a viewport com estas dimensões, e só depois que o jogo está pronto é que você usa as funcionalidades da engine para ajustar a resolução base para uma outra resolução, a depender do dispositivo e configuração utilizada no jogo. 
 
-Como já foi dito antes, a resolução da viewport (resolução base) é definida em *Project → Project Settings → Display → Window → Size → Viewport width/Height*. Além destes dois parâmetros, há outros essenciais nesta mesma tela de configurações. São estes parâmetros que definem o conjunto de funcionalidades para lidar com múltiplas resoluções.
+Como já foi dito antes, a resolução da viewport (resolução base) é definida em *Project → Project Settings → Display → Window → Size → Viewport width/Height*. Além destes dois parâmetros, há outros essenciais nesta mesma tela de configurações. É este conjunto de parâmetros que definem as funcionalidades para lidar com múltiplas resoluções.
+
+<p align="center">
+  <img width="900" src="https://github.com/user-attachments/assets/1de2ba70-1aee-4c93-bcae-31c8636ce601" />
+</p>
 
 ## Aba Game
 
@@ -17,16 +21,20 @@ Antes de começar a falar dos outros parâmetros, é necessário comentar sobre 
 Ter as duas opções abaixo marcadas é o default. Ao dar play, ele vai abrir uma nova janela do editor, contendo o jogo sendo executado. Se você desmarcar apenas a opção *Make Game Workspace Floating on Next Play*, o jogo será carregado dentro do editor em vez de criar uma janela nova. Se você desmarcar a opção *Embed Game on Next Play*, ele vai abrir uma janela contendo apenas o jogo ao ser executado. A diferença desta janela para a anterior é que esta mostra apenas o jogo, enquanto que a anterior tem opções do editor.
 
 <p align="center">
-  <img width="850" src="https://github.com/user-attachments/assets/0889d3a4-8c68-4e99-9ca3-1a89141f5267" />
+  <img width="800" src="https://github.com/user-attachments/assets/0889d3a4-8c68-4e99-9ca3-1a89141f5267" />
+</p>
+
+> 🟦 **REVISÃO POSTERIOR:** A Godot mudou um pouco o layout após este tutorial ter sido escrito. Agora as opções mencionadas são encontradas em outra aba, como mostrado abaixo. Também há algumas opções novas para se mexer. Recomendo testar.
+> 
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/d3dfa2db-608e-4418-b8f9-1581309e0c5b" />
 </p>
 
 É importante essa distinção pois a janela do editor não é a janela do jogo. Ou seja, se você tentar alterar o tamanho da janela do jogo via script com a opção *Embed Game on Next Play* marcada, nada vai acontecer. Caso queira ver este comportamento no jogo, deve desmarcar a opção *Embed Game on Next Play*. Aí a janela a ser aberta será de fato a janela do jogo, não do editor. 
 
-> PS: Fora do contexto deste tutorial, esse conhecimento pode ser útil para quem não quer mais janelas sendo abertas durante o desenvolvimento. Muitas vezes é mais prático alternar abas na Godot que alternar janelas (editor e jogo).
-
 ## Size/Mode
 
-Fora a resolução base vista acima, este é o parâmetro mais simples de todos. Ele determina como a tela é carregada inicialmente quando o jogo abre. Acredito que as opções são claras, com exceção do fullscreen, pois há duas opções neste caso. O recomendado é usar a opção *Exclusive Fullscreen*, pois esta é feita para jogos, enquanto que a outra é para um outro tipo de aplicação específica.
+Este parâmetro determina como a tela é carregada inicialmente quando o jogo abre. Acredito que as opções são claras, com exceção do fullscreen, pois há duas opções neste caso. O recomendado é usar a opção *Exclusive Fullscreen*, pois esta é feita para jogos, enquanto que a outra é para um outro tipo de aplicação específica.
 
 Você pode alterar este parâmetro durante a execução do jogo com o comando `DisplayServer.window_set_mode(i)`, em que $i$ é um inteiro entre $0$ e $4$. Seguem abaixo os valores que você pode passar para a função. Cada valor está associado a uma constante da engine também.
   
@@ -36,11 +44,11 @@ Você pode alterar este parâmetro durante a execução do jogo com o comando `D
     WINDOW_MODE_FULLSCREEN = 3
     WINDOW_MODE_EXCLUSIVE_FULLSCREEN = 4
 
-Ao colocar em modo de janela (windowed), a resolução é ajustada dinamicamente enquanto você altera o tamanho da janela. Ao colocar em tela cheia (fullscreen), a resolução é ajustada para igualar a resolução do monitor. 
+Ao colocar em modo de janela (windowed), a resolução é ajustada dinamicamente quando você altera o tamanho da janela. Ao colocar em tela cheia (fullscreen), a resolução é ajustada para igualar a resolução do monitor. 
 
 ## Stretch/Mode
 
-O *stretch mode* determina como a resolução base é esticada para se encaixar na janela ou tela. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_mode = i`, em que $i$ é um inteiro entre $0$ e $2$. Cada valor está associado a uma constante da engine também.
+O *stretch mode* determina como a resolução base é esticada para se encaixar na janela ou tela. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_mode = i`, em que $i$ é um inteiro entre $0$ e $2$. Cada valor está associado a uma constante da engine.
   
     CONTENT_SCALE_MODE_DISABLED = 0
     CONTENT_SCALE_MODE_CANVAS_ITEMS = 1
@@ -53,23 +61,25 @@ O *stretch mode* determina como a resolução base é esticada para se encaixar 
   <img width="1100" src="https://github.com/user-attachments/assets/b6ce5921-403e-4f0f-8ed3-b97fccc3d493" />
 </p>
 
-Note que no caso da tela cheia, tivemos um fundo branco que passou a ser cinza de repente. Isso aconteceu porque a tela cheia conseguiu ir além do background branco que tinha no jogo, revelando um pouco do espaço vazio da viewport.
+Note que no caso da tela cheia, tivemos um fundo branco que passou a ser cinza de repente. Isso aconteceu porque a tela cheia conseguiu ir além do background branco que tinha no jogo, revelando um pouco do espaço vazio do canvas.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/363c8f2c-3b76-421a-a72b-20cf73213da0" />
 </p>
 
-- **Canvas Items:** Neste modo, o jogo primeiro é renderizado na sua resolução base. Se houver algum esticamento, ele simplesmente vai ampliar o jogo já renderizado. Se o seu jogo está em $640 \times 480$ e você coloca ele para rodar em tela cheia em um monitor de $1920 \times 1080$, ele vai renderizar em $640 \times 480$ e depois ampliar $1920 \times 1080$ sem aplicar nenhum algoritmo extra. Isso pode resultar em pixels grandes. Este modo é ideal quando você quer fidelidade à pixel-art do jogo.
+- **Canvas Items:** Neste modo, o jogo é renderizado na resolução target. Se houver algum esticamento, ele vai considerar a resolução ampliada e renderizar nesta dimensão. Se o seu jogo está em $640 \times 480$ e você coloca ele para rodar em tela cheia em um monitor de $1920 \times 1080$, ele vai renderizar em $1920 \times 1080$, o que pode envolver aplicar algum algoritmo de up-sampling. É possível introduzir artefatos na pixel-art com este modo, mas ele garante mais qualidade geral para dimensões maiores que a resolução base.
 
-- **Viewport:** Neste modo, o jojo é renderizado na resolução target. Se houver algum esticamento, ele vai considerar a resolução ampliada e renderizar nesta dimensão. Se o seu jogo está em $640 \times 480$ e você coloca ele para rodar em tela cheia em um monitor de $1920 \times 1080$, ele vai renderizar em $1920 \times 1080$, o que pode envolver aplicar nenhum algoritmo extra de up-sampling, por exemplo. É possível inrtroduzir artefatos na pixel-art com este modo, mas ele garante mais qualidade geral para dimensões maiores que a resolução base.
+- **Viewport:** Neste modo, o jogo primeiro é renderizado na sua resolução base. Se houver algum esticamento, ele simplesmente vai ampliar o jogo já renderizado. Se o seu jogo está em $640 \times 480$ e você coloca ele para rodar em tela cheia em um monitor de $1920 \times 1080$, ele vai renderizar em $640 \times 480$ e depois vai ampliar para $1920 \times 1080$ sem aplicar nenhum algoritmo extra. Isso pode resultar em pixels grandes. Este modo é ideal quando você quer fidelidade à pixel-art do jogo.
 
 Na figura abaixo nós podemos ver claramente a diferença entre o modo canvas items e viewport. Para começar a análise, é importante mencionar que a resolução base é $180 \times 180$. O jogo está rodando em $1920 \times 720$, então a resolução está sendo aumentada em relação a original. Entre as duas imagens, a única diferença é o stretch mode, sendo canvas items na esquerda e viewport na direita. Toda a UI (*user interface*) é afetada por essa escolha, como podemos ver claramente. 
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/6ebe17a9-b450-4a16-a9c4-38c7610a6377" />
+  <img width="800" src="https://github.com/user-attachments/assets/0b294ec3-1df4-4ec0-92d3-c2d7421ace72" />
 </p>
 
-Apesar de não ser evidente, o quadriculado e logo da Godot também sofreram alterações. Originalmente, são imagens pixeladas e com largura de $180$ pixels. Note que no modo canvas items a figura tem um certo embaçamento, resultado do up-scaling aplicado. Podemos trocar estas imagens pequenas por uma de alta resolução. Note que não importa se vamos colocar uma imagem de alta resolução em uma resolução base $180 \times 180$, a engine sabe que a imagem tem resolução alta e vai usar isso se o jogo pedir por uma resolução maior no fim das contas. 
+Apesar de não ser evidente, o quadriculado e logo da Godot também sofreram alterações. Originalmente, são imagens pixeladas e com largura de $180$ pixels. Note que no modo canvas items a figura tem um certo embaçamento, resultado do up-scaling aplicado. 
+
+Note abaixo que é possível usar imagens de alta resolução. Não importa se vamos colocar uma imagem de alta resolução em uma resolução base pequena de $180 \times 180$, a engine sabe que a imagem tem resolução alta e vai usar isso se o jogo pedir por uma resolução maior (sem precisar recorrer a up-scaling). 
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/6f9dcb8c-9a4c-4e42-a329-0452f5b21c4f" />
@@ -77,13 +87,15 @@ Apesar de não ser evidente, o quadriculado e logo da Godot também sofreram alt
 
 > PS: Você pode fazer um jogo inteiro utilizando assets de resolução alta em um viewport de resolução base mais baixa, de modo a ter duas opções de resolução no seu jogo. A figura acima indica isso. Porém, isso não é prático, pois é limitado a duas resoluções apenas. Para ter múltiplas resoluções, o indicado é usar o modo windowed e escolher alguma resolução dentre as várias opções (ou simplesmente esticar a janela, pois a engine ajusta a resolução automaticamente neste caso). Se você quiser múltiplas escolhas de resolução em fullscreen, é melhor usar subviewport. Veremos como fazer isso no próximo tutorial.
 
-Na questão de movimento, também há diferenças entre o modo canvas items. O impulso inicial é dizer que o canvas items é melhor, mas é importante ter em mente que ele cria pixels com o up-scaling, enquanto que a viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo. 
+Na questão de movimento, também há diferenças entre o modo canvas items e o viewport. É importante ter em mente que o canvas items cria pixels com o up-scaling, enquanto que a viewport é mais fiel à pixel-art original. Tudo depende do que você quer no seu jogo. 
 
-Você pode testar estes efeitos no [jogo associado a este projeto](https://felipebottega.github.io/Games/Manual/Rendering/Multiple%20resolutions/html/), os direcionais movem a figura. Porém, como ele foi exportado para web, não é possível testar todas as funcionalidades discutidas aqui. Caso queira testar tudo, é melhor baixar o projeto e executar na própria engine.
+Você pode testar estes efeitos no [jogo associado a este projeto](https://felipebottega.github.io/Games/Manual/Rendering/Multiple%20resolutions/html/), os direcionais movem a figura. Porém, como ele foi exportado para web, não é possível testar todas as funcionalidades discutidas aqui. Caso queira testar tudo, é melhor baixar o projeto e executar no editor.
+
+> 🟦 **REVISÃO POSTERIOR:** Este projeto foi exportado com a renderização de texturas no modo *Linear* (em *Project → Project Settings → General → Rendering → Textures → Default Texture Filter*). Esse tipo de renderização suaviza os pixels, o que pode contribuir para o efeito visto no canvas items. Se quiser testar os efeitos com mais fidelidado aos pixels, troque isso para *Nearest* e execute o projeto novamente.
 
 ## Aspect
 
-Este parâmetro determina como o jogo é deformado para se encaixar no formato da tela mostra. Só tem efeito se o stretch mode não for *disabled*. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_aspect = i`, em que $i$ é um inteiro entre $0$ e $4$. Cada valor está associado a uma constante da engine também.
+Este parâmetro determina como o jogo é deformado para se encaixar no formato da tela. Só tem efeito se o stretch mode não for *disabled*. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_aspect = i`, em que $i$ é um inteiro entre $0$ e $4$. Cada valor está associado a uma constante da engine.
   
     CONTENT_SCALE_ASPECT_IGNORE = 0
     CONTENT_SCALE_ASPECT_KEEP = 1
@@ -103,7 +115,7 @@ Este parâmetro determina como o jogo é deformado para se encaixar no formato d
   <img width="600" src="https://github.com/user-attachments/assets/4d301636-9d92-4215-8712-7e2eb846c434" />
 </p>
 
-- **Keep Width:** Estica o jogo ao máximo que dá, limitado à largura. Em outras palavras, quando a engine estica até esse limite da largura, ela tem que parar o esticamento pois esticar mais iria desfazer as proporções originais da resolução base. Se tiver mais espaço sobrando para a altura preencher a tela, não haverá esticamento, mas será revelado o restanto da viewport até preencher a tela nesta direção.
+- **Keep Width:** Estica o jogo ao máximo que dá, limitado à largura. Em outras palavras, quando a engine estica até esse limite da largura, ela tem que parar o esticamento pois esticar mais iria desfazer as proporções originais da resolução base. Se tiver mais espaço sobrando para a altura preencher a tela, não haverá esticamento, mas será revelado o restante da viewport até preencher a tela nesta direção.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/b631f724-a131-4892-a192-708ac8f0db32" />
@@ -123,11 +135,16 @@ Este parâmetro determina como o jogo é deformado para se encaixar no formato d
 
 ## Scale Mode
 
-Ao fazer o esticamento do jogo, o fator aplicado nas dimensões pode variar continuamente (modo *fractional*) ou variar nos inteiros (modo *integer*). O modo inteiro pode fazer mais sentido em pixel-art, pois mudanças fracionárias podem introduzir artefatos nos pixels. A escolha deste parâmetro também afeta como o parâmetro *scale* (ver abaixo) é alterado. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_stretch = i`, em que $i$ é um inteiro entre $0$ e $2$. Cada valor está associado a uma constante da engine também.
+Ao fazer o esticamento do jogo, o fator aplicado nas dimensões pode variar continuamente (modo *fractional*) ou variar nos inteiros (modo *integer*). O modo inteiro pode fazer mais sentido em pixel-art, pois mudanças fracionárias podem introduzir artefatos nos pixels. A escolha deste parâmetro também afeta como o parâmetro *scale* (ver abaixo) é alterado. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_stretch = i`, em que $i$ é um inteiro entre $0$ e $2$. Cada valor está associado a uma constante da engine.
 
     CONTENT_SCALE_STRETCH_FRACTIONAL = 0
     CONTENT_SCALE_STRETCH_INTEGER = 1
 
 ## Scale
 
-Esse parâmetro aplica um fator de esticamento extra no jogo. Todos os parâmetros mostrados acimas em conjunto já manipulam o esticamento como você quiser, mas este último parâmetro pode ser interessante para deixar o usuário apliocar um pouco mais ou menos de esticamento. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_factor = x`, em que $x$ é um float. 
+Esse parâmetro aplica um fator de esticamento extra no jogo. Todos os parâmetros mostrados acimas em conjunto já manipulam o esticamento como você quiser, mas este último parâmetro pode ser interessante para deixar o usuário aplicar um pouco mais ou menos de esticamento. Você pode alterar este parâmetro durante a execução do jogo com o comando `get_tree().root.content_scale_factor = x`, em que $x$ é um float. 
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game">Próximo ➡</a>
+</p>
