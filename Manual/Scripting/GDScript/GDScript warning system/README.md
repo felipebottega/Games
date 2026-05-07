@@ -31,13 +31,17 @@ O que eu recomendo é que você apenas clique no *[Ignore]* à esquerda do aviso
 Também é possível delimitar blocos em que certos avisos não são emitidos, usando as anotações `@warning_ignore_start()` e `@warning_ignore_restore()`, como mostrado no exemplo abaixo. Repare que o editor está reclamando apenas da variável `delta` não utilizada.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/f31345f2-273e-473f-a711-7ccef4dd71fb" />
+  <img width="850" src="https://github.com/user-attachments/assets/f31345f2-273e-473f-a711-7ccef4dd71fb" />
 </p>
 
-Por fim, note que é possível usar estas anotações com múltiplos argumentos e não precisa fechar o `@warning_ignore_start()` (ele terá efeito até o fim do código).
+Por fim, é possível usar estas anotações com múltiplos argumentos e não precisa fechar o `@warning_ignore_start()` (ele terá efeito até o fim do código).
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/a8f0de2c-259f-4e36-a0d4-7d3b9e9d8d83" />
-  <img width="600" src="https://github.com/user-attachments/assets/ac9ce927-e6e4-4566-80fb-e3390fd5b5f7" />
+  <img width="870" src="https://github.com/user-attachments/assets/a8f0de2c-259f-4e36-a0d4-7d3b9e9d8d83" />
+  <img width="640" src="https://github.com/user-attachments/assets/ac9ce927-e6e4-4566-80fb-e3390fd5b5f7" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API">Próximo ➡</a>
+</p>
