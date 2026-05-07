@@ -809,11 +809,11 @@ São os objetos que não herdam de `RefCounted`, como `Node` e `Object` (e todos
 
 ## Sinais
 
-Os sinais são uma ferramenta para emitir mensagens de um objeto às quais outros objetos podem reagir. Para criar sinais personalizados via código, use a keyword `signal`. Toda a parte prática de sinais já foi vista na série de tutoriais [daqui](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals). Vale a pena dar uma revisitada.
+Os sinais são uma ferramenta que permite que um objeto emita mensagens às quais outros objetos podem reagir. Para criar sinais personalizados via código, use a keyword `signal`. Toda a parte prática de sinais já foi vista na série de tutoriais [daqui](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals). Vale a pena dar uma revisitada.
 
 ### Exemplo prático de sinais
 
-Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador em nossa árvore da cena. No script `character.gd` do personagem, definimos um sinal `health_changed` e o emitimos com `health_changed.emit()`, e de um node *Game* mais acima em nossa árvore da cena, o conectamos à barra de vida usando o método `health_changed.connect()`. 
+Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador na nossa árvore da cena. No script `character.gd` do personagem, definimos um sinal `health_changed` e o emitimos com `health_changed.emit()`. De um node *Game* mais acima em nossa árvore da cena, o conectamos à barra de vida usando o método `health_changed.connect()`. 
 
 ```python
 # character.gd
