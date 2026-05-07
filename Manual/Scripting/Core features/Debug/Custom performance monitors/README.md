@@ -10,24 +10,29 @@ Criamos um projeto simples de um chão estático (`StaticBody2D`) e diversas esf
   <img width="800" src="https://github.com/user-attachments/assets/5d24d797-431a-48e5-a8cf-70223669036e" />
 </p>
 
-A lógica do corpo é simples. O importante é que notar que ele é adicionado ao grupo *ball* assim que é criado.
+A lógica do corpo físico é simples. O importante é que notar que ele é adicionado ao grupo *ball* assim que é criado.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/ff1d73e5-fc86-4508-8d9a-8ea1d0a5465b" />
+  <img width="380" src="https://github.com/user-attachments/assets/ff1d73e5-fc86-4508-8d9a-8ea1d0a5465b" />
 </p>
 
-No script da cena principal é onde as coisas mais importantes acontecem. Logo no `_ready` é feita a criação do monitoramento. O comando `Performance.add_custom_monitor("game/ball_count", get_ball_count)` diz para a engine criar o campo de monitoramento "game/ball_count", e este monitoramento usará a saída da função `get_ball_count` para colocar no gráfico. O resto do código é apenas a lógica de criação de instâncias. 
+No script da cena principal é onde as coisas mais importantes acontecem. Logo no `_ready` é feita a criação do monitoramento customizado. O comando `Performance.add_custom_monitor("game/ball_count", get_ball_count)` diz para a engine criar o campo de monitoramento "game/ball_count", e este monitoramento usará a saída da função `get_ball_count` para colocar no gráfico. O resto do código é apenas a lógica de criação de instâncias. 
 
 <p align="center">
-  <img width="460" src="https://github.com/user-attachments/assets/4f8ece0b-41ff-4ce1-996d-cd63eb8acd47" />
+  <img width="550" src="https://github.com/user-attachments/assets/4f8ece0b-41ff-4ce1-996d-cd63eb8acd47" />
 </p>
 
 O resultado está mostrado abaixo. É bem simples!
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/2f431eca-0427-405c-bb6f-d366f60ab4e6" />
+  <img width="900" src="https://github.com/user-attachments/assets/2f431eca-0427-405c-bb6f-d366f60ab4e6" />
 </p>
 
 > PS: O monitoramento é atualizado uma vez por segundo. Você até pode criar os valores uma vez por frame, mas isso será mais do que o necessário de fato.
 
 > PS: Não é porque os dados monitorados foram instanciados na cena principal que a criação do monitoramento deve ser feita no script desta cena. Você poderia, por exemplo, ter um script global (autoload) de monitoramento e fazer a chamada por lá.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Using%20the%20ObjectDB%20profiler">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing">Próximo ➡</a>
+</p>
