@@ -7,7 +7,7 @@ Este é o primeiro projeto relativo ao [manual oficial de Godot](https://docs.go
 "Canvas" significa "tela" em inglês, enquanto que "viewport" significa "janela de visualização". Podemos entender o canvas como sendo todo o espaço 2D que temos para trabalhar, enquanto que viewport é a tela que o jogador enxerga.
 
 <p align="center">
-	<img width="800" src="https://github.com/user-attachments/assets/9d98da61-fedf-4657-a102-72f5c6a4e063" />
+	<img width="800" src="https://github.com/user-attachments/assets/6bc430c8-848c-4753-afb9-d80f77632c78" />
 </p>
 
 O node `CanvasItem` é a base para todos os nodes visuais 2D, com o `Node2D` e `Control` sendo seus primeiros filhos. Uma característica crucial desta classe é que todos seus filhos herdam a transformação dos pais, isto é, se você transformar um `Node2D` (mudar posição, escala, ect), seus filhos serão transformados juntos. Vale ressaltar que `CanvasItem` é uma classe abstrata e não é diretamente manipulável em Godot. 
