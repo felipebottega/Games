@@ -1,6 +1,6 @@
 # Collision shapes 2D
 
-Para qualquer corpo físico, você pode associar uma (ou várias) shape de colisão, que pode vir do node `CollisionShape2D` ou `CollisionPolygon2D`. No caso do `CollisionPolygon2D`, os pontos que definem o polígono são customizados. Já no caso do `CollisionShape2D`, existem alguns shapes nativas/primitivas da Godot à disposição. Todas estes shapes vem da classe abstrata `Shape2D`. Esta classe é um resource da engine, mas não precisamos entrar em detalhes sobre isso agora. As definições para 3D são análogas, mas vamos nos limitar ao 2D neste tutorial.
+Para qualquer corpo físico, você pode associar uma (ou várias) shape de colisão, que pode vir do node `CollisionShape2D` ou `CollisionPolygon2D`. No caso do `CollisionPolygon2D`, os pontos que definem o polígono são customizados. Já no caso do `CollisionShape2D`, existem alguns shapes nativas/primitivas da Godot à disposição. Todos estes shapes vem da classe abstrata `Shape2D`. As definições para 3D são análogas, mas vamos nos limitar ao 2D neste tutorial.
 
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/b95df652-e206-4c0b-b62e-f8925d39b223" />
@@ -24,24 +24,24 @@ Um processo que já fizemos diversas vezes foi o de adicionar um `CollisionShape
   <img width="350" src="https://github.com/user-attachments/assets/95d77b2a-0fd5-4413-947b-92f8d9f8ec2d" />
 </p>
 
-Os shapes `RectangleShape2D`, `CircleShape2D` e `CapsuleShape2D` são bem simples de usar e já foram vistas antes, então vou pular. Vamos dar uma maior atenção para os shapes não vistas ainda.
+Os shapes `RectangleShape2D`, `CircleShape2D` e `CapsuleShape2D` são bem simples de usar e já foram vistos antes, então vou pular. Vamos dar uma maior atenção para os shapes não vistos ainda.
 
 - **SegmentShape2D:** Este shape é basicamente um segmento de reta com colisão. Basta selecioná-lo e então pode começar a manipular o seu início e fim no painel. A propriedade *One Way Collision* é usada quando você quer que apenas um dos lados tenha colisão.  
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/c52b8167-fb9b-42c8-8de1-e2e27f4fb599" />
+  <img width="900" src="https://github.com/user-attachments/assets/c52b8167-fb9b-42c8-8de1-e2e27f4fb599" />
 </p>
 
-- **SeparationRayShape2D:** O `SeparationRayShape2D` é aquela "setinha" abaixo da colisão de cápsula na figura abaixo. Essa seta pode ser movida e esticada à vontade. Ela serve como um "repulsor" de outros objetos de colisão. Isso é ideal para dinâmicas tipo subir escadas (neste caso o `SeparationRayShape2D` é filho de um `CharacterBody2D`).
+- **SeparationRayShape2D:** O `SeparationRayShape2D` é aquela "setinha" abaixo da colisão de cápsula na figura abaixo. Essa seta pode ser movida e esticada à vontade. Ela serve como um "repulsor" de outros objetos de colisão. Isso é ideal para dinâmicas tipo subir escadas (neste caso o `SeparationRayShape2D` tem que ser filho do `CharacterBody2D`).
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/0e2d5c8a-b747-4e0b-b48f-91b1a997c17c" />
+  <img width="250" src="https://github.com/user-attachments/assets/0e2d5c8a-b747-4e0b-b48f-91b1a997c17c" />
 </p>
 
 - **WorldBoundaryShape2D:** É basicamente um chão reto infinito. A seta indica a direção "para cima", a normal ao chão. É possível rotacional e mover este objeto como qualquer outro. Também tem um método para alterar o vetor normal, caso precise.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/c3ff9db3-247a-4fdd-9f30-86aa5d4baec2" />
+  <img width="850" src="https://github.com/user-attachments/assets/c3ff9db3-247a-4fdd-9f30-86aa5d4baec2" />
 </p>
 
 ## CollisionPolygon2D Sibling
@@ -63,3 +63,8 @@ Segue abaixo uma breve descrição dos parâmetros:
 - **Grow:** Faz o contrário do shrink, aumenta o shape em alguns pixels. É útil quando o sprite possui buracos e você não quer que eles sejam levados em conta, por exemplo.
 
 Os exemplos mostrados aqui não estão em forma de jogo exportado, mas todos podem ser acessados através do editor diretamente.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Ray-casting">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Physics/Physics%20Interpolation">Próximo ➡</a>
+</p>
