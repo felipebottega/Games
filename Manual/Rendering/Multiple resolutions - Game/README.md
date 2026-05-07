@@ -20,20 +20,20 @@ Cada animal possui sua própria cena, que é um `CharacterBody2D`. O template ge
 
 ## Navegação
 
-O único animal que possui uma estrutura é a ovelha, pois esta precisa de um sistema de navegação. Sendo assim, ela possui um node `NavigationAgent2D`. O script associado é bem semelhante aos que vimos nos tutoriais de navegação de [agentes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents) e [links](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLinks). Recomendo dar uma revisada.
+O único animal que possui uma estrutura mais complexa é a ovelha, pois ela precisa de um sistema de navegação. Sendo assim, ela possui um node `NavigationAgent2D`. O script associado é bem semelhante aos que vimos nos tutoriais de navegação de [agentes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationAgents) e [links](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Navigation/Using%20NavigationLinks). Recomendo dar uma revisada.
 
 <p align="center">
-  <img width="190" src="https://github.com/user-attachments/assets/29dc25ba-3149-4229-9fb7-1b991208a686" />
+  <img width="180" src="https://github.com/user-attachments/assets/29dc25ba-3149-4229-9fb7-1b991208a686" />
   <img width="310" src="https://github.com/user-attachments/assets/393d2ab2-872e-4e4b-9330-c006a0bd63a2" />
-  <img width="500" src="https://github.com/user-attachments/assets/3ec4d4eb-5762-4a32-a0ab-62cd10884bed" />
-  <img width="500" src="https://github.com/user-attachments/assets/28f8a4ca-fb83-4b99-834c-0afe7a1c5aaf" />
+  <img width="510" src="https://github.com/user-attachments/assets/3ec4d4eb-5762-4a32-a0ab-62cd10884bed" />
+  <img width="580" src="https://github.com/user-attachments/assets/28f8a4ca-fb83-4b99-834c-0afe7a1c5aaf" />
 </p>
 
 ## Subviewport
 
-Agora vamos criar o visor que consegue identificar as ovelhas falsas. Vamos seguir o mesmo procedimento feito no terceiro exemplo do [tutorial de subviewport](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#efeito-raio-x-com-a-c%C3%A2mera). Neste caso o "raio-X" servirá para separar ovelhas verdadeiras de falsas. 
+Agora vamos criar o visor que consegue identificar as ovelhas falsas. Vamos seguir o mesmo procedimento feito no terceiro exemplo do [tutorial de subviewport](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports#efeito-raio-x-com-a-c%C3%A2mera). Neste caso o "raio-X" servirá para separar ovelhas verdadeiras das falsas. 
 
-Começamos criando um retângulo no GIMP. Este retângulo tem uma borda e um interior com cor e transparência. Seria possível ter o mesmo efeito usando as ferramentas da engine, mas achei mais prático fazer isso pelo GIMP. Podemos ver na figura abaixo o retângulo no GIMP à esquerda e o efeito desejado em prática na direita.
+Começamos criando um retângulo no GIMP. Este retângulo tem uma borda e um interior com cor e transparência. Seria possível ter o mesmo efeito usando as ferramentas da engine, mas achei mais prático fazer isso pelo GIMP. Podemos ver na figura abaixo o retângulo no GIMP à esquerda e o efeito desejado em prática à direita.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/11bda2c9-7579-4263-a5fa-5a7e7e5debde" />
@@ -50,9 +50,11 @@ O container do subviewport foi colocado ao fim da cena do level. O script segue 
   <img width="500" src="https://github.com/user-attachments/assets/6b7ff079-2ab7-4d8f-9596-fe43033b62bc" />
 </p>
 
-> PS: Na Godot, `set_meta`, `get_meta` e `has_meta` são uma forma de você anexar dados arbitrários a qualquer node, sem precisar declarar variáveis no script. Considere como um dicionário escondido dentro do node. No nosso caso, usamos `mirror.set_meta("target_node", instance)`. Isso pode ser lido como "Essa ovelha aqui é um espelho, e o original dela é esse *instance*". Depois, no script, usamos `var target = get_meta("target_node")`. Ou seja, se tem *target_node*, é espelho, caso contrário é uma ovelha normal. Essa lógica poderia ser feita com uma variável booleana, mas aí o trabalho seria muito mais manual e propenso a erros.
-
 ⚠️ **Atenção:** Duplicar nodes, como fizemos aqui, não é a maneira mais eficiente de se resolver esta questão da ovelha do subviewport. Isso foi feito pois ficou mais direto o uso de subviewport dessa maneira, e a ideia era usar subviewport como exemplo de aplicação.
+
+### set_meta, get_meta e has_meta
+
+Na Godot `set_meta`, `get_meta` e `has_meta` são formas de anexar dados arbitrários a qualquer node, sem precisar declarar variáveis no script. Considere como um dicionário escondido dentro do node. No nosso caso, usamos `mirror.set_meta("target_node", instance)`. Isso pode ser lido como "essa ovelha aqui é um espelho e a original dela é essa instância". Depois, no script, usamos `var target = get_meta("target_node")`. Ou seja, se tem *target_node*, é espelho, caso contrário é uma ovelha normal. Essa lógica poderia ser feita com uma variável booleana, mas aí o trabalho seria muito mais manual e propenso a erros.
 
 ## Resolução
 
@@ -62,15 +64,15 @@ Para finalizar, vamos abordar o principal objetivo deste jogo, que é a inclusã
   <img width="750" src="https://github.com/user-attachments/assets/ed23f5eb-580d-4896-97c9-24d557a37b5d" />
 </p>
 
-A árvore da cena Main segue a estrutura mostrada abaixo. Para implementar a resolução, devemos criar um `TextureRect`. Logo após isso, vá em *Inspector → Texture → Transform → Size* e coloque o `TextureRect` na resolução base da viewport, $1920 \times 1080$. Feito isso, vá em *Inspector → Texture → ViewportTexture* e selecionar o node `SubViewport`. Este node deve conter todas as texturas que irão sofrer o processo de mudança de resolução. Note que deixamos o HUD de fora disso, mas é opcional.
+A árvore da cena Main segue a estrutura mostrada abaixo. Para implementar a resolução, devemos criar um `TextureRect`. Logo após isso, vá em *Inspector → Texture → Transform → Size* e coloque o `TextureRect` na resolução base da viewport, $1920 \times 1080$. Feito isso, vá em *Inspector → Texture → ViewportTexture* e selecione o node `SubViewport`. Este node deve conter todas as texturas que irão sofrer o processo de mudança de resolução. Note que deixamos o HUD de fora disso, mas é opcional.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/6c363a82-0dee-4409-aa12-572a56a6f48d" />
-  <img width="300" src="https://github.com/user-attachments/assets/cbaedb03-dc4a-49d1-8832-e45414ed212f" />
-  <img width="250" src="https://github.com/user-attachments/assets/9f32604a-1545-4a22-b11b-d88221200fa2" />
+  <img width="220" src="https://github.com/user-attachments/assets/6c363a82-0dee-4409-aa12-572a56a6f48d" />
+  <img width="330" src="https://github.com/user-attachments/assets/cbaedb03-dc4a-49d1-8832-e45414ed212f" />
+  <img width="270" src="https://github.com/user-attachments/assets/9f32604a-1545-4a22-b11b-d88221200fa2" />
 </p>
 
-> PS: É importante arrumar o *size* do `TextureRect` antes de tudo, senão você vai ter problemas para entender o que está acontecendo depois. Se adicionar o `SubViewport` ao `TextureRect` sem fazer essa etapa, ele vai apreencher o *size* automaticamente com os valores corretos, mas internamente a engine vai entender que é para diminiuir a imagem em vez de alterar a sua resolução.
+> PS: É importante arrumar o *size* do `TextureRect` antes de tudo, senão você vai ter problemas para entender o que está acontecendo depois. Se adicionar o `SubViewport` ao `TextureRect` sem fazer essa etapa, a engine vai preencher o *size* automaticamente com os valores corretos, mas internamente a engine vai entender que é para diminiuir a imagem em vez de alterar a sua resolução.
 
 O projeto recebeu um script global, chamado *game_state.gd* (primeira imagem abaixo à esquerda). Ele apenas armazena algumas variáveis globais do jogo. Note que o jogo começa com a resolução baixa de $240 \times 135$, isto é apenas para fazer o jogador ter que ir nas configurações e trocar (o que é o propósito de todo este projeto, basicamente). Os dois trechos de script mostrados à direita são da cena Main. Um mostrando a inicialização do jogo com a resolução global. O outro mostrando como as alterações de configuração emitem sinais que alteram a resolução e modo de visualização.  
 
@@ -89,3 +91,8 @@ O `SubViewport` deve estar configurado com a resolução máxima e a propriedade
 A função `DisplayServer.window_set_mode()` é geral do projeto, então não importa em qual cena ela é alterada, vai alterar e vai se manter pelo jogo inteiro. O mesmo não vale para a resolução. Precisamos replicar a estrutura de `TextureRect` e `SubViewport` em todas as cenas que são afetadas pela mudança de resolução. Provavelmente deve ser mais interessante rodar o jogo inteiro numa única cena Main com essa estrutura, mas por enquanto estamos no esquema de troca de cenas ainda. Para um jogo pequeno como este, não tem problema.
 
 Acesse [este link](https://felipebottega.github.io/Games/Manual/Rendering/Multiple%20resolutions%20-%20Game/html/) para conferir como ficou o jogo!
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Fixing%20jitter%2C%20stutter%20and%20input%20lag">Próximo ➡</a>
+</p>
