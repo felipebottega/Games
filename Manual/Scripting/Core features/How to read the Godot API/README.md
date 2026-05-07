@@ -1,6 +1,6 @@
 # How to read the Godot API
 
-O propósito deste tutorial é ensinar como navegar na documentação de classes da Godot. Para quem já tem experiência lendo documentações, este tutorial não oferece nenhuma novidade.
+O propósito deste tutorial é ensinar como navegar na [documentação de classes da Godot](https://docs.godotengine.org/en/stable/classes/index.html). Para quem já tem experiência lendo documentações, este tutorial não oferece nenhuma novidade.
 
 ## O que é API?
 
@@ -15,7 +15,7 @@ func somar(a, b):
     return a + b
 ```
 
-Por outro lado, suponha que ssa função pertence ao script *math_utils.gd*, que foi feito para ser instanciado e utilizado por outros códigos.
+Por outro lado, suponha que essa função pertence ao script *math_utils.gd*, que foi feito para ser instanciado e utilizado por outros códigos.
 
 ```python
 # math_utils.gd
@@ -32,7 +32,7 @@ Para finalizar, vale lembrar que API não é apenas composta de funções, mas t
 O que eles chamam de "API da Godot" neste contexto é a documentação da API, não a API em si. Você pode acessar essa documentação indo em *class reference* na [documentação oficial](https://docs.godotengine.org/en/stable/index.html) ou no *search help* do editor. 
 
 <p align="center">
-    <img width="400" src="https://github.com/user-attachments/assets/fb3b95b0-57cd-4ddd-91a0-3cc2023fae8e" />
+    <img width="500" src="https://github.com/user-attachments/assets/fb3b95b0-57cd-4ddd-91a0-3cc2023fae8e" />
 </p>
 
 Segue abaixo a estrutura geral da documentação de uma classe em Godot.
@@ -209,3 +209,8 @@ A documentação sempre vai seguir a estrutura mostrada acima. O que cada item d
 - **Notes:** Observações importantes, limitações ou comportamentos que não são óbvios.
 
 - **Examples:** Exemplos de código mostrando como usar a classe na prática.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Overview%20of%20debugging%20tools">Próximo ➡</a>
+</p>
