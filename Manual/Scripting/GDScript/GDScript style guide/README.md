@@ -12,20 +12,22 @@ No exemplo abaixo, temos 3 estruturas: extends, variáveis da instância e funç
     <img width="400" src="https://github.com/user-attachments/assets/6a15d305-7fdd-4fb5-ae1d-77d4b29c3605" />
 </p>
 
+> PS: Tanto nessa imagem quanto em outros exemplos deste tutorial, eu listei um elemento por linha para explicar algumas coisas, mas a ideia geral é só fazer essa quebra de linha se a linha exceder 100 caracteres. Isso será visto adiante.
+
 Eu sei que muito programador prefere usar duas linhas em branco para separar as funções, e um argumento para isso é que dentro das funções já se usa uma linha em branco para organizar as partes internas da função. Seguindo essa lógica, deveríamos ter 3 linhas para separar as grandes estruturas, o que eu já acho demais. E deixar de usar essa separação das grandes estruturas eu não considero aceitável. Para mim, apenas uma linha de diferença entre as funções já é o suficiente para identificar visualmente.
 
 ## Comprimento da linha
 
-O recomendado é limitar cada linha a no máximo 100 caracteres. O próprio editor já mostra uma linha vertical para identificar este limite (ela já é mostrada ali por default).
+O recomendado é limitar cada linha a no máximo 100 caracteres. O próprio editor já mostra uma linha vertical para identificar este limite. Essa linha já é mostrada ali por default, mas é importante notar que é a segunda linha vertical (a primeira está muito apagada mas está ali, ela indica 80 caracteres).
 
 <p align="center">
-    <img width="650" src="https://github.com/user-attachments/assets/fc59d34e-b80b-46cd-a8bb-c265d442adfb" />
+    <img width="720" src="https://github.com/user-attachments/assets/fc59d34e-b80b-46cd-a8bb-c265d442adfb" />
 </p>
 
 ## Indentação
 
 - Use Tabs em vez de espaços para indentação.
-- Cada nível é um Tab a mais que o nível anterior.
+- Cada nível de aninhamento é um Tab a mais que o nível anterior.
 - Para variáveis com diversos elementos, usar um Tab para quebra de linhas entre os elementos quando a linha ultrapassar o limite de 100 caracteres. Os símbolos limitadores (parênteses, chaves, etc) ficam separados dos elementos, sendo que o primeiro fica na mesma linha da variável e o segundo uma linha após os elementos, e alinhado verticalmente com a variável.
 
 ```python
@@ -47,8 +49,6 @@ var character_dict = {
 ```
 
 Note que esse exemplo dado é bastante artificial. Seria totalmente factível usar um dicionário com as chaves "Hero", "NPC" e "Villan", e cada chave corresponder a um outro dicionário com os três campos descritos. 
-
-> PS: O Tab é em relação à variável container. Se ela estiver dentro de outra estrutura e for necessário dar 5 Tabs para checar ao nível dela (por exemplo), então cada elemento vai necessitar de 6 Tabs. Em muitos editores (incluindo a Godot), ao dar ENTER de uma linha para a outra, automaticamente ele já vai posicionar corretamente.
 
 > PS: Sempre coloque uma vírgula no último elemento da variável, mesmo que ocupe uma única linha. Você pode ver que fizemos isso nos exemplos acima. É interessante fazer isso pois, caso você queira adicionar mais elementos futuramente, o diff não vai acusar o último elemento que estava antes.
 
@@ -84,7 +84,6 @@ change_color(
 
 A ideia de usar vários elementos por linha continua valendo, caso isso ajude na organização.
 
-
 ```python
 func change_color(
     node,
@@ -99,8 +98,6 @@ change_color(
     0.3
 )
 ```
-
-Em geral, indentação de variáveis de funções vai ocorrer mais nas chamadas do que nas definições, pois as chamadas tem inputs que geralmente vão ocupar mais espaço de linha.
 
 ## Múltiplas condicionais
 
@@ -121,7 +118,7 @@ if (
 	pass
 ```
 
-[Anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#controle-de-fluxo), introduzimos o if ternário mas usamos uma convenção antiga de escrita. Vamos colocar aqui o estilo antigo e o novo (recomendado) para referência.
+[Anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#controle-de-fluxo), introduzimos o if ternário mas usamos uma convenção antiga de escrita. Vou colocar aqui o estilo antigo e o novo (recomendado) para referência.
 
 **Antigo**
 
@@ -163,7 +160,7 @@ Confesso que eu prefiro o estilo antigo, não apenas para o if ternário, mas pa
 
 ## Comentários
 
-Já falamos bastante sobre comentários no [tutorial de referência](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#coment%C3%A1rios). Porém, naquele tutorial apenas falamos sobre as funcionalidades que o editor oferece, mas não sobre convenções de como fazer comentários. Vamos listar o nosso estilo aqui.
+Já falamos bastante sobre comentários no [tutorial de referência](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference#coment%C3%A1rios). Porém, naquele tutorial apenas falamos sobre as funcionalidades que o editor oferece, mas não sobre convenções de como fazer comentários.
 
 - Comentários sempre são uma frase, começando com letra maiúscula e terminando com ponto final. Isso vale mesmo para o caso em que o comentário é uma única palavra.
 
@@ -194,7 +191,7 @@ var w = x + w # Comentário curto pois o comando é muito simples e direto de en
 
 ## Espaços
 
-- Sempre use espaços entre operadores, após vírgulas e após dois pontos (:) de dicionários. Acesso a elementos de arrays ou dicionário com colchetes `[ ]` não deve incluir espaçamentos.
+- Sempre use espaços entre operadores, após vírgulas e após dois pontos (:) de dicionários. Acesso a elementos de arrays ou dicionários com colchetes `[ ]` não deve incluir espaçamentos.
 
 **Bom**
 
@@ -319,7 +316,7 @@ var direction: Vector3 = Vector3(1, 2, 3)
 
 ## Estrutura do código 
 
-A estrutura do código é a ordem que os blocos de código devem aparecer no script. Vou seguir quase igual a sugestão oficial, apenas com algumas simplificações e ajustes. A numeração abaixo se refere ao número do item, não a linha de fato. Também deve-se incluir as quebras de linhas entre cada bloco, de acordo com a convenção descrita anteriormente.
+A estrutura do código é a ordem que os blocos de código devem aparecer no script. Vou seguir quase igual a sugestão oficial, apenas com algumas simplificações e ajustes. Também deve-se incluir as duas linhas de espaçamento entre cada bloco, de acordo com a convenção descrita anteriormente.
 
 ```javascript
 ┌─ Inicialização ────────────────┐
@@ -375,6 +372,11 @@ Vamos falar um pouco sobre cada um dos itens acima.
 - **@onready variables:** Variáveis que serão carregadas assim que a cena for carregada.
 - **static methods/functions:** Funções estáticas da classe. Estas funções não têm acesso a `self` nem às variáveis de instâncias, mas podem acessar variáveis estáticas. Por isso elas ficam separadas das funções normais.
 - **overridden built-in virtual methods/functions:** São funções nativas da própria Godot que você sobrescreve. A ordem sugerida acompanha o ciclo de vida do node: criação, entrada na árvore, prontidão, processamento por frame e processamento físico.
-- **overridden custom methods/functions:** São as funções que vêm de uma classe base sua, não de uma built-in da Godot. É importante separae isso porque para distinguir rapidamente o que é comportamento herdado da engine e o que é da sua própria hierarquia.
+- **overridden custom methods/functions:** São as funções que vêm de uma classe base sua, não de uma built-in da Godot. É importante separar isso para distinguir rapidamente o que é comportamento herdado da engine e o que é da sua própria hierarquia.
 - **remaining methods/functions:** São as funções normais da classe que não são nativas da engine e não são overrides de uma base customizada sua. Aqui entram as funções de interface e utilitárias do seu script.
 - **inner classes:** São classes declaradas dentro do próprio script. A ideia de deixá-las por último é que elas são parte da estrutura do arquivo, mas não costumam ser o foco principal.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20exported%20properties">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system">Próximo ➡</a>
+</p>
