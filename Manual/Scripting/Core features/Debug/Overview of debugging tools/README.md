@@ -1,25 +1,15 @@
 # Overview of debugging tools
 
-A Godot vem com um debugger e profiler poderosos para rastrear erros, inspecionar seu jogo em tempo de execução, monitorar métricas essenciais e medir o desempenho. Ele também oferece opções para visualizar shapes de colisão e polígonos de navegação no jogo em execução. Abaixo, temos os dois principais painéis responsáveis por esta parte. 
+A Godot vem com um debugger e profiler poderosos para rastrear erros, inspecionar seu jogo em tempo de execução, monitorar métricas essenciais e medir o desempenho. Também há opções para visualizar shapes de colisão e polígonos de navegação no jogo em execução. . 
 
-<p align="center">
-  <img width="1100" src="https://github.com/user-attachments/assets/326b1c64-00f0-4872-8f06-58a8dff00064" />
-</p>
-
-<p align="center">
-  <img width="1100" src="https://github.com/user-attachments/assets/28431ac2-58bc-47ed-be5a-50091275a547" />
-</p>
-
-Entraremos mais em detalhes sobre cada painel acima nos tutoriais a seguir.
-
-> PS: Já vimos um pouco do sobre profiles no [tutorial de otimização de CPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization).
+> PS: Já vimos um pouco do sobre profiler no [tutorial de otimização de CPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization).
 
 ## Debug menu options
 
 Vamos começar falando sobre as opções de debug do editor. Já explicamos sobre alguns de seus campos em momentos de necessidade, mas agora chegou a hora de abordar isso sistematicamente.
 
 <p align="center">
-  <img width="200" src="https://github.com/user-attachments/assets/9fe88d22-f570-48d4-a5da-629a2fe0e3b1" />
+  <img width="240" src="https://github.com/user-attachments/assets/9fe88d22-f570-48d4-a5da-629a2fe0e3b1" />
 </p>
 
 - **Deploy with Remote Debug:** Quando esta opção está habilitada, exportar com *one-click deploy* fará com que o executável tente se conectar ao endereço IP deste computador para que o projeto em execução possa ser debugado. Esta opção destina-se à depuração remota (normalmente com um dispositivo móvel).
@@ -39,7 +29,7 @@ Vamos começar falando sobre as opções de debug do editor. Já explicamos sobr
 Em programação, um "breakpoint" é um ponto do código que você determina para pausar a execução. A partir daquele ponto, é possível executar as tarefas seguintes uma por vez, para entender exatamente o que está acontecendo. Esta funcionalidade permite detectar bugs e erros mais facilmente. A Godot possui duas maneiras de se inserir breakpoints no código: clicando no lado esquerdo do código para criar uma "bolinha vermelha" ou inserindo a keyword `breakpoint` no código.
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/935b787c-19b7-4902-a424-ae95ba602728" />
+  <img width="500" src="https://github.com/user-attachments/assets/935b787c-19b7-4902-a424-ae95ba602728" />
 </p>
 
 A bolinha é mais rápida de criar e desfazer, mas ela pode sumir entre versões diferentes da engine ou mesmo em máquinas diferentes. A keyword é garantida de sempre estar lá, já que é inserida diretamente no código. Só é chato ter que ficar colocando mais linhas de código que serão removidas posteriormente.
@@ -50,7 +40,7 @@ Uma vez que você criou o breakpoint e executou o jogo, ele vai parar exatamente
   <img width="1000" src="https://github.com/user-attachments/assets/d5a774aa-944f-4379-adfe-3c48de743fd8" />
 </p>
 
-Para prosseguir, você pode clicar na aba *Debug* logo acima do script e selecionar *Step Into* ou *Step Over*. A primeira prossegue para a próxima linha da execução e entra nas linhas das funções, enquanto que a segunda não entra nas funções (considera a função como uma única linha e faz a execução toda da função em uma passo). A opção *Continue* sai do modo de pausa e continua a execução do jogo normalmente. 
+Para prosseguir com a execução, você pode clicar na aba *Debug* logo acima do script e selecionar *Step Into* ou *Step Over*. A primeira prossegue para a próxima linha da execução e entra nas linhas das funções, enquanto que a segunda não entra nas funções (considera a função como uma única linha e faz a execução toda da função em uma passo). A opção *Continue* sai do modo de pausa e continua a execução do jogo normalmente. 
 
 <p align="center">
   <img width="550" src="https://github.com/user-attachments/assets/cef6a2d0-66ee-4cdd-b2c8-1c3be0213cf2" />
@@ -63,7 +53,7 @@ No *Project Settings* há diversas configurações de Debug que podem ser intere
 - **Settings:** Estas são algumas configurações gerais, como imprimir o FPS atual no painel de output, a quantidade máxima de funções durante o profiling, entre outras.
 - **File Logging:** Estas configurações permitem registrar os logs do console e mensagens de erro em arquivos.
 - **GDScript:** Estas configurações permitem ativar/desativar avisos específicos do GDScript. Você também pode desativar os avisos completamente. Consulte o tutorial [GDScript warning system](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20warning%20system) para obter mais informações.
-- **Shader Language:** Estas configurações permitem ativar/desativar avisos específicos do shaders. Você também pode desativar os avisos completamente.
+- **Shader Language:** Estas configurações permitem ativar/desativar avisos específicos dos shaders.
 - **Canvas Items:** Estas configurações são para debug de redraw de itens da tela.
 - **Shapes:** Você pode ajustar a cor de formas que aparecem apenas para fins de debug, como formas de colisão e navegação.
 
@@ -72,14 +62,14 @@ No *Project Settings* há diversas configurações de Debug que podem ser intere
 Em várias partes do tutorial foi dito que era necessário ativar as opções avançadas, como feito logo acima. Para esclarecer, esta opção está à direita na janela do *Project → Project Settings → General*, como indicado na imagem abaixo.
 
 <p align="center">
-  <img width="850" src="https://github.com/user-attachments/assets/b99a332b-6d9a-4eb7-aeca-94f0334c071c" />
+  <img width="900" src="https://github.com/user-attachments/assets/b99a332b-6d9a-4eb7-aeca-94f0334c071c" />
 </p>
 
 Vou deixar aqui como referência as diferenças entre o modo normal de avançado.
 
 <p align="center">
-  <img width="150" src="https://github.com/user-attachments/assets/baf62b32-3618-495a-89ab-f847b4ca451a" />
-  <img width="160" src="https://github.com/user-attachments/assets/59aa7c8b-b179-4e47-a4f5-3e44e523dec4" />
+  <img width="170" src="https://github.com/user-attachments/assets/baf62b32-3618-495a-89ab-f847b4ca451a" />
+  <img width="180" src="https://github.com/user-attachments/assets/59aa7c8b-b179-4e47-a4f5-3e44e523dec4" />
 </p>
 
 ## Remote in scene dock
@@ -90,4 +80,9 @@ Ao executar um jogo no editor, duas opções aparecem na parte superior do paine
   <img width="250" src="https://github.com/user-attachments/assets/7f1136a7-ec41-4fb6-a97b-edeb4bd1f2a4" />
 </p>
 
-Eu já usei bastante a aba *Remote* em projetos anteriores para saber se certas instâncias estavam sendo criadas ou não na cena durante a execução.
+Eu já usei bastante a aba *Remote* em projetos anteriores para saber se certas instâncias estavam sendo criadas ou não durante a execução.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Output%20panel">Próximo ➡</a>
+</p>
