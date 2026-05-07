@@ -33,7 +33,7 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 | `const`        | Define uma constante. Veja Constantes. |
 | `enum`         | Define um enum. Veja Enums. |
 | `var`          | Define uma variável. Veja Variáveis. |
-| `breakpoint`   | Auxiliar do editor para pontos de parada (debug). Diferente dos breakpoints criados clicando na margem, este é armazenado no script, tornando-o persistente entre máquinas com controle de versão. |
+| `breakpoint`   | Auxiliar do editor para pontos de parada (debug). Diferente dos breakpoints criados clicando na margem, este é armazenado no script, tornando-o persistente entre máquinas distintas. |
 | `preload`      | Pré-carrega uma classe ou variável. Veja Classes como recursos. |
 | `await`        | Aguarda um sinal ou uma corrotina terminar. Veja Aguardando sinais ou corrotinas. |
 | `assert`       | Verifica uma condição e registra erro se falhar. Ignorado em builds não-debug. Veja assert. |
@@ -74,19 +74,19 @@ Todo conteúdo deste tópico já está muito bem documentado no [site oficial](h
 O comportamento de alguns operadores pode ser diferente do que você espera:
  - No operador `/`, se ambos os valores forem do tipo `int`, então será realizada a divisão inteira em vez de fracionária. Por exemplo, `5 / 2 == 2`, e não `2.5`. Se isso não for desejado, use pelo menos um float na conta (`x / 2.0`) ou faça um cast (`x / float(y)`).
  - O operador `%` está disponível apenas para `int`. Para float, use a função `fmod()`.
- - Os operadores `==` e `!=` às vezes permitem comparar valores de tipos diferentes (por exemplo, `1 == 1.0` é true), mas em outros casos isso pode causar erro em tempo de execução. Se você não tiver certeza sobre os tipos dos elementos, pode usar a função `is_same()` (mas note que ela é mais rigorosa quanto a tipos e referências). Para comparar float, use as funções `is_equal_approx()` e `is_zero_approx()`.
+ - Os operadores `==` e `!=` às vezes permitem comparar valores de tipos diferentes (por exemplo, `1 == 1.0` é *true*), mas em outros casos isso pode causar erro em tempo de execução. Se você não tiver certeza sobre os tipos dos elementos, pode usar a função `is_same()` (mas note que ela é mais rigorosa quanto a tipos e referências). Para comparar float, use as funções `is_equal_approx()` e `is_zero_approx()`.
 
 ## Anotações
 
-Anotações são marcações especiais no GDScript que começam com `@` e servem para modificar o comportamento do código ou dizer algo ao editor/compilador. São instruções extras que dizem à engine como tratar partes do seu script.
+Anotações são marcações especiais do GDScript que começam com `@` e servem para modificar o comportamento do código ou dizer algo ao editor/compilador. São instruções extras que dizem à engine como tratar partes do seu script.
 
 ### @export
 
-Esta anotação permite que uma variável apareça no *Inspector* da Godot, para você editar sem mexer no código.
+Esta anotação permite que uma variável apareça no *Inspector*, para você editar sem mexer no código.
 
 ### @onready
 
-Inicializa uma variável só depois que o node estiver pronto na cena. Ou seja, caso ela dependa de algo que dependa do corregamento da cena, não vai quebrar a execução.
+Inicializa uma variável só depois que o node estiver pronto na cena. Ou seja, caso ela dependa do corregamento da cena, não vai quebrar a execução.
 
 > PS: Não é obrigatório implementar a função `_ready()` quando se usa a anotação `@onready`.
 
@@ -135,18 +135,18 @@ Se estiver trabalhando com uma classe nomeada, você pode inserir comentários c
 
 ## Regiões de código
 
-Uma região de código é um tipo de comentário especial também, mas nesse caso é necessário inserir dois comentários: um para dizer onde começa a região e o outro para dizer onde termina. Você coloca `#region` logo antes do trecho do código de interesse e coloca `#endregion` logo após o trecho. Abaixo temos um exemplo de como isso é feito. O interessante deste método é que você pode colapsar a região inteira ao clicar na setinha ao lado do `#region`. Isso é bastante útil para organizar visualmente código grandes.
+Uma *região de código* é um tipo de comentário especial também, mas nesse caso é necessário inserir dois comentários: um para dizer onde começa a região e o outro para dizer onde termina. Você coloca `#region` logo antes do trecho do código de interesse e coloca `#endregion` logo após o trecho. Abaixo temos um exemplo de como isso é feito. O interessante deste método é que você pode colapsar a região inteira ao clicar na setinha ao lado do `#region`. Isso é bastante útil para organizar visualmente código grandes.
 
 <p align="center">
- <img width="200" src="https://github.com/user-attachments/assets/723a6f8f-6cec-4ea5-8774-c818a948999c" />
- <img width="300" src="https://github.com/user-attachments/assets/419f7e84-0125-42cb-b535-4fd96655fc82" />
+ <img width="220" src="https://github.com/user-attachments/assets/723a6f8f-6cec-4ea5-8774-c818a948999c" />
+ <img width="330" src="https://github.com/user-attachments/assets/419f7e84-0125-42cb-b535-4fd96655fc82" />
 </p>
 
 Também é possível acrescentar uma descrição na linha do `#region`, muito útil para saber do que trata a região de código sem ter que abri-la.
 
 <p align="center">
- <img width="450" src="https://github.com/user-attachments/assets/7de42708-9685-45eb-adb8-f073a11c3cc9" />
- <img width="500" src="https://github.com/user-attachments/assets/54459858-71d1-4d58-b8a1-228be851165e" />
+ <img width="470" src="https://github.com/user-attachments/assets/7de42708-9685-45eb-adb8-f073a11c3cc9" />
+ <img width="530" src="https://github.com/user-attachments/assets/54459858-71d1-4d58-b8a1-228be851165e" />
 </p>
 
 ## Continuação de linhas
@@ -207,7 +207,7 @@ var b = 1 + \
 
 | Tipo                  | Descrição |
 |-----------------------|----------|
-| `Array`               | Lista dinâmica de elementos de qualquer tipo (inclusive outros arrays/dictionaries). Indexado a partir de `0` e aceita índices negativos (`-1` = último). Passado por referência. <br><br>**Exemplo:**<br>`var arr = [1, 2, 3]`<br>`arr[-1] # 3`<br>`arr.append(4)` |
+| `Array`               | Lista dinâmica de elementos de qualquer tipo (inclusive outros arrays/dicionários). Indexado a partir de `0` e aceita índices negativos (`-1` = último). Passado por referência. <br><br>**Exemplo:**<br>`var arr = [1, 2, 3]`<br>`arr[-1] # 3`<br>`arr.append(4)` |
 | `Array[Type]`         | Array tipado que garante o tipo dos elementos em tempo de execução e análise estática. Mais seguro e geralmente mais performático que `Array` puro. Não suporta tipos aninhados (`Array[Array[int]]`). <br><br>**Exemplo:**<br>`var a: Array[int]`<br>`var b: Array[Node]`<br><br>**Importante:** não é possível atribuir diretamente arrays de tipos diferentes (mesmo com herança). Use `assign()` para copiar:<br>`b.assign(a)` |
 | `PackedArray`         | Arrays otimizados para performance e uso de memória. Mais rápidos para iterar/modificar e mais compactos, mas com menos métodos (ex: não tem `map`). Ideais para grandes volumes de dados. |
 | `PackedByteArray`     | Array de bytes (`0–255`). |
@@ -264,7 +264,7 @@ Definir os tipos das variáveis deixa o teu código mais robusto e ajuda a próp
 
 <p align="center">
 	<img width="150" src="https://github.com/user-attachments/assets/47b2e766-c5f4-4902-9603-59449669bbab" />
-	<img width="210" src="https://github.com/user-attachments/assets/f6e4419b-e2d6-4bd3-baa0-ea66d8fa1f85" />
+	<img width="230" src="https://github.com/user-attachments/assets/f6e4419b-e2d6-4bd3-baa0-ea66d8fa1f85" />
 </p>
 
 Para descobrir/checar o tipo de uma variável, você pode usar a função `typeof()`. O retorno desta função será uma constante inteira. Cada valor corresponde a um tipo internamente. Caso você queira o nome do tipo em vez de um número, pode usar o comando `type_string(typeof())`.  Segue abaixo a tabela geral de conversões.
@@ -347,6 +347,8 @@ Neste exemplo, a variável `max_id` é uma variável estática da classe. Isso s
 
 No caso de tipo básicos, a engine sempre vai tentar converter mesmo que não seja subtipo. Por exemplo, declarar `var my_int: int` e depois fazer `my_int = "123" as int`. Porém, algo como `my_int = Vector2() as int` não tem como funcionar.
 
+> PS: `Vector2()` é o vetor $(0, 0)$.
+
 ## Constantes
 
 Constantes são valores declarados que não podem ser alterados depois. Os exemplos abaixo mostram como declarar constantes.
@@ -365,7 +367,7 @@ const F = sin(20)
 
 ## Enum
 
-Enums são basicamente uma abreviação para constantes e são bastante úteis se você quiser constantes que sejam números inteiros consecutivos. Por exemplo, `enum {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}` define um `enum`, em que cada variável é um `int`, começando em $0$ e seguindo sequencialmente. Essa definição é equivalente à mostrada abaixo.
+Enum serve para armazenar várias constantes em sequência, é bastante útil quando você constantes que sejam números inteiros consecutivos. Por exemplo, `enum {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}` define um `enum` em que cada variável é um `int`, começando em $0$ e seguindo sequencialmente. Essa definição é equivalente à mostrada abaixo.
 
 ```python
 const TILE_BRICK = 0
@@ -374,11 +376,11 @@ const TILE_SPIKE = 2
 const TILE_TELEPORT = 3
 ```
 
-Se você nomear um `enum`, ele será considerado um dicionário constante, em que as chaves são os nomes que você definiu. Por exemplo, você pode definir `enum Tiles {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}`. As chaves não são armazenadas como constantes e o acesso aos valores deve ser feita com a sintaxe `Tiles.TILE_BRICK`, por exemplo.
+Se você nomear um `enum`, ele será considerado um dicionário constante, em que as chaves são os nomes que você definiu. Por exemplo, você pode definir `enum Tiles {TILE_BRICK, TILE_FLOOR, TILE_SPIKE, TILE_TELEPORT}`. As chaves não são armazenadas como constantes e o acesso aos valores deve ser feito com a sintaxe `Tiles.TILE_BRICK`, por exemplo.
 
 ## Funções
 
-A definição de funções é bastante semelhante a Python. A maior diferença é o uso de `func` em vez de `def` para inicializar a função. Assim como em Python, o `return` não é obrigatório (ma caso não tenha, fica implícito que a função retorna `null`). 
+A definição de funções é bastante semelhante a Python. A maior diferença é o uso de `func` em vez de `def` para inicializar a função. Assim como em Python, o `return` não é obrigatório (caso não tenha, fica implícito que a função retorna `null`). 
 
 ### Parâmetros opcionais
 
@@ -426,7 +428,7 @@ func map(item: int, function: Callable) -> int:
 
 ### Funções estáticas
 
-Assim como temos variáveis estáticas em classes, também existem as *funções estáticas*. Estas funções não devem estar dentro de classes internas a uma classe, pois elas servem para referenciar apenas à classe geral e suas variáveis estáticas. Deste modo, estas funções não são acessíveis por instâncias, e elas mesmas não são capazes de acessar variáveis de instâncias. Para definir uma variável estática, basta utilizar a sintaxe `static func` na declaração dela. 
+Assim como temos variáveis estáticas em classes, também existem as *funções estáticas*. Estas funções não devem estar dentro de classes internas a uma classe, pois elas servem para referenciar apenas à classe principal e suas variáveis estáticas. Deste modo, estas funções não são acessíveis por instâncias, e elas mesmas não são capazes de acessar variáveis de instâncias. Para definir uma função estática, basta utilizar a sintaxe `static func` na declaração dela. 
 
 Se você quiser acessar métodos da classe diretamente, sem criar instâncias, faça isso com funções estáticas. 
 
@@ -672,22 +674,22 @@ match point:
 
 ### Classes sem nome
 
-Todo script de Godot é considerado como uma classe. Se nenhum nome for dado à classe representando o script, ela será uma classe sem nome. Neste caso, você deve referenciar esta classe em outros scripts usando o caminho absoluto até ela. Considere a classe abaixo de exemplo.
+Todo script de Godot é considerado como uma classe. Se nenhum nome for dado à classe representando o script, ela será uma classe sem nome. Neste caso, você deve referenciar esta classe em outros scripts usando o caminho absoluto até ela. Considere a classe/script abaixo de exemplo.
 
 <p align="center">
-	<img width="400" src="https://github.com/user-attachments/assets/cb2ad07d-f5fa-4070-bad3-1da533a425ed" />
+	<img width="450" src="https://github.com/user-attachments/assets/cb2ad07d-f5fa-4070-bad3-1da533a425ed" />
 </p>
 
 Agora considere um outro script em uma cena qualquer. O script desta cena pode herdar de `my_class.gd` usando a sintaxe conhecida `extends "res://my_class.gd"`. A partir daí, todos os métodos e atributos da classe herdada estarão disponíveis no script.
 
 <p align="center">
-	<img width="700" src="https://github.com/user-attachments/assets/966ec944-7f54-456e-bcb6-b2f44155d5b3" />
+	<img width="750" src="https://github.com/user-attachments/assets/966ec944-7f54-456e-bcb6-b2f44155d5b3" />
 </p>
 
 Também é possível obter o mesmo resultado utilizando as chamadas `load` e `new` da Godot.
 
 <p align="center">
-	<img width="750" src="https://github.com/user-attachments/assets/a9dda508-eb09-4485-82c7-4a9f1edeb4d9" />
+	<img width="850" src="https://github.com/user-attachments/assets/a9dda508-eb09-4485-82c7-4a9f1edeb4d9" />
 </p>
 
 > PS: Para criar uma instância de uma classe, usamos o método `new`. Para criar uma instância de uma cena, usamos o método `instantiate`. Para carregar uma classe (de um script) ou uma cena, ambas as funções `load` e `preload` podem ser usadas.
@@ -697,15 +699,15 @@ Também é possível obter o mesmo resultado utilizando as chamadas `load` e `ne
 Se quiser que a sua classe tenha um nome, basta usar o comando `class_name {nome}` no topo do arquivo, substituindo *nome* pelo nome que quiser. Nesse último exemplo, vamos chamar a nossa classe de "amazing". Como classes nomeadas automaticamente se tornam globais no projeto, não é mais necessário usar nem `extends` nem `load`. Também é importante lembrar que classes nomeadas automaticamente podem ser encontradas pelo help do editor e passam a possuir a sua própria documentação. Isso foi explicado na seção de comentários.
 
 <p align="center">
-	<img width="400" src="https://github.com/user-attachments/assets/00305d8a-f652-4227-bfa3-ff670d83668c" />
-	<img width="850" src="https://github.com/user-attachments/assets/73db02ee-8d38-464e-a958-9fd5c80fe3df" />
+	<img width="450" src="https://github.com/user-attachments/assets/00305d8a-f652-4227-bfa3-ff670d83668c" />
+	<img width="900" src="https://github.com/user-attachments/assets/73db02ee-8d38-464e-a958-9fd5c80fe3df" />
 </p>
 
 > PS: Este assunto foi brevemente abordado no projeto de [números complexos](https://github.com/felipebottega/Games/edit/gh-pages/Manual/2D/Rendering/Custom%20drawing%20in%202D%20-%20Complex%20Numbers/README.md#script-externo).
 
 ### Ícone
 
-Além de poder nomear classes, também é possível associa-la a um ícone, que ficará visível no *FileSystem*. Para isso, basta inserir a anotação `@icon` no topo do script, com o caminho até o arquivo do ícone como argumento.
+Além de poder nomear classes, também é possível associá-la a um ícone, que ficará visível no *FileSystem*. Para isso, basta inserir a anotação `@icon` no topo do script, com o caminho até o arquivo do ícone como argumento.
 
 <p align="center">
 	<img width="300" src="https://github.com/user-attachments/assets/174a07f4-d052-43b9-a79e-70f1f38edfe2" />
@@ -733,7 +735,7 @@ Para checar se um objeto herda de uma certa classe, você pode usar a sintaxe `i
 
 O construtor de classe é a função nativa `_init`, que já foi abordada [bem no início](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%202#_init-vs-_ready) desta série de tutoriais. Naquela época, apenas o descrevemos como uma função que inicializa variáveis básicas de scripts antes de qualquer node entrar em cena. Esta inicialização de variáveis serve para criar instâncias com parâmetros, assim como é o `__init__` de Python. 
 
-Abaixo, segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Neste caso ela possui um construtor para inicializar instâncias. Neste exemplo, o construtor exige uma variável inteira de entrada, é o parâmetro para inicializar uma instância. Quando a instância é inicializada com o comando `var my_class_instance = amazing2.new(100)`, a função `_init` é executada com este parâmetro. Isto ocorre antes de qualquer `_ready` na cena, a não ser que a instância seja criada explicitamente após o `_ready`.
+Abaixo, segue um exemplo em que definimos uma nova classe nomeada, `amazing2`. Ela possui um construtor para inicializar instâncias. Neste exemplo, o construtor exige uma variável inteira de entrada, é o parâmetro para inicializar uma instância. Quando a instância é inicializada com o comando `var my_class_instance = amazing2.new(100)`, a função `_init` é executada com este parâmetro. Isto ocorre antes de qualquer `_ready` na cena, a não ser que a instância seja criada explicitamente após o `_ready`.
 
 <p align="center">
 	<img width="300" src="https://github.com/user-attachments/assets/a7b67bc0-d234-4596-a60a-cc261d3a595b" />
@@ -769,9 +771,9 @@ Uma instância pode ser definida com o comando `var z = ComplexLib.Complex.new(1
 
 ## setters e getters
 
-As keywords `set` e `get` servem para fazer algo quando a variável é acessada ou alterar algo quando o valor da variável é alterado, respectivamente. Só é possível usar estas keywords em variáveis da instância, não serve para variáveis dentro de funções. 
+A keyword `get` serve para executar algo quando a variável é acessada/lida. A keyword `set` serve para executar algo quando a variável é alterada/escrita. Só é possível usar estas keywords em variáveis da instância, não serve para variáveis dentro de funções. 
 
-No exemplo abaixo, o `get` diz que a variável `seconds` deve ser igual a `milliseconds / 1000` sempre que `seconds` for acessada. Se alguma computação intermediária a alterou, ela voltará "ao normal" assim que tentarem acessá-la (pode-se dizer que ela tem um vínculo com `milliseconds`). O `set` diz que `milliseconds` deve ser alterado para `milliseconds = value * 1000` sempre que o valor de `seconds` for alterado (alterado do valor anterior para o novo valor `value`).
+No exemplo abaixo, o `get` diz que a variável `seconds` deve retornar `milliseconds / 1000` sempre que `seconds` for acessada. Assim, `seconds` sempre refletirá o valor atual de `milliseconds` (pode-se dizer que ela tem um vínculo com `milliseconds`). O `set` diz que `milliseconds` deve ser alterado para `value * 1000` sempre que o valor de `seconds` for alterado (alterado do valor anterior para o novo valor `value`).
 
 ```python
 var milliseconds: int = 15000
@@ -782,6 +784,8 @@ var seconds: int:
 	set(value):
 		milliseconds = value * 1000
 ```
+
+> ⚠️ **Atenção:** É importante entender que o `get` não atribui um valor armazenado em `seconds`. Ele apenas define qual valor será retornado quando alguém acessar `seconds`. 
 
 <p align="center">
 	<img width="1100" src="https://github.com/user-attachments/assets/eac94ae4-190f-479b-b9b3-1d8ac1d54195" />
@@ -910,3 +914,8 @@ func get_five():
 A keyword `assert` pode ser usada para verificar condições em build debug. Os asserts são ignorados em builds que não sejam de debig. Isso significa que a expressão passada como argumento não será avaliada em um projeto exportado para produção. Devido a isso, os asserts não devem conter expressões que tenham efeitos colaterais. 
 
 Como exemplo, o comando `assert(i == 0)` verifica se `i` é igual a 0. Se `i` não for igual a 0, ocorrerá um erro de assert. Opcionalmente, você passar uma mensagem de erro personalizada para ser exibida, como `assert(enemy_power < 256, "Enemy is too powerful!")`.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Fixing%20jitter%2C%20stutter%20and%20input%20lag">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20reference%20-%20Big%20Math">Próximo ➡</a>
+</p>
