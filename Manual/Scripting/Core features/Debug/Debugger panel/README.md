@@ -26,7 +26,7 @@ Esta aba serve de complemento ao *Stack Trace*. A cada etapa do breakpoint, alé
 
 ## Profiler
 
-O *Profiler* é usado para ver qual código está sendo executado enquanto seu projeto está em uso e como isso afeta a performance. Já abordamos este tópico no tutorial de [otimização da CPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization). O próximo tutorial será inteiramente dedicado a este tema.
+O *Profiler* é usado para monitorar como cada código/objeto executado afeta a performance enquanto o jogo é executado. Já abordamos este tópico no tutorial de [otimização da CPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization). O próximo tutorial será inteiramente dedicado a este tema.
 
 ## Visual Profiler
 
@@ -44,13 +44,13 @@ A opção *Fit to Frame* deixa a escala do gráfico fixa, com a linha horizontal
 
 ## Monitors
 
-Já falamos sobre esta aba no tópico de [monitoramento da pipeline da GPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations#monitoramento-do-pipeline). Nesta aba, temos monitores de gráficos de diversos aspectos do jogo enquanto ele está em execução, como FPS, uso de memória, quantidade de nós em uma cena e muito mais. Todos os monitores rastreiam as estatísticas automaticamente, então mesmo que um monitor não esteja aberto enquanto o jogo estiver rodando, você pode abri-lo mais tarde e ver como os valores mudaram.
+Já falamos sobre esta aba no tópico de [monitoramento da pipeline da GPU](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations#monitoramento-do-pipeline). Nesta aba, temos monitores de gráficos de diversos aspectos do jogo enquanto ele está em execução, como FPS, uso de memória, quantidade de nodes em uma cena e muito mais. Todos os monitores rastreiam as estatísticas automaticamente, então mesmo que um monitor não esteja aberto enquanto o jogo estiver rodando, você pode abri-lo mais tarde e ver como os valores mudaram.
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/45990395-51e6-4456-bb8b-8e6603705c74" />
 </p>
 
-É possível também criar seus próprios monitores customizados. Veremos em um tutorial futuro como fazer isso.
+É possível também criar seus próprios monitores customizados. Veremos mais adiante como fazer isso.
 
 ## Video RAM
 
@@ -74,4 +74,9 @@ Esta aba contém uma lista de todos os nodes que se comunicam pela API multiplay
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/c7568b5f-d8ef-4e3a-b97e-4f9eb080ab0c" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Output%20panel">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler">Próximo ➡</a>
 </p>
