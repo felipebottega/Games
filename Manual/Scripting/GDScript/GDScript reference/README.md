@@ -813,7 +813,7 @@ Os sinais são uma ferramenta que permite que um objeto emita mensagens às quai
 
 ### Exemplo prático de sinais
 
-Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador na nossa árvore da cena. No script `character.gd` do personagem, definimos um sinal `health_changed` e o emitimos com `health_changed.emit()`. De um node *Game* mais acima em nossa árvore da cena, o conectamos à barra de vida usando o método `health_changed.connect()`. 
+Digamos que queremos uma barra de vida na tela que reaja às mudanças com uma animação, mas queremos manter a interface do usuário separada do jogador na nossa árvore da cena. No script `character.gd` do personagem, definimos um sinal `health_changed` e o emitimos com `health_changed.emit()`. No node *Game*, obtemos os nodes *Character* e *Lifebar*, e então conectamos o personagem, que emite o sinal, ao receptor, que neste caso é o node *Lifebar*. Isso permite que *Lifebar* reaja às mudanças sem precisar estar vinculada ao node *Character*.
 
 ```python
 # character.gd
@@ -823,8 +823,16 @@ signal health_changed
 func take_damage(amount):
 	var old_health = health
 	health -= amount
-
 	health_changed.emit(old_health, health)
+```
+
+```python
+# game.gd
+
+func _ready():
+	var character_node = get_node('Character')
+	var lifebar_node = get_node('UserInterface/Lifebar')
+	character_node.health_changed.connect(lifebar_node._on_Character_health_changed)
 ```
 
 ```python
@@ -837,18 +845,6 @@ func _on_Character_health_changed(old_value, new_value):
 		progress_bar.modulate = Color.GREEN
 
 	progress_bar.animate(old_value, new_value)
-```
-
-No node *Game*, obtemos os nodes *Character* e *Lifebar*, e então conectamos o personagem, que emite o sinal, ao receptor, que neste caso é o node *Lifebar*. Isso permite que *Lifebar* reaja às mudanças sem precisar estar vinculada ao node *Character*.
-
-```python
-# game.gd
-
-func _ready():
-	var character_node = get_node('Character')
-	var lifebar_node = get_node('UserInterface/Lifebar')
-
-	character_node.health_changed.connect(lifebar_node._on_Character_health_changed)
 ```
 
 > PS: A estrutura da criação de um sinal por código é sempre essa: `Node.metodo_do_sinal.connect(funcao_que_vai reagir_ao_sinal)`.  
