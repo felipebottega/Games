@@ -15,3 +15,8 @@ Uma vez que o jogo está sendo executado, vá em *Debugger → ObjectDB Profiler
 </p>
 
 A cada execução você pode salvar um novo snapshot. A ideia desta aba é salvar o snapshot quando houver mudanças que você quer comparar, pois esta aba permite fazer diff do projeto em momentos distintos. Não pretendo me aprofundar neste tópico, recomendo que teste a e explore a funcionalidade.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/The%20Profiler">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Debug/Custom%20performance%20monitors">Próximo ➡</a>
+</p>
