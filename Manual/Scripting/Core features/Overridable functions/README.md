@@ -1,10 +1,10 @@
 # Overridable functions
 
-Vimos uma descrição breve sobre o que são essas funções no [tutorial de estrutura do código](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#estrutura-do-c%C3%B3digo). Segue a decrição abaixo.
+Vimos uma descrição breve sobre o que são essas funções no [tutorial de estrutura do código](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/GDScript/GDScript%20style%20guide#estrutura-do-c%C3%B3digo). Segue a descrição abaixo.
 
 ***overridden built-in virtual methods/functions:** São funções nativas da própria Godot que você sobrescreve.*
 
-Estamos falando das funções da classe `Node` que vem vazios e prontos para serem sobrescritos. Cada uma tem uma finalidade própria definida pela engine. Vamos falar das mais usadas aqui, mas existem várias outras funções. Consulte a documentação oficial da [classe Node](https://docs.godotengine.org/en/stable/classes/class_node.html) para conhecer.
+Estamos falando das funções da classe `Node` que vem vazias e prontas para serem sobrescritas. Cada uma tem uma finalidade própria definida pela engine. Vamos falar das mais usadas aqui, mas existem várias outras funções. Consulte a documentação oficial da [classe Node](https://docs.godotengine.org/en/stable/classes/class_node.html) para conhecer.
 
 ## Overridable functions da classe Node
 
@@ -14,5 +14,10 @@ Estamos falando das funções da classe `Node` que vem vazios e prontos para ser
 - **_process:** Função que executa processos a cada frame.
 - **_physics_process:** Função que executa processos a cada frame físico.
 - **_input:** Primeira função que recebe inputs.
-- **_unhandled_input:** Última função que recebe inputs. Se o input não for consumido aqui, ele será ignorado completamente pelo jogo.
+- **_unhandled_input:** Última função que recebe inputs.
 - **_exit_tree:** Chamado quando o node está prestes a sair da árvore de cenas. Se o node tiver filhos, o seu `_exit_tree()` será chamado por último, depois que todos os seus filhos tiverem saído da árvore.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Creating%20script%20templates">Próximo ➡</a>
+</p>
