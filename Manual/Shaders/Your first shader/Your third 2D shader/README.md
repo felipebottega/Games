@@ -6,15 +6,15 @@ No tutorial anterior, eu apenas comentei sobre um dos efeitos e deixei o restant
 
 ## Leitura da texturas do frame anterior no shader
 
-Antes mesmo de falar dos experimentos, precisamos falar de uma técnica importante para certos tipos de shader. Existem casos em que o shader trabalha de forma iterativa, ou seja, ele não é apenas um efeito que atua sobre uma textura estática (todos os shaders do [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20second%202D%20shader) foram assim), mas sim um efeito que atua sobre o output do próprio efeito na textura no frame anterior. Isso significa que, a cada frame, a textura com o efeito do shader precisa se armazenada na memória e passada para a GPU no frame seguinte. Note que isso necessita de passar a textura completa entre CPU e GPU 2 vezes por frame. 
+Antes mesmo de falar dos experimentos, precisamos falar de uma técnica importante para certos tipos de shader. Existem casos em que o shader trabalha de forma iterativa, ou seja, ele não é apenas um efeito que atua sobre uma textura estática (todos os shaders do [tutorial anterior](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20second%202D%20shader) foram assim), mas sim um efeito que atua sobre o output do próprio efeito na textura no frame anterior. Isso significa que, a cada frame, a textura com o efeito do shader precisa ser armazenada na memória e repassada para a GPU no frame seguinte. Note que isso necessita de passar a textura completa entre CPU e GPU 2 vezes por frame. 
 
 > PS: Dependendo do tipo de shader a ser aplicado, pode não ser necessário passar a textura completa entre CPU e GPU a cada frame. Vamos adotar o approach menos otimizado por ser rápido o suficiente para as nossas aplicações e também por ser mais simples.
 
-Em todos os experimentos, a estrutura principal da árvore é a mostrada abaixo. Precisamos do `SubViewport` pois é esse node que nos permite salvar a textura. A função `snapshot` recebe o node `SubViewport`, extrai a sua textura com o método `get_texture().get_image()` e salva essa textura como imagem, usando o comando `ImageTexture.create_from_image()`. Note que sempre antes de chamar a função devemos usar o `await RenderingServer.frame_post_draw` para esperar a renderização terminar. Nenhuma dessas chamadas foi abordada nos tutoriais, recomendo consultar a documentação para um melhor entendimento. Depois que textura está salva, a próxima iteração usa a chamada `set_shader_parameter()` para enviar essa textura para o shader. Esta última chamada já foi abordada, no [Your first 2D shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#interagindo-com-o-shader-por-c%C3%B3digo).
+Em todos os experimentos, a estrutura principal da árvore é a mostrada abaixo. Precisamos do `SubViewport` pois é esse node que nos permite salvar a textura. A função `snapshot` recebe o node `SubViewport`, extrai a sua textura com o método `get_texture().get_image()` e salva essa textura como imagem, usando o comando `ImageTexture.create_from_image()`. Note que, sempre antes de chamar a função, devemos usar o `await RenderingServer.frame_post_draw` para esperar a renderização terminar. Nenhuma dessas chamadas foi abordada nos tutoriais, recomendo consultar a documentação para um melhor entendimento. Depois que textura está salva, a próxima iteração usa a chamada `set_shader_parameter()` para enviar essa textura para o shader. Esta última chamada foi abordada no [Your first 2D shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader#interagindo-com-o-shader-por-c%C3%B3digo).
 
 <p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/0dde028f-71ba-4766-bd75-b31fb95b68ae" />
-  <img width="460" src="https://github.com/user-attachments/assets/72ec061d-2987-4d5c-9c61-d455bb217982" />
+  <img width="250" src="https://github.com/user-attachments/assets/0dde028f-71ba-4766-bd75-b31fb95b68ae" />
+  <img width="520" src="https://github.com/user-attachments/assets/72ec061d-2987-4d5c-9c61-d455bb217982" />
 </p>
 
 No shader, utiliza-se o comando `texture(input_texture, uv)` para extrair a cor do pixel da posição `uv` da textura `input_texture`. Como essa textura veio de um uniform, que veio do exterior, podemos sempre armazenar extenamente a textura de um frame e passá-la para o frame seguinte. 
@@ -22,15 +22,15 @@ No shader, utiliza-se o comando `texture(input_texture, uv)` para extrair a cor 
 ## Experimento 1
 
 
-Abaixo temos o código do shader. Na primeira iteração (`iter == 0`) o shader desenha uma linha diagonal preta em um fundo branco. A espessura dessa linha corresponde a 2% do tamanho da tela (UV). Basicamente 1% acima da diagonal e 1% abaixo da diagonal, é isso que a condição `abs(uv.x - uv.y) < 0.01` significa.
+Abaixo temos o código do primeiro shader. Na primeira iteração (`iter == 0`) o shader desenha uma linha diagonal preta em um fundo branco. A espessura dessa linha corresponde a 2% do tamanho da tela (UV). Basicamente 1% acima da diagonal e 1% abaixo da diagonal, é isso que a condição `abs(uv.x - uv.y) < 0.01` significa.
 
-Depois dessa primeira iteração, as outras fazem semper a mesma coisa. Primeiro verifica se a coordenada $y$ está longe o suficiente do topo, devendo estar distante do topo em pelo menos 1% da altura total (condição `uv.y >= 0.01`). Se a condição não for satisfeita, pinta o pixel de branco. Ou seja, os primeiros 1% do topo da imagem sempre serão brancos. Se a condição for satisfeita, a coordenada $y$ muda para a que está 1% do total da altura acima (`uv.y -= 0.01`). Depois disso, o shader extrai a cor correspondente do pixel `uv` em relação à textura do frame anterior (comando `texture(input_texture, uv)`). Essa cor é usada para atualizar a cor do pixel atual ao atribuir este valor para `COLOR`.
+Depois dessa primeira iteração, as outras fazem sempre a mesma coisa. Primeiro verifica se a coordenada $y$ está longe o suficiente do topo, devendo estar distante do topo em pelo menos 1% da altura total (condição `uv.y >= 0.01`). Se a condição não for satisfeita, pinta o pixel de branco. Ou seja, os primeiros 1% do topo da imagem sempre serão brancos. Se a condição for satisfeita, a coordenada $y$ muda para a que está 1% do total da altura acima (`uv.y -= 0.01`). Depois disso, o shader extrai a cor correspondente do pixel `uv` em relação à textura do frame anterior (comando `texture(input_texture, uv)`). Essa cor é usada para atualizar a cor do pixel atual ao atribuir este valor para `COLOR`.
 
 <p align="center">
   <img width="320" src="https://github.com/user-attachments/assets/90f33327-690b-4970-b94b-3a3763bb6e44" />
 </p>
 
-A figura abaixo ilustra o processo. Quando o shader ler o pixel `uv` = $(\texttt{uv}_x, \texttt{uv}_y)$, ele vai atualizar este pixel de modo que a cor deele seja igual a do pixel $(\texttt{uv}_x, \texttt{uv}_y - 0.01)$, que está um pouco acima. Se o pixel de cima for branco, nada muda. Se for um pixel da diagonal, ele será preto. Então a cor do pixel um pouco abaixo será preto também. O efeito disso é que, aos poucos, a diagonal vai descendo na tela verticalmente. A regra de sempre deixar os primeiros 1% brancos é para evitar que estes pixel tentem atualizar para valores fora da textura.
+A figura abaixo ilustra o processo. Quando o shader ler o pixel `uv` = $(\texttt{uv}_x, \texttt{uv}_y)$, ele vai atualizar este pixel de modo que a cor dele seja igual a do pixel $(\texttt{uv}_x, \texttt{uv}_y - 0.01)$, que está um pouco acima. Se o pixel de cima for branco, nada muda. Se for um pixel da diagonal, ele será preto. Então a cor do pixel um pouco abaixo será preto também. O efeito disso é que, aos poucos, a diagonal vai descendo na tela verticalmente. A regra de sempre deixar os primeiros 1% brancos é para evitar que estes pixel tentem atualizar para valores fora da textura.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/e85f2825-d52f-42d4-8b96-823d6356ceca" />
@@ -40,7 +40,7 @@ A figura abaixo ilustra o processo. Quando o shader ler o pixel `uv` = $(\texttt
 
 Assim que você olha a animação que esse shader produz, consegue notar que a diagonal fica meio borrada assim que começa a descer. Isso acontece porque o deslocamento dela não é em pixels, mas sim em um percentual da altura. Como as coordenadas UV são contínuas, não existe a discretização de pixel e movimento por grade. O borrado acontece porque o cor entregue bate em subpixels, o que acarreta numa cor interpolada entre as vizinhas. Então além de preto ou branco, acabamos obtendo tons de cinza também.
 
-O fato de UV sererm as coordenadas usuais para shader, não significa que é impossível trabalhar em coordenadas de pixels. Vamos ver neste experimento como se faz isso. Este experimento é um réplica do anterior, com a diferença que o movimento da diagonal será por passos baseados em pixels em vez de percentual da altura. Antes mesmo de começar a explicar o código, deixamos os dois códigos lado a lado: o código anterior (baseado em UV) e o código atual (baseado em pixels).
+O fato de UV serem as coordenadas usuais para shader, não significa que é impossível trabalhar em coordenadas de pixels. Vamos ver neste experimento como se faz isso. Este experimento é um réplica do anterior, com a diferença que o movimento da diagonal será por passos baseados em pixels em vez de percentual da altura. Antes mesmo de começar a explicar o código, deixamos os dois códigos lado a lado: o código anterior (baseado em UV, à esquerda) e o código atual (baseado em pixels, à direita).
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/86b39d8f-eeee-461e-8b65-7e115a94394b" />
@@ -50,7 +50,7 @@ A primeira coisa que fazemos é obter as coordenadas em pixels do ponto. O [valo
 
 O valor nativo `SCREEN_PIXEL_SIZE` te entrega um vetor 2D, contendo o tamanho do pixel em coordenadas UV. Não é necessariamente verdade que o pixel será um quadrado neste sistema de coordenadas. Vale também ressaltar que este approach te entrega os pixels em coordenadas locais do node, começando do canto superior esquerdo até o canto inferior direito. Por conta desta propriedade, podemos obter o tamanho da textura com o comando `vec2 screen_size = 1.0 / SCREEN_PIXEL_SIZE`, como foi feito no exemplo.
 
-As condicionais e operações feitas são análogas a do exemplo anterior, mas em termos de pixels. Vale notar que o valor de 10 pixels é arbitrário, apenas para testes. 
+As condicionais e operações feitas são análogas à do exemplo anterior, mas em termos de pixels. Vale notar que o valor de 10 pixels é arbitrário, apenas para testes. 
 
 No approach default, a coordenada do ponto é o vetor nativo `UV`, que nunca deve ser alterado diretamente. Você pode notar que sempre declaramos `vec2 uv = UV` e trabalhamos com o vetor `uv`. No caso de pixels, apesar de não ser obrigatório, tratamos o vetor `p` como o `UV`. Até usamos o `p` para as verificações, mas no momento de definir um novo ponto, usamos o `new_p`, que faz o papel análogo do `uv`.
 
@@ -72,14 +72,14 @@ Para esse caso, alteramos para um sistema de coordenadas de inteiros. O tipo de 
 
 ## Experimento 4
 
-Este experimento pode ser visto como uma continuação do anterior. Dessa vez, em vez de alterar todos os pixels da textura (que tem sido o logo da Godot desde o primeiro experimento), o shader altera apenas alguns. A cor se modifica dependendo de do valor da coordenada $x$ ou $y$ do pixel $\mod 5$. A cor nova depende da coordenada testada, o que cria um efeito gradiante na imagem final.
+Este experimento pode ser visto como uma continuação do anterior. Dessa vez, em vez de alterar todos os pixels da textura (que tem sido o logo da Godot desde o primeiro experimento), o shader altera apenas alguns. A cor se modifica dependendo de do valor da coordenada $x$ ou $y$ do pixel em $\texttt{mod}\ 5$. A cor nova depende da coordenada testada, o que cria um efeito gradiente na imagem final.
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/7c0ce8ff-cf26-4643-bcbb-21686dc51f7f" />
   <img width="440" src="https://github.com/user-attachments/assets/8629699c-7ac1-4f40-9372-55968f80f71e" />
 </p>
 
-Este exemplo também possui um código GDScript que altera a escala da figura com o passar do tempo, aumentando e diminuindo de maneira oscilatória. Meu objetivo com esse teste foi o de confirmar que o sistema de coordenada UV escala junto co a textura, o que de fato é verdade. Não importa se aplicamos escala, rotacionamos ou transladamos a figura, o sistema UV se altera junto e os efeitos do shader são aplicados corretamente.
+Este exemplo também possui um código GDScript que altera a escala da figura com o passar do tempo, aumentando e diminuindo de maneira oscilatória. Meu objetivo com esse teste foi o de confirmar que o sistema de coordenada UV escala junto com a textura, o que de fato é verdade. Não importa se aplicamos escala, rotacionamos ou transladamos a figura, o sistema UV se altera junto e os efeitos do shader são aplicados corretamente.
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/712d6027-c166-4405-930c-e9f64f5c6357" />
@@ -87,7 +87,7 @@ Este exemplo também possui um código GDScript que altera a escala da figura co
 
 ## Experimento 5
 
-Esse começa fazendo subtraindo `uv` por $0.5$. Desta vez a subtração não é feita para extrair a cor do pixel em outra posição, o que está acontencendo agora é uma mudança de coordenadas. O modo mais usual de interpretar isso, é imaginar que o sistema `UV` é uma "caixa" no plano 2D (com o eixo $y$ invertido em relação ao tradicional) e, ao fazer um shift, movemos a caixa de posição.
+Esse começa fazendo subtraindo `uv` por $0.5$. Desta vez a subtração não é feita para extrair a cor do pixel em outra posição, o que está acontencendo agora é uma mudança de coordenadas. O modo mais usual de interpretar isso é imaginar que o sistema `UV` é uma "caixa" no plano 2D (com o eixo $y$ invertido em relação ao tradicional) e, ao fazer um shift, movemos a caixa de posição.
 
 <p align="center">
   <img width="306" src="https://github.com/user-attachments/assets/1707017c-06e5-42c9-b74a-1cc192236213" />
@@ -115,7 +115,7 @@ Como intepretamos isso? Primeiro note que, pelo fato das componentes da cor tere
 
 ## Experimento 7
 
-Este experimento é basicamente uma repetição do anterior, mas aplicando uma função extra antes de definir a cor nova. Esta função é a `step()`, que está definida no tutorial de [função do shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#fun%C3%A7%C3%B5es-matem%C3%A1ticas). O comando `step(0.1, d)` é bem simples, se $0.1 > \texttt{d}$, retorna $0$, caso contrário retorna $1$. Ou seja, se `d` por pequeno o suficiente (menor que $0.1$), vira a cor preta, senão é cor branca. 
+Este experimento é basicamente uma repetição do anterior, mas aplicando uma função extra antes de definir a cor nova. Esta função é a `step()`, que está definida no tutorial de [função do shader](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions#fun%C3%A7%C3%B5es-matem%C3%A1ticas). O comando `step(0.1, d)` é bem simples, se $0.1 > \texttt{d}$, retorna $0$, caso contrário retorna $1$. Ou seja, se `d` for pequeno o suficiente (menor que $0.1$), vira a cor preta, senão é cor branca. 
 
 <p align="center">
   <img width="580" src="https://github.com/user-attachments/assets/e25651c1-40e8-468c-98e8-f878606dc63c" />
@@ -147,9 +147,9 @@ Segue abaixo o resultado dessa mudança.
 
 ## Experimento 9
 
-Este experimento é uma continuação dos anteriores, agora incluindo o tempo no código. Quase sempre que você ver que o código usa o `TIME`, é quase certo que haverá animação. Esse é o caso agora.
+Este experimento é uma continuação dos anteriores, agora incluindo o tempo no código. Quase sempre que um código usa o `TIME`, haverá animação. Esse é o caso agora.
 
-O que mudou agora é apareceram as variáveis `frequency = 5.0` e `speed = 1.5`, que são aplicadas na fórmula da distância `d = sin(d * frequency + TIME * speed)`. A frequência controla quantos círculos teremos, e a velocidade controla a velocidade com que esses círculos se movem.
+Agora temos as variáveis `frequency = 5.0` e `speed = 1.5`, que são aplicadas na fórmula da distância `d = sin(d * frequency + TIME * speed)`. A frequência controla quantos círculos teremos e a velocidade controla a velocidade com que esses círculos se movem.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/2e1a3d99-0887-4faa-9f8f-9db4f7607aa8" />
@@ -165,11 +165,11 @@ Neste experimento, eu fiz uma versão alternativa onde o comando `d = 0.05/d` é
   <img width="800" src="https://github.com/user-attachments/assets/c86153cf-9323-49f9-9504-3e66a29ab94f" />
 </p>
 
-> PS: Essa regra pode acarretar em divisão por zero. Neste caso, a convenção so shader é que $\frac{0.05}{0.0} = + \inf$, o que é "truncado" para $1.0$.
+> PS: Essa regra pode acarretar em divisão por zero. Neste caso, a convenção do shader é que $\frac{0.05}{0.0} = + \inf$, o que é "truncado" para $1.0$.
 
 ## Experimento 10
 
-Esse é quase o mesmo de antes. A diferença é que agora adicionamos uma paleta de cores. A fórmula dessa paleta não tem nada de especial é só uma bagunça mesmo. O interessante é o fato do `TIME` estar sendo usado na paleta. Isso significa que a cor agora não é apenas determinada pela distância, mas ela varia com o tempo. Isso deixa a animação com muito mais dinâmica. Recomendo testar esse experimento removendo o `TIME` na chamada `COLOR = vec4(palette(d + TIME * speed), 1.0)`.
+Esse é quase o mesmo de antes. A diferença é que agora adicionamos uma paleta de cores. A fórmula dessa paleta não tem nada de especial é só uma bagunça mesmo. O interessante é o fato do `TIME` estar sendo usado como argumento de entrada na paleta. Isso significa que a cor agora não é apenas determinada pela distância, mas ela varia com o tempo. Isso deixa a animação com muito mais dinâmica. Recomendo testar esse experimento removendo o `TIME` na chamada `COLOR = vec4(palette(d + TIME * speed), 1.0)`.
 
 <p align="center">
   <img width="590" src="https://github.com/user-attachments/assets/b03b2054-c318-4242-b9e0-c0753756dba1" />
@@ -187,7 +187,9 @@ Pode-se dizer que o primeiro método avançado é o deste experimento. Vamos apr
   <img width="450" src="https://github.com/user-attachments/assets/2c149dc8-8fc5-403e-81cc-35c031ae84d7" />
 </p>
 
-Só o que muda neste código é o comando `uv = fract(uv)` que vem logo após definir `uv` e fazer a mudança do sistema de coordenadas (agora centrado na origem e indo de $(-1, -1)$ até $(1, 1)$. A função `fract()` retorna a parte fracionária do número, descartando sinal negativo. Por exemplo, `fract(1.52) = 0.52`. Como consequência, todos os 4 pontos $(1.52, y), (0.52, y), (-0.52, y), (-1.52, y)$ possuem a mesma cor, que é a cor do $(0.52, y)$. Como consequência, apenas o quadrante inferior direito $[0, 1) \times [0, 1)$ que importa, os outros só copiam deste. Daí sai o efeito de repetição de imagens.
+Só o que muda neste código é o comando `uv = fract(uv)` que vem logo após definir `uv` e fazer a mudança do sistema de coordenadas (agora centrado na origem e indo de $(-1, -1)$ até $(1, 1)$. A função `fract()` retorna a parte fracionária do número (descarta sinal negativo também). Por exemplo, `fract(1.52) = 0.52`. 
+
+Por exemplo, todos os 4 pontos $(1.52,\ y), (0.52,\ y), (-0.52,\ y), (-1.52,\ y)$ possuem a mesma cor, que é a cor do $(0.52,\ y)$. Como consequência, apenas o quadrante inferior direito $[0, 1) \times [0, 1)$ que importa, os outros só copiam deste. Daí sai o efeito de repetição de imagens.
 
 <p align="center">
   <img width="600" src="https://github.com/user-attachments/assets/0bdf2140-8ff7-451d-b36b-7940d18e6dd0" />
@@ -195,9 +197,9 @@ Só o que muda neste código é o comando `uv = fract(uv)` que vem logo após de
 
 ## Experimento 12
 
-No experimento anterior, havia 4 blocos porque as únicas partes inteiras para serem descartadas eram os números $1, -1, 0, -0$. É totalmente possível aumentar a escala da UV por um fator maior e incluir mais inteiros. Isso vai gerar mais blocos da mesma imagem na tela. 
+No experimento anterior havia 4 blocos porque as únicas partes inteiras para serem descartadas eram os números $1, -1, 0, -0$. É totalmente possível aumentar a escala da UV por um fator maior e incluir mais inteiros. Isso vai gerar mais blocos da mesma imagem na tela. 
 
-Se quisermos uma grid $3 \ times 3$ de imagens repetidas, usamos $n = 3$ no código abaixo. Com isso, a mudança de escala vai gerar uma UV indo de $(0, 0)$ a $(3, 3)$. Neste caso, devemos subtrair por $1.5$ para deixar o centro na oriem (sempre subtrair por $n/2$). Após isso, a função `fract()` vai gerar a grid $3 \times 3$ de imagens repetidas, como desejado.
+Se quisermos uma grid $3 \times 3$ de imagens repetidas, usamos $n = 3$ no código abaixo. Com isso, a mudança de escala vai gerar uma UV indo de $(0, 0)$ a $(3, 3)$. Neste caso, devemos subtrair por $1.5$ para deixar o centro na oriem (sempre subtrair por $n/2$). Após isso, a função `fract()` vai gerar a grid $3 \times 3$ de imagens repetidas, como desejado.
 
 Uma possível melhoria seria a de deixar o centro de cada bloco coincidindo com o centro do círculo, assim como era antes do experimento 11. Para isso, basta subtrair por $0.5$ que tudo está resolvido. Para entender o porquê, pense no bloco canônico do sistema UV, ele faz parte da grid. Todos os outros blocos copiam deste. Como esta bloco vai de $(0, 0)$ a $(1, 1)$ e o centro do círculo está no canto superior esquerdo, subtrair a coordenada $x$ e $y$ por $0.5$ vai levar aquele ponto para o centro do bloco. Com isso, esse bloco fica ajustado para o padrão que queremos. E como todos os outros blocos copiam deste, tudo fica corrigido.
 
