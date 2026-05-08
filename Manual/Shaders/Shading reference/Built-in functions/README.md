@@ -1,6 +1,6 @@
 # Built-in functions
 
-O shader da Godot suporta muitas funções em conformidade com o GLSL. A quantidade de funções disponíveis é enorme, então vou listar aqui apenas as que eu costumo usar mais. Recomendo ler a [documentação oficial](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shader_functions.html) para ver a lista completa.
+O shader da Godot suporta muitas funções em conformidade com o GLSL. A quantidade de funções disponíveis é enorme, então vou listar aqui apenas as mais comuns. Recomendo ler a [documentação oficial](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shader_functions.html) para ver a lista completa.
 
 ## Nomenclatura
 
@@ -153,3 +153,8 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 | `vec_type` | `fwidth(vec_type p)` | Retorna a soma das derivadas absolutas de `p` em x e y. |
 | `vec_type` | `fwidthCoarse(vec_type p)` | Retorna uma aproximação da soma das derivadas de `p` em x e y. |
 | `vec_type` | `fwidthFine(vec_type p)` | Retorna uma soma mais precisa das derivadas de `p` em x e y. |
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/CanvasItem%20shaders">Próximo ➡</a>
+</p>
