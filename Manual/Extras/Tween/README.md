@@ -10,7 +10,7 @@ As animações Tween não foram projetadas para serem reutilizadas e tentar faze
 
 ## create_tween()
 
-É possível criar um Tween com os comandos `get_tree().create_tween()` e `create_tween()`. No primeiro caso ele está atrelado à cena, enquanto que no segundo caso está atrelado ao node que o chamou. O primeiro é mais global e mais suscetível a erros, pois se o node associado ao script que chamou este Tween for removido. isto vai causar um erro. No segundo caso o Tween é removido junto do node.
+É possível criar um Tween com os comandos `get_tree().create_tween()` e `create_tween()`. No primeiro caso ele está atrelado à cena, enquanto que no segundo caso está atrelado ao node que o chamou. O primeiro é mais global e mais suscetível a erros, pois se o node associado ao script que chamou este Tween for removido, isto vai causar um erro. No segundo caso o Tween é removido junto do node.
 
 Em todos os exemplos de código abaixo, vamos supor que o comando `tween = create_tween()` foi executado previamente.
 
