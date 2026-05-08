@@ -9,10 +9,10 @@ Quando você vai criar um script para um node, a janela de configuração inicia
 O template *Node* vem com o básico: o `extends` a partir do node associado ao script e as funções nativas `_ready` e `_process`. O template *Object* contém apenas o `extends`. Caso o node tenha um script mais personalizado, será algo específico.
 
 <p align="center">
-  <img width="720" src="https://github.com/user-attachments/assets/b79b9cc3-1964-4eba-b1bd-52270ea75350" />
+  <img width="780" src="https://github.com/user-attachments/assets/b79b9cc3-1964-4eba-b1bd-52270ea75350" />
 </p>
 
-Pode ocorrer de, num jogo seu, você querer inicializar todos os seus `CharacterBody2D` com outro script em vez de ficar inicializando com esse default e depois ter que ficar alterando. É possível criar seus próprios scripts de template. Vamos ver aqui como fazer isso.
+Pode ocorrer de, num jogo seu, você querer inicializar todos os seus `CharacterBody2D` com outro script em vez de ficar inicializando com esse default e depois ter que ficar alterando. É possível criar seus próprios scripts template. Vamos ver aqui como fazer isso.
 
 ## Localização dos script templates
 
@@ -29,10 +29,15 @@ Na pasta do seu projeto, crie uma pasta chamada *script_templates*. Se você for
 O seu script template não precisa de nada especial, apenas o `extends` deve estar de acordo com o node. Se você colocou um script na pasta `Sprite2D`, ele deve usar `extends Sprite2D`, por exemplo. Você também pode incluir comentários começando com as keywords `meta-name:` e `meta-description:`. A primeira é o nome que vai aparecer na lista de escolhas de scripts e a segunda é a descrição que vai aparecer. 
 
 <p align="center">
-  <img width="440" src="https://github.com/user-attachments/assets/3a16319d-b7a0-4d48-8028-d89ce8cf595c" />
-  <img width="500" src="https://github.com/user-attachments/assets/e943ce67-2bda-4e70-9754-804ab07249dc" />
+  <img width="470" src="https://github.com/user-attachments/assets/3a16319d-b7a0-4d48-8028-d89ce8cf595c" />
+  <img width="530" src="https://github.com/user-attachments/assets/e943ce67-2bda-4e70-9754-804ab07249dc" />
 </p>
 
 Agora é só escolher o seu script template e começar a trabalhar a partir dele, não tem mistério!
 
 > PS: Não é obrigatório usar `meta-name:` e `meta-description:`. Caso você não use `meta-name:`, o nome do arquivo é usado. Caso não use `meta-description:`, também entra o nome do arquivo na descrição.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Overridable%20functions">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually">Próximo ➡</a>
+</p>
