@@ -121,7 +121,9 @@ Uma vez que o arquivo da classe foi salvo, o próximo passo é ir no *FileSystem
   <img width="750" src="https://github.com/user-attachments/assets/b2bd05ea-b42d-487b-aff8-ab98897f89a6" />
 </p>
 
-No *FileSystem*, clique duas vezes no arquivo que acabou de criar para abri-lo no *Inspector*. Você irá notar que está tudo como no default do `_init`. É aqui que a coisa começa a ficar interessante. Você pode alterar os valores do *Inspector* e mandar salvar o arquivo. Com isso, você terá salvo em um arquivo uma instância da classe. Geralmente, instâncias de classes são criadas dentro do código, durante a execução. Neste caso você possui um arquivo com esta instância, ele pode ser carregado em lugares diferentes do projeto e inclusive pode ser carregado em outros projetos.
+No *FileSystem*, clique duas vezes no arquivo que acabou de criar para abri-lo no *Inspector*. Você irá notar que está tudo como no default do `_init`. É aqui que a coisa começa a ficar interessante. Você pode alterar os valores do *Inspector* e mandar salvar o arquivo. Com isso, você terá salvo em um arquivo uma instância da classe. Geralmente, instâncias de classes são criadas dentro do código, durante a execução. Neste caso você possui um arquivo com esta instância, ele pode ser carregado em lugares diferentes do projeto e inclusive pode ser carregado em outros projetos. 
+
+> PS: Ao reutilizar um recurso em outro projeto, é necessário levar também todos os scripts, assets e outros recursos dos quais ele depende para evitar referências quebradas.
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/610ccd74-6696-4610-b0a2-c12fd07b6ab1" />
