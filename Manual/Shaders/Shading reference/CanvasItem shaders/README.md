@@ -1,6 +1,6 @@
 # CanvasItem shaders
 
-Os shaders do tipo `canvas_item` são usados ​​para desenhar todos os elementos 2D na Godot. Isso inclui todos os nodes que herdam de `CanvasItem` e todos os elementos da GUI.
+Os shaders do tipo `canvas_item` são usados ​​para desenhar todos os elementos 2D. Isso inclui todos os nodes que herdam de `CanvasItem` e todos os elementos da GUI.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/f4a84955-f32a-4274-8398-9a5126a5b2ab" />
@@ -190,4 +190,9 @@ UV são coordenadas normalizadas da textura. U é eixo horizontal e V é eixo ve
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/0258daef-5fea-4a71-b1d5-91f166e9b153" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20first%202D%20shader">Próximo ➡</a>
 </p>
