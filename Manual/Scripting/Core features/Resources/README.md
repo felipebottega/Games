@@ -9,7 +9,7 @@ O conceito de "recurso" ("resource" em inglês) já foi abordado diversas vezes 
 
 *Recursos* em Godot são containers de dados. Eles não fazem nada por si só, em vez disso, os nodes usam os dados contidos nos recursos. Tudo o que a Godot salva ou carrega do disco é um recurso. Pode ser uma cena (um arquivo *.tscn* ou *.scn*), uma imagem, um script, etc.
 
-Quando a engine carrega um recurso do disco, ele o carrega apenas uma vez. Se uma cópia desse recurso já estiver na memória, tentar carregá-lo novamente retornará a mesma cópia todas as vezes. Como os recursos contêm apenas dados, não há necessidade de duplicá-los.
+Quando a engine carrega um recurso do disco, ele é carregado apenas uma vez. Se uma cópia desse recurso já estiver na memória, tentar carregá-lo novamente retornará a mesma cópia todas as vezes. Como os recursos contêm apenas dados, não há necessidade de duplicá-los.
 
 Todo objeto em Godot, seja um node ou um recurso, pode exportar propriedades (usar o `@export`). Existem muitos tipos de propriedades, como String, inteiro, Vector2, etc., e qualquer um desses tipos pode se tornar um recurso. Isso significa que tanto nodes quanto recursos podem conter recursos como propriedades. A figura abaixo vem da [documentação oficial](https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html), ela mostra como nodes podem conter recursos e como recursos podem conter outros recursos.
 
@@ -19,13 +19,13 @@ Todo objeto em Godot, seja um node ou um recurso, pode exportar propriedades (us
 
 ## Carregando recursos
 
-Vamos pegar o exemplo do sprite na figura acima. Ela diz que o node do `Sprite2D` contém um recurso de textura. Ao criar um node `Sprite2D`, podemos ver que a propriedade *Texture* de fato existe no *Inspector*. Geralmente o que fazemos é escolher um arquivo de imagem e inserir neste campo vazio, tudo pelo próprio editor. Em outras palavras, estamos adicionando um recurso de textura ao node `Sprite2D`.
+Vamos pegar o exemplo do sprite na figura acima. Pelo que podemos ver, o node `Sprite2D` contém um recurso de textura. Ao criar um node `Sprite2D`, podemos ver que a propriedade *Texture* de fato existe no *Inspector*. Geralmente o que fazemos é escolher um arquivo de imagem e inserir neste campo vazio, tudo pelo próprio editor. Em outras palavras, estamos adicionando um recurso de textura ao node `Sprite2D`.
 
 <p align="center">
   <img width="300" src="https://github.com/user-attachments/assets/9d7b3276-7ce8-4871-826f-2f327e12aeee" />
 </p>
 
-É completamente possível adicionar recursos aos nodes através de código. Neste caso, podemos usar o comando `var my_resource = load("res://my_texture.png")` e em seguida `$Sprite2D.texture = my_resource` (os nomes de variáveis e arquivos são fictícios). Na maioria dos exemplos, usamos o `load` ou `preload` para importar cenas, mas essas funções podem ser usadas para importar qualquer recurso.
+Também podemos adicionar recursos aos nodes através de código. Neste caso, o comando `var my_resource = load("res://my_texture.png")` e em seguida `$Sprite2D.texture = my_resource` (os nomes de variáveis e arquivos são fictícios) fazem o serviço. Na maioria dos exemplos, usamos o `load` ou `preload` para importar cenas, mas na verdade essas funções podem ser usadas para importar qualquer recurso.
 
 ## Local to Scene e Make Unique
 
