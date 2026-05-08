@@ -34,7 +34,7 @@ Para definir um modo de renderização, se usa o comando `render_mode {my_render
 
 Os valores marcados como `in` são somente leitura. Os valores marcados como `out` podem opcionalmente ser escritos. Os valores marcados como `inout` fornecem um valor padrão válido e também podem opcionalmente ser escritos. Os samplers não podem ser escritos por padrão, portanto, não são marcados.
 
-Nem todos os valores nativos estão disponíveis em todas as *funções de processamento*. Para acessar um valor nativo do `vertex()` a partir do `fragment()`, por exemplo, você pode usar uma [variável interpolada](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#vari%C3%A1veis-interpoladas-varyings). O mesmo se aplica ao acesso a valores nativos do `fragment()` a partir do `light()`.
+Nem todos os valores nativos estão disponíveis em todas as funções de processamento. Para acessar um valor nativo do `vertex()` a partir do `fragment()`, por exemplo, você pode usar uma [variável interpolada](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language#vari%C3%A1veis-interpoladas-varyings). O mesmo se aplica ao acesso a valores nativos do `fragment()` a partir do `light()`.
 
 ### Valores nativos globais
 

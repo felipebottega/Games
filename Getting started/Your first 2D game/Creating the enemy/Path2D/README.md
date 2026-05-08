@@ -4,7 +4,7 @@
 
 ## Manuseando o Path2D
 
-Primeiramente, recomendo colocar o `Path2D` como filho de outro node, como um `Node2D`. Isso porque pode ser interessante deformar a trajetória, e o editor vai emitir warning se ele for o node raiz. 
+Primeiramente, recomendo colocar o `Path2D` como filho de outro node, como um `Node2D`. Isso porque pode ser interessante deformar a trajetória, e o editor vai emitir warning se ele for o node raíz. 
 
 O manuseio do `Path2D` é bem simples e direto, você clica no espaço 2D e ele vai adicionando e conectando os pontos. A opção destacada pelo quadrado vermelho abaixo é para mostrar a grid de pixels na tela, isso facilita na hora de desenhar a trajetória. Dentro do quadrado amarelo temos as opções básicas para manusear a ferramenta. Estas opções são análogas às do [`CollisionPolygon2D`](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%201#polygon2d-e-collisionpolygon2d). 
 

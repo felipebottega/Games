@@ -31,7 +31,7 @@ Depois de clicar para criar, volte para o *Inspector*, no mesmo campo onde apare
 
 ## Escrevendo código no shader
 
-Em Godot, todos os shaders começam com uma linha especificando o tipo de shader que são. Neste caso a linha deve ser `shader_type canvas_item;`. Note que o template inicial do shader já vem com essa linha escrita, assim como as *funções de processamento* já vem declaradas e prontas para serem preenchidas.
+Em Godot, todos os shaders começam com uma linha especificando o tipo de shader que são. Neste caso a linha deve ser `shader_type canvas_item;`. Note que o template inicial do shader já vem com essa linha escrita, assim como as funções de processamento já vem declaradas e prontas para serem preenchidas.
 
 A função `fragment()` é executada para cada pixel em um `Sprite2D` e determina qual cor esse pixel deve ter. A função `fragment()` mais básica não faz nada além de atribuir uma única cor a cada pixel. Fazemos isso escrevendo um `vec4` na valor nativo `COLOR`. 
 

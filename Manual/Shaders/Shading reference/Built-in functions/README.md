@@ -42,8 +42,8 @@ Muitas funções aceitam um ou mais vetores/matrizes como argumentos. Na maior p
 | `vec_type`      | `exp2(vec_type x)`                                                     | Exponencial de base 2.                                           |
 | `vec_type`      | `log(vec_type x)`                                                      | Logaritmo natural (base e).                                      |
 | `vec_type`      | `log2(vec_type x)`                                                     | Logaritmo de base 2.                                             |
-| `vec_type`      | `sqrt(vec_type x)`                                                     | Raiz quadrada.                                                   |
-| `vec_type`      | `inversesqrt(vec_type x)`                                              | Inverso da raiz quadrada.                                        |
+| `vec_type`      | `sqrt(vec_type x)`                                                     | raíz quadrada.                                                   |
+| `vec_type`      | `inversesqrt(vec_type x)`                                              | Inverso da raíz quadrada.                                        |
 | `vec_type`      | `abs(vec_type x)`                                                      | Valor absoluto (retorna positivo se for negativo).               |
 | `vec_int_type`  | `abs(vec_int_type x)`                                                  | Valor absoluto (retorna positivo se for negativo).               |
 | `vec_type`      | `sign(vec_type x)`                                                     | Retorna 1.0 se positivo, -1.0 se negativo, 0.0 caso contrário.   |

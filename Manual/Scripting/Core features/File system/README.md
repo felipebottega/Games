@@ -16,7 +16,7 @@ A Godot só aceita `/` como delimitador de caminho. Isso é feito por motivos de
 
 Este tópico foi abordado anteriormente no tutorial [File paths in Godot projects](https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/File%20paths%20in%20Godot%20projects#res-e-user), mas vamos dar uma revisada. 
 
-O caminho `res://` sempre apontará para a raiz do projeto (onde o arquivo project.godot está localizado, portanto, res://project.godot é sempre válido). O sistema de arquivos é leitura e escrita quando o projeto é executado localmente no editor. Porém, ao exportar o projeto ou ao executá-lo em dispositivos diferentes (como celulares, consoles ou a partir de um DVD), o sistema de arquivos se tornará somente leitura.
+O caminho `res://` sempre apontará para a raíz do projeto (onde o arquivo project.godot está localizado, portanto, res://project.godot é sempre válido). O sistema de arquivos é leitura e escrita quando o projeto é executado localmente no editor. Porém, ao exportar o projeto ou ao executá-lo em dispositivos diferentes (como celulares, consoles ou a partir de um DVD), o sistema de arquivos se tornará somente leitura.
 
 A escrita em disco ainda é necessária para tarefas como salvar o estado do jogo ou baixar pacotes. Para isso, a engine garante que exista um caminho especial `user://` que sempre permite escrita. Esse caminho é definido de forma diferente dependendo do sistema operacional em que o projeto está sendo executado. Explicamos em detalhes como são definidos estes caminhos no tutorial mencionado acima.
 

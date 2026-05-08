@@ -123,7 +123,7 @@ Você deve ter notado que também há parâmetros para o eixo $y$. A lógica del
   <img width="800" src="https://github.com/user-attachments/assets/7fbec401-8c26-4b70-b048-478f5c99d794" />
 </p>
 
-A altura da viewport é de 800 pixels. Sendo $400$ pixels o *Repeat Size* do eixo $y$, temos que as figuras vão desaparecer (para a seguinte aparecer no loop) antes mesmo de saírem do viewport. Podemos resolver isso aumentando o *Repeat Times* para $3$.
+A altura da viewport é de 800 pixels. Sendo $400$ pixels o *Repeat Size* do eixo $y$, temos que as figuras vão desaparecer (para a seguinte aparecer no loop) antes mesmo de saírem da viewport. Podemos resolver isso aumentando o *Repeat Times* para $3$.
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/0d095d93-9c97-4854-9d52-2675d465f34b" />

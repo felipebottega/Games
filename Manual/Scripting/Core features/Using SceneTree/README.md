@@ -7,7 +7,7 @@ Quando a inicialização está concluída, o `OS` precisa receber um *MainLoop* 
 Alguns tutoriais anteriores que passaram por este tema: [Change scenes manually](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Change%20scenes%20manually) e [Overridable functions](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Overridable%20functions).
 
 É importante conhecer a classe `SceneTree` pois ela tem alguns usos importantes:
-- Ela contém a Viewport raiz (*root*) do jogo.
+- Ela contém a Viewport raíz (*root*) do jogo.
 - Ela contém informações sobre os grupos e permite acessar todos os nodes de um grupo ou obter uma lista deles.
 - Ela contém algumas funcionalidades de estado global, como pausar o jogo, definir o modo de pausa ou encerrar o jogo.
 - Ela permite trocar a cena atual e acessar a `current_scene`.
@@ -21,7 +21,7 @@ Alguns tutoriais anteriores que passaram por este tema: [Change scenes manually]
 Quando um node/cena é conectado ao *root*, ele passa a fazer parte da árvore de cenas. Isso significa que ele receberá as funções nativas `_enter_tree()`, `_ready()` e `_exit_tree()` automaticamente. Além disso, ele obtêm acesso a tudo o que precisa para processar dados, receber inputs, exibir visuais 2D e 3D, receber e enviar notificações, reproduzir sons, etc. Quando é removido da árvore de cenas, ele perde essas capacidades. A ordem dos eventos desde a entrada até a saída da árvore de cenas está resumida abaixo.
 
 1. Uma cena é carregada do disco ou criada por script.
-2. O node raiz dessa cena é adicionado como filho do *root* ou a qualquer um de seus descendentes.
+2. O node raíz dessa cena é adicionado como filho do *root* ou a qualquer um de seus descendentes.
 3. Cada node da cena recém adicionada receberá a notificação `_enter_tree` de cima para baixo.
 4. Cada node receberá a notificação `_ready` assim que todos os seus filhos tiverem recebido a notificação `_ready` (de baixo para cima).
 5. Quando uma cena (ou parte dela) é removida, ela recebe a notificação `_exit_tree` de baixo para cima.

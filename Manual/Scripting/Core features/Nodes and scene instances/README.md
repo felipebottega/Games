@@ -70,7 +70,7 @@ Após o passo 1, a variável `scene` é um recurso de cena compactado (classe [`
 
 Esse assunto já foi abordado [anteriormente](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Your%20first%202D%20game/Creating%20the%20enemy/Layers%20e%20Masks#editable-child-e-make-local), bem no início dos tutoriais. Vale a pena comparar o texto anterior com este.
 
-Quando você instancia uma cena pelo editor, por padrão ela fica "encapsulada", isto é, você vê o node raiz, mas não vê os outros nodes dentro da cena. 
+Quando você instancia uma cena pelo editor, por padrão ela fica "encapsulada", isto é, você vê o node raíz, mas não vê os outros nodes dentro da cena. 
 
 <p align="center">
   <img width="650" src="https://github.com/user-attachments/assets/0c29474d-800f-45ff-b028-829d50948e5b" />

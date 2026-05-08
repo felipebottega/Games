@@ -102,7 +102,7 @@ Após ter feito o desenho, faça com que o node *PlatformsFront* fique um pouco 
   <img width="800" src="https://github.com/user-attachments/assets/4874c6fc-e337-4022-914b-678a54489f65" />
 </p>
 
-> PS: A engine vai reclamar que você não deveria mudar a posição do node raiz, e talvez não precise mesmo. Poderíamos deixar na origem e mover só na cena principal, mas preferi fazer agora para já ter esse passo evidenciado no tutorial.
+> PS: A engine vai reclamar que você não deveria mudar a posição do node raíz, e talvez não precise mesmo. Poderíamos deixar na origem e mover só na cena principal, mas preferi fazer agora para já ter esse passo evidenciado no tutorial.
 
 Crie a cena *Level* como um `Node2D` sem nada por enquanto. Aos poucos vamos popular esta cena com os objetos necessários. No momento atual, já é possível colocar as duas cenas de plataforma sobrespostas.
 
