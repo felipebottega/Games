@@ -1,13 +1,13 @@
 # Introduction to shaders
 
-"Shader" é um termo que foi dito algumas vezes em tutoriais passados, mas nunca utilizamos isso de fato. Agora chegou a hora de abordar esse tema de maneira sistemática. Vamos começar com algumas definições retiradas [daqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations).
+"Shader" é um termo que foi dito algumas vezes em tutoriais passados, mas nunca utilizamos isso de fato. Agora chegou a hora de abordar esse tema. Vamos começar com algumas definições retiradas [daqui](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/GPU/Reducing%20stutter%20from%20shader%20(pipeline)%20compilations).
 
 - **Shader:** Em computação gráfica, shaders são pequenos programas que rodam na GPU e definem como os objetos são desenhados na tela. Cada shader executa uma parte específica do processo de renderização, controlando aspectos como cor, iluminação, sombras e outros efeitos visuais. Um jogo normalmente utiliza muitos shaders diferentes ao mesmo tempo.
 - **GLSL:** GLSL (OpenGL Shading Language) é a linguagem usada para escrever shaders. A Godot gera código GLSL automaticamente a partir dos materiais e shaders que você usa.
 - **Shader compilation:** Tradução do código GLSL para um formato intermediário portátil. Esse formato serve como uma representação comum entre diferentes sistemas e drivers, mas ainda não pode ser executado diretamente pela GPU.
 - **Pipeline compilation:** É o passo seguinte, onde o driver da GPU converte esse formato intermediário em algo que a GPU realmente usa. É mais caro que a etapa anterior e depende do hardware/driver do usuário.
 
-A figura abaixo ilustra o processo inteiro de maneira bem resumida. A CPU faz uma chamada para a GPU desenhar algo e, junto com essa chamada, envia dados associados (texturas, parâmetros, configurações, etc.). Esses dados são armazenados na memória da GPU. Em seguida, os shaders são executados para processar esses dados. Cada etapa do pipeline utiliza um tipo de shader, em que a saída de uma etapa serve como entrada para a próxima. Após todas as etapas serem processadas, o resultado final é então renderizado na tela.
+A figura abaixo ilustra o processo inteiro de maneira bem resumida. A CPU faz uma chamada para a GPU desenhar algo e, junto dessa chamada, envia dados associados (texturas, parâmetros, configurações, etc.). Esses dados são armazenados na memória da GPU. Em seguida, os shaders são executados para processar esses dados. Cada etapa do pipeline utiliza um tipo de shader, em que a saída de uma etapa serve como entrada para a próxima. Após todas as etapas serem processadas, o resultado final é então renderizado na tela.
 
 <p align="center">
   <img width="850" src="https://github.com/user-attachments/assets/8db77c56-3881-46f3-851d-19d8341c2dcd" />
@@ -15,7 +15,7 @@ A figura abaixo ilustra o processo inteiro de maneira bem resumida. A CPU faz um
 
 ## Processor Functions
 
-Na Godot, cada shader está associado a uma única função, chamada de "função de processamento" (no original, "processor function"). As *funções de processamento* são o ponto de entrada do seu shader no programa. Elas representam etapas específicas do pipeline, cada uma atuando como um "processador" de um tipo de dado. Existem 7 *funções de processamento* diferentes.
+Na Godot, cada shader está associado a uma única função, chamada de *função de processamento* (no original, *processor function*). As funções de processamento são o ponto de entrada do seu shader no programa. Elas representam etapas específicas do pipeline, cada uma atuando como um "processador" de um tipo de dado. Existem 7 funções de processamento diferentes.
 
 1. A função `vertex()` (*vertex shader*) percorre todos os vértices da malha e define suas posições e algumas outras variáveis ​​por vértice. 
 2. A função `fragment()` (*fragment shader* ou *pixel shader*) é executada para cada pixel coberto pela malha. Ela usa os valores retornados pela função `vertex()`, interpolados entre os vértices. 
@@ -26,7 +26,7 @@ Na Godot, cada shader está associado a uma única função, chamada de "funçã
 7. A função `fog()` é executada para cada *froxel* no buffer de névoa volumétrica que intersecta o `FogVolume`.
 
 
-Geralmente quando nos referimos a um shader, estamos falando de uma *função de processamento*, que pode ser a `vertex()`, a `fragment()`, etc. Cada uma destas é um shader. Na Godot, também é chamado de shader o espaço do editor de código de shader, e este contém todas as *funções de processamento* juntas. Ou seja, o "shader contendo os shaders". No contexto da Godot geralmente o shader será isso, e no contexto mais geral o shader é a *função de processamento*. Você pode ver abaixo como o shader da Godot é inicializado por default, já contendo os shaders mais comuns para edição.
+Geralmente quando nos referimos a um shader, estamos falando de uma função de processamento, que pode ser a `vertex()`, a `fragment()`, etc. Cada uma destas é um shader. Na Godot, também é chamado de shader o espaço do editor de código de shader, e este contém todas as funções de processamento juntas. Ou seja, o "shader contendo os shaders". No contexto da Godot geralmente o shader será isso, e no contexto mais geral o shader é a função de processamento. Você pode ver abaixo como o shader da Godot é inicializado por default, já contendo os shaders mais comuns para edição.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/0adf00e1-43b1-43a9-919c-781fc83641fa" />
@@ -35,9 +35,11 @@ Geralmente quando nos referimos a um shader, estamos falando de uma *função de
 
 ### Vertex, fragment e light
 
-Para shaders 2D, na prática, trabalhamos principalmente com `vertex()` e `fragment()`. Outras funções existem para casos mais específicos, como iluminação (`light()`) ou sistemas mais avançados, e podem ser exploradas conforme a necessidade. Por enquanto vamos focar apenas nestes 3 por serem os mais úteis para o casos 2D.
+Para shaders 2D, na prática trabalhamos principalmente com `vertex()` e `fragment()`. Outras funções existem para casos mais específicos, como iluminação (`light()`) ou sistemas mais avançados, e podem ser exploradas conforme a necessidade. Por enquanto vamos focar apenas nestes 3 por serem os mais úteis para o caso 2D.
 
-"Vertex" significa "vértice" em inglês. O shader associado a ele simplesmente percorre os vértices do objeto. Geralmente isso faz mais sentido para objetos 3D. No caso de objetos 2D, os vértices serão os 4 pontos do retângulo que delimita a imagem do sprite. Em algumas situações você terá um sprite com formato diferente, caso tenha ajustado a geometria com base na transparência usando uma [técnica discutida antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Meshes). Nestes casos especiais os vértices do sprite não serão mais as 4 pontas do retângulo.
+"Vertex" significa "vértice" em inglês. O shader associado a ele simplesmente percorre os vértices do objeto. Geralmente isso faz mais sentido para objetos 3D. No caso de objetos 2D, geralmente os vértices serão os 4 pontos do retângulo que delimita a imagem do sprite. Em algumas situações você terá um sprite com formato diferente, caso tenha ajustado a geometria com base na transparência usando uma [técnica discutida antes](https://github.com/felipebottega/Games/tree/gh-pages/Manual/2D/Rendering/2D%20Meshes). Nestes casos especiais os vértices do sprite não serão mais as 4 pontas do retângulo.
+
+> PS: O conjunto de vértices de um objeto costuma ser chamado de "geometria" do objeto. Com isso, temos que o `vertex()` tem o papel de alterar a geometria do objeto. 
 
 <p align="center">
   <img width="450" src="https://github.com/user-attachments/assets/c9635077-6d5d-46e1-a730-414d36b97ae6" />
@@ -63,7 +65,7 @@ Ao escrever um shader em Godot, a primeira coisa a se fazer é definir o tipo de
 
 ## Modos de renderização
 
-Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader. Você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a Godot aplica o shader. Por exemplo, o modo `unshaded` faz com que a engine ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
+Opcionalmente, também é possível escolher um modo de renderização (*render mode*) para o shader. Você pode especificar na segunda linha do código, logo após a definição do tipo de shader. Os modos de renderização alteram a forma como a engine aplica o shader. Por exemplo, o modo `unshaded` faz com que a engine ignore a função de processamento de luz. Cada tipo de shader possui modos de renderização diferentes. 
 
 Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de renderização do shader do tipo `canvas_item`. Como este é o shader para renderizar 2D, é um dos que mais nos interessa no momento. 
 
@@ -85,3 +87,7 @@ Apesar de não ser muito útil agora, vou deixar abaixo a lista dos modos de ren
 
 Para definir um modo de renderização, se usa o comando `render_mode {my_render_mode_1}, {my_render_mode_2};`, em que *my_render_mode_1* e *my_render_mode_2* são dois possívels modos de renderização. Pode-se usar quantos quiser.
 
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Logging">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Shading%20language">Próximo ➡</a>
+</p>
