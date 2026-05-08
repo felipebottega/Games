@@ -4,7 +4,7 @@ Para pausar o jogo, basta executar o comando `get_tree().paused = true`. Fazer i
 
 ## Process Mode
 
-Todo node da Godot possui um *modo de processamento*, essa propriedade fica em *Inspector → Node → Process → Mode*.  
+Todo node da Godot possui um *modo de processamento*, essa propriedade fica em *Inspector → Node → Process → Mode*. As descrições de cada modo de processamento estão logo abaixo. 
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/fa9f6453-eab7-4df8-8904-8aca9b04343f" />
@@ -25,3 +25,10 @@ Várias coisas acontecem quando um node para de processar. As funções `_proces
 Os nodes de animação pausarão a animação atual, os nodes de áudio pausarão o áudio atual e as partículas também pausarão. Tudo isso será retomado automaticamente quando o jogo sair do pause.
 
 Mesmo que um node esteja processando enquanto o jogo estiver pausado, a física não funcionará para ele. Como mencionado anteriormente, isso ocorre porque os servidores de física estão desativados. No entanto, é possível ativar os servidores de física enquanto o jogo estiver pausado usando seus métodos `set_active`.
+
+É interessante comparar este tutorial com o tutorial de [Idle and Physics Processing](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#desativando-os-processamentos) pois lá foi explicado como o jgo se comporta quando apenas o processamento normal e de física são pausados.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Instancing%20with%20signals">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system">Próximo ➡</a>
+</p>
