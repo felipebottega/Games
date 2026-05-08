@@ -199,7 +199,7 @@ Por exemplo, todos os 4 pontos $(1.52,\ y), (0.52,\ y), (-0.52,\ y), (-1.52,\ y)
 
 No experimento anterior havia 4 blocos porque as únicas partes inteiras para serem descartadas eram os números $1, -1, 0, -0$. É totalmente possível aumentar a escala da UV por um fator maior e incluir mais inteiros. Isso vai gerar mais blocos da mesma imagem na tela. 
 
-Se quisermos uma grid $3 \times 3$ de imagens repetidas, usamos $n = 3$ no código abaixo. Com isso, a mudança de escala vai gerar uma UV indo de $(0, 0)$ a $(3, 3)$. Neste caso, devemos subtrair por $1.5$ para deixar o centro na oriem (sempre subtrair por $n/2$). Após isso, a função `fract()` vai gerar a grid $3 \times 3$ de imagens repetidas, como desejado.
+Se quisermos uma grid $3 \times 3$ de imagens repetidas, usamos $n = 3$ no código abaixo. Com isso, a mudança de escala vai gerar uma UV indo de $(0, 0)$ a $(3, 3)$. Neste caso, devemos subtrair por $1.5$ para deixar o centro na origem (sempre subtrair por $n/2$). Após isso, a função `fract()` vai gerar a grid $3 \times 3$ de imagens repetidas, como desejado.
 
 Uma possível melhoria seria a de deixar o centro de cada bloco coincidindo com o centro do círculo, assim como era antes do experimento 11. Para isso, basta subtrair por $0.5$ que tudo está resolvido. Para entender o porquê, pense no bloco canônico do sistema UV, ele faz parte da grid. Todos os outros blocos copiam deste. Como esta bloco vai de $(0, 0)$ a $(1, 1)$ e o centro do círculo está no canto superior esquerdo, subtrair a coordenada $x$ e $y$ por $0.5$ vai levar aquele ponto para o centro do bloco. Com isso, esse bloco fica ajustado para o padrão que queremos. E como todos os outros blocos copiam deste, tudo fica corrigido.
 
@@ -232,4 +232,9 @@ Apenas vou deixar uma imagem de um frame da animação deste shader. Vale a pena
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/07157d78-14e8-4627-9c09-2acaec38d59d" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Your%20second%202D%20shader">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Your%20first%20shader/Game%20of%20Life">Próximo ➡</a>
 </p>
