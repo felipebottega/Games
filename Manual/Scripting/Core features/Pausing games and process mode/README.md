@@ -26,7 +26,7 @@ Os nodes de animação pausarão a animação atual, os nodes de áudio pausarã
 
 Mesmo que um node esteja processando enquanto o jogo estiver pausado, a física não funcionará para ele. Como mencionado anteriormente, isso ocorre porque os servidores de física estão desativados. No entanto, é possível ativar os servidores de física enquanto o jogo estiver pausado usando seus métodos `set_active`.
 
-É interessante comparar este tutorial com o tutorial de [Idle and Physics Processing](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#desativando-os-processamentos) pois lá foi explicado como o jgo se comporta quando apenas o processamento normal e de física são pausados.
+É interessante comparar este tutorial com o tutorial [Idle and Physics Processing](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing#desativando-os-processamentos) pois lá foi explicado como o jogo se comporta quando apenas o processamento normal e de física são pausados.
 
 <p align="center">
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Instancing%20with%20signals">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
