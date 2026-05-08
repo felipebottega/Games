@@ -1,11 +1,11 @@
 # Groups
 
 Na Godot, grupos funcionam como tags. Você pode adicionar um node a quantos grupos quiser. Em seguida, no código, você pode fazer coisas como:
-- Obter uma lista de nodes em um grupo.
+- Obter a lista dos nodes em um grupo.
 - Chamar um método em todos os nodes de um grupo.
 - Enviar uma notificação para todos os nodes de um grupo.
 
-⚠️ **Atenção:** Esta série de tutoriais começou na Godot 4.4 e agora já está na 4.6. O painel onde fica o *Inspector* e sinais foi ligeiramente alterado. Anteriormente, para acessar os grupos, deveríamos ir na aba *Node* e depois *Groups*. Agora a aba *Groups* já está disponível diretamente.
+⚠️ **Atenção:** Esta série de tutoriais começou na Godot 4.4 e agora já está na 4.6. O painel onde ficam o sinais foi ligeiramente alterado. Anteriormente deveríamos ir na aba *Node* e depois *Groups* para acessar os grupos. Agora a aba *Groups* já está disponível diretamente.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/c6696d94-ab46-4abf-af1d-2231ccde8f5f" />
@@ -16,7 +16,7 @@ Na Godot, grupos funcionam como tags. Você pode adicionar um node a quantos gru
 Para criar um grupo novo, primeiro você deve escolher um node que fará parte dele (na Godot não existem grupos vazios). Feito isso, vá para *Inspector → Groups*, clique no sinal de "+" e dê um nome para o grupo. Ao lado do campo de nome, você deve escolher se habilita o grupo como "Global" ou não. Se for global, o nome deste grupo será reconhecido pelo projeto inteiro. Caso contrário, ele estará restrito à cena onde foi criado.
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/85e2db88-326f-4424-ac0e-e6407901ff3e" />
+  <img width="330" src="https://github.com/user-attachments/assets/85e2db88-326f-4424-ac0e-e6407901ff3e" />
 </p>
 
 Criamos um pequeno exemplo de uma cena principal contendo duas cenas instanciadas. 
@@ -55,12 +55,12 @@ Quando um grupo é global, não é mais possível utilizar aquele nome para cria
 Criamos uma nova cena, com o sprite rosa desta vez. Em vez de adicioná-lo a um grupo pelo editor, isso foi feito por código, como mostrado abaixo. Isso significa que, assim que o node associado ao script entra na cena, ele é adicionado ao grupo "PinkGroup".
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/6b120c3f-0f71-4583-a4ad-d233e3606492" />
+  <img width="470" src="https://github.com/user-attachments/assets/6b120c3f-0f71-4583-a4ad-d233e3606492" />
 </p>
 
 A função `add_to_group` não cria grupo global nem grupo de cena no sentido do editor. Ele simplesmente adiciona o node a um grupo com aquele nome. Se o grupo não existir ainda, ele é criado automaticamente em runtime. Se já existir um grupo global com esse nome, ele usa o mesmo nome normalmente, não há conflito (grupos não têm "namespace").
 
-Abaixo temos uma aplicação deste método. Nenhum node pertencente ao grupo "PinkGroup" estava na cena inicialmente, mas foi adicionado por código. Depois disso o programa checou cada node da árvore para ver a quais grupos cada um pertencia.
+Abaixo, temos uma aplicação deste método. Nenhum node pertencente ao grupo "PinkGroup" estava na cena inicialmente, mas foi adicionado por código. Depois disso o programa checou cada node da árvore para ver a quais grupos cada um pertencia.
 
 <p align="center">
   <img width="800" src="https://github.com/user-attachments/assets/abbb17f6-7dda-449b-8697-78d0465d4094" />
@@ -68,18 +68,18 @@ Abaixo temos uma aplicação deste método. Nenhum node pertencente ao grupo "Pi
 
 ## Métodos
 
-Existem métodos de grupos da classe `Node` e da `SceneTree`. O método `add_to_group`, por exemplo, é da classe `Node`. Estes métodos você usa no script do próprio node, são métodos que dizem respeito ao node.
+Existem métodos de grupos da classe `Node` e da `SceneTree`. O método `add_to_group`, por exemplo, é da classe `Node`. Estes métodos você usa no script do próprio node, pois são métodos que dizem respeito ao node.
 
 - **add_to_group(group_name):** Adiciona o node ao grupo `group_name`. Caso não exista, é criado na hora.
 - **remove_from_group(group_name):** Remove o node do grupo `group_name`. Não faz nada se o node não pertencer ao grupo.
 - **get_groups():** Retorna um array com os nomes dos grupos aos quais o node foi adicionado. Este método também pode retornar alguns nomes de grupos que começam com um underscore. Estes são usados ​​internamente pela engine. Para evitar conflitos, não use grupos com nomes começando com underscore.
 - **is_in_group(group_name):** Retorna *true* se este node tiver sido adicionado ao grupo `group_name`.
 
-Os métodos de grupo da classe `SceneTree` dizem respeito à árvore de cenas. Se algum dos métodos retorna nodes ou depende de nodes de alguma maneira, estes nodes devem estar na árvore de cenas que chamou o método.
+Os métodos de grupo da classe `SceneTree` dizem respeito à árvore de cenas. Se algum dos métodos retorna nodes ou depende de nodes de alguma maneira, estes nodes devem estar na árvore de cenas.
 
 - **get_tree().call_group(group_name, method_name, ...):** Chama o método `method_name` em cada node pertencente ao grupo `group_name`. Você pode passar argumentos para o método especificando-os ao final da chamada. Nodes que não podem chamar o método (seja porque o método não existe ou porque os argumentos não correspondem) são ignorados.
 - **get_tree().get_nodes_in_group(group_name):** Retorna um array contendo todos os nodes pertencentes ao grupo `group_name`, na ordem da hierarquia da cena.
-- **get_tree().get_node_count_in_group(group_name):** Retorna o número de nodes pertencentes ao grupo `group_name`. É equivalente ao comando `get_tree().get_nodes_in_group(group_name).size()`, mas esse último é menos eficiente pois cria uma array e depois faz a contagem.
+- **get_tree().get_node_count_in_group(group_name):** Retorna o número de nodes pertencentes ao grupo `group_name`. É equivalente ao comando `get_tree().get_nodes_in_group(group_name).size()`, mas esse último é menos eficiente pois cria um array e depois faz a contagem.
 - **get_tree().has_group(group_name):** Retorna *true* se existe pelo menos um node pertencente ao grupo `group_name` na árvore.
 - **get_tree().notify_group(group_name, notification):** Envia uma notificação para todos os nodes que estão no grupo `group_name`. A notificação `notification` deve ser um inteiro.
 - **get_tree().set_group(group_name, property, value):** Altera o valor da propriedade `property` para `value` em todos os nodes pertencentes ao grupo `group_name`. Os nodes que não possuem a propriedade são ignorados.
@@ -89,5 +89,10 @@ Os métodos de grupo da classe `SceneTree` dizem respeito à árvore de cenas. S
 Em *Project → Project Settings → Globals → Groups* você consegue ver de uma vez todos os grupos globais do projeto. Ali, você poderá adicionar novos grupos globais ou alterar os nomes e descrições dos grupos existentes.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/4677d510-299d-4295-9b63-27bbef0f2cb6" />
+  <img width="850" src="https://github.com/user-attachments/assets/4677d510-299d-4295-9b63-27bbef0f2cb6" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Idle%20and%20Physics%20Processing">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances">Próximo ➡</a>
 </p>
