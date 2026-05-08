@@ -53,11 +53,11 @@ https://github.com/user-attachments/assets/dd43b99a-077a-4d52-8011-1240c90e7c7e
 
 ### Local to Scene
 
-Se a opção *Local to Scene* não estiver habilitada, vimos acima como é o comportamento. O compartilhamento dos recursos é absoluto. Agora vamos supor que a opção está habilitada. Você vai notar uma diferença sutil de comportamento no editor: o recurso da cena instanciada não atualiza automaticamente quando o recurso é alterado pelo objeto original, mas assim que você salva a cena do original aí os recursos de todas as instâncias atualizam junto. A princípio, parece que o *Local to Scene* só adiou o inevitável. A diferença real é notada quando você habilita o [*Editable Children*](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#editable-children-e-make-local) nas instâncias.
+Se a opção *Local to Scene* não estiver habilitada, vimos acima como é o comportamento. O compartilhamento dos recursos é absoluto. Agora vamos supor que a opção está habilitada. Você vai notar uma diferença sutil de comportamento: o recurso da cena instanciada não atualiza automaticamente quando o recurso é alterado pelo objeto original, mas assim que você salva a cena do original aí os recursos de todas as instâncias atualizam junto. A princípio, parece que o *Local to Scene* só adiou o inevitável. A diferença real é notada quando você habilita o [*Editable Children*](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Nodes%20and%20scene%20instances#editable-children-e-make-local) nas instâncias.
 
 > PS: Apesar da instância com o *Editable Children* ter recurso independente, ela ainda é filha do objeto original e compartilha algumas propriedades com ele, como transformações, cores, visibilidade, entre outros. Tenha sempre atenção para não fazer confusão com isso.
 
-Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar o shape de colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso foi porque o centro do shape de colisão do original mudou de posição, e essa propriedade o bloco B ainda depende do original (como já comentamos em outras ocasiões, para ter total independência tem que habilitar a opção *Make Local*).
+Abaixo, temos a cena original do bloco à esquerda e os blocos A e B instanciados em outra cena. O original está com *Local to Scene* habilitado e apenas o bloco B está com o *Editable Children* habilitado. Ao alterar o shape de colisão do bloco original e salvar a cena, apenas o bloco A reage à mudança. No entanto, apesar do shape de colisão do bloco B não ter alterado de forma, ele alterou de posição. Isso ocorre porque a posição do shape de colisão não faz parte do recurso, e o original mudou de posição, então essa propriedade ainda reflete no bloco B (como já comentamos em outras ocasiões, para ter total independência tem que habilitar a opção *Make Local*).
 
 <p align="center">
   <img width="1100" src="https://github.com/user-attachments/assets/db0bfd07-acc7-489b-9323-a80e53679f8c" />
@@ -86,7 +86,7 @@ A opção *Make Unique* é mais simples, mais pontual e mais "radical". Esta op�
   <img width="450" src="https://github.com/user-attachments/assets/f2e365ce-f9fe-419c-9dd0-f5cd71d37b7a" />
 </p>
 
-É possível implementar o *Make Unique* por código. Para o caso do `CollisionShape2D` (exemplo), o comando `$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()` replica o *Make Unique*. De maneira geral, `recurso = recurso.duplicate()` funciona para qualquer recurso, em que `recurso` é o nome do recurso. Se o recurso tiver sub-recursos dentro, use `recurso = recurso.duplicate(true)`. 
+É possível implementar o *Make Unique* por código. Para o caso do `CollisionShape2D` (exemplo), o comando `$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()` replica o *Make Unique*. De maneira geral, `recurso = recurso.duplicate()` funciona para qualquer recurso, em que *recurso* é o nome do recurso. Se o recurso tiver sub-recursos dentro, use `recurso = recurso.duplicate(true)`. 
 
 ## Detectando recursos compartilhados
 
@@ -113,15 +113,15 @@ Começamos criando o nosso arquivo *stats.gd*. Ele possui a declaração das var
   <img width="400" src="https://github.com/user-attachments/assets/6b55a08f-720d-4ee9-ad64-bd3accf58273" />
 </p>
 
-Uma vez que o arquivo da classe já existe, o próximo passo é ir no *FileSystem* novamente e criar um arquivo do tipo *Resource*. Na janela que abriu, busque o nome da classe que acabou de criar e clique em *Create*. Após isso você pode salvar o arquivo com o nome que quiser.
+Uma vez que o arquivo da classe foi salvo, o próximo passo é ir no *FileSystem* novamente e criar um arquivo do tipo *Resource*. Na janela que abriu, busque o nome da classe que acabou de criar e clique em *Create*. Após isso você pode salvar o arquivo com o nome que quiser.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/72b096b9-101a-467d-af91-750f92484dc1" />
-  <img width="650" src="https://github.com/user-attachments/assets/f6a93306-d322-4b17-aa44-da91ccf168d2" />
-  <img width="700" src="https://github.com/user-attachments/assets/b2bd05ea-b42d-487b-aff8-ab98897f89a6" />
+  <img width="450" src="https://github.com/user-attachments/assets/72b096b9-101a-467d-af91-750f92484dc1" />
+  <img width="700" src="https://github.com/user-attachments/assets/f6a93306-d322-4b17-aa44-da91ccf168d2" />
+  <img width="750" src="https://github.com/user-attachments/assets/b2bd05ea-b42d-487b-aff8-ab98897f89a6" />
 </p>
 
-No *FileSystem*, clique duas vezes no arquivo que acabou de criar para abri-lo no *Inspector*. Você irá notar que está tudo como no default do `_init`. É aqui que a coisa começa a ficar interessante. Você pode alterar os valores do *Inspector* e mandar salvar o arquivo. Com isso, você terá salvo em um arquivo uma instância da classe. Geralmente, instâncias de classes são criadas dentro do código, durante a execução. Neste caso você possui um arquivo com esta instância, ele pode ser carregado em diversos lugares diferentes do projeto e inclusive pode ser usado em outros projetos.
+No *FileSystem*, clique duas vezes no arquivo que acabou de criar para abri-lo no *Inspector*. Você irá notar que está tudo como no default do `_init`. É aqui que a coisa começa a ficar interessante. Você pode alterar os valores do *Inspector* e mandar salvar o arquivo. Com isso, você terá salvo em um arquivo uma instância da classe. Geralmente, instâncias de classes são criadas dentro do código, durante a execução. Neste caso você possui um arquivo com esta instância, ele pode ser carregado em lugares diferentes do projeto e inclusive pode ser carregado em outros projetos.
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/610ccd74-6696-4610-b0a2-c12fd07b6ab1" />
@@ -133,23 +133,23 @@ Alteramos alguns campos deste arquivo no *Inspector* e salvamos (ctrl+S).
   <img width="340" src="https://github.com/user-attachments/assets/d8ea7902-2c0e-40b6-8eb4-ef4979420af3" />
 </p>
 
-Agora vamos ver como usar isso. Ao usar o comando `@export var stats: Stats`, o campo de fato aparece no *Inspector*, mas aparece vazio pois você só declarou a variável com o tipo da classe de recurso. 
+Agora vamos ver como usar. Ao usar o comando `@export var stats: Stats`, o campo de fato aparece no *Inspector*, mas aparece vazio pois você só declarou a variável com o tipo da classe de recurso. 
 
 <p align="center">
   <img width="1000" src="https://github.com/user-attachments/assets/7dd40659-8a91-41ae-83f4-385c53c0d3ea" />
 </p>
 
-Arraste o arquivo de recurso criado para o campo. Com isso, você está definindo um valor para esta variável, que é uma instância da classe.
+Arraste o arquivo de recurso criado para o campo (do *FileSystem* para o *Inspector*). Com isso, você está definindo um valor para esta variável, que é uma instância da classe, que é um recurso salvo em disco.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/a1af6266-67eb-471c-a56a-704d5a4de6e4" />
+  <img width="440" src="https://github.com/user-attachments/assets/a1af6266-67eb-471c-a56a-704d5a4de6e4" />
 </p>
 
 Apenas para testar as coisas, printamos os atributos `health` e `strings`, e inserimos a textura em um `Sprite2D` que fica logo acima do personagem. 
 
 <p align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/d308bb36-478e-436e-b77a-9a259b1435f8" />
-  <img width="400" src="https://github.com/user-attachments/assets/5c546b3b-9dcf-47f7-9440-add610b5be23" />
+  <img width="330" src="https://github.com/user-attachments/assets/d308bb36-478e-436e-b77a-9a259b1435f8" />
+  <img width="440" src="https://github.com/user-attachments/assets/5c546b3b-9dcf-47f7-9440-add610b5be23" />
 </p>
 
 Se quiser, você pode ir no *Inspector* e clicar no item do recurso para abri-lo e ver as suas propriedades. Todas elas são editáveis. Para este exemplo, achei interessante alterar todas. 
@@ -171,10 +171,14 @@ Se quiser, você pode ir no *Inspector* e clicar no item do recurso para abri-lo
   <img width="400" src="https://github.com/user-attachments/assets/ce94feaf-2bda-454a-8464-a7de75d2b5d3" />
 </p>
 
-Em vez de usar o arquivo de recurso, você também pode criar uma instância da maneira tradicional.
+Em vez de usar o arquivo de recurso, você também pode criar uma instância da maneira tradicional. Esse approach é adequado para os casos em que a instância é utilizada apenas uma vez, então não faz sentido ter um arquivo de recurso com ela salva.
 
 <p align="center">
   <img width="400" src="https://github.com/user-attachments/assets/beb30139-09bb-4f8c-9d32-ca219df65035" />
   <img width="600" src="https://github.com/user-attachments/assets/04172b13-97c7-4343-a711-a4d6ec423c57" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/File%20system">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Singletons%20-%20Autoload">Próximo ➡</a>
+</p>
