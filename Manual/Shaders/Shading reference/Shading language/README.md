@@ -187,7 +187,7 @@ Arrays em shaders são containers para dados de tipo similar. Veremos a seguir c
 
 ### Arrays locais
 
-Arrays locais são declarados em funções (como a função `vertex()` ou `fragment()`). Eles podem usar todos os tipos de dados permitidos, exceto os samplers. A sintaxe é no estilo de C.
+Arrays locais são declarados em funções de processamento (como a função `vertex()` ou `fragment()`). Eles podem usar todos os tipos de dados permitidos, exceto os samplers.
 
 ```glsl
 void fragment() {
@@ -303,7 +303,7 @@ void fragment(){
 }
 ```
 
-A ordem dos elementos importa na definição de um struct (outra diferença entre dicionários). Você pode usar isso para instanciar um struct através de um construtor, de maneira análoga ao construtor de classes.
+Você pode usar isso para instanciar um struct através de um construtor, de maneira análoga ao construtor de classes. Neste caso a ordem dos elementos importa na definição de um struct (outra diferença entre dicionários).
 
 ```glsl
 struct PointLight {vec3 position; vec3 color; float intensity;}; // Initializing the struct on a single line to highlight the order of the elements.
@@ -390,7 +390,7 @@ Além das [funções de processamento](https://github.com/felipebottega/Games/tr
 
 ```glsl
 return_type func_name(args) {
-    return return_type; // if returning a value
+    return return_value; // if returning a value
 }
 ```
 
@@ -402,14 +402,16 @@ int sum2(int a, int b) {
 }
 ```
 
-Você só pode usar funções que foram definidas acima (mais acima no editor). Os argumentos de entrada da função podem ter qualificadores especiais.
+> PS: Você só pode usar funções que foram definidas mais acima no editor, não abaixo. Fique atento a isso.
+
+Os argumentos de entrada da função podem ter qualificadores especiais.
 
 - **in:** Significa que o argumento é apenas para leitura (padrão).
 - **out:** Significa que o argumento é apenas para escrita.
 - **inout:** Significa que o argumento é totalmente passado por referência.
-- **const:** Significa que o argumento é uma constante e não pode ser alterado. pode ser combinado com o qualificador *in*.
+- **const:** Significa que o argumento é uma constante que não pode ser alterada. Pode ser combinado com o qualificador *in*.
 
-Um exemplo concreto de aplicação de qualificadores. Neste exemplo, `result` não é um valor "normal" recebido pela função. Ele é um parâmetro de saída por referência. Isso significa que a função recebe acesso à mesma variável `result` que existe fora dela. Quando a função faz `result = a + b;`, ela está alterando a variável externa diretamente. Devolve um valor sem usar return.
+Um exemplo concreto de aplicação de qualificadores. Neste exemplo, `result` não é um valor "normal" recebido pela função. Ele é um parâmetro de saída por referência. Isso significa que a função recebe acesso à mesma variável `result` que existe fora dela. Quando a função faz `result = a + b;`, ela está alterando a variável externa diretamente. Por isso pode devolver um valor sem usar return.
 
 ```glsl
 void sum2(int a, int b, inout int result) {
@@ -527,7 +529,7 @@ void light() {
 
 Certos valores são interpolados durante o pipeline de renderização. Você pode alterar a forma como essa interpolação acontece usando qualificadores de interpolação.
 
-Os *qualificadores de interpolação* controlam como os valores da *variável interpolada* são distribuídas entre os pixels. O default é o *smooth*. A GPU interpola suavemente os valores entre os vértices, criando transições como gradientes. A outra opção é a *flat*. Não há interpolação, e um único valor é usado para toda a área. Embora seja importante entender que essa interpolação existe, na prática você quase nunca precisa alterar esse comportamento, usando *flat* apenas em casos específicos onde os valores não podem ser misturados.
+Os *qualificadores de interpolação* controlam como os valores da *variável interpolada* são distribuídos entre os pixels. O default é o *smooth*. A GPU interpola suavemente os valores entre os vértices, criando transições como gradientes. A outra opção é a *flat*. Não há interpolação, e um único valor é usado para toda a área. Embora seja importante entender que essa interpolação existe, na prática você quase nunca precisa alterar esse comportamento, usando *flat* apenas em casos específicos onde os valores não podem ser misturados.
 
 ```glsl
 shader_type canvas_item;
@@ -552,7 +554,9 @@ Existem dois qualificadores possíveis:
 
 ## Uniforms
 
-É possível passar valores externos para o shader usando *uniforms*, que são definidos no escopo global do shader, fora de qualquer função. Quando o shader é atribuído a um material, esses uniforms aparecem como parâmetros editáveis no inspetor do material. Uniforms não podem ser modificados de dentro do shader. Você pode definir uniforms no editor, no *Inspector* de materiais. Alternativamente, você pode defini-los por meio de código GDScript e passá-los para o shader.
+É possível passar valores externos para o shader usando *uniforms*, que são definidos no escopo global do shader, fora de qualquer função. Quando o shader é atribuído a um material, esses uniforms aparecem como parâmetros editáveis no *Inspector* do material. Uniforms não podem ser modificados de dentro do shader. 
+
+> PS: Apesar de eu não achar isso muito interessante, você pode definir uniforms no editor, no *Inspector* do material. Alternativamente, você pode defini-los por meio de código GDScript e passá-los para o shader.
 
 Por exemplo, você pode declarar uma variável `uniform` no escopo global, como mostrado abaixo.
 
@@ -560,7 +564,7 @@ Por exemplo, você pode declarar uma variável `uniform` no escopo global, como 
   <img width="200" src="https://github.com/user-attachments/assets/f52fd15b-7836-4d93-b057-6fecd4b1a642" />
 </p>
 
-Automaticamente, esta variável ficará disponível no *Inspector* de materiais. A partir daí você pode alterar o valor pelo *Inspector* e ver em tempo real como ele afeta a imagem.
+Automaticamente, esta variável ficará disponível no *Inspector* do material. A partir daí você pode alterar o valor pelo *Inspector* e ver em tempo real como ele afeta a imagem.
 
 <p align="center">
   <img width="350" src="https://github.com/user-attachments/assets/05da628f-2963-4dab-9042-7cd44e9b633a" />
@@ -606,13 +610,13 @@ Texturas de imagem (PNG, JPG) normalmente estão em sRGB, enquanto o shader trab
 Para agrupar vários uniforms em um grupo no *Inspector*, você pode usar a keyword `group_uniform`. Primeiro você inicia o bloco com `group_uniforms {MyGroupName}`, coloca os uniforms dentro do bloco, e depois o o fecha com `group_uniforms`.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/0c120479-042e-4841-b3e6-7dddd6ed7aef" />
+  <img width="380" src="https://github.com/user-attachments/assets/0c120479-042e-4841-b3e6-7dddd6ed7aef" />
   <img width="360" src="https://github.com/user-attachments/assets/3fda262f-1248-4af1-85db-cd00151b9789" />
 </p>
 
 ### Global uniforms
 
-Às vezes, você deseja modificar um parâmetro em vários shaders diferentes simultaneamente. Com um uniform comum, isso exige muito trabalho, pois todos esses shaders precisam ser rastreados e o uniform precisa ser definido para cada um deles. Uniforms globais permitem criar e atualizar uniforms que estarão disponíveis em todos os shaders, em todos os tipos de shader.
+Em algumas ocasiões pode ser desajável modificar um parâmetro uniform em vários shaders diferentes simultaneamente. Com um uniform comum, isso exige muito trabalho, pois todos esses shaders precisam ser rastreados e o uniform precisa ser definido para cada um deles. Uniforms globais permitem criar e atualizar uniforms que estarão disponíveis em todos os shaders, em todos os tipos de shader.
 
 > PS: Falamos anteriormente que uniforms são globais no escopo do shader, ou seja, só para um código de shader em específico. O uniform global que estamos tratando nesta seção vai além disso, ele vale para todos os shaders do projeto.
 
@@ -628,7 +632,7 @@ O comando `RenderingServer.global_shader_parameter_get("my_global_uniform")` per
 
 ### Alterando uniforms por código GDScript
 
-Alterar o valor de uniforms por código é a forma normal de controlar shader pelo GDScript. Você pode fazer isso com o o comando `material.set_shader_parameter("my_value", my_value)`, em que `material` é a variável do material, o primeiro parâmetro é o nome do uniform e o segundo é o seu valor inicial. 
+Alterar o valor de uniforms por código é a forma normal de controlar shaders pelo GDScript. Você pode fazer isso com o comando `material.set_shader_parameter("my_value", my_value)`, em que `material` é a variável do material, o primeiro parâmetro é o nome do uniform e o segundo é o seu valor novo. 
 
 O GDScript usa tipos de variáveis ​​diferentes do GLSL, portanto, ao passar variáveis ​​do GDScript para shaders, a Godot converte o tipo automaticamente. Abaixo está uma tabela com os tipos correspondentes
 
@@ -666,4 +670,9 @@ O GDScript usa tipos de variáveis ​​diferentes do GLSL, portanto, ao passar
 | `samplerCubeArray` | `CubemapArray` | Suportado apenas em Forward+ e Mobile (não no Compatibility). |
 | `samplerExternalOES` | `ExternalTexture` | Suportado apenas na plataforma Android (modo Compatibility). |
 
-> PS: Tenha cuidado com este approach, pois nenhum erro será lançado se o tipo não corresponder. Seu shader simplesmente apresentará comportamento indefinido. Especificamente, isso inclui definir um int/float (64 bits) do GDScript em um int/float (32 bits) da linguagem de shader da Godot. 
+> PS: Nenhum erro será lançado se o tipo não corresponder. Seu shader simplesmente apresentará comportamento indefinido. Especificamente, isso inclui definir um int/float (64 bits) do GDScript em um int/float (32 bits) da linguagem de shader da Godot. 
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Introduction%20to%20shaders">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Shaders/Shading%20reference/Built-in%20functions">Próximo ➡</a>
+</p>
