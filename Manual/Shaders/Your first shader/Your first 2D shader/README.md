@@ -92,7 +92,7 @@ Abaixo temos um exemplo funcional para ver mudanças ocorrendo no editor a parti
 
 Para jogos 2D, estaremos trabalhando com a função `fragment()` na grande maioria das vezes, pois é esta a função que altera cores de pixels e produz os efeitos especiais legais. A função `vertex()` apenas altera a posição dos vértices e os deforma. Isso também tem aplicações, só não são muitas.
 
-No exemplo abaixo, mostramos o sprite sem nada na função `vertex()` e depois com o comando `VERTEX.y += VERTEX.x / 2.0;` implementado na função. Este comando apenas desloca as coordenadas $y$ dos vértices. Esse é o tipo de transformação que podemos esperar com essa função. Não é muito útil para efeitos, mas é útil para movimentos e deformações gerais simples.
+No exemplo abaixo, mostramos o sprite sem nada na função `vertex()` e depois com o comando `VERTEX.y += VERTEX.x / 2.0;` implementado na função. Este comando apenas desloca as coordenadas $y$ dos vértices. Esse é o tipo de transformação que podemos esperar com essa função. Não é muito útil para efeitos especiais, mas é bastante útil para movimentos e deformações da geometria do objeto.
 
 <p align="center">
   <img width="260" src="https://github.com/user-attachments/assets/52a46d3e-54f5-4409-a847-7633c3decf7c" />
