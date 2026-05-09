@@ -1,12 +1,12 @@
 # Using Containers
 
-`Container` é outra classe que é filha da `Control`. Ela não é usada diretamente, geralmente se usa um dos seus filhos, cada um com um propósito. Sem saber, nós já usamos diversas vezes o node `SubViewportContainer`, que é um container específico para o node `SubViewport`.
+`Container` é outra classe que é filha da `Control`. Ela não é usada diretamente, geralmente se usa um dos seus filhos, cada um com um propósito. Nós já usamos diversas vezes o node `SubViewportContainer`, que é um container específico para o node `SubViewport`.
 
 <pa glin="center">
-  <img width="900" src="https://github.com/user-attachments/assets/439a24bd-6312-4909-a0f3-3431bb9ad9fc" />
+  <img width="1100" src="https://github.com/user-attachments/assets/439a24bd-6312-4909-a0f3-3431bb9ad9fc" />
 </p>
 
-No [tutorial passado](https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Size%20and%20anchors), o conhecimento de âncora e as propriedades relacionadas foram úteis para criar nodes control de maneira mais controlada e organizada. Porém, este conhecimento não ajuda quando se tem um conjunto de nodes control. Por exemplo, se um jogo precisar de uma grid de botões, você terá que posicionar cada um por vez. Os nodes de container existem justamente para esse tipo de problema.
+No [tutorial passado](https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Size%20and%20anchors), o conhecimento de âncora e as propriedades relacionadas foram úteis para criar nodes control de maneira mais controlada e organizada. Porém, este conhecimento não ajuda quando se tem um conjunto de nodes control. Por exemplo, se um jogo precisar de uma fileira de botões, você terá que posicionar cada um por vez, alinhando todos manualmente. Os nodes de container existem justamente para esse tipo de problema.
 
 Vamos discutir um pouco dos containers mais usuais e suas propriedades. A partir desse pequeno conjunto de containers será possível se aventurar nos outros com pouca dificuldade.
 
@@ -24,19 +24,19 @@ A imagem abaixo sozinha já deve deixar bem claro como esse container funciona. 
 Conforme a delimitação do `HBoxContainer` é alterada, o modo como cada node filho se ajusta depende de algumas propriedades. Vamos usar a `OptionButton` de exemplo para explicar.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/fa8f4de0-7e3b-4577-8daf-aaa6f1afb611" />
+  <img width="770" src="https://github.com/user-attachments/assets/fa8f4de0-7e3b-4577-8daf-aaa6f1afb611" />
 </p>
 
 Vá em *Inspector → Control → Container Sizing*. O default mostrado abaixo é o mesmo para todos os nodes control.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/43435071-f699-4cbf-9c20-a407e212db44" />
+  <img width="390" src="https://github.com/user-attachments/assets/43435071-f699-4cbf-9c20-a407e212db44" />
 </p>
 
 - **Horizontal:** Esta propriedade diz como o node control deve preencher e se posicionar horizontalmente quando o container é alterado. Para a propriedade fazer efeito, é necessário que a propriedade *Expand*, logo abaixo, esteja habilitada.
 
 <p align="center">
-  <img width="350" src="https://github.com/user-attachments/assets/6a1484dc-7091-44ca-b704-765d7b9eed40" />
+  <img width="380" src="https://github.com/user-attachments/assets/6a1484dc-7091-44ca-b704-765d7b9eed40" />
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ Vá em *Inspector → Control → Container Sizing*. O default mostrado abaixo �
   <img width="600" src="https://github.com/user-attachments/assets/c493062b-2bf1-4e0d-baba-17f93fa5a37e" />
 </p>
 
-- **Stretch Ratio:** Essa propriedade apenas funciona quando o node e um vizinho dele a estão alterando. Ela determina o quando de espaço em relação ao node vizinho este node pode ocupar. Por exemplo, se este node tiver *Stretch Ratio* igual a $2$ e o do vizinho for $1$, então este node pode ocupar 2x mais espaço que o vizinho, o que inclui utilizar o espaço que originalmente era do vizinho (por default a distribuição de espaço é igualitária). Abaixo temos um exemplo onde o espaço do `Button` ficou muito maior que o do `OptionButton` por conta desta propriedade. 
+- **Stretch Ratio:** Essa propriedade apenas funciona quando o node e um vizinho dele a alteraram. Ela determina o quanto de espaço em relação ao node vizinho este node pode ocupar. Por exemplo, se este node tiver *Stretch Ratio* igual a $2$ e o do vizinho for $1$, então este node pode ocupar 2x mais espaço que o vizinho, o que inclui utilizar o espaço que originalmente era do vizinho (por default a distribuição de espaço é igualitária). Abaixo temos um exemplo onde o espaço do `Button` ficou muito maior que o do `OptionButton` por conta desta propriedade. 
 
 <p align="center">
   <img width="500" src="https://github.com/user-attachments/assets/2b98c9a6-41a4-40ff-a27b-7624f990fef2" />
@@ -62,7 +62,7 @@ Todas as propriedades mostradas acima podem ser alteradas em conjunto. Recomendo
 Este container é a versão vertical do `HBoxContainer`.
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/33826fb2-daf6-463f-8fd1-40aeb9aba9d4" />
+  <img width="490" src="https://github.com/user-attachments/assets/33826fb2-daf6-463f-8fd1-40aeb9aba9d4" />
 </p>
 
 As propriedades *Horizontal, Vertical, Expand* e *Stretch Ratio* continuam valendo, só que para a vertical. É importante chamar a atenção para a propriedade *Expand*, pois agora ela se encontrada vinculada à *Vertical*. Esta propriedade altera seu efeito dependendo do container em questão.
@@ -72,29 +72,29 @@ As propriedades *Horizontal, Vertical, Expand* e *Stretch Ratio* continuam valen
 Este container posiciona os nodes filhos em formato de grid, preenche linha por linha. Quando uma linha é preenchida, ele continua posicionando os nodes na linha seguinte. No exemplo abaixo, temos uma grid $2 \times 2$ composta por 3 nodes control filhos.
 
 <p align="center">
-  <img width="450" src="https://github.com/user-attachments/assets/7e78dc33-6c08-422a-a385-b4c44fc73023" />
+  <img width="490" src="https://github.com/user-attachments/assets/7e78dc33-6c08-422a-a385-b4c44fc73023" />
 </p>
 
 O número de colunas é determinado pela propriedade *Columns*, no *Inspector*.
 
 <p align="center">
-  <img width="380" src="https://github.com/user-attachments/assets/ac3f8b8e-0482-457f-9fea-205c3da8f39d" />
+  <img width="410" src="https://github.com/user-attachments/assets/ac3f8b8e-0482-457f-9fea-205c3da8f39d" />
 </p>
 
 As propriedades *Horizontal, Vertical, Expand* e *Stretch Ratio* continuam valendo, inclusive com o *Expand* nas duas direções. 
 
 <p align="center">
   <img width="310" src="https://github.com/user-attachments/assets/ba43343c-e3a1-470f-a11f-2b773ef23780" />
-  <img width="360" src="https://github.com/user-attachments/assets/1c2fce25-1777-4328-a0b0-59c3645d76c4" />
+  <img width="390" src="https://github.com/user-attachments/assets/1c2fce25-1777-4328-a0b0-59c3645d76c4" />
 </p>
 
 ## Margin Container
 
-Este container serve para criar margens ao redor de um node control. Para criar as margens, vá em *Inspector → Control → Theme Overrides → Constants* e altere as margens conforme mostrado abaixo. 
+Este container serve para criar margens ao redor de um node control. Para customizar as margens, vá em *Inspector → Control → Theme Overrides → Constants* e altere as margens conforme mostrado abaixo. 
 
 <p align="center">
-  <img width="580" src="https://github.com/user-attachments/assets/20a60c45-0887-4f26-8a7e-6354c7460591" />
-  <img width="350" src="https://github.com/user-attachments/assets/ae30ae40-ac5c-411d-8f7d-b4797cc45e43" />
+  <img width="600" src="https://github.com/user-attachments/assets/20a60c45-0887-4f26-8a7e-6354c7460591" />
+  <img width="370" src="https://github.com/user-attachments/assets/ae30ae40-ac5c-411d-8f7d-b4797cc45e43" />
 </p>
 
 ## Tab Container
@@ -102,15 +102,15 @@ Este container serve para criar margens ao redor de um node control. Para criar 
 Como o próprio nome diz, esse node cria um container de tabs.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/33ccbdc1-9ae4-4489-b6ad-465818d3f12c" />
+  <img width="750" src="https://github.com/user-attachments/assets/33ccbdc1-9ae4-4489-b6ad-465818d3f12c" />
 </p>
 
 ## Split Container
 
-Para este container funcionar, é necessário deixar ele com um espaço a mais do que o mínimo dos nodes. Feito isso, no jog você pdoerá arrastar a separação entre os itens, para ajustar dinamicamente o quanto de espaço cada um ocupa.
+Para este container funcionar, é necessário deixar ele com um espaço a mais do que o mínimo dos nodes. Feito isso, no jogo você poderá arrastar a separação entre os itens, para ajustar dinamicamente o quanto de espaço cada um ocupa.
 
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/06693119-3de0-4706-9a79-0cdc20a7e997" />
+  <img width="750" src="https://github.com/user-attachments/assets/06693119-3de0-4706-9a79-0cdc20a7e997" />
 </p>
 
 ## Foldable Container
@@ -118,7 +118,7 @@ Para este container funcionar, é necessário deixar ele com um espaço a mais d
 Esse container você usa para poder ocultar nodes control clicando na setinha. 
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/78fed25e-6de5-4770-86ef-a05d566995ba" />
+  <img width="420" src="https://github.com/user-attachments/assets/78fed25e-6de5-4770-86ef-a05d566995ba" />
 </p>
 
 ## ScrollContainer
@@ -126,7 +126,7 @@ Esse container você usa para poder ocultar nodes control clicando na setinha.
 Esse container cria barra de rolagem quando o filho não cabe dentro do container. Ele só aceita um node como filho.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/a4f580d4-5e8f-40b0-b90c-abb09912850a" />
+  <img width="460" src="https://github.com/user-attachments/assets/a4f580d4-5e8f-40b0-b90c-abb09912850a" />
 </p>
 
 ## AspectRatioContainer
@@ -134,7 +134,7 @@ Esse container cria barra de rolagem quando o filho não cabe dentro do containe
 Um tipo de container que arranja seus filhos de forma a preservar automaticamente suas proporções quando o container é redimensionado. Possui múltiplos modos de expansão, oferecendo opções para ajustar os tamanhos dos controles filhos em relação ao container. Em *Inspector → AspectRatioContainer → Stretch Mode*, temos as opões *Fit, Width Controls Height, Height controls Width* e *Cover*. Recomendo testar para ver como funcionam. Este container é útil quando você precisa ter um container dinâmico e responsivo a diferentes tamanhos de tela, e deseja que os elementos filhos sejam redimensionados proporcionalmente sem perder suas formas originais.
 
 <p align="center">
-  <img width="400" src="https://github.com/user-attachments/assets/294e4dc5-819d-4084-a26b-0f988deebd98" />
+  <img width="410" src="https://github.com/user-attachments/assets/294e4dc5-819d-4084-a26b-0f988deebd98" />
 </p>
 
 ## FlowContainer
@@ -150,17 +150,22 @@ Este container ajusta a disposição dos filhos dinamicamente de acordo com a fo
 Este container sempre mantém o filho centralizado dentro de sua delimitação.
 
 <p align="center">
-  <img width="800" src="https://github.com/user-attachments/assets/d966c8c1-1ca7-41f1-a9d1-e09fd063b8fe" />
+  <img width="880" src="https://github.com/user-attachments/assets/d966c8c1-1ca7-41f1-a9d1-e09fd063b8fe" />
 </p>
 
 ## SubViewportContainer
 
-Este é um container que aceita apenas um único node `SubViewport` como filho e o exibe como se fosse uma imagem. Vimos bastante sobre o assunto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports). Este container também foi aplicado no jogo do [Lobo Malandro](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game).
+Este é um container que aceita apenas um único node `SubViewport` como filho e o exibe como se fosse uma imagem além de possibilitar o `SubViewport` a receber inputs. Vimos bastante sobre o assunto [neste tutorial](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Using%20Viewports). Este container também foi aplicado no jogo do [Lobo Malandro](https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game).
 
 ## Combinando containers
 
-Você pode combinar os caintainers de diversas maneiras para obter resultados variados. Abaixo, por exemplo, temos um `CenterContainer` contendo um `HBoxContainer`. O primeiro elemento do `HBoxContainer` é um `MarginContainer` contendo uma label. Depois disso tem um `Button` com a propriedade *Vertical* em *Shrink End*, um `OptionButton` com a propriedade *Vertical* em *Shrink Begin* e, por fim, um `VBoxContainer` contendo mais três nodes control.
+Você pode combinar os containers de diversas maneiras para obter resultados variados. Abaixo, por exemplo, temos um `CenterContainer` contendo um `HBoxContainer`. O primeiro elemento do `HBoxContainer` é um `MarginContainer` contendo uma label. Depois disso tem um `Button` com a propriedade *Vertical* em *Shrink End*, um `OptionButton` com a propriedade *Vertical* em *Shrink Begin* e, por fim, um `VBoxContainer` contendo mais três nodes control.
 
 <p align="center">
-  <img width="750" src="https://github.com/user-attachments/assets/1d1b9fe0-10c2-4ead-836a-8eea0baf4e38" />
+  <img width="780" src="https://github.com/user-attachments/assets/1d1b9fe0-10c2-4ead-836a-8eea0baf4e38" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Size%20and%20anchors">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/UI%20building%20blocks/Keyboard-Controller%20Navigation%20and%20Focus">Próximo ➡</a>
 </p>
