@@ -13,7 +13,7 @@ Ao contrário do `Label`, o `RichTextLabel` possui sua própria barra de rolagem
 
 ## Básico de BBCode
 
-Para poder utilizar o BBCode, é neecssário habilitar a propriedade *BBCode Enabled* no *Inspector*. Feito isso, um exemplo mínimo de teste seria escrever "*I am [color=green]BBCode[/color]*" na caixa de texto. O efeito é imediato no editor, não precisa executar o jogo.
+Para poder utilizar o BBCode, é necessário habilitar a propriedade *BBCode Enabled* no *Inspector*. Feito isso, um exemplo mínimo de teste seria escrever "*I am [color=green]BBCode[/color]*" na caixa de texto. O efeito é imediato no editor, não precisa executar o jogo.
 
 <p align="center">
   <img width="700" src="https://github.com/user-attachments/assets/6ac6a28e-3b95-4d6b-bd94-048866992a07" />
@@ -29,7 +29,7 @@ A maioria dos códigos BBCode consiste em três partes:
 
 ## Referência
 
-Este guia de referência contém a maior parte da sintaxe que será necessária na maioria dos casos. Essa lista é para ser consultada mais do que memorizada.
+Este guia de referência contém a sintaxe que será necessária na maioria dos casos. Essa lista é para ser consultada mais do que memorizada.
 
 ### Básico
 
@@ -122,7 +122,7 @@ Abaixo seguem algumas opções de URL.
 
 As tags `[img]` e `[table]` podem receber um valor de alinhamento vertical para tentar se posicionar em relação ao texto ao redor. O alinhamento funciona comparando um ponto vertical da imagem/tabela com um ponto vertical do texto. 
 
-Na imagem, os pontos possíveis são `top`, `center e `bottom`. No texto e na tabela, os pontos possíveis são `top`, `center`, `baseline` e `bottom`. Você pode especificar os dois lados diretamente, por exemplo `text [img=top,bottom]...[/img] text` ou `text [table=3,top,bottom]...[/table] text`. Também dá para passar só um valor, e aí a Godot usa um default automático: `top = top-top`, `center = center-center`, `bottom = bottom-bottom`.
+Na imagem, os pontos possíveis são `top`, `center` e `bottom`. No texto e na tabela, os pontos possíveis são `top`, `center`, `baseline` e `bottom`. Você pode especificar os dois lados diretamente, por exemplo `text [img=top,bottom]...[/img] text` ou `text [table=3,top,bottom]...[/table] text`. Também dá para passar só um valor, e aí a Godot usa um default automático: `top = top-top`, `center = center-center`, `bottom = bottom-bottom`.
 
 Abaixo temos um exemplo tirado da própria [documentação oficial](https://docs.godotengine.org/en/stable/tutorials/ui/bbcode_in_richtextlabel.html#image-and-table-vertical-alignment), apenas para ilustrar alguns possíveis efeitos destas opções.
 
@@ -234,3 +234,7 @@ A tag `[rainbow]` aplica um efeito animado de arco-íris ao texto, fazendo com q
 O parâmetro `freq` define quantos caracteres o arco-íris percorre antes de se repetir. O parâmetro `sat` controla a saturação das cores. O parâmetro `val` controla o brilho das cores. O parâmetro `speed` define a velocidade da animação, em ciclos completos por segundo. Valores positivos fazem a animação avançar normalmente, $0$ pausa o efeito, e valores negativos fazem a animação rodar ao contrário.
 
 As bordas da fonte (outlines) não são afetadas pelo efeito, elas mantêm sua cor original. Além disso, qualquer cor aplicada anteriormente ao texto é sobrescrita pelo efeito. Por outro lado, as propriedades *Modulate* e *Self Modulate* do `CanvasItem` ainda influenciam o resultado final, pois multiplicam as cores geradas pelo efeito.
+
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20Fonts">⬅ Anterior</a>
+</p>
