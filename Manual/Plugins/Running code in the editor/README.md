@@ -65,7 +65,7 @@ A classe [`Engine`](https://docs.godotengine.org/en/stable/classes/class_engine.
 
 - Criar slow motion e pause global.
 - Medir desempenho.
-- Fazer ferramentas de editor (@tool).
+- Fazer ferramentas de editor (`@tool`).
 - Detectar ambiente de execução.
 - Acessar APIs globais da engine.
 - Debugging avançado.
