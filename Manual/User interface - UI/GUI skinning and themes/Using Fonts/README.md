@@ -1,6 +1,6 @@
 # Using Fonts
 
-Existem dois tipos de arquivos de fonte: dinâmicas (formatos *TTF/OTF/WOFF/WOFF2*) e bitmap (formato *.fnt*). As fontes dinâmicas são a opção mais comum, pois podem ser redimensionadas e ainda manter a nitidez em tamanhos maiores. Graças à sua natureza vetorial, elas também podem conter muito mais glifos, mantendo um tamanho de arquivo razoável em comparação com as fontes bitmap. Uma fonte bitmap é basicamente um conjunto de letras desenhadas como imagens prontas, pixel por pixel.
+Existem dois tipos de arquivos de fonte: dinâmicas (formatos *TTF/OTF/WOFF/WOFF2*) e bitmap (formato *.fnt* e imagens). As fontes dinâmicas são a opção mais comum, pois podem ser redimensionadas e ainda manter a nitidez em tamanhos maiores. Graças à sua natureza vetorial, elas também podem conter muito mais glifos, mantendo um tamanho de arquivo razoável em comparação com as fontes bitmap. Uma fonte bitmap é basicamente um conjunto de letras desenhadas como imagens prontas, pixel por pixel.
 
 Em tipografia, *glifo* é uma figura que dá um tipo de característica particular a um símbolo específico. 
 
@@ -77,7 +77,7 @@ O suporte para sombras é mais limitado que o de contornos, só funciona para `L
 
 ## Emojis
 
-O texto normal e os emojis não são o mesmo tipo de desenho para a fonte. Para a Godot mostrar um emoji, a fonte usada precisa ter esse símbolo desenhado dentro dela. O suporte para fontes de emoji é limitado, a engine apenas aceita emojis em fontes CBDT/CBLC (fontes com PNG embutido) e SVG. Fontes como [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) funcionam como fonte de emoji. 
+Texto normal e emojis não são o mesmo tipo de desenho para a fonte. Para a Godot mostrar um emoji, a fonte usada precisa ter esse símbolo desenhado dentro dela. O suporte para fontes de emoji é limitado, a engine apenas aceita emojis em fontes CBDT/CBLC (fontes com PNG embutido) e SVG. Fontes como [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) funcionam como fonte de emoji. 
 
 <p align="center">
   <img width="900" src="https://github.com/user-attachments/assets/64742efa-ab3a-433b-982a-4ae88c594922" />
@@ -87,7 +87,11 @@ O texto normal e os emojis não são o mesmo tipo de desenho para a fonte. Para 
 
 ## Negrito e itálico 
 
-Existem dois jeitos de deixar um texto em negrito ou itálico na Godot. O jeito ideal é usar uma variante da fonte (um outro arquivo de fonte) que já foi feita para isso, porque o desenho das letras fica melhor e o espaçamento costuma ficar mais certinho. O outro jeito é o que se chama de "faux bold" e "faux italic" ("faux" quer dizer "falso" em francês). Nesse outro jeito, a Godot pega a fonte normal e força um efeito parecido com negrito ou itálico, sem precisar de outro arquivo de fonte. É uma solução prática quando você quer economizar espaço no projeto. Em `RichTextLabel`, os efeitos de negrito e itálico já usam o efeito faux automaticamente se você não fornecer as fontes customizadas.
+Existem dois jeitos de deixar um texto em negrito ou itálico na Godot. O jeito ideal é usar uma variante da fonte (um outro arquivo de fonte) que já foi feita para isso, porque o desenho das letras fica melhor e o espaçamento costuma ficar mais correto. O outro jeito é o que se chama de "faux bold" e "faux italic" ("faux" quer dizer "falso" em francês). Nesse outro jeito, a Godot pega a fonte normal e força um efeito parecido com negrito ou itálico, sem precisar de outro arquivo de fonte. É uma solução prática quando você quer economizar espaço no projeto. Em `RichTextLabel`, os efeitos de negrito e itálico já usam o efeito faux automaticamente se você não fornecer as fontes customizadas.
 
 > PS: Pra mim esse segundo modo será menos utilizado, pois minha prioridade é a qualidade e arquivos de fonte não são tão grandes assim. De todo modo, caso seja necessário, a explicação de como fazer está [nesse link](https://docs.godotengine.org/en/stable/tutorials/ui/gui_using_fonts.html#faux-bold-and-italic).
 
+<p align="center">
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/GUI%20skinning%20and%20themes/Using%20the%20theme%20editor">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/User%20interface%20-%20UI/Control%20node%20tutorials/BBCode%20in%20RichTextLabel">Próximo ➡</a>
+</p>
