@@ -59,6 +59,24 @@ Para executar o script, basta clicar nele pelo *FileSystem* e selecionar *Run*. 
   <img width="380" src="https://github.com/user-attachments/assets/531ca998-2d8b-4278-b65e-224295d429a2" />
 </p>
 
+## Classe Engine
+
+A classe [`Engine`](https://docs.godotengine.org/en/stable/classes/class_engine.html) dá acesso a informações e configurações globais da engine em tempo de execução. Segue abaixo algumas das utilidades dela.
+
+- Criar slow motion e pause global.
+- Medir desempenho.
+- Fazer ferramentas de editor (@tool).
+- Detectar ambiente de execução.
+- Acessar APIs globais da engine.
+- Debugging avançado.
+
+Também inclui métodos mais internos e informativos.
+
+- Dados de licença.
+- Autores.
+- Patrocinadores.
+- Arquitetura da build atual.
+
 <p align="center">
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Editor%20plugins">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers">Próximo ➡</a>
