@@ -18,6 +18,8 @@ Lentidão no jogo é algo pode ocorrer de diversas maneiras diferentes. Mostramo
 4. **Otimize o que importa:** Não é porque algo pode ser otimizado que você deve otimizar. O tempo do desenvolvedor é escasso. É uma habilidade importante saber quando vale a pena gastar tempo otimizando algo e quando não vale a pena.
 5. **Sempre comece pelo que impacta mais:** Quando for resolver gargalos, sempre busque o que tem mais peso primeiro. Uma vez resolvido, vá para o segundo mais pesado, e assim por diante.
 
+> PS: A classe [`Time`](https://docs.godotengine.org/en/stable/classes/class_time.html) também permite converter o tempo entre vários formatos e obter informações de tempo do sistema.
+
 <p align="center">
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Networking/Using%20WebSockets">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers">Próximo ➡</a>
