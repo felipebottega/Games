@@ -40,6 +40,9 @@ A Godot oferece 3 opções para importar seus dados de áudio: WAV, Ogg Vorbis e
 ## Opções de import do Ogg Vorbis e MP3
 
 - **Loop:** Se ativado, o áudio começará a ser reproduzido do início após o término da reprodução. No `AudioStreamPlayer`, o sinal finalizado não será emitido para o áudio em loop quando atingir o final do arquivo de áudio, pois o áudio continuará sendo reproduzido indefinidamente.
+
+> 🟦 **REVISÃO POSTERIOR:** É preferível definir o loop desta maneira ao invés de carregar o áudio no `AudioStreamPlayer` e fazer *Make Unique* para poder editar a propriedade de loop (isso foi feito no [terceiro tutorial de sinais](https://github.com/felipebottega/Games/tree/gh-pages/Getting%20started/Step%20by%20step/Using%20signals/Signals%203#m%C3%BAsica-de-background)). Isto porque o *Make Unique* cria uma cópia do recurso dentro da cena, o que ocupa um espaço desnecessário, influenciando o tempo de carregamento da cena.
+
 - **Loop Offset:** O deslocamento de loop determina onde o áudio começará a ser repetido após a reprodução atingir o final. Isso pode ser usado para repetir apenas uma parte do arquivo de áudio, o que é útil para alguns sons ambientes ou músicas. O valor é determinado em segundos em relação ao início do áudio, portanto, $0$ repetirá todo o arquivo de áudio. Só tem efeito se o *Loop* estiver habilitado. 
 - **BPM:** Batidas por minuto da faixa de áudio. Deve corresponder à medida de BPM usada para compor a faixa. Isso é relevante apenas para músicas que desejam usar a funcionalidade musical interativa, não efeitos sonoros.
 - **Beat Count:** A contagem de batidas da faixa de áudio. Isso é relevante apenas para músicas que desejam usar a funcionalidade musical interativa, não efeitos sonoros.
