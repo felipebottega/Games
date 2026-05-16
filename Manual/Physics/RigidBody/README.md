@@ -7,7 +7,12 @@ Se quiser ver sobre as propriedades do *Physics Material*, visite o tutorial de 
 ## Propriedades
 
 - **Mass:** É a massa do corpo, em kg. Esas propriedade só tem utilidade em um contexto que existam outros corpos com outras massas.
-- **Gravity Scale:** Múltiplo da gravidade da Terra sobre um corpo. Se for igual a $2$, por exemplo, isso significa uma gravidade $2$ vezes mais intensa que a do planeta Terra.
+- **Gravity Scale:** Múltiplo da gravidade default sobre um corpo. Se for igual a $2$, por exemplo, isso significa uma gravidade $2$ vezes mais intensa que o default. Esta gravidade default é de $980$ pixels por segundo, como mostra a figura abaixo.
+
+<p align="center">
+  <img width="850" src="https://github.com/user-attachments/assets/8ee22d58-481e-49ac-93eb-eff0f9694233" />
+</p>
+
 - **Mass Distribution/Center of Mass Mode:** Define o método para determinar o centro de massa de um corpo. O default *Auto* significa que a engine irá calcular automaticamente a partir dos shapes que compõe o corpo. Se você escolher *Custom*, você deve escolher as coordenadas *x, y* do centro de massa. Esas coordenada é a posição do centro de massa em relação à origem do corpo.
 - **Mass Distribution/Inertia:** Determina quanto de torque é necessário para girar o corpo. É como se fosse uma "massa", mas para rotação.
 - **Deactivation/Sleeping:** Quando um corpo está em repouso e não se move por um tempo, ele entra em estado de *sleep*. Quando um corpo está em modo *sleep*, suas forças não são calculadas pela engine, mas coisas como gravidade e colisões ainda são calculadas. O corpo só desperta quando certas forças forem aplicadas, seja por uma colisão ou por código. 
