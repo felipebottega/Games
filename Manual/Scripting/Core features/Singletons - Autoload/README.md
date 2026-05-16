@@ -4,7 +4,7 @@
 
 Em Godot, o autoload é uma funcionalidade que permite manter um script ou cena sempre carregada durante toda a execução do jogo. Na prática, ele funciona como um ponto global de acesso, onde você pode armazenar dados ou comportamentos que precisam persistir. Considere a situação em que o jogo precisa manter a quantidade de moedas do jogador entre diferentes fases. Se esse valor estiver em uma cena comum, ele será perdido ao trocar de fase. Ao usar um Autoload, esse dado permanece disponível e pode ser acessado de qualquer parte do jogo. Em resumo, Autoload é usado para representar estado ou sistemas globais persistentes.
 
-> ⚠️ **Atenção:** Não carregue cenas autoload nem coloque como cena raíz do projeto. Se você fizer isso, a cena autoload terá duas instâncias repetidas no projeto. Isso pode levar a comportamentos imprevisíveis e bugs.
+> ⚠️ **Atenção:** Não carregue cenas autoload nem coloque como cena raíz do projeto. Se você fizer isso, a cena autoload terá duas instâncias repetidas no projeto (pois todo autoload já é carregado automaticamente quando o projeto é executado). Isso pode levar a comportamentos imprevisíveis e bugs.
 
 ## Stop antes de reexecução de cenas
 
