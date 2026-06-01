@@ -46,6 +46,8 @@ A configuração da exportação é armazenada em dois arquivos, ambos encontrad
 - **export_presets.cfg:** Este arquivo contém a maior parte das configurações de exportação e pode ser submetido com segurança ao controle de versão. Não há nada aqui que você normalmente precisaria manter em segredo.
 - **.godot/export_credentials.cfg:** Este arquivo contém opções de exportação consideradas confidenciais, como senhas e chaves de criptografia. Geralmente, ele não deve ser submetido ao controle de versão nem compartilhado com terceiros, a menos que você saiba exatamente o que está fazendo.
 
+> ⚠️ **Atenção:** A pasta *.godot* contém também arquivos de cache do projeto. Em algumas circunstâncias específicas, certos objetos do jogo podem funcionar bem no editor mas utilizar uma versão antiga cacheada ao exportar. Você sempre pode apagar esta pasta (com o projeto fechado) e carregar o projeto, daí a Godot irá recriar a pasta do zero, com as versões atualizadas de todos os objetos. É recomendado sempre fazer isso antes de exportar o jogo.
+
 Como o arquivo de credenciais geralmente é mantido fora dos sistemas de controle de versão, algumas opções de exportação estarão ausentes se você clonar o projeto para uma nova máquina. A maneira mais fácil de lidar com isso é copiar o arquivo manualmente do local antigo para o novo.
 
 Abaixo nós temos o conteúdo que tipicamente aparece no *export_presets.cfg*. Note que o *preset.0* se refere à exportação Web, como mostramos em uma imagem acima. Depois disso, no mesmo arquivo de texto, vem o *preset.1*, referente à exportação Windows, e assim por diante. 
