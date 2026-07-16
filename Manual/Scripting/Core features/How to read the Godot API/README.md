@@ -23,9 +23,11 @@ func somar(a, b):
     return a + b
 ```
 
-Outros scripts começam a usar chamadas como `MathUtils.somar(2, 3)`, por exemplo. Agora você criou uma API, mesmo sendo simples. 
+Outros scripts começam a usar chamadas como `MathUtils.somar(2, 3)`, por exemplo. Agora você criou uma API, mesmo sendo simples. Vale lembrar que API não é apenas composta de funções, mas também classes, atributos, etc.
 
-Para finalizar, vale lembrar que API não é apenas composta de funções, mas também classes, atributos, etc.
+### Funções públicas e privadas
+
+É comum, em códigos, ter funções (métodos) que serão chamadas por processos externos, como visto acima, mas também há funções que só rodam internamente. Isto é, a função é apenas chamada por outra função dentro do próprio. Nenhuma chamada externa conhece esta função. O primeiro tipo de função é chamado de *função pública*, enquanto que o segundo tipo é chamado de *função privada*. Normalmente se coloca um underline no início do nome das funções privadas, para facilitar a identificação. Já vimos vários tipos de funções privadas em Godot, como `_ready` e `_process`.
 
 ## Como ler a API da Godot
 
