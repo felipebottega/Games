@@ -621,8 +621,8 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 ">  Opções de import
  </a><br>
 <br><li> <b>Manual\Audio\Audio buses</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses#escala-de-decibel-
-">  Escala de decibel 
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses#escala-de-decibéis
+">  Escala de decibéis
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Audio/Audio%20buses#audio-buses
 ">  Audio buses
@@ -716,6 +716,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#segundo-cenário
 ">  Segundo cenário
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#z-index
+">  Z Index
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/File%20and%20data%20IO/Saving%20games#background-geral
 ">  Background geral
@@ -829,6 +832,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 <li> <b>Manual\Input handling\Mouse and input coordinates</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Mouse%20and%20input%20coordinates#mouse-e-coordenadas-da-viewport
 ">  Mouse e coordenadas da viewport
+ </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Mouse%20and%20input%20coordinates#get_viewport()get_visible_rect()size-vs-get_viewport_rect()size
+">  get_viewport().get_visible_rect().size vs get_viewport_rect().size
  </a><br>
 <li> <b>Manual\Input handling\Customizing the mouse cursor</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Customizing%20the%20mouse%20cursor#pelo-project-settings
@@ -997,11 +1003,14 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 ">  Servidor remoto
  </a><br>
 <br><li> <b>Manual\Performance\Common\General optimization tips</b> </li>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#a-natureza-da-lentidão
-">  A natureza da lentidão
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#natureza-da-lentidão
+">  Natureza da lentidão
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#dicas-gerais
 ">  Dicas gerais
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/General%20optimization%20tips#classe-time
+">  Classe Time
  </a><br>
 <li> <b>Manual\Performance\Common\Optimization using Servers</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Common/Optimization%20using%20Servers#servidores
@@ -1018,7 +1027,7 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 ">  Profiler 
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#árvore-de-cenas
-">  árvore de cenas
+">  Árvore de cenas
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/CPU/CPU%20optimization#física
 ">  Física
@@ -1043,9 +1052,6 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 <li> <b>Manual\Performance\Threads\Using multiple threads</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#método-bind
 ">  Método bind
- </a><br>
-&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#_exit_tree
-">  _exit_tree
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Performance/Threads/Using%20multiple%20threads#criando-uma-thread
 ">  Criando uma thread
@@ -1208,6 +1214,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#editorscript
 ">  EditorScript
  </a><br>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Plugins/Running%20code%20in%20the%20editor#classe-engine
+">  Classe Engine
+ </a><br>
 <br><li> <b>Manual\Rendering\Overview of renderers</b> </li>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Overview%20of%20renderers#escolhendo-o-renderizador
 ">  Escolhendo o renderizador
@@ -1295,6 +1304,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game#subviewport
 ">  Subviewport
+ </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game#set_meta,-get_meta-e-has_meta
+">  set_meta, get_meta e has_meta
  </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Rendering/Multiple%20resolutions%20-%20Game#resolução
 ">  Resolução
@@ -1525,6 +1537,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#o-que-é-api?
 ">  O que é API?
  </a><br>
+&emsp;&emsp;&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#funções-públicas-e-privadas
+">  Funções públicas e privadas
+ </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/How%20to%20read%20the%20Godot%20API#como-ler-a-api-da-godot
 ">  Como ler a API da Godot
  </a><br>
@@ -1698,6 +1713,9 @@ Em alguns tutoriais vão aparecer alguns blocos com o título "🟦 **REVISÃO P
 ">  Criando recursos
  </a><br>
 <li> <b>Manual\Scripting\Core features\Singletons - Autoload</b> </li>
+&emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Singletons%20-%20Autoload#stop-antes-de-reexecução-de-cenas
+">  Stop antes de reexecução de cenas
+ </a><br>
 &emsp;&emsp; <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Scripting/Core%20features/Singletons%20-%20Autoload#criando-um-autoload
 ">  Criando um autoload
  </a><br>
