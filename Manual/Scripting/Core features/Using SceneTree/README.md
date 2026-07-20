@@ -57,6 +57,10 @@ A maioria das operações de nodes, como desenhar em 2D, processar dados ou rece
 
 > PS: Todos os métodos relativos a grupos foram vistos no [tutorial de grupos](https://github.com/felipebottega/Games/blob/gh-pages/Manual/Scripting/Core%20features/Groups/README.md).
 
+## await get_tree().process_frame
+
+A chamada `await get_tree().process_frame` é utilizada quando você quer que a execução de uma função pare naquele ponto e aguarde até o próximo loop do jogo para continuar. Essa chamada na verdade é um sinal da classe `SceneTree`.
+
 ## SceneTree e root
 
 Como podemos notar, a classe `SceneTree` e o node *root* são dois objetos que sempre são chamados quando um jogo é executado, mas ambos operam por trás dos bastidores. Apesar da mesma natureza "oculta", é importante notar que é o `SceneTree` que engloba tudo. O *root* é apenas um viewport geral, ele representa a tela do jogador. Por outro lado, o `SceneTree` é o coordenador geral, é ele quem conversa com o sistema operacional, quem executa o loop principal do jogo, quem coordena todas as cenas e nodes, etc. 
