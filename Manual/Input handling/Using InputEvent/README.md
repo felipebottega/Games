@@ -151,6 +151,10 @@ Abaixo segue um código minimal com aplicação dos métodos descritos acima.
 
 ⚠️ **Atenção:** O usual é utilizar as *ações de input* para os comandos da gameplay, que são tratados de maneira "contínua", enquanto que os *eventos de input* são para inputs específicos do jogo. Por isso, os *eventos de input* ficam nas funções descritas anteriormente e as *ações de input* ficam no `_process` ou `_physics_process`. Você pode considerar que as *ações de input* são executadas em paralelo aos *eventos de input*, por isso aquela hierarquia de camadas não se aplica aqui.
 
+## Função orientada a evento
+
+Toda função de input pode ser chamada múltiplas vezes dentro do mesmo iteração (ou frame) do jogo. Ela não necessariamente é chamada apenas uma vez por iteração como a `_process`, por exemplo. Se mais de um evento de input ocorrer ao mesmo tempo, a função de tratar input será chamada uma vez para cada evento individual. Por exemplo, se você clicar e segurar o clique para arrastar um ícone, há o movimento do mouse e o botão do mouse sendo pressionado. Cada um é um evento de input distinto ocorrendo ao mesmo tempo. Isso significa que, a cada iteração do jogo, a função de tratar input será chamada 2 vezes (pelo menos). 
+
 <p align="center">
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Internationalization/Pseudolocalization">⬅ Anterior</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/felipebottega/Games/tree/gh-pages/Manual/Input%20handling/Input%20examples">Próximo ➡</a>
